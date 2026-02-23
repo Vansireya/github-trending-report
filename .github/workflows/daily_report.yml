@@ -1,0 +1,43 @@
+name: 🌟 Daily GitHub Trending Report
+
+on:
+  schedule:
+    # 每天 UTC 时间 0:00 运行（对应北京时间早上 8:00）
+    - cron: '0 0 * * *'
+  # 允许你在 GitHub 网页上手动点击按钮运行
+  workflow_dispatch:
+
+permissions:
+  contents: write # 允许机器人把生成的文件推送到你的仓库
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # 使用稳定的 Node.js 版本
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 运行生成脚本
+        # 这里会自动读取你在 Github 配置的保险箱密码
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: https://api.deepseek.com
+          OPENAI_MODEL: deepseek-chat
+        run: npm start
+
+      - name: 提交并推送到仓库
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/ reports/
+          git commit -m "auto: 🌟 生成今日 GitHub Trending 简报" || echo "今天没有新数据，跳过提交"
+          git push
