@@ -2,13 +2,11 @@ name: 🌟 Daily GitHub Trending Report
 
 on:
   schedule:
-    # 每天 UTC 时间 0:00 运行（对应北京时间早上 8:00）
     - cron: '0 0 * * *'
-  # 允许你在 GitHub 网页上手动点击按钮运行
   workflow_dispatch:
 
 permissions:
-  contents: write # 允许机器人把生成的文件推送到你的仓库
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -21,24 +19,46 @@ jobs:
       - name: 设置 Node.js 环境
         uses: actions/setup-node@v4
         with:
-          node-version: '20' 
+          node-version: '20'
 
       - name: 安装依赖
         run: npm install
 
       - name: 运行生成脚本
-        # 这里会自动读取你在 Github 配置的保险箱密码
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: https://api.deepseek.com
           OPENAI_MODEL: deepseek-chat
         run: npm start
 
+      - name: 自动更新首页并修复跳转链接
+        run: |
+          # 1. 找到最新生成的报告
+          LATEST_REPORT=$(ls -t reports/daily_*.html | head -1)
+          
+          # 2. 复制为 index.html
+          cp "$LATEST_REPORT" index.html
+          
+          # 3. 【核心修复】让 index.html 里的历史链接指向 reports/ 文件夹
+          # 这样你在首页点开“昨天”的报告才不会 File Not Found
+          sed -i 's/href="daily_/href="reports\/daily_/g' index.html
+          
+          # 4. 修复静态资源路径（CSS/JS）
+          sed -i 's/src="\.\.\//src="/g' index.html
+          sed -i 's/href="\.\.\//href="/g' index.html
+          
+          echo "✅ 首页 index.html 已生成并优化路径"
+
       - name: 提交并推送到仓库
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "auto: 🌟 生成今日 GitHub Trending 简报" || echo "今天没有新数据，跳过提交"
-          git pull --rebase origin main || echo "pull rebase skipped"
-          git push
+          
+          # 必须包含 index.html
+          git add data/ reports/ index.html
+          
+          # 拉取可能存在的远程变动
+          git pull origin main --rebase
+          
+          git commit -m "auto: 🌟 更新今日报告及导航首页" || echo "没有变化"
+          git push origin main
