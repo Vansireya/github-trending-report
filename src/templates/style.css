@@ -1,0 +1,533 @@
+/**
+ * GitHub Trending 简报页面样式
+ * 包含所有页面所需的 CSS 样式
+ */
+
+/* ===== 基础样式重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 页面基础样式 ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e8f0e8;
+  color: #4a5a4a;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== 页面容器 ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f8faf8;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+/* ===== 页面头部 ===== */
+.header {
+  background: #7a9a7a;
+  color: #f8faf8;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #f8faf8;
+  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
+}
+
+.header .date {
+  font-size: 1.2em;
+  color: #e8f0e8;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* ===== 主要内容区域布局 ===== */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+  width: 320px;
+  background: #f0f5f0;
+  padding: 20px;
+  border-right: 1px solid #d4e0d4;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4e0d4;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #5a7a5a;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #e8f0e8;
+  color: #7a9a7a;
+  transform: translateX(5px);
+}
+
+/* ===== 日期选择器 ===== */
+.date-filter-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.date-select {
+  flex: 1;
+  min-width: 65px;
+  padding: 6px 28px 6px 12px;
+  border: 1px solid #cce8d6;
+  border-radius: 6px;
+  background-color: #f2fbf5;
+  color: #1a4d2e;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: all 0.2s ease;
+}
+
+#yearSelect {
+  min-width: 85px;
+}
+
+.date-select:hover {
+  background-color: #e6f7ec;
+}
+
+.date-select:focus {
+  outline: none;
+  border-color: #2ea054;
+  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
+}
+
+.date-select:first-child {
+  border-radius: 6px;
+}
+
+.date-select:last-of-type {
+  border-radius: 6px;
+}
+
+.date-filter-container .view-history-btn {
+  padding: 5px 10px;
+  background: #1a4d2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.date-filter-container .view-history-btn:hover {
+  background: #153524;
+}
+
+.date-separator {
+  padding: 0 4px;
+  color: #666;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.view-history-btn {
+  padding: 10px 16px;
+  background: #7a9a7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-history-btn:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+}
+
+/* ===== 内容区域 ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* ===== 时间范围选择器 ===== */
+.time-range-selector {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d4e0d4;
+}
+
+.time-range-selector label {
+  display: block;
+  margin-bottom: 10px;
+  color: #5a7a5a;
+  font-weight: bold;
+}
+
+.time-range-selector select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d4e0d4;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #2a3a2a;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+.time-range-selector select:hover {
+  border-color: #7a9a7a;
+}
+
+/* ===== 排行榜区域 ===== */
+.ranking-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+}
+
+.ranking-section h4 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.ranking-list {
+  list-style: none;
+}
+
+.ranking-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.ranking-list li:hover .ranking-name {
+  color: #7a9a7a;
+}
+
+.ranking-item {
+  display: block;
+}
+
+.ranking-info {
+  display: block;
+}
+
+.ranking-name {
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ranking-name:hover {
+  color: #5a7a5a;
+  text-decoration: underline;
+}
+
+.ranking-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.ranking-stars {
+  margin-right: 12px;
+}
+
+.ranking-count {
+  color: #7a9a7a;
+}
+
+.ranking-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
+.global-tooltip {
+  display: none;
+  position: absolute;
+  background: #3a5a3a;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 400px;
+  width: 90%;
+  z-index: 999999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  text-align: left;
+  border: 2px solid #5a8a5a;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.global-tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.global-tooltip-close:hover {
+  opacity: 1;
+}
+
+/* ===== 项目卡片 ===== */
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
+  border-color: #7a9a7a;
+}
+
+.project-name {
+  font-size: 1.8em;
+  color: #5a7a5a;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4e0d4;
+  font-weight: bold;
+}
+
+/* ===== 项目卡片内部各区域 ===== */
+.summary {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.summary strong {
+  color: #5a7a5a;
+}
+
+.details {
+  background: #edf3ed;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #7a9a7a;
+}
+
+.details strong {
+  color: #5a6a5a;
+}
+
+.link {
+  background: #eaf2ea;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7a9a7a;
+  color: #f8faf8;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.link a:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
+}
+
+.stars {
+  background: #f0f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #9ab89a;
+}
+
+.stars strong {
+  color: #5a7a5a;
+}
+
+.stars span {
+  color: #6a8a6a;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.rating {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.rating strong {
+  color: #5a6a5a;
+}
+
+.rating span {
+  color: #6a8a6a;
+  font-size: 1.3em;
+}
+
+/* ===== 总结区域 ===== */
+.summary-section {
+  background: #edf3ed;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 1px solid #d4e0d4;
+}
+
+.summary-section h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.summary-section p {
+  line-height: 1.8;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .project-name {
+    font-size: 1.5em;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* ===== 动画效果 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+.project-card:nth-child(9) { animation-delay: 0.9s; }
+.project-card:nth-child(10) { animation-delay: 1.0s; }

@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "vxcontrol/pentagi",
+    "url": "https://github.com/vxcontrol/pentagi",
+    "description": "✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+    "stars": "4,648",
+    "language": "Go"
+  },
+  {
+    "rank": 2,
+    "name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": "818",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "56,548",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "huggingface/skills",
+    "url": "https://github.com/huggingface/skills",
+    "description": "No description",
+    "stars": "1,530",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "PowerShell/PowerShell",
+    "url": "https://github.com/PowerShell/PowerShell",
+    "description": "PowerShell for every system!",
+    "stars": "51,462",
+    "language": "C#"
+  },
+  {
+    "rank": 6,
+    "name": "anthropics/claude-code",
+    "url": "https://github.com/anthropics/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stars": "68,134",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "stan-smith/FossFLOW",
+    "url": "https://github.com/stan-smith/FossFLOW",
+    "description": "Make beautiful isometric infrastructure diagrams",
+    "stars": "17,584",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "ggml-org/ggml",
+    "url": "https://github.com/ggml-org/ggml",
+    "description": "Tensor library for machine learning",
+    "stars": "14,007",
+    "language": "C++"
+  },
+  {
+    "rank": 9,
+    "name": "Stremio/stremio-web",
+    "url": "https://github.com/Stremio/stremio-web",
+    "description": "Stremio - Freedom to Stream",
+    "stars": "9,299",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "HandsOnLLM/Hands-On-Large-Language-Models",
+    "url": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models",
+    "description": "Official code repo for the O'Reilly Book - \"Hands-On Large Language Models\"",
+    "stars": "22,336",
+    "language": "Jupyter Notebook"
+  }
+]

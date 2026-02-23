@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "google/langextract",
+    "url": "https://github.com/google/langextract",
+    "description": "A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.",
+    "stars": "29,508",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "iOfficeAI/AionUi",
+    "url": "https://github.com/iOfficeAI/AionUi",
+    "description": "Free, local, open-source 24/7 Cowork and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+    "stars": "14,808",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "KeygraphHQ/shannon",
+    "url": "https://github.com/KeygraphHQ/shannon",
+    "description": "Fully autonomous AI hacker to find actual exploits in your web apps. Shannon has achieved a 96.15% success rate on the hint-free, source-aware XBOW Benchmark.",
+    "stars": "20,187",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "github/gh-aw",
+    "url": "https://github.com/github/gh-aw",
+    "description": "GitHub Agentic Workflows",
+    "stars": "1,470",
+    "language": "Go"
+  },
+  {
+    "rank": 5,
+    "name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "description": "Official Claude Code compound engineering plugin",
+    "stars": "8,268",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "hsliuping/TradingAgents-CN",
+    "url": "https://github.com/hsliuping/TradingAgents-CN",
+    "description": "基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版",
+    "stars": "16,869",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "gitbutlerapp/gitbutler",
+    "url": "https://github.com/gitbutlerapp/gitbutler",
+    "description": "The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte",
+    "stars": "19,136",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "carlvellotti/claude-code-pm-course",
+    "url": "https://github.com/carlvellotti/claude-code-pm-course",
+    "description": "Interactive course teaching Product Managers how to use Claude Code effectively",
+    "stars": "963",
+    "language": "MDX"
+  },
+  {
+    "rank": 9,
+    "name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
+    "stars": "93,805",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "drawdb-io/drawdb",
+    "url": "https://github.com/drawdb-io/drawdb",
+    "description": "Free, simple, and intuitive online database diagram editor and SQL generator.",
+    "stars": "36,497",
+    "language": "JavaScript"
+  }
+]

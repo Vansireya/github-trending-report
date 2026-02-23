@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+
+  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
+  <script src="{{RANKING_DATA_PATH}}"></script>
+
+  <!-- 页面样式 -->
+  <style>
+    {{STYLES}}
+  </style>
+</head>
+<body>
+  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
+  <div class="global-tooltip" id="globalTooltip">
+    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
+    <div id="tooltipContent"></div>
+  </div>
+
+  <!-- 页面主容器 -->
+  <div class="container">
+    <!-- 页面头部 -->
+    <div class="header">
+      <h1>🌟 GitHub Trending 简报</h1>
+      <p>每日精选热门开源项目，发现最新技术趋势</p>
+      <div class="date">📅 {{DATE_CN}}</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+      <!-- 侧边栏 -->
+      <div class="sidebar">
+        <h3>{{SIDEBAR_HISTORY_TITLE}}</h3>
+        <ul>
+          {{HISTORY_DATES_HTML}}
+        </ul>
+
+        <h3>{{SIDEBAR_RANKING_TITLE}}</h3>
+        <div class="time-range-selector">
+          <label for="timeRange">{{TIME_RANGE_LABEL}}</label>
+          <select id="timeRange" onchange="updateRanking(this.value)">
+            <option value="week">过去一周</option>
+            <option value="month">过去一月</option>
+            <option value="quarter">过去一季度</option>
+          </select>
+        </div>
+
+        <div id="rankingContent" class="ranking-section">
+          <h4>{{RANKING_SECTION_TITLE}}</h4>
+          <ul class="ranking-list" id="rankingList">
+            <li>加载中...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 内容区域 -->
+      <div class="content">
+        {{CONTENT}}
+      </div>
+    </div>
+  </div>
+
+  <!-- 前端交互脚本 -->
+  <script>
+    {{SCRIPTS}}
+  </script>
+</body>
+</html>

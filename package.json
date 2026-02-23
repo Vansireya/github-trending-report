@@ -1,0 +1,23 @@
+{
+  "name": "github-report",
+  "version": "1.0.0",
+  "description": "GitHub Trending 日报生成器 - 自动爬取热门项目并生成 AI 总结",
+  "scripts": {
+    "start": "npm run scrape && npm run summarize && npm run html",
+    "scrape": "node src/scraper.js",
+    "summarize": "node src/summarize.js",
+    "html": "node src/html_generator.js",
+    "report": "npm start"
+  },
+  "keywords": ["github", "trending", "report", "ai"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.2.4",
+    "marked": "^17.0.2",
+    "openai": "^6.21.0"
+  }
+}

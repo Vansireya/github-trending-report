@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 简报 - 2026年2月21日星期六</title>
+
+  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
+  <script src="../data/ranking_data.js"></script>
+
+  <!-- 页面样式 -->
+  <style>
+    /**
+ * GitHub Trending 简报页面样式
+ * 包含所有页面所需的 CSS 样式
+ */
+
+/* ===== 基础样式重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 页面基础样式 ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e8f0e8;
+  color: #4a5a4a;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== 页面容器 ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f8faf8;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+/* ===== 页面头部 ===== */
+.header {
+  background: #7a9a7a;
+  color: #f8faf8;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #f8faf8;
+  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
+}
+
+.header .date {
+  font-size: 1.2em;
+  color: #e8f0e8;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* ===== 主要内容区域布局 ===== */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+  width: 320px;
+  background: #f0f5f0;
+  padding: 20px;
+  border-right: 1px solid #d4e0d4;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4e0d4;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #5a7a5a;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #e8f0e8;
+  color: #7a9a7a;
+  transform: translateX(5px);
+}
+
+/* ===== 日期选择器 ===== */
+.date-filter-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.date-select {
+  flex: 1;
+  min-width: 65px;
+  padding: 6px 28px 6px 12px;
+  border: 1px solid #cce8d6;
+  border-radius: 6px;
+  background-color: #f2fbf5;
+  color: #1a4d2e;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: all 0.2s ease;
+}
+
+#yearSelect {
+  min-width: 85px;
+}
+
+.date-select:hover {
+  background-color: #e6f7ec;
+}
+
+.date-select:focus {
+  outline: none;
+  border-color: #2ea054;
+  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
+}
+
+.date-select:first-child {
+  border-radius: 6px;
+}
+
+.date-select:last-of-type {
+  border-radius: 6px;
+}
+
+.date-filter-container .view-history-btn {
+  padding: 5px 10px;
+  background: #1a4d2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.date-filter-container .view-history-btn:hover {
+  background: #153524;
+}
+
+.date-separator {
+  padding: 0 4px;
+  color: #666;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.view-history-btn {
+  padding: 10px 16px;
+  background: #7a9a7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-history-btn:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+}
+
+/* ===== 内容区域 ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* ===== 时间范围选择器 ===== */
+.time-range-selector {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d4e0d4;
+}
+
+.time-range-selector label {
+  display: block;
+  margin-bottom: 10px;
+  color: #5a7a5a;
+  font-weight: bold;
+}
+
+.time-range-selector select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d4e0d4;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #2a3a2a;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+.time-range-selector select:hover {
+  border-color: #7a9a7a;
+}
+
+/* ===== 排行榜区域 ===== */
+.ranking-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+}
+
+.ranking-section h4 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.ranking-list {
+  list-style: none;
+}
+
+.ranking-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.ranking-list li:hover .ranking-name {
+  color: #7a9a7a;
+}
+
+.ranking-item {
+  display: block;
+}
+
+.ranking-info {
+  display: block;
+}
+
+.ranking-name {
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ranking-name:hover {
+  color: #5a7a5a;
+  text-decoration: underline;
+}
+
+.ranking-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.ranking-stars {
+  margin-right: 12px;
+}
+
+.ranking-count {
+  color: #7a9a7a;
+}
+
+.ranking-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
+.global-tooltip {
+  display: none;
+  position: absolute;
+  background: #3a5a3a;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 400px;
+  width: 90%;
+  z-index: 999999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  text-align: left;
+  border: 2px solid #5a8a5a;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.global-tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.global-tooltip-close:hover {
+  opacity: 1;
+}
+
+/* ===== 项目卡片 ===== */
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
+  border-color: #7a9a7a;
+}
+
+.project-name {
+  font-size: 1.8em;
+  color: #5a7a5a;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4e0d4;
+  font-weight: bold;
+}
+
+/* ===== 项目卡片内部各区域 ===== */
+.summary {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.summary strong {
+  color: #5a7a5a;
+}
+
+.details {
+  background: #edf3ed;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #7a9a7a;
+}
+
+.details strong {
+  color: #5a6a5a;
+}
+
+.link {
+  background: #eaf2ea;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7a9a7a;
+  color: #f8faf8;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.link a:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
+}
+
+.stars {
+  background: #f0f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #9ab89a;
+}
+
+.stars strong {
+  color: #5a7a5a;
+}
+
+.stars span {
+  color: #6a8a6a;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.rating {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.rating strong {
+  color: #5a6a5a;
+}
+
+.rating span {
+  color: #6a8a6a;
+  font-size: 1.3em;
+}
+
+/* ===== 总结区域 ===== */
+.summary-section {
+  background: #edf3ed;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 1px solid #d4e0d4;
+}
+
+.summary-section h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.summary-section p {
+  line-height: 1.8;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .project-name {
+    font-size: 1.5em;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* ===== 动画效果 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+.project-card:nth-child(9) { animation-delay: 0.9s; }
+.project-card:nth-child(10) { animation-delay: 1.0s; }
+
+  </style>
+</head>
+<body>
+  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
+  <div class="global-tooltip" id="globalTooltip">
+    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
+    <div id="tooltipContent"></div>
+  </div>
+
+  <!-- 页面主容器 -->
+  <div class="container">
+    <!-- 页面头部 -->
+    <div class="header">
+      <h1>🌟 GitHub Trending 简报</h1>
+      <p>每日精选热门开源项目，发现最新技术趋势</p>
+      <div class="date">📅 2026年2月21日星期六</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+      <!-- 侧边栏 -->
+      <div class="sidebar">
+        <h3>📅 历史报告</h3>
+        <ul>
+          <li><a href="daily_2026-02-23.html">2026年2月23日</a></li><li><a href="daily_2026-02-22.html">2026年2月22日</a></li><li><a href="daily_2026-02-21.html">2026年2月21日</a></li><li><a href="daily_2026-02-20.html">2026年2月20日</a></li><li><a href="daily_2026-02-19.html">2026年2月19日</a></li><li><a href="daily_2026-02-18.html">2026年2月18日</a></li><li><a href="daily_2026-02-17.html">2026年2月17日</a></li>
+
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-02-23","2026-02-22","2026-02-21","2026-02-20","2026-02-19","2026-02-18","2026-02-17","2026-02-16","2026-02-11"]</div>
+  
+        </ul>
+
+        <h3>🔥 热门项目排行榜</h3>
+        <div class="time-range-selector">
+          <label for="timeRange">选择时间范围：</label>
+          <select id="timeRange" onchange="updateRanking(this.value)">
+            <option value="week">过去一周</option>
+            <option value="month">过去一月</option>
+            <option value="quarter">过去一季度</option>
+          </select>
+        </div>
+
+        <div id="rankingContent" class="ranking-section">
+          <h4>🔥 热门项目排行榜</h4>
+          <ul class="ranking-list" id="rankingList">
+            <li>加载中...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 内容区域 -->
+      <div class="content">
+        <h1>今日 GitHub 狠活：从 AI 黑客到终端码神，这波全是生产力核弹！</h1>
+<p>各位摸鱼（划掉）奋斗在代码一线的朋友们，大家好！今天 GitHub Trending 榜单弥漫着一股浓烈的“让 AI 替我打工”和“让工具替我思考”的气息。从能自动渗透测试的赛博保镖，到在浏览器里就能把代码库变成知识图谱的“读心神器”，再到住在你终端里的 Claude 码农…… 这哪是工具更新，这分明是程序员下岗再就业预警（误）。话不多说，一起来看看今天又有哪些能让你“优雅地偷懒”的狠活。</p>
+
+<div class="project-card">
+  <h3 class="project-name">vxcontrol/pentagi</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个能全自动执行复杂渗透测试任务的 AI 特工系统。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 还在手动点点点、跑脚本做安全测试？Pentagi 直接给你派了个不知疲倦的 AI 黑客团队。你只需要告诉它目标，它就能自己规划攻击路径、利用漏洞、写报告，把整个渗透测试流程给包圆了。这玩意儿相当于给你的安全团队请了个 24 小时不眠不休的“外挂专家”，专治各种手动测试的繁琐和遗漏。当然，用这工具得讲武德，别拿去干坏事。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/vxcontrol/pentagi" target="_blank">https://github.com/vxcontrol/pentagi</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>4,648</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★☆ (潜力巨大，但领域垂直)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">abhigyanpatwari/GitNexus</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个完全在浏览器里运行、能把代码仓库变成交互式知识图谱的零服务器“读心神器”。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 接手一个陌生项目，看着满屏代码头晕眼花？GitNexus 来救场了。你只需要把 GitHub 仓库地址或者代码压缩包扔给它（&lt;strong&gt;完全在本地浏览器里处理，代码不上传！&lt;/strong&gt;），它就能瞬间给你生成一个可视化的知识图谱，清晰展示文件、函数、类之间的调用关系。更绝的是，它还内置了一个基于图谱的问答机器人，你可以直接问它“这个函数是干嘛的？”、“谁调用了这个模块？”。简直是代码考古和快速上手的终极利器，妈妈再也不用担心我理不清祖传代码了。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank">https://github.com/abhigyanpatwari/GitNexus</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>818</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★★ (创意十足，实用性强，隐私友好)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">obra/superpowers</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一套号称“真的能 work”的智能体技能框架与软件开发方法论。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 现在是个 AI 项目都说自己是“Agent（智能体）”，但很多用起来跟人工智障差不多。Superpowers 这个项目试图提供一套更靠谱的底层框架和方法论，让开发者能系统地给 AI 装配各种“技能”（比如读写文件、调用 API、执行命令），并协调它们完成复杂任务。你可以把它理解为给 AI 大脑打造一个标准化、可扩展的“工具箱”和“工作流程图”。如果它真如其名，那可能是构建实用 AI 应用的一块重要基石。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/obra/superpowers" target="_blank">https://github.com/obra/superpowers</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>56,548</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★☆ (星星很多，概念很硬核，适合开发者深入探索)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">huggingface/skills</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Hugging Face 出品的 AI 技能库（目前暂无官方描述）。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 来自 AI 界“苹果商店” Hugging Face 的神秘项目。虽然现在描述是空的，但名字叫“skills”，结合 HF 的一贯作风，很可能是一个集中管理、分享和调用各种 AI 模型技能（例如：总结、翻译、代码生成、图像分析等）的官方库或平台。这相当于想把 AI 能力模块化、乐高化，让开发者可以像搭积木一样快速组合出复杂应用。值得保持关注，看看 HF 这次又要搞什么大事情。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/huggingface/skills" target="_blank">https://github.com/huggingface/skills</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>1,530</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★☆☆ (背景强大，但目前信息太少，先马后看)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">PowerShell/PowerShell</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> PowerShell —— 一个跨平台的自动化工具和脚本语言。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 老朋友 PowerShell 又上榜了！这可不是新闻，而是实力的体现。它早已不是 Windows 的专属，现在是一个功能强大的跨平台（Windows, Linux, macOS）脚本环境和配置管理框架。它把强大的对象操作能力和丰富的命令集（Cmdlet）带到了所有主流系统，无论是系统管理、运维自动化还是 CI/CD，都是扛把子级别的存在。如果你还在用笨拙的批处理或者觉得 Bash 脚本处理对象太麻烦，是时候拥抱 PowerShell 了。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/PowerShell/PowerShell" target="_blank">https://github.com/PowerShell/PowerShell</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>51,462</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★★ (经典永流传，跨平台运维必备)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">anthropics/claude-code</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个住在你终端里的、能理解代码库的 Claude 智能编程助手。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 这才是真正的“终端战神”！Claude Code 不是普通的代码补全插件，而是一个能理解你整个项目上下文、并能通过自然语言指挥它干活的 AI 智能体。你可以让它“重构这个函数”、“帮我写个单元测试”、“解释一下这块复杂的逻辑”，甚至处理 Git 操作（“帮我提交刚才的修改，信息写‘修复了登录bug’”）。它直接生活在你的开发环境里，随叫随到，把那些重复、繁琐的编码工作自动化，让你更专注于核心设计和逻辑。卷，实在是太卷了。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/anthropics/claude-code" target="_blank">https://github.com/anthropics/claude-code</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>68,134</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★★ (星星爆炸多，可能是未来编程的形态，强烈推荐体验)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">stan-smith/FossFLOW</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个能绘制精美等距视角基础设施架构图的工具。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 还在用 Visio、Draw.io 画那些平平无奇的平面架构图吗？FossFLOW 让你瞬间拥有科技公司官网那种酷炫的 3D 等距（Isometric）风格架构图。无论是展示你的微服务集群、云上资源布局，还是网络拓扑，用它画出来的图逼格直接拉满，放进 PPT 里能让老板和客户眼前一亮。对于需要频繁进行技术演示和文档编写的架构师、运维和售前同学来说，这是个体面又高效的生产力工具。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/stan-smith/FossFLOW" target="_blank">https://github.com/stan-smith/FossFLOW</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>17,584</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★☆ (小众但精美，特定场景下是神器)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">ggml-org/ggml</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个为机器学习设计的张量库，特别专注于在消费级硬件上高效运行。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 如果你玩过在自家电脑上跑大语言模型（比如 Llama、ChatGLM），那你很可能已经间接用到了 GGML（现在可能叫 GGUF 了）。这个库是许多本地运行 LLM 项目的基石（比如 llama.cpp），它通过一系列巧妙的量化技术和优化，让那些动辄数十亿参数的模型能在你的 CPU 甚至 Mac M 芯片上流畅运行。简单说，它就是让“AI 飞入寻常百姓家”的关键推手之一。对底层 AI 推理和优化感兴趣的同学必看。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/ggml-org/ggml" target="_blank">https://github.com/ggml-org/ggml</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>14,007</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★★☆ (AI 基础设施中的硬核实力派)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">Stremio/stremio-web</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Stremio 的网页版 —— 一个聚合了多种流媒体内容的“自由观影中心”。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 厌倦了在 Netflix、Disney+、YouTube 等无数个 App 和网站间切换？Stremio 试图成为你的流媒体终极聚合器。它本身提供一个漂亮的播放器界面和内容库，通过安装社区开发的“插件”（Add-ons），你可以将各种合法或……嗯……“丰富”的片源聚合到一个地方进行搜索和观看。网页版意味着你无需安装客户端，打开浏览器就能享受。注意：使用第三方插件需自行甄别内容和版权风险。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/Stremio/stremio-web" target="_blank">https://github.com/Stremio/stremio-web</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>9,299</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>★★★☆☆ (功能强大，但涉及灰色地带，请合法合规使用)</span>
+  </div>
+</div>
+
+<div class="project-card">
+  <h3 class="project-name">HandsOnLLM/Hands-On-Large-Language-Models</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> O&amp;#39;Reilly 书籍《动手学大语言模型》的官方代码仓库。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 理论看了一堆，还是不知道怎么动手训练、微调、
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="#" target="_blank">#</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>0</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>暂无</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 前端交互脚本 -->
+  <script>
+    /**
+ * GitHub Trending 简报前端交互脚本
+ * 包含所有前端交互逻辑：Tooltip、排行榜切换、日期选择等
+ */
+
+// Tooltip 偏移量配置
+const TOOLTIP_OFFSET_X = 15;
+const TOOLTIP_OFFSET_Y = 15;
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+  // 为项目卡片添加点击效果
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        return;
+      }
+      this.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 150);
+    });
+  });
+
+  // 初始化排行榜显示（默认显示近一周）
+  if (typeof updateRanking === 'function') {
+    updateRanking('week');
+  }
+});
+
+/**
+ * 显示悬浮提示框 - 跟随鼠标位置
+ * @param {string} content - 提示内容
+ * @param {Event} event - 鼠标事件对象
+ */
+function showTooltip(content, event) {
+  const tooltip = document.getElementById('globalTooltip');
+  const tooltipContent = document.getElementById('tooltipContent');
+  tooltipContent.textContent = content;
+  tooltip.style.display = 'block';
+
+  // 跟随鼠标定位
+  const x = event.pageX + TOOLTIP_OFFSET_X;
+  const y = event.pageY + TOOLTIP_OFFSET_Y;
+
+  // 获取视口尺寸，防止提示框超出边界
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const tooltipRect = tooltip.getBoundingClientRect();
+
+  // 如果右侧空间不足，显示在左侧
+  let finalX = x;
+  if (x + tooltipRect.width > viewportWidth) {
+    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
+  }
+
+  // 如果底部空间不足，显示在上方
+  let finalY = y;
+  if (y + tooltipRect.height > viewportHeight) {
+    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
+  }
+
+  tooltip.style.left = finalX + 'px';
+  tooltip.style.top = finalY + 'px';
+  tooltip.style.transform = 'none';
+}
+
+/**
+ * 隐藏悬浮提示框
+ */
+function hideTooltip() {
+  const tooltip = document.getElementById('globalTooltip');
+  tooltip.style.display = 'none';
+}
+
+/**
+ * 更新排行榜显示
+ * @param {string} timeRange - 时间范围：'week'、'month'、'quarter'
+ */
+function updateRanking(timeRange) {
+  var rankingList = document.getElementById('rankingList');
+
+  if (typeof rankingData === 'undefined') {
+    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
+    return;
+  }
+
+  var rankings = rankingData[timeRange] || [];
+
+  if (rankings.length === 0) {
+    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
+    return;
+  }
+
+  let html = '';
+
+  rankings.forEach(function(item, index) {
+    var description = item.description || '暂无描述';
+    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+
+    var count = item.count || 0;
+    var stars = item.stars || '0';
+
+    var tooltipContent = '📦 ' + item.name + '\n\n' +
+                         '📝 ' + description + '\n\n' +
+                         '⭐ ' + stars + ' | 📅 ' + count + ' 次';
+
+    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+
+    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
+    html += '<div class="ranking-item">';
+    html += '<div class="ranking-info">';
+    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
+    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
+    html += '<div class="ranking-desc">' + description + '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</li>';
+  });
+
+  rankingList.innerHTML = html;
+}
+
+/**
+ * 更新月份选择下拉框
+ * 修复：保留已选择的月份，重新选择时正确更新
+ */
+function updateMonthOptions() {
+  var yearSelect = document.getElementById('yearSelect');
+  var monthSelect = document.getElementById('monthSelect');
+  var daySelect = document.getElementById('daySelect');
+  var availableDatesContainer = document.getElementById('availableDatesData');
+
+  if (!availableDatesContainer) {
+    console.error('找不到可用日期容器');
+    return;
+  }
+
+  var availableDates = JSON.parse(availableDatesContainer.textContent);
+  var selectedYear = yearSelect.value;
+  var previouslySelectedMonth = monthSelect.value;
+
+  monthSelect.innerHTML = '<option value="">月</option>';
+  daySelect.innerHTML = '<option value="">日</option>';
+
+  if (!selectedYear) {
+    return;
+  }
+
+  var months = [...new Set(
+    availableDates
+      .filter(function(d) { return d.startsWith(selectedYear); })
+      .map(function(d) { return d.substring(5, 7); })
+  )].sort().reverse();
+
+  for (var i = 0; i < months.length; i++) {
+    var month = months[i];
+    var monthNum = parseInt(month, 10);
+    var selected = (month === previouslySelectedMonth) ? ' selected' : '';
+    monthSelect.innerHTML += '<option value="' + month + '"' + selected + '>' + monthNum + '</option>';
+  }
+
+  if (previouslySelectedMonth && months.includes(previouslySelectedMonth)) {
+    updateDayOptions();
+  }
+}
+
+/**
+ * 更新日期选择下拉框
+ * 修复：保留已选择的日期，正确处理状态
+ */
+function updateDayOptions() {
+  var yearSelect = document.getElementById('yearSelect');
+  var monthSelect = document.getElementById('monthSelect');
+  var daySelect = document.getElementById('daySelect');
+  var availableDatesContainer = document.getElementById('availableDatesData');
+
+  if (!availableDatesContainer) {
+    return;
+  }
+
+  var availableDates = JSON.parse(availableDatesContainer.textContent);
+  var selectedYear = yearSelect.value;
+  var selectedMonth = monthSelect.value;
+  var previouslySelectedDay = daySelect.value;
+
+  daySelect.innerHTML = '<option value="">日</option>';
+
+  if (!selectedYear || !selectedMonth) {
+    return;
+  }
+
+  var days = availableDates
+    .filter(function(d) { return d.startsWith(selectedYear + '-' + selectedMonth); })
+    .sort().reverse();
+
+  for (var i = 0; i < days.length; i++) {
+    var day = days[i];
+    var dayNum = parseInt(day.substring(8, 10), 10);
+    var selected = (day === previouslySelectedDay) ? ' selected' : '';
+    daySelect.innerHTML += '<option value="' + day + '"' + selected + '>' + dayNum + '</option>';
+  }
+}
+
+/**
+ * 跳转到历史报告页面
+ */
+function goToHistoryReport() {
+  var daySelect = document.getElementById('daySelect');
+  var selectedDate = daySelect.value;
+
+  if (selectedDate) {
+    window.location.href = 'daily_' + selectedDate + '.html';
+  } else {
+    alert('请先选择完整的日期！');
+  }
+}
+
+  </script>
+</body>
+</html>
