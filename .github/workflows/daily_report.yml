@@ -38,6 +38,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/ reports/
+          git add .
           git commit -m "auto: 🌟 生成今日 GitHub Trending 简报" || echo "今天没有新数据，跳过提交"
+          git pull --rebase origin main || echo "pull rebase skipped"
           git push

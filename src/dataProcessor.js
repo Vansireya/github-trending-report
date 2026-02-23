@@ -652,13 +652,15 @@ function getYearOptions(dates) {
 /**
  * 生成侧边栏历史记录 HTML
  * @param {Array} recentDates - 最近的历史日期数组
+ * @param {boolean} isIndex - 是否为首页
  * @returns {string} 历史记录列表的 HTML
  */
-function generateHistoryDatesHTML(recentDates) {
+function generateHistoryDatesHTML(recentDates, isIndex = false) {
   if (!recentDates || recentDates.length === 0) {
     return '<li style="color: #6a8a6a;">暂无历史记录</li>';
   }
 
+  const prefix = isIndex ? 'reports/' : '';
   let html = '';
   for (const date of recentDates) {
     const parts = date.split('-');
@@ -666,7 +668,7 @@ function generateHistoryDatesHTML(recentDates) {
     const month = parseInt(parts[1], 10);
     const day = parseInt(parts[2], 10);
     const displayDate = `${year}年${month}月${day}日`;
-    html += `<li><a href="daily_${date}.html">${displayDate}</a></li>`;
+    html += `<li><a href="${prefix}daily_${date}.html">${displayDate}</a></li>`;
   }
 
   return html;
