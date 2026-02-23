@@ -55,16 +55,22 @@ jobs:
             exit 1
           fi
 
-      - name: 
+      - name: 提交并推送到仓库
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 强制添加所有变动，包括新生成的 index.html
-          git add data/ reports/ index.html
+          # 1. 核心改进：使用 "." 包含所有变动（防止漏掉 package-lock.json 等文件）
+          git add .
           
-          # 提交更改
-          git commit -m "auto: 🌟 自动生成今日简报并更新首页 [skip ci]" || echo "今日数据无变化"
+          # 2. 提交到机器人本地
+          git commit -m "auto: 🌟 自动生成今日简报并更新首页 [skip ci]" || echo "没有变化"
+          
+          # 3. 此时本地是干净的，可以放心地拉取远程改动并合并
+          git pull origin main --rebase
+          
+          # 4. 稳稳地推送到远程
+          git push origin main
           
           # 先拉取可能存在的远程改动，防止冲突
           git pull origin main --rebase
