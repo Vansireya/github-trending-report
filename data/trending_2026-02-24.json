@@ -4,7 +4,7 @@
     "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
     "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
     "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
-    "stars": "119,453",
+    "stars": "120,752",
     "language": "Unknown"
   },
   {
@@ -12,7 +12,7 @@
     "name": "huggingface/skills",
     "url": "https://github.com/huggingface/skills",
     "description": "No description",
-    "stars": "3,528",
+    "stars": "3,924",
     "language": "Python"
   },
   {
@@ -20,7 +20,7 @@
     "name": "OpenBB-finance/OpenBB",
     "url": "https://github.com/OpenBB-finance/OpenBB",
     "description": "Financial data platform for analysts, quants and AI agents.",
-    "stars": "61,290",
+    "stars": "61,448",
     "language": "Python"
   },
   {
@@ -28,7 +28,7 @@
     "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
     "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
-    "stars": "8,737",
+    "stars": "8,949",
     "language": "Python"
   },
   {
@@ -36,7 +36,7 @@
     "name": "f/prompts.chat",
     "url": "https://github.com/f/prompts.chat",
     "description": "a.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-    "stars": "146,862",
+    "stars": "147,058",
     "language": "HTML"
   },
   {
@@ -44,7 +44,7 @@
     "name": "CompVis/stable-diffusion",
     "url": "https://github.com/CompVis/stable-diffusion",
     "description": "A latent text-to-image diffusion model",
-    "stars": "72,454",
+    "stars": "72,494",
     "language": "Jupyter Notebook"
   },
   {
@@ -52,7 +52,7 @@
     "name": "abhigyanpatwari/GitNexus",
     "url": "https://github.com/abhigyanpatwari/GitNexus",
     "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
-    "stars": "1,800",
+    "stars": "1,937",
     "language": "TypeScript"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Stremio/stremio-web",
     "url": "https://github.com/Stremio/stremio-web",
     "description": "Stremio - Freedom to Stream",
-    "stars": "9,865",
+    "stars": "9,945",
     "language": "JavaScript"
   },
   {
@@ -68,7 +68,7 @@
     "name": "stan-smith/FossFLOW",
     "url": "https://github.com/stan-smith/FossFLOW",
     "description": "Make beautiful isometric infrastructure diagrams",
-    "stars": "18,443",
+    "stars": "18,561",
     "language": "TypeScript"
   },
   {
@@ -76,7 +76,7 @@
     "name": "VectifyAI/PageIndex",
     "url": "https://github.com/VectifyAI/PageIndex",
     "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
-    "stars": "16,564",
+    "stars": "16,797",
     "language": "Python"
   }
 ]
