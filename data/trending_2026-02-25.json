@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "huggingface/skills",
+    "url": "https://github.com/huggingface/skills",
+    "description": "No description",
+    "stars": "5,371",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+    "stars": "9,932",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "OpenBB-finance/OpenBB",
+    "url": "https://github.com/OpenBB-finance/OpenBB",
+    "description": "Financial data platform for analysts, quants and AI agents.",
+    "stars": "61,896",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "LadybirdBrowser/ladybird",
+    "url": "https://github.com/LadybirdBrowser/ladybird",
+    "description": "Truly independent web browser",
+    "stars": "59,112",
+    "language": "C++"
+  },
+  {
+    "rank": 5,
+    "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+    "stars": "123,103",
+    "language": "Unknown"
+  },
+  {
+    "rank": 6,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "60,495",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "ruvnet/ruvector",
+    "url": "https://github.com/ruvnet/ruvector",
+    "description": "RuVector is a high performance vector and graph database built in Rust for AI, agentic systems, and real time analytics. It combines HNSW search, dynamic minimum cut coherence, graph intelligence, and self learning memory into one unified engine for scalable, low latency reasoning and structured retrieval.",
+    "stars": "741",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "stars": "12,661",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "GVCLab/PersonaLive",
+    "url": "https://github.com/GVCLab/PersonaLive",
+    "description": "[CVPR 2026] PersonaLive! : Expressive Portrait Image Animation for Live Streaming",
+    "stars": "1,996",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "HunxByts/GhostTrack",
+    "url": "https://github.com/HunxByts/GhostTrack",
+    "description": "Useful tool to track location or mobile number",
+    "stars": "7,475",
+    "language": "Python"
+  }
+]
