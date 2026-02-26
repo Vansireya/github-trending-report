@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "stars": "15,101",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "huggingface/skills",
+    "url": "https://github.com/huggingface/skills",
+    "description": "No description",
+    "stars": "6,407",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": "3,731",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "61,861",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+    "stars": "10,740",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "datawhalechina/hello-agents",
+    "url": "https://github.com/datawhalechina/hello-agents",
+    "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+    "stars": "21,969",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "bytedance/deer-flow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
+    "stars": "20,460",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "VectifyAI/PageIndex",
+    "url": "https://github.com/VectifyAI/PageIndex",
+    "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+    "stars": "17,719",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "NevaMind-AI/memU",
+    "url": "https://github.com/NevaMind-AI/memU",
+    "description": "Memory for 24/7 proactive agents like openclaw (moltbot, clawdbot).",
+    "stars": "10,806",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "ruvnet/ruvector",
+    "url": "https://github.com/ruvnet/ruvector",
+    "description": "RuVector is a High Performance, Real-Time, Self-Learning, Vector Graph Neural Network, and Database built in Rust.",
+    "stars": "1,194",
+    "language": "Rust"
+  }
+]
