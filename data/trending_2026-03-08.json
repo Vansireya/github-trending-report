@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "5,681",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "openai/skills",
+    "url": "https://github.com/openai/skills",
+    "description": "Skills Catalog for Codex",
+    "stars": "12,729",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "10,792",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "GoogleCloudPlatform/generative-ai",
+    "url": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini on Vertex AI",
+    "stars": "13,546",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 5,
+    "name": "agentjido/jido",
+    "url": "https://github.com/agentjido/jido",
+    "description": "🤖 Autonomous agent framework for Elixir. Built for distributed, autonomous behavior and dynamic workflows.",
+    "stars": "1,425",
+    "language": "Elixir"
+  },
+  {
+    "rank": 6,
+    "name": "QwenLM/Qwen-Agent",
+    "url": "https://github.com/QwenLM/Qwen-Agent",
+    "description": "Agent framework and applications built upon Qwen>=3.0, featuring Function Calling, MCP, Code Interpreter, RAG, Chrome extension, etc.",
+    "stars": "15,032",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "46,585",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "microsoft/hve-core",
+    "url": "https://github.com/microsoft/hve-core",
+    "description": "A refined collection of Hypervelocity Engineering components (instructions, prompts, agents, and skills) to start your project off right, or upgrade your existing projects to get the most out of all Copilots",
+    "stars": "754",
+    "language": "PowerShell"
+  },
+  {
+    "rank": 9,
+    "name": "toeverything/AFFiNE",
+    "url": "https://github.com/toeverything/AFFiNE",
+    "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+    "stars": "64,707",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "shadcn-ui/ui",
+    "url": "https://github.com/shadcn-ui/ui",
+    "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
+    "stars": "108,189",
+    "language": "TypeScript"
+  }
+]
