@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "GoogleCloudPlatform/generative-ai",
+    "url": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini on Vertex AI",
+    "stars": "14,423",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 2,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "7,071",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "shadcn-ui/ui",
+    "url": "https://github.com/shadcn-ui/ui",
+    "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
+    "stars": "108,700",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "openclaw/openclaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+    "stars": "280,918",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "toeverything/AFFiNE",
+    "url": "https://github.com/toeverything/AFFiNE",
+    "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+    "stars": "65,238",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "Ed1s0nZ/CyberStrikeAI",
+    "url": "https://github.com/Ed1s0nZ/CyberStrikeAI",
+    "description": "CyberStrikeAI is an AI-native security testing platform built in Go. It integrates 100+ security tools, an intelligent orchestration engine, role-based testing with predefined security roles, a skills system with specialized testing skills, and comprehensive lifecycle management capabilities.",
+    "stars": "2,269",
+    "language": "Go"
+  },
+  {
+    "rank": 7,
+    "name": "shareAI-lab/learn-claude-code",
+    "url": "https://github.com/shareAI-lab/learn-claude-code",
+    "description": "Bash is all you need - A nano Claude Code–like agent, built from 0 to 1",
+    "stars": "23,910",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "openai/skills",
+    "url": "https://github.com/openai/skills",
+    "description": "Skills Catalog for Codex",
+    "stars": "13,245",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "46,829",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "is-a-dev/register",
+    "url": "https://github.com/is-a-dev/register",
+    "description": "Grab your own sweet-looking '.is-a.dev' subdomain.",
+    "stars": "9,800",
+    "language": "JavaScript"
+  }
+]
