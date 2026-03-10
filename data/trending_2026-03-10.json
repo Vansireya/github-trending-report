@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "GoogleCloudPlatform/generative-ai",
+    "url": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini on Vertex AI",
+    "stars": "15,288",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 2,
+    "name": "openclaw/openclaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+    "stars": "290,332",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "10,966",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "karpathy/nanochat",
+    "url": "https://github.com/karpathy/nanochat",
+    "description": "The best ChatGPT that $100 can buy.",
+    "stars": "45,520",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "666ghj/BettaFish",
+    "url": "https://github.com/666ghj/BettaFish",
+    "description": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
+    "stars": "37,353",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "2,984",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "description": "The design language that makes your AI harness better at design.",
+    "stars": "2,986",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "19,360",
+    "language": "Shell"
+  },
+  {
+    "rank": 9,
+    "name": "alibaba/page-agent",
+    "url": "https://github.com/alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "stars": "2,588",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills",
+    "description": "169 production-ready skills & plugins for Claude Code, OpenAI Codex, and OpenClaw — engineering, marketing, product, compliance, C-level advisory, and more. Install via /plugin marketplace.",
+    "stars": "3,356",
+    "language": "Python"
+  }
+]
