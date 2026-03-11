@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "25,462",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "14,222",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "3,795",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "promptfoo/promptfoo",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. AI Red teaming, pentesting, and vulnerability scanning for LLMs. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+    "stars": "11,965",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "GoogleCloudPlatform/generative-ai",
+    "url": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini on Vertex AI",
+    "stars": "15,760",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 6,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "47,607",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "karpathy/nanochat",
+    "url": "https://github.com/karpathy/nanochat",
+    "description": "The best ChatGPT that $100 can buy.",
+    "stars": "46,249",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "76,595",
+    "language": "Shell"
+  },
+  {
+    "rank": 9,
+    "name": "alibaba/page-agent",
+    "url": "https://github.com/alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "stars": "3,653",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "sepinf-inc/IPED",
+    "url": "https://github.com/sepinf-inc/IPED",
+    "description": "IPED Digital Forensic Tool. It is an open source software that can be used to process and analyze digital evidence, often seized at crime scenes by law enforcement or in a corporate investigation by private examiners.",
+    "stars": "2,216",
+    "language": "Java"
+  }
+]
