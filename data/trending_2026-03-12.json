@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "30,172",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "16,827",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "promptfoo/promptfoo",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+    "stars": "12,574",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "78,098",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "fishaudio/fish-speech",
+    "url": "https://github.com/fishaudio/fish-speech",
+    "description": "SOTA Open Source TTS",
+    "stars": "25,809",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "48,168",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "alibaba/page-agent",
+    "url": "https://github.com/alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "stars": "4,783",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "5,271",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "AstrBotDevs/AstrBot",
+    "url": "https://github.com/AstrBotDevs/AstrBot",
+    "description": "Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "stars": "21,083",
+    "language": "Python"
+  }
+]
