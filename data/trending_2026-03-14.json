@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "microsoft/BitNet",
+    "url": "https://github.com/microsoft/BitNet",
+    "description": "Official inference framework for 1-bit LLMs",
+    "stars": "33,980",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "langflow-ai/openrag",
+    "url": "https://github.com/langflow-ai/openrag",
+    "description": "OpenRAG is a comprehensive, single package Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch.",
+    "stars": "2,262",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "lightpanda-io/browser",
+    "url": "https://github.com/lightpanda-io/browser",
+    "description": "Lightpanda: the headless browser designed for AI and automation",
+    "stars": "15,480",
+    "language": "Zig"
+  },
+  {
+    "rank": 4,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "81,929",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs",
+    "stars": "409,489",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "promptfoo/promptfoo",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+    "stars": "15,287",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "40,165",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "dolthub/dolt",
+    "url": "https://github.com/dolthub/dolt",
+    "description": "Dolt – Git for Data",
+    "stars": "21,080",
+    "language": "Go"
+  },
+  {
+    "rank": 9,
+    "name": "google/A2UI",
+    "url": "https://github.com/google/A2UI",
+    "description": "No description",
+    "stars": "13,058",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "fishaudio/fish-speech",
+    "url": "https://github.com/fishaudio/fish-speech",
+    "description": "SOTA Open Source TTS",
+    "stars": "26,871",
+    "language": "Python"
+  }
+]
