@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "opendataloader-project/opendataloader-pdf",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+    "stars": "5,691",
+    "language": "Java"
+  },
+  {
+    "rank": 2,
+    "name": "langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "description": "An Open-Source Asynchronous Coding Agent",
+    "stars": "7,052",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "99,271",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "stars": "8,532",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "description": "Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.",
+    "stars": "56,719",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "mobile-dev-inc/Maestro",
+    "url": "https://github.com/mobile-dev-inc/Maestro",
+    "description": "Painless E2E Automation for Mobile and Web",
+    "stars": "12,455",
+    "language": "Kotlin"
+  },
+  {
+    "rank": 7,
+    "name": "newton-physics/newton",
+    "url": "https://github.com/newton-physics/newton",
+    "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
+    "stars": "3,231",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "louis-e/arnis",
+    "url": "https://github.com/louis-e/arnis",
+    "description": "Generate any location from the real world in Minecraft with a high level of detail.",
+    "stars": "10,788",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "FujiwaraChoki/MoneyPrinterV2",
+    "url": "https://github.com/FujiwaraChoki/MoneyPrinterV2",
+    "description": "Automate the process of making money online.",
+    "stars": "16,080",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "gsd-build/get-shit-done",
+    "url": "https://github.com/gsd-build/get-shit-done",
+    "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+    "stars": "36,140",
+    "language": "JavaScript"
+  }
+]
