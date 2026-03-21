@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "stars": "9,546",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 2,
+    "name": "langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "description": "An Open-Source Asynchronous Coding Agent",
+    "stars": "7,647",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "101,571",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "opendataloader-project/opendataloader-pdf",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+    "stars": "7,066",
+    "language": "Java"
+  },
+  {
+    "rank": 5,
+    "name": "louis-e/arnis",
+    "url": "https://github.com/louis-e/arnis",
+    "description": "Generate any location from the real world in Minecraft with a high level of detail.",
+    "stars": "11,594",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "newton-physics/newton",
+    "url": "https://github.com/newton-physics/newton",
+    "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
+    "stars": "3,473",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "vas3k/TaxHacker",
+    "url": "https://github.com/vas3k/TaxHacker",
+    "description": "Self-hosted AI accounting app. LLM analyzer for receipts, invoices, transactions with custom prompts and categories",
+    "stars": "1,942",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "34,122",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "openrocket/openrocket",
+    "url": "https://github.com/openrocket/openrocket",
+    "description": "Model-rocketry aerodynamics and trajectory simulation software",
+    "stars": "2,218",
+    "language": "Java"
+  }
+]
