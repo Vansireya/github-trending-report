@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "FujiwaraChoki/MoneyPrinterV2",
+    "url": "https://github.com/FujiwaraChoki/MoneyPrinterV2",
+    "description": "Automate the process of making money online.",
+    "stars": "17,802",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "systemd/systemd",
+    "url": "https://github.com/systemd/systemd",
+    "description": "The systemd System and Service Manager",
+    "stars": "15,730",
+    "language": "C"
+  },
+  {
+    "rank": 3,
+    "name": "aquasecurity/trivy",
+    "url": "https://github.com/aquasecurity/trivy",
+    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "stars": "33,381",
+    "language": "Go"
+  },
+  {
+    "rank": 4,
+    "name": "Crosstalk-Solutions/project-nomad",
+    "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+    "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+    "stars": "6,807",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "opendataloader-project/opendataloader-pdf",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+    "stars": "7,900",
+    "language": "Java"
+  },
+  {
+    "rank": 6,
+    "name": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "stars": "10,463",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 7,
+    "name": "protocolbuffers/protobuf",
+    "url": "https://github.com/protocolbuffers/protobuf",
+    "description": "Protocol Buffers - Google's data interchange format",
+    "stars": "70,947",
+    "language": "C++"
+  },
+  {
+    "rank": 8,
+    "name": "vllm-project/vllm-omni",
+    "url": "https://github.com/vllm-project/vllm-omni",
+    "description": "A framework for efficient model inference with omni-modality models",
+    "stars": "3,515",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "louis-e/arnis",
+    "url": "https://github.com/louis-e/arnis",
+    "description": "Generate any location from the real world in Minecraft with a high level of detail.",
+    "stars": "12,232",
+    "language": "Rust"
+  }
+]
