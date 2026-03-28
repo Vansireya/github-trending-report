@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "stars": "12,708",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "hacksider/Deep-Live-Cam",
+    "url": "https://github.com/hacksider/Deep-Live-Cam",
+    "description": "real time face swap and one-click video deepfake with only a single image",
+    "stars": "83,096",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "SakanaAI/AI-Scientist-v2",
+    "url": "https://github.com/SakanaAI/AI-Scientist-v2",
+    "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+    "stars": "2,873",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "microsoft/VibeVoice",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "description": "Open-Source Frontier Voice AI",
+    "stars": "24,699",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "twentyhq/twenty",
+    "url": "https://github.com/twentyhq/twenty",
+    "description": "Building a modern alternative to Salesforce, powered by the community.",
+    "stars": "42,024",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "datalab-to/chandra",
+    "url": "https://github.com/datalab-to/chandra",
+    "description": "OCR model that handles complex tables, forms, handwriting with full layout.",
+    "stars": "7,035",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "118,590",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "description": "An autonomous agent for deep financial research",
+    "stars": "19,701",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+    "description": "Teams-first Multi-agent orchestration for Claude Code",
+    "stars": "13,978",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "FreeCAD/FreeCAD",
+    "url": "https://github.com/FreeCAD/FreeCAD",
+    "description": "Official source code of FreeCAD, a free and opensource multiplatform 3D parametric modeler.",
+    "stars": "29,672",
+    "language": "C++"
+  }
+]
