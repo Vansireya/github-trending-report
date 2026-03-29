@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "hacksider/Deep-Live-Cam",
+    "url": "https://github.com/hacksider/Deep-Live-Cam",
+    "description": "real time face swap and one-click video deepfake with only a single image",
+    "stars": "84,359",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "120,838",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "SakanaAI/AI-Scientist-v2",
+    "url": "https://github.com/SakanaAI/AI-Scientist-v2",
+    "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+    "stars": "3,489",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "description": "An autonomous agent for deep financial research",
+    "stars": "20,218",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "twentyhq/twenty",
+    "url": "https://github.com/twentyhq/twenty",
+    "description": "Building a modern alternative to Salesforce, powered by the community.",
+    "stars": "42,447",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "onyx-dot-app/onyx",
+    "url": "https://github.com/onyx-dot-app/onyx",
+    "description": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+    "stars": "19,767",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "datalab-to/chandra",
+    "url": "https://github.com/datalab-to/chandra",
+    "description": "OCR model that handles complex tables, forms, handwriting with full layout.",
+    "stars": "7,605",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "agentscope-ai/agentscope",
+    "url": "https://github.com/agentscope-ai/agentscope",
+    "description": "Build and run agents you can see, understand and trust.",
+    "stars": "21,633",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "apache/superset",
+    "url": "https://github.com/apache/superset",
+    "description": "Apache Superset is a Data Visualization and Data Exploration Platform",
+    "stars": "71,478",
+    "language": "TypeScript"
+  }
+]
