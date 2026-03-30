@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto",
+    "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+    "stars": "6,870",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "microsoft/VibeVoice",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "description": "Open-Source Frontier Voice AI",
+    "stars": "27,431",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "16,839",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "OpenBB-finance/OpenBB",
+    "url": "https://github.com/OpenBB-finance/OpenBB",
+    "description": "Financial data platform for analysts, quants and AI agents.",
+    "stars": "64,035",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "123,061",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+    "stars": "42,627",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "hacksider/Deep-Live-Cam",
+    "url": "https://github.com/hacksider/Deep-Live-Cam",
+    "description": "real time face swap and one-click video deepfake with only a single image",
+    "stars": "85,339",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "stars": "15,412",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "shareAI-lab/learn-claude-code",
+    "url": "https://github.com/shareAI-lab/learn-claude-code",
+    "description": "Bash is all you need - A nano claude code–like 「agent harness」, built from 0 to 1",
+    "stars": "42,749",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "fastfetch-cli/fastfetch",
+    "url": "https://github.com/fastfetch-cli/fastfetch",
+    "description": "A maintained, feature-rich and performance oriented, neofetch like system information tool.",
+    "stars": "21,161",
+    "language": "C"
+  }
+]
