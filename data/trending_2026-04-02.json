@@ -1,0 +1,58 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/claude-code",
+    "url": "https://github.com/anthropics/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stars": "101,227",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "microsoft/VibeVoice",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "description": "Open-Source Frontier Voice AI",
+    "stars": "34,477",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+    "stars": "12,180",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto",
+    "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+    "stars": "15,677",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "axios/axios",
+    "url": "https://github.com/axios/axios",
+    "description": "Promise based HTTP client for the browser and node.js",
+    "stars": "108,871",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 6,
+    "name": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "description": "Lightweight coding agent that runs in your terminal",
+    "stars": "71,792",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "f/prompts.chat",
+    "url": "https://github.com/f/prompts.chat",
+    "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+    "stars": "156,060",
+    "language": "HTML"
+  }
+]
