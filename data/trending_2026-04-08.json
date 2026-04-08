@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "google-ai-edge/gallery",
+    "url": "https://github.com/google-ai-edge/gallery",
+    "description": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
+    "stars": "18,815",
+    "language": "Kotlin"
+  },
+  {
+    "rank": 2,
+    "name": "google-ai-edge/LiteRT-LM",
+    "url": "https://github.com/google-ai-edge/LiteRT-LM",
+    "description": "No description",
+    "stars": "2,560",
+    "language": "C++"
+  },
+  {
+    "rank": 3,
+    "name": "NVIDIA/personaplex",
+    "url": "https://github.com/NVIDIA/personaplex",
+    "description": "PersonaPlex code.",
+    "stars": "7,963",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": "24,549",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "tobi/qmd",
+    "url": "https://github.com/tobi/qmd",
+    "description": "mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local",
+    "stars": "19,571",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "description": "No description",
+    "stars": "8,082",
+    "language": "Unknown"
+  },
+  {
+    "rank": 7,
+    "name": "elebumm/RedditVideoMakerBot",
+    "url": "https://github.com/elebumm/RedditVideoMakerBot",
+    "description": "Create Reddit Videos with just✨ one command ✨",
+    "stars": "10,056",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "HKUDS/DeepTutor",
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "description": "\"DeepTutor: Agent-Native Personalized Learning Assistant\"",
+    "stars": "12,238",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine",
+    "description": "A specialized Claude Code workspace for creating long-form, SEO-optimized blog content for any business. This system helps you research, write, analyze, and optimize content that ranks well and serves your target audience.",
+    "stars": "3,914",
+    "language": "Python"
+  }
+]
