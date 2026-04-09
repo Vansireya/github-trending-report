@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "description": "No description",
+    "stars": "9,046",
+    "language": "Unknown"
+  },
+  {
+    "rank": 2,
+    "name": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine",
+    "description": "A specialized Claude Code workspace for creating long-form, SEO-optimized blog content for any business. This system helps you research, write, analyze, and optimize content that ranks well and serves your target audience.",
+    "stars": "4,608",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "google-ai-edge/gallery",
+    "url": "https://github.com/google-ai-edge/gallery",
+    "description": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
+    "stars": "19,524",
+    "language": "Kotlin"
+  },
+  {
+    "rank": 4,
+    "name": "NVIDIA/personaplex",
+    "url": "https://github.com/NVIDIA/personaplex",
+    "description": "PersonaPlex code.",
+    "stars": "8,439",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "google-ai-edge/LiteRT-LM",
+    "url": "https://github.com/google-ai-edge/LiteRT-LM",
+    "description": "No description",
+    "stars": "3,000",
+    "language": "C++"
+  },
+  {
+    "rank": 6,
+    "name": "elebumm/RedditVideoMakerBot",
+    "url": "https://github.com/elebumm/RedditVideoMakerBot",
+    "description": "Create Reddit Videos with just✨ one command ✨",
+    "stars": "10,503",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "141,607",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "newton-physics/newton",
+    "url": "https://github.com/newton-physics/newton",
+    "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
+    "stars": "4,103",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": "25,326",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "50,701",
+    "language": "Python"
+  }
+]
