@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+    "stars": "43,418",
+    "language": "Unknown"
+  },
+  {
+    "rank": 2,
+    "name": "pascalorg/editor",
+    "url": "https://github.com/pascalorg/editor",
+    "description": "Create and share 3D architectural projects.",
+    "stars": "12,693",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+    "stars": "57,916",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "Lordog/dive-into-llms",
+    "url": "https://github.com/Lordog/dive-into-llms",
+    "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+    "stars": "29,571",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 5,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "55,111",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "chrislgarry/Apollo-11",
+    "url": "https://github.com/chrislgarry/Apollo-11",
+    "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+    "stars": "66,820",
+    "language": "Assembly"
+  },
+  {
+    "rank": 7,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "154,401",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "jamiepine/voicebox",
+    "url": "https://github.com/jamiepine/voicebox",
+    "description": "The open-source voice synthesis studio",
+    "stars": "18,331",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs",
+    "stars": "423,410",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "vercel-labs/open-agents",
+    "url": "https://github.com/vercel-labs/open-agents",
+    "description": "An open source template for building cloud agents.",
+    "stars": "2,678",
+    "language": "TypeScript"
+  }
+]
