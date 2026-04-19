@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "thunderbird/thunderbolt",
+    "url": "https://github.com/thunderbird/thunderbolt",
+    "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
+    "stars": "1,594",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "BasedHardware/omi",
+    "url": "https://github.com/BasedHardware/omi",
+    "description": "AI that sees your screen, listens to your conversations and tells you what to do",
+    "stars": "10,491",
+    "language": "Dart"
+  },
+  {
+    "rank": 3,
+    "name": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python",
+    "description": "A lightweight, powerful framework for multi-agent workflows",
+    "stars": "22,374",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "EvoMap/evolver",
+    "url": "https://github.com/EvoMap/evolver",
+    "description": "The GEP-Powered Self-Evolution Engine for AI Agents. Genome Evolution Protocol. | evomap.ai",
+    "stars": "5,041",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "deepseek-ai/DeepGEMM",
+    "url": "https://github.com/deepseek-ai/DeepGEMM",
+    "description": "DeepGEMM: clean and efficient FP8 GEMM kernels with fine-grained scaling",
+    "stars": "6,548",
+    "language": "Cuda"
+  },
+  {
+    "rank": 6,
+    "name": "Lordog/dive-into-llms",
+    "url": "https://github.com/Lordog/dive-into-llms",
+    "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+    "stars": "32,042",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 7,
+    "name": "aaddrick/claude-desktop-debian",
+    "url": "https://github.com/aaddrick/claude-desktop-debian",
+    "description": "Claude Desktop for Debian-based Linux distributions",
+    "stars": "3,480",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "rustdesk/rustdesk",
+    "url": "https://github.com/rustdesk/rustdesk",
+    "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
+    "stars": "112,110",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "SimoneAvogadro/android-reverse-engineering-skill",
+    "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+    "description": "Claude Code skill to support Android app's reverse engineering",
+    "stars": "3,151",
+    "language": "Shell"
+  },
+  {
+    "rank": 10,
+    "name": "tractorjuice/arc-kit",
+    "url": "https://github.com/tractorjuice/arc-kit",
+    "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
+    "stars": "749",
+    "language": "HTML"
+  }
+]
