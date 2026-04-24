@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "huggingface/ml-intern",
+    "url": "https://github.com/huggingface/ml-intern",
+    "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
+    "stars": "3,439",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "zilliztech/claude-context",
+    "url": "https://github.com/zilliztech/claude-context",
+    "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
+    "stars": "8,467",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "HKUDS/RAG-Anything",
+    "url": "https://github.com/HKUDS/RAG-Anything",
+    "description": "\"RAG-Anything: All-in-One RAG Framework\"",
+    "stars": "18,222",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "Z4nzu/hackingtool",
+    "url": "https://github.com/Z4nzu/hackingtool",
+    "description": "ALL IN ONE Hacking Tool For Hackers",
+    "stars": "61,139",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "49,856",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "Anil-matcha/Open-Generative-AI",
+    "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "description": "Uncensored, open-source alternative to Higgsfield AI, Freepik, Krea, Openart AI — Free, unrestricted AI image & video generation studio with 200+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
+    "stars": "7,002",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 7,
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+    "stars": "5,678",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "open-metadata/OpenMetadata",
+    "url": "https://github.com/open-metadata/OpenMetadata",
+    "description": "OpenMetadata is a unified metadata platform for data discovery, data observability, and data governance powered by a central metadata repository, in-depth column level lineage, and seamless team collaboration.",
+    "stars": "12,961",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "microsoft/ai-agents-for-beginners",
+    "url": "https://github.com/microsoft/ai-agents-for-beginners",
+    "description": "12 Lessons to Get Started Building AI Agents",
+    "stars": "58,835",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 10,
+    "name": "PowerShell/PowerShell",
+    "url": "https://github.com/PowerShell/PowerShell",
+    "description": "PowerShell for every system!",
+    "stars": "52,800",
+    "language": "C#"
+  }
+]
