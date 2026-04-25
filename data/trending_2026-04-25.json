@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+    "stars": "9,074",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "huggingface/ml-intern",
+    "url": "https://github.com/huggingface/ml-intern",
+    "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
+    "stars": "5,378",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "google/osv-scanner",
+    "url": "https://github.com/google/osv-scanner",
+    "description": "Vulnerability scanner written in Go which uses the data provided by https://osv.dev",
+    "stars": "9,524",
+    "language": "Go"
+  },
+  {
+    "rank": 4,
+    "name": "Z4nzu/hackingtool",
+    "url": "https://github.com/Z4nzu/hackingtool",
+    "description": "ALL IN ONE Hacking Tool For Hackers",
+    "stars": "62,406",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "zilliztech/claude-context",
+    "url": "https://github.com/zilliztech/claude-context",
+    "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
+    "stars": "9,023",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "open-metadata/OpenMetadata",
+    "url": "https://github.com/open-metadata/OpenMetadata",
+    "description": "OpenMetadata is a unified metadata platform for data discovery, data observability, and data governance powered by a central metadata repository, in-depth column level lineage, and seamless team collaboration.",
+    "stars": "13,364",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "PostHog/posthog",
+    "url": "https://github.com/PostHog/posthog",
+    "description": "🦔 PostHog is an all-in-one developer platform for building successful products. We offer product analytics, web analytics, session replay, error tracking, feature flags, experimentation, surveys, data warehouse, a CDP, and an AI product assistant to help debug your code, ship features faster, and keep all your usage and customer data in one stack.",
+    "stars": "33,126",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "dani-garcia/vaultwarden",
+    "url": "https://github.com/dani-garcia/vaultwarden",
+    "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+    "stars": "59,179",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "Anil-matcha/Open-Generative-AI",
+    "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "description": "Uncensored, open-source alternative to Higgsfield AI, Freepik AI, Krea AI, Openart AI — Free, unrestricted AI image & video generation studio with 200+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
+    "stars": "7,715",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "codecrafters-io/build-your-own-x",
+    "url": "https://github.com/codecrafters-io/build-your-own-x",
+    "description": "Master programming by recreating your favorite technologies from scratch.",
+    "stars": "494,836",
+    "language": "Markdown"
+  }
+]
