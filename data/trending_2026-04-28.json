@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .claude directory.",
+    "stars": "30,766",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": "31,638",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "ComposioHQ/awesome-codex-skills",
+    "url": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "description": "A curated list of practical Codex skills for automating workflows across the Codex CLI and API.",
+    "stars": "2,886",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+    "stars": "16,234",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "gastownhall/beads",
+    "url": "https://github.com/gastownhall/beads",
+    "description": "Beads - A memory upgrade for your coding agent",
+    "stars": "22,233",
+    "language": "Go"
+  },
+  {
+    "rank": 6,
+    "name": "penpot/penpot",
+    "url": "https://github.com/penpot/penpot",
+    "description": "Penpot: The open-source design tool for design and code collaboration",
+    "stars": "46,666",
+    "language": "Clojure"
+  },
+  {
+    "rank": 7,
+    "name": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates",
+    "description": "CLI tool for configuring and monitoring Claude Code",
+    "stars": "25,813",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "microsoft/VibeVoice",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "description": "Open-Source Frontier Voice AI",
+    "stars": "43,198",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "Z4nzu/hackingtool",
+    "url": "https://github.com/Z4nzu/hackingtool",
+    "description": "ALL IN ONE Hacking Tool For Hackers",
+    "stars": "67,192",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "53,857",
+    "language": "Python"
+  }
+]
