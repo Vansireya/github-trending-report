@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+    "stars": "39,113",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "65,396",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "soxoj/maigret",
+    "url": "https://github.com/soxoj/maigret",
+    "description": "🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites",
+    "stars": "23,874",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "Hmbown/DeepSeek-TUI",
+    "url": "https://github.com/Hmbown/DeepSeek-TUI",
+    "description": "Coding agent for DeepSeek models that runs in your terminal",
+    "stars": "2,219",
+    "language": "Rust"
+  },
+  {
+    "rank": 5,
+    "name": "AIDC-AI/Pixelle-Video",
+    "url": "https://github.com/AIDC-AI/Pixelle-Video",
+    "description": "🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine",
+    "stars": "10,040",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "browserbase/skills",
+    "url": "https://github.com/browserbase/skills",
+    "description": "Claude Agent SDK with a web browsing tool",
+    "stars": "1,842",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 7,
+    "name": "czlonkowski/n8n-mcp",
+    "url": "https://github.com/czlonkowski/n8n-mcp",
+    "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you",
+    "stars": "19,544",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "1jehuang/jcode",
+    "url": "https://github.com/1jehuang/jcode",
+    "description": "Coding Agent Harness",
+    "stars": "3,458",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "openwrt/openwrt",
+    "url": "https://github.com/openwrt/openwrt",
+    "description": "This repository is a mirror of https://git.openwrt.org/openwrt/openwrt.git It is for reference only and is not active for check-ins. We will continue to accept Pull Requests here. They will be merged via staging trees then into openwrt.git.",
+    "stars": "26,628",
+    "language": "C"
+  }
+]
