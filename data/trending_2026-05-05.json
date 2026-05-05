@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+    "stars": "41,533",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "67,615",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "browserbase/skills",
+    "url": "https://github.com/browserbase/skills",
+    "description": "Claude Agent SDK with a web browsing tool",
+    "stars": "2,132",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "Hmbown/DeepSeek-TUI",
+    "url": "https://github.com/Hmbown/DeepSeek-TUI",
+    "description": "Coding agent for DeepSeek models that runs in your terminal",
+    "stars": "4,075",
+    "language": "Rust"
+  },
+  {
+    "rank": 5,
+    "name": "soxoj/maigret",
+    "url": "https://github.com/soxoj/maigret",
+    "description": "🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites",
+    "stars": "24,896",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "qbittorrent/qBittorrent",
+    "url": "https://github.com/qbittorrent/qBittorrent",
+    "description": "qBittorrent BitTorrent client",
+    "stars": "37,062",
+    "language": "C++"
+  },
+  {
+    "rank": 7,
+    "name": "czlonkowski/n8n-mcp",
+    "url": "https://github.com/czlonkowski/n8n-mcp",
+    "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you",
+    "stars": "19,932",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "1jehuang/jcode",
+    "url": "https://github.com/1jehuang/jcode",
+    "description": "Coding Agent Harness",
+    "stars": "3,932",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "92,720",
+    "language": "Shell"
+  },
+  {
+    "rank": 10,
+    "name": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "description": "An autonomous agent for deep financial research",
+    "stars": "23,229",
+    "language": "TypeScript"
+  }
+]
