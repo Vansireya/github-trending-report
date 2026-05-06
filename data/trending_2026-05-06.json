@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Hmbown/DeepSeek-TUI",
+    "url": "https://github.com/Hmbown/DeepSeek-TUI",
+    "description": "Coding agent for DeepSeek models that runs in your terminal",
+    "stars": "8,010",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+    "stars": "43,777",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "description": "An autonomous agent for deep financial research",
+    "stars": "23,824",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "docusealco/docuseal",
+    "url": "https://github.com/docusealco/docuseal",
+    "description": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+    "stars": "14,052",
+    "language": "Ruby"
+  },
+  {
+    "rank": 5,
+    "name": "bwya77/vscode-dark-islands",
+    "url": "https://github.com/bwya77/vscode-dark-islands",
+    "description": "VSCode theme based off the easemate IDE and Jetbrains islands theme",
+    "stars": "7,893",
+    "language": "PowerShell"
+  },
+  {
+    "rank": 6,
+    "name": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode",
+    "description": "Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms",
+    "stars": "13,092",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "cocoindex-io/cocoindex",
+    "url": "https://github.com/cocoindex-io/cocoindex",
+    "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
+    "stars": "8,414",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "93,697",
+    "language": "Shell"
+  },
+  {
+    "rank": 9,
+    "name": "jwasham/coding-interview-university",
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "description": "A complete computer science study plan to become a software engineer.",
+    "stars": "345,844",
+    "language": "Unknown"
+  },
+  {
+    "rank": 10,
+    "name": "Arindam200/awesome-ai-apps",
+    "url": "https://github.com/Arindam200/awesome-ai-apps",
+    "description": "A collection of projects showcasing RAG, agents, workflows, and other AI use cases",
+    "stars": "11,365",
+    "language": "Python"
+  }
+]
