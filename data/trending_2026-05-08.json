@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "11,990",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "Hmbown/DeepSeek-TUI",
+    "url": "https://github.com/Hmbown/DeepSeek-TUI",
+    "description": "Coding agent for DeepSeek models that runs in your terminal",
+    "stars": "19,204",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "z-lab/dflash",
+    "url": "https://github.com/z-lab/dflash",
+    "description": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "stars": "3,527",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "InsForge/InsForge",
+    "url": "https://github.com/InsForge/InsForge",
+    "description": "InsForge is a Postgres-based backend with auth, storage, compute, hosting, and AI gateway. Built for coding agents.",
+    "stars": "8,892",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "LearningCircuit/local-deep-research",
+    "url": "https://github.com/LearningCircuit/local-deep-research",
+    "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+    "stars": "6,309",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "33,142",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "VectifyAI/PageIndex",
+    "url": "https://github.com/VectifyAI/PageIndex",
+    "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+    "stars": "29,625",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "vercel-labs/open-agents",
+    "url": "https://github.com/vercel-labs/open-agents",
+    "description": "An open source template for building cloud agents.",
+    "stars": "5,070",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "docusealco/docuseal",
+    "url": "https://github.com/docusealco/docuseal",
+    "description": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+    "stars": "15,667",
+    "language": "Ruby"
+  },
+  {
+    "rank": 10,
+    "name": "decolua/9router",
+    "url": "https://github.com/decolua/9router",
+    "description": "🇻🇳 Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+    "stars": "4,645",
+    "language": "JavaScript"
+  }
+]
