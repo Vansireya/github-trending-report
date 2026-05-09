@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "15,370",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "35,585",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "Hmbown/DeepSeek-TUI",
+    "url": "https://github.com/Hmbown/DeepSeek-TUI",
+    "description": "Coding agent for DeepSeek models that runs in your terminal",
+    "stars": "21,956",
+    "language": "Rust"
+  },
+  {
+    "rank": 4,
+    "name": "z-lab/dflash",
+    "url": "https://github.com/z-lab/dflash",
+    "description": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "stars": "3,864",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "decolua/9router",
+    "url": "https://github.com/decolua/9router",
+    "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+    "stars": "5,668",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 6,
+    "name": "CloakHQ/CloakBrowser",
+    "url": "https://github.com/CloakHQ/CloakBrowser",
+    "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+    "stars": "3,126",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "awslabs/aidlc-workflows",
+    "url": "https://github.com/awslabs/aidlc-workflows",
+    "description": "AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents",
+    "stars": "1,781",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "HKUDS/AI-Trader",
+    "url": "https://github.com/HKUDS/AI-Trader",
+    "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"",
+    "stars": "14,698",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "LearningCircuit/local-deep-research",
+    "url": "https://github.com/LearningCircuit/local-deep-research",
+    "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
+    "stars": "6,761",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "lobehub/lobehub",
+    "url": "https://github.com/lobehub/lobehub",
+    "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+    "stars": "76,533",
+    "language": "TypeScript"
+  }
+]
