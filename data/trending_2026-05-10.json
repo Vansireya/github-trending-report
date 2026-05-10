@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "17,484",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "bytedance/UI-TARS-desktop",
+    "url": "https://github.com/bytedance/UI-TARS-desktop",
+    "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+    "stars": "31,450",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "rohitg00/agentmemory",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "stars": "3,477",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "datawhalechina/hello-agents",
+    "url": "https://github.com/datawhalechina/hello-agents",
+    "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+    "stars": "45,732",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "datawhalechina/easy-vibe",
+    "url": "https://github.com/datawhalechina/easy-vibe",
+    "description": "💻 vibe coding 2026 | Your first modern programming course for beginners to master step by step.",
+    "stars": "8,567",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 6,
+    "name": "rowboatlabs/rowboat",
+    "url": "https://github.com/rowboatlabs/rowboat",
+    "description": "Open-source AI coworker, with memory",
+    "stars": "13,811",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "ChromeDevTools/chrome-devtools-mcp",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "description": "Chrome DevTools for coding agents",
+    "stars": "38,847",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "masterking32/MasterDnsVPN",
+    "url": "https://github.com/masterking32/MasterDnsVPN",
+    "description": "Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.",
+    "stars": "2,572",
+    "language": "Go"
+  },
+  {
+    "rank": 9,
+    "name": "playcanvas/supersplat",
+    "url": "https://github.com/playcanvas/supersplat",
+    "description": "3D Gaussian Splat Editor",
+    "stars": "6,342",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "Lordog/dive-into-llms",
+    "url": "https://github.com/Lordog/dive-into-llms",
+    "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+    "stars": "36,496",
+    "language": "Jupyter Notebook"
+  }
+]
