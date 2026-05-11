@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "bytedance/UI-TARS-desktop",
+    "url": "https://github.com/bytedance/UI-TARS-desktop",
+    "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+    "stars": "32,224",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "19,000",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "38,560",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "CloakHQ/CloakBrowser",
+    "url": "https://github.com/CloakHQ/CloakBrowser",
+    "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+    "stars": "4,855",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "HKUDS/AI-Trader",
+    "url": "https://github.com/HKUDS/AI-Trader",
+    "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"",
+    "stars": "15,646",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "jundot/omlx",
+    "url": "https://github.com/jundot/omlx",
+    "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+    "stars": "13,340",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "datawhalechina/easy-vibe",
+    "url": "https://github.com/datawhalechina/easy-vibe",
+    "description": "💻 vibe coding 2026 | Your first modern Coding course for beginners to master step by step.",
+    "stars": "9,247",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "playcanvas/supersplat",
+    "url": "https://github.com/playcanvas/supersplat",
+    "description": "3D Gaussian Splat Editor",
+    "stars": "6,860",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "lsdefine/GenericAgent",
+    "url": "https://github.com/lsdefine/GenericAgent",
+    "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+    "stars": "10,560",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "decolua/9router",
+    "url": "https://github.com/decolua/9router",
+    "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+    "stars": "7,380",
+    "language": "JavaScript"
+  }
+]
