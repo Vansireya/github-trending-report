@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+    "stars": "2,869",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "rohitg00/agentmemory",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "stars": "6,004",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "CloakHQ/CloakBrowser",
+    "url": "https://github.com/CloakHQ/CloakBrowser",
+    "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+    "stars": "8,010",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "apernet/hysteria",
+    "url": "https://github.com/apernet/hysteria",
+    "description": "Hysteria is a powerful, lightning fast and censorship resistant proxy.",
+    "stars": "20,270",
+    "language": "Go"
+  },
+  {
+    "rank": 5,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .claude directory.",
+    "stars": "76,358",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "anonfaded/FadCam",
+    "url": "https://github.com/anonfaded/FadCam",
+    "description": "Open-source, ad-free Android multimedia recorder with background video recording, screen recording, live streaming, and remote camera control",
+    "stars": "2,245",
+    "language": "Java"
+  },
+  {
+    "rank": 7,
+    "name": "millionco/react-doctor",
+    "url": "https://github.com/millionco/react-doctor",
+    "description": "Your agent writes bad React. This catches it",
+    "stars": "8,807",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "rasbt/LLMs-from-scratch",
+    "url": "https://github.com/rasbt/LLMs-from-scratch",
+    "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+    "stars": "93,860",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 9,
+    "name": "datawhalechina/hello-agents",
+    "url": "https://github.com/datawhalechina/hello-agents",
+    "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+    "stars": "48,335",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "yikart/AiToEarn",
+    "url": "https://github.com/yikart/AiToEarn",
+    "description": "Let's use AI to Earn!",
+    "stars": "11,970",
+    "language": "TypeScript"
+  }
+]
