@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+    "stars": "5,751",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "rohitg00/agentmemory",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "stars": "7,787",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "189,671",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "yikart/AiToEarn",
+    "url": "https://github.com/yikart/AiToEarn",
+    "description": "Let's use AI to Earn!",
+    "stars": "13,024",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "influxdata/telegraf",
+    "url": "https://github.com/influxdata/telegraf",
+    "description": "Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.",
+    "stars": "17,026",
+    "language": "Go"
+  },
+  {
+    "rank": 6,
+    "name": "millionco/react-doctor",
+    "url": "https://github.com/millionco/react-doctor",
+    "description": "Your agent writes bad React. This catches it",
+    "stars": "9,318",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+    "stars": "21,192",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "danielmiessler/Personal_AI_Infrastructure",
+    "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+    "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+    "stars": "13,414",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "supertone-inc/supertonic",
+    "url": "https://github.com/supertone-inc/supertonic",
+    "description": "Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX.",
+    "stars": "4,430",
+    "language": "Swift"
+  },
+  {
+    "rank": 10,
+    "name": "CloakHQ/CloakBrowser",
+    "url": "https://github.com/CloakHQ/CloakBrowser",
+    "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+    "stars": "9,618",
+    "language": "Python"
+  }
+]
