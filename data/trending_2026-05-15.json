@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "56,160",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+    "stars": "7,869",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "rohitg00/agentmemory",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "stars": "9,047",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "191,353",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+    "stars": "21,853",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "stars": "24,872",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "roboflow/supervision",
+    "url": "https://github.com/roboflow/supervision",
+    "description": "We write your reusable computer vision tools. 💜",
+    "stars": "38,916",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "influxdata/telegraf",
+    "url": "https://github.com/influxdata/telegraf",
+    "description": "Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.",
+    "stars": "17,232",
+    "language": "Go"
+  },
+  {
+    "rank": 9,
+    "name": "supertone-inc/supertonic",
+    "url": "https://github.com/supertone-inc/supertonic",
+    "description": "Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX.",
+    "stars": "5,398",
+    "language": "Swift"
+  },
+  {
+    "rank": 10,
+    "name": "Genymobile/scrcpy",
+    "url": "https://github.com/Genymobile/scrcpy",
+    "description": "Display and control your Android device",
+    "stars": "141,408",
+    "language": "C"
+  }
+]
