@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+    "stars": "9,128",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "192,901",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+    "stars": "22,499",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "supertone-inc/supertonic",
+    "url": "https://github.com/supertone-inc/supertonic",
+    "description": "Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX.",
+    "stars": "6,081",
+    "language": "Swift"
+  },
+  {
+    "rank": 5,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "57,549",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "influxdata/telegraf",
+    "url": "https://github.com/influxdata/telegraf",
+    "description": "Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.",
+    "stars": "17,424",
+    "language": "Go"
+  },
+  {
+    "rank": 7,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "135,199",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "czlonkowski/n8n-mcp",
+    "url": "https://github.com/czlonkowski/n8n-mcp",
+    "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you",
+    "stars": "20,910",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "NVIDIA-AI-Blueprints/video-search-and-summarization",
+    "url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization",
+    "description": "Suite of reference architectures for building GPU-accelerated vision agents and AI-powered video analytics applications.",
+    "stars": "1,172",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "oven-sh/bun",
+    "url": "https://github.com/oven-sh/bun",
+    "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+    "stars": "90,633",
+    "language": "Rust"
+  }
+]
