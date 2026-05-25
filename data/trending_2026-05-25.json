@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+    "stars": "26,575",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "16,357",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "stars": "27,310",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "anthropics/knowledge-work-plugins",
+    "url": "https://github.com/anthropics/knowledge-work-plugins",
+    "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+    "stars": "14,154",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "multica-ai/andrej-karpathy-skills",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+    "stars": "152,411",
+    "language": "Unknown"
+  },
+  {
+    "rank": 6,
+    "name": "earendil-works/pi",
+    "url": "https://github.com/earendil-works/pi",
+    "description": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+    "stars": "54,025",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)",
+    "stars": "29,213",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "colbymchenry/codegraph",
+    "url": "https://github.com/colbymchenry/codegraph",
+    "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, OpenCode, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+    "stars": "22,463",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "multica-ai/multica",
+    "url": "https://github.com/multica-ai/multica",
+    "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
+    "stars": "32,577",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "stars": "25,824",
+    "language": "Python"
+  }
+]
