@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+    "stars": "66,686",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "197,399",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+    "stars": "26,611",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "hardikpandya/stop-slop",
+    "url": "https://github.com/hardikpandya/stop-slop",
+    "description": "A skill file for removing AI tells from prose",
+    "stars": "6,472",
+    "language": "Unknown"
+  },
+  {
+    "rank": 5,
+    "name": "twentyhq/twenty",
+    "url": "https://github.com/twentyhq/twenty",
+    "description": "The open alternative to Salesforce, designed for AI.",
+    "stars": "47,903",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "DigitalPlatDev/FreeDomain",
+    "url": "https://github.com/DigitalPlatDev/FreeDomain",
+    "description": "DigitalPlat FreeDomain: Free Domain For Everyone",
+    "stars": "170,815",
+    "language": "HTML"
+  },
+  {
+    "rank": 7,
+    "name": "byoungd/English-level-up-tips",
+    "url": "https://github.com/byoungd/English-level-up-tips",
+    "description": "An advanced guide to learn English which might benefit you a lot 🎉 . 离谱的英语学习指南/英语学习教程/英语学习/学英语",
+    "stars": "48,672",
+    "language": "Unknown"
+  },
+  {
+    "rank": 8,
+    "name": "microsoft/markitdown",
+    "url": "https://github.com/microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown.",
+    "stars": "127,865",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "211,206",
+    "language": "Shell"
+  },
+  {
+    "rank": 10,
+    "name": "revfactory/harness",
+    "url": "https://github.com/revfactory/harness",
+    "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+    "stars": "3,933",
+    "language": "HTML"
+  }
+]
