@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+    "stars": "69,823",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "microsoft/markitdown",
+    "url": "https://github.com/microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown.",
+    "stars": "130,066",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+    "stars": "18,160",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "twentyhq/twenty",
+    "url": "https://github.com/twentyhq/twenty",
+    "description": "The open alternative to Salesforce, designed for AI.",
+    "stars": "48,432",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "anthropics/claude-code",
+    "url": "https://github.com/anthropics/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stars": "127,913",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+    "stars": "28,219",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "cursor/plugins",
+    "url": "https://github.com/cursor/plugins",
+    "description": "Cursor plugin specification and official plugins",
+    "stars": "1,309",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "run-llama/liteparse",
+    "url": "https://github.com/run-llama/liteparse",
+    "description": "A fast, helpful, and open-source document parser",
+    "stars": "7,368",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "galilai-group/stable-worldmodel",
+    "url": "https://github.com/galilai-group/stable-worldmodel",
+    "description": "A platform for reproducible world model research and evaluation",
+    "stars": "1,267",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "byoungd/English-level-up-tips",
+    "url": "https://github.com/byoungd/English-level-up-tips",
+    "description": "An advanced guide to learn English which might benefit you a lot 🎉 . 离谱的英语学习指南/英语学习教程/英语学习/学英语",
+    "stars": "49,674",
+    "language": "Unknown"
+  }
+]
