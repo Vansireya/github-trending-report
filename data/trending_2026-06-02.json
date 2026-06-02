@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "microsoft/markitdown",
+    "url": "https://github.com/microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown.",
+    "stars": "138,761",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "nesquena/hermes-webui",
+    "url": "https://github.com/nesquena/hermes-webui",
+    "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+    "stars": "11,453",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "supermemoryai/supermemory",
+    "url": "https://github.com/supermemoryai/supermemory",
+    "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+    "stars": "24,060",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+    "stars": "76,996",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "stars": "58,181",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "description": "The design language that makes your AI harness better at design.",
+    "stars": "32,826",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 7,
+    "name": "p-e-w/heretic",
+    "url": "https://github.com/p-e-w/heretic",
+    "description": "Fully automatic censorship removal for language models",
+    "stars": "23,068",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+    "stars": "19,145",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "81,847",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "revfactory/harness",
+    "url": "https://github.com/revfactory/harness",
+    "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+    "stars": "5,208",
+    "language": "HTML"
+  }
+]
