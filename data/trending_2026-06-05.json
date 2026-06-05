@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "chopratejas/headroom",
+    "url": "https://github.com/chopratejas/headroom",
+    "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+    "stars": "12,738",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "181,165",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "207,359",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "PaddlePaddle/PaddleOCR",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+    "stars": "79,953",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+    "stars": "108,632",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "NVIDIA/cosmos",
+    "url": "https://github.com/NVIDIA/cosmos",
+    "description": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
+    "stars": "9,068",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 7,
+    "name": "lfnovo/open-notebook",
+    "url": "https://github.com/lfnovo/open-notebook",
+    "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+    "stars": "25,145",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+    "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms",
+    "stars": "9,666",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "jwasham/coding-interview-university",
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "description": "A complete computer science study plan to become a software engineer.",
+    "stars": "349,785",
+    "language": "Unknown"
+  },
+  {
+    "rank": 10,
+    "name": "github/copilot-sdk",
+    "url": "https://github.com/github/copilot-sdk",
+    "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+    "stars": "9,003",
+    "language": "Java"
+  }
+]
