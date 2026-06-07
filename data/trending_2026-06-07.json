@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "stars": "28,906",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "CopilotKit/CopilotKit",
+    "url": "https://github.com/CopilotKit/CopilotKit",
+    "description": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more. Makers of the AG-UI Protocol",
+    "stars": "33,250",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "MemPalace/mempalace",
+    "url": "https://github.com/MemPalace/mempalace",
+    "description": "The best-benchmarked open-source AI memory system. And it's free.",
+    "stars": "54,323",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "danielmiessler/Personal_AI_Infrastructure",
+    "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+    "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+    "stars": "14,992",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "openai/plugins",
+    "url": "https://github.com/openai/plugins",
+    "description": "OpenAI Plugins",
+    "stars": "1,799",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 6,
+    "name": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "stars": "22,407",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "sveltejs/svelte",
+    "url": "https://github.com/sveltejs/svelte",
+    "description": "web development for the rest of us",
+    "stars": "87,008",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "nginx/nginx",
+    "url": "https://github.com/nginx/nginx",
+    "description": "The official NGINX Open Source repository.",
+    "stars": "30,702",
+    "language": "C"
+  },
+  {
+    "rank": 9,
+    "name": "aquasecurity/trivy",
+    "url": "https://github.com/aquasecurity/trivy",
+    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "stars": "36,015",
+    "language": "Go"
+  },
+  {
+    "rank": 10,
+    "name": "golang/go",
+    "url": "https://github.com/golang/go",
+    "description": "The Go programming language",
+    "stars": "134,519",
+    "language": "Go"
+  }
+]
