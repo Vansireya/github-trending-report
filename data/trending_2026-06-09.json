@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "stars": "34,782",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "RyanCodrai/turbovec",
+    "url": "https://github.com/RyanCodrai/turbovec",
+    "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+    "stars": "9,007",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "google/skills",
+    "url": "https://github.com/google/skills",
+    "description": "Agent Skills for Google products and technologies",
+    "stars": "12,489",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "refactoringhq/tolaria",
+    "url": "https://github.com/refactoringhq/tolaria",
+    "description": "Desktop app to manage markdown knowledge bases",
+    "stars": "13,640",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "stars": "24,328",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "danielmiessler/Personal_AI_Infrastructure",
+    "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+    "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+    "stars": "15,472",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops",
+    "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
+    "stars": "50,603",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills",
+    "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+    "stars": "12,771",
+    "language": "Unknown"
+  },
+  {
+    "rank": 9,
+    "name": "openai/plugins",
+    "url": "https://github.com/openai/plugins",
+    "description": "OpenAI Plugins",
+    "stars": "2,339",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "Andyyyy64/whichllm",
+    "url": "https://github.com/Andyyyy64/whichllm",
+    "description": "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly.",
+    "stars": "3,528",
+    "language": "Python"
+  }
+]
