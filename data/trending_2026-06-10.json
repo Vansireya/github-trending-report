@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "stars": "37,558",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "RyanCodrai/turbovec",
+    "url": "https://github.com/RyanCodrai/turbovec",
+    "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+    "stars": "10,279",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "roboflow/supervision",
+    "url": "https://github.com/roboflow/supervision",
+    "description": "We write your reusable computer vision tools. 💜",
+    "stars": "43,066",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "opencv/opencv",
+    "url": "https://github.com/opencv/opencv",
+    "description": "Open Source Computer Vision Library",
+    "stars": "88,688",
+    "language": "C++"
+  },
+  {
+    "rank": 5,
+    "name": "refactoringhq/tolaria",
+    "url": "https://github.com/refactoringhq/tolaria",
+    "description": "Desktop app to manage markdown knowledge bases",
+    "stars": "14,397",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "aaif-goose/goose",
+    "url": "https://github.com/aaif-goose/goose",
+    "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "stars": "48,530",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "Andyyyy64/whichllm",
+    "url": "https://github.com/Andyyyy64/whichllm",
+    "description": "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly.",
+    "stars": "4,150",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "TapXWorld/ChinaTextbook",
+    "url": "https://github.com/TapXWorld/ChinaTextbook",
+    "description": "所有小初高、大学PDF教材。",
+    "stars": "73,548",
+    "language": "Roff"
+  },
+  {
+    "rank": 9,
+    "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+    "stars": "139,213",
+    "language": "Unknown"
+  },
+  {
+    "rank": 10,
+    "name": "yikart/AiToEarn",
+    "url": "https://github.com/yikart/AiToEarn",
+    "description": "Let's use AI to Earn!",
+    "stars": "20,014",
+    "language": "TypeScript"
+  }
+]
