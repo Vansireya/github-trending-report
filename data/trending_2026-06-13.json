@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "56,904",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "music-assistant/server",
+    "url": "https://github.com/music-assistant/server",
+    "description": "Music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistant and must run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike.",
+    "stars": "1,801",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "mattermost/mattermost",
+    "url": "https://github.com/mattermost/mattermost",
+    "description": "Mattermost is an open source platform for secure collaboration across the entire software development lifecycle..",
+    "stars": "37,647",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "apple/container",
+    "url": "https://github.com/apple/container",
+    "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.",
+    "stars": "35,197",
+    "language": "Swift"
+  },
+  {
+    "rank": 5,
+    "name": "iptv-org/iptv",
+    "url": "https://github.com/iptv-org/iptv",
+    "description": "Collection of publicly available IPTV channels from all over the world",
+    "stars": "118,068",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "226,081",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "refactoringhq/tolaria",
+    "url": "https://github.com/refactoringhq/tolaria",
+    "description": "Desktop app to manage markdown knowledge bases",
+    "stars": "15,816",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "maziyarpanahi/openmed",
+    "url": "https://github.com/maziyarpanahi/openmed",
+    "description": "open-source healthcare ai",
+    "stars": "3,210",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "LMCache/LMCache",
+    "url": "https://github.com/LMCache/LMCache",
+    "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
+    "stars": "8,650",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills",
+    "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+    "stars": "17,038",
+    "language": "Unknown"
+  }
+]
