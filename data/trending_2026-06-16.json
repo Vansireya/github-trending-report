@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "iptv-org/iptv",
+    "url": "https://github.com/iptv-org/iptv",
+    "description": "Collection of publicly available IPTV channels from all over the world",
+    "stars": "123,047",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "teslamate-org/teslamate",
+    "url": "https://github.com/teslamate-org/teslamate",
+    "description": "A self-hosted data logger for your Tesla 🚘 [main maintainer=@JakobLichterfeld]",
+    "stars": "8,273",
+    "language": "Elixir"
+  },
+  {
+    "rank": 3,
+    "name": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "stars": "30,539",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "meshery/meshery",
+    "url": "https://github.com/meshery/meshery",
+    "description": "Meshery, the cloud native manager",
+    "stars": "10,662",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "chatwoot/chatwoot",
+    "url": "https://github.com/chatwoot/chatwoot",
+    "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+    "stars": "31,745",
+    "language": "Ruby"
+  },
+  {
+    "rank": 6,
+    "name": "krahets/hello-algo",
+    "url": "https://github.com/krahets/hello-algo",
+    "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
+    "stars": "127,031",
+    "language": "Java"
+  },
+  {
+    "rank": 7,
+    "name": "freeCodeCamp/freeCodeCamp",
+    "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+    "stars": "447,973",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "trycua/cua",
+    "url": "https://github.com/trycua/cua",
+    "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+    "stars": "18,204",
+    "language": "HTML"
+  },
+  {
+    "rank": 9,
+    "name": "jwasham/coding-interview-university",
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "description": "A complete computer science study plan to become a software engineer.",
+    "stars": "352,369",
+    "language": "Unknown"
+  },
+  {
+    "rank": 10,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "33,191",
+    "language": "Python"
+  }
+]
