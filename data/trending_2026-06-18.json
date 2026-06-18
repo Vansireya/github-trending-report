@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "DeusData/codebase-memory-mcp",
+    "url": "https://github.com/DeusData/codebase-memory-mcp",
+    "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+    "stars": "5,514",
+    "language": "C"
+  },
+  {
+    "rank": 2,
+    "name": "n0-computer/iroh",
+    "url": "https://github.com/n0-computer/iroh",
+    "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+    "stars": "9,691",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "stars": "33,347",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "meshery/meshery",
+    "url": "https://github.com/meshery/meshery",
+    "description": "Meshery, the cloud native manager",
+    "stars": "11,041",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "231,211",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+    "stars": "21,964",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "RocketChat/Rocket.Chat",
+    "url": "https://github.com/RocketChat/Rocket.Chat",
+    "description": "The Secure CommsOS™ for mission-critical operations",
+    "stars": "45,605",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "continuedev/continue",
+    "url": "https://github.com/continuedev/continue",
+    "description": "open-source coding agent",
+    "stars": "33,933",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "penpot/penpot",
+    "url": "https://github.com/penpot/penpot",
+    "description": "Penpot: The open-source design tool for design and code collaboration",
+    "stars": "50,131",
+    "language": "Clojure"
+  },
+  {
+    "rank": 10,
+    "name": "krahets/hello-algo",
+    "url": "https://github.com/krahets/hello-algo",
+    "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
+    "stars": "127,502",
+    "language": "Java"
+  }
+]
