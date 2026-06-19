@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+    "stars": "23,313",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "n0-computer/iroh",
+    "url": "https://github.com/n0-computer/iroh",
+    "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+    "stars": "10,035",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "freeCodeCamp/freeCodeCamp",
+    "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+    "stars": "449,585",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "232,521",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "zai-org/GLM-5",
+    "url": "https://github.com/zai-org/GLM-5",
+    "description": "GLM-5: From Vibe Coding to Agentic Engineering",
+    "stars": "4,179",
+    "language": "Unknown"
+  },
+  {
+    "rank": 6,
+    "name": "DeusData/codebase-memory-mcp",
+    "url": "https://github.com/DeusData/codebase-memory-mcp",
+    "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+    "stars": "7,172",
+    "language": "C"
+  },
+  {
+    "rank": 7,
+    "name": "yifanfeng97/Hyper-Extract",
+    "url": "https://github.com/yifanfeng97/Hyper-Extract",
+    "description": "Transform unstructured text into structured knowledge with LLMs. Graphs, hypergraphs, and spatio-temporal extractions — with one command.",
+    "stars": "1,831",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "alibaba/zvec",
+    "url": "https://github.com/alibaba/zvec",
+    "description": "A lightweight, lightning-fast, in-process vector database",
+    "stars": "11,269",
+    "language": "C++"
+  },
+  {
+    "rank": 9,
+    "name": "withastro/flue",
+    "url": "https://github.com/withastro/flue",
+    "description": "The sandbox agent framework.",
+    "stars": "5,541",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "Kilo-Org/kilocode",
+    "url": "https://github.com/Kilo-Org/kilocode",
+    "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+    "stars": "22,235",
+    "language": "TypeScript"
+  }
+]
