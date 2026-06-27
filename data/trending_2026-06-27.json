@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "simplex-chat/simplex-chat",
+    "url": "https://github.com/simplex-chat/simplex-chat",
+    "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps 📱!",
+    "stars": "12,668",
+    "language": "Haskell"
+  },
+  {
+    "rank": 2,
+    "name": "google-labs-code/design.md",
+    "url": "https://github.com/google-labs-code/design.md",
+    "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+    "stars": "21,352",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "commaai/openpilot",
+    "url": "https://github.com/commaai/openpilot",
+    "description": "openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    "stars": "61,809",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "kunchenguid/no-mistakes",
+    "url": "https://github.com/kunchenguid/no-mistakes",
+    "description": "git push no-mistakes",
+    "stars": "3,465",
+    "language": "Go"
+  },
+  {
+    "rank": 5,
+    "name": "grafana/grafana",
+    "url": "https://github.com/grafana/grafana",
+    "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+    "stars": "74,933",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "ripienaar/free-for-dev",
+    "url": "https://github.com/ripienaar/free-for-dev",
+    "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+    "stars": "123,764",
+    "language": "HTML"
+  },
+  {
+    "rank": 7,
+    "name": "opendatalab/MinerU",
+    "url": "https://github.com/opendatalab/MinerU",
+    "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+    "stars": "70,471",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "alchaincyf/zhangxuefeng-skill",
+    "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
+    "description": "张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+    "stars": "9,273",
+    "language": "Unknown"
+  },
+  {
+    "rank": 9,
+    "name": "mauriceboe/TREK",
+    "url": "https://github.com/mauriceboe/TREK",
+    "description": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.",
+    "stars": "7,699",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "xbtlin/ai-berkshire",
+    "url": "https://github.com/xbtlin/ai-berkshire",
+    "description": "AI 时代的伯克希尔：基于 Claude Code 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+    "stars": "3,171",
+    "language": "Python"
+  }
+]
