@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "hasaneyldrm/exercises-dataset",
+    "url": "https://github.com/hasaneyldrm/exercises-dataset",
+    "description": "A comprehensive dataset of 433 fitness exercises. Each entry includes name, category, target muscle group, equipment, instructions, thumbnail image, and animation video.",
+    "stars": "6,889",
+    "language": "HTML"
+  },
+  {
+    "rank": 2,
+    "name": "usestrix/strix",
+    "url": "https://github.com/usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "stars": "28,215",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "121,077",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "altic-dev/FluidVoice",
+    "url": "https://github.com/altic-dev/FluidVoice",
+    "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model - Local Wispr Flow alternative. One ⭐ takes us a long way :)) Windows, iOS and Linux coming soon.",
+    "stars": "4,963",
+    "language": "Swift"
+  },
+  {
+    "rank": 5,
+    "name": "diegosouzapw/OmniRoute",
+    "url": "https://github.com/diegosouzapw/OmniRoute",
+    "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+    "stars": "8,637",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "browser-use/video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "description": "Edit videos with coding agents",
+    "stars": "12,665",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "xbtlin/ai-berkshire",
+    "url": "https://github.com/xbtlin/ai-berkshire",
+    "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+    "stars": "7,591",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "Mebus/cupp",
+    "url": "https://github.com/Mebus/cupp",
+    "description": "Common User Passwords Profiler (CUPP)",
+    "stars": "6,118",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "ripienaar/free-for-dev",
+    "url": "https://github.com/ripienaar/free-for-dev",
+    "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+    "stars": "127,361",
+    "language": "HTML"
+  },
+  {
+    "rank": 10,
+    "name": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli",
+    "description": "The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud.",
+    "stars": "4,249",
+    "language": "Python"
+  }
+]
