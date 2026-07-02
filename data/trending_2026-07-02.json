@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "123,657",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "usestrix/strix",
+    "url": "https://github.com/usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "stars": "29,856",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "HKUDS/Vibe-Trading",
+    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+    "stars": "16,622",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "hasaneyldrm/exercises-dataset",
+    "url": "https://github.com/hasaneyldrm/exercises-dataset",
+    "description": "A comprehensive dataset of 433 fitness exercises. Each entry includes name, category, target muscle group, equipment, instructions, thumbnail image, and animation video.",
+    "stars": "8,488",
+    "language": "HTML"
+  },
+  {
+    "rank": 5,
+    "name": "facebook/astryx",
+    "url": "https://github.com/facebook/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "stars": "2,726",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "diegosouzapw/OmniRoute",
+    "url": "https://github.com/diegosouzapw/OmniRoute",
+    "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+    "stars": "9,604",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "allenai/olmocr",
+    "url": "https://github.com/allenai/olmocr",
+    "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+    "stars": "18,314",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "logto-io/logto",
+    "url": "https://github.com/logto-io/logto",
+    "description": "🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.",
+    "stars": "13,295",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "togatoga/karukan",
+    "url": "https://github.com/togatoga/karukan",
+    "description": "Japanese Input Method System for Linux, macOS, Neural Kana-Kanji Conversion Engine",
+    "stars": "593",
+    "language": "Rust"
+  },
+  {
+    "rank": 10,
+    "name": "Mebus/cupp",
+    "url": "https://github.com/Mebus/cupp",
+    "description": "Common User Passwords Profiler (CUPP)",
+    "stars": "6,255",
+    "language": "Python"
+  }
+]
