@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "openai/codex-plugin-cc",
+    "url": "https://github.com/openai/codex-plugin-cc",
+    "description": "Use Codex from Claude Code to review code or delegate tasks.",
+    "stars": "24,539",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 2,
+    "name": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+    "stars": "84,033",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "alibaba/page-agent",
+    "url": "https://github.com/alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "stars": "23,155",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "usestrix/strix",
+    "url": "https://github.com/usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "stars": "36,121",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "ChromeDevTools/chrome-devtools-mcp",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "description": "Chrome DevTools for coding agents",
+    "stars": "45,794",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "Zackriya-Solutions/meetily",
+    "url": "https://github.com/Zackriya-Solutions/meetily",
+    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows.",
+    "stars": "15,347",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+    "stars": "48,976",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "harvard-edge/cs249r_book",
+    "url": "https://github.com/harvard-edge/cs249r_book",
+    "description": "Machine Learning Systems",
+    "stars": "26,588",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "rommapp/romm",
+    "url": "https://github.com/rommapp/romm",
+    "description": "A beautiful, powerful, self-hosted rom manager and player.",
+    "stars": "10,226",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "ogulcancelik/herdr",
+    "url": "https://github.com/ogulcancelik/herdr",
+    "description": "agent multiplexer that lives in your terminal.",
+    "stars": "11,491",
+    "language": "Rust"
+  }
+]
