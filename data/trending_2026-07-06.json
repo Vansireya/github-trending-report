@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Zackriya-Solutions/meetily",
+    "url": "https://github.com/Zackriya-Solutions/meetily",
+    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows.",
+    "stars": "17,230",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "openai/codex-plugin-cc",
+    "url": "https://github.com/openai/codex-plugin-cc",
+    "description": "Use Codex from Claude Code to review code or delegate tasks.",
+    "stars": "25,555",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+    "stars": "50,086",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+    "stars": "57,632",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills",
+    "description": "337 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+    "stars": "20,626",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "rommapp/romm",
+    "url": "https://github.com/rommapp/romm",
+    "description": "A beautiful, powerful, self-hosted rom manager and player.",
+    "stars": "10,575",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "ogulcancelik/herdr",
+    "url": "https://github.com/ogulcancelik/herdr",
+    "description": "agent multiplexer that lives in your terminal.",
+    "stars": "12,136",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "alibaba/page-agent",
+    "url": "https://github.com/alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "stars": "23,981",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "harvard-edge/cs249r_book",
+    "url": "https://github.com/harvard-edge/cs249r_book",
+    "description": "Machine Learning Systems",
+    "stars": "26,876",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "usestrix/strix",
+    "url": "https://github.com/usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "stars": "37,214",
+    "language": "Python"
+  }
+]
