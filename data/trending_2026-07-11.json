@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "wonderwhy-er/DesktopCommanderMCP",
+    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "stars": "7,327",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "oven-sh/bun",
+    "url": "https://github.com/oven-sh/bun",
+    "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+    "stars": "94,253",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "abseil/abseil-cpp",
+    "url": "https://github.com/abseil/abseil-cpp",
+    "description": "Abseil Common Libraries (C++)",
+    "stars": "17,523",
+    "language": "C++"
+  },
+  {
+    "rank": 4,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "76,847",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "jbeder/yaml-cpp",
+    "url": "https://github.com/jbeder/yaml-cpp",
+    "description": "A YAML parser and emitter in C++",
+    "stars": "6,082",
+    "language": "C++"
+  },
+  {
+    "rank": 6,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .claude directory.",
+    "stars": "164,688",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "251,811",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "microsoft/TypeScript",
+    "url": "https://github.com/microsoft/TypeScript",
+    "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+    "stars": "109,781",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "catchorg/Catch2",
+    "url": "https://github.com/catchorg/Catch2",
+    "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+    "stars": "20,616",
+    "language": "C++"
+  },
+  {
+    "rank": 10,
+    "name": "chriskohlhoff/asio",
+    "url": "https://github.com/chriskohlhoff/asio",
+    "description": "Asio C++ Library",
+    "stars": "6,073",
+    "language": "C++"
+  }
+]
