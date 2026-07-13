@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Dicklesworthstone/destructive_command_guard",
+    "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+    "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+    "stars": "2,980",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "wonderwhy-er/DesktopCommanderMCP",
+    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "stars": "8,009",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "HKUDS/Vibe-Trading",
+    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+    "stars": "20,624",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "PrefectHQ/prefect",
+    "url": "https://github.com/PrefectHQ/prefect",
+    "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+    "stars": "23,166",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+    "stars": "118,624",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "anthropics/claude-cookbooks",
+    "url": "https://github.com/anthropics/claude-cookbooks",
+    "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+    "stars": "48,453",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 7,
+    "name": "home-assistant/core",
+    "url": "https://github.com/home-assistant/core",
+    "description": "🏡 Open source home automation that puts local control and privacy first.",
+    "stars": "89,091",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "Crosstalk-Solutions/project-nomad",
+    "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+    "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+    "stars": "33,824",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "ColeMurray/background-agents",
+    "url": "https://github.com/ColeMurray/background-agents",
+    "description": "An open-source background agents coding system",
+    "stars": "2,273",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "k1tbyte/Wand-Enhancer",
+    "url": "https://github.com/k1tbyte/Wand-Enhancer",
+    "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+    "stars": "6,979",
+    "language": "C#"
+  }
+]
