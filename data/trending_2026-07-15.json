@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+    "stars": "120,859",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .claude directory.",
+    "stars": "170,333",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "Dicklesworthstone/destructive_command_guard",
+    "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+    "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+    "stars": "4,428",
+    "language": "Rust"
+  },
+  {
+    "rank": 4,
+    "name": "OpenCut-app/OpenCut",
+    "url": "https://github.com/OpenCut-app/OpenCut",
+    "description": "The open-source CapCut alternative",
+    "stars": "69,249",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "virattt/ai-hedge-fund",
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "description": "An AI Hedge Fund Team",
+    "stars": "61,893",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "Nutlope/hallmark",
+    "url": "https://github.com/Nutlope/hallmark",
+    "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "stars": "6,189",
+    "language": "CSS"
+  },
+  {
+    "rank": 7,
+    "name": "HKUDS/Vibe-Trading",
+    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+    "stars": "22,887",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "Raphire/Win11Debloat",
+    "url": "https://github.com/Raphire/Win11Debloat",
+    "description": "A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11.",
+    "stars": "51,731",
+    "language": "PowerShell"
+  },
+  {
+    "rank": 9,
+    "name": "hasaneyldrm/exercises-dataset",
+    "url": "https://github.com/hasaneyldrm/exercises-dataset",
+    "description": "1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
+    "stars": "13,552",
+    "language": "HTML"
+  },
+  {
+    "rank": 10,
+    "name": "penpot/penpot",
+    "url": "https://github.com/penpot/penpot",
+    "description": "Penpot: The open-source design platform for Product teams that need scalable collaboration.",
+    "stars": "56,173",
+    "language": "Clojure"
+  }
+]
