@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "OpenCut-app/OpenCut",
+    "url": "https://github.com/OpenCut-app/OpenCut",
+    "description": "The open-source CapCut alternative",
+    "stars": "71,897",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "Nutlope/hallmark",
+    "url": "https://github.com/Nutlope/hallmark",
+    "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "stars": "8,645",
+    "language": "CSS"
+  },
+  {
+    "rank": 3,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .claude directory.",
+    "stars": "172,372",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "moeru-ai/airi",
+    "url": "https://github.com/moeru-ai/airi",
+    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "stars": "42,533",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "Dicklesworthstone/destructive_command_guard",
+    "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+    "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+    "stars": "4,785",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "HKUDS/Vibe-Trading",
+    "url": "https://github.com/HKUDS/Vibe-Trading",
+    "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+    "stars": "23,739",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "openinterpreter/openinterpreter",
+    "url": "https://github.com/openinterpreter/openinterpreter",
+    "description": "A coding agent for low-cost models",
+    "stars": "65,516",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "HKUDS/DeepTutor",
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+    "stars": "26,310",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "HenryNdubuaku/maths-cs-ai-compendium",
+    "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
+    "description": "Become a cracked AI/ML Research Engineer",
+    "stars": "5,935",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+    "stars": "121,949",
+    "language": "Python"
+  }
+]
