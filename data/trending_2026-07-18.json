@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "codecrafters-io/build-your-own-x",
+    "url": "https://github.com/codecrafters-io/build-your-own-x",
+    "description": "Master programming by recreating your favorite technologies from scratch.",
+    "stars": "527,405",
+    "language": "Markdown"
+  },
+  {
+    "rank": 2,
+    "name": "PostHog/posthog",
+    "url": "https://github.com/PostHog/posthog",
+    "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+    "stars": "36,201",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "HenryNdubuaku/maths-cs-ai-compendium",
+    "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
+    "description": "Become a cracked AI/ML Research Engineer",
+    "stars": "6,634",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "Nutlope/hallmark",
+    "url": "https://github.com/Nutlope/hallmark",
+    "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "stars": "12,064",
+    "language": "CSS"
+  },
+  {
+    "rank": 5,
+    "name": "github/copilot-sdk",
+    "url": "https://github.com/github/copilot-sdk",
+    "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+    "stars": "9,800",
+    "language": "Java"
+  },
+  {
+    "rank": 6,
+    "name": "anthropics/cwc-workshops",
+    "url": "https://github.com/anthropics/cwc-workshops",
+    "description": "No description",
+    "stars": "1,589",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "PrismML-Eng/Bonsai-demo",
+    "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+    "description": "Bonsai Demo",
+    "stars": "1,716",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "protocolbuffers/protobuf",
+    "url": "https://github.com/protocolbuffers/protobuf",
+    "description": "Protocol Buffers - Google's data interchange format",
+    "stars": "71,541",
+    "language": "C++"
+  },
+  {
+    "rank": 9,
+    "name": "tirth8205/code-review-graph",
+    "url": "https://github.com/tirth8205/code-review-graph",
+    "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+    "stars": "19,767",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "docusealco/docuseal",
+    "url": "https://github.com/docusealco/docuseal",
+    "description": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+    "stars": "17,856",
+    "language": "Ruby"
+  }
+]
