@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "tirth8205/code-review-graph",
+    "url": "https://github.com/tirth8205/code-review-graph",
+    "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+    "stars": "21,361",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "kvcache-ai/ktransformers",
+    "url": "https://github.com/kvcache-ai/ktransformers",
+    "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+    "stars": "18,406",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "39,739",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "jamiepine/voicebox",
+    "url": "https://github.com/jamiepine/voicebox",
+    "description": "The open-source AI voice studio. Clone, dictate, create.",
+    "stars": "43,421",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "KnockOutEZ/wigolo",
+    "url": "https://github.com/KnockOutEZ/wigolo",
+    "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+    "stars": "1,896",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "andrewrabert/jellium-desktop",
+    "url": "https://github.com/andrewrabert/jellium-desktop",
+    "description": "An unofficial desktop client for Jellyfin",
+    "stars": "1,300",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "github/copilot-sdk",
+    "url": "https://github.com/github/copilot-sdk",
+    "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+    "stars": "9,969",
+    "language": "Java"
+  },
+  {
+    "rank": 8,
+    "name": "PostHog/posthog",
+    "url": "https://github.com/PostHog/posthog",
+    "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+    "stars": "36,958",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "microsoft/terminal",
+    "url": "https://github.com/microsoft/terminal",
+    "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+    "stars": "104,199",
+    "language": "C++"
+  },
+  {
+    "rank": 10,
+    "name": "AstrBotDevs/AstrBot",
+    "url": "https://github.com/AstrBotDevs/AstrBot",
+    "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "stars": "36,719",
+    "language": "Python"
+  }
+]
