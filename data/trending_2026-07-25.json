@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "block/buzz",
+    "url": "https://github.com/block/buzz",
+    "description": "A hive mind communication platform",
+    "stars": "10,065",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "koala73/worldmonitor",
+    "url": "https://github.com/koala73/worldmonitor",
+    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+    "stars": "73,318",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+    "stars": "70,090",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "Pumpkin-MC/Pumpkin",
+    "url": "https://github.com/Pumpkin-MC/Pumpkin",
+    "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+    "stars": "9,351",
+    "language": "Rust"
+  },
+  {
+    "rank": 5,
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "stars": "33,501",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "Automattic/harper",
+    "url": "https://github.com/Automattic/harper",
+    "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+    "stars": "13,058",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "likec4/likec4",
+    "url": "https://github.com/likec4/likec4",
+    "description": "Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code",
+    "stars": "5,035",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "citrolabs/ego-lite",
+    "url": "https://github.com/citrolabs/ego-lite",
+    "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+    "stars": "2,619",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 9,
+    "name": "yorukot/superfile",
+    "url": "https://github.com/yorukot/superfile",
+    "description": "Pretty fancy and modern terminal file manager",
+    "stars": "19,605",
+    "language": "Go"
+  },
+  {
+    "rank": 10,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "85,966",
+    "language": "Rust"
+  }
+]
