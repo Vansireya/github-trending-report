@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "block/buzz",
+    "url": "https://github.com/block/buzz",
+    "description": "A hive mind communication platform",
+    "stars": "11,994",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "alibaba/open-code-review",
+    "url": "https://github.com/alibaba/open-code-review",
+    "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+    "stars": "12,999",
+    "language": "Go"
+  },
+  {
+    "rank": 3,
+    "name": "citrolabs/ego-lite",
+    "url": "https://github.com/citrolabs/ego-lite",
+    "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+    "stars": "3,625",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+    "stars": "70,606",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "anthropics/claude-cookbooks",
+    "url": "https://github.com/anthropics/claude-cookbooks",
+    "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+    "stars": "49,909",
+    "language": "Jupyter Notebook"
+  },
+  {
+    "rank": 6,
+    "name": "Automattic/harper",
+    "url": "https://github.com/Automattic/harper",
+    "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+    "stars": "13,433",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "stars": "33,813",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "261,121",
+    "language": "Shell"
+  },
+  {
+    "rank": 9,
+    "name": "Pumpkin-MC/Pumpkin",
+    "url": "https://github.com/Pumpkin-MC/Pumpkin",
+    "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+    "stars": "9,721",
+    "language": "Rust"
+  },
+  {
+    "rank": 10,
+    "name": "permissionlesstech/bitchat",
+    "url": "https://github.com/permissionlesstech/bitchat",
+    "description": "bluetooth mesh chat, IRC vibes",
+    "stars": "28,749",
+    "language": "Swift"
+  }
+]
