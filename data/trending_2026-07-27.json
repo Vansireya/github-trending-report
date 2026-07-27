@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "permissionlesstech/bitchat",
+    "url": "https://github.com/permissionlesstech/bitchat",
+    "description": "bluetooth mesh chat, IRC vibes",
+    "stars": "30,477",
+    "language": "Swift"
+  },
+  {
+    "rank": 2,
+    "name": "citrolabs/ego-lite",
+    "url": "https://github.com/citrolabs/ego-lite",
+    "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+    "stars": "4,658",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "block/buzz",
+    "url": "https://github.com/block/buzz",
+    "description": "A hive mind communication platform",
+    "stars": "13,390",
+    "language": "Rust"
+  },
+  {
+    "rank": 4,
+    "name": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code",
+    "description": "No description",
+    "stars": "15,073",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "CoreBunch/Instatic",
+    "url": "https://github.com/CoreBunch/Instatic",
+    "description": "The open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages. Users, roles, plugins, content, database, it's all there.",
+    "stars": "5,715",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "yorukot/superfile",
+    "url": "https://github.com/yorukot/superfile",
+    "description": "Pretty fancy and modern terminal file manager",
+    "stars": "20,276",
+    "language": "Go"
+  },
+  {
+    "rank": 7,
+    "name": "nodejs/node",
+    "url": "https://github.com/nodejs/node",
+    "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+    "stars": "118,484",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 8,
+    "name": "OtterMind/Chat2DB",
+    "url": "https://github.com/OtterMind/Chat2DB",
+    "description": "🔥🔥🔥 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.",
+    "stars": "27,156",
+    "language": "Java"
+  },
+  {
+    "rank": 9,
+    "name": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "description": "The design language that makes your AI harness better at design.",
+    "stars": "50,733",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "stars": "34,198",
+    "language": "Python"
+  }
+]
