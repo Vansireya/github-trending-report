@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "pascalorg/editor",
+    "url": "https://github.com/pascalorg/editor",
+    "description": "Create and share 3D architectural projects.",
+    "stars": "18,773",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "jenkinsci/jenkins",
+    "url": "https://github.com/jenkinsci/jenkins",
+    "description": "Jenkins automation server",
+    "stars": "26,080",
+    "language": "Java"
+  },
+  {
+    "rank": 3,
+    "name": "moeru-ai/airi",
+    "url": "https://github.com/moeru-ai/airi",
+    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "stars": "44,797",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "andrewyng/aisuite",
+    "url": "https://github.com/andrewyng/aisuite",
+    "description": "Simple, unified interface to multiple Generative AI providers",
+    "stars": "15,696",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "234,853",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 6,
+    "name": "hello245m/free-stockdb",
+    "url": "https://github.com/hello245m/free-stockdb",
+    "description": "面向 A 股日K、分钟K与ETF分钟数据的本地量化引擎，集成增量同步、本地缓存、复权、批量查询、回测与指标计算。",
+    "stars": "1,326",
+    "language": "HTML"
+  },
+  {
+    "rank": 7,
+    "name": "huggingface/speech-to-speech",
+    "url": "https://github.com/huggingface/speech-to-speech",
+    "description": "Build local voice agents with open-source models",
+    "stars": "7,295",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "virgiliojr94/book-to-skill",
+    "url": "https://github.com/virgiliojr94/book-to-skill",
+    "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+    "stars": "11,481",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "opengeos/GeoLibre",
+    "url": "https://github.com/opengeos/GeoLibre",
+    "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+    "stars": "3,431",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "paperswithbacktest/awesome-systematic-trading",
+    "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+    "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+    "stars": "9,659",
+    "language": "Python"
+  }
+]
