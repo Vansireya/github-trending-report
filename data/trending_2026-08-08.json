@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "PrimeIntellect-ai/prime-agent",
+    "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+    "stars": "6,549",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "83,906",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "cloudflare/computer",
+    "url": "https://github.com/cloudflare/computer",
+    "description": "Give your agent a computer 👾",
+    "stars": "5,725",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "208,825",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "268,749",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "goauthentik/authentik",
+    "url": "https://github.com/goauthentik/authentik",
+    "description": "The authentication glue you need.",
+    "stars": "23,603",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "semantica-agi/semantica",
+    "url": "https://github.com/semantica-agi/semantica",
+    "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+    "stars": "2,348",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "666ghj/MiroFish",
+    "url": "https://github.com/666ghj/MiroFish",
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "stars": "70,511",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "chenyme/grok2api",
+    "url": "https://github.com/chenyme/grok2api",
+    "description": "Multi-account API gateway for Grok Build, Grok Web, and Grok Console",
+    "stars": "7,141",
+    "language": "Go"
+  },
+  {
+    "rank": 10,
+    "name": "jdx/mise",
+    "url": "https://github.com/jdx/mise",
+    "description": "dev tools, env vars, task runner",
+    "stars": "32,072",
+    "language": "Rust"
+  }
+]
