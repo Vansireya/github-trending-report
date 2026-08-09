@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "PrimeIntellect-ai/prime-agent",
+    "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+    "stars": "8,963",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "84,572",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "TapXWorld/ChinaTextbook",
+    "url": "https://github.com/TapXWorld/ChinaTextbook",
+    "description": "所有小初高、大学PDF教材。",
+    "stars": "77,936",
+    "language": "Roff"
+  },
+  {
+    "rank": 4,
+    "name": "google/skills",
+    "url": "https://github.com/google/skills",
+    "description": "Agent Skills for Google products and technologies",
+    "stars": "16,740",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "210,026",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "goauthentik/authentik",
+    "url": "https://github.com/goauthentik/authentik",
+    "description": "The authentication glue you need.",
+    "stars": "23,976",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "96,477",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "google/guava",
+    "url": "https://github.com/google/guava",
+    "description": "Google core libraries for Java",
+    "stars": "51,852",
+    "language": "Java"
+  },
+  {
+    "rank": 9,
+    "name": "LadybirdBrowser/ladybird",
+    "url": "https://github.com/LadybirdBrowser/ladybird",
+    "description": "Truly independent web browser",
+    "stars": "64,989",
+    "language": "C++"
+  },
+  {
+    "rank": 10,
+    "name": "denoland/celld",
+    "url": "https://github.com/denoland/celld",
+    "description": "self-hosted, distributed Durable Objects",
+    "stars": "2,577",
+    "language": "Rust"
+  }
+]
