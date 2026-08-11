@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "semantica-agi/semantica",
+    "url": "https://github.com/semantica-agi/semantica",
+    "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+    "stars": "4,111",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": "141,838",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "NanmiCoder/MediaCrawler",
+    "url": "https://github.com/NanmiCoder/MediaCrawler",
+    "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+    "stars": "61,033",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "85,746",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip",
+    "description": "The open-source app everyone uses to manage agents at work",
+    "stars": "76,498",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "PrimeIntellect-ai/prime-agent",
+    "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+    "stars": "13,085",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "LadybirdBrowser/ladybird",
+    "url": "https://github.com/LadybirdBrowser/ladybird",
+    "description": "Truly independent web browser",
+    "stars": "65,258",
+    "language": "C++"
+  },
+  {
+    "rank": 8,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "89,373",
+    "language": "Rust"
+  },
+  {
+    "rank": 9,
+    "name": "danielmiessler/LifeOS",
+    "url": "https://github.com/danielmiessler/LifeOS",
+    "description": "⛰️A General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.",
+    "stars": "17,920",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "firecrawl/firecrawl",
+    "url": "https://github.com/firecrawl/firecrawl",
+    "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+    "stars": "165,085",
+    "language": "TypeScript"
+  }
+]
