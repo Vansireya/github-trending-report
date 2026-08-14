@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+    "stars": "14,605",
+    "language": "HTML"
+  },
+  {
+    "rank": 2,
+    "name": "semantica-agi/semantica",
+    "url": "https://github.com/semantica-agi/semantica",
+    "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+    "stars": "6,688",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "169,042",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "cactus-compute/needle",
+    "url": "https://github.com/cactus-compute/needle",
+    "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+    "stars": "4,962",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "altic-dev/FluidVoice",
+    "url": "https://github.com/altic-dev/FluidVoice",
+    "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
+    "stars": "9,858",
+    "language": "Swift"
+  },
+  {
+    "rank": 6,
+    "name": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+    "stars": "71,065",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "macro-inc/macro",
+    "url": "https://github.com/macro-inc/macro",
+    "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+    "stars": "2,608",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "megadose/holehe",
+    "url": "https://github.com/megadose/holehe",
+    "description": "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+    "stars": "12,432",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "smicallef/spiderfoot",
+    "url": "https://github.com/smicallef/spiderfoot",
+    "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+    "stars": "20,677",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "NVIDIA-NeMo/Switchyard",
+    "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+    "description": "Switchyard lets LLM applications route traffic across models and providers while preserving native OpenAI and Anthropic API compatibility - enabling flexible model selection, benchmarking, and cost/performance optimization.",
+    "stars": "1,222",
+    "language": "Rust"
+  }
+]
