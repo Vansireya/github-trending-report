@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "cordiverse/cordis",
+    "url": "https://github.com/cordiverse/cordis",
+    "description": "Meta-Framework of Spatiotemporal Composability",
+    "stars": "4,071",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+    "stars": "18,620",
+    "language": "HTML"
+  },
+  {
+    "rank": 3,
+    "name": "cursor/plugins",
+    "url": "https://github.com/cursor/plugins",
+    "description": "Cursor plugin specification and official plugins",
+    "stars": "2,950",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "cactus-compute/needle",
+    "url": "https://github.com/cactus-compute/needle",
+    "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+    "stars": "6,068",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+    "stars": "72,049",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs",
+    "stars": "460,171",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "MakazhanAlpamys/Soup",
+    "url": "https://github.com/MakazhanAlpamys/Soup",
+    "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+    "stars": "1,662",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+    "stars": "129,199",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "megadose/holehe",
+    "url": "https://github.com/megadose/holehe",
+    "description": "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+    "stars": "13,118",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "altic-dev/FluidVoice",
+    "url": "https://github.com/altic-dev/FluidVoice",
+    "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. DM us on X for an easter egg 😉 - https://x.com/fluidvoiceapp",
+    "stars": "10,327",
+    "language": "Swift"
+  }
+]
