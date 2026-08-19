@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+    "stars": "108,538",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "chaitanyagiri/munder-difflin",
+    "url": "https://github.com/chaitanyagiri/munder-difflin",
+    "description": "local multi-agent harness",
+    "stars": "2,032",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "akitaonrails/ai-memory",
+    "url": "https://github.com/akitaonrails/ai-memory",
+    "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+    "stars": "2,725",
+    "language": "Rust"
+  },
+  {
+    "rank": 4,
+    "name": "volcengine/OpenViking",
+    "url": "https://github.com/volcengine/OpenViking",
+    "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+    "stars": "29,380",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "mukul975/Anthropic-Cybersecurity-Skills",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+    "stars": "29,195",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs",
+    "stars": "464,564",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "basecamp/omarchy",
+    "url": "https://github.com/basecamp/omarchy",
+    "description": "Beautiful, Modern & Opinionated Linux",
+    "stars": "26,426",
+    "language": "Shell"
+  },
+  {
+    "rank": 8,
+    "name": "agalwood/Motrix",
+    "url": "https://github.com/agalwood/Motrix",
+    "description": "A full-featured download manager.",
+    "stars": "53,663",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "NawfalMotii79/PLFM_RADAR",
+    "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+    "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+    "stars": "24,302",
+    "language": "PLSQL"
+  },
+  {
+    "rank": 10,
+    "name": "jundot/omlx",
+    "url": "https://github.com/jundot/omlx",
+    "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+    "stars": "19,397",
+    "language": "Python"
+  }
+]
