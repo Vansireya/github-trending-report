@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "description": "Lightweight coding agent that runs in your terminal",
+    "stars": "115,177",
+    "language": "Rust"
+  },
+  {
+    "rank": 2,
+    "name": "freestylefly/awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，470+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+    "stars": "12,715",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "233,857",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "basecamp/omarchy",
+    "url": "https://github.com/basecamp/omarchy",
+    "description": "Beautiful, Modern & Opinionated Linux",
+    "stars": "29,133",
+    "language": "Shell"
+  },
+  {
+    "rank": 5,
+    "name": "AprilNEA/OpenLogi",
+    "url": "https://github.com/AprilNEA/OpenLogi",
+    "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+    "stars": "14,947",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "block/buzz",
+    "url": "https://github.com/block/buzz",
+    "description": "A hive mind communication platform",
+    "stars": "30,109",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "apache/maka",
+    "url": "https://github.com/apache/maka",
+    "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+    "stars": "2,356",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "description": "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+    "stars": "47,965",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+    "stars": "36,746",
+    "language": "Rust"
+  },
+  {
+    "rank": 10,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "242,557",
+    "language": "JavaScript"
+  }
+]
