@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "Gitlawb/openclaude",
+    "url": "https://github.com/Gitlawb/openclaude",
+    "description": "runs anywhere. uses anything",
+    "stars": "31,366",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "Imbad0202/academic-research-skills",
+    "url": "https://github.com/Imbad0202/academic-research-skills",
+    "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+    "stars": "44,959",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "THU-MAIC/OpenMAIC",
+    "url": "https://github.com/THU-MAIC/OpenMAIC",
+    "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+    "stars": "29,605",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "iv-org/invidious",
+    "url": "https://github.com/iv-org/invidious",
+    "description": "Invidious is an alternative front-end to YouTube",
+    "stars": "23,793",
+    "language": "Crystal"
+  },
+  {
+    "rank": 5,
+    "name": "jingyaogong/minimind",
+    "url": "https://github.com/jingyaogong/minimind",
+    "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+    "stars": "57,160",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "3b1b/manim",
+    "url": "https://github.com/3b1b/manim",
+    "description": "Animation engine for explanatory math videos",
+    "stars": "92,590",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "firecrawl/pdf-inspector",
+    "url": "https://github.com/firecrawl/pdf-inspector",
+    "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+    "stars": "17,975",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "browser-use/video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "description": "Edit videos with coding agents",
+    "stars": "23,005",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "stars": "41,591",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "handsomestWei/patent-disclosure-skill",
+    "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+    "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+    "stars": "6,766",
+    "language": "Python"
+  }
+]
