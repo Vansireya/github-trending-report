@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "fmtlib/fmt",
+    "url": "https://github.com/fmtlib/fmt",
+    "description": "A modern formatting library",
+    "stars": "25,128",
+    "language": "C++"
+  },
+  {
+    "rank": 2,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "247,576",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "240,889",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "DietrichGebert/ponytail",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+    "stars": "123,564",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 5,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "173,696",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "247,264",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 7,
+    "name": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+    "stars": "103,143",
+    "language": "Go"
+  },
+  {
+    "rank": 8,
+    "name": "blader/humanizer",
+    "url": "https://github.com/blader/humanizer",
+    "description": "Agent skill that removes signs of AI-generated writing from text",
+    "stars": "41,574",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+    "stars": "30,726",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "averygan/reclip",
+    "url": "https://github.com/averygan/reclip",
+    "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+    "stars": "8,420",
+    "language": "HTML"
+  }
+]
