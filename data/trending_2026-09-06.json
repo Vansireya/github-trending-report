@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "252,736",
+    "language": "Shell"
+  },
+  {
+    "rank": 2,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "249,970",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "DietrichGebert/ponytail",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+    "stars": "128,024",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "242,042",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "fmtlib/fmt",
+    "url": "https://github.com/fmtlib/fmt",
+    "description": "A modern formatting library",
+    "stars": "25,575",
+    "language": "C++"
+  },
+  {
+    "rank": 6,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "174,585",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "stars": "31,725",
+    "language": "HTML"
+  },
+  {
+    "rank": 8,
+    "name": "anomalyco/opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "description": "The open source coding agent.",
+    "stars": "204,708",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "stars": "70,711",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 10,
+    "name": "humanlayer/skills",
+    "url": "https://github.com/humanlayer/skills",
+    "description": "No description",
+    "stars": "2,735",
+    "language": "TypeScript"
+  }
+]
