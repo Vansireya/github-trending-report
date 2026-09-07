@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "251,457",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 2,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "254,732",
+    "language": "Shell"
+  },
+  {
+    "rank": 3,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "stars": "32,469",
+    "language": "HTML"
+  },
+  {
+    "rank": 4,
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": "242,589",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "openai/skills",
+    "url": "https://github.com/openai/skills",
+    "description": "Skills Catalog for Codex",
+    "stars": "25,645",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "anomalyco/opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "description": "The open source coding agent.",
+    "stars": "205,296",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "blader/humanizer",
+    "url": "https://github.com/blader/humanizer",
+    "description": "Agent skill that removes signs of AI-generated writing from text",
+    "stars": "44,340",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "llvm/llvm-project",
+    "url": "https://github.com/llvm/llvm-project",
+    "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+    "stars": "40,230",
+    "language": "LLVM"
+  },
+  {
+    "rank": 9,
+    "name": "DietrichGebert/ponytail",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+    "stars": "129,518",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "stars": "71,015",
+    "language": "TypeScript"
+  }
+]
