@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "ayghri/i-have-adhd",
+    "url": "https://github.com/ayghri/i-have-adhd",
+    "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+    "stars": "34,877",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "Tencent/teamai-cli",
+    "url": "https://github.com/Tencent/teamai-cli",
+    "description": "Make Every Team AI Native",
+    "stars": "3,080",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "284,074",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "pascalorg/editor",
+    "url": "https://github.com/pascalorg/editor",
+    "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+    "stars": "22,976",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad",
+    "description": "A library of agent skills for CAD, CAE and CAM",
+    "stars": "15,073",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "stars": "36,700",
+    "language": "HTML"
+  },
+  {
+    "rank": 7,
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "stars": "104,021",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "liquidslr/system-design-notes",
+    "url": "https://github.com/liquidslr/system-design-notes",
+    "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+    "stars": "18,059",
+    "language": "Unknown"
+  },
+  {
+    "rank": 9,
+    "name": "openai/plugins",
+    "url": "https://github.com/openai/plugins",
+    "description": "OpenAI Plugins",
+    "stars": "6,220",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "freestylefly/awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+    "stars": "30,132",
+    "language": "JavaScript"
+  }
+]
