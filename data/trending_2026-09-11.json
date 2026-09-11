@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "ayghri/i-have-adhd",
+    "url": "https://github.com/ayghri/i-have-adhd",
+    "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+    "stars": "38,549",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "bilawalsidhu/gods-eye-view",
+    "url": "https://github.com/bilawalsidhu/gods-eye-view",
+    "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+    "stars": "24,494",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "284,737",
+    "language": "Shell"
+  },
+  {
+    "rank": 4,
+    "name": "alsk1992/CloddsBot",
+    "url": "https://github.com/alsk1992/CloddsBot",
+    "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+    "stars": "1,698",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "Tencent/teamai-cli",
+    "url": "https://github.com/Tencent/teamai-cli",
+    "description": "Make Every Team AI Native",
+    "stars": "3,847",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 6,
+    "name": "AlexsJones/llmfit",
+    "url": "https://github.com/AlexsJones/llmfit",
+    "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+    "stars": "35,779",
+    "language": "Rust"
+  },
+  {
+    "rank": 7,
+    "name": "liquidslr/system-design-notes",
+    "url": "https://github.com/liquidslr/system-design-notes",
+    "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+    "stars": "18,843",
+    "language": "Unknown"
+  },
+  {
+    "rank": 8,
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "stars": "37,828",
+    "language": "HTML"
+  },
+  {
+    "rank": 9,
+    "name": "freestylefly/awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
+    "stars": "30,902",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 10,
+    "name": "armory3d/armorpaint",
+    "url": "https://github.com/armory3d/armorpaint",
+    "description": "Graphics Creation Tools",
+    "stars": "4,445",
+    "language": "C"
+  }
+]
