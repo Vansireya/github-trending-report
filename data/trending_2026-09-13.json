@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "bilawalsidhu/gods-eye-view",
+    "url": "https://github.com/bilawalsidhu/gods-eye-view",
+    "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+    "stars": "30,048",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 2,
+    "name": "melgarafael/DeskcommCRM",
+    "url": "https://github.com/melgarafael/DeskcommCRM",
+    "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+    "stars": "1,836",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 3,
+    "name": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+    "stars": "65,456",
+    "language": "JavaScript"
+  },
+  {
+    "rank": 4,
+    "name": "nab138/iloader",
+    "url": "https://github.com/nab138/iloader",
+    "description": "User friendly sideloader",
+    "stars": "3,096",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "Flowseal/zapret-discord-youtube",
+    "url": "https://github.com/Flowseal/zapret-discord-youtube",
+    "description": "No description",
+    "stars": "33,212",
+    "language": "Batchfile"
+  },
+  {
+    "rank": 6,
+    "name": "jihe520/MathModelAgent",
+    "url": "https://github.com/jihe520/MathModelAgent",
+    "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+    "stars": "5,147",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "Sonarr/Sonarr",
+    "url": "https://github.com/Sonarr/Sonarr",
+    "description": "Smart PVR for newsgroup and bittorrent users.",
+    "stars": "15,938",
+    "language": "C#"
+  },
+  {
+    "rank": 8,
+    "name": "alsk1992/CloddsBot",
+    "url": "https://github.com/alsk1992/CloddsBot",
+    "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+    "stars": "2,526",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "yuliskov/SmartTube",
+    "url": "https://github.com/yuliskov/SmartTube",
+    "description": "Browse media content with your own rules on Android TV",
+    "stars": "33,230",
+    "language": "Java"
+  },
+  {
+    "rank": 10,
+    "name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+    "stars": "137,655",
+    "language": "Python"
+  }
+]
