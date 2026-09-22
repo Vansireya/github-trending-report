@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "BuilderIO/agent-native",
+    "url": "https://github.com/BuilderIO/agent-native",
+    "description": "A framework for building agentic apps",
+    "stars": "5,988",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "trycua/cua",
+    "url": "https://github.com/trycua/cua",
+    "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+    "stars": "25,742",
+    "language": "HTML"
+  },
+  {
+    "rank": 3,
+    "name": "Open-Dev-Society/OpenStock",
+    "url": "https://github.com/Open-Dev-Society/OpenStock",
+    "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+    "stars": "17,838",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "akitaonrails/ai-memory",
+    "url": "https://github.com/akitaonrails/ai-memory",
+    "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+    "stars": "7,750",
+    "language": "Rust"
+  },
+  {
+    "rank": 5,
+    "name": "coder/coder",
+    "url": "https://github.com/coder/coder",
+    "description": "Secure environments for developers and their agents",
+    "stars": "16,453",
+    "language": "Go"
+  },
+  {
+    "rank": 6,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "35,871",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "cloudflare/quiche",
+    "url": "https://github.com/cloudflare/quiche",
+    "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+    "stars": "12,382",
+    "language": "Rust"
+  },
+  {
+    "rank": 8,
+    "name": "mvt-project/mvt",
+    "url": "https://github.com/mvt-project/mvt",
+    "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+    "stars": "13,632",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "zhouxiaoka/autoclip",
+    "url": "https://github.com/zhouxiaoka/autoclip",
+    "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+    "stars": "8,328",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "ruanyf/weekly",
+    "url": "https://github.com/ruanyf/weekly",
+    "description": "科技爱好者周刊，每周五发布",
+    "stars": "104,049",
+    "language": "Unknown"
+  }
+]
