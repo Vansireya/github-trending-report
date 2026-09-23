@@ -1,0 +1,66 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "36,411",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "agent-substrate/substrate",
+    "url": "https://github.com/agent-substrate/substrate",
+    "description": "Agent Substrate: the core system",
+    "stars": "3,020",
+    "language": "Go"
+  },
+  {
+    "rank": 3,
+    "name": "dream-num/univer",
+    "url": "https://github.com/dream-num/univer",
+    "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+    "stars": "15,548",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates",
+    "description": "CLI tool for configuring and monitoring Claude Code",
+    "stars": "31,164",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "google/ax",
+    "url": "https://github.com/google/ax",
+    "description": "Google's open agentic orchestration runtime",
+    "stars": "7,737",
+    "language": "Go"
+  },
+  {
+    "rank": 6,
+    "name": "mvt-project/mvt",
+    "url": "https://github.com/mvt-project/mvt",
+    "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+    "stars": "14,153",
+    "language": "Python"
+  },
+  {
+    "rank": 7,
+    "name": "superdesigndev/treg",
+    "url": "https://github.com/superdesigndev/treg",
+    "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+    "stars": "2,270",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "browser-use/video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "description": "Edit videos with coding agents",
+    "stars": "25,908",
+    "language": "Python"
+  }
+]
