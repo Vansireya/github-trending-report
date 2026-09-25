@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "56,644",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "vectorize-io/hindsight",
+    "url": "https://github.com/vectorize-io/hindsight",
+    "description": "Hindsight: Agent Memory That Learns",
+    "stars": "27,870",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "dream-num/univer",
+    "url": "https://github.com/dream-num/univer",
+    "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+    "stars": "17,856",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 4,
+    "name": "google/ax",
+    "url": "https://github.com/google/ax",
+    "description": "Google's open agentic orchestration runtime",
+    "stars": "10,551",
+    "language": "Go"
+  },
+  {
+    "rank": 5,
+    "name": "NVIDIA/Model-Optimizer",
+    "url": "https://github.com/NVIDIA/Model-Optimizer",
+    "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+    "stars": "4,109",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "FxEmbed/FxEmbed",
+    "url": "https://github.com/FxEmbed/FxEmbed",
+    "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+    "stars": "5,380",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "description": "No description",
+    "stars": "37,378",
+    "language": "Python"
+  },
+  {
+    "rank": 8,
+    "name": "HKUDS/CLI-Anything",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+    "stars": "50,358",
+    "language": "Python"
+  },
+  {
+    "rank": 9,
+    "name": "mvt-project/mvt",
+    "url": "https://github.com/mvt-project/mvt",
+    "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+    "stars": "14,737",
+    "language": "Python"
+  },
+  {
+    "rank": 10,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "291,257",
+    "language": "Shell"
+  }
+]
