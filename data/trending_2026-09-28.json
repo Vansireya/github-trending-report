@@ -1,0 +1,74 @@
+[
+  {
+    "rank": 1,
+    "name": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip",
+    "description": "The open-source app everyone uses to manage agents at work",
+    "stars": "90,216",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "vectorize-io/hindsight",
+    "url": "https://github.com/vectorize-io/hindsight",
+    "description": "Hindsight: Agent Memory That Learns",
+    "stars": "37,624",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "debpalash/VoiceStudio",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "stars": "40,412",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "59,446",
+    "language": "Python"
+  },
+  {
+    "rank": 5,
+    "name": "InfinityLoop1308/PipePipe",
+    "url": "https://github.com/InfinityLoop1308/PipePipe",
+    "description": "An open-source Android app to let you browse YouTube and other services freely.",
+    "stars": "6,625",
+    "language": "Shell"
+  },
+  {
+    "rank": 6,
+    "name": "vercel-labs/scriptc",
+    "url": "https://github.com/vercel-labs/scriptc",
+    "description": "TypeScript-to-Native Compiler",
+    "stars": "5,440",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "mvschwarz/openrig",
+    "url": "https://github.com/mvschwarz/openrig",
+    "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+    "stars": "1,055",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "dream-num/univer",
+    "url": "https://github.com/dream-num/univer",
+    "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+    "stars": "20,551",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "willfaust/Madeira",
+    "url": "https://github.com/willfaust/Madeira",
+    "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+    "stars": "846",
+    "language": "C"
+  }
+]
