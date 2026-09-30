@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "debpalash/VoiceStudio",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "stars": "48,464",
+    "language": "Python"
+  },
+  {
+    "rank": 2,
+    "name": "NVIDIA/OpenShell",
+    "url": "https://github.com/NVIDIA/OpenShell",
+    "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+    "stars": "10,760",
+    "language": "Rust"
+  },
+  {
+    "rank": 3,
+    "name": "vectorize-io/hindsight",
+    "url": "https://github.com/vectorize-io/hindsight",
+    "description": "Hindsight: Agent Memory That Learns",
+    "stars": "43,024",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip",
+    "description": "The open-source app everyone uses to manage agents at work",
+    "stars": "94,604",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 5,
+    "name": "t8y2/dbx",
+    "url": "https://github.com/t8y2/dbx",
+    "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+    "stars": "22,245",
+    "language": "Rust"
+  },
+  {
+    "rank": 6,
+    "name": "mvschwarz/openrig",
+    "url": "https://github.com/mvschwarz/openrig",
+    "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+    "stars": "2,501",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 7,
+    "name": "oblien/openship",
+    "url": "https://github.com/oblien/openship",
+    "description": "Self-hosted deployment platform",
+    "stars": "13,905",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "averygan/reclip",
+    "url": "https://github.com/averygan/reclip",
+    "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+    "stars": "10,227",
+    "language": "HTML"
+  },
+  {
+    "rank": 9,
+    "name": "cs341-illinois/coursebook",
+    "url": "https://github.com/cs341-illinois/coursebook",
+    "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+    "stars": "3,155",
+    "language": "TeX"
+  },
+  {
+    "rank": 10,
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it. Build it. Ship it for others.",
+    "stars": "61,547",
+    "language": "Python"
+  }
+]
