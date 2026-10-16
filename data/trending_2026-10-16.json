@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "name": "morluto/rea",
+    "url": "https://github.com/morluto/rea",
+    "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+    "stars": "272,932",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 2,
+    "name": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "stars": "39,202",
+    "language": "Python"
+  },
+  {
+    "rank": 3,
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "stars": "50,573",
+    "language": "Python"
+  },
+  {
+    "rank": 4,
+    "name": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+    "stars": "112,629",
+    "language": "Go"
+  },
+  {
+    "rank": 5,
+    "name": "debpalash/VoiceStudio",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "stars": "69,260",
+    "language": "Python"
+  },
+  {
+    "rank": 6,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "299,973",
+    "language": "Shell"
+  },
+  {
+    "rank": 7,
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "stars": "75,178",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 8,
+    "name": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode",
+    "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+    "stars": "29,829",
+    "language": "TypeScript"
+  },
+  {
+    "rank": 9,
+    "name": "NationalSecurityAgency/ghidra",
+    "url": "https://github.com/NationalSecurityAgency/ghidra",
+    "description": "Ghidra is a software reverse engineering (SRE) framework",
+    "stars": "88,868",
+    "language": "Java"
+  },
+  {
+    "rank": 10,
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "280,475",
+    "language": "JavaScript"
+  }
+]
