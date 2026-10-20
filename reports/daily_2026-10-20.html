@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 简报 - 2026年10月20日星期二</title>
+
+  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
+  <script src="../data/ranking_data.js"></script>
+
+  <!-- 页面样式 -->
+  <style>
+    /**
+ * GitHub Trending 简报页面样式
+ * 包含所有页面所需的 CSS 样式
+ */
+
+/* ===== 基础样式重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 页面基础样式 ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e8f0e8;
+  color: #4a5a4a;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== 页面容器 ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f8faf8;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+/* ===== 页面头部 ===== */
+.header {
+  background: #7a9a7a;
+  color: #f8faf8;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #f8faf8;
+  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
+}
+
+.header .date {
+  font-size: 1.2em;
+  color: #e8f0e8;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* ===== 主要内容区域布局 ===== */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+  width: 320px;
+  background: #f0f5f0;
+  padding: 20px;
+  border-right: 1px solid #d4e0d4;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4e0d4;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #5a7a5a;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #e8f0e8;
+  color: #7a9a7a;
+  transform: translateX(5px);
+}
+
+/* ===== 日期选择器 ===== */
+.date-filter-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.date-select {
+  flex: 1;
+  min-width: 65px;
+  padding: 6px 28px 6px 12px;
+  border: 1px solid #cce8d6;
+  border-radius: 6px;
+  background-color: #f2fbf5;
+  color: #1a4d2e;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: all 0.2s ease;
+}
+
+#yearSelect {
+  min-width: 85px;
+}
+
+.date-select:hover {
+  background-color: #e6f7ec;
+}
+
+.date-select:focus {
+  outline: none;
+  border-color: #2ea054;
+  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
+}
+
+.date-select:first-child {
+  border-radius: 6px;
+}
+
+.date-select:last-of-type {
+  border-radius: 6px;
+}
+
+.date-filter-container .view-history-btn {
+  padding: 5px 10px;
+  background: #1a4d2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.date-filter-container .view-history-btn:hover {
+  background: #153524;
+}
+
+.date-separator {
+  padding: 0 4px;
+  color: #666;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.view-history-btn {
+  padding: 10px 16px;
+  background: #7a9a7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-history-btn:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+}
+
+/* ===== 内容区域 ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* ===== 时间范围选择器 ===== */
+.time-range-selector {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d4e0d4;
+}
+
+.time-range-selector label {
+  display: block;
+  margin-bottom: 10px;
+  color: #5a7a5a;
+  font-weight: bold;
+}
+
+.time-range-selector select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d4e0d4;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #2a3a2a;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+.time-range-selector select:hover {
+  border-color: #7a9a7a;
+}
+
+/* ===== 排行榜区域 ===== */
+.ranking-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+}
+
+.ranking-section h4 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.ranking-list {
+  list-style: none;
+}
+
+.ranking-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.ranking-list li:hover .ranking-name {
+  color: #7a9a7a;
+}
+
+.ranking-item {
+  display: block;
+}
+
+.ranking-info {
+  display: block;
+}
+
+.ranking-name {
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ranking-name:hover {
+  color: #5a7a5a;
+  text-decoration: underline;
+}
+
+.ranking-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.ranking-stars {
+  margin-right: 12px;
+}
+
+.ranking-count {
+  color: #7a9a7a;
+}
+
+.ranking-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
+.global-tooltip {
+  display: none;
+  position: absolute;
+  background: #3a5a3a;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 400px;
+  width: 90%;
+  z-index: 999999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  text-align: left;
+  border: 2px solid #5a8a5a;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.global-tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.global-tooltip-close:hover {
+  opacity: 1;
+}
+
+/* ===== 项目卡片 ===== */
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 1px solid #d4e0d4;
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
+  border-color: #7a9a7a;
+}
+
+.project-name {
+  font-size: 1.8em;
+  color: #5a7a5a;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d4e0d4;
+  font-weight: bold;
+}
+
+/* ===== 项目卡片内部各区域 ===== */
+.summary {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.summary strong {
+  color: #5a7a5a;
+}
+
+.details {
+  background: #edf3ed;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #7a9a7a;
+}
+
+.details strong {
+  color: #5a6a5a;
+}
+
+.link {
+  background: #eaf2ea;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7a9a7a;
+  color: #f8faf8;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.link a:hover {
+  background: #5a7a5a;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
+}
+
+.stars {
+  background: #f0f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #9ab89a;
+}
+
+.stars strong {
+  color: #5a7a5a;
+}
+
+.stars span {
+  color: #6a8a6a;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.rating {
+  background: #e8f0e8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #8aab8a;
+}
+
+.rating strong {
+  color: #5a6a5a;
+}
+
+.rating span {
+  color: #6a8a6a;
+  font-size: 1.3em;
+}
+
+/* ===== 总结区域 ===== */
+.summary-section {
+  background: #edf3ed;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 1px solid #d4e0d4;
+}
+
+.summary-section h3 {
+  color: #5a7a5a;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.summary-section p {
+  line-height: 1.8;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .project-name {
+    font-size: 1.5em;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* ===== 动画效果 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+.project-card:nth-child(9) { animation-delay: 0.9s; }
+.project-card:nth-child(10) { animation-delay: 1.0s; }
+
+  </style>
+</head>
+<body>
+  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
+  <div class="global-tooltip" id="globalTooltip">
+    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
+    <div id="tooltipContent"></div>
+  </div>
+
+  <!-- 页面主容器 -->
+  <div class="container">
+    <!-- 页面头部 -->
+    <div class="header">
+      <h1>🌟 GitHub Trending 简报</h1>
+      <p>每日精选热门开源项目，发现最新技术趋势</p>
+      <div class="date">📅 2026年10月20日星期二</div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+      <!-- 侧边栏 -->
+      <div class="sidebar">
+        <h3>📅 历史报告</h3>
+        <ul>
+          <li><a href="daily_2026-10-19.html">2026年10月19日</a></li><li><a href="daily_2026-10-18.html">2026年10月18日</a></li><li><a href="daily_2026-10-17.html">2026年10月17日</a></li><li><a href="daily_2026-10-16.html">2026年10月16日</a></li><li><a href="daily_2026-10-14.html">2026年10月14日</a></li><li><a href="daily_2026-10-13.html">2026年10月13日</a></li><li><a href="daily_2026-10-12.html">2026年10月12日</a></li>
+
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28","2026-09-27","2026-09-26","2026-09-25","2026-09-24","2026-09-23","2026-09-22","2026-09-21","2026-09-20","2026-09-19","2026-09-18","2026-09-17","2026-09-16","2026-09-15","2026-09-14","2026-09-13","2026-09-12","2026-09-11","2026-09-10","2026-09-09","2026-09-08","2026-09-07","2026-09-06","2026-09-05","2026-09-04","2026-09-03","2026-09-02","2026-09-01","2026-08-31","2026-08-30","2026-08-29","2026-08-28","2026-08-27","2026-08-26","2026-08-25","2026-08-24","2026-08-23","2026-08-22","2026-08-21","2026-08-20","2026-08-19","2026-08-18","2026-08-17","2026-08-16","2026-08-15","2026-08-14","2026-08-13","2026-08-12","2026-08-11","2026-08-10","2026-08-09","2026-08-08","2026-08-07","2026-08-06","2026-08-05","2026-08-04","2026-08-03","2026-08-02","2026-08-01","2026-07-31","2026-07-30","2026-07-29","2026-07-28","2026-07-27","2026-07-24","2026-07-23","2026-07-22","2026-07-21","2026-07-20","2026-07-19","2026-07-18","2026-07-17","2026-07-16","2026-07-15","2026-07-14","2026-07-13","2026-07-12","2026-07-11","2026-07-10","2026-07-09","2026-07-08","2026-07-07","2026-07-06","2026-07-05","2026-07-04","2026-07-02","2026-07-01","2026-06-30","2026-06-29","2026-06-28","2026-06-27","2026-06-26","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-21","2026-06-20","2026-06-19","2026-06-18","2026-06-17","2026-06-16","2026-06-15","2026-06-14","2026-06-13","2026-06-12","2026-06-11","2026-06-10","2026-06-09","2026-06-08","2026-06-07","2026-06-06","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-31","2026-05-30","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-24","2026-05-23","2026-05-22","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-17","2026-05-16","2026-05-15","2026-05-14","2026-05-13","2026-05-12","2026-05-11","2026-05-10","2026-05-09","2026-05-08","2026-05-07","2026-05-06","2026-05-05","2026-05-04","2026-05-03","2026-05-02","2026-05-01","2026-04-30","2026-04-29","2026-04-28","2026-04-27","2026-04-26","2026-04-25","2026-04-24","2026-04-23","2026-04-22","2026-04-21","2026-04-20","2026-04-19","2026-04-18","2026-04-17","2026-04-16","2026-04-15","2026-04-14","2026-04-13","2026-04-12","2026-04-11","2026-04-10","2026-04-09","2026-04-08","2026-04-07","2026-04-06","2026-04-05","2026-04-04","2026-04-03","2026-04-02","2026-04-01","2026-03-31","2026-03-30","2026-03-29","2026-03-28","2026-03-27","2026-03-26","2026-03-25","2026-03-24","2026-03-23","2026-03-22","2026-03-21","2026-03-20","2026-03-19","2026-03-18","2026-03-17","2026-03-16","2026-03-15","2026-03-14","2026-03-13","2026-03-12","2026-03-11","2026-03-10","2026-03-09","2026-03-08","2026-03-07","2026-03-06","2026-03-05","2026-03-04","2026-03-03","2026-03-02","2026-03-01","2026-02-28","2026-02-27","2026-02-26","2026-02-25","2026-02-24","2026-02-23","2026-02-22","2026-02-21","2026-02-20","2026-02-19","2026-02-18","2026-02-17","2026-02-16","2026-02-11"]</div>
+  
+        </ul>
+
+        <h3>🔥 热门项目排行榜</h3>
+        <div class="time-range-selector">
+          <label for="timeRange">选择时间范围：</label>
+          <select id="timeRange" onchange="updateRanking(this.value)">
+            <option value="week">过去一周</option>
+            <option value="month">过去一月</option>
+            <option value="quarter">过去一季度</option>
+          </select>
+        </div>
+
+        <div id="rankingContent" class="ranking-section">
+          <h4>🔥 热门项目排行榜</h4>
+          <ul class="ranking-list" id="rankingList">
+            <li>加载中...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 内容区域 -->
+      <div class="content">
+        <h1>今日 GitHub 狠活：AI 打工天团出道，你的简历和记忆都有人管了</h1>
+<p>各位打工人、代码农夫、以及正在被 AI 抢饭碗又偷偷用 AI 摸鱼的朋友们，早上好中午好晚上好。欢迎收看今日 GitHub Trending 日报——今天的榜单堪称“AI 代理一条龙服务”：从帮你找工作、帮你写代码、帮你记住上下文，到帮你压缩 token 省钱，甚至连视频修复都给你安排上了。话不多说，开整。</p>
+<h3>ai-job-search</h3>
+<p><strong>一句话概括：</strong> 一个跑在你本机上的 AI 求职框架，帮你评估岗位、改简历、写求职信、准备面试，一条龙服务。</p>
+<p><strong>详细介绍：</strong> 找工作这件事，痛点从来不是“没岗位”，而是“岗位太多懒得筛、简历改到怀疑人生、求职信写得像 AI 生成”——好吧现在真的是 AI 生成。这个项目基于 Claude Code 构建，核心思路是：把求职流程拆成可自动化的环节，让 AI 帮你干脏活累活。评估 JD 匹配度、按岗位定制 CV、生成求职信、模拟面试，全在你自己的机器上跑，数据不出门。最骚的是它鼓励你 fork 走自己改——毕竟求职这事儿，千人千面，别人的模板救不了你。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/MadsLorentzen/ai-job-search">https://github.com/MadsLorentzen/ai-job-search</a></p>
+<p><strong>Star 数量：</strong> 57,609</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，求职季刚需，星数说明一切）</p>
+<h3>opencode</h3>
+<p><strong>一句话概括：</strong> 开源版 coding agent，让 AI 帮你写代码，还不用被某家厂商绑死。</p>
+<p><strong>详细介绍：</strong> 榜单第二，Star 数直接飙到 21 万+，这体量已经不是“项目”了，是“现象”。痛点很明确：闭源 coding agent 好用归好用，但你的代码、你的上下文、你的工作流全在别人服务器上，心里总有点发毛。opencode 主打开源、可自托管，TypeScript 技术栈，想接哪个模型接哪个模型。对于既要 AI 提效、又要数据主权的团队来说，这就是那个“既要又要”的答案。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a></p>
+<p><strong>Star 数量：</strong> 217,920</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，21 万星不是刷出来的）</p>
+<h3>ai-memory</h3>
+<p><strong>一句话概括：</strong> 给 coding agent 装一个“长期记忆”，顺便解决换厂商就失忆的尴尬。</p>
+<p><strong>详细介绍：</strong> 用 AI 写代码的人都懂那种痛：聊了半小时，agent 终于搞懂了你的项目结构，结果一关窗口，下次开新会话——它又失忆了，你又得从头解释一遍。更别提换个厂商的 agent，之前的上下文全白搭。这个 Rust 写的项目就是干这个的：给 agent CLI 提供长期记忆层，并且支持在不同 agent 厂商之间做 handoff。翻译成人话：让 AI 记住你，且不挑对象。Rust 的性能底子也让它在响应速度上不至于拖后腿。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/akitaonrails/ai-memory">https://github.com/akitaonrails/ai-memory</a></p>
+<p><strong>Star 数量：</strong> 11,435</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐（4/5，痛点精准，但属于进阶玩家刚需）</p>
+<h3>ComfyUI</h3>
+<p><strong>一句话概括：</strong> 节点式扩散模型 GUI，本地跑图的最强 modular 引擎，没有之一。</p>
+<p><strong>详细介绍：</strong> 这玩意儿在 AI 绘画圈的地位，大概相当于“你不一定用过，但你一定见过别人用”。基于节点/图的工作流界面，把 diffusion 模型的每一步拆成可拖拽的模块，想怎么拼怎么拼。痛点？痛点就是那些“一键出图”的工具永远满足不了想精细控制的人——换采样器、调 CFG、接 ControlNet、串 LoRA，ComfyUI 全给你。号称“世界最快本地推理引擎”，13 万+ 星也证明了群众的眼睛是雪亮的。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/Comfy-Org/ComfyUI">https://github.com/Comfy-Org/ComfyUI</a></p>
+<p><strong>Star 数量：</strong> 139,843</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，AI 绘画工作流的天花板）</p>
+<h3>ruflo</h3>
+<p><strong>一句话概括：</strong> 老牌 agent harness，部署多智能体 swarm、编排自主工作流、搭对话式 AI 系统。</p>
+<p><strong>详细介绍：</strong> 名字带个 🌊，野心也像海一样大。号称“original agent harness”，功能列表长到像简历：自适应记忆、自学习智能、联邦、向量 RAG 集成，还原生集成 Claude Code / Codex / Hermes 等一堆。说白了，它想当的是“AI 代理的操作系统”——你有一堆 agent 要协同干活？交给我编排。痛点在于多 agent 系统的编排复杂度，普通开发者自己搭一套能累到脱发。7.7 万星说明这套“代理方阵”的思路确实戳中了不少人。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/ruvnet/ruflo">https://github.com/ruvnet/ruflo</a></p>
+<p><strong>Star 数量：</strong> 77,271</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐（4/5，功能堆料猛，学习曲线也不低）</p>
+<h3>orca</h3>
+<p><strong>一句话概括：</strong> 管理一整支 coding agent 舰队的平台，用自己的订阅跑任意 agent，桌面/移动/远程通吃。</p>
+<p><strong>详细介绍：</strong> 现在谁还没几个 agent？Claude Code 一个、Grok Bot 一个、可能还有别的。问题来了：散落在各处，怎么统一调度？orca 的答案是——把它们编成舰队。你可以用自己的订阅跑任意 coding agent，桌面端、移动端、远程 runtime 都能接。痛点就是“agent 多了管不过来”，尤其对同时用多家 agent 的团队。9.8 万星，说明“舰队司令”这个角色，很多人都想当。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/stablyai/orca">https://github.com/stablyai/orca</a></p>
+<p><strong>Star 数量：</strong> 98,416</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，多 agent 时代的刚需调度台）</p>
+<h3>headroom</h3>
+<p><strong>一句话概括：</strong> 在内容喂给 LLM 之前先压缩，coding agent 省 20% token，JSON 省 60-95%，答案还不变。</p>
+<p><strong>详细介绍：</strong> 这个项目属于“闷声省钱型”。痛点极其现实：token 就是钱，tool 输出、日志、文件、RAG chunk 一股脑塞给 LLM，账单蹭蹭涨，其中一大半是废话。headroom 的思路是在内容到达 LLM 之前先压缩——coding agent 场景省 20% token，JSON 场景省 60-95%，关键是“same answers”，答案质量不打折。提供 library、proxy、MCP server 三种形态，接入方式灵活。7.6 万星，说明被账单教育过的人真不少。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/headroomlabs-ai/headroom">https://github.com/headroomlabs-ai/headroom</a></p>
+<p><strong>Star 数量：</strong> 76,296</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，省钱就是硬道理）</p>
+<h3>os-taxonomy</h3>
+<p><strong>一句话概括：</strong> 没有简介，但 6 千多星说明它肯定有点东西——看名字像操作系统/分类学相关的工具库。</p>
+<p><strong>详细介绍：</strong> 坦白讲，这个项目连 description 都没写，作为日报作者我也很为难。从仓库名 <code>os-taxonomy</code> 和 JavaScript 技术栈推测，大概是某种“操作系统分类体系”或“OS 元数据分类”相关的工具/数据集。6,199 星对于一个零简介项目来说相当反常，要么是某个社区在集体打卡，要么是它被某个大项目依赖。建议感兴趣的同学直接点进去看 README——毕竟连简介都懒得写的项目，要么是极简主义大佬，要么是还没想好怎么介绍自己。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/withmarbleapp/os-taxonomy">https://github.com/withmarbleapp/os-taxonomy</a></p>
+<p><strong>Star 数量：</strong> 6,199</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐（3/5，信息不足，谨慎入坑）</p>
+<h3>jasna</h3>
+<p><strong>一句话概括：</strong> 视频修复工具，把糊成马赛克的老视频往清晰了拉。</p>
+<p><strong>详细介绍：</strong> 在一堆 AI agent 项目里，jasna 显得格外朴素——它就是个视频修复工具。痛点很经典：老视频、低分辨率素材、压缩过度的片段，想修复又不想开 PR、不想学一堆滤镜参数。Python 实现，Star 数 2,959，在今天的榜单里属于“小而美”梯队。虽然热度比不上前面那些动辄几万星的巨无霸，但对于有视频修复需求的人来说，这种垂直工具往往比通用大模型更顺手。</p>
+<p><strong>项目网址：</strong> <a href="https://github.com/Kruk2/jasna">https://github.com/Kruk2/jasna</a></p>
+<p><strong>Star 数量：</strong> 2,959</p>
+<p><strong>推荐指数：</strong> ⭐⭐⭐（3/5，垂直场景好用，但受众有限）</p>
+<h3>CLI-Anything</h3>
+<p><strong>一句话概括：</strong> 港大出品，口号是“让所有软件都变成 agent-native”，通过 CLI-Hub 把命令行能力接</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 前端交互脚本 -->
+  <script>
+    /**
+ * GitHub Trending 简报前端交互脚本
+ * 包含所有前端交互逻辑：Tooltip、排行榜切换、日期选择等
+ */
+
+// Tooltip 偏移量配置
+const TOOLTIP_OFFSET_X = 15;
+const TOOLTIP_OFFSET_Y = 15;
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+  // 为项目卡片添加点击效果
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        return;
+      }
+      this.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 150);
+    });
+  });
+
+  // 初始化排行榜显示（默认显示近一周）
+  if (typeof updateRanking === 'function') {
+    updateRanking('week');
+  }
+});
+
+/**
+ * 显示悬浮提示框 - 跟随鼠标位置
+ * @param {string} content - 提示内容
+ * @param {Event} event - 鼠标事件对象
+ */
+function showTooltip(content, event) {
+  const tooltip = document.getElementById('globalTooltip');
+  const tooltipContent = document.getElementById('tooltipContent');
+  tooltipContent.textContent = content;
+  tooltip.style.display = 'block';
+
+  // 跟随鼠标定位
+  const x = event.pageX + TOOLTIP_OFFSET_X;
+  const y = event.pageY + TOOLTIP_OFFSET_Y;
+
+  // 获取视口尺寸，防止提示框超出边界
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const tooltipRect = tooltip.getBoundingClientRect();
+
+  // 如果右侧空间不足，显示在左侧
+  let finalX = x;
+  if (x + tooltipRect.width > viewportWidth) {
+    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
+  }
+
+  // 如果底部空间不足，显示在上方
+  let finalY = y;
+  if (y + tooltipRect.height > viewportHeight) {
+    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
+  }
+
+  tooltip.style.left = finalX + 'px';
+  tooltip.style.top = finalY + 'px';
+  tooltip.style.transform = 'none';
+}
+
+/**
+ * 隐藏悬浮提示框
+ */
+function hideTooltip() {
+  const tooltip = document.getElementById('globalTooltip');
+  tooltip.style.display = 'none';
+}
+
+/**
+ * 更新排行榜显示
+ * @param {string} timeRange - 时间范围：'week'、'month'、'quarter'
+ */
+function updateRanking(timeRange) {
+  var rankingList = document.getElementById('rankingList');
+
+  if (typeof rankingData === 'undefined') {
+    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
+    return;
+  }
+
+  var rankings = rankingData[timeRange] || [];
+
+  if (rankings.length === 0) {
+    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
+    return;
+  }
+
+  let html = '';
+
+  rankings.forEach(function(item, index) {
+    var description = item.description || '暂无描述';
+    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+
+    var count = item.count || 0;
+    var stars = item.stars || '0';
+
+    var tooltipContent = '📦 ' + item.name + '\n\n' +
+                         '📝 ' + description + '\n\n' +
+                         '⭐ ' + stars + ' | 📅 ' + count + ' 次';
+
+    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+
+    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
+    html += '<div class="ranking-item">';
+    html += '<div class="ranking-info">';
+    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
+    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
+    html += '<div class="ranking-desc">' + description + '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</li>';
+  });
+
+  rankingList.innerHTML = html;
+}
+
+/**
+ * 更新月份选择下拉框
+ * 修复：保留已选择的月份，重新选择时正确更新
+ */
+function updateMonthOptions() {
+  var yearSelect = document.getElementById('yearSelect');
+  var monthSelect = document.getElementById('monthSelect');
+  var daySelect = document.getElementById('daySelect');
+  var availableDatesContainer = document.getElementById('availableDatesData');
+
+  if (!availableDatesContainer) {
+    console.error('找不到可用日期容器');
+    return;
+  }
+
+  var availableDates = JSON.parse(availableDatesContainer.textContent);
+  var selectedYear = yearSelect.value;
+  var previouslySelectedMonth = monthSelect.value;
+
+  monthSelect.innerHTML = '<option value="">月</option>';
+  daySelect.innerHTML = '<option value="">日</option>';
+
+  if (!selectedYear) {
+    return;
+  }
+
+  var months = [...new Set(
+    availableDates
+      .filter(function(d) { return d.startsWith(selectedYear); })
+      .map(function(d) { return d.substring(5, 7); })
+  )].sort().reverse();
+
+  for (var i = 0; i < months.length; i++) {
+    var month = months[i];
+    var monthNum = parseInt(month, 10);
+    var selected = (month === previouslySelectedMonth) ? ' selected' : '';
+    monthSelect.innerHTML += '<option value="' + month + '"' + selected + '>' + monthNum + '</option>';
+  }
+
+  if (previouslySelectedMonth && months.includes(previouslySelectedMonth)) {
+    updateDayOptions();
+  }
+}
+
+/**
+ * 更新日期选择下拉框
+ * 修复：保留已选择的日期，正确处理状态
+ */
+function updateDayOptions() {
+  var yearSelect = document.getElementById('yearSelect');
+  var monthSelect = document.getElementById('monthSelect');
+  var daySelect = document.getElementById('daySelect');
+  var availableDatesContainer = document.getElementById('availableDatesData');
+
+  if (!availableDatesContainer) {
+    return;
+  }
+
+  var availableDates = JSON.parse(availableDatesContainer.textContent);
+  var selectedYear = yearSelect.value;
+  var selectedMonth = monthSelect.value;
+  var previouslySelectedDay = daySelect.value;
+
+  daySelect.innerHTML = '<option value="">日</option>';
+
+  if (!selectedYear || !selectedMonth) {
+    return;
+  }
+
+  var days = availableDates
+    .filter(function(d) { return d.startsWith(selectedYear + '-' + selectedMonth); })
+    .sort().reverse();
+
+  for (var i = 0; i < days.length; i++) {
+    var day = days[i];
+    var dayNum = parseInt(day.substring(8, 10), 10);
+    var selected = (day === previouslySelectedDay) ? ' selected' : '';
+    daySelect.innerHTML += '<option value="' + day + '"' + selected + '>' + dayNum + '</option>';
+  }
+}
+
+/**
+ * 跳转到历史报告页面
+ */
+function goToHistoryReport() {
+  var daySelect = document.getElementById('daySelect');
+  var selectedDate = daySelect.value;
+
+  if (selectedDate) {
+    window.location.href = 'daily_' + selectedDate + '.html';
+  } else {
+    alert('请先选择完整的日期！');
+  }
+}
+
+  </script>
+</body>
+</html>
