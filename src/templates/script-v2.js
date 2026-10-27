@@ -38,7 +38,7 @@ function initializeProjectCards() {
     toggle.addEventListener('click', function() {
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!isExpanded));
-      toggle.querySelector('span:first-child').textContent = isExpanded ? '查看编辑解读' : '收起编辑解读';
+      toggle.querySelector('span:first-child').textContent = isExpanded ? '展开项目解读' : '收起项目解读';
       details.hidden = isExpanded;
     });
   });

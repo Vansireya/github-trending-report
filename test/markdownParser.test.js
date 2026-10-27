@@ -53,7 +53,7 @@ test('rejects unsafe project links', () => {
   assert.doesNotMatch(html, /javascript:/);
 });
 
-test('enriches cards with scraped facts without inventing unavailable growth', () => {
+test('shows the authoritative scraped star count beside the project name', () => {
   const html = markdownParser.convertMarkdownToHTML(`
 ### owner/repo
 
@@ -64,12 +64,13 @@ test('enriches cards with scraped facts without inventing unavailable growth', (
 **Star 数量**：123
 
 **推荐指数**：★★★★☆
-`, [{ name: 'owner/repo', rank: 2, language: 'TypeScript', forks: '42' }]);
+`, [{ name: 'owner/repo', rank: 2, language: 'TypeScript', stars: '9,999', forks: '42', periodStars: '321' }]);
 
   assert.match(html, /#2/);
   assert.match(html, /TypeScript/);
-  assert.match(html, />42</);
-  assert.doesNotMatch(html, /\+—/);
+  assert.match(html, /class="star-pill"[^>]*>★ 9,999/);
+  assert.doesNotMatch(html, /本期增长|Fork|编辑评分/);
+  assert.doesNotMatch(html, /为什么上榜|使用提醒/);
 });
 
 test('wraps the daily takeaway as a full-width summary panel', () => {

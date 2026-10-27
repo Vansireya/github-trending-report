@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
   <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月16日星期五</title>
   <script src="../data/ranking_data.js"></script>
@@ -57,7 +62,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a>
+        <span class="star-pill" aria-label="272,932 stars">★ 272,932</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
         <span class="signal-tag">今日焦点</span>
@@ -66,25 +74,15 @@
     <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
   </div>
   <p class="project-summary">让 AI Agent 帮你逆向工程，从 App 行为一路扒到原生二进制。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 272,932</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（安全圈和 Agent 圈的双重狂欢，虽然实际用起来可能一半时间在 debug Agent 本身）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-morluto-rea">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-morluto-rea" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>以前逆向工程是安全研究员戴着耳机、盯着 IDA Pro、靠咖啡续命的活儿。现在 rea 想让 Agent 替你干——你告诉它“这个 App 在干嘛”，它自己往下挖，挖到汇编层都不带喘的。痛点很明确：逆向门槛高、耗时长、人才贵。当然，Agent 逆向出来的结果你敢不敢直接信，那是另一个哲学问题。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -92,7 +90,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer">anthropics/claude-plugins-official</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer">anthropics/claude-plugins-official</a>
+        <span class="star-pill" aria-label="39,202 stars">★ 39,202</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
         <span class="signal-tag">今日焦点</span>
@@ -101,25 +102,15 @@
     <a class="repo-link" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 anthropics/claude-plugins-official">↗</a>
   </div>
   <p class="project-summary">Anthropic 官方亲自下场的 Claude Code 插件目录。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 39,202</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（官方出品，必属……至少不会太离谱）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-anthropics-claude-plugins-official">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-anthropics-claude-plugins-official" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>Claude Code 生态的插件已经多到鱼龙混杂，Anthropic 终于看不下去，自己搞了个“官方认证”目录。好处是质量有背书，坏处是——你懂的，官方认证意味着创新速度可能赶不上社区野路子。但至少你不用再在 GitHub 上盲盒式地试插件了。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -127,7 +118,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer">K-Dense-AI/scientific-agent-skills</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer">K-Dense-AI/scientific-agent-skills</a>
+        <span class="star-pill" aria-label="50,573 stars">★ 50,573</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
         <span class="signal-tag">今日焦点</span>
@@ -136,25 +130,15 @@
     <a class="repo-link" href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 K-Dense-AI/scientific-agent-skills">↗</a>
   </div>
   <p class="project-summary">把任何 AI Agent 改造成“AI 科学家”，177 个现成技能包 + 100 多个科学数据库。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 50,573</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（科研狗狂喜，但请勿用于指导真实实验，除非你想发 Nature 撤稿）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-k-dense-ai-scientific-agent-skills">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-k-dense-ai-scientific-agent-skills" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>这项目的野心写在脸上——让 25 万科学家已经在用的技能库，把你的 Cursor / Claude Code / Codex 一键变成科研助手。生物学、化学、医学、药物发现全覆盖。痛点？科研人员不想学 prompt engineering，只想让 AI 帮忙查文献、跑分析。这个库就是那座桥。当然，AI  scientist 会不会把实验做炸，那得看你的试剂够不够贵。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -162,7 +146,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer">JuliusBrussee/caveman</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer">JuliusBrussee/caveman</a>
+        <span class="star-pill" aria-label="112,629 stars">★ 112,629</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Go</span>
 
@@ -171,25 +158,15 @@
     <a class="repo-link" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 JuliusBrussee/caveman">↗</a>
   </div>
   <p class="project-summary">让 AI 用“原始人语”说话，省下 65% 的 token。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 112,629</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（如果你每个月 API 账单让你想住山洞，这个项目就是你的火种）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-juliusbrussee-caveman">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-juliusbrussee-caveman" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>🪨 为什么用很多 token，当很少 token 可以做事？这个项目的逻辑简单粗暴：LLM 的 token 是要花钱的，而很多废话是不必要的。于是它搞了个代理 + 技能，让 Agent 像山顶洞人一样交流——“我，要，查，数据库。返回，结果。” 结果 token 直接砍掉 65%。省钱的快乐，原始人也懂。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -197,7 +174,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer">debpalash/VoiceStudio</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer">debpalash/VoiceStudio</a>
+        <span class="star-pill" aria-label="69,260 stars">★ 69,260</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
 
@@ -206,25 +186,15 @@
     <a class="repo-link" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 debpalash/VoiceStudio">↗</a>
   </div>
   <p class="project-summary">完全本地的开源 ElevenLabs 替代品，语音克隆、配音、听写、有声书，646 种语言。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 69,260</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（开源语音圈的良心，前提是你有张好显卡）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-debpalash-voicestudio">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-debpalash-voicestudio" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>ElevenLabs 好用，但贵，而且你的声音数据要上传到别人服务器。VoiceStudio 说：不，你可以在自己机器上干这一切。语音克隆、视频配音、听写、转录、有声书制作，646 种语言——基本上把语音 AI 的活儿全包了。痛点就是两个字：隐私 + 钱包。当然，本地跑语音模型，你的 GPU 可能会发出直升机般的轰鸣。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -232,7 +202,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+        <span class="star-pill" aria-label="299,973 stars">★ 299,973</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Shell</span>
 
@@ -241,25 +214,15 @@
     <a class="repo-link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 obra/superpowers">↗</a>
   </div>
   <p class="project-summary">一个“真的能用”的 Agent 技能框架和软件开发方法论。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 299,973</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（接近 30 万 star，就算方法论是玄学，也值得看一眼）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-obra-superpowers">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-obra-superpowers" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>市面上 Agent 框架多如牛毛，但大部分是“demo 很酷，生产环境想哭”。superpowers 的卖点是“works”——能跑通。它不只是工具，还带一套开发方法论。翻译成人话：它试图回答“Agent 到底该怎么组织工作才不翻车”。这个问题值 30 万 star 吗？看起来大家觉得值。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -267,7 +230,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">ruvnet/ruflo</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">ruvnet/ruflo</a>
+        <span class="star-pill" aria-label="75,178 stars">★ 75,178</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
 
@@ -276,25 +242,15 @@
     <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruvnet/ruflo">↗</a>
   </div>
   <p class="project-summary">原始 Agent 框架，部署多智能体蜂群，协调自主工作流，构建对话 AI 系统。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 75,178</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（功能多到让人怀疑人生，适合喜欢折腾的架构师）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ruvnet-ruflo">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-ruvnet-ruflo" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>ruflo 自称“the original agent harness”，功能列表长得像一份愿望清单：自适应记忆、自学习智能、联邦、向量 RAG、原生集成 Claude Code / Codex / Hermes……痛点？你想要一个 Agent 干所有事，但不想自己从零搭。ruflo 说：我来。当然，“什么都能干”通常也意味着“什么都需要配置”。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -302,7 +258,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer">mksglu/context-mode</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer">mksglu/context-mode</a>
+        <span class="star-pill" aria-label="29,829 stars">★ 29,829</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
 
@@ -311,25 +270,15 @@
     <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
   </div>
   <p class="project-summary">给 AI 编程 Agent 做上下文窗口优化，工具输出沙箱化后减少 98%。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 29,829</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（痛点抓得准，但 17 个平台的兼容性能不能都靠谱，是个问号）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mksglu-context-mode">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mksglu-context-mode" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>Agent 编程最大的痛点之一：上下文窗口被工具输出塞爆。你让 Agent 跑个命令，它返回 5000 行日志，窗口直接没了。context-mode 的做法是：把工具输出扔进沙箱，只把关键信息喂给模型，减少 98%。还持久化会话记忆，跨 17 个平台路由。简单说，就是给 Agent 的脑子装了个“垃圾过滤器”。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -337,7 +286,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer">NationalSecurityAgency/ghidra</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer">NationalSecurityAgency/ghidra</a>
+        <span class="star-pill" aria-label="88,868 stars">★ 88,868</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Java</span>
 
@@ -346,25 +298,15 @@
     <a class="repo-link" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NationalSecurityAgency/ghidra">↗</a>
   </div>
   <p class="project-summary">NSA 出品的软件逆向工程框架。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 88,868</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（安全圈常青树，NSA 出品，虽然这句话听起来有点怪）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nationalsecurityagency-ghidra">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nationalsecurityagency-ghidra" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>在一堆 AI Agent 项目里，Ghidra 像个穿着工装裤的老工程师，默默站在角落。它是 NSA 开源的逆向工程神器，反汇编、反编译、脚本化分析，安全研究员的标配。痛点？商业逆向工具贵到离谱，Ghidra 免费且强大。它不需要 token，不需要 Agent，只需要你的脑子。在这个榜单里，它是最“复古”的存在。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -372,7 +314,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">affaan-m/ECC</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">affaan-m/ECC</a>
+        <span class="star-pill" aria-label="280,475 stars">★ 280,475</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>JavaScript</span>
 
@@ -381,25 +326,15 @@
     <a class="repo-link" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 affaan-m/ECC">↗</a>
   </div>
   <p class="project-summary">Agent 框架性能优化系统，技能、本能、记忆、安全、研究优先开发，通吃 Claude Code / Codex / Cursor。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 280,475</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（28 万 star 的“性能优化系统”，就算只兑现一半承诺也值了）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-affaan-m-ecc">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-affaan-m-ecc" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>ECC 的简介读起来像一份企业级 PPT：技能、本能、记忆、安全、研究优先开发……翻译成人话就是：它想让你的 Agent 跑得更快、记得更牢、不容易被黑，而且开发时先做研究再动手。痛点？Agent 在生产环境里又慢又蠢又不安全。ECC 说：我全都要治。28 万 star 说明大家确实病得不轻。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>

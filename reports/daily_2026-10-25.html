@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
   <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月25日星期日</title>
   <script src="../data/ranking_data.js"></script>
@@ -55,7 +60,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">cloudflare/security-audit-skill</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">cloudflare/security-audit-skill</a>
+        <span class="star-pill" aria-label="44,740 stars">★ 44,740</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>JavaScript</span>
         <span class="signal-tag">今日焦点</span>
@@ -64,25 +72,15 @@
     <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cloudflare/security-audit-skill">↗</a>
   </div>
   <p class="project-summary">给编码代理装上一套多阶段安全审计技能，查出来的漏洞还能机器可读、独立验证。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 44,740</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-cloudflare-security-audit-skill">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-cloudflare-security-audit-skill" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>以前让 AI 写代码，写完你还得自己提心吊胆地查安全漏洞，现在 Cloudflare 直接把这个活儿也交给了 AI——而且不是瞎查，是分阶段、可验证、结果能直接喂给流水线的那种。44k 星说明大家苦&amp;quot;AI 写代码一时爽，上线安全火葬场&amp;quot;久矣。这个项目解决的核心痛点就是：让 AI 不仅会写，还会自己审判自己写的代码。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -90,7 +88,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer">NVIDIA/OpenShell</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer">NVIDIA/OpenShell</a>
+        <span class="star-pill" aria-label="19,519 stars">★ 19,519</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
         <span class="signal-tag">今日焦点</span>
@@ -99,25 +100,15 @@
     <a class="repo-link" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NVIDIA/OpenShell">↗</a>
   </div>
   <p class="project-summary">给自主 AI 代理准备的&amp;quot;安全私有运行沙箱&amp;quot;。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 19,519</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nvidia-openshell">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nvidia-openshell" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>AI 代理越来越能干，但你敢让它随便在你机器上跑命令吗？NVIDIA 说：不敢就对了，来用 OpenShell。这是一个用 Rust 写的运行时，专门给那些&amp;quot;自己会思考、自己会动手&amp;quot;的 AI 代理提供一个隔离的安全环境。翻译成人话：给代理套个笼子，让它在里面尽情折腾，外面世界安然无恙。19k 星，说明大家对&amp;quot;代理失控&amp;quot;这件事是真的怕。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -125,7 +116,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener noreferrer">aws/agent-toolkit-for-aws</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener noreferrer">aws/agent-toolkit-for-aws</a>
+        <span class="star-pill" aria-label="3,155 stars">★ 3,155</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
         <span class="signal-tag">今日焦点</span>
@@ -134,25 +128,15 @@
     <a class="repo-link" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 aws/agent-toolkit-for-aws">↗</a>
   </div>
   <p class="project-summary">AWS 官方出品的 MCP 服务器、技能和插件合集，帮 AI 代理在 AWS 上盖房子。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 3,155</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-aws-agent-toolkit-for-aws">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-aws-agent-toolkit-for-aws" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>AWS 终于坐不住了，官方下场给 AI 代理发工具包。痛点很明确：你想让 AI 帮你操作 AWS，但一堆 API、权限、配置能把它绕晕。这个工具包就是官方铺好的红毯，让代理能规规矩矩地在云上干活。3k 星不算多，但官方背书 + Python 生态，属于&amp;quot;现在不火以后必用&amp;quot;的类型。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -160,7 +144,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">Nutlope/hallmark</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">Nutlope/hallmark</a>
+        <span class="star-pill" aria-label="32,232 stars">★ 32,232</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>CSS</span>
 
@@ -169,25 +156,15 @@
     <a class="repo-link" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 Nutlope/hallmark">↗</a>
   </div>
   <p class="project-summary">专治 AI 生成设计&amp;quot;一眼假&amp;quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 32,232</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nutlope-hallmark">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nutlope-hallmark" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>AI 生成的设计有个通病——看着挺像那么回事，但总透着一股&amp;quot;我是 AI 我骄傲&amp;quot;的塑料感。Hallmark 就是来治这个的，一套设计技能，让你的 AI 助手产出不那么&amp;quot;AI slop&amp;quot;的东西。32k 星说明设计师和开发者对&amp;quot;AI 味&amp;quot;的容忍度已经到极限了。用 CSS 写设计规范，这很合理。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -195,7 +172,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/luongnv89/claude-howto" target="_blank" rel="noopener noreferrer">luongnv89/claude-howto</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/luongnv89/claude-howto" target="_blank" rel="noopener noreferrer">luongnv89/claude-howto</a>
+        <span class="star-pill" aria-label="44,609 stars">★ 44,609</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
 
@@ -204,25 +184,15 @@
     <a class="repo-link" href="https://github.com/luongnv89/claude-howto" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 luongnv89/claude-howto">↗</a>
   </div>
   <p class="project-summary">一本图文并茂、例子驱动、能直接复制粘贴的 Claude Code 使用指南。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 44,609</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-luongnv89-claude-howto">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-luongnv89-claude-howto" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>Claude Code 火归火，但很多人打开之后一脸懵：这玩意儿到底怎么用？这个项目就是来救场的，从基础概念到高级代理，全程配图配例子，模板直接复制就能跑。44k 星，说明&amp;quot;官方文档看不懂&amp;quot;是全球通病，民间教程才是真刚需。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -230,7 +200,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">pbakaus/impeccable</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">pbakaus/impeccable</a>
+        <span class="star-pill" aria-label="86,487 stars">★ 86,487</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
 
@@ -239,25 +212,15 @@
     <a class="repo-link" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pbakaus/impeccable">↗</a>
   </div>
   <p class="project-summary">一套设计语言，让你的 AI 工具在设计这件事上不再&amp;quot;力不从心&amp;quot;。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 86,487</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pbakaus-impeccable">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pbakaus-impeccable" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>86k 星，今天榜单的星王。痛点很直接：你让 AI 帮你搞设计，它给你搞出一堆能看但不好看的东西。Impeccable 的思路是给 AI 一套设计语言规范，让它&amp;quot;有章可循&amp;quot;而不是自由发挥。用 Rust 写设计语言，多少有点硬核，但效果据说很 impeccable。星数摆在这，不试说不过去。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -265,7 +228,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer">pollen-robotics/microduck</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer">pollen-robotics/microduck</a>
+        <span class="star-pill" aria-label="11,034 stars">★ 11,034</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
 
@@ -274,25 +240,15 @@
     <a class="repo-link" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pollen-robotics/microduck">↗</a>
   </div>
   <p class="project-summary">一只会走路的小鸭子机器人。🦆</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 11,034</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐（可爱加分，实用减分，综合三星）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pollen-robotics-microduck">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pollen-robotics-microduck" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>在一堆 AI 代理和安全审计中间，突然冒出一只双足小鸭子机器人，画风清奇但莫名治愈。Pollen Robotics 出品，Rust 驱动，11k 星说明技术圈的人再卷也需要一点可爱的东西续命。它解决什么痛点？大概是&amp;quot;看了一天 AI 代理，需要看只鸭子缓缓&amp;quot;这个痛点。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -300,7 +256,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer">google-gemini/gemini-cli</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer">google-gemini/gemini-cli</a>
+        <span class="star-pill" aria-label="108,103 stars">★ 108,103</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
 
@@ -309,25 +268,15 @@
     <a class="repo-link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 google-gemini/gemini-cli">↗</a>
   </div>
   <p class="project-summary">把 Gemini 直接塞进你终端的开源 AI 代理。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 108,103</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-google-gemini-gemini-cli">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-google-gemini-gemini-cli" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>108k 星，今天的绝对顶流。谷歌把 Gemini 做成了命令行工具，你敲命令它干活，不用切浏览器不用开网页。痛点就是&amp;quot;终端党不想离开终端&amp;quot;。TypeScript 写的，开源，谷歌亲儿子。星数已经说明一切，这里不需要我多嘴。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -335,7 +284,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/jbiaojerry/ebook-treasure-chest" target="_blank" rel="noopener noreferrer">jbiaojerry/ebook-treasure-chest</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/jbiaojerry/ebook-treasure-chest" target="_blank" rel="noopener noreferrer">jbiaojerry/ebook-treasure-chest</a>
+        <span class="star-pill" aria-label="22,690 stars">★ 22,690</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
 
@@ -344,25 +296,15 @@
     <a class="repo-link" href="https://github.com/jbiaojerry/ebook-treasure-chest" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 jbiaojerry/ebook-treasure-chest">↗</a>
   </div>
   <p class="project-summary">一个汇聚各类电子书下载链接的宝库，覆盖帆书、微信读书、京东读书、喜马拉雅等平台的大部分电子书。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 22,690</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（实用拉满，合规扣一星）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-jbiaojerry-ebook-treasure-chest">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-jbiaojerry-ebook-treasure-chest" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>技术榜单里混进一个电子书资源库，22k 星说明大家的精神食粮需求和技术需求一样旺盛。经典文学、经管励志、职场创业、技术手册，应有尽有。痛点？当然是&amp;quot;想看书但不想每个 App 都充会员&amp;quot;。温馨提示：资源虽好，请注意版权，支持正版。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -370,7 +312,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">makecindy/cindy</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">makecindy/cindy</a>
+        <span class="star-pill" aria-label="4,140 stars">★ 4,140</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
 
@@ -379,25 +324,15 @@
     <a class="repo-link" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 makecindy/cindy">↗</a>
   </div>
   <p class="project-summary">一个开箱即用的开源 AI Agent，想到就能做到。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 4,140</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-makecindy-cindy">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-makecindy-cindy" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>名字叫 Cindy，口号是&amp;quot;Consider it done&amp;quot;。定位很清晰：别的 AI Agent 要配置半天，Cindy 开箱即用。4k 星不算高，但&amp;quot;开箱即用&amp;quot;这四个字在 AI Agent 满地爬的今天，本身就是一种稀缺品质。TypeScript 写的，适合不想折腾配置、只想让 AI 赶紧干活的人。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>

@@ -156,22 +156,16 @@ function convertMarkdownToHTML(markdown, repositories = []) {
  */
 function generateProjectCard(projectData) {
   // 安全处理：确保所有字段都有值
+  const repository = projectData.repository || {};
   const name = escapeHTML(projectData.name || '未知项目');
   const summary = escapeHTML(projectData.summary || '暂无');
   const details = escapeHTML(projectData.details || '暂无');
-  const rawUrl = projectData.url || '';
+  const rawUrl = repository.url || projectData.url || '';
   const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
-  const stars = escapeHTML(projectData.stars || '0');
-  const rating = escapeHTML(projectData.rating || '暂无');
+  const stars = escapeHTML(repository.stars || projectData.stars || '0');
   const audience = escapeHTML(projectData.audience || '关注该领域的开发者');
-  const whyTrending = escapeHTML(projectData.whyTrending || '榜单信息有限，建议结合仓库动态判断');
-  const risks = escapeHTML(projectData.risks || '使用前请查看文档、Issue 与维护状态');
-  const repository = projectData.repository || {};
   const rank = Number(repository.rank) || 0;
   const language = escapeHTML(repository.language || 'Other');
-  const forks = escapeHTML(repository.forks || '—');
-  const periodStars = escapeHTML(repository.periodStars || '—');
-  const periodGrowth = periodStars === '—' ? '—' : `+${periodStars}`;
   const cardId = `project-${String(projectData.name || 'unknown').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
   const topClass = rank > 0 && rank <= 3 ? ' project-card--top' : '';
 
@@ -180,7 +174,10 @@ function generateProjectCard(projectData) {
   <div class="project-card-header">
     <div class="rank-badge">${rank ? `#${rank}` : 'NEW'}</div>
     <div class="project-identity">
-      <a class="project-name" href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
+      <div class="project-title-line">
+        <a class="project-name" href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
+        <span class="star-pill" aria-label="${stars} stars">★ ${stars}</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>${language}</span>
         ${rank <= 3 && rank > 0 ? '<span class="signal-tag">今日焦点</span>' : ''}
@@ -189,25 +186,15 @@ function generateProjectCard(projectData) {
     <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
   </div>
   <p class="project-summary">${summary}</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ ${stars}</strong></div>
-    <div><span>本期增长</span><strong>${periodGrowth}</strong></div>
-    <div><span>Fork</span><strong>${forks}</strong></div>
-    <div><span>编辑评分</span><strong>${rating}</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="${cardId}">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="${cardId}" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>${details}</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>${audience}</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>${whyTrending}</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>${risks}</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>${audience}</p>
   </div>
 </article>`;
 }

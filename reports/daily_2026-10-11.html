@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
   <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月11日星期日</title>
   <script src="../data/ranking_data.js"></script>
@@ -57,7 +62,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a>
+        <span class="star-pill" aria-label="75,452 stars">★ 75,452</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
         <span class="signal-tag">今日焦点</span>
@@ -66,25 +74,15 @@
     <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
   </div>
   <p class="project-summary">让 AI Agent 帮你逆向任何东西，从 App 行为一路扒到原生二进制。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 75,452</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（安全研究员和逆向爱好者的新玩具，星数说明一切）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-morluto-rea">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-morluto-rea" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>逆向工程这活儿，以前是少数人的手艺活，得会看汇编、会调 IDA、会跟混淆代码斗智斗勇。rea 直接把 Agent 拉进来干这脏活累活——你想知道某个 App 背后在干嘛？丢给它。想搞清楚某个二进制里藏了什么逻辑？也丢给它。它把&amp;quot;逆向&amp;quot;这件事从手工坊升级成了流水线，虽然你依然需要点技术底子来判断结果对不对，但至少不用再对着几千行反汇编发呆到凌晨三点了。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -92,7 +90,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer">boykopovar/AnyPS5</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer">boykopovar/AnyPS5</a>
+        <span class="star-pill" aria-label="27,152 stars">★ 27,152</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>C++</span>
         <span class="signal-tag">今日焦点</span>
@@ -101,25 +102,15 @@
     <a class="repo-link" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 boykopovar/AnyPS5">↗</a>
   </div>
   <p class="project-summary">自动把 PS5 可执行文件移植到 Linux 和 Windows 的工具。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 27,152</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（技术含量拉满，但请自行判断使用场景）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-boykopovar-anyps5">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-boykopovar-anyps5" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>PS5 独占游戏馋哭了多少人？这个项目想做的事情就是——让 PS5 的游戏能在你的 PC 上跑起来。它自动处理可执行文件的移植工作，省去了手动折腾的噩梦。当然，法律和兼容性的事儿咱不展开，但技术上这确实是个狠活。C++ 写的，性能不用担心，就是不知道索尼看了作何感想。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -127,7 +118,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer">storytold/artcraft</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer">storytold/artcraft</a>
+        <span class="star-pill" aria-label="14,745 stars">★ 14,745</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
         <span class="signal-tag">今日焦点</span>
@@ -136,25 +130,15 @@
     <a class="repo-link" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 storytold/artcraft">↗</a>
   </div>
   <p class="project-summary">给艺术家、设计师和电影人用的&amp;quot;有意为之&amp;quot;的创作引擎。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 14,745</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐（小众但精致，适合有特定需求的创作者）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-storytold-artcraft">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-storytold-artcraft" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>市面上创作工具一大堆，但大多数要么太通用（什么都能做，什么都做不好），要么太死板（模板一套，创意清零）。ArtCraft 的定位是&amp;quot;intentional crafting engine&amp;quot;——它不追求大而全，而是让你带着明确意图去构建作品。Rust 写的，性能和内存安全都有保障。适合那些受够了&amp;quot;创意被工具限制&amp;quot;的人。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -162,7 +146,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">cathrynlavery/diagram-design</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">cathrynlavery/diagram-design</a>
+        <span class="star-pill" aria-label="49,076 stars">★ 49,076</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>HTML</span>
 
@@ -171,25 +158,15 @@
     <a class="repo-link" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cathrynlavery/diagram-design">↗</a>
   </div>
   <p class="project-summary">给 AI 编程助手用的编辑级图表设计系统，44 种图表类型，输出干净的 HTML + SVG。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 49,076</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（程序员画图痛点终结者，星数实至名归）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-cathrynlavery-diagram-design">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-cathrynlavery-diagram-design" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>受够了 Mermaid 那种&amp;quot;能看但丑&amp;quot;的图表了吧？这个项目直接甩出 44 种图表类型，生成自包含的 HTML + SVG，没有阴影、没有花里胡哨的装饰，就是干净利落的编辑级设计。而且它专门适配了 Claude Code、Codex、GitHub Copilot、Cursor 等一众 AI 编程工具——意思是你在写代码的时候，AI 顺手就能给你画出专业级的架构图。Mermaid 的&amp;quot;凑合能用&amp;quot;时代该结束了。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -197,7 +174,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer">mksglu/context-mode</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer">mksglu/context-mode</a>
+        <span class="star-pill" aria-label="26,372 stars">★ 26,372</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
 
@@ -206,25 +186,15 @@
     <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
   </div>
   <p class="project-summary">AI 编程 Agent 的上下文窗口优化器，工具输出减少 98%，还能跨平台记忆。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 26,372</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（AI 编程重度用户必备，轻量用户可能感知不强）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mksglu-context-mode">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mksglu-context-mode" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>用 AI 写代码的人都知道，上下文窗口就是命根子——一不小心就被工具输出塞满了，然后 Agent 就开始胡言乱语。context-mode 干的事情很直接：把工具输出丢进沙箱处理，体积直接砍掉 98%；同时持久化会话记忆，让你换个平台继续干活时不用从头解释。支持 17 个平台，通过 MCP + hooks 做路由。简单说，就是给你的 AI 助手装了个&amp;quot;记忆外挂&amp;quot;和&amp;quot;瘦身滤镜&amp;quot;。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -232,7 +202,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a>
+        <span class="star-pill" aria-label="284,661 stars">★ 284,661</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Shell</span>
 
@@ -241,25 +214,15 @@
     <a class="repo-link" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mattpocock/skills">↗</a>
   </div>
   <p class="project-summary">来自真实工程师的 .agents 目录技能合集。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 284,661</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（星数就是最好的推荐语）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mattpocock-skills">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mattpocock-skills" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>这个项目星数直接飙到 28 万，什么概念？说明大家都受够了&amp;quot;AI 编程助手看起来很聪明但实际很蠢&amp;quot;的现状。作者 Matt Pocock 是 TypeScript 圈的名人，他直接把自己 `.agents` 目录里的技能配置开源了——不是理论，不是教程，就是实打实在用的东西。Shell 写的，轻量、直接、可复制。如果你在用 AI 写代码但总觉得差口气，这里可能有你缺的那块拼图。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -267,7 +230,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer">flutter/flutter</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer">flutter/flutter</a>
+        <span class="star-pill" aria-label="179,569 stars">★ 179,569</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Dart</span>
 
@@ -276,25 +242,15 @@
     <a class="repo-link" href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 flutter/flutter">↗</a>
   </div>
   <p class="project-summary">Google 的跨平台 UI 框架，一套代码构建移动端和更多平台的应用。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 179,569</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（跨平台开发常青树，入坑不亏）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-flutter-flutter">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-flutter-flutter" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>Flutter 还需要介绍吗？Dart 语言、自绘引擎、热重载、一套代码跑遍 iOS/Android/Web/桌面。虽然这几年争议不少（比如 Dart 的学习曲线、包体积问题），但它的开发效率和 UI 一致性依然是跨平台方案里的第一梯队。这次上榜大概率是因为某个新版本或者新特性，但对于还没入坑的人来说——如果你受够了 React Native 的桥接问题和原生开发的重复劳动，Flutter 依然值得一试。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -302,7 +258,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer">tensorflow/tensorflow</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer">tensorflow/tensorflow</a>
+        <span class="star-pill" aria-label="200,755 stars">★ 200,755</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>C++</span>
 
@@ -311,25 +270,15 @@
     <a class="repo-link" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 tensorflow/tensorflow">↗</a>
   </div>
   <p class="project-summary">Google 的开源机器学习框架，人人可用。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 200,755</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（ML 领域基石之一，学不学另说，得知道）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-tensorflow-tensorflow">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-tensorflow-tensorflow" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>TensorFlow 和 PyTorch 的&amp;quot;框架之争&amp;quot;已经持续好几年了，虽然 PyTorch 在学术界风头更劲，但 TensorFlow 在工业部署和生产环境依然有不可替代的地位——TF Serving、TF Lite、TF.js 这一整套生态不是白给的。C++ 核心 + Python 接口，性能和生产部署能力依然是它的护城河。上榜大概率是因为新版本发布或者某个重要更新。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -337,7 +286,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer">hugohe3/ppt-master</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer">hugohe3/ppt-master</a>
+        <span class="star-pill" aria-label="59,580 stars">★ 59,580</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
 
@@ -346,25 +298,15 @@
     <a class="repo-link" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 hugohe3/ppt-master">↗</a>
   </div>
   <p class="project-summary">AI 把文档或主题变成真正的原生 PowerPoint 演示文稿，带原生形状、转场、动画、图表和语音旁白。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 59,580</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（打工人刚需，星数说明一切）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-hugohe3-ppt-master">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-hugohe3-ppt-master" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>市面上的 AI PPT 工具不少，但大多数生成的是&amp;quot;网页版幻灯片&amp;quot;或者&amp;quot;图片堆砌&amp;quot;，导出到 PowerPoint 里就原形毕露——没有原生形状、没有转场、没有动画，改都没法改。ppt-master 走的是另一条路：生成的是真正的 `.pptx` 文件，原生形状、原生转场、原生动画，图表和数据表按需生成，还能用演讲者备注生成语音旁白，甚至支持你自己的 `.pptx` 模板。Python 写的。简单说，就是让 AI 做出来的 PPT 不再是一坨截图。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>
@@ -372,7 +314,10 @@
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
-      <a class="project-name" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer">pytorch/pytorch</a>
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer">pytorch/pytorch</a>
+        <span class="star-pill" aria-label="104,167 stars">★ 104,167</span>
+      </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
 
@@ -381,25 +326,15 @@
     <a class="repo-link" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pytorch/pytorch">↗</a>
   </div>
   <p class="project-summary">Python 里的张量和动态神经网络，GPU 加速拉满。</p>
-  <div class="project-metrics" aria-label="项目指标">
-    <div><span>总 Star</span><strong>★ 104,167</strong></div>
-    <div><span>本期增长</span><strong>—</strong></div>
-    <div><span>Fork</span><strong>—</strong></div>
-    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（深度学习入门首选，没有之一）</strong></div>
-  </div>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pytorch-pytorch">
-    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pytorch-pytorch" hidden>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>PyTorch 现在就是深度学习框架里的&amp;quot;默认选项&amp;quot;——学术界发论文用它，工业界做原型也用它。动态计算图让调试变得像写普通 Python 一样自然，GPU 加速和分布式训练支持都很成熟。TensorFlow 和 PyTorch 同时上榜，说明这两家还在持续较劲，但对用户来说，竞争是好事。如果你刚入门深度学习，PyTorch 依然是目前最友好的起点。</p>
     </div>
-    <div class="detail-grid">
-      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
-      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
-      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
-    </div>
+    <p class="project-audience"><strong>适合：</strong>关注该领域的开发者</p>
   </div>
 </article>
 <hr>

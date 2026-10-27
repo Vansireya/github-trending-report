@@ -70,19 +70,14 @@ async function generateDailyReport(openai, trendingData) {
     "name": "必须与输入仓库全名完全一致",
     "summary": "一句话说明项目是什么，不超过35字",
     "problem": "它解决什么问题，不超过110字",
-    "audience": "适合谁，不超过45字",
-    "whyTrending": "基于输入资料的走红原因判断，不超过60字",
-    "risks": "成熟度、适用边界或风险，不超过55字",
-    "score": 1到5的整数,
-    "scoreReason": "评分理由，不超过45字",
-    "confidence": "high、medium或low"
+    "audience": "简短说明更适合哪类开发者，不超过25字"
   }],
   "closing": "不超过80字的今日结论"
 }
 
 事实约束：
-1. 只能使用输入中的仓库名称、简介、语言、Star、排名和涨幅，不得虚构作者背景、性能、功能或采用情况。
-2. 信息不足时明确写“仅凭榜单信息暂无法确认”，并降低 confidence。
+1. 只能使用输入中的仓库名称、简介、语言、Star 和排名，不得虚构作者背景、性能、功能或采用情况。
+2. 信息不足时明确写“仅凭榜单信息暂无法确认”。
 3. 语气可以轻松，但避免段子堆砌、夸张营销和投资建议。
 4. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
 
@@ -149,21 +144,11 @@ function validateAndNormalizeReport(report, trendingData) {
       throw new Error(`AI 日报缺少项目: ${repo.name}`);
     }
 
-    const score = Math.max(1, Math.min(5, Number.parseInt(analysis.score, 10) || 3));
-    const confidence = ['high', 'medium', 'low'].includes(analysis.confidence)
-      ? analysis.confidence
-      : 'low';
-
     return {
       ...repo,
       summary: String(analysis.summary || repo.description || '暂无摘要'),
       problem: String(analysis.problem || '仅凭榜单信息暂无法确认'),
-      audience: String(analysis.audience || '关注该领域的开发者'),
-      whyTrending: String(analysis.whyTrending || '仅凭榜单信息暂无法确认'),
-      risks: String(analysis.risks || '使用前请核实项目文档和维护状态'),
-      score,
-      scoreReason: String(analysis.scoreReason || '综合榜单表现与用途评估'),
-      confidence
+      audience: String(analysis.audience || '关注该领域的开发者')
     };
   });
 
@@ -190,17 +175,9 @@ function reportToMarkdown(report) {
 
 **适合人群**：${project.audience}
 
-**走红原因**：${project.whyTrending}
-
-**风险提示**：${project.risks}
-
-**信息置信度**：${project.confidence}
-
 **项目网址**：${project.url}
 
 **Star 数量**：${project.stars}
-
-**推荐指数**：${'★'.repeat(project.score)}${'☆'.repeat(5 - project.score)} · ${project.scoreReason}
 `).join('\n');
 
   return `# ${report.title}\n\n${report.opening}${signalText}\n\n${projectText}\n\n**今日总结**：${report.closing}\n`;
