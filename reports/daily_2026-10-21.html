@@ -3,38 +3,422 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月21日星期三</title>
-
-  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
   <script src="../data/ranking_data.js"></script>
-
-  <!-- 页面样式 -->
-  <link rel="stylesheet" href="../src/templates/style.css">
+  <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
 <body data-report-base-path="">
-  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
-  <div class="global-tooltip" id="globalTooltip">
-    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
-    <div id="tooltipContent"></div>
-  </div>
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
 
-  <!-- 页面主容器 -->
-  <div class="container">
-    <!-- 页面头部 -->
-    <div class="header">
-      <h1>🌟 GitHub Trending 简报</h1>
-      <p>每日精选热门开源项目，发现最新技术趋势</p>
-      <div class="date">📅 2026年10月21日星期三</div>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>OPEN SOURCE SIGNALS</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
+  </header>
 
-    <!-- 主要内容区域 -->
-    <div class="main-content">
-      <!-- 侧边栏 -->
-      <div class="sidebar">
-        <h3>📅 历史报告</h3>
-        <ul>
-          <li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow hero-eyebrow">DAILY DEVELOPER INTELLIGENCE</span>
+        <h1>把 GitHub 热度<br><span>变成可用的判断。</span></h1>
+        <p>每天用三分钟，看懂真正值得关注的开源项目。</p>
+        <div class="hero-date"><span>最新一期</span><strong>2026年10月21日星期三</strong></div>
+      </div>
+      <div class="hero-stats" aria-label="今日概览">
+        <div><strong>10</strong><span>今日项目</span></div>
+        <div><strong>4</strong><span>技术语言</span></div>
+        <div><strong>Python</strong><span>主导语言</span></div>
+      </div>
+    </section>
 
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="toolbar" aria-label="项目筛选">
+          <label class="search-box" for="projectSearch"><span aria-hidden="true">⌕</span><input id="projectSearch" type="search" placeholder="搜索项目、语言或关键词" autocomplete="off"></label>
+          <select id="languageFilter" aria-label="按编程语言筛选"><option value="all">全部语言</option></select>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+        <div class="content" id="projectFeed"><h1>今日 GitHub 狠活：AI 智能体把「打工人」和「Token」一起卷了</h1>
+<p>各位老铁，今天的 Trending 榜单一打开，我以为自己误入了某个 AI 招聘会现场——满屏的 agent、skill、harness，仿佛全世界的程序员都在教 AI 怎么替自己上班。更离谱的是，有个项目号称能让你的 AI「像全屋最懒的资深开发一样思考」，结果拿了 17 万星。行吧，懒人改变世界，这话我信了。下面挨个盘。</p>
+<hr>
+
+<article class="project-card" data-project-name="ai-job-search" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer">ai-job-search</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ai-job-search">↗</a>
+  </div>
+  <p class="project-summary">一个跑在你自己机器上的 AI 求职流水线，从筛岗位到写求职信一条龙。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 60,870</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（求职季刚需，但前提是你得先会折腾 Claude Code）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ai-job-search">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ai-job-search" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>找工作这事儿，痛点从来不是「没岗位」，而是「投简历投到怀疑人生」。这个项目基于 Claude Code 搭了一套求职框架，能帮你评估招聘信息、定制 CV、生成求职信、还能陪你模拟面试。最骚的是它主打「Fork it and own it」——数据全在你本地，简历不会被哪家招聘平台拿去喂模型。适合那种既想用 AI 提效、又不想把自己的职业履历裸奔在云端的人。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="security-audit-skill" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">security-audit-skill</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 security-audit-skill">↗</a>
+  </div>
+  <p class="project-summary">Cloudflare 出品的编码智能体安全审计技能包，多阶段扫描、结论可机器验证。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 34,409</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（安全无小事，何况还是大厂背书）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-security-audit-skill">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-security-audit-skill" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>安全审计这活儿，最怕两件事：一是漏，二是瞎报。这个项目的卖点是「independently verified, machine-readable findings」——审计结果不是让 AI 随口说一句「这里可能有风险」，而是能独立复核、机器可读的结论。以 skill 的形式挂到编码 agent 上，等于给你的 AI 助手配了个安全顾问。Cloudflare 亲自下场做这个，说明 agent 写代码的时代，安全审计也得跟着 agent 化。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="orca" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">orca</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 orca">↗</a>
+  </div>
+  <p class="project-summary">一个管理「智能体舰队」的工作台，桌面、移动、远程运行时通吃。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 99,893</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（多 agent 玩家的刚需基建）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-orca">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-orca" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>当你的 AI 助手从「一个」变成「一群」，管理就成了新痛点。Orca 让你用自己的订阅跑任意编码 agent（比如 Claude Code、Grok Bot），还支持桌面端、移动端和远程运行时。说白了就是给「多智能体协同办公」配了个指挥中心。星数快破十万，说明大家是真的在同时养好几个 agent 干活了——人类终于活成了自己老板的样子。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="ponytail" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer">ponytail</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ponytail">↗</a>
+  </div>
+  <p class="project-summary">让你的 AI 智能体像「全屋最懒的资深开发」一样思考——能不写的代码就不写。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 169,900</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（懒是美德，尤其是对 AI 而言）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ponytail">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ponytail" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这个项目的哲学一句话就能概括：最好的代码，是你从没写过的代码。它给 AI agent 注入一种「懒资深」人格——不是偷懒，而是拒绝过度工程、拒绝为了炫技堆代码。在 AI 疯狂生成代码、代码库以肉眼可见速度膨胀的今天，这种「反向内卷」的思路简直是清流。17 万星不是白来的，说明被 AI 写出来的屎山代码折磨的人，真的很多。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="ComfyUI" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer">ComfyUI</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ComfyUI">↗</a>
+  </div>
+  <p class="project-summary">最强大、最模块化的扩散模型图形界面，节点式操作，本地推理快得飞起。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 140,860</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（AI 绘画本地部署的标杆，没有之一）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-comfyui">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-comfyui" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>老牌狠活了，但每次上榜都值得提一嘴。ComfyUI 用节点/图的方式编排扩散模型工作流，GUI、API、后端全都有，号称「世界最快的本地推理引擎」。痛点在哪？在于那些想要精细控制生成流程、又不想被云端服务按次收费的创作者。节点式界面乍看像电路图，上手后你会发现它是真的自由——代价是你得先学会当个「视觉特效工程师」。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="ruflo" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">ruflo</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruflo">↗</a>
+  </div>
+  <p class="project-summary">元老级 agent 编排框架，部署多智能体蜂群、协调自主工作流。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 77,900</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（功能很全，但学习曲线也不客气）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ruflo">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ruflo" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这项目的简介里塞了一堆 buzzword——自适应记忆、自学习智能、联邦、向量 RAG、原生集成 Claude Code / Codex / Hermes……读起来像 AI 创业公司的融资 PPT。但剥开包装看本质：它想解决的是「多个 agent 怎么协同干活」这个真问题。多玩家蜂群、自主工作流协调，听着玄乎，落地场景其实很实在——比如让一群 agent 分头调研、汇总、交叉验证。适合想搭复杂 agent 系统又不想从零造轮子的人。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="graphify" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer">graphify</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 graphify">↗</a>
+  </div>
+  <p class="project-summary">把任意代码库连同文档、SQL schema、配置、PDF 一起，变成可查询的知识图谱。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 130,370</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（RAG 玩腻了？试试图谱，真香）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-graphify">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-graphify" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>给 AI 喂代码库，传统做法是切块 + 向量检索，结果经常「检索到一段看似相关实则没用的代码」。Graphify 换了个思路：本地确定性地做 AST 解析，把代码、文档、数据库结构、配置文件全部织成一张知识图谱，每条边都有解释，而且——注意——不用向量库。作为 Claude Code、Cursor、Codex、Gemini CLI 的 skill 使用，等于给 AI 装了个「看得懂项目结构」的大脑。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="opencode" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">opencode</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 opencode">↗</a>
+  </div>
+  <p class="project-summary">开源的编码智能体——简介就这七个字，但星数说明了一切。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 219,033</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（今日榜首，开源编码 agent 的门面担当）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-opencode">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-opencode" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>有时候最狠的项目简介最短。opencode 就一句话：「The open source coding agent.」没有花哨的营销词，没有一堆 emoji，21.9 万星摆在那儿。它解决的核心痛点很朴素：市面上的编码 agent 要么闭源、要么绑死某家服务，而 opencode 给你一个开源的、可自托管的替代品。在 AI 编码工具越来越像「订阅制黑箱」的当下，开源本身就是最大的卖点。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="agency-agents" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer">agency-agents</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 agency-agents">↗</a>
+  </div>
+  <p class="project-summary">一整套「AI 代理机构」任你差遣，从前端巫师到 Reddit 社区运营忍者应有尽有。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 162,431</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（概念有趣，实际效果取决于你怎么编排）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-agency-agents">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-agency-agents" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这项目的脑洞很对味——把 AI agent 包装成一个个有性格、有流程、有交付物的「专家员工」。前端奇才、Reddit 社区运营忍者、脑洞注入师、现实校验员……每个 agent 都是专门化的角色。痛点是什么？是通用大模型「啥都会一点、啥都不精」的尴尬。用角色化、流程化的 agent 来分工，思路有点像给 AI 开了一家公司。Shell 写的，说明落地方式相当轻量。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<article class="project-card" data-project-name="headroom" data-language="Other">
+  <div class="project-card-header">
+    <div class="rank-badge">NEW</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer">headroom</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Other</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 headroom">↗</a>
+  </div>
+  <p class="project-summary">在内容送进 LLM 之前先压缩——工具输出、日志、文件、RAG 块统统瘦身。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 76,804</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（省钱就是硬道理，何况还不掉质量）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-headroom">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-headroom" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>Token 就是钱，这道理不用我多说。Headroom 干的事很直接：在工具输出、日志、文件、RAG 检索块到达大模型之前先压缩。官方数据是编码 agent 省 20% token，JSON 场景省 60%–95%，而且「答案不变」。提供库、代理、MCP server 三种形态，接入方式灵活。对于那些被长上下文账单刺痛、又不想牺牲回答质量的团队，这玩意儿属于「装上就回不去」的类型。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<hr>
+<h2>今日小结</h2>
+<p>看完这十个项目，你会发现一个清晰的</p></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">MOMENTUM</span><h2>持续热门</h2></div></div>
+          <div class="segmented-control" role="group" aria-label="排行榜周期">
+            <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
+            <button type="button" data-range="month" aria-pressed="false">30 天</button>
+            <button type="button" data-range="quarter" aria-pressed="false">季度</button>
+          </div>
+          <ol class="ranking-list" id="rankingList"><li>加载中…</li></ol>
+        </section>
+
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">ARCHIVE</span><h2>历史雷达</h2></div></div>
+          <ul class="history-list"><li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li></ul>
 
     <div class="date-filter-container">
       <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
@@ -49,230 +433,17 @@
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
     <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
-  
-        </ul>
 
-        <h3>🔥 热门项目排行榜</h3>
-        <div class="time-range-selector">
-          <label for="timeRange">选择时间范围：</label>
-          <select id="timeRange" onchange="updateRanking(this.value)">
-            <option value="week">过去一周</option>
-            <option value="month">过去一月</option>
-            <option value="quarter">过去一季度</option>
-          </select>
-        </div>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
 
-        <div id="rankingContent" class="ranking-section">
-          <h4>🔥 热门项目排行榜</h4>
-          <ul class="ranking-list" id="rankingList">
-            <li>加载中...</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 内容区域 -->
-      <div class="content">
-        <h1>今日 GitHub 狠活：AI 智能体把「打工人」和「Token」一起卷了</h1>
-<p>各位老铁，今天的 Trending 榜单一打开，我以为自己误入了某个 AI 招聘会现场——满屏的 agent、skill、harness，仿佛全世界的程序员都在教 AI 怎么替自己上班。更离谱的是，有个项目号称能让你的 AI「像全屋最懒的资深开发一样思考」，结果拿了 17 万星。行吧，懒人改变世界，这话我信了。下面挨个盘。</p>
-<hr>
-
-<div class="project-card">
-  <h3 class="project-name">ai-job-search</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一个跑在你自己机器上的 AI 求职流水线，从筛岗位到写求职信一条龙。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 找工作这事儿，痛点从来不是「没岗位」，而是「投简历投到怀疑人生」。这个项目基于 Claude Code 搭了一套求职框架，能帮你评估招聘信息、定制 CV、生成求职信、还能陪你模拟面试。最骚的是它主打「Fork it and own it」——数据全在你本地，简历不会被哪家招聘平台拿去喂模型。适合那种既想用 AI 提效、又不想把自己的职业履历裸奔在云端的人。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer">https://github.com/MadsLorentzen/ai-job-search</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>60,870</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（求职季刚需，但前提是你得先会折腾 Claude Code）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">security-audit-skill</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> Cloudflare 出品的编码智能体安全审计技能包，多阶段扫描、结论可机器验证。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 安全审计这活儿，最怕两件事：一是漏，二是瞎报。这个项目的卖点是「independently verified, machine-readable findings」——审计结果不是让 AI 随口说一句「这里可能有风险」，而是能独立复核、机器可读的结论。以 skill 的形式挂到编码 agent 上，等于给你的 AI 助手配了个安全顾问。Cloudflare 亲自下场做这个，说明 agent 写代码的时代，安全审计也得跟着 agent 化。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">https://github.com/cloudflare/security-audit-skill</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>34,409</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（安全无小事，何况还是大厂背书）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">orca</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一个管理「智能体舰队」的工作台，桌面、移动、远程运行时通吃。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 当你的 AI 助手从「一个」变成「一群」，管理就成了新痛点。Orca 让你用自己的订阅跑任意编码 agent（比如 Claude Code、Grok Bot），还支持桌面端、移动端和远程运行时。说白了就是给「多智能体协同办公」配了个指挥中心。星数快破十万，说明大家是真的在同时养好几个 agent 干活了——人类终于活成了自己老板的样子。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">https://github.com/stablyai/orca</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>99,893</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（多 agent 玩家的刚需基建）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">ponytail</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 让你的 AI 智能体像「全屋最懒的资深开发」一样思考——能不写的代码就不写。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这个项目的哲学一句话就能概括：最好的代码，是你从没写过的代码。它给 AI agent 注入一种「懒资深」人格——不是偷懒，而是拒绝过度工程、拒绝为了炫技堆代码。在 AI 疯狂生成代码、代码库以肉眼可见速度膨胀的今天，这种「反向内卷」的思路简直是清流。17 万星不是白来的，说明被 AI 写出来的屎山代码折磨的人，真的很多。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer">https://github.com/DietrichGebert/ponytail</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>169,900</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（懒是美德，尤其是对 AI 而言）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">ComfyUI</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 最强大、最模块化的扩散模型图形界面，节点式操作，本地推理快得飞起。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 老牌狠活了，但每次上榜都值得提一嘴。ComfyUI 用节点/图的方式编排扩散模型工作流，GUI、API、后端全都有，号称「世界最快的本地推理引擎」。痛点在哪？在于那些想要精细控制生成流程、又不想被云端服务按次收费的创作者。节点式界面乍看像电路图，上手后你会发现它是真的自由——代价是你得先学会当个「视觉特效工程师」。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer">https://github.com/Comfy-Org/ComfyUI</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>140,860</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（AI 绘画本地部署的标杆，没有之一）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">ruflo</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 元老级 agent 编排框架，部署多智能体蜂群、协调自主工作流。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这项目的简介里塞了一堆 buzzword——自适应记忆、自学习智能、联邦、向量 RAG、原生集成 Claude Code / Codex / Hermes……读起来像 AI 创业公司的融资 PPT。但剥开包装看本质：它想解决的是「多个 agent 怎么协同干活」这个真问题。多玩家蜂群、自主工作流协调，听着玄乎，落地场景其实很实在——比如让一群 agent 分头调研、汇总、交叉验证。适合想搭复杂 agent 系统又不想从零造轮子的人。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">https://github.com/ruvnet/ruflo</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>77,900</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（功能很全，但学习曲线也不客气）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">graphify</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 把任意代码库连同文档、SQL schema、配置、PDF 一起，变成可查询的知识图谱。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 给 AI 喂代码库，传统做法是切块 + 向量检索，结果经常「检索到一段看似相关实则没用的代码」。Graphify 换了个思路：本地确定性地做 AST 解析，把代码、文档、数据库结构、配置文件全部织成一张知识图谱，每条边都有解释，而且——注意——不用向量库。作为 Claude Code、Cursor、Codex、Gemini CLI 的 skill 使用，等于给 AI 装了个「看得懂项目结构」的大脑。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer">https://github.com/Graphify-Labs/graphify</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>130,370</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（RAG 玩腻了？试试图谱，真香）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">opencode</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 开源的编码智能体——简介就这七个字，但星数说明了一切。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 有时候最狠的项目简介最短。opencode 就一句话：「The open source coding agent.」没有花哨的营销词，没有一堆 emoji，21.9 万星摆在那儿。它解决的核心痛点很朴素：市面上的编码 agent 要么闭源、要么绑死某家服务，而 opencode 给你一个开源的、可自托管的替代品。在 AI 编码工具越来越像「订阅制黑箱」的当下，开源本身就是最大的卖点。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">https://github.com/anomalyco/opencode</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>219,033</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（今日榜首，开源编码 agent 的门面担当）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">agency-agents</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一整套「AI 代理机构」任你差遣，从前端巫师到 Reddit 社区运营忍者应有尽有。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这项目的脑洞很对味——把 AI agent 包装成一个个有性格、有流程、有交付物的「专家员工」。前端奇才、Reddit 社区运营忍者、脑洞注入师、现实校验员……每个 agent 都是专门化的角色。痛点是什么？是通用大模型「啥都会一点、啥都不精」的尴尬。用角色化、流程化的 agent 来分工，思路有点像给 AI 开了一家公司。Shell 写的，说明落地方式相当轻量。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer">https://github.com/msitarzewski/agency-agents</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>162,431</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（概念有趣，实际效果取决于你怎么编排）</span>
-  </div>
-</div>
-<hr>
-<div class="project-card">
-  <h3 class="project-name">headroom</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 在内容送进 LLM 之前先压缩——工具输出、日志、文件、RAG 块统统瘦身。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> Token 就是钱，这道理不用我多说。Headroom 干的事很直接：在工具输出、日志、文件、RAG 检索块到达大模型之前先压缩。官方数据是编码 agent 省 20% token，JSON 场景省 60%–95%，而且「答案不变」。提供库、代理、MCP server 三种形态，接入方式灵活。对于那些被长上下文账单刺痛、又不想牺牲回答质量的团队，这玩意儿属于「装上就回不去」的类型。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer">https://github.com/headroomlabs-ai/headroom</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>76,804</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（省钱就是硬道理，何况还不掉质量）</span>
-  </div>
-</div>
-<hr>
-<h2>今日小结</h2>
-<p>看完这十个项目，你会发现一个清晰的</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 前端交互脚本 -->
-  <script src="../src/templates/script.js"></script>
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+  <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>

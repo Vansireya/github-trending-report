@@ -59,22 +59,34 @@ function initializeOpenAIClient() {
  * @returns {Promise<string>} AI 生成的日报内容
  */
 async function generateDailyReport(openai, trendingData) {
-  const systemPrompt = `你是一个非常幽默、毒舌但专业的技术博主。请将这份 GitHub 热门项目列表改写成一篇中文日报。要求：
+  const systemPrompt = `你是一名严谨、简洁、有判断力的中文开源技术编辑。你的任务不是翻译榜单，而是帮助开发者在 3 分钟内判断项目是否值得关注。
 
-标题要有吸引力（例如《今日 GitHub 狠活：XXX》）。
+只输出合法 JSON，不要输出 Markdown、代码围栏或解释。必须严格遵守以下结构：
+{
+  "title": "不超过28字的日报标题",
+  "opening": "不超过90字的趋势导语",
+  "signals": ["最多3条趋势观察，每条不超过45字"],
+  "projects": [{
+    "name": "必须与输入仓库全名完全一致",
+    "summary": "一句话说明项目是什么，不超过35字",
+    "problem": "它解决什么问题，不超过110字",
+    "audience": "适合谁，不超过45字",
+    "whyTrending": "基于输入资料的走红原因判断，不超过60字",
+    "risks": "成熟度、适用边界或风险，不超过55字",
+    "score": 1到5的整数,
+    "scoreReason": "评分理由，不超过45字",
+    "confidence": "high、medium或low"
+  }],
+  "closing": "不超过80字的今日结论"
+}
 
-每个项目用 ### 二级标题，标题格式为：项目名称。
+事实约束：
+1. 只能使用输入中的仓库名称、简介、语言、Star、排名和涨幅，不得虚构作者背景、性能、功能或采用情况。
+2. 信息不足时明确写“仅凭榜单信息暂无法确认”，并降低 confidence。
+3. 语气可以轻松，但避免段子堆砌、夸张营销和投资建议。
+4. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
 
-每个项目必须包含以下内容：
-- 一句话概括：用简洁的语言说明这个应用是干什么的
-- 详细介绍：用中文解释它解决了什么痛点，不要照着翻译简介，要通俗易懂
-- 项目网址：提供对应的 GitHub 链接
-- Star 数量：直接使用原始数据中的具体数值
-- 推荐指数：根据 Stars 数量和用途给一个'推荐指数'（满分 5 星）
-
-格式：Markdown。`;
-
-  const userPrompt = `请根据以下 GitHub Trending 数据生成一份日报，确保每个项目都包含项目名称、一句话概括、详细介绍、项目网址、Star 数量（使用原始数据中的具体数值）和推荐指数：
+  const userPrompt = `请分析以下 GitHub Trending 数据并生成结构化中文日报：
 
 ${JSON.stringify(trendingData, null, 2)}`;
 
@@ -85,20 +97,25 @@ ${JSON.stringify(trendingData, null, 2)}`;
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt }
       ],
-      temperature: 0.7,
+      temperature: 0.35,
       max_tokens: 4000
     });
 
-    if (response.choices[0].finish_reason === 'length') {
+    const choice = response.choices && response.choices[0];
+    if (!choice) {
+      throw new Error('AI 未返回可用的日报结果');
+    }
+
+    if (choice.finish_reason === 'length') {
       throw new Error('AI 返回内容被截断，请提高 max_tokens 或缩短提示词');
     }
 
-    const content = response.choices[0].message.content;
+    const content = choice.message && choice.message.content;
     if (!content || !content.trim()) {
       throw new Error('AI 返回了空日报内容');
     }
 
-    return content.trim();
+    return validateAndNormalizeReport(parseAIReportContent(content), trendingData);
   } catch (error) {
     console.error('调用 OpenAI API 时发生错误:', error.message);
     if (error.status === 400 || error.status === 404) {
@@ -106,6 +123,87 @@ ${JSON.stringify(trendingData, null, 2)}`;
     }
     throw error;
   }
+}
+
+function parseAIReportContent(content) {
+  const cleaned = content.trim()
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```$/, '');
+  return JSON.parse(cleaned);
+}
+
+function validateAndNormalizeReport(report, trendingData) {
+  if (!report || typeof report !== 'object' || !Array.isArray(report.projects)) {
+    throw new Error('AI 日报 JSON 结构无效');
+  }
+
+  const aiProjects = new Map(
+    report.projects
+      .filter(project => project && typeof project.name === 'string')
+      .map(project => [project.name.toLowerCase(), project])
+  );
+
+  const projects = trendingData.map(repo => {
+    const analysis = aiProjects.get(repo.name.toLowerCase());
+    if (!analysis) {
+      throw new Error(`AI 日报缺少项目: ${repo.name}`);
+    }
+
+    const score = Math.max(1, Math.min(5, Number.parseInt(analysis.score, 10) || 3));
+    const confidence = ['high', 'medium', 'low'].includes(analysis.confidence)
+      ? analysis.confidence
+      : 'low';
+
+    return {
+      ...repo,
+      summary: String(analysis.summary || repo.description || '暂无摘要'),
+      problem: String(analysis.problem || '仅凭榜单信息暂无法确认'),
+      audience: String(analysis.audience || '关注该领域的开发者'),
+      whyTrending: String(analysis.whyTrending || '仅凭榜单信息暂无法确认'),
+      risks: String(analysis.risks || '使用前请核实项目文档和维护状态'),
+      score,
+      scoreReason: String(analysis.scoreReason || '综合榜单表现与用途评估'),
+      confidence
+    };
+  });
+
+  return {
+    title: String(report.title || '今日 GitHub Trending 技术雷达'),
+    opening: String(report.opening || '快速浏览今天值得关注的开源项目。'),
+    signals: Array.isArray(report.signals) ? report.signals.slice(0, 3).map(String) : [],
+    projects,
+    closing: String(report.closing || '以上判断基于当前公开榜单信息。')
+  };
+}
+
+function reportToMarkdown(report) {
+  const signalText = report.signals.length > 0
+    ? `\n\n## 今日信号\n\n${report.signals.map(signal => `- ${signal}`).join('\n')}`
+    : '';
+
+  const projectText = report.projects.map(project => `
+### ${project.name}
+
+**一句话概括**：${project.summary}
+
+**详细介绍**：${project.problem}
+
+**适合人群**：${project.audience}
+
+**走红原因**：${project.whyTrending}
+
+**风险提示**：${project.risks}
+
+**信息置信度**：${project.confidence}
+
+**项目网址**：${project.url}
+
+**Star 数量**：${project.stars}
+
+**推荐指数**：${'★'.repeat(project.score)}${'☆'.repeat(5 - project.score)} · ${project.scoreReason}
+`).join('\n');
+
+  return `# ${report.title}\n\n${report.opening}${signalText}\n\n${projectText}\n\n**今日总结**：${report.closing}\n`;
 }
 
 /**
@@ -124,6 +222,10 @@ function saveReport(content, fileName) {
   const filePath = path.join(reportsDir, fileName);
   fs.writeFileSync(filePath, content, 'utf8');
   console.log(`日报已保存至: ${filePath}`);
+}
+
+function saveStructuredReport(report, fileName) {
+  saveReport(JSON.stringify(report, null, 2), fileName);
 }
 
 /**
@@ -173,11 +275,14 @@ async function main() {
     const openai = initializeOpenAIClient();
     
     console.log('正在生成日报...');
-    const reportContent = await generateDailyReport(openai, trendingData);
+    const report = await generateDailyReport(openai, trendingData);
+
+    const dataDateMatch = path.basename(dataFilePath).match(/trending_(\d{4}-\d{2}-\d{2})\.json/);
+    const reportDate = dataDateMatch ? dataDateMatch[1] : today;
     
-    // 保存日报
-    const reportFileName = `daily_${today}.md`;
-    saveReport(reportContent, reportFileName);
+    // 保存结构化日报和兼容现有生成器的 Markdown
+    saveStructuredReport(report, `daily_${reportDate}.json`);
+    saveReport(reportToMarkdown(report), `daily_${reportDate}.md`);
     
     console.log('日报生成成功！');
   } catch (error) {
@@ -195,8 +300,8 @@ async function main() {
 async function generateMarkdownFromJSON(jsonFilePath) {
   const jsonData = await readDataFile(jsonFilePath);
   const openai = initializeOpenAIClient();
-  const markdown = await generateDailyReport(openai, jsonData);
-  return markdown;
+  const report = await generateDailyReport(openai, jsonData);
+  return reportToMarkdown(report);
 }
 
 /**
@@ -216,7 +321,11 @@ module.exports = {
   readDataFile, 
   initializeOpenAIClient, 
   generateDailyReport, 
+  parseAIReportContent,
+  validateAndNormalizeReport,
+  reportToMarkdown,
   saveReport,
+  saveStructuredReport,
   generateMarkdownFromJSON,
   saveMarkdown
 };

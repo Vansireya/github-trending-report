@@ -1,6 +1,8 @@
 # GitHub Trending 日报生成器
 
-自动抓取 GitHub Trending 热门项目，生成 AI 总结的中文日报。仓库仅保留最近 30 个自然日的数据和报告，避免历史文件无限增长。
+自动抓取 GitHub Trending 热门项目，生成便于快速决策的中文技术雷达。仓库仅保留最近 30 个自然日的数据和报告，避免历史文件无限增长。
+
+页面支持深浅主题、项目搜索、语言筛选、解读展开与多周期热度排行。AI 首先生成结构化 JSON，程序校验后再输出 Markdown/HTML；仓库名、链接、Star 等事实字段始终以抓取数据为准。
 
 ## 快速开始
 
@@ -38,6 +40,7 @@ github_report/
 │   └── html_generator.js  # 转 HTML
 ├── data/                  # 原始数据 (trending_YYYY-MM-DD.json)
 ├── reports/               # 生成的报告
+│   ├── daily_YYYY-MM-DD.json
 │   ├── daily_YYYY-MM-DD.md
 │   └── daily_YYYY-MM-DD.html
 ├── package.json

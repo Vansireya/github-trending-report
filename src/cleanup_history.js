@@ -15,7 +15,7 @@ const fileGroups = [
   },
   {
     directory: config.directories.reports,
-    pattern: /^daily_(\d{4}-\d{2}-\d{2})\.(?:md|html)$/
+    pattern: /^daily_(\d{4}-\d{2}-\d{2})\.(?:json|md|html)$/
   }
 ];
 

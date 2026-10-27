@@ -80,8 +80,8 @@ const config = {
   // 前端资源路径（相对于生成的 HTML 文件位置）
   frontend: {
     rankingDataPath: '../data/ranking_data.js',
-    stylesheetPath: '../src/templates/style.css',
-    scriptPath: '../src/templates/script.js',
+    stylesheetPath: '../src/templates/style-v2.css',
+    scriptPath: '../src/templates/script-v2.js',
     defaultHomeDate: 'daily_2026-02-22.html'
   },
   openai: {

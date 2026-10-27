@@ -3,65 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>{{TITLE}}</title>
-
-  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
   <script src="{{RANKING_DATA_PATH}}"></script>
-
-  <!-- 页面样式 -->
   <link rel="stylesheet" href="{{STYLESHEET_PATH}}">
 </head>
 <body data-report-base-path="{{REPORT_BASE_PATH}}">
-  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
-  <div class="global-tooltip" id="globalTooltip">
-    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
-    <div id="tooltipContent"></div>
-  </div>
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
 
-  <!-- 页面主容器 -->
-  <div class="container">
-    <!-- 页面头部 -->
-    <div class="header">
-      <h1>🌟 GitHub Trending 简报</h1>
-      <p>每日精选热门开源项目，发现最新技术趋势</p>
-      <div class="date">📅 {{DATE_CN}}</div>
+  <header class="site-header">
+    <a class="brand" href="{{REPORT_BASE_PATH}}../" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>OPEN SOURCE SIGNALS</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
+  </header>
 
-    <!-- 主要内容区域 -->
-    <div class="main-content">
-      <!-- 侧边栏 -->
-      <div class="sidebar">
-        <h3>{{SIDEBAR_HISTORY_TITLE}}</h3>
-        <ul>
-          {{HISTORY_DATES_HTML}}
-        </ul>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow hero-eyebrow">DAILY DEVELOPER INTELLIGENCE</span>
+        <h1>把 GitHub 热度<br><span>变成可用的判断。</span></h1>
+        <p>每天用三分钟，看懂真正值得关注的开源项目。</p>
+        <div class="hero-date"><span>最新一期</span><strong>{{DATE_CN}}</strong></div>
+      </div>
+      <div class="hero-stats" aria-label="今日概览">
+        <div><strong>{{PROJECT_COUNT}}</strong><span>今日项目</span></div>
+        <div><strong>{{LANGUAGE_COUNT}}</strong><span>技术语言</span></div>
+        <div><strong>{{TOP_LANGUAGE}}</strong><span>主导语言</span></div>
+      </div>
+    </section>
 
-        <h3>{{SIDEBAR_RANKING_TITLE}}</h3>
-        <div class="time-range-selector">
-          <label for="timeRange">{{TIME_RANGE_LABEL}}</label>
-          <select id="timeRange" onchange="updateRanking(this.value)">
-            <option value="week">过去一周</option>
-            <option value="month">过去一月</option>
-            <option value="quarter">过去一季度</option>
-          </select>
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="toolbar" aria-label="项目筛选">
+          <label class="search-box" for="projectSearch"><span aria-hidden="true">⌕</span><input id="projectSearch" type="search" placeholder="搜索项目、语言或关键词" autocomplete="off"></label>
+          <select id="languageFilter" aria-label="按编程语言筛选"><option value="all">全部语言</option></select>
+          <span class="result-count" id="resultCount"></span>
         </div>
-
-        <div id="rankingContent" class="ranking-section">
-          <h4>{{RANKING_SECTION_TITLE}}</h4>
-          <ul class="ranking-list" id="rankingList">
-            <li>加载中...</li>
-          </ul>
-        </div>
+        <div class="content" id="projectFeed">{{CONTENT}}</div>
       </div>
 
-      <!-- 内容区域 -->
-      <div class="content">
-        {{CONTENT}}
-      </div>
-    </div>
-  </div>
+      <aside class="rail">
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">MOMENTUM</span><h2>持续热门</h2></div></div>
+          <div class="segmented-control" role="group" aria-label="排行榜周期">
+            <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
+            <button type="button" data-range="month" aria-pressed="false">30 天</button>
+            <button type="button" data-range="quarter" aria-pressed="false">季度</button>
+          </div>
+          <ol class="ranking-list" id="rankingList"><li>加载中…</li></ol>
+        </section>
 
-  <!-- 前端交互脚本 -->
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">ARCHIVE</span><h2>历史雷达</h2></div></div>
+          <ul class="history-list">{{HISTORY_DATES_HTML}}</ul>
+          {{DATE_SELECTOR_HTML}}
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
   <script src="{{SCRIPT_PATH}}"></script>
 </body>
 </html>

@@ -70,6 +70,16 @@ async function fetchTrending() {
       if (starLink.length > 0) {
         stars = starLink.text().trim().replace(/\s+/g, '');
       }
+
+      let forks = '0';
+      const forkLink = $(element).find('a[href*="/forks"]');
+      if (forkLink.length > 0) {
+        forks = forkLink.text().trim().replace(/\s+/g, '');
+      }
+
+      const periodText = $(element).find('span.d-inline-block.float-sm-right').text().trim();
+      const periodMatch = periodText.match(/([\d,]+)\s+stars?\s+(today|this week|this month)/i);
+      const periodStars = periodMatch ? periodMatch[1] : '0';
       
       // 构建项目对象
       const repo = {
@@ -78,6 +88,8 @@ async function fetchTrending() {
         url: url,
         description: description,
         stars: stars,
+        forks: forks,
+        periodStars: periodStars,
         language: language
       };
       

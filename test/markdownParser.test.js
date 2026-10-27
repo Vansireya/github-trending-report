@@ -25,7 +25,7 @@ test('converts the current paragraph report format into a project card', () => {
   assert.match(html, /class="project-card"/);
   assert.match(html, /项目摘要/);
   assert.match(html, /rel="noopener noreferrer"/);
-  assert.match(html, /今日总结/);
+  assert.match(html, /总结仍应保留/);
 });
 
 test('converts the legacy list report format into a project card', () => {
@@ -51,6 +51,31 @@ test('rejects unsafe project links', () => {
 
   assert.match(html, /href="#"/);
   assert.doesNotMatch(html, /javascript:/);
+});
+
+test('enriches cards with scraped facts without inventing unavailable growth', () => {
+  const html = markdownParser.convertMarkdownToHTML(`
+### owner/repo
+
+**一句话概括**：项目摘要
+
+**项目网址**：https://github.com/owner/repo
+
+**Star 数量**：123
+
+**推荐指数**：★★★★☆
+`, [{ name: 'owner/repo', rank: 2, language: 'TypeScript', forks: '42' }]);
+
+  assert.match(html, /#2/);
+  assert.match(html, /TypeScript/);
+  assert.match(html, />42</);
+  assert.doesNotMatch(html, /\+—/);
+});
+
+test('wraps the daily takeaway as a full-width summary panel', () => {
+  const html = markdownParser.convertMarkdownToHTML('**今日总结**：保持判断。');
+  assert.match(html, /class="summary-section"/);
+  assert.match(html, /保持判断/);
 });
 
 test('escapes raw HTML and rejects unsafe Markdown links', () => {

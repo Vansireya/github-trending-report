@@ -48,7 +48,7 @@ function readTemplateFile(fileName) {
  * @param {boolean} isIndex - 是否生成根目录首页
  * @returns {string} 完整的 HTML 页面内容
  */
-function generateHTMLTemplate(htmlContent, dateStr, isIndex = false) {
+function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositories = []) {
   // ===== 1. 读取前端模板文件 =====
   const baseTemplate = readTemplateFile('base.html');
   if (!baseTemplate) {
@@ -96,6 +96,9 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false) {
 
   // 替换日期显示
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
+  resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
+  resultHTML = resultHTML.replace('{{TOP_LANGUAGE}}', getTopLanguage(repositories));
 
   // 替换排行榜数据路径（移到 <head> 中解决加载时机问题）
   const getFrontendPath = filePath => isIndex ? filePath.replace(/^\.\.\//, '') : filePath;
@@ -104,7 +107,7 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false) {
   // 替换共享的 CSS 和 JavaScript 路径，避免每份历史 HTML 重复内嵌资源
   resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', getFrontendPath(config.frontend.stylesheetPath));
   resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', getFrontendPath(config.frontend.scriptPath));
-  resultHTML = resultHTML.replace('{{REPORT_BASE_PATH}}', isIndex ? 'reports/' : '');
+  resultHTML = resultHTML.replaceAll('{{REPORT_BASE_PATH}}', isIndex ? 'reports/' : '');
 
   // 替换侧边栏标题
   resultHTML = resultHTML.replace('{{SIDEBAR_HISTORY_TITLE}}', config.sidebar.historyTitle);
@@ -116,15 +119,27 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false) {
   // 替换排行榜区域标题
   resultHTML = resultHTML.replace('{{RANKING_SECTION_TITLE}}', config.sidebar.rankingTitle);
 
-  // 替换历史日期列表（包含日期选择器）
-  // 这里需要将历史记录列表和日期选择器组合
-  const sidebarHistoryHTML = historyDatesHTML + '\n\n' + dateSelectorHTML;
-  resultHTML = resultHTML.replace('{{HISTORY_DATES_HTML}}', sidebarHistoryHTML);
+  resultHTML = resultHTML.replace('{{HISTORY_DATES_HTML}}', historyDatesHTML);
+  resultHTML = resultHTML.replace('{{DATE_SELECTOR_HTML}}', dateSelectorHTML);
 
   // 替换主内容区域
   resultHTML = resultHTML.replace('{{CONTENT}}', htmlContent);
 
-  return resultHTML;
+  return resultHTML.replace(/[ \t]+$/gm, '');
+}
+
+function getTopLanguage(repositories) {
+  const counts = new Map();
+  for (const repository of repositories) {
+    const language = repository.language || 'Other';
+    counts.set(language, (counts.get(language) || 0) + 1);
+  }
+  return Array.from(counts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
+}
+
+function readRepositoryData(dateStr) {
+  const dataPath = path.join(config.directories.data, `trending_${dateStr}.json`);
+  return dataProcessor.safeReadJSON(dataPath, []);
 }
 
 /**
@@ -265,18 +280,19 @@ async function main() {
     console.log(`读取 Markdown 文件: ${markdownFilePath}`);
     const markdownContent = fs.readFileSync(markdownFilePath, 'utf8');
 
-    // ===== 4. 解析 Markdown 为 HTML =====
-    console.log('正在解析 Markdown 为 HTML...');
-    const htmlContent = markdownParser.convertMarkdownToHTML(markdownContent);
-
-    // ===== 5. 提取日期用于文件名 =====
+    // ===== 4. 提取日期并加载当日事实数据 =====
     const fileName = path.basename(markdownFilePath);
     const dateMatch = fileName.match(/daily_(\d{4}-\d{2}-\d{2})\.md/);
     const reportDate = dateMatch ? dateMatch[1] : today;
+    const repositories = readRepositoryData(reportDate);
+
+    // ===== 5. 解析 Markdown 为 HTML =====
+    console.log('正在解析 Markdown 为 HTML...');
+    const htmlContent = markdownParser.convertMarkdownToHTML(markdownContent, repositories);
 
     // ===== 6. 生成完整的 HTML 页面 =====
     console.log('正在生成完整 HTML 页面...');
-    const fullHTML = generateHTMLTemplate(htmlContent, reportDate);
+    const fullHTML = generateHTMLTemplate(htmlContent, reportDate, false, repositories);
 
     // ===== 7. 保存 HTML 文件 =====
     const htmlFileName = `daily_${reportDate}.html`;
@@ -284,7 +300,7 @@ async function main() {
     saveHTMLFile(fullHTML, htmlOutputPath);
 
     // 同时生成根目录首页，避免工作流再次复制并修复相对路径
-    const indexHTML = generateHTMLTemplate(htmlContent, reportDate, true);
+    const indexHTML = generateHTMLTemplate(htmlContent, reportDate, true, repositories);
     const indexOutputPath = path.join(config.directories.root, 'index.html');
     saveHTMLFile(indexHTML, indexOutputPath);
 
@@ -312,6 +328,8 @@ if (require.main === module) {
 // 导出模块供外部调用
 module.exports = {
   generateHTMLTemplate,
+  getTopLanguage,
+  readRepositoryData,
   saveHTMLFile,
   main
 };

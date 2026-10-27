@@ -12,9 +12,13 @@ const { marked, Renderer } = require('marked');
  * 2. 提取项目信息并转换为美观的卡片样式
  * 3. 处理"狠活播报完毕"等特殊段落
  * @param {string} markdown - Markdown 格式的原始内容
+ * @param {Array} repositories - 当日抓取的仓库事实数据
  * @returns {string} 转换后的 HTML 内容
  */
-function convertMarkdownToHTML(markdown) {
+function convertMarkdownToHTML(markdown, repositories = []) {
+  const repositoryMap = new Map(
+    repositories.map(repository => [String(repository.name || '').toLowerCase(), repository])
+  );
   const renderer = new Renderer();
   renderer.html = function(token) {
     return escapeHTML(token.text);
@@ -35,6 +39,10 @@ function convertMarkdownToHTML(markdown) {
   const projectFieldNames = new Set([
     '一句话概括',
     '详细介绍',
+    '适合人群',
+    '走红原因',
+    '风险提示',
+    '信息置信度',
     '项目网址',
     'Star 数量',
     '推荐指数'
@@ -56,6 +64,10 @@ function convertMarkdownToHTML(markdown) {
       name: projectName,
       summary: '',
       details: '',
+      audience: '',
+      whyTrending: '',
+      risks: '',
+      confidence: '',
       url: '',
       stars: '',
       rating: ''
@@ -73,6 +85,14 @@ function convertMarkdownToHTML(markdown) {
       } else if (key === '详细介绍') {
         // 处理代码标签
         projectData.details = value.replace(/<code>/g, '`').replace(/<\/code>/g, '`');
+      } else if (key === '适合人群') {
+        projectData.audience = value.replace(/<[^>]+>/g, '');
+      } else if (key === '走红原因') {
+        projectData.whyTrending = value.replace(/<[^>]+>/g, '');
+      } else if (key === '风险提示') {
+        projectData.risks = value.replace(/<[^>]+>/g, '');
+      } else if (key === '信息置信度') {
+        projectData.confidence = value.replace(/<[^>]+>/g, '');
       } else if (key === '项目网址') {
         // 尝试提取 href 属性
         const linkMatch = value.match(/href="([^"]+)"/);
@@ -109,7 +129,8 @@ function convertMarkdownToHTML(markdown) {
 
   // 将每个项目转换为卡片 HTML
   for (const p of projects) {
-    const cardHTML = generateProjectCard(p.data) + (p.remainingContent ? `\n${p.remainingContent}` : '');
+    const repository = repositoryMap.get(p.data.name.toLowerCase()) || {};
+    const cardHTML = generateProjectCard({ ...p.data, repository }) + (p.remainingContent ? `\n${p.remainingContent}` : '');
     result = result.replace(p.original, cardHTML);
   }
 
@@ -118,6 +139,11 @@ function convertMarkdownToHTML(markdown) {
   result = result.replace(
     /<hr>\s*<p>([^<]+狠活播报完毕[\s\S]*?)<\/p>/g,
     '<div class="summary-section"><p>$1</p></div>'
+  );
+
+  result = result.replace(
+    /<p><strong>今日总结<\/strong>[：:]\s*([\s\S]*?)<\/p>/g,
+    '<div class="summary-section"><span class="eyebrow">DAILY TAKEAWAY</span><p>$1</p></div>'
   );
 
   return result;
@@ -137,26 +163,53 @@ function generateProjectCard(projectData) {
   const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
   const stars = escapeHTML(projectData.stars || '0');
   const rating = escapeHTML(projectData.rating || '暂无');
+  const audience = escapeHTML(projectData.audience || '关注该领域的开发者');
+  const whyTrending = escapeHTML(projectData.whyTrending || '榜单信息有限，建议结合仓库动态判断');
+  const risks = escapeHTML(projectData.risks || '使用前请查看文档、Issue 与维护状态');
+  const repository = projectData.repository || {};
+  const rank = Number(repository.rank) || 0;
+  const language = escapeHTML(repository.language || 'Other');
+  const forks = escapeHTML(repository.forks || '—');
+  const periodStars = escapeHTML(repository.periodStars || '—');
+  const periodGrowth = periodStars === '—' ? '—' : `+${periodStars}`;
+  const cardId = `project-${String(projectData.name || 'unknown').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
+  const topClass = rank > 0 && rank <= 3 ? ' project-card--top' : '';
 
   return `
-<div class="project-card">
-  <h3 class="project-name">${name}</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> ${summary}
+<article class="project-card${topClass}" data-project-name="${name}" data-language="${language}">
+  <div class="project-card-header">
+    <div class="rank-badge">${rank ? `#${rank}` : 'NEW'}</div>
+    <div class="project-identity">
+      <a class="project-name" href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>${language}</span>
+        ${rank <= 3 && rank > 0 ? '<span class="signal-tag">今日焦点</span>' : ''}
+      </div>
+    </div>
+    <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
   </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> ${details}
+  <p class="project-summary">${summary}</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ ${stars}</strong></div>
+    <div><span>本期增长</span><strong>${periodGrowth}</strong></div>
+    <div><span>Fork</span><strong>${forks}</strong></div>
+    <div><span>编辑评分</span><strong>${rating}</strong></div>
   </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="${cardId}">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="${cardId}" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>${details}</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>${audience}</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>${whyTrending}</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>${risks}</p></div>
+    </div>
   </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>${stars}</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>${rating}</span>
-  </div>
-</div>`;
+</article>`;
 }
 
 /**

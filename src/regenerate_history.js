@@ -42,7 +42,9 @@ function generateSingleHTML(markdownFilePath, dateStr) {
 
   // 读取并解析 Markdown
   const markdownContent = fs.readFileSync(markdownFilePath, 'utf8');
-  const htmlContent = markdownParser.convertMarkdownToHTML(markdownContent);
+  const repositoryDataPath = path.join(config.directories.data, `trending_${dateStr}.json`);
+  const repositories = dataProcessor.safeReadJSON(repositoryDataPath, []);
+  const htmlContent = markdownParser.convertMarkdownToHTML(markdownContent, repositories);
 
   // 加载项目摘要
   dataProcessor.loadProjectSummaries(markdownContent);
@@ -66,18 +68,25 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   let resultHTML = baseTemplate;
   resultHTML = resultHTML.replace('{{TITLE}}', `${config.page.titlePrefix} - ${dateCN}`);
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
+  resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
+  const languageCounts = new Map();
+  repositories.forEach(item => languageCounts.set(item.language || 'Other', (languageCounts.get(item.language || 'Other') || 0) + 1));
+  const topLanguage = Array.from(languageCounts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
+  resultHTML = resultHTML.replace('{{TOP_LANGUAGE}}', topLanguage);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
   resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', config.frontend.stylesheetPath);
   resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', config.frontend.scriptPath);
-  resultHTML = resultHTML.replace('{{REPORT_BASE_PATH}}', '');
+  resultHTML = resultHTML.replaceAll('{{REPORT_BASE_PATH}}', '');
   resultHTML = resultHTML.replace('{{SIDEBAR_HISTORY_TITLE}}', config.sidebar.historyTitle);
   resultHTML = resultHTML.replace('{{SIDEBAR_RANKING_TITLE}}', config.sidebar.rankingTitle);
   resultHTML = resultHTML.replace('{{TIME_RANGE_LABEL}}', config.sidebar.timeRangeLabel);
   resultHTML = resultHTML.replace('{{RANKING_SECTION_TITLE}}', config.sidebar.rankingTitle);
-  resultHTML = resultHTML.replace('{{HISTORY_DATES_HTML}}', historyDatesHTML + '\n\n' + dateSelectorHTML);
+  resultHTML = resultHTML.replace('{{HISTORY_DATES_HTML}}', historyDatesHTML);
+  resultHTML = resultHTML.replace('{{DATE_SELECTOR_HTML}}', dateSelectorHTML);
   resultHTML = resultHTML.replace('{{CONTENT}}', htmlContent);
 
-  return resultHTML;
+  return resultHTML.replace(/[ \t]+$/gm, '');
 }
 
 /**

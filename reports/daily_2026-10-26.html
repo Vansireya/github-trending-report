@@ -3,38 +3,409 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月26日星期一</title>
-
-  <!-- 排行榜数据必须最先加载，解决本地双击运行时变量未定义的问题 -->
   <script src="../data/ranking_data.js"></script>
-
-  <!-- 页面样式 -->
-  <link rel="stylesheet" href="../src/templates/style.css">
+  <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
 <body data-report-base-path="">
-  <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
-  <div class="global-tooltip" id="globalTooltip">
-    <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
-    <div id="tooltipContent"></div>
-  </div>
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
 
-  <!-- 页面主容器 -->
-  <div class="container">
-    <!-- 页面头部 -->
-    <div class="header">
-      <h1>🌟 GitHub Trending 简报</h1>
-      <p>每日精选热门开源项目，发现最新技术趋势</p>
-      <div class="date">📅 2026年10月26日星期一</div>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>OPEN SOURCE SIGNALS</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
+  </header>
 
-    <!-- 主要内容区域 -->
-    <div class="main-content">
-      <!-- 侧边栏 -->
-      <div class="sidebar">
-        <h3>📅 历史报告</h3>
-        <ul>
-          <li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow hero-eyebrow">DAILY DEVELOPER INTELLIGENCE</span>
+        <h1>把 GitHub 热度<br><span>变成可用的判断。</span></h1>
+        <p>每天用三分钟，看懂真正值得关注的开源项目。</p>
+        <div class="hero-date"><span>最新一期</span><strong>2026年10月26日星期一</strong></div>
+      </div>
+      <div class="hero-stats" aria-label="今日概览">
+        <div><strong>10</strong><span>今日项目</span></div>
+        <div><strong>6</strong><span>技术语言</span></div>
+        <div><strong>TypeScript</strong><span>主导语言</span></div>
+      </div>
+    </section>
 
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="toolbar" aria-label="项目筛选">
+          <label class="search-box" for="projectSearch"><span aria-hidden="true">⌕</span><input id="projectSearch" type="search" placeholder="搜索项目、语言或关键词" autocomplete="off"></label>
+          <select id="languageFilter" aria-label="按编程语言筛选"><option value="all">全部语言</option></select>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+        <div class="content" id="projectFeed"><h1>今日 GitHub 狠活：AI 卷王集体开会，鸭子机器人来砸场子</h1>
+<p>各位打工人早上好，欢迎收看今天的 GitHub 整活现场。今天的榜单堪称「AI 全家桶」——从能替你干活的 Agent，到嫌 AI 设计太丑的「反 AI 味」技能包，再到让 AI 替你炒股（亏钱）的多智能体框架。当然，也有画风清奇的：一只两条腿的小鸭子机器人，以及一套紫微斗数排盘引擎。下面开始逐个盘。</p>
+
+<article class="project-card project-card--top" data-project-name="makecindy/cindy" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">#1</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">makecindy/cindy</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="signal-tag">今日焦点</span>
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 makecindy/cindy">↗</a>
+  </div>
+  <p class="project-summary">一个开箱即用、号称「想到就能做到」的开源 AI Agent。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 5,003</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（开箱即用是刚需，但 5k 星刚起步，生态待观察）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-makecindy-cindy">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-makecindy-cindy" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>市面上的 Agent 框架十有八九要你写一堆配置、接一堆 API、调半天 prompt，最后发现它连「帮我订个会议室」都做不到。Cindy 主打的就是「开箱即用」——不用你从零搭脚手架，装上就能让它干活。TypeScript 写的，对前端/全栈选手比较友好。当然，「开箱即用」这四个字在 AI 圈属于高危承诺，实际体验如何，还得各位自己上手验证，别光看 README 吹。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card project-card--top" data-project-name="Nutlope/hallmark" data-language="CSS">
+  <div class="project-card-header">
+    <div class="rank-badge">#2</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">Nutlope/hallmark</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>CSS</span>
+        <span class="signal-tag">今日焦点</span>
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 Nutlope/hallmark">↗</a>
+  </div>
+  <p class="project-summary">给 Claude Code、Cursor、Codex 用的「反 AI 味」设计技能包。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 34,017</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（如果你天天被 AI 生成的紫渐变界面辣眼睛，这就是解药）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nutlope-hallmark">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nutlope-hallmark" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这个项目解决的是一个越来越普遍的痛点——AI 写出来的界面，一眼就能看出是 AI 写的。那种紫蓝渐变、圆角卡片、居中大标题的「AI 设计八股」，看多了真的会吐。Hallmark 就是一套设计技能，教你的编码 Agent 别再生产这种千篇一律的视觉垃圾，让它产出的界面更像人做的。名字叫「hallmark」（品质印记），野心不小。34k 星说明被 AI 丑设计折磨的人，真的很多。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card project-card--top" data-project-name="debpalash/VoiceStudio" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">#3</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer">debpalash/VoiceStudio</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="signal-tag">今日焦点</span>
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 debpalash/VoiceStudio">↗</a>
+  </div>
+  <p class="project-summary">完全本地部署的开源 ElevenLabs 平替，语音克隆、配音、转录、有声书一把梭，支持 646 种语言。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 87,009</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（本地化语音工具的天花板候选，省下的订阅费够买块好显卡）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-debpalash-voicestudio">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-debpalash-voicestudio" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>ElevenLabs 好用是好用，但按字符收费，做长音频能把钱包烧穿；而且你的声音数据要上传到人家服务器。VoiceStudio 的思路就是：这些活我在你自己机器上全干了。语音克隆、声音设计、视频配音、听写、转录、有声书制作，646 种语言——这个数字听着有点唬人，但至少说明它野心是「全语种通吃」。87k 星，说明「本地 + 免费 + 隐私」这套组合拳，永远有人买单。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="pbakaus/impeccable" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">#4</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">pbakaus/impeccable</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pbakaus/impeccable">↗</a>
+  </div>
+  <p class="project-summary">一套「让 AI 工具更懂设计」的设计语言。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 87,834</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（设计语言 + Rust 性能，AI 审美救星二号）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pbakaus-impeccable">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-pbakaus-impeccable" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>和上面的 Hallmark 是同一个赛道的选手，但切入点不同——Hallmark 是给 Agent 的「技能」，Impeccable 更像是一套设计语言/规范，用来提升 AI harness（AI 执行框架）的设计水准。Rust 写的，性能上应该有点追求。87k 星，说明「AI 审美不行」这件事已经成了行业级共识，大家都在想办法治。至于它和 Hallmark 谁更好用，建议都试试，反正装技能包又不花钱。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="pollen-robotics/microduck" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">#5</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer">pollen-robotics/microduck</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pollen-robotics/microduck">↗</a>
+  </div>
+  <p class="project-summary">一只会走路的小型双足鸭子机器人 🦆。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 11,736</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（不实用，但可爱即正义；扣一星是因为你得会焊电路）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pollen-robotics-microduck">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-pollen-robotics-microduck" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>在一堆 AI Agent 和金融框架中间，突然冒出一只鸭子，属实是给今天的榜单加了点人味儿（鸭味儿）。这是 Pollen Robotics 做的微型双足机器人，用 Rust 写控制逻辑。它不解决什么商业痛点，也不帮你赚钱，它就是——一只会走路的鸭子。但说真的，看多了「颠覆行业」「重塑工作流」的宏大叙事，一只摇摇晃晃走路的小鸭子反而让人心情舒畅。硬件开源，动手能力强的可以自己打一只。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="TauricResearch/TradingAgents" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">#6</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">TauricResearch/TradingAgents</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 TauricResearch/TradingAgents">↗</a>
+  </div>
+  <p class="project-summary">多智能体 LLM 金融交易框架。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 114,726</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（研究价值高，但别把身家性命交给它；扣一星防你上头）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-tauricresearch-tradingagents">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-tauricresearch-tradingagents" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>让一群 LLM 智能体分工合作——有的分析财报、有的看新闻情绪、有的做技术面、有的当风控——最后投票决定买还是卖。听起来像把华尔街的投研团队塞进了几个 prompt 里。114k 星，是今天榜单的星数冠军，说明「让 AI 帮我炒股」这个需求旺盛到离谱。但友情提醒：回测漂亮不等于实盘赚钱，LLM 编造财报数据的能力也是一流的。拿它做研究、做策略验证可以，真金白银下场前请三思。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="Renhuai123/ziwei-doushu" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">#7</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/Renhuai123/ziwei-doushu" target="_blank" rel="noopener noreferrer">Renhuai123/ziwei-doushu</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/Renhuai123/ziwei-doushu" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 Renhuai123/ziwei-doushu">↗</a>
+  </div>
+  <p class="project-summary">紫微斗数开源排盘引擎，基于倪海厦《天纪》体系。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 7,723</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐（垂直领域做得扎实，玄学程序员的精神家园）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-renhuai123-ziwei-doushu">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-renhuai123-ziwei-doushu" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这是今天最「玄学」的项目。完整排盘算法、四化系统、格局知识库、古籍原文数据，全都开源了。TypeScript 写的，意味着你可以直接把它接进网页或小程序，做个在线排盘工具。对命理爱好者来说，这算是把祖传手艺数字化了；对程序员来说，这是一个「传统知识 + 现代工程」的有趣样本。7.7k 星说明玄学赛道在 GitHub 上也有稳定受众——毕竟，代码写不出来的时候，谁还没算过一卦呢。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="JetBrains/thinkrail" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">#8</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer">JetBrains/thinkrail</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 JetBrains/thinkrail">↗</a>
+  </div>
+  <p class="project-summary">JetBrains 出品的轻量级「vibe coding」IDE，会围绕你的工作方式自我定制。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 1,861</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐（大厂出品值得关注，但太新，建议观望后再上车）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-jetbrains-thinkrail">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-jetbrains-thinkrail" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>大厂下场做 AI 编程工具了。Thinkrail 的定位是「轻量、真正的 IDE」，主打 vibe coding——你描述意图，它帮你写。亮点是「围绕你的工作方式自我定制」，也就是 IDE 会学着适应你，而不是你去适应它。不过 1,861 星，是今天榜单里最少的，说明刚发布不久，还在早期。JetBrains 的金字招牌在，但能不能打，得看它和 Cursor、Windsurf 这些先行者正面刚的结果。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="coollabsio/coolify" data-language="PHP">
+  <div class="project-card-header">
+    <div class="rank-badge">#9</div>
+    <div class="project-identity">
+      <a class="project-name" href="https://github.com/coollabsio/coolify" target="_blank" rel="noopener noreferrer">coollabsio/coolify</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>PHP</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="https://github.com/coollabsio/coolify" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 coollabsio/coolify">↗</a>
+  </div>
+  <p class="project-summary">开源自托管的 PaaS，Vercel / Heroku / Netlify 的平替，一键部署 360+ 服务。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 64,483</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>⭐⭐⭐⭐⭐（省钱利器，VPS 党的福音；运维能力为零的慎入）</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-coollabsio-coolify">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-coollabsio-coolify" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>这个项目解决的是「云服务账单太贵」这个永恒的痛。静态站点、数据库、全栈应用，再加上 360 多个一键部署的服务模板，全都能跑在你自己的服务器上。你只需要一台 VPS，剩下的交给它。PHP 写的（没错，PHP 还活着，而且活得挺好）。64k 星说明「自托管省大钱」这件事，对独立开发者和中小团队有致命吸引力。缺点是自托管意味着运维也得你自己扛，出事了没人给你兜底。</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article>
+<article class="project-card" data-project-name="cloudflare/security-audit-skill" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">#10</div>
+    <div class="project-identity">
+      <a class="project-name" href="#" target="_blank" rel="noopener noreferrer">cloudflare/security-audit-skill</a>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+
+      </div>
+    </div>
+    <a class="repo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cloudflare/security-audit-skill">↗</a>
+  </div>
+  <p class="project-summary">给编码 Agent 用的多阶段安全审计技能，产出可机器读取、独立验证的审计结果。</p>
+  <div class="project-metrics" aria-label="项目指标">
+    <div><span>总 Star</span><strong>★ 0</strong></div>
+    <div><span>本期增长</span><strong>—</strong></div>
+    <div><span>Fork</span><strong>—</strong></div>
+    <div><span>编辑评分</span><strong>暂无</strong></div>
+  </div>
+  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-cloudflare-security-audit-skill">
+    <span>查看编辑解读</span><span aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-cloudflare-security-audit-skill" hidden>
+    <div class="detail-lead">
+      <span class="eyebrow">它解决什么</span>
+      <p>Cloudflare 官方出的技能包，让 AI 编码 Agent 能执行多阶段的安全审计，而且</p>
+    </div>
+    <div class="detail-grid">
+      <div><span class="eyebrow">适合谁</span><p>关注该领域的开发者</p></div>
+      <div><span class="eyebrow">为什么上榜</span><p>榜单信息有限，建议结合仓库动态判断</p></div>
+      <div class="risk-note"><span class="eyebrow">使用提醒</span><p>使用前请查看文档、Issue 与维护状态</p></div>
+    </div>
+  </div>
+</article></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">MOMENTUM</span><h2>持续热门</h2></div></div>
+          <div class="segmented-control" role="group" aria-label="排行榜周期">
+            <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
+            <button type="button" data-range="month" aria-pressed="false">30 天</button>
+            <button type="button" data-range="quarter" aria-pressed="false">季度</button>
+          </div>
+          <ol class="ranking-list" id="rankingList"><li>加载中…</li></ol>
+        </section>
+
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">ARCHIVE</span><h2>历史雷达</h2></div></div>
+          <ul class="history-list"><li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li></ul>
 
     <div class="date-filter-container">
       <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
@@ -49,217 +420,17 @@
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
     <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
-  
-        </ul>
 
-        <h3>🔥 热门项目排行榜</h3>
-        <div class="time-range-selector">
-          <label for="timeRange">选择时间范围：</label>
-          <select id="timeRange" onchange="updateRanking(this.value)">
-            <option value="week">过去一周</option>
-            <option value="month">过去一月</option>
-            <option value="quarter">过去一季度</option>
-          </select>
-        </div>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
 
-        <div id="rankingContent" class="ranking-section">
-          <h4>🔥 热门项目排行榜</h4>
-          <ul class="ranking-list" id="rankingList">
-            <li>加载中...</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 内容区域 -->
-      <div class="content">
-        <h1>今日 GitHub 狠活：AI 卷王集体开会，鸭子机器人来砸场子</h1>
-<p>各位打工人早上好，欢迎收看今天的 GitHub 整活现场。今天的榜单堪称「AI 全家桶」——从能替你干活的 Agent，到嫌 AI 设计太丑的「反 AI 味」技能包，再到让 AI 替你炒股（亏钱）的多智能体框架。当然，也有画风清奇的：一只两条腿的小鸭子机器人，以及一套紫微斗数排盘引擎。下面开始逐个盘。</p>
-
-<div class="project-card">
-  <h3 class="project-name">makecindy/cindy</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一个开箱即用、号称「想到就能做到」的开源 AI Agent。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 市面上的 Agent 框架十有八九要你写一堆配置、接一堆 API、调半天 prompt，最后发现它连「帮我订个会议室」都做不到。Cindy 主打的就是「开箱即用」——不用你从零搭脚手架，装上就能让它干活。TypeScript 写的，对前端/全栈选手比较友好。当然，「开箱即用」这四个字在 AI 圈属于高危承诺，实际体验如何，还得各位自己上手验证，别光看 README 吹。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">https://github.com/makecindy/cindy</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>5,003</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（开箱即用是刚需，但 5k 星刚起步，生态待观察）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">Nutlope/hallmark</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 给 Claude Code、Cursor、Codex 用的「反 AI 味」设计技能包。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这个项目解决的是一个越来越普遍的痛点——AI 写出来的界面，一眼就能看出是 AI 写的。那种紫蓝渐变、圆角卡片、居中大标题的「AI 设计八股」，看多了真的会吐。Hallmark 就是一套设计技能，教你的编码 Agent 别再生产这种千篇一律的视觉垃圾，让它产出的界面更像人做的。名字叫「hallmark」（品质印记），野心不小。34k 星说明被 AI 丑设计折磨的人，真的很多。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">https://github.com/Nutlope/hallmark</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>34,017</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（如果你天天被 AI 生成的紫渐变界面辣眼睛，这就是解药）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">debpalash/VoiceStudio</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 完全本地部署的开源 ElevenLabs 平替，语音克隆、配音、转录、有声书一把梭，支持 646 种语言。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> ElevenLabs 好用是好用，但按字符收费，做长音频能把钱包烧穿；而且你的声音数据要上传到人家服务器。VoiceStudio 的思路就是：这些活我在你自己机器上全干了。语音克隆、声音设计、视频配音、听写、转录、有声书制作，646 种语言——这个数字听着有点唬人，但至少说明它野心是「全语种通吃」。87k 星，说明「本地 + 免费 + 隐私」这套组合拳，永远有人买单。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer">https://github.com/debpalash/VoiceStudio</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>87,009</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（本地化语音工具的天花板候选，省下的订阅费够买块好显卡）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">pbakaus/impeccable</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一套「让 AI 工具更懂设计」的设计语言。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 和上面的 Hallmark 是同一个赛道的选手，但切入点不同——Hallmark 是给 Agent 的「技能」，Impeccable 更像是一套设计语言/规范，用来提升 AI harness（AI 执行框架）的设计水准。Rust 写的，性能上应该有点追求。87k 星，说明「AI 审美不行」这件事已经成了行业级共识，大家都在想办法治。至于它和 Hallmark 谁更好用，建议都试试，反正装技能包又不花钱。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">https://github.com/pbakaus/impeccable</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>87,834</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（设计语言 + Rust 性能，AI 审美救星二号）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">pollen-robotics/microduck</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 一只会走路的小型双足鸭子机器人 🦆。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 在一堆 AI Agent 和金融框架中间，突然冒出一只鸭子，属实是给今天的榜单加了点人味儿（鸭味儿）。这是 Pollen Robotics 做的微型双足机器人，用 Rust 写控制逻辑。它不解决什么商业痛点，也不帮你赚钱，它就是——一只会走路的鸭子。但说真的，看多了「颠覆行业」「重塑工作流」的宏大叙事，一只摇摇晃晃走路的小鸭子反而让人心情舒畅。硬件开源，动手能力强的可以自己打一只。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer">https://github.com/pollen-robotics/microduck</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>11,736</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（不实用，但可爱即正义；扣一星是因为你得会焊电路）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">TauricResearch/TradingAgents</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 多智能体 LLM 金融交易框架。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 让一群 LLM 智能体分工合作——有的分析财报、有的看新闻情绪、有的做技术面、有的当风控——最后投票决定买还是卖。听起来像把华尔街的投研团队塞进了几个 prompt 里。114k 星，是今天榜单的星数冠军，说明「让 AI 帮我炒股」这个需求旺盛到离谱。但友情提醒：回测漂亮不等于实盘赚钱，LLM 编造财报数据的能力也是一流的。拿它做研究、做策略验证可以，真金白银下场前请三思。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">https://github.com/TauricResearch/TradingAgents</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>114,726</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（研究价值高，但别把身家性命交给它；扣一星防你上头）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">Renhuai123/ziwei-doushu</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 紫微斗数开源排盘引擎，基于倪海厦《天纪》体系。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这是今天最「玄学」的项目。完整排盘算法、四化系统、格局知识库、古籍原文数据，全都开源了。TypeScript 写的，意味着你可以直接把它接进网页或小程序，做个在线排盘工具。对命理爱好者来说，这算是把祖传手艺数字化了；对程序员来说，这是一个「传统知识 + 现代工程」的有趣样本。7.7k 星说明玄学赛道在 GitHub 上也有稳定受众——毕竟，代码写不出来的时候，谁还没算过一卦呢。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/Renhuai123/ziwei-doushu" target="_blank" rel="noopener noreferrer">https://github.com/Renhuai123/ziwei-doushu</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>7,723</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（垂直领域做得扎实，玄学程序员的精神家园）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">JetBrains/thinkrail</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> JetBrains 出品的轻量级「vibe coding」IDE，会围绕你的工作方式自我定制。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 大厂下场做 AI 编程工具了。Thinkrail 的定位是「轻量、真正的 IDE」，主打 vibe coding——你描述意图，它帮你写。亮点是「围绕你的工作方式自我定制」，也就是 IDE 会学着适应你，而不是你去适应它。不过 1,861 星，是今天榜单里最少的，说明刚发布不久，还在早期。JetBrains 的金字招牌在，但能不能打，得看它和 Cursor、Windsurf 这些先行者正面刚的结果。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer">https://github.com/JetBrains/thinkrail</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>1,861</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐（大厂出品值得关注，但太新，建议观望后再上车）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">coollabsio/coolify</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 开源自托管的 PaaS，Vercel / Heroku / Netlify 的平替，一键部署 360+ 服务。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> 这个项目解决的是「云服务账单太贵」这个永恒的痛。静态站点、数据库、全栈应用，再加上 360 多个一键部署的服务模板，全都能跑在你自己的服务器上。你只需要一台 VPS，剩下的交给它。PHP 写的（没错，PHP 还活着，而且活得挺好）。64k 星说明「自托管省大钱」这件事，对独立开发者和中小团队有致命吸引力。缺点是自托管意味着运维也得你自己扛，出事了没人给你兜底。
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="https://github.com/coollabsio/coolify" target="_blank" rel="noopener noreferrer">https://github.com/coollabsio/coolify</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>64,483</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（省钱利器，VPS 党的福音；运维能力为零的慎入）</span>
-  </div>
-</div>
-<div class="project-card">
-  <h3 class="project-name">cloudflare/security-audit-skill</h3>
-  <div class="summary">
-    <strong>🎯 一句话概括:</strong> 给编码 Agent 用的多阶段安全审计技能，产出可机器读取、独立验证的审计结果。
-  </div>
-  <div class="details">
-    <strong>💡 详细介绍:</strong> Cloudflare 官方出的技能包，让 AI 编码 Agent 能执行多阶段的安全审计，而且
-  </div>
-  <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="#" target="_blank" rel="noopener noreferrer">#</a>
-  </div>
-  <div class="stars">
-    <strong>✨ Star 数量:</strong> <span>0</span>
-  </div>
-  <div class="rating">
-    <strong>⭐ 推荐指数:</strong> <span>暂无</span>
-  </div>
-</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 前端交互脚本 -->
-  <script src="../src/templates/script.js"></script>
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+  <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>
