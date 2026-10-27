@@ -36,9 +36,6 @@ function readTemplateFile(fileName) {
 function generateSingleHTML(markdownFilePath, dateStr) {
   // 读取模板
   const baseTemplate = readTemplateFile('base.html');
-  const styles = readTemplateFile('style.css');
-  const scripts = readTemplateFile('script.js');
-
   if (!baseTemplate) {
     throw new Error('无法读取基础模板文件');
   }
@@ -51,7 +48,7 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   dataProcessor.loadProjectSummaries(markdownContent);
 
   // 处理日期显示
-  const date = new Date(dateStr);
+  const date = new Date(`${dateStr}T12:00:00`);
   const dateCN = date.toLocaleDateString('zh-CN', config.page.dateFormat);
 
   // 获取历史日期数据
@@ -70,8 +67,9 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   resultHTML = resultHTML.replace('{{TITLE}}', `${config.page.titlePrefix} - ${dateCN}`);
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
-  resultHTML = resultHTML.replace('{{STYLES}}', styles);
-  resultHTML = resultHTML.replace('{{SCRIPTS}}', scripts);
+  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', config.frontend.stylesheetPath);
+  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', config.frontend.scriptPath);
+  resultHTML = resultHTML.replace('{{REPORT_BASE_PATH}}', '');
   resultHTML = resultHTML.replace('{{SIDEBAR_HISTORY_TITLE}}', config.sidebar.historyTitle);
   resultHTML = resultHTML.replace('{{SIDEBAR_RANKING_TITLE}}', config.sidebar.rankingTitle);
   resultHTML = resultHTML.replace('{{TIME_RANGE_LABEL}}', config.sidebar.timeRangeLabel);
@@ -143,6 +141,7 @@ async function main() {
 
   const reportsDir = config.directories.reports;
   const dataDir = config.directories.data;
+  const existingOnly = process.argv.includes('--existing-only');
 
   if (!fs.existsSync(reportsDir)) {
     console.error('错误: reports 目录不存在!');
@@ -172,7 +171,11 @@ async function main() {
       console.log(`[处理] ${dateStr} ...`);
 
       if (!fs.existsSync(mdFilePath)) {
-        if (fs.existsSync(jsonFilePath)) {
+        if (existingOnly) {
+          console.log(`  - 跳过: 缺少 Markdown 文件`);
+          skipCount++;
+          continue;
+        } else if (fs.existsSync(jsonFilePath)) {
           console.log(`  - 缺少 MD 文件，正在调用 AI 生成...`);
           const markdown = await summarize.generateMarkdownFromJSON(jsonFilePath);
           summarize.saveMarkdown(markdown, `daily_${dateStr}.md`);
@@ -198,6 +201,10 @@ async function main() {
   console.log('='.repeat(50));
   console.log(`完成! 成功: ${successCount}, 跳过: ${skipCount}, 失败: ${failCount}`);
   console.log('='.repeat(50));
+
+  if (failCount > 0) {
+    process.exitCode = 1;
+  }
 }
 
 // 运行脚本

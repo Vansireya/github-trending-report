@@ -83,6 +83,10 @@ async function fetchTrending() {
       
       repositories.push(repo);
     });
+
+    if (repositories.length === 0) {
+      throw new Error('未从 GitHub Trending 页面解析到任何项目，页面结构可能已变化');
+    }
     
     console.log(`成功提取 ${repositories.length} 个仓库信息`);
     return repositories;
@@ -137,6 +141,7 @@ async function main() {
     console.log('\n任务完成！');
   } catch (error) {
     console.error('程序执行出错:', error.message);
+    process.exitCode = 1;
   }
 }
 

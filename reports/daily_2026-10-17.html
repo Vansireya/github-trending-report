@@ -9,544 +9,9 @@
   <script src="../data/ranking_data.js"></script>
 
   <!-- 页面样式 -->
-  <style>
-    /**
- * GitHub Trending 简报页面样式
- * 包含所有页面所需的 CSS 样式
- */
-
-/* ===== 基础样式重置 ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== 页面基础样式 ===== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e8f0e8;
-  color: #4a5a4a;
-  line-height: 1.6;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-/* ===== 页面容器 ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #f8faf8;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-}
-
-/* ===== 页面头部 ===== */
-.header {
-  background: #7a9a7a;
-  color: #f8faf8;
-  padding: 30px;
-  text-align: center;
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #f8faf8;
-  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
-}
-
-.header .date {
-  font-size: 1.2em;
-  color: #e8f0e8;
-  margin-top: 10px;
-  display: inline-block;
-  padding: 5px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-
-/* ===== 主要内容区域布局 ===== */
-.main-content {
-  display: flex;
-  flex: 1;
-}
-
-/* ===== 侧边栏 ===== */
-.sidebar {
-  width: 320px;
-  background: #f0f5f0;
-  padding: 20px;
-  border-right: 1px solid #d4e0d4;
-  overflow-y: auto;
-}
-
-.sidebar h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #d4e0d4;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  color: #5a7a5a;
-  text-decoration: none;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.sidebar a:hover {
-  background: #e8f0e8;
-  color: #7a9a7a;
-  transform: translateX(5px);
-}
-
-/* ===== 日期选择器 ===== */
-.date-filter-container {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.date-select {
-  flex: 1;
-  min-width: 65px;
-  padding: 6px 28px 6px 12px;
-  border: 1px solid #cce8d6;
-  border-radius: 6px;
-  background-color: #f2fbf5;
-  color: #1a4d2e;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  transition: all 0.2s ease;
-}
-
-#yearSelect {
-  min-width: 85px;
-}
-
-.date-select:hover {
-  background-color: #e6f7ec;
-}
-
-.date-select:focus {
-  outline: none;
-  border-color: #2ea054;
-  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
-}
-
-.date-select:first-child {
-  border-radius: 6px;
-}
-
-.date-select:last-of-type {
-  border-radius: 6px;
-}
-
-.date-filter-container .view-history-btn {
-  padding: 5px 10px;
-  background: #1a4d2e;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  line-height: 1;
-}
-
-.date-filter-container .view-history-btn:hover {
-  background: #153524;
-}
-
-.date-separator {
-  padding: 0 4px;
-  color: #666;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.view-history-btn {
-  padding: 10px 16px;
-  background: #7a9a7a;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.view-history-btn:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-}
-
-/* ===== 内容区域 ===== */
-.content {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto;
-}
-
-/* ===== 时间范围选择器 ===== */
-.time-range-selector {
-  margin-bottom: 20px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #d4e0d4;
-}
-
-.time-range-selector label {
-  display: block;
-  margin-bottom: 10px;
-  color: #5a7a5a;
-  font-weight: bold;
-}
-
-.time-range-selector select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #d4e0d4;
-  border-radius: 6px;
-  background: #ffffff;
-  color: #2a3a2a;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 35px;
-}
-
-.time-range-selector select:hover {
-  border-color: #7a9a7a;
-}
-
-/* ===== 排行榜区域 ===== */
-.ranking-section {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-}
-
-.ranking-section h4 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.1em;
-}
-
-.ranking-list {
-  list-style: none;
-}
-
-.ranking-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.ranking-list li:last-child {
-  border-bottom: none;
-}
-
-.ranking-list li:hover .ranking-name {
-  color: #7a9a7a;
-}
-
-.ranking-item {
-  display: block;
-}
-
-.ranking-info {
-  display: block;
-}
-
-.ranking-name {
-  color: #222;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.ranking-name:hover {
-  color: #5a7a5a;
-  text-decoration: underline;
-}
-
-.ranking-meta {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-.ranking-stars {
-  margin-right: 12px;
-}
-
-.ranking-count {
-  color: #7a9a7a;
-}
-
-.ranking-desc {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.5;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
-.global-tooltip {
-  display: none;
-  position: absolute;
-  background: #3a5a3a;
-  color: #ffffff;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 400px;
-  width: 90%;
-  z-index: 999999;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  line-height: 1.6;
-  white-space: pre-wrap;
-  text-align: left;
-  border: 2px solid #5a8a5a;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.global-tooltip-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.global-tooltip-close:hover {
-  opacity: 1;
-}
-
-/* ===== 项目卡片 ===== */
-.project-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 25px 0;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
-  border-color: #7a9a7a;
-}
-
-.project-name {
-  font-size: 1.8em;
-  color: #5a7a5a;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #d4e0d4;
-  font-weight: bold;
-}
-
-/* ===== 项目卡片内部各区域 ===== */
-.summary {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.summary strong {
-  color: #5a7a5a;
-}
-
-.details {
-  background: #edf3ed;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #7a9a7a;
-}
-
-.details strong {
-  color: #5a6a5a;
-}
-
-.link {
-  background: #eaf2ea;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.link a {
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #7a9a7a;
-  color: #f8faf8;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-}
-
-.link a:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
-}
-
-.stars {
-  background: #f0f5f0;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #9ab89a;
-}
-
-.stars strong {
-  color: #5a7a5a;
-}
-
-.stars span {
-  color: #6a8a6a;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.rating {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.rating strong {
-  color: #5a6a5a;
-}
-
-.rating span {
-  color: #6a8a6a;
-  font-size: 1.3em;
-}
-
-/* ===== 总结区域 ===== */
-.summary-section {
-  background: #edf3ed;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 30px;
-  border: 1px solid #d4e0d4;
-}
-
-.summary-section h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-}
-
-.summary-section p {
-  line-height: 1.8;
-}
-
-/* ===== 响应式设计 ===== */
-@media (max-width: 768px) {
-  .content {
-    padding: 20px;
-  }
-
-  .header h1 {
-    font-size: 2em;
-  }
-
-  .project-name {
-    font-size: 1.5em;
-  }
-
-  .project-card {
-    padding: 20px;
-  }
-}
-
-/* ===== 动画效果 ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
-.project-card:nth-child(7) { animation-delay: 0.7s; }
-.project-card:nth-child(8) { animation-delay: 0.8s; }
-.project-card:nth-child(9) { animation-delay: 0.9s; }
-.project-card:nth-child(10) { animation-delay: 1.0s; }
-
-  </style>
+  <link rel="stylesheet" href="../src/templates/style.css">
 </head>
-<body>
+<body data-report-base-path="">
   <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
   <div class="global-tooltip" id="globalTooltip">
     <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
@@ -568,7 +33,7 @@ body {
       <div class="sidebar">
         <h3>📅 历史报告</h3>
         <ul>
-          <li><a href="daily_2026-10-16.html">2026年10月16日</a></li><li><a href="daily_2026-10-14.html">2026年10月14日</a></li><li><a href="daily_2026-10-13.html">2026年10月13日</a></li><li><a href="daily_2026-10-12.html">2026年10月12日</a></li><li><a href="daily_2026-10-11.html">2026年10月11日</a></li><li><a href="daily_2026-10-10.html">2026年10月10日</a></li><li><a href="daily_2026-10-09.html">2026年10月9日</a></li>
+          <li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li>
 
 
     <div class="date-filter-container">
@@ -583,7 +48,7 @@ body {
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28","2026-09-27","2026-09-26","2026-09-25","2026-09-24","2026-09-23","2026-09-22","2026-09-21","2026-09-20","2026-09-19","2026-09-18","2026-09-17","2026-09-16","2026-09-15","2026-09-14","2026-09-13","2026-09-12","2026-09-11","2026-09-10","2026-09-09","2026-09-08","2026-09-07","2026-09-06","2026-09-05","2026-09-04","2026-09-03","2026-09-02","2026-09-01","2026-08-31","2026-08-30","2026-08-29","2026-08-28","2026-08-27","2026-08-26","2026-08-25","2026-08-24","2026-08-23","2026-08-22","2026-08-21","2026-08-20","2026-08-19","2026-08-18","2026-08-17","2026-08-16","2026-08-15","2026-08-14","2026-08-13","2026-08-12","2026-08-11","2026-08-10","2026-08-09","2026-08-08","2026-08-07","2026-08-06","2026-08-05","2026-08-04","2026-08-03","2026-08-02","2026-08-01","2026-07-31","2026-07-30","2026-07-29","2026-07-28","2026-07-27","2026-07-24","2026-07-23","2026-07-22","2026-07-21","2026-07-20","2026-07-19","2026-07-18","2026-07-17","2026-07-16","2026-07-15","2026-07-14","2026-07-13","2026-07-12","2026-07-11","2026-07-10","2026-07-09","2026-07-08","2026-07-07","2026-07-06","2026-07-05","2026-07-04","2026-07-02","2026-07-01","2026-06-30","2026-06-29","2026-06-28","2026-06-27","2026-06-26","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-21","2026-06-20","2026-06-19","2026-06-18","2026-06-17","2026-06-16","2026-06-15","2026-06-14","2026-06-13","2026-06-12","2026-06-11","2026-06-10","2026-06-09","2026-06-08","2026-06-07","2026-06-06","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-31","2026-05-30","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-24","2026-05-23","2026-05-22","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-17","2026-05-16","2026-05-15","2026-05-14","2026-05-13","2026-05-12","2026-05-11","2026-05-10","2026-05-09","2026-05-08","2026-05-07","2026-05-06","2026-05-05","2026-05-04","2026-05-03","2026-05-02","2026-05-01","2026-04-30","2026-04-29","2026-04-28","2026-04-27","2026-04-26","2026-04-25","2026-04-24","2026-04-23","2026-04-22","2026-04-21","2026-04-20","2026-04-19","2026-04-18","2026-04-17","2026-04-16","2026-04-15","2026-04-14","2026-04-13","2026-04-12","2026-04-11","2026-04-10","2026-04-09","2026-04-08","2026-04-07","2026-04-06","2026-04-05","2026-04-04","2026-04-03","2026-04-02","2026-04-01","2026-03-31","2026-03-30","2026-03-29","2026-03-28","2026-03-27","2026-03-26","2026-03-25","2026-03-24","2026-03-23","2026-03-22","2026-03-21","2026-03-20","2026-03-19","2026-03-18","2026-03-17","2026-03-16","2026-03-15","2026-03-14","2026-03-13","2026-03-12","2026-03-11","2026-03-10","2026-03-09","2026-03-08","2026-03-07","2026-03-06","2026-03-05","2026-03-04","2026-03-03","2026-03-02","2026-03-01","2026-02-28","2026-02-27","2026-02-26","2026-02-25","2026-02-24","2026-02-23","2026-02-22","2026-02-21","2026-02-20","2026-02-19","2026-02-18","2026-02-17","2026-02-16","2026-02-11"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
   
         </ul>
 
@@ -612,305 +77,205 @@ body {
 <p>今天的榜单只有一个主题：<strong>Agent 生态</strong>。从插件目录到技能库，从上下文优化到语音克隆，各路神仙都在抢着给 AI 装手脚。话不多说，开扒。</p>
 </blockquote>
 <hr>
-<h3>anthropics/claude-plugins-official</h3>
-<p><strong>一句话概括</strong>：Anthropic 官方亲自下场的 Claude Code 插件精选目录。</p>
-<p><strong>详细介绍</strong>：官方认证，童叟无欺。市面上 Claude Code 插件已经多到让人选择困难，这个仓库就是官方帮你筛过一遍的&quot;放心店&quot;。痛点很明确——第三方插件质量参差不齐，装错一个可能比不装还糟。官方目录至少保证了基本盘，省去你踩坑的时间。当然，官方出品不代表每个都适合你，但作为起点，比在 GitHub 上瞎搜靠谱多了。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/anthropics/claude-plugins-official">https://github.com/anthropics/claude-plugins-official</a></p>
-<p><strong>Star 数量</strong>：40,654</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐</p>
+
+<div class="project-card">
+  <h3 class="project-name">anthropics/claude-plugins-official</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Anthropic 官方亲自下场的 Claude Code 插件精选目录。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 官方认证，童叟无欺。市面上 Claude Code 插件已经多到让人选择困难，这个仓库就是官方帮你筛过一遍的&amp;quot;放心店&amp;quot;。痛点很明确——第三方插件质量参差不齐，装错一个可能比不装还糟。官方目录至少保证了基本盘，省去你踩坑的时间。当然，官方出品不代表每个都适合你，但作为起点，比在 GitHub 上瞎搜靠谱多了。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer">https://github.com/anthropics/claude-plugins-official</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>40,654</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>K-Dense-AI/scientific-agent-skills</h3>
-<p><strong>一句话概括</strong>：把任何 AI Agent 改造成&quot;AI 科学家&quot;的技能库，号称 25 万科学家在用。</p>
-<p><strong>详细介绍</strong>：177 个开箱即用的验证过的技能，外加 100 多个科学数据库，覆盖生物、化学、医学、药物发现。听着很唬人，但仔细想想——&quot;25 万科学家在用&quot;这个数字，大概是把所有点过 star 的人都算进去了。不过话说回来，如果你真在做科研，这套东西确实能省不少事：不用自己从零搭 prompt，直接套用经过验证的技能模板。兼容 Cursor、Claude Code、Codex 等主流平台，覆盖面够广。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/K-Dense-AI/scientific-agent-skills">https://github.com/K-Dense-AI/scientific-agent-skills</a></p>
-<p><strong>Star 数量</strong>：51,561</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">K-Dense-AI/scientific-agent-skills</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 把任何 AI Agent 改造成&amp;quot;AI 科学家&amp;quot;的技能库，号称 25 万科学家在用。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 177 个开箱即用的验证过的技能，外加 100 多个科学数据库，覆盖生物、化学、医学、药物发现。听着很唬人，但仔细想想——&amp;quot;25 万科学家在用&amp;quot;这个数字，大概是把所有点过 star 的人都算进去了。不过话说回来，如果你真在做科研，这套东西确实能省不少事：不用自己从零搭 prompt，直接套用经过验证的技能模板。兼容 Cursor、Claude Code、Codex 等主流平台，覆盖面够广。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer">https://github.com/K-Dense-AI/scientific-agent-skills</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>51,561</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>affaan-m/ECC</h3>
-<p><strong>一句话概括</strong>：Agent 性能优化系统，给 Claude Code、Codex、Cursor 们打鸡血。</p>
-<p><strong>详细介绍</strong>：28 万星，今天榜单第二。号称集技能、本能、记忆、安全、研究优先开发于一体。翻译成人话就是：让你的 AI 编程助手更聪明、记性更好、少犯傻。痛点在于，原生 Agent 往往&quot;金鱼记忆&quot;——聊两句就忘了前面说过什么，ECC 想解决的就是这个。不过 28 万星这个数字，建议你冷静看待，毕竟 star 数和实际好用程度之间，有时候隔着一个银河系。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/affaan-m/ECC">https://github.com/affaan-m/ECC</a></p>
-<p><strong>Star 数量</strong>：281,573</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">affaan-m/ECC</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Agent 性能优化系统，给 Claude Code、Codex、Cursor 们打鸡血。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 28 万星，今天榜单第二。号称集技能、本能、记忆、安全、研究优先开发于一体。翻译成人话就是：让你的 AI 编程助手更聪明、记性更好、少犯傻。痛点在于，原生 Agent 往往&amp;quot;金鱼记忆&amp;quot;——聊两句就忘了前面说过什么，ECC 想解决的就是这个。不过 28 万星这个数字，建议你冷静看待，毕竟 star 数和实际好用程度之间，有时候隔着一个银河系。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">https://github.com/affaan-m/ECC</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>281,573</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>HKUDS/CLI-Anything</h3>
-<p><strong>一句话概括</strong>：港大数据智能实验室出品，让所有软件都能被 Agent 原生调用。</p>
-<p><strong>详细介绍</strong>：名字起得很霸气——&quot;CLI-Anything&quot;，野心是让任何软件都变成 Agent 能操作的命令行工具。思路不新鲜，但港大这个团队执行力一向在线。痛点在于：大量传统软件没有 API，Agent 想用也用不了，CLI-Anything 试图用统一的方式把它们&quot;翻译&quot;给 Agent。配套还有个 CLI-Hub 站点，生态意识不错。能不能成另说，方向是对的。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/HKUDS/CLI-Anything">https://github.com/HKUDS/CLI-Anything</a></p>
-<p><strong>Star 数量</strong>：53,546</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">HKUDS/CLI-Anything</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 港大数据智能实验室出品，让所有软件都能被 Agent 原生调用。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 名字起得很霸气——&amp;quot;CLI-Anything&amp;quot;，野心是让任何软件都变成 Agent 能操作的命令行工具。思路不新鲜，但港大这个团队执行力一向在线。痛点在于：大量传统软件没有 API，Agent 想用也用不了，CLI-Anything 试图用统一的方式把它们&amp;quot;翻译&amp;quot;给 Agent。配套还有个 CLI-Hub 站点，生态意识不错。能不能成另说，方向是对的。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener noreferrer">https://github.com/HKUDS/CLI-Anything</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>53,546</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>mksglu/context-mode</h3>
-<p><strong>一句话概括</strong>：给 AI 编程 Agent 的上下文窗口做&quot;瘦身&quot;，号称减少 98% 的工具输出。</p>
-<p><strong>详细介绍</strong>：这个痛点太真实了——Agent 跑着跑着上下文就爆了，工具输出动辄几千 token，把宝贵的窗口塞得满满当当。context-mode 的做法是沙箱化工具输出、持久化会话记忆，再通过 MCP + hooks 在 17 个平台上做路由。98% 的削减率如果是真的，那确实香。TypeScript 写的，接入成本应该不高。适合那些被上下文长度折磨到怀疑人生的开发者。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/mksglu/context-mode">https://github.com/mksglu/context-mode</a></p>
-<p><strong>Star 数量</strong>：30,260</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">mksglu/context-mode</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 给 AI 编程 Agent 的上下文窗口做&amp;quot;瘦身&amp;quot;，号称减少 98% 的工具输出。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 这个痛点太真实了——Agent 跑着跑着上下文就爆了，工具输出动辄几千 token，把宝贵的窗口塞得满满当当。context-mode 的做法是沙箱化工具输出、持久化会话记忆，再通过 MCP + hooks 在 17 个平台上做路由。98% 的削减率如果是真的，那确实香。TypeScript 写的，接入成本应该不高。适合那些被上下文长度折磨到怀疑人生的开发者。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer">https://github.com/mksglu/context-mode</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>30,260</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>ruvnet/ruflo</h3>
-<p><strong>一句话概括</strong>：元老级 Agent 框架，主打多智能体蜂群和自主工作流编排。</p>
-<p><strong>详细介绍</strong>：自称&quot;the original agent harness&quot;，口气不小。功能列表长得像菜单：多玩家蜂群部署、自主工作流协调、对话式 AI 系统、自适应记忆、自学习智能、联邦、向量 RAG 集成……还原生集成 Claude Code、Codex、Hermes 等。7.5 万星说明确实有一批死忠。但功能这么多，学习曲线大概率也不平缓，适合愿意折腾的团队，不适合想开箱即用的个人开发者。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/ruvnet/ruflo">https://github.com/ruvnet/ruflo</a></p>
-<p><strong>Star 数量</strong>：75,660</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">ruvnet/ruflo</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 元老级 Agent 框架，主打多智能体蜂群和自主工作流编排。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 自称&amp;quot;the original agent harness&amp;quot;，口气不小。功能列表长得像菜单：多玩家蜂群部署、自主工作流协调、对话式 AI 系统、自适应记忆、自学习智能、联邦、向量 RAG 集成……还原生集成 Claude Code、Codex、Hermes 等。7.5 万星说明确实有一批死忠。但功能这么多，学习曲线大概率也不平缓，适合愿意折腾的团队，不适合想开箱即用的个人开发者。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">https://github.com/ruvnet/ruflo</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>75,660</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>android/skills</h3>
-<p><strong>一句话概括</strong>：Android 官方的技能仓库——连简介都懒得写。</p>
-<p><strong>详细介绍</strong>：对，你没看错，description 是空的。8 千多星，Kotlin 写的，挂着 android 官方名头。这种&quot;高冷&quot;作风要么是还没想好怎么介绍，要么是觉得&quot;懂的都懂&quot;。从命名推测，应该是给 Android 生态的 Agent 技能集合。建议先收藏观望，等官方把 README 补上再说。毕竟连一句话简介都不给的仓库，你很难指望它文档齐全。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/android/skills">https://github.com/android/skills</a></p>
-<p><strong>Star 数量</strong>：8,102</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">android/skills</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Android 官方的技能仓库——连简介都懒得写。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 对，你没看错，description 是空的。8 千多星，Kotlin 写的，挂着 android 官方名头。这种&amp;quot;高冷&amp;quot;作风要么是还没想好怎么介绍，要么是觉得&amp;quot;懂的都懂&amp;quot;。从命名推测，应该是给 Android 生态的 Agent 技能集合。建议先收藏观望，等官方把 README 补上再说。毕竟连一句话简介都不给的仓库，你很难指望它文档齐全。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/android/skills" target="_blank" rel="noopener noreferrer">https://github.com/android/skills</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>8,102</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>obra/superpowers</h3>
-<p><strong>一句话概括</strong>：一个&quot;确实能用&quot;的 Agent 技能框架和软件开发方法论。</p>
-<p><strong>详细介绍</strong>：30 万星，今天榜单的星数冠军。简介短得可怜，但&quot;that works&quot;三个字透着自信。Shell 写的，说明它更偏向于流程编排和工程实践，而不是花哨的功能堆砌。痛点在于：市面上 Agent 框架多如牛毛，但真正能落地到日常开发流程里的少之又少。superpowers 主打&quot;方法论&quot;，听起来像是给团队用的，而不只是给个人玩具项目用的。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/obra/superpowers">https://github.com/obra/superpowers</a></p>
-<p><strong>Star 数量</strong>：300,712</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">obra/superpowers</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 一个&amp;quot;确实能用&amp;quot;的 Agent 技能框架和软件开发方法论。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 30 万星，今天榜单的星数冠军。简介短得可怜，但&amp;quot;that works&amp;quot;三个字透着自信。Shell 写的，说明它更偏向于流程编排和工程实践，而不是花哨的功能堆砌。痛点在于：市面上 Agent 框架多如牛毛，但真正能落地到日常开发流程里的少之又少。superpowers 主打&amp;quot;方法论&amp;quot;，听起来像是给团队用的，而不只是给个人玩具项目用的。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">https://github.com/obra/superpowers</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>300,712</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>cursor/plugins</h3>
-<p><strong>一句话概括</strong>：Cursor 官方的插件规范和官方插件集合。</p>
-<p><strong>详细介绍</strong>：Cursor 作为 AI 编程编辑器里的当红炸子鸡，终于开始正经搞插件生态了。这个仓库提供插件规范和官方插件，意味着第三方开发者有了标准可循。痛点很直接：之前 Cursor 的扩展生态比较散，没有统一规范，现在官方出手定标准，对生态是好事。1.2 万星不算高，但考虑到 Cursor 用户基数，增长空间还很大。适合想给 Cursor 写插件的开发者关注。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/cursor/plugins">https://github.com/cursor/plugins</a></p>
-<p><strong>Star 数量</strong>：11,991</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">cursor/plugins</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Cursor 官方的插件规范和官方插件集合。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> Cursor 作为 AI 编程编辑器里的当红炸子鸡，终于开始正经搞插件生态了。这个仓库提供插件规范和官方插件，意味着第三方开发者有了标准可循。痛点很直接：之前 Cursor 的扩展生态比较散，没有统一规范，现在官方出手定标准，对生态是好事。1.2 万星不算高，但考虑到 Cursor 用户基数，增长空间还很大。适合想给 Cursor 写插件的开发者关注。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/cursor/plugins" target="_blank" rel="noopener noreferrer">https://github.com/cursor/plugins</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>11,991</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
-<h3>debpalash/VoiceStudio</h3>
-<p><strong>一句话概括</strong>：完全本地运行的开源 ElevenLabs 平替，语音克隆、配音、转录一条龙。</p>
-<p><strong>详细介绍</strong>：今天榜单里唯一一个不卷 Agent 的清流。ElevenLabs 好用但贵，VoiceStudio 直接给你一个本地跑的开源方案：语音克隆、语音设计、视频配音、听写、转录、有声书制作，支持 646 种语言。7 万星说明需求是真的旺盛。完全本地意味着隐私有保障，也不用担心按量计费。当然，本地跑的 quality 能不能追上云端服务，得自己试了才知道，但至少给了你一个不花钱的选择。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/debpalash/VoiceStudio">https://github.com/debpalash/VoiceStudio</a></p>
-<p><strong>Star 数量</strong>：71,345</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐</p>
+<div class="project-card">
+  <h3 class="project-name">debpalash/VoiceStudio</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 完全本地运行的开源 ElevenLabs 平替，语音克隆、配音、转录一条龙。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 今天榜单里唯一一个不卷 Agent 的清流。ElevenLabs 好用但贵，VoiceStudio 直接给你一个本地跑的开源方案：语音克隆、语音设计、视频配音、听写、转录、有声书制作，支持 646 种语言。7 万星说明需求是真的旺盛。完全本地意味着隐私有保障，也不用担心按量计费。当然，本地跑的 quality 能不能追上云端服务，得自己试了才知道，但至少给了你一个不花钱的选择。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer">https://github.com/debpalash/VoiceStudio</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>71,345</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐</span>
+  </div>
+</div>
 <hr>
 <h2>今日总结</h2>
 <p>Agent 生态已经卷到令人发指的程度：官方下场定标准（Anthropic、Cursor、Android），第三方拼功能（ruflo、ECC），垂直领域做深耕（科学技能库、上下文优化）。星数动辄二三十万，但<strong>星数不等于好用</strong>——建议挑一两个真正对口你工作流的试试，别被数字冲昏头脑。</p>
 <p>至于 VoiceStudio，是今天唯一一个能让你&quot;耳朵怀孕&quot;而不是&quot;脑子爆炸&quot;的项目，且用且珍惜。</p>
-
       </div>
     </div>
   </div>
 
   <!-- 前端交互脚本 -->
-  <script>
-    /**
- * GitHub Trending 简报前端交互脚本
- * 包含所有前端交互逻辑：Tooltip、排行榜切换、日期选择等
- */
-
-// Tooltip 偏移量配置
-const TOOLTIP_OFFSET_X = 15;
-const TOOLTIP_OFFSET_Y = 15;
-
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
-  // 为项目卡片添加点击效果
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') {
-        return;
-      }
-      this.style.transform = 'scale(0.98)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 150);
-    });
-  });
-
-  // 初始化排行榜显示（默认显示近一周）
-  if (typeof updateRanking === 'function') {
-    updateRanking('week');
-  }
-});
-
-/**
- * 显示悬浮提示框 - 跟随鼠标位置
- * @param {string} content - 提示内容
- * @param {Event} event - 鼠标事件对象
- */
-function showTooltip(content, event) {
-  const tooltip = document.getElementById('globalTooltip');
-  const tooltipContent = document.getElementById('tooltipContent');
-  tooltipContent.textContent = content;
-  tooltip.style.display = 'block';
-
-  // 跟随鼠标定位
-  const x = event.pageX + TOOLTIP_OFFSET_X;
-  const y = event.pageY + TOOLTIP_OFFSET_Y;
-
-  // 获取视口尺寸，防止提示框超出边界
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  const tooltipRect = tooltip.getBoundingClientRect();
-
-  // 如果右侧空间不足，显示在左侧
-  let finalX = x;
-  if (x + tooltipRect.width > viewportWidth) {
-    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
-  }
-
-  // 如果底部空间不足，显示在上方
-  let finalY = y;
-  if (y + tooltipRect.height > viewportHeight) {
-    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
-  }
-
-  tooltip.style.left = finalX + 'px';
-  tooltip.style.top = finalY + 'px';
-  tooltip.style.transform = 'none';
-}
-
-/**
- * 隐藏悬浮提示框
- */
-function hideTooltip() {
-  const tooltip = document.getElementById('globalTooltip');
-  tooltip.style.display = 'none';
-}
-
-/**
- * 更新排行榜显示
- * @param {string} timeRange - 时间范围：'week'、'month'、'quarter'
- */
-function updateRanking(timeRange) {
-  var rankingList = document.getElementById('rankingList');
-
-  if (typeof rankingData === 'undefined') {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
-    return;
-  }
-
-  var rankings = rankingData[timeRange] || [];
-
-  if (rankings.length === 0) {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
-    return;
-  }
-
-  let html = '';
-
-  rankings.forEach(function(item, index) {
-    var description = item.description || '暂无描述';
-    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    var count = item.count || 0;
-    var stars = item.stars || '0';
-
-    var tooltipContent = '📦 ' + item.name + '\n\n' +
-                         '📝 ' + description + '\n\n' +
-                         '⭐ ' + stars + ' | 📅 ' + count + ' 次';
-
-    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
-    html += '<div class="ranking-item">';
-    html += '<div class="ranking-info">';
-    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
-    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
-    html += '<div class="ranking-desc">' + description + '</div>';
-    html += '</div>';
-    html += '</div>';
-    html += '</li>';
-  });
-
-  rankingList.innerHTML = html;
-}
-
-/**
- * 更新月份选择下拉框
- * 修复：保留已选择的月份，重新选择时正确更新
- */
-function updateMonthOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    console.error('找不到可用日期容器');
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var previouslySelectedMonth = monthSelect.value;
-
-  monthSelect.innerHTML = '<option value="">月</option>';
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear) {
-    return;
-  }
-
-  var months = [...new Set(
-    availableDates
-      .filter(function(d) { return d.startsWith(selectedYear); })
-      .map(function(d) { return d.substring(5, 7); })
-  )].sort().reverse();
-
-  for (var i = 0; i < months.length; i++) {
-    var month = months[i];
-    var monthNum = parseInt(month, 10);
-    var selected = (month === previouslySelectedMonth) ? ' selected' : '';
-    monthSelect.innerHTML += '<option value="' + month + '"' + selected + '>' + monthNum + '</option>';
-  }
-
-  if (previouslySelectedMonth && months.includes(previouslySelectedMonth)) {
-    updateDayOptions();
-  }
-}
-
-/**
- * 更新日期选择下拉框
- * 修复：保留已选择的日期，正确处理状态
- */
-function updateDayOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var selectedMonth = monthSelect.value;
-  var previouslySelectedDay = daySelect.value;
-
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear || !selectedMonth) {
-    return;
-  }
-
-  var days = availableDates
-    .filter(function(d) { return d.startsWith(selectedYear + '-' + selectedMonth); })
-    .sort().reverse();
-
-  for (var i = 0; i < days.length; i++) {
-    var day = days[i];
-    var dayNum = parseInt(day.substring(8, 10), 10);
-    var selected = (day === previouslySelectedDay) ? ' selected' : '';
-    daySelect.innerHTML += '<option value="' + day + '"' + selected + '>' + dayNum + '</option>';
-  }
-}
-
-/**
- * 跳转到历史报告页面
- */
-function goToHistoryReport() {
-  var daySelect = document.getElementById('daySelect');
-  var selectedDate = daySelect.value;
-
-  if (selectedDate) {
-    window.location.href = 'daily_' + selectedDate + '.html';
-  } else {
-    alert('请先选择完整的日期！');
-  }
-}
-
-  </script>
+  <script src="../src/templates/script.js"></script>
 </body>
 </html>

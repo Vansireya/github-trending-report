@@ -5,12 +5,18 @@ on:
     - cron: '0 0 * * *' # 每天北京时间早上 8 点运行
   workflow_dispatch:   # 允许你手动点击按钮测试
 
+concurrency:
+  group: daily-github-trending-report
+  cancel-in-progress: false
+
 permissions:
   contents: write 
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
 
     steps:
       - name: 检出代码
@@ -24,7 +30,7 @@ jobs:
           node-version: '20'
 
       - name: 安装依赖
-        run: npm install
+        run: npm ci
 
       - name: 运行生成脚本
         env:
@@ -32,28 +38,6 @@ jobs:
           OPENAI_BASE_URL: https://api.deepseek.com
           OPENAI_MODEL: deepseek-chat
         run: npm start
-
-      - name: 自动更新首页 (index.html) 并修复路径
-        run: |
-          # 1. 确保 reports 文件夹存在且有文件
-          if [ -d "reports" ] && [ "$(ls -A reports)" ]; then
-            # 找到日期最新的那份报告
-            LATEST_REPORT=$(ls -t reports/daily_*.html | head -1)
-            echo "今日最新报告是: $LATEST_REPORT"
-            
-            # 2. 核心操作：将其复制为根目录的 index.html
-            cp "$LATEST_REPORT" index.html
-            
-            # 3. 路径修复（非常重要！）：
-            sed -i 's/href="daily_/href="reports\/daily_/g' index.html
-            sed -i 's/src="\.\.\//src="/g' index.html
-            sed -i 's/href="\.\.\//href="/g' index.html
-            
-            echo "✅ index.html 已更新并完成路径修正"
-          else
-            echo "❌ 错误：找不到 reports 文件夹或文件夹为空！"
-            exit 1
-          fi
 
       - name: 提交并推送到仓库
         run: |
@@ -69,11 +53,5 @@ jobs:
           # 3. 此时本地是干净的，可以放心地拉取远程改动并合并
           git pull origin main --rebase
           
-          # 4. 稳稳地推送到远程
-          git push origin main
-          
-          # 先拉取可能存在的远程改动，防止冲突
-          git pull origin main --rebase
-          
-          # 推送
+          # 4. 推送到远程
           git push origin main

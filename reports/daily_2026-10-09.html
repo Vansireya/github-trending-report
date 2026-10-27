@@ -9,544 +9,9 @@
   <script src="../data/ranking_data.js"></script>
 
   <!-- 页面样式 -->
-  <style>
-    /**
- * GitHub Trending 简报页面样式
- * 包含所有页面所需的 CSS 样式
- */
-
-/* ===== 基础样式重置 ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== 页面基础样式 ===== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e8f0e8;
-  color: #4a5a4a;
-  line-height: 1.6;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-/* ===== 页面容器 ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #f8faf8;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-}
-
-/* ===== 页面头部 ===== */
-.header {
-  background: #7a9a7a;
-  color: #f8faf8;
-  padding: 30px;
-  text-align: center;
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #f8faf8;
-  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
-}
-
-.header .date {
-  font-size: 1.2em;
-  color: #e8f0e8;
-  margin-top: 10px;
-  display: inline-block;
-  padding: 5px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-
-/* ===== 主要内容区域布局 ===== */
-.main-content {
-  display: flex;
-  flex: 1;
-}
-
-/* ===== 侧边栏 ===== */
-.sidebar {
-  width: 320px;
-  background: #f0f5f0;
-  padding: 20px;
-  border-right: 1px solid #d4e0d4;
-  overflow-y: auto;
-}
-
-.sidebar h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #d4e0d4;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  color: #5a7a5a;
-  text-decoration: none;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.sidebar a:hover {
-  background: #e8f0e8;
-  color: #7a9a7a;
-  transform: translateX(5px);
-}
-
-/* ===== 日期选择器 ===== */
-.date-filter-container {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.date-select {
-  flex: 1;
-  min-width: 65px;
-  padding: 6px 28px 6px 12px;
-  border: 1px solid #cce8d6;
-  border-radius: 6px;
-  background-color: #f2fbf5;
-  color: #1a4d2e;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  transition: all 0.2s ease;
-}
-
-#yearSelect {
-  min-width: 85px;
-}
-
-.date-select:hover {
-  background-color: #e6f7ec;
-}
-
-.date-select:focus {
-  outline: none;
-  border-color: #2ea054;
-  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
-}
-
-.date-select:first-child {
-  border-radius: 6px;
-}
-
-.date-select:last-of-type {
-  border-radius: 6px;
-}
-
-.date-filter-container .view-history-btn {
-  padding: 5px 10px;
-  background: #1a4d2e;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  line-height: 1;
-}
-
-.date-filter-container .view-history-btn:hover {
-  background: #153524;
-}
-
-.date-separator {
-  padding: 0 4px;
-  color: #666;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.view-history-btn {
-  padding: 10px 16px;
-  background: #7a9a7a;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.view-history-btn:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-}
-
-/* ===== 内容区域 ===== */
-.content {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto;
-}
-
-/* ===== 时间范围选择器 ===== */
-.time-range-selector {
-  margin-bottom: 20px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #d4e0d4;
-}
-
-.time-range-selector label {
-  display: block;
-  margin-bottom: 10px;
-  color: #5a7a5a;
-  font-weight: bold;
-}
-
-.time-range-selector select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #d4e0d4;
-  border-radius: 6px;
-  background: #ffffff;
-  color: #2a3a2a;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 35px;
-}
-
-.time-range-selector select:hover {
-  border-color: #7a9a7a;
-}
-
-/* ===== 排行榜区域 ===== */
-.ranking-section {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-}
-
-.ranking-section h4 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.1em;
-}
-
-.ranking-list {
-  list-style: none;
-}
-
-.ranking-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.ranking-list li:last-child {
-  border-bottom: none;
-}
-
-.ranking-list li:hover .ranking-name {
-  color: #7a9a7a;
-}
-
-.ranking-item {
-  display: block;
-}
-
-.ranking-info {
-  display: block;
-}
-
-.ranking-name {
-  color: #222;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.ranking-name:hover {
-  color: #5a7a5a;
-  text-decoration: underline;
-}
-
-.ranking-meta {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-.ranking-stars {
-  margin-right: 12px;
-}
-
-.ranking-count {
-  color: #7a9a7a;
-}
-
-.ranking-desc {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.5;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
-.global-tooltip {
-  display: none;
-  position: absolute;
-  background: #3a5a3a;
-  color: #ffffff;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 400px;
-  width: 90%;
-  z-index: 999999;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  line-height: 1.6;
-  white-space: pre-wrap;
-  text-align: left;
-  border: 2px solid #5a8a5a;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.global-tooltip-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.global-tooltip-close:hover {
-  opacity: 1;
-}
-
-/* ===== 项目卡片 ===== */
-.project-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 25px 0;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
-  border-color: #7a9a7a;
-}
-
-.project-name {
-  font-size: 1.8em;
-  color: #5a7a5a;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #d4e0d4;
-  font-weight: bold;
-}
-
-/* ===== 项目卡片内部各区域 ===== */
-.summary {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.summary strong {
-  color: #5a7a5a;
-}
-
-.details {
-  background: #edf3ed;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #7a9a7a;
-}
-
-.details strong {
-  color: #5a6a5a;
-}
-
-.link {
-  background: #eaf2ea;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.link a {
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #7a9a7a;
-  color: #f8faf8;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-}
-
-.link a:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
-}
-
-.stars {
-  background: #f0f5f0;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #9ab89a;
-}
-
-.stars strong {
-  color: #5a7a5a;
-}
-
-.stars span {
-  color: #6a8a6a;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.rating {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.rating strong {
-  color: #5a6a5a;
-}
-
-.rating span {
-  color: #6a8a6a;
-  font-size: 1.3em;
-}
-
-/* ===== 总结区域 ===== */
-.summary-section {
-  background: #edf3ed;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 30px;
-  border: 1px solid #d4e0d4;
-}
-
-.summary-section h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-}
-
-.summary-section p {
-  line-height: 1.8;
-}
-
-/* ===== 响应式设计 ===== */
-@media (max-width: 768px) {
-  .content {
-    padding: 20px;
-  }
-
-  .header h1 {
-    font-size: 2em;
-  }
-
-  .project-name {
-    font-size: 1.5em;
-  }
-
-  .project-card {
-    padding: 20px;
-  }
-}
-
-/* ===== 动画效果 ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
-.project-card:nth-child(7) { animation-delay: 0.7s; }
-.project-card:nth-child(8) { animation-delay: 0.8s; }
-.project-card:nth-child(9) { animation-delay: 0.9s; }
-.project-card:nth-child(10) { animation-delay: 1.0s; }
-
-  </style>
+  <link rel="stylesheet" href="../src/templates/style.css">
 </head>
-<body>
+<body data-report-base-path="">
   <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
   <div class="global-tooltip" id="globalTooltip">
     <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
@@ -568,7 +33,7 @@ body {
       <div class="sidebar">
         <h3>📅 历史报告</h3>
         <ul>
-          <li><a href="daily_2026-10-08.html">2026年10月8日</a></li><li><a href="daily_2026-10-07.html">2026年10月7日</a></li><li><a href="daily_2026-10-06.html">2026年10月6日</a></li><li><a href="daily_2026-10-05.html">2026年10月5日</a></li><li><a href="daily_2026-10-04.html">2026年10月4日</a></li><li><a href="daily_2026-10-03.html">2026年10月3日</a></li><li><a href="daily_2026-10-02.html">2026年10月2日</a></li>
+          <li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li>
 
 
     <div class="date-filter-container">
@@ -583,7 +48,7 @@ body {
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28","2026-09-27","2026-09-26","2026-09-25","2026-09-24","2026-09-23","2026-09-22","2026-09-21","2026-09-20","2026-09-19","2026-09-18","2026-09-17","2026-09-16","2026-09-15","2026-09-14","2026-09-13","2026-09-12","2026-09-11","2026-09-10","2026-09-09","2026-09-08","2026-09-07","2026-09-06","2026-09-05","2026-09-04","2026-09-03","2026-09-02","2026-09-01","2026-08-31","2026-08-30","2026-08-29","2026-08-28","2026-08-27","2026-08-26","2026-08-25","2026-08-24","2026-08-23","2026-08-22","2026-08-21","2026-08-20","2026-08-19","2026-08-18","2026-08-17","2026-08-16","2026-08-15","2026-08-14","2026-08-13","2026-08-12","2026-08-11","2026-08-10","2026-08-09","2026-08-08","2026-08-07","2026-08-06","2026-08-05","2026-08-04","2026-08-03","2026-08-02","2026-08-01","2026-07-31","2026-07-30","2026-07-29","2026-07-28","2026-07-27","2026-07-24","2026-07-23","2026-07-22","2026-07-21","2026-07-20","2026-07-19","2026-07-18","2026-07-17","2026-07-16","2026-07-15","2026-07-14","2026-07-13","2026-07-12","2026-07-11","2026-07-10","2026-07-09","2026-07-08","2026-07-07","2026-07-06","2026-07-05","2026-07-04","2026-07-02","2026-07-01","2026-06-30","2026-06-29","2026-06-28","2026-06-27","2026-06-26","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-21","2026-06-20","2026-06-19","2026-06-18","2026-06-17","2026-06-16","2026-06-15","2026-06-14","2026-06-13","2026-06-12","2026-06-11","2026-06-10","2026-06-09","2026-06-08","2026-06-07","2026-06-06","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-31","2026-05-30","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-24","2026-05-23","2026-05-22","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-17","2026-05-16","2026-05-15","2026-05-14","2026-05-13","2026-05-12","2026-05-11","2026-05-10","2026-05-09","2026-05-08","2026-05-07","2026-05-06","2026-05-05","2026-05-04","2026-05-03","2026-05-02","2026-05-01","2026-04-30","2026-04-29","2026-04-28","2026-04-27","2026-04-26","2026-04-25","2026-04-24","2026-04-23","2026-04-22","2026-04-21","2026-04-20","2026-04-19","2026-04-18","2026-04-17","2026-04-16","2026-04-15","2026-04-14","2026-04-13","2026-04-12","2026-04-11","2026-04-10","2026-04-09","2026-04-08","2026-04-07","2026-04-06","2026-04-05","2026-04-04","2026-04-03","2026-04-02","2026-04-01","2026-03-31","2026-03-30","2026-03-29","2026-03-28","2026-03-27","2026-03-26","2026-03-25","2026-03-24","2026-03-23","2026-03-22","2026-03-21","2026-03-20","2026-03-19","2026-03-18","2026-03-17","2026-03-16","2026-03-15","2026-03-14","2026-03-13","2026-03-12","2026-03-11","2026-03-10","2026-03-09","2026-03-08","2026-03-07","2026-03-06","2026-03-05","2026-03-04","2026-03-03","2026-03-02","2026-03-01","2026-02-28","2026-02-27","2026-02-26","2026-02-25","2026-02-24","2026-02-23","2026-02-22","2026-02-21","2026-02-20","2026-02-19","2026-02-18","2026-02-17","2026-02-16","2026-02-11"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
   
         </ul>
 
@@ -615,63 +80,63 @@ body {
 <h3>AnyPS5</h3>
 <p><strong>一句话概括：</strong> 把 PS5 独占游戏&quot;偷渡&quot;到 Linux 和 Windows 上的自动移植工具。</p>
 <p><strong>详细介绍：</strong> 主机党永远的痛——想玩的游戏锁在 PS5 里，PC 玩家只能干瞪眼。这个项目就是来砸索尼饭碗的：自动分析 PS5 可执行文件，帮你往 Linux/Windows 上搬。当然，法律风险请自行脑补，我们只聊技术。C++ 写的，性能应该不至于让你等到花儿都谢了。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/boykopovar/AnyPS5">https://github.com/boykopovar/AnyPS5</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer">https://github.com/boykopovar/AnyPS5</a></p>
 <p><strong>Star 数量：</strong> 16,401</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐（技术含量拉满，但请先咨询你的律师）</p>
 <hr>
 <h3>diagram-design</h3>
 <p><strong>一句话概括：</strong> 给 AI 编程助手用的&quot; editorial 级&quot;图表设计库，42 种图表类型，拒绝 Mermaid 那种&quot;能用就行&quot;的丑图。</p>
 <p><strong>详细介绍：</strong> 受够了 Mermaid 生成的&quot;工程师审美&quot;流程图了吗？这个项目直接甩出 42 种图表类型，纯 HTML + SVG，自带编辑级设计感，没有阴影、没有花里胡哨的渐变。专为 Claude Code、Codex、Copilot 等 AI 助手设计——让 AI 画图终于不用再&quot;丑得很有个性&quot;了。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/cathrynlavery/diagram-design">https://github.com/cathrynlavery/diagram-design</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">https://github.com/cathrynlavery/diagram-design</a></p>
 <p><strong>Star 数量：</strong> 46,642</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（设计师和前端都哭了，终于不用手搓 SVG 了）</p>
 <hr>
 <h3>rea</h3>
 <p><strong>一句话概括：</strong> 用 AI Agent 逆向工程一切，从 App 行为一路扒到原生二进制。</p>
 <p><strong>详细介绍：</strong> 逆向工程历来是硬核老哥的专属技能，门槛高到劝退。rea 想做的事就是：让 Agent 帮你干这活。不管是分析 App 行为还是拆解二进制文件，它都能上手。TypeScript 写的，对 Web 开发者友好。当然，逆向有风险，入坑需谨慎——别拿去干坏事。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/morluto/rea">https://github.com/morluto/rea</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">https://github.com/morluto/rea</a></p>
 <p><strong>Star 数量：</strong> 29,088</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐（黑客梦工厂，但请用在正道上）</p>
 <hr>
 <h3>mattpocock/skills</h3>
 <p><strong>一句话概括：</strong> 从作者自己的 <code>.agents</code> 目录里掏出来的&quot;真·工程师技能包&quot;。</p>
 <p><strong>详细介绍：</strong> 28 万 Star，今天榜单的绝对王者。Matt Pocock（TypeScript 圈知名教育者）把自己日常用的 Agent 技能直接开源了。没有什么花哨的包装，就是&quot;我平时怎么用，你就怎么用&quot;。Shell 脚本为主，实用主义至上。这 Star 数已经说明一切——群众的眼睛是雪亮的。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">https://github.com/mattpocock/skills</a></p>
 <p><strong>Star 数量：</strong> 281,312</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（28 万 Star 不是刷的，是真香）</p>
 <hr>
 <h3>claude-mem</h3>
 <p><strong>一句话概括：</strong> 给所有 AI Agent 装上&quot;长期记忆&quot;，跨会话记住你的一切。</p>
 <p><strong>详细介绍：</strong> 用过 AI 编程助手的人都有这个痛点：每次开新会话，它就像失忆了一样，你之前教的规矩全忘了。claude-mem 就是来解决这个的：捕获 Agent 会话中的所有操作，用 AI 压缩，下次自动注入相关上下文。支持 Claude Code、Codex、Gemini、Copilot 等一大票工具。简单说，让你的 AI 从&quot;金鱼记忆&quot;进化成&quot;大象记忆&quot;。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/thedotmack/claude-mem">https://github.com/thedotmack/claude-mem</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener noreferrer">https://github.com/thedotmack/claude-mem</a></p>
 <p><strong>Star 数量：</strong> 98,611</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（AI 记忆外挂，刚需中的刚需）</p>
 <hr>
 <h3>raddebugger</h3>
 <p><strong>一句话概括：</strong> Epic Games 出品的原生、用户态、多进程图形化调试器。</p>
 <p><strong>详细介绍：</strong> 调试器这个领域，一直是老牌工具的天下。Epic 突然甩出一个 raddebugger，原生、用户态、支持多进程，还是图形界面。C 语言写的，性能不用担心。对于天天跟崩溃和内存泄漏搏斗的开发者来说，多一个靠谱的调试器永远是好事——尤其是大厂出品。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/EpicGames/raddebugger">https://github.com/EpicGames/raddebugger</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/EpicGames/raddebugger" target="_blank" rel="noopener noreferrer">https://github.com/EpicGames/raddebugger</a></p>
 <p><strong>Star 数量：</strong> 8,156</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐（调试器不嫌多，何况是 Epic 出品）</p>
 <hr>
 <h3>anthropics/knowledge-work-plugins</h3>
 <p><strong>一句话概括：</strong> Anthropic 官方开源的&quot;知识工作者&quot;插件库，专为 Claude Cowork 打造。</p>
 <p><strong>详细介绍：</strong> Anthropic 亲自下场做插件生态了。这个仓库面向知识工作者——写文档的、做分析的、搞研究的——提供开箱即用的插件。Python 写的，官方出品意味着质量和维护都有保障。如果你已经在用 Claude 做正经工作，这些插件值得翻一翻。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/anthropics/knowledge-work-plugins">https://github.com/anthropics/knowledge-work-plugins</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener noreferrer">https://github.com/anthropics/knowledge-work-plugins</a></p>
 <p><strong>Star 数量：</strong> 27,731</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐（官方出品，生态卡位，值得关注）</p>
 <hr>
 <h3>artcraft</h3>
 <p><strong>一句话概括：</strong> 给艺术家、设计师和电影人用的&quot;有意图的&quot;创作引擎。</p>
 <p><strong>详细介绍：</strong> 名字叫 ArtCraft，野心不小——想做创意工作者的专属引擎。Rust 写的，性能和安全都有保障。所谓&quot;intentional crafting engine&quot;，大概意思是它不是那种&quot;什么都能做但什么都不精&quot;的大杂烩，而是针对创作流程精心设计的工具。具体好不好用，得艺术家们说了算。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/storytold/artcraft">https://github.com/storytold/artcraft</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer">https://github.com/storytold/artcraft</a></p>
 <p><strong>Star 数量：</strong> 8,441</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐（Rust 加持，创意工具赛道值得观望）</p>
 <hr>
 <h3>system-design-notes</h3>
 <p><strong>一句话概括：</strong> 《System Design Interview》这本书的读书笔记，面试前抱佛脚专用。</p>
 <p><strong>详细介绍：</strong> 系统设计面试是很多人的噩梦——范围广、没标准答案、全靠平时积累。这个仓库就是那本经典教材《System Design Interview: An Insider&#39;s Guide》的笔记整理。没有代码，就是纯知识梳理。Star 数 2.4 万说明了一件事：临时抱佛脚，是全世界程序员的共同刚需。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/liquidslr/system-design-notes">https://github.com/liquidslr/system-design-notes</a></p>
+<p><strong>项目网址：</strong> <a href="https://github.com/liquidslr/system-design-notes" target="_blank" rel="noopener noreferrer">https://github.com/liquidslr/system-design-notes</a></p>
 <p><strong>Star 数量：</strong> 24,792</p>
 <p><strong>推荐指数：</strong> ⭐⭐⭐⭐（面试前夜救命稻草，平时看看也不亏）</p>
 <hr>
@@ -682,226 +147,6 @@ body {
   </div>
 
   <!-- 前端交互脚本 -->
-  <script>
-    /**
- * GitHub Trending 简报前端交互脚本
- * 包含所有前端交互逻辑：Tooltip、排行榜切换、日期选择等
- */
-
-// Tooltip 偏移量配置
-const TOOLTIP_OFFSET_X = 15;
-const TOOLTIP_OFFSET_Y = 15;
-
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
-  // 为项目卡片添加点击效果
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') {
-        return;
-      }
-      this.style.transform = 'scale(0.98)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 150);
-    });
-  });
-
-  // 初始化排行榜显示（默认显示近一周）
-  if (typeof updateRanking === 'function') {
-    updateRanking('week');
-  }
-});
-
-/**
- * 显示悬浮提示框 - 跟随鼠标位置
- * @param {string} content - 提示内容
- * @param {Event} event - 鼠标事件对象
- */
-function showTooltip(content, event) {
-  const tooltip = document.getElementById('globalTooltip');
-  const tooltipContent = document.getElementById('tooltipContent');
-  tooltipContent.textContent = content;
-  tooltip.style.display = 'block';
-
-  // 跟随鼠标定位
-  const x = event.pageX + TOOLTIP_OFFSET_X;
-  const y = event.pageY + TOOLTIP_OFFSET_Y;
-
-  // 获取视口尺寸，防止提示框超出边界
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  const tooltipRect = tooltip.getBoundingClientRect();
-
-  // 如果右侧空间不足，显示在左侧
-  let finalX = x;
-  if (x + tooltipRect.width > viewportWidth) {
-    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
-  }
-
-  // 如果底部空间不足，显示在上方
-  let finalY = y;
-  if (y + tooltipRect.height > viewportHeight) {
-    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
-  }
-
-  tooltip.style.left = finalX + 'px';
-  tooltip.style.top = finalY + 'px';
-  tooltip.style.transform = 'none';
-}
-
-/**
- * 隐藏悬浮提示框
- */
-function hideTooltip() {
-  const tooltip = document.getElementById('globalTooltip');
-  tooltip.style.display = 'none';
-}
-
-/**
- * 更新排行榜显示
- * @param {string} timeRange - 时间范围：'week'、'month'、'quarter'
- */
-function updateRanking(timeRange) {
-  var rankingList = document.getElementById('rankingList');
-
-  if (typeof rankingData === 'undefined') {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
-    return;
-  }
-
-  var rankings = rankingData[timeRange] || [];
-
-  if (rankings.length === 0) {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
-    return;
-  }
-
-  let html = '';
-
-  rankings.forEach(function(item, index) {
-    var description = item.description || '暂无描述';
-    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    var count = item.count || 0;
-    var stars = item.stars || '0';
-
-    var tooltipContent = '📦 ' + item.name + '\n\n' +
-                         '📝 ' + description + '\n\n' +
-                         '⭐ ' + stars + ' | 📅 ' + count + ' 次';
-
-    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
-    html += '<div class="ranking-item">';
-    html += '<div class="ranking-info">';
-    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
-    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
-    html += '<div class="ranking-desc">' + description + '</div>';
-    html += '</div>';
-    html += '</div>';
-    html += '</li>';
-  });
-
-  rankingList.innerHTML = html;
-}
-
-/**
- * 更新月份选择下拉框
- * 修复：保留已选择的月份，重新选择时正确更新
- */
-function updateMonthOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    console.error('找不到可用日期容器');
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var previouslySelectedMonth = monthSelect.value;
-
-  monthSelect.innerHTML = '<option value="">月</option>';
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear) {
-    return;
-  }
-
-  var months = [...new Set(
-    availableDates
-      .filter(function(d) { return d.startsWith(selectedYear); })
-      .map(function(d) { return d.substring(5, 7); })
-  )].sort().reverse();
-
-  for (var i = 0; i < months.length; i++) {
-    var month = months[i];
-    var monthNum = parseInt(month, 10);
-    var selected = (month === previouslySelectedMonth) ? ' selected' : '';
-    monthSelect.innerHTML += '<option value="' + month + '"' + selected + '>' + monthNum + '</option>';
-  }
-
-  if (previouslySelectedMonth && months.includes(previouslySelectedMonth)) {
-    updateDayOptions();
-  }
-}
-
-/**
- * 更新日期选择下拉框
- * 修复：保留已选择的日期，正确处理状态
- */
-function updateDayOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var selectedMonth = monthSelect.value;
-  var previouslySelectedDay = daySelect.value;
-
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear || !selectedMonth) {
-    return;
-  }
-
-  var days = availableDates
-    .filter(function(d) { return d.startsWith(selectedYear + '-' + selectedMonth); })
-    .sort().reverse();
-
-  for (var i = 0; i < days.length; i++) {
-    var day = days[i];
-    var dayNum = parseInt(day.substring(8, 10), 10);
-    var selected = (day === previouslySelectedDay) ? ' selected' : '';
-    daySelect.innerHTML += '<option value="' + day + '"' + selected + '>' + dayNum + '</option>';
-  }
-}
-
-/**
- * 跳转到历史报告页面
- */
-function goToHistoryReport() {
-  var daySelect = document.getElementById('daySelect');
-  var selectedDate = daySelect.value;
-
-  if (selectedDate) {
-    window.location.href = 'daily_' + selectedDate + '.html';
-  } else {
-    alert('请先选择完整的日期！');
-  }
-}
-
-  </script>
+  <script src="../src/templates/script.js"></script>
 </body>
 </html>

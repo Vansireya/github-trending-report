@@ -9,544 +9,9 @@
   <script src="../data/ranking_data.js"></script>
 
   <!-- 页面样式 -->
-  <style>
-    /**
- * GitHub Trending 简报页面样式
- * 包含所有页面所需的 CSS 样式
- */
-
-/* ===== 基础样式重置 ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== 页面基础样式 ===== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e8f0e8;
-  color: #4a5a4a;
-  line-height: 1.6;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-/* ===== 页面容器 ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #f8faf8;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(74, 90, 74, 0.15);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-}
-
-/* ===== 页面头部 ===== */
-.header {
-  background: #7a9a7a;
-  color: #f8faf8;
-  padding: 30px;
-  text-align: center;
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #f8faf8;
-  text-shadow: 2px 2px 4px rgba(74, 90, 74, 0.3);
-}
-
-.header .date {
-  font-size: 1.2em;
-  color: #e8f0e8;
-  margin-top: 10px;
-  display: inline-block;
-  padding: 5px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-
-/* ===== 主要内容区域布局 ===== */
-.main-content {
-  display: flex;
-  flex: 1;
-}
-
-/* ===== 侧边栏 ===== */
-.sidebar {
-  width: 320px;
-  background: #f0f5f0;
-  padding: 20px;
-  border-right: 1px solid #d4e0d4;
-  overflow-y: auto;
-}
-
-.sidebar h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #d4e0d4;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  color: #5a7a5a;
-  text-decoration: none;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.sidebar a:hover {
-  background: #e8f0e8;
-  color: #7a9a7a;
-  transform: translateX(5px);
-}
-
-/* ===== 日期选择器 ===== */
-.date-filter-container {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.date-select {
-  flex: 1;
-  min-width: 65px;
-  padding: 6px 28px 6px 12px;
-  border: 1px solid #cce8d6;
-  border-radius: 6px;
-  background-color: #f2fbf5;
-  color: #1a4d2e;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a4d2e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  transition: all 0.2s ease;
-}
-
-#yearSelect {
-  min-width: 85px;
-}
-
-.date-select:hover {
-  background-color: #e6f7ec;
-}
-
-.date-select:focus {
-  outline: none;
-  border-color: #2ea054;
-  box-shadow: 0 0 0 3px rgba(46, 160, 84, 0.25);
-}
-
-.date-select:first-child {
-  border-radius: 6px;
-}
-
-.date-select:last-of-type {
-  border-radius: 6px;
-}
-
-.date-filter-container .view-history-btn {
-  padding: 5px 10px;
-  background: #1a4d2e;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  line-height: 1;
-}
-
-.date-filter-container .view-history-btn:hover {
-  background: #153524;
-}
-
-.date-separator {
-  padding: 0 4px;
-  color: #666;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.view-history-btn {
-  padding: 10px 16px;
-  background: #7a9a7a;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.view-history-btn:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-}
-
-/* ===== 内容区域 ===== */
-.content {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto;
-}
-
-/* ===== 时间范围选择器 ===== */
-.time-range-selector {
-  margin-bottom: 20px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #d4e0d4;
-}
-
-.time-range-selector label {
-  display: block;
-  margin-bottom: 10px;
-  color: #5a7a5a;
-  font-weight: bold;
-}
-
-.time-range-selector select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #d4e0d4;
-  border-radius: 6px;
-  background: #ffffff;
-  color: #2a3a2a;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a7a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 35px;
-}
-
-.time-range-selector select:hover {
-  border-color: #7a9a7a;
-}
-
-/* ===== 排行榜区域 ===== */
-.ranking-section {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-}
-
-.ranking-section h4 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.1em;
-}
-
-.ranking-list {
-  list-style: none;
-}
-
-.ranking-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.ranking-list li:last-child {
-  border-bottom: none;
-}
-
-.ranking-list li:hover .ranking-name {
-  color: #7a9a7a;
-}
-
-.ranking-item {
-  display: block;
-}
-
-.ranking-info {
-  display: block;
-}
-
-.ranking-name {
-  color: #222;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.ranking-name:hover {
-  color: #5a7a5a;
-  text-decoration: underline;
-}
-
-.ranking-meta {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-.ranking-stars {
-  margin-right: 12px;
-}
-
-.ranking-count {
-  color: #7a9a7a;
-}
-
-.ranking-desc {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.5;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* ===== 全局提示框（Tooltip）- 跟随鼠标 ===== */
-.global-tooltip {
-  display: none;
-  position: absolute;
-  background: #3a5a3a;
-  color: #ffffff;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 400px;
-  width: 90%;
-  z-index: 999999;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  line-height: 1.6;
-  white-space: pre-wrap;
-  text-align: left;
-  border: 2px solid #5a8a5a;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.global-tooltip-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.global-tooltip-close:hover {
-  opacity: 1;
-}
-
-/* ===== 项目卡片 ===== */
-.project-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 25px 0;
-  border: 1px solid #d4e0d4;
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(74, 90, 74, 0.15);
-  border-color: #7a9a7a;
-}
-
-.project-name {
-  font-size: 1.8em;
-  color: #5a7a5a;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #d4e0d4;
-  font-weight: bold;
-}
-
-/* ===== 项目卡片内部各区域 ===== */
-.summary {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.summary strong {
-  color: #5a7a5a;
-}
-
-.details {
-  background: #edf3ed;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #7a9a7a;
-}
-
-.details strong {
-  color: #5a6a5a;
-}
-
-.link {
-  background: #eaf2ea;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.link a {
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #7a9a7a;
-  color: #f8faf8;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-}
-
-.link a:hover {
-  background: #5a7a5a;
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(74, 90, 74, 0.2);
-}
-
-.stars {
-  background: #f0f5f0;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #9ab89a;
-}
-
-.stars strong {
-  color: #5a7a5a;
-}
-
-.stars span {
-  color: #6a8a6a;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.rating {
-  background: #e8f0e8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 15px 0;
-  border-left: 4px solid #8aab8a;
-}
-
-.rating strong {
-  color: #5a6a5a;
-}
-
-.rating span {
-  color: #6a8a6a;
-  font-size: 1.3em;
-}
-
-/* ===== 总结区域 ===== */
-.summary-section {
-  background: #edf3ed;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 30px;
-  border: 1px solid #d4e0d4;
-}
-
-.summary-section h3 {
-  color: #5a7a5a;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-}
-
-.summary-section p {
-  line-height: 1.8;
-}
-
-/* ===== 响应式设计 ===== */
-@media (max-width: 768px) {
-  .content {
-    padding: 20px;
-  }
-
-  .header h1 {
-    font-size: 2em;
-  }
-
-  .project-name {
-    font-size: 1.5em;
-  }
-
-  .project-card {
-    padding: 20px;
-  }
-}
-
-/* ===== 动画效果 ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
-.project-card:nth-child(7) { animation-delay: 0.7s; }
-.project-card:nth-child(8) { animation-delay: 0.8s; }
-.project-card:nth-child(9) { animation-delay: 0.9s; }
-.project-card:nth-child(10) { animation-delay: 1.0s; }
-
-  </style>
+  <link rel="stylesheet" href="../src/templates/style.css">
 </head>
-<body>
+<body data-report-base-path="">
   <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
   <div class="global-tooltip" id="globalTooltip">
     <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
@@ -568,7 +33,7 @@ body {
       <div class="sidebar">
         <h3>📅 历史报告</h3>
         <ul>
-          <li><a href="daily_2026-10-09.html">2026年10月9日</a></li><li><a href="daily_2026-10-08.html">2026年10月8日</a></li><li><a href="daily_2026-10-07.html">2026年10月7日</a></li><li><a href="daily_2026-10-06.html">2026年10月6日</a></li><li><a href="daily_2026-10-05.html">2026年10月5日</a></li><li><a href="daily_2026-10-04.html">2026年10月4日</a></li><li><a href="daily_2026-10-03.html">2026年10月3日</a></li>
+          <li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li>
 
 
     <div class="date-filter-container">
@@ -583,7 +48,7 @@ body {
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28","2026-09-27","2026-09-26","2026-09-25","2026-09-24","2026-09-23","2026-09-22","2026-09-21","2026-09-20","2026-09-19","2026-09-18","2026-09-17","2026-09-16","2026-09-15","2026-09-14","2026-09-13","2026-09-12","2026-09-11","2026-09-10","2026-09-09","2026-09-08","2026-09-07","2026-09-06","2026-09-05","2026-09-04","2026-09-03","2026-09-02","2026-09-01","2026-08-31","2026-08-30","2026-08-29","2026-08-28","2026-08-27","2026-08-26","2026-08-25","2026-08-24","2026-08-23","2026-08-22","2026-08-21","2026-08-20","2026-08-19","2026-08-18","2026-08-17","2026-08-16","2026-08-15","2026-08-14","2026-08-13","2026-08-12","2026-08-11","2026-08-10","2026-08-09","2026-08-08","2026-08-07","2026-08-06","2026-08-05","2026-08-04","2026-08-03","2026-08-02","2026-08-01","2026-07-31","2026-07-30","2026-07-29","2026-07-28","2026-07-27","2026-07-24","2026-07-23","2026-07-22","2026-07-21","2026-07-20","2026-07-19","2026-07-18","2026-07-17","2026-07-16","2026-07-15","2026-07-14","2026-07-13","2026-07-12","2026-07-11","2026-07-10","2026-07-09","2026-07-08","2026-07-07","2026-07-06","2026-07-05","2026-07-04","2026-07-02","2026-07-01","2026-06-30","2026-06-29","2026-06-28","2026-06-27","2026-06-26","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-21","2026-06-20","2026-06-19","2026-06-18","2026-06-17","2026-06-16","2026-06-15","2026-06-14","2026-06-13","2026-06-12","2026-06-11","2026-06-10","2026-06-09","2026-06-08","2026-06-07","2026-06-06","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-31","2026-05-30","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-24","2026-05-23","2026-05-22","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-17","2026-05-16","2026-05-15","2026-05-14","2026-05-13","2026-05-12","2026-05-11","2026-05-10","2026-05-09","2026-05-08","2026-05-07","2026-05-06","2026-05-05","2026-05-04","2026-05-03","2026-05-02","2026-05-01","2026-04-30","2026-04-29","2026-04-28","2026-04-27","2026-04-26","2026-04-25","2026-04-24","2026-04-23","2026-04-22","2026-04-21","2026-04-20","2026-04-19","2026-04-18","2026-04-17","2026-04-16","2026-04-15","2026-04-14","2026-04-13","2026-04-12","2026-04-11","2026-04-10","2026-04-09","2026-04-08","2026-04-07","2026-04-06","2026-04-05","2026-04-04","2026-04-03","2026-04-02","2026-04-01","2026-03-31","2026-03-30","2026-03-29","2026-03-28","2026-03-27","2026-03-26","2026-03-25","2026-03-24","2026-03-23","2026-03-22","2026-03-21","2026-03-20","2026-03-19","2026-03-18","2026-03-17","2026-03-16","2026-03-15","2026-03-14","2026-03-13","2026-03-12","2026-03-11","2026-03-10","2026-03-09","2026-03-08","2026-03-07","2026-03-06","2026-03-05","2026-03-04","2026-03-03","2026-03-02","2026-03-01","2026-02-28","2026-02-27","2026-02-26","2026-02-25","2026-02-24","2026-02-23","2026-02-22","2026-02-21","2026-02-20","2026-02-19","2026-02-18","2026-02-17","2026-02-16","2026-02-11"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
   
         </ul>
 
@@ -612,304 +77,204 @@ body {
 <p>今日榜单堪称「Agent 全家桶」——从逆向工程到代码审查，从 PS5 移植到 3D 重建，AI 代理们正在把工程师的饭碗端走，还顺手洗了个碗。下面请欣赏各位选手的表演。</p>
 </blockquote>
 <hr>
-<h3>morluto/rea</h3>
-<p><strong>一句话概括</strong>：让 AI 代理帮你逆向工程任何东西，从 App 行为一路扒到原生二进制。</p>
-<p><strong>详细介绍</strong>：以前逆向工程是硬核老哥的专利，得会看汇编、玩 IDA、熬夜掉头发。现在 rea 直接派代理上场，你负责喝咖啡，它负责把二进制拆得明明白白。TypeScript 写的，意味着前端仔也能假装自己是安全研究员了。痛点？痛点就是「我看不懂这破 App 在干嘛」，现在代理替你看懂，还顺便写好了报告。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/morluto/rea">https://github.com/morluto/rea</a></p>
-<p><strong>Star 数量</strong>：50,311</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（五万星不是白来的，逆向+Agent 双热点，谁用谁知道）</p>
+
+<div class="project-card">
+  <h3 class="project-name">morluto/rea</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 让 AI 代理帮你逆向工程任何东西，从 App 行为一路扒到原生二进制。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 以前逆向工程是硬核老哥的专利，得会看汇编、玩 IDA、熬夜掉头发。现在 rea 直接派代理上场，你负责喝咖啡，它负责把二进制拆得明明白白。TypeScript 写的，意味着前端仔也能假装自己是安全研究员了。痛点？痛点就是「我看不懂这破 App 在干嘛」，现在代理替你看懂，还顺便写好了报告。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">https://github.com/morluto/rea</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>50,311</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（五万星不是白来的，逆向+Agent 双热点，谁用谁知道）</span>
+  </div>
+</div>
 <hr>
-<h3>boykopovar/AnyPS5</h3>
-<p><strong>一句话概括</strong>：把 PS5 可执行文件自动移植到 Linux 和 Windows 的工具。</p>
-<p><strong>详细介绍</strong>：索尼看了想打人。这个工具号称能自动把 PS5 的程序搬到 PC 上跑，C++ 写的，性能不用担心。当然，实际能不能跑起来《战神》是另一回事，但梦想还是要有的，万一呢？痛点很明确：PC 玩家眼馋独占，PS5 玩家眼馋 mod，现在大家可以在法律边缘互相试探了。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/boykopovar/AnyPS5">https://github.com/boykopovar/AnyPS5</a></p>
-<p><strong>Star 数量</strong>：22,860</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐（四星给勇气，扣一星给法务部）</p>
+<div class="project-card">
+  <h3 class="project-name">boykopovar/AnyPS5</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 把 PS5 可执行文件自动移植到 Linux 和 Windows 的工具。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 索尼看了想打人。这个工具号称能自动把 PS5 的程序搬到 PC 上跑，C++ 写的，性能不用担心。当然，实际能不能跑起来《战神》是另一回事，但梦想还是要有的，万一呢？痛点很明确：PC 玩家眼馋独占，PS5 玩家眼馋 mod，现在大家可以在法律边缘互相试探了。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer">https://github.com/boykopovar/AnyPS5</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>22,860</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（四星给勇气，扣一星给法务部）</span>
+  </div>
+</div>
 <hr>
-<h3>mattpocock/skills</h3>
-<p><strong>一句话概括</strong>：真·工程师的技能包，直接从作者的 <code>.agents</code> 目录里掏出来的。</p>
-<p><strong>详细介绍</strong>：Matt Pocock（TypeScript 圈知名布道者）把自己 Agent 目录里的技能全开源了。Shell 写的，轻量到不能再轻量。这玩意儿的痛点在于：别人家的 Agent 是智障，你家的 Agent 是智障plus，因为没喂技能。现在好了，大佬把「真·工程师技能」打包送你，装上之后你的 Agent 至少能装得像个人了。28 万星？这数字离谱到像是被刷的，但谁让它是 Matt 呢。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></p>
-<p><strong>Star 数量</strong>：282,950</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（28 万星，就算全是水分也够你游个泳了）</p>
+<div class="project-card">
+  <h3 class="project-name">mattpocock/skills</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 真·工程师的技能包，直接从作者的 .agents 目录里掏出来的。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> Matt Pocock（TypeScript 圈知名布道者）把自己 Agent 目录里的技能全开源了。Shell 写的，轻量到不能再轻量。这玩意儿的痛点在于：别人家的 Agent 是智障，你家的 Agent 是智障plus，因为没喂技能。现在好了，大佬把「真·工程师技能」打包送你，装上之后你的 Agent 至少能装得像个人了。28 万星？这数字离谱到像是被刷的，但谁让它是 Matt 呢。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">https://github.com/mattpocock/skills</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>282,950</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（28 万星，就算全是水分也够你游个泳了）</span>
+  </div>
+</div>
 <hr>
-<h3>cathrynlavery/diagram-design</h3>
-<p><strong>一句话概括</strong>：给 Claude Code、Codex、Copilot 等一众 AI 编程助手用的编辑级图表设计，44 种图表类型，纯 HTML+SVG。</p>
-<p><strong>详细介绍</strong>：受够了 Mermaid 那种「能看但丑」的流程图了吗？作者直接开喷「No Mermaid slop」，然后甩出 44 种自包含的 HTML+SVG 图表，无阴影、无废话、颜值在线。痛点就是：AI 生成的图表常年丑得让人想关掉窗口，现在终于有个懂设计的来管管了。支持 Claude Code、Codex、Copilot、Factory Droid、Pi——基本把市面上的 Agent 全伺候了一遍。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/cathrynlavery/diagram-design">https://github.com/cathrynlavery/diagram-design</a></p>
-<p><strong>Star 数量</strong>：48,062</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（对 Mermaid 开炮这一点就值五颗星）</p>
+<div class="project-card">
+  <h3 class="project-name">cathrynlavery/diagram-design</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 给 Claude Code、Codex、Copilot 等一众 AI 编程助手用的编辑级图表设计，44 种图表类型，纯 HTML+SVG。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 受够了 Mermaid 那种「能看但丑」的流程图了吗？作者直接开喷「No Mermaid slop」，然后甩出 44 种自包含的 HTML+SVG 图表，无阴影、无废话、颜值在线。痛点就是：AI 生成的图表常年丑得让人想关掉窗口，现在终于有个懂设计的来管管了。支持 Claude Code、Codex、Copilot、Factory Droid、Pi——基本把市面上的 Agent 全伺候了一遍。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">https://github.com/cathrynlavery/diagram-design</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>48,062</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（对 Mermaid 开炮这一点就值五颗星）</span>
+  </div>
+</div>
 <hr>
-<h3>alibaba/open-code-review</h3>
-<p><strong>一句话概括</strong>：阿里大规模实战检验过的代码审查工具，确定性流水线 + LLM Agent 混合架构。</p>
-<p><strong>详细介绍</strong>：阿里把这个工具在自家规模上跑过了，Go 写的，快且稳。混合架构的意思是：该用规则的地方用规则（NPE、线程安全、XSS、SQL 注入都有内置规则集），该用 LLM 的地方用 LLM，精准到行级评论。痛点？痛点就是纯 LLM 审查经常胡说八道，纯规则审查又太死板，阿里说「我全都要」。兼容 OpenAI 和 Anthropic，不绑死一家。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/alibaba/open-code-review">https://github.com/alibaba/open-code-review</a></p>
-<p><strong>Star 数量</strong>：45,390</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（阿里背书 + 实战检验，比那些玩具级审查工具靠谱多了）</p>
+<div class="project-card">
+  <h3 class="project-name">alibaba/open-code-review</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 阿里大规模实战检验过的代码审查工具，确定性流水线 + LLM Agent 混合架构。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 阿里把这个工具在自家规模上跑过了，Go 写的，快且稳。混合架构的意思是：该用规则的地方用规则（NPE、线程安全、XSS、SQL 注入都有内置规则集），该用 LLM 的地方用 LLM，精准到行级评论。痛点？痛点就是纯 LLM 审查经常胡说八道，纯规则审查又太死板，阿里说「我全都要」。兼容 OpenAI 和 Anthropic，不绑死一家。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener noreferrer">https://github.com/alibaba/open-code-review</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>45,390</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（阿里背书 + 实战检验，比那些玩具级审查工具靠谱多了）</span>
+  </div>
+</div>
 <hr>
-<h3>anthropics/knowledge-work-plugins</h3>
-<p><strong>一句话概括</strong>：Anthropic 官方开源的插件仓库，主要给知识工作者在 Claude Cowork 里用。</p>
-<p><strong>详细介绍</strong>：Anthropic 亲自下场做插件了，Python 写的，目标人群是「知识工作者」——翻译成人话就是：不写代码但天天跟文档、表格、PPT 打架的人。痛点在于：Claude 虽然聪明，但没插件就像没装 App 的手机，功能有限。现在官方给你一套插件，让你的 Claude 从「聊天机器人」升级成「办公搭子」。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/anthropics/knowledge-work-plugins">https://github.com/anthropics/knowledge-work-plugins</a></p>
-<p><strong>Star 数量</strong>：28,344</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐（官方出品，但知识工作者的痛点能不能被插件解决，还得看疗效）</p>
+<div class="project-card">
+  <h3 class="project-name">anthropics/knowledge-work-plugins</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> Anthropic 官方开源的插件仓库，主要给知识工作者在 Claude Cowork 里用。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> Anthropic 亲自下场做插件了，Python 写的，目标人群是「知识工作者」——翻译成人话就是：不写代码但天天跟文档、表格、PPT 打架的人。痛点在于：Claude 虽然聪明，但没插件就像没装 App 的手机，功能有限。现在官方给你一套插件，让你的 Claude 从「聊天机器人」升级成「办公搭子」。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener noreferrer">https://github.com/anthropics/knowledge-work-plugins</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>28,344</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（官方出品，但知识工作者的痛点能不能被插件解决，还得看疗效）</span>
+  </div>
+</div>
 <hr>
-<h3>BerriAI/litellm</h3>
-<p><strong>一句话概括</strong>：号称最快最轻的 AI 网关，Rust 核心 + Python SDK，一个接口调用 100+ LLM API。</p>
-<p><strong>详细介绍</strong>：这项目是老熟人了，但这次升级了 Rust 核心，速度起飞。痛点极其真实：你想用 OpenAI 的格式调 Anthropic，用 Anthropic 的格式调 Bedrock，还要管成本、限流、负载均衡、日志……以前得自己写一坨胶水代码，现在 litellm 一把梭。支持 Bedrock、Azure、OpenAI、Anthropic、VertexAI、vLLM、Nvidia NIM——基本上你能叫出名字的它都支持。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/BerriAI/litellm">https://github.com/BerriAI/litellm</a></p>
-<p><strong>Star 数量</strong>：60,729</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（六万星，AI 网关界的瑞士军刀，不用它你就得自己造轮子）</p>
+<div class="project-card">
+  <h3 class="project-name">BerriAI/litellm</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 号称最快最轻的 AI 网关，Rust 核心 + Python SDK，一个接口调用 100+ LLM API。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 这项目是老熟人了，但这次升级了 Rust 核心，速度起飞。痛点极其真实：你想用 OpenAI 的格式调 Anthropic，用 Anthropic 的格式调 Bedrock，还要管成本、限流、负载均衡、日志……以前得自己写一坨胶水代码，现在 litellm 一把梭。支持 Bedrock、Azure、OpenAI、Anthropic、VertexAI、vLLM、Nvidia NIM——基本上你能叫出名字的它都支持。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener noreferrer">https://github.com/BerriAI/litellm</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>60,729</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（六万星，AI 网关界的瑞士军刀，不用它你就得自己造轮子）</span>
+  </div>
+</div>
 <hr>
-<h3>addyosmani/agent-skills</h3>
-<p><strong>一句话概括</strong>：给 AI 编程代理用的生产级工程技能包。</p>
-<p><strong>详细介绍</strong>：Addy Osmani（Google Chrome 团队大佬）出手了，JavaScript 写的。和上面 Matt 那个类似，但定位更偏向「生产级」——意思是这些技能不是玩具，是真能上战场的。痛点：你的 AI Agent 写个 demo 还行，一上生产就拉胯，因为它不懂工程规范、不懂边界情况、不懂性能优化。Addy 说「我来教它」。10 万星，大佬的影响力可见一斑。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/addyosmani/agent-skills">https://github.com/addyosmani/agent-skills</a></p>
-<p><strong>Star 数量</strong>：104,084</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐⭐（10 万星 + Google 大佬背书，闭眼入）</p>
+<div class="project-card">
+  <h3 class="project-name">addyosmani/agent-skills</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 给 AI 编程代理用的生产级工程技能包。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> Addy Osmani（Google Chrome 团队大佬）出手了，JavaScript 写的。和上面 Matt 那个类似，但定位更偏向「生产级」——意思是这些技能不是玩具，是真能上战场的。痛点：你的 AI Agent 写个 demo 还行，一上生产就拉胯，因为它不懂工程规范、不懂边界情况、不懂性能优化。Addy 说「我来教它」。10 万星，大佬的影响力可见一斑。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">https://github.com/addyosmani/agent-skills</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>104,084</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐⭐（10 万星 + Google 大佬背书，闭眼入）</span>
+  </div>
+</div>
 <hr>
-<h3>storytold/artcraft</h3>
-<p><strong>一句话概括</strong>：为艺术家、设计师和电影人打造的有意为之的创作引擎。</p>
-<p><strong>详细介绍</strong>：Rust 写的，定位很文艺——「intentional crafting engine」。翻译一下：不是那种「一键生成 AI 垃圾图」的工具，而是让你有意识地、精细地控制创作过程。痛点在于：现在的 AI 创作工具要么太自动化（你只是个按按钮的），要么太底层（你得会写 shader）。ArtCraft 想在中间找个平衡点。1 万多星，不算爆款，但受众精准。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/storytold/artcraft">https://github.com/storytold/artcraft</a></p>
-<p><strong>Star 数量</strong>：11,878</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐（小众但精致，艺术家和设计师值得一看）</p>
+<div class="project-card">
+  <h3 class="project-name">storytold/artcraft</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> 为艺术家、设计师和电影人打造的有意为之的创作引擎。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> Rust 写的，定位很文艺——「intentional crafting engine」。翻译一下：不是那种「一键生成 AI 垃圾图」的工具，而是让你有意识地、精细地控制创作过程。痛点在于：现在的 AI 创作工具要么太自动化（你只是个按按钮的），要么太底层（你得会写 shader）。ArtCraft 想在中间找个平衡点。1 万多星，不算爆款，但受众精准。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer">https://github.com/storytold/artcraft</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>11,878</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（小众但精致，艺术家和设计师值得一看）</span>
+  </div>
+</div>
 <hr>
-<h3>Robbyant/lingbot-map</h3>
-<p><strong>一句话概括</strong>：ECCV 2026 最佳论文候选，用几何上下文 Transformer 做流式 3D 重建。</p>
-<p><strong>详细介绍</strong>：学术圈选手入场，Python 写的。流式 3D 重建的意思是：一边采集数据一边重建三维场景，不用等全部数据到手再慢慢算。痛点：传统的 3D 重建要么慢，要么需要离线处理，实时场景根本等不起。LingBot-Map 用 Transformer 把几何上下文吃透，号称能流式处理。ECCV 最佳论文候选，学术含金量在线，但工程化程度有待观察。</p>
-<p><strong>项目网址</strong>：<a href="https://github.com/Robbyant/lingbot-map">https://github.com/Robbyant/lingbot-map</a></p>
-<p><strong>Star 数量</strong>：17,773</p>
-<p><strong>推荐指数</strong>：⭐⭐⭐⭐（学术价值高，但如果你只是想做个 3D 扫描 App，可能还得等等工程化版本）</p>
+<div class="project-card">
+  <h3 class="project-name">Robbyant/lingbot-map</h3>
+  <div class="summary">
+    <strong>🎯 一句话概括:</strong> ECCV 2026 最佳论文候选，用几何上下文 Transformer 做流式 3D 重建。
+  </div>
+  <div class="details">
+    <strong>💡 详细介绍:</strong> 学术圈选手入场，Python 写的。流式 3D 重建的意思是：一边采集数据一边重建三维场景，不用等全部数据到手再慢慢算。痛点：传统的 3D 重建要么慢，要么需要离线处理，实时场景根本等不起。LingBot-Map 用 Transformer 把几何上下文吃透，号称能流式处理。ECCV 最佳论文候选，学术含金量在线，但工程化程度有待观察。
+  </div>
+  <div class="link">
+    <strong>🔗 项目网址:</strong> <a href="https://github.com/Robbyant/lingbot-map" target="_blank" rel="noopener noreferrer">https://github.com/Robbyant/lingbot-map</a>
+  </div>
+  <div class="stars">
+    <strong>✨ Star 数量:</strong> <span>17,773</span>
+  </div>
+  <div class="rating">
+    <strong>⭐ 推荐指数:</strong> <span>⭐⭐⭐⭐（学术价值高，但如果你只是想做个 3D 扫描 App，可能还得等等工程化版本）</span>
+  </div>
+</div>
 <hr>
 <h2>今日总结</h2>
 <p>Agent 技能包成了硬通货（Matt 和 Addy 两位大佬合计 38 万星），AI 网关和代码审查走向「混合架构」，而</p>
-
       </div>
     </div>
   </div>
 
   <!-- 前端交互脚本 -->
-  <script>
-    /**
- * GitHub Trending 简报前端交互脚本
- * 包含所有前端交互逻辑：Tooltip、排行榜切换、日期选择等
- */
-
-// Tooltip 偏移量配置
-const TOOLTIP_OFFSET_X = 15;
-const TOOLTIP_OFFSET_Y = 15;
-
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
-  // 为项目卡片添加点击效果
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') {
-        return;
-      }
-      this.style.transform = 'scale(0.98)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 150);
-    });
-  });
-
-  // 初始化排行榜显示（默认显示近一周）
-  if (typeof updateRanking === 'function') {
-    updateRanking('week');
-  }
-});
-
-/**
- * 显示悬浮提示框 - 跟随鼠标位置
- * @param {string} content - 提示内容
- * @param {Event} event - 鼠标事件对象
- */
-function showTooltip(content, event) {
-  const tooltip = document.getElementById('globalTooltip');
-  const tooltipContent = document.getElementById('tooltipContent');
-  tooltipContent.textContent = content;
-  tooltip.style.display = 'block';
-
-  // 跟随鼠标定位
-  const x = event.pageX + TOOLTIP_OFFSET_X;
-  const y = event.pageY + TOOLTIP_OFFSET_Y;
-
-  // 获取视口尺寸，防止提示框超出边界
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  const tooltipRect = tooltip.getBoundingClientRect();
-
-  // 如果右侧空间不足，显示在左侧
-  let finalX = x;
-  if (x + tooltipRect.width > viewportWidth) {
-    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
-  }
-
-  // 如果底部空间不足，显示在上方
-  let finalY = y;
-  if (y + tooltipRect.height > viewportHeight) {
-    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
-  }
-
-  tooltip.style.left = finalX + 'px';
-  tooltip.style.top = finalY + 'px';
-  tooltip.style.transform = 'none';
-}
-
-/**
- * 隐藏悬浮提示框
- */
-function hideTooltip() {
-  const tooltip = document.getElementById('globalTooltip');
-  tooltip.style.display = 'none';
-}
-
-/**
- * 更新排行榜显示
- * @param {string} timeRange - 时间范围：'week'、'month'、'quarter'
- */
-function updateRanking(timeRange) {
-  var rankingList = document.getElementById('rankingList');
-
-  if (typeof rankingData === 'undefined') {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
-    return;
-  }
-
-  var rankings = rankingData[timeRange] || [];
-
-  if (rankings.length === 0) {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
-    return;
-  }
-
-  let html = '';
-
-  rankings.forEach(function(item, index) {
-    var description = item.description || '暂无描述';
-    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    var count = item.count || 0;
-    var stars = item.stars || '0';
-
-    var tooltipContent = '📦 ' + item.name + '\n\n' +
-                         '📝 ' + description + '\n\n' +
-                         '⭐ ' + stars + ' | 📅 ' + count + ' 次';
-
-    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
-    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
-    html += '<div class="ranking-item">';
-    html += '<div class="ranking-info">';
-    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
-    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
-    html += '<div class="ranking-desc">' + description + '</div>';
-    html += '</div>';
-    html += '</div>';
-    html += '</li>';
-  });
-
-  rankingList.innerHTML = html;
-}
-
-/**
- * 更新月份选择下拉框
- * 修复：保留已选择的月份，重新选择时正确更新
- */
-function updateMonthOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    console.error('找不到可用日期容器');
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var previouslySelectedMonth = monthSelect.value;
-
-  monthSelect.innerHTML = '<option value="">月</option>';
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear) {
-    return;
-  }
-
-  var months = [...new Set(
-    availableDates
-      .filter(function(d) { return d.startsWith(selectedYear); })
-      .map(function(d) { return d.substring(5, 7); })
-  )].sort().reverse();
-
-  for (var i = 0; i < months.length; i++) {
-    var month = months[i];
-    var monthNum = parseInt(month, 10);
-    var selected = (month === previouslySelectedMonth) ? ' selected' : '';
-    monthSelect.innerHTML += '<option value="' + month + '"' + selected + '>' + monthNum + '</option>';
-  }
-
-  if (previouslySelectedMonth && months.includes(previouslySelectedMonth)) {
-    updateDayOptions();
-  }
-}
-
-/**
- * 更新日期选择下拉框
- * 修复：保留已选择的日期，正确处理状态
- */
-function updateDayOptions() {
-  var yearSelect = document.getElementById('yearSelect');
-  var monthSelect = document.getElementById('monthSelect');
-  var daySelect = document.getElementById('daySelect');
-  var availableDatesContainer = document.getElementById('availableDatesData');
-
-  if (!availableDatesContainer) {
-    return;
-  }
-
-  var availableDates = JSON.parse(availableDatesContainer.textContent);
-  var selectedYear = yearSelect.value;
-  var selectedMonth = monthSelect.value;
-  var previouslySelectedDay = daySelect.value;
-
-  daySelect.innerHTML = '<option value="">日</option>';
-
-  if (!selectedYear || !selectedMonth) {
-    return;
-  }
-
-  var days = availableDates
-    .filter(function(d) { return d.startsWith(selectedYear + '-' + selectedMonth); })
-    .sort().reverse();
-
-  for (var i = 0; i < days.length; i++) {
-    var day = days[i];
-    var dayNum = parseInt(day.substring(8, 10), 10);
-    var selected = (day === previouslySelectedDay) ? ' selected' : '';
-    daySelect.innerHTML += '<option value="' + day + '"' + selected + '>' + dayNum + '</option>';
-  }
-}
-
-/**
- * 跳转到历史报告页面
- */
-function goToHistoryReport() {
-  var daySelect = document.getElementById('daySelect');
-  var selectedDate = daySelect.value;
-
-  if (selectedDate) {
-    window.location.href = 'daily_' + selectedDate + '.html';
-  } else {
-    alert('请先选择完整的日期！');
-  }
-}
-
-  </script>
+  <script src="../src/templates/script.js"></script>
 </body>
 </html>

@@ -9,11 +9,9 @@
   <script src="{{RANKING_DATA_PATH}}"></script>
 
   <!-- 页面样式 -->
-  <style>
-    {{STYLES}}
-  </style>
+  <link rel="stylesheet" href="{{STYLESHEET_PATH}}">
 </head>
-<body>
+<body data-report-base-path="{{REPORT_BASE_PATH}}">
   <!-- 全局提示框（Tooltip）- 跟随鼠标移动 -->
   <div class="global-tooltip" id="globalTooltip">
     <span class="global-tooltip-close" onclick="hideTooltip()">&times;</span>
@@ -64,8 +62,6 @@
   </div>
 
   <!-- 前端交互脚本 -->
-  <script>
-    {{SCRIPTS}}
-  </script>
+  <script src="{{SCRIPT_PATH}}"></script>
 </body>
 </html>

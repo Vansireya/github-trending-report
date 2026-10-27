@@ -45,20 +45,18 @@ function readTemplateFile(fileName) {
  * 将模板与数据结合，生成最终的 HTML 文件
  * @param {string} htmlContent - 解析后的 Markdown HTML 内容
  * @param {string} dateStr - 日期字符串，格式：YYYY-MM-DD
+ * @param {boolean} isIndex - 是否生成根目录首页
  * @returns {string} 完整的 HTML 页面内容
  */
-function generateHTMLTemplate(htmlContent, dateStr) {
+function generateHTMLTemplate(htmlContent, dateStr, isIndex = false) {
   // ===== 1. 读取前端模板文件 =====
   const baseTemplate = readTemplateFile('base.html');
-  const styles = readTemplateFile('style.css');
-  const scripts = readTemplateFile('script.js');
-
   if (!baseTemplate) {
     throw new Error('无法读取基础模板文件');
   }
 
   // ===== 2. 处理日期显示 =====
-  const date = new Date(dateStr);
+  const date = new Date(`${dateStr}T12:00:00`);
   const dateCN = date.toLocaleDateString('zh-CN', config.page.dateFormat);
 
   // ===== 3. 获取历史日期数据（分别处理侧边栏和下拉框）=====
@@ -68,7 +66,7 @@ function generateHTMLTemplate(htmlContent, dateStr) {
   const recentDates = dataProcessor.getRecentDates();             // 最近 7 天（用于侧边栏）
 
   // ===== 4. 生成侧边栏历史记录 HTML（仅显示最近7天）=====
-  const historyDatesHTML = dataProcessor.generateHistoryDatesHTML(recentDates);
+  const historyDatesHTML = dataProcessor.generateHistoryDatesHTML(recentDates, isIndex);
 
   // ===== 5. 生成日期选择器 HTML（使用完整日期列表）=====
   // 【修复 Bug】这里传入的是 allAvailableDates，而不是 recentDates
@@ -100,13 +98,13 @@ function generateHTMLTemplate(htmlContent, dateStr) {
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
 
   // 替换排行榜数据路径（移到 <head> 中解决加载时机问题）
-  resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
+  const getFrontendPath = filePath => isIndex ? filePath.replace(/^\.\.\//, '') : filePath;
+  resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', getFrontendPath(config.frontend.rankingDataPath));
 
-  // 替换 CSS 样式
-  resultHTML = resultHTML.replace('{{STYLES}}', styles);
-
-  // 替换前端 JavaScript 脚本
-  resultHTML = resultHTML.replace('{{SCRIPTS}}', scripts);
+  // 替换共享的 CSS 和 JavaScript 路径，避免每份历史 HTML 重复内嵌资源
+  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', getFrontendPath(config.frontend.stylesheetPath));
+  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', getFrontendPath(config.frontend.scriptPath));
+  resultHTML = resultHTML.replace('{{REPORT_BASE_PATH}}', isIndex ? 'reports/' : '');
 
   // 替换侧边栏标题
   resultHTML = resultHTML.replace('{{SIDEBAR_HISTORY_TITLE}}', config.sidebar.historyTitle);
@@ -285,8 +283,15 @@ async function main() {
     const htmlOutputPath = path.join(config.directories.reports, htmlFileName);
     saveHTMLFile(fullHTML, htmlOutputPath);
 
-    // ===== 8. 自动在浏览器中打开生成的 HTML 文件 =====
-    openInBrowser(htmlOutputPath);
+    // 同时生成根目录首页，避免工作流再次复制并修复相对路径
+    const indexHTML = generateHTMLTemplate(htmlContent, reportDate, true);
+    const indexOutputPath = path.join(config.directories.root, 'index.html');
+    saveHTMLFile(indexHTML, indexOutputPath);
+
+    // ===== 8. 本地运行时自动在浏览器中打开生成的 HTML 文件 =====
+    if (process.env.CI !== 'true') {
+      openInBrowser(htmlOutputPath);
+    }
 
     console.log('\n' + '='.repeat(50));
     console.log('✅ HTML 简报生成成功！');

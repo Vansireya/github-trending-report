@@ -40,16 +40,25 @@ function readHistoryData(days) {
       return [];
     }
 
-    const now = new Date();
-    const cutoffDate = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
+    const datedFiles = files.map(file => {
+      const match = file.match(/trending_(\d{4}-\d{2}-\d{2})\.json/);
+      return match ? { file, date: match[1] } : null;
+    }).filter(Boolean).sort((a, b) => b.date.localeCompare(a.date));
+
+    if (datedFiles.length === 0) {
+      console.warn('未找到有效的 trending 数据文件');
+      return [];
+    }
+
+    const latestDate = new Date(`${datedFiles[0].date}T00:00:00Z`);
+    const cutoffDate = new Date(latestDate);
+    cutoffDate.setUTCDate(cutoffDate.getUTCDate() - days + 1);
 
     // 筛选出在指定时间范围内的文件
-    const recentFiles = files.filter(file => {
-      const match = file.match(/trending_(\d{4}-\d{2}-\d{2})\.json/);
-      if (!match) return false;
-      const fileDate = new Date(match[1]);
-      return fileDate >= cutoffDate && fileDate <= now;
-    }).sort().reverse();
+    const recentFiles = datedFiles.filter(item => {
+      const fileDate = new Date(`${item.date}T00:00:00Z`);
+      return fileDate >= cutoffDate && fileDate <= latestDate;
+    }).map(item => item.file);
 
     // 读取并解析每个文件
     const historyData = [];
@@ -105,23 +114,26 @@ function calculateRanking(historyData) {
           description: repo.description || '',
           stars: repo.stars || '0',
           count: 0,
-          dates: []
+          dates: [],
+          latestDate: date
         });
       }
 
       const repoInfo = repoMap.get(name);
 
       // 更新出现次数
-      repoInfo.count++;
-
-      // 记录出现的日期（去重）
+      // 同一天重复数据只统计一次
       if (!repoInfo.dates.includes(date)) {
+        repoInfo.count++;
         repoInfo.dates.push(date);
       }
 
-      // 更新为最新的 star 数量
-      if (repo.stars) {
-        repoInfo.stars = repo.stars;
+      // 输入顺序不固定时也始终保留最新一日的数据
+      if (date > repoInfo.latestDate) {
+        repoInfo.latestDate = date;
+        repoInfo.url = repo.url || repoInfo.url;
+        repoInfo.description = repo.description || repoInfo.description;
+        repoInfo.stars = repo.stars || repoInfo.stars;
       }
     }
   }
@@ -139,7 +151,10 @@ function calculateRanking(historyData) {
   });
 
   // 返回前 N 个项目
-  return sorted.slice(0, config.ranking.maxItems);
+  return sorted.slice(0, config.ranking.maxItems).map(item => {
+    const { latestDate, ...rankingItem } = item;
+    return rankingItem;
+  });
 }
 
 /**
@@ -151,13 +166,17 @@ function calculateRanking(historyData) {
 function loadProjectSummaries(markdownContent) {
   projectSummariesCache = {};
 
-  // 正则表达式匹配 ### 项目名 后面的 一句话概括
-  const projectRegex = /###\s+([^\n]+)\n[\s\S]*?\*\s+\*\*一句话概括\*\*[：:]\s*([^\n]+)/g;
+  // 同时兼容段落格式和旧版无序列表格式
+  const projectRegex = /^###\s+([^\n]+)\r?\n([\s\S]*?)(?=^###\s+|(?![\s\S]))/gm;
   let match;
 
   while ((match = projectRegex.exec(markdownContent)) !== null) {
     const name = match[1].trim();
-    const summary = match[2].trim();
+    const summaryMatch = match[2].match(/^(?:[-*]\s+)?\*\*一句话概括\*\*[：:]\s*(.+)$/m);
+    if (!summaryMatch) {
+      continue;
+    }
+    const summary = summaryMatch[1].trim();
 
     // 存储完整项目名（包含 owner）
     projectSummariesCache[name.toLowerCase()] = summary;

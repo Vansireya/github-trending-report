@@ -41,8 +41,8 @@ function showTooltip(content, event) {
   tooltip.style.display = 'block';
 
   // 跟随鼠标定位
-  const x = event.pageX + TOOLTIP_OFFSET_X;
-  const y = event.pageY + TOOLTIP_OFFSET_Y;
+  const x = event.clientX + TOOLTIP_OFFSET_X;
+  const y = event.clientY + TOOLTIP_OFFSET_Y;
 
   // 获取视口尺寸，防止提示框超出边界
   const viewportWidth = window.innerWidth;
@@ -52,17 +52,17 @@ function showTooltip(content, event) {
   // 如果右侧空间不足，显示在左侧
   let finalX = x;
   if (x + tooltipRect.width > viewportWidth) {
-    finalX = event.pageX - tooltipRect.width - TOOLTIP_OFFSET_X;
+    finalX = event.clientX - tooltipRect.width - TOOLTIP_OFFSET_X;
   }
 
   // 如果底部空间不足，显示在上方
   let finalY = y;
   if (y + tooltipRect.height > viewportHeight) {
-    finalY = event.pageY - tooltipRect.height - TOOLTIP_OFFSET_Y;
+    finalY = event.clientY - tooltipRect.height - TOOLTIP_OFFSET_Y;
   }
 
-  tooltip.style.left = finalX + 'px';
-  tooltip.style.top = finalY + 'px';
+  tooltip.style.left = Math.max(8, finalX) + 'px';
+  tooltip.style.top = Math.max(8, finalY) + 'px';
   tooltip.style.transform = 'none';
 }
 
@@ -81,24 +81,29 @@ function hideTooltip() {
 function updateRanking(timeRange) {
   var rankingList = document.getElementById('rankingList');
 
+  function showEmptyState(message) {
+    var emptyItem = document.createElement('li');
+    emptyItem.className = 'ranking-empty';
+    emptyItem.textContent = message;
+    rankingList.replaceChildren(emptyItem);
+  }
+
   if (typeof rankingData === 'undefined') {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">数据加载中...</li>';
+    showEmptyState('数据加载中...');
     return;
   }
 
   var rankings = rankingData[timeRange] || [];
 
   if (rankings.length === 0) {
-    rankingList.innerHTML = '<li style="color: #6a8a6a; text-align: center;">暂无数据</li>';
+    showEmptyState('暂无数据');
     return;
   }
 
-  let html = '';
+  rankingList.replaceChildren();
 
-  rankings.forEach(function(item, index) {
-    var description = item.description || '暂无描述';
-    var escapedDesc = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
-
+  rankings.forEach(function(item) {
+    var description = item.chineseDesc || item.description || '暂无描述';
     var count = item.count || 0;
     var stars = item.stars || '0';
 
@@ -106,20 +111,46 @@ function updateRanking(timeRange) {
                          '📝 ' + description + '\n\n' +
                          '⭐ ' + stars + ' | 📅 ' + count + ' 次';
 
-    var escapedTooltipContent = tooltipContent.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+    var listItem = document.createElement('li');
+    listItem.addEventListener('mouseenter', function(event) {
+      showTooltip(tooltipContent, event);
+    });
+    listItem.addEventListener('mouseleave', hideTooltip);
 
-    html += '<li onmouseenter="showTooltip(\'' + escapedTooltipContent + '\', event)" onmouseleave="hideTooltip()">';
-    html += '<div class="ranking-item">';
-    html += '<div class="ranking-info">';
-    html += '<a class="ranking-name" href="' + item.url + '" target="_blank">' + item.name + '</a>';
-    html += '<div class="ranking-meta"><span class="ranking-stars">⭐ ' + stars + '</span> <span class="ranking-count">上榜 ' + count + ' 次</span></div>';
-    html += '<div class="ranking-desc">' + description + '</div>';
-    html += '</div>';
-    html += '</div>';
-    html += '</li>';
+    var rankingItem = document.createElement('div');
+    rankingItem.className = 'ranking-item';
+
+    var rankingInfo = document.createElement('div');
+    rankingInfo.className = 'ranking-info';
+
+    var nameLink = document.createElement('a');
+    nameLink.className = 'ranking-name';
+    nameLink.textContent = item.name || '未知项目';
+    nameLink.target = '_blank';
+    nameLink.rel = 'noopener noreferrer';
+    nameLink.href = /^https?:\/\//i.test(item.url || '') ? item.url : '#';
+
+    var meta = document.createElement('div');
+    meta.className = 'ranking-meta';
+
+    var starsElement = document.createElement('span');
+    starsElement.className = 'ranking-stars';
+    starsElement.textContent = '⭐ ' + stars;
+
+    var countElement = document.createElement('span');
+    countElement.className = 'ranking-count';
+    countElement.textContent = '上榜 ' + count + ' 次';
+
+    var descriptionElement = document.createElement('div');
+    descriptionElement.className = 'ranking-desc';
+    descriptionElement.textContent = description;
+
+    meta.append(starsElement, ' ', countElement);
+    rankingInfo.append(nameLink, meta, descriptionElement);
+    rankingItem.appendChild(rankingInfo);
+    listItem.appendChild(rankingItem);
+    rankingList.appendChild(listItem);
   });
-
-  rankingList.innerHTML = html;
 }
 
 /**
@@ -211,7 +242,8 @@ function goToHistoryReport() {
   var selectedDate = daySelect.value;
 
   if (selectedDate) {
-    window.location.href = 'daily_' + selectedDate + '.html';
+    var reportBasePath = document.body.dataset.reportBasePath || '';
+    window.location.href = reportBasePath + 'daily_' + selectedDate + '.html';
   } else {
     alert('请先选择完整的日期！');
   }

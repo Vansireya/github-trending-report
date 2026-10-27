@@ -3,7 +3,7 @@
  * 负责将 Markdown 内容转换为特定的 HTML 卡片格式
  */
 
-const { marked } = require('marked');
+const { marked, Renderer } = require('marked');
 
 /**
  * 将 Markdown 内容转换为 HTML 卡片格式
@@ -15,12 +15,30 @@ const { marked } = require('marked');
  * @returns {string} 转换后的 HTML 内容
  */
 function convertMarkdownToHTML(markdown) {
+  const renderer = new Renderer();
+  renderer.html = function(token) {
+    return escapeHTML(token.text);
+  };
+  renderer.link = function(token) {
+    const rawHref = token.href || '';
+    const href = /^https?:\/\//i.test(rawHref) ? escapeHTML(rawHref) : '#';
+    const text = escapeHTML(token.text || rawHref);
+    return `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  };
+
   // 首先使用 marked 将 Markdown 转换为基本 HTML
-  let html = marked.parse(markdown);
+  let html = marked.parse(markdown, { renderer });
 
   // 提取项目信息并转换为卡片格式
-  // 匹配 ### 项目名 后跟包含各项信息的无序列表
-  const projectRegex = /<h3>([^<]+)<\/h3>\s*<ul>([\s\S]*?)<\/ul>/g;
+  // 同时兼容 AI 生成的段落格式和旧版无序列表格式
+  const projectRegex = /<h3>([^<]+)<\/h3>\s*([\s\S]*?)(?=<h3>|$)/g;
+  const projectFieldNames = new Set([
+    '一句话概括',
+    '详细介绍',
+    '项目网址',
+    'Star 数量',
+    '推荐指数'
+  ]);
 
   let result = html;
   let match;
@@ -29,11 +47,11 @@ function convertMarkdownToHTML(markdown) {
   // 遍历所有匹配的项目块
   while ((match = projectRegex.exec(result)) !== null) {
     const projectName = match[1];
-    const listContent = match[0];
+    const projectContent = match[2];
 
     // 解析列表中的各项信息
-    const liRegex = /<li><strong>([^<]+)<\/strong>：([\s\S]*?)<\/li>/g;
-    let liMatch;
+    const fieldRegex = /<(p|li)><strong>([^<]+)<\/strong>[：:]\s*([\s\S]*?)<\/\1>/g;
+    let fieldMatch;
     const projectData = {
       name: projectName,
       summary: '',
@@ -44,9 +62,9 @@ function convertMarkdownToHTML(markdown) {
     };
 
     // 提取每项信息
-    while ((liMatch = liRegex.exec(listContent)) !== null) {
-      const key = liMatch[1];
-      let value = liMatch[2].trim();
+    while ((fieldMatch = fieldRegex.exec(projectContent)) !== null) {
+      const key = fieldMatch[2];
+      let value = fieldMatch[3].trim();
 
       // 根据不同的键名提取对应的值
       if (key === '一句话概括') {
@@ -72,13 +90,26 @@ function convertMarkdownToHTML(markdown) {
       }
     }
 
-    // 将原始 HTML 块和解析后的数据一起存储
-    projects.push({ original: match[0], data: projectData });
+    // 至少识别出核心字段后才转换，避免误伤普通三级标题
+    if (projectData.summary || projectData.url) {
+      const remainingContent = projectContent
+        .replace(fieldRegex, (fieldHTML, tagName, key) =>
+          projectFieldNames.has(key) ? '' : fieldHTML
+        )
+        .replace(/<ul>\s*<\/ul>/g, '')
+        .trim();
+
+      projects.push({
+        original: match[0],
+        data: projectData,
+        remainingContent
+      });
+    }
   }
 
   // 将每个项目转换为卡片 HTML
   for (const p of projects) {
-    const cardHTML = generateProjectCard(p.data);
+    const cardHTML = generateProjectCard(p.data) + (p.remainingContent ? `\n${p.remainingContent}` : '');
     result = result.replace(p.original, cardHTML);
   }
 
@@ -102,7 +133,8 @@ function generateProjectCard(projectData) {
   const name = escapeHTML(projectData.name || '未知项目');
   const summary = escapeHTML(projectData.summary || '暂无');
   const details = escapeHTML(projectData.details || '暂无');
-  const url = escapeHTML(projectData.url || '#');
+  const rawUrl = projectData.url || '';
+  const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
   const stars = escapeHTML(projectData.stars || '0');
   const rating = escapeHTML(projectData.rating || '暂无');
 
@@ -116,7 +148,7 @@ function generateProjectCard(projectData) {
     <strong>💡 详细介绍:</strong> ${details}
   </div>
   <div class="link">
-    <strong>🔗 项目网址:</strong> <a href="${url}" target="_blank">${url}</a>
+    <strong>🔗 项目网址:</strong> <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>
   </div>
   <div class="stars">
     <strong>✨ Star 数量:</strong> <span>${stars}</span>

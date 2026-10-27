@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "GitHub Trending 日报生成器 - 自动爬取热门项目并生成 AI 总结",
   "scripts": {
-    "start": "npm run scrape && npm run summarize && npm run html",
+    "start": "npm run scrape && npm run summarize && npm run cleanup && npm run html",
     "scrape": "node src/scraper.js",
     "summarize": "node src/summarize.js",
+    "cleanup": "node src/cleanup_history.js",
     "html": "node src/html_generator.js",
+    "rebuild-history": "node src/regenerate_history.js --existing-only",
+    "test": "node --test",
     "report": "npm start"
   },
   "keywords": ["github", "trending", "report", "ai"],

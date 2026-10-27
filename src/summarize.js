@@ -86,10 +86,19 @@ ${JSON.stringify(trendingData, null, 2)}`;
         { role: "user", content: userPrompt }
       ],
       temperature: 0.7,
-      max_tokens: 2000
+      max_tokens: 4000
     });
 
-    return response.choices[0].message.content;
+    if (response.choices[0].finish_reason === 'length') {
+      throw new Error('AI 返回内容被截断，请提高 max_tokens 或缩短提示词');
+    }
+
+    const content = response.choices[0].message.content;
+    if (!content || !content.trim()) {
+      throw new Error('AI 返回了空日报内容');
+    }
+
+    return content.trim();
   } catch (error) {
     console.error('调用 OpenAI API 时发生错误:', error.message);
     if (error.status === 400 || error.status === 404) {
@@ -130,7 +139,7 @@ async function main() {
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
     const today = `${year}-${month}-${day}`;
-    const dataFilePath = path.join(__dirname, '../data', `trending_${today}.json`);
+    let dataFilePath = path.join(__dirname, '../data', `trending_${today}.json`);
     
     // 检查数据文件是否存在
     if (!fs.existsSync(dataFilePath)) {
@@ -173,6 +182,7 @@ async function main() {
     console.log('日报生成成功！');
   } catch (error) {
     console.error('生成日报时发生错误:', error.message);
+    process.exitCode = 1;
   }
 }
 

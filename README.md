@@ -1,6 +1,6 @@
 # GitHub Trending 日报生成器
 
-自动抓取 GitHub Trending 热门项目，生成 AI 总结的中文日报。
+自动抓取 GitHub Trending 热门项目，生成 AI 总结的中文日报。仓库仅保留最近 30 个自然日的数据和报告，避免历史文件无限增长。
 
 ## 快速开始
 
@@ -20,6 +20,12 @@ npm run summarize
 
 # 步骤3: 生成 HTML 页面
 npm run html
+
+# 清理 30 天以前的历史文件
+npm run cleanup
+
+# 使用当前模板重建保留期内的历史页面（不会调用 AI）
+npm run rebuild-history
 ```
 
 ## 项目结构

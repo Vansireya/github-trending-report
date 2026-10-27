@@ -30,6 +30,12 @@ const config = {
     maxItems: 10
   },
 
+  // 历史文件保留配置
+  history: {
+    // 保留最近 30 个自然日的数据和报告
+    retentionDays: 30
+  },
+
   // 侧边栏显示配置
   sidebar: {
     // 侧边栏历史记录显示的最近天数
@@ -74,6 +80,8 @@ const config = {
   // 前端资源路径（相对于生成的 HTML 文件位置）
   frontend: {
     rankingDataPath: '../data/ranking_data.js',
+    stylesheetPath: '../src/templates/style.css',
+    scriptPath: '../src/templates/script.js',
     defaultHomeDate: 'daily_2026-02-22.html'
   },
   openai: {
