@@ -171,7 +171,7 @@ button, select { cursor: pointer; }
 .project-details[hidden] { display: none; }
 .project-details p { margin: 0; padding-top: 8px; color: var(--muted-strong); font-size: 14px; line-height: 1.75; }
 
-.rail { position: sticky; top: 84px; display: grid; gap: 16px; margin-top: 56px; }
+.rail { position: sticky; top: 84px; display: grid; gap: 16px; }
 .rail-panel { padding: 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); backdrop-filter: blur(16px); }
 .panel-heading h2 { margin: 2px 0 0; font-size: 20px; letter-spacing: -.025em; }
 .segmented-control { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin: 16px 0; padding: 4px; background: var(--surface-2); border-radius: 10px; }
@@ -217,7 +217,7 @@ button, select { cursor: pointer; }
 
 @media (max-width: 1050px) {
   .dashboard { grid-template-columns: 1fr; }
-  .rail { position: static; grid-template-columns: repeat(2, 1fr); margin-top: 0; }
+  .rail { position: static; grid-template-columns: repeat(2, 1fr); }
   .rail-note { grid-column: 1 / -1; }
 }
 
