@@ -71,12 +71,6 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
-  resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
-  resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
-  const languageCounts = new Map();
-  repositories.forEach(item => languageCounts.set(item.language || 'Other', (languageCounts.get(item.language || 'Other') || 0) + 1));
-  const topLanguage = Array.from(languageCounts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
-  resultHTML = resultHTML.replace('{{TOP_LANGUAGE}}', topLanguage);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
   resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', config.frontend.stylesheetPath);
   resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', config.frontend.scriptPath);

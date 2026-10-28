@@ -99,9 +99,6 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
-  resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
-  resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
-  resultHTML = resultHTML.replace('{{TOP_LANGUAGE}}', getTopLanguage(repositories));
 
   // 替换排行榜数据路径（移到 <head> 中解决加载时机问题）
   const getFrontendPath = filePath => isIndex ? filePath.replace(/^\.\.\//, '') : filePath;
@@ -129,15 +126,6 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
   resultHTML = resultHTML.replace('{{CONTENT}}', reportLead.content);
 
   return resultHTML.replace(/[ \t]+$/gm, '');
-}
-
-function getTopLanguage(repositories) {
-  const counts = new Map();
-  for (const repository of repositories) {
-    const language = repository.language || 'Other';
-    counts.set(language, (counts.get(language) || 0) + 1);
-  }
-  return Array.from(counts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
 }
 
 function readRepositoryData(dateStr) {
@@ -331,7 +319,6 @@ if (require.main === module) {
 // 导出模块供外部调用
 module.exports = {
   generateHTMLTemplate,
-  getTopLanguage,
   readRepositoryData,
   saveHTMLFile,
   main
