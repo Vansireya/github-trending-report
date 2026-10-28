@@ -65,7 +65,6 @@ function initializeLibrary() {
   state.library = readLibrary();
   document.querySelectorAll('.project-card').forEach(function(card) {
     bindLibraryAction(card, 'favorites', '.favorite-action');
-    bindLibraryAction(card, 'later', '.later-action');
   });
 
   const overlay = document.getElementById('libraryOverlay');
@@ -139,7 +138,6 @@ function refreshLibraryUI() {
   });
   document.getElementById('libraryCount').textContent = Object.keys(state.library.favorites).length;
   document.getElementById('favoriteTabCount').textContent = Object.keys(state.library.favorites).length;
-  document.getElementById('laterTabCount').textContent = Object.keys(state.library.later).length;
   renderLibrary();
 }
 
@@ -237,7 +235,7 @@ function initializeProjectCards() {
     toggle.addEventListener('click', function() {
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!isExpanded));
-      toggle.querySelector('span:first-child').textContent = isExpanded ? '展开项目解读' : '收起项目解读';
+      toggle.setAttribute('aria-label', `${isExpanded ? '展开' : '收起'} ${card.dataset.projectName || '项目'} 的项目解读`);
       details.hidden = isExpanded;
     });
   });
@@ -272,6 +270,8 @@ function updateRanking(timeRange) {
 
   rankings.forEach(function(item) {
     const listItem = document.createElement('li');
+    const project = document.createElement('div');
+    project.className = 'ranking-project';
     const nameLink = document.createElement('a');
     nameLink.className = 'ranking-name';
     nameLink.textContent = item.name || '未知项目';
@@ -279,10 +279,15 @@ function updateRanking(timeRange) {
     nameLink.target = '_blank';
     nameLink.rel = 'noopener noreferrer';
 
+    const description = document.createElement('p');
+    description.className = 'ranking-desc';
+    description.textContent = (item.chineseDesc || item.description || '暂无简介').replace(/^📝\s*/, '');
+
     const count = document.createElement('span');
     count.className = 'ranking-count';
     count.textContent = `${item.count || 0} 次`;
-    listItem.append(nameLink, count);
+    project.append(nameLink, description);
+    listItem.append(project, count);
     rankingList.appendChild(listItem);
   });
 }

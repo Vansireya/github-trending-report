@@ -66,17 +66,32 @@ test('shows the authoritative scraped star count beside the project name', () =>
 **推荐指数**：★★★★☆
 `, [{ name: 'owner/repo', rank: 2, language: 'TypeScript', stars: '9,999', forks: '42', periodStars: '321' }]);
 
-  assert.match(html, /#2/);
+  assert.match(html, /class="rank-badge">2<\/div>/);
   assert.match(html, /TypeScript/);
   assert.match(html, /class="star-pill"[^>]*>★ 9,999/);
   assert.match(html, /aria-expanded="true"/);
   assert.match(html, /project-card--featured/);
   assert.match(html, /class="[^"]*favorite-action/);
-  assert.match(html, /class="[^"]*later-action/);
+  assert.doesNotMatch(html, /later-action|repo-link|展开项目解读|收起项目解读/);
   assert.match(html, /data-project-stars="9,999"/);
   assert.match(html, /id="project-owner-repo">/);
   assert.doesNotMatch(html, /本期增长|Fork|编辑评分/);
   assert.doesNotMatch(html, /适合：|为什么上榜|使用提醒/);
+});
+
+test('keeps the daily feed to a balanced top nine', () => {
+  const html = markdownParser.convertMarkdownToHTML(`
+### owner/repo
+
+**一句话概括**：项目摘要
+
+**项目网址**：https://github.com/owner/repo
+
+**今日总结**：总结仍然保留。
+`, [{ name: 'owner/repo', rank: 10 }]);
+
+  assert.doesNotMatch(html, /project-card/);
+  assert.match(html, /总结仍然保留/);
 });
 
 test('gives the first project a distinct editorial layout', () => {

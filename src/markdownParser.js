@@ -130,6 +130,10 @@ function convertMarkdownToHTML(markdown, repositories = []) {
   // 将每个项目转换为卡片 HTML
   for (const p of projects) {
     const repository = repositoryMap.get(p.data.name.toLowerCase()) || {};
+    if (Number(repository.rank) > 9) {
+      result = result.replace(p.original, p.remainingContent);
+      continue;
+    }
     const cardHTML = generateProjectCard({ ...p.data, repository }) + (p.remainingContent ? `\n${p.remainingContent}` : '');
     result = result.replace(p.original, cardHTML);
   }
@@ -190,7 +194,7 @@ function generateProjectCard(projectData) {
   return `
 <article class="project-card${layoutClass}" data-project-name="${name}" data-project-url="${url}" data-project-summary="${summary}" data-project-stars="${stars}" data-language="${language}">
   <div class="project-card-header">
-    <div class="rank-badge">${rank ? `#${rank}` : 'NEW'}</div>
+    <div class="rank-badge">${rank || 'NEW'}</div>
     <div class="project-identity">
       <div class="project-title-line">
         <a class="project-name" href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
@@ -203,13 +207,11 @@ function generateProjectCard(projectData) {
     </div>
     <div class="project-actions">
       <button class="card-action favorite-action" type="button" aria-label="收藏 ${name}" aria-pressed="false" title="收藏">♡</button>
-      <button class="card-action later-action" type="button" aria-label="将 ${name} 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
-      <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
     </div>
   </div>
   <p class="project-summary">${summary}</p>
-  <button class="detail-toggle" type="button" aria-expanded="${isExpanded}" aria-controls="${cardId}">
-    <span>${isExpanded ? '收起项目解读' : '展开项目解读'}</span><span aria-hidden="true">⌄</span>
+  <button class="detail-toggle" type="button" aria-label="${isExpanded ? '收起' : '展开'} ${name} 的项目解读" aria-expanded="${isExpanded}" aria-controls="${cardId}">
+    <span aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="${cardId}"${isExpanded ? '' : ' hidden'}>
     <div class="detail-lead">
