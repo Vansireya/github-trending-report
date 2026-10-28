@@ -13,6 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { exec } = require('child_process');
 
 // 引入配置文件
@@ -38,6 +39,10 @@ function readTemplateFile(fileName) {
     console.error('读取模板文件失败:', templatePath, error.message);
     return '';
   }
+}
+
+function getTemplateVersion(fileName) {
+  return crypto.createHash('sha1').update(readTemplateFile(fileName)).digest('hex').slice(0, 8);
 }
 
 /**
@@ -107,8 +112,8 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', getFrontendPath(config.frontend.rankingDataPath));
 
   // 替换共享的 CSS 和 JavaScript 路径，避免每份历史 HTML 重复内嵌资源
-  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', getFrontendPath(config.frontend.stylesheetPath));
-  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', getFrontendPath(config.frontend.scriptPath));
+  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', `${getFrontendPath(config.frontend.stylesheetPath)}?v=${getTemplateVersion('style-v2.css')}`);
+  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', `${getFrontendPath(config.frontend.scriptPath)}?v=${getTemplateVersion('script-v2.js')}`);
   resultHTML = resultHTML.replaceAll('{{REPORT_BASE_PATH}}', isIndex ? 'reports/' : '');
 
   // 替换侧边栏标题

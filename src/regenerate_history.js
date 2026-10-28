@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const config = require('./config');
 const markdownParser = require('./markdownParser');
@@ -25,6 +26,10 @@ function readTemplateFile(fileName) {
     console.error('读取模板文件失败:', templatePath, error.message);
     return '';
   }
+}
+
+function getTemplateVersion(fileName) {
+  return crypto.createHash('sha1').update(readTemplateFile(fileName)).digest('hex').slice(0, 8);
 }
 
 /**
@@ -74,8 +79,8 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
-  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', config.frontend.stylesheetPath);
-  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', config.frontend.scriptPath);
+  resultHTML = resultHTML.replace('{{STYLESHEET_PATH}}', `${config.frontend.stylesheetPath}?v=${getTemplateVersion('style-v2.css')}`);
+  resultHTML = resultHTML.replace('{{SCRIPT_PATH}}', `${config.frontend.scriptPath}?v=${getTemplateVersion('script-v2.js')}`);
   resultHTML = resultHTML.replaceAll('{{REPORT_BASE_PATH}}', '');
   resultHTML = resultHTML.replace('{{SIDEBAR_HISTORY_TITLE}}', config.sidebar.historyTitle);
   resultHTML = resultHTML.replace('{{SIDEBAR_RANKING_TITLE}}', config.sidebar.rankingTitle);
