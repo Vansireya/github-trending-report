@@ -63,8 +63,8 @@ async function generateDailyReport(openai, trendingData) {
 
 只输出合法 JSON，不要输出 Markdown、代码围栏或解释。必须严格遵守以下结构：
 {
-  "title": "直述今天最明显的开源主题，不超过32字",
-  "opening": "2至3句直接概括今天发生了什么，并点出最值得注意的1至2个项目",
+  "title": "直接写今天最明显的开源主题，不超过32字，不加栏目式前缀",
+  "opening": "2至3句直接概括今天发生了什么，并点出最值得注意的1至2个项目，不写寒暄或串场",
   "signals": ["最多3条‘今天发生了什么’，每条不超过45字"],
   "projects": [{
     "name": "必须与输入仓库全名完全一致",
@@ -77,9 +77,10 @@ async function generateDailyReport(openai, trendingData) {
 事实约束：
 1. 只能使用输入中的仓库名称、简介、语言、Star 和排名，不得虚构作者背景、性能、功能或采用情况。
 2. 信息不足时明确写“仅凭榜单信息暂无法确认”。
-3. 不寒暄，不写“大家好”或“欢迎收看”；标题禁止使用“狠活”、“炸裂”、“颠覆”等营销词。
-4. 语气可以轻松，但避免段子堆砌、夸张营销和投资建议。
-5. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
+3. 不寒暄，不写“大家好”“各位打工人”“欢迎收看”“话不多说”“开整”“上菜”等串场话术。
+4. 标题直接写主题本身，不以“今日”“GitHub 狠活”“GitHub 热榜”“GitHub 日报”等栏目名开头，并禁止使用“狠活”“炸裂”“颠覆”等营销词。
+5. 语气可以轻松，但避免段子堆砌、夸张营销和投资建议。
+6. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
 
   const userPrompt = `请分析以下 GitHub Trending 数据并生成结构化中文日报：
 
@@ -152,12 +153,28 @@ function validateAndNormalizeReport(report, trendingData) {
   });
 
   return {
-    title: String(report.title || '今日 GitHub Trending 技术雷达'),
-    opening: String(report.opening || '快速浏览今天值得关注的开源项目。'),
+    title: normalizeReportTitle(report.title || '开源项目趋势更新'),
+    opening: normalizeReportOpening(report.opening || '今天值得关注的开源项目集中在以下方向。'),
     signals: Array.isArray(report.signals) ? report.signals.slice(0, 3).map(String) : [],
     projects,
     closing: String(report.closing || '以上判断基于当前公开榜单信息。')
   };
+}
+
+function normalizeReportTitle(title) {
+  return String(title)
+    .replace(/^(?:今日\s*)?GitHub(?:\s+Trending)?\s*(?:狠活|狼活|整活|热榜|日报|雷达)?\s*[：:]\s*/i, '')
+    .trim();
+}
+
+function normalizeReportOpening(opening) {
+  return String(opening)
+    .replace(/^各位[^，。！？!?]{0,80}[，,]\s*/, '')
+    .replace(/^(?:(?:早上|中午|晚上)好)+[。！？!?\s]*/, '')
+    .replace(/^各位[^。！？!?]{0,80}(?:早上好|中午好|晚上好)[。！？!?\s]*/, '')
+    .replace(/^欢迎收看(?:今天的|今日)?\s*GitHub(?:\s+Trending)?(?:\s*日报|\s*热榜|\s*整活现场)?[，,。：:\s—-]*/i, '')
+    .replace(/(?:废?话不多说[，,]\s*(?:直接)?(?:开始)?(?:今天的)?(?:狠活)?(?:盘点|开整|上菜|开扒)|下面(?:开始)?(?:逐个)?(?:开扒|盘))[。！!\s]*$/i, '')
+    .trim();
 }
 
 function reportToMarkdown(report) {
@@ -297,6 +314,8 @@ module.exports = {
   generateDailyReport, 
   parseAIReportContent,
   validateAndNormalizeReport,
+  normalizeReportTitle,
+  normalizeReportOpening,
   reportToMarkdown,
   saveReport,
   saveStructuredReport,

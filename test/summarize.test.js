@@ -24,7 +24,8 @@ test('parses JSON wrapped in a model code fence', () => {
 
 test('keeps scraped facts authoritative and normalizes model fields', () => {
   const report = validateAndNormalizeReport({
-    title: '今日雷达',
+    title: '今日 GitHub 狠活：TypeScript 工具集中上榜',
+    opening: '各位打工人早上好，欢迎收看今天的 GitHub 热榜。TypeScript 工具集中出现。话不多说，开整。',
     signals: ['TypeScript 项目活跃'],
     projects: [{
       name: 'owner/repo',
@@ -38,6 +39,8 @@ test('keeps scraped facts authoritative and normalizes model fields', () => {
   assert.equal(report.projects[0].url, repositories[0].url);
   assert.equal(report.projects[0].stars, repositories[0].stars);
   assert.equal(report.projects[0].problem, '解决问题');
+  assert.equal(report.title, 'TypeScript 工具集中上榜');
+  assert.equal(report.opening, 'TypeScript 工具集中出现。');
   assert.equal('audience' in report.projects[0], false);
   assert.equal('score' in report.projects[0], false);
   assert.equal('risks' in report.projects[0], false);

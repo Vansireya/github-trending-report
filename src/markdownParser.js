@@ -4,6 +4,7 @@
  */
 
 const { marked, Renderer } = require('marked');
+const { normalizeReportTitle, normalizeReportOpening } = require('./summarize');
 
 /**
  * 将 Markdown 内容转换为 HTML 卡片格式
@@ -160,16 +161,25 @@ function convertMarkdownToHTML(markdown, repositories = []) {
 
 function extractReportLead(html) {
   const titleMatch = html.match(/<h1>([\s\S]*?)<\/h1>/);
-  const title = titleMatch ? titleMatch[1].trim() : '今日 GitHub Trending';
+  const title = normalizeReportTitle(titleMatch ? titleMatch[1] : '开源项目趋势更新');
   let content = titleMatch ? html.replace(titleMatch[0], '') : html;
+  content = content.replace(
+    /^\s*<blockquote>\s*<p>\s*\d{4}\s*年[^<]{0,60}(?:技术日报|日报)\s*<\/p>\s*<\/blockquote>\s*/i,
+    ''
+  );
   const quoteMatch = content.match(/^\s*<blockquote>\s*<p>([\s\S]*?)<\/p>\s*<\/blockquote>/);
   const paragraphMatch = content.match(/^\s*<p>([\s\S]*?)<\/p>/);
   const openingMatch = quoteMatch || paragraphMatch;
-  const opening = openingMatch ? openingMatch[1].trim() : '';
+  const opening = normalizeReportOpening(openingMatch ? openingMatch[1] : '');
 
   if (openingMatch) {
     content = content.replace(openingMatch[0], '');
   }
+
+  content = content.replace(
+    /^\s*<p>(?:(?:废?话不多说[，,]\s*(?:直接)?(?:开始)?(?:今天的)?(?:狠活)?(?:盘点|开整|上菜|开扒))|(?:下面(?:开始)?(?:逐个)?(?:开扒|盘)))[。！!\s]*<\/p>\s*/i,
+    ''
+  );
 
   return { title, opening, content: content.trim() };
 }

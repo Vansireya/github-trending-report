@@ -154,6 +154,22 @@ test('moves a legacy blockquote opening out of the project feed', () => {
   assert.equal(lead.content, '<article>项目</article>');
 });
 
+test('removes legacy editorial prefixes and filler from the report lead', () => {
+  const lead = markdownParser.extractReportLead('<h1>今日 GitHub 狠活：AI 工具集中上榜</h1>\n<p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。AI 工具集中出现。话不多说，开整。</p>\n<p>话不多说，开始今天的狠活盘点。</p>\n<article>项目</article>');
+
+  assert.equal(lead.title, 'AI 工具集中上榜');
+  assert.equal(lead.opening, 'AI 工具集中出现。');
+  assert.equal(lead.content, '<article>项目</article>');
+});
+
+test('skips a legacy placeholder date before cleaning the real opening', () => {
+  const lead = markdownParser.extractReportLead('<h1>今日 GitHub 狠活：AI 工具集中上榜</h1>\n<blockquote><p>2026 年某月某日 · 技术日报</p></blockquote>\n<p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。AI 工具集中出现。</p>\n<article>项目</article>');
+
+  assert.equal(lead.title, 'AI 工具集中上榜');
+  assert.equal(lead.opening, 'AI 工具集中出现。');
+  assert.equal(lead.content, '<article>项目</article>');
+});
+
 test('wraps the daily takeaway as a full-width summary panel', () => {
   const html = markdownParser.convertMarkdownToHTML('**今日总结**：保持判断。');
   assert.match(html, /class="summary-section"/);
