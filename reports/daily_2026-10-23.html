@@ -34,25 +34,21 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>2026年10月23日星期五</strong></div>
-        </div>
-        <h1>今日 GitHub 狠活：PHP 老当益壮，AI 摸鱼插件狂揽 17 万星</h1>
-        <p></p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><blockquote>
-<p>今天的榜单堪称&quot;人间真实&quot;——一边是 PHP 被念叨了二十年&quot;要死&quot;，一边默默攒下 4 万星；另一边，一个教你 AI 怎么&quot;偷懒&quot;的项目直接冲上 17 万星，看来&quot;能少写一行是一行&quot;是全人类的共同信仰。</p>
-</blockquote>
-<hr>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月23日星期五</time>
+              <a class="today-link" href="../">← 返回今日</a>
+            </div>
+            <h1>今日 GitHub 狠活：PHP 老当益壮，AI 摸鱼插件狂揽 17 万星</h1>
+            <p>今天的榜单堪称&quot;人间真实&quot;——一边是 PHP 被念叨了二十年&quot;要死&quot;，一边默默攒下 4 万星；另一边，一个教你 AI 怎么&quot;偷懒&quot;的项目直接冲上 17 万星，看来&quot;能少写一行是一行&quot;是全人类的共同信仰。</p>
+          </div>
+        </section>
+        <div class="content" id="projectFeed"><hr>
 
-<article class="project-card project-card--rank-1" data-project-name="php/php-src" data-project-url="https://github.com/php/php-src" data-project-summary="PHP 解释器本尊，就是那个&amp;quot;世界上最好的语言&amp;quot;的发动机。" data-project-stars="41,223" data-language="C">
+<article class="project-card project-card--rank-1" data-project-name="php/php-src" data-project-url="https://github.com/php/php-src" data-project-summary="PHP 解释器本尊，就是那个&quot;世界上最好的语言&quot;的发动机。" data-project-stars="41,223" data-language="C">
   <div class="project-card-header">
     <div class="rank-badge">1</div>
     <div class="project-identity">
@@ -69,12 +65,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 php/php-src" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">PHP 解释器本尊，就是那个&amp;quot;世界上最好的语言&amp;quot;的发动机。</p>
+  <p class="project-summary">PHP 解释器本尊，就是那个&quot;世界上最好的语言&quot;的发动机。</p>
   <button class="detail-toggle" type="button" aria-label="收起 php/php-src 的项目解读" aria-expanded="true" aria-controls="project-php-php-src">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-php-php-src">
-    <p>每次有人喊&amp;quot;PHP 要凉了&amp;quot;，这个仓库的 commit 记录都会默默打脸。它解决的问题很简单——让你写的 `&amp;lt;?php echo &amp;quot;Hello World&amp;quot;; ?&amp;gt;` 能真的跑起来。别看它常被吐槽，全球多少网站的后端还指着它吃饭呢。C 语言写成，性能扎实，是 Web 开发老炮儿的集体回忆，也是新手入门的&amp;quot;必经之路&amp;quot;。想给 PHP 本体提 PR 的勇士，欢迎来战。</p>
+    <p>每次有人喊&quot;PHP 要凉了&quot;，这个仓库的 commit 记录都会默默打脸。它解决的问题很简单——让你写的 `&lt;?php echo &quot;Hello World&quot;; ?&gt;` 能真的跑起来。别看它常被吐槽，全球多少网站的后端还指着它吃饭呢。C 语言写成，性能扎实，是 Web 开发老炮儿的集体回忆，也是新手入门的&quot;必经之路&quot;。想给 PHP 本体提 PR 的勇士，欢迎来战。</p>
   </div>
 </article>
 <hr>
@@ -100,11 +96,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-anthropics-knowledge-work-plugins">
-    <p>你是不是也遇到过——买了个 AI 工具，结果发现它&amp;quot;啥都能聊，啥都干不利索&amp;quot;？这个仓库就是来解决这个尴尬的：Anthropic 亲自下场，把知识工作场景（文档、协作、分析之类）的插件开源出来，让你直接插上就能用，不用自己从零折腾 prompt 和工具链。官方出品，兼容性和维护性相对有保障，适合把 Claude 当生产力工具的知识打工人。</p>
+    <p>你是不是也遇到过——买了个 AI 工具，结果发现它&quot;啥都能聊，啥都干不利索&quot;？这个仓库就是来解决这个尴尬的：Anthropic 亲自下场，把知识工作场景（文档、协作、分析之类）的插件开源出来，让你直接插上就能用，不用自己从零折腾 prompt 和工具链。官方出品，兼容性和维护性相对有保障，适合把 Claude 当生产力工具的知识打工人。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--featured" data-project-name="DietrichGebert/ponytail" data-project-url="https://github.com/DietrichGebert/ponytail" data-project-summary="让你的 AI 编程助手&amp;quot;像全屋最懒的资深老开发一样思考&amp;quot;——最好的代码，是你根本没写的那行。" data-project-stars="173,647" data-language="JavaScript">
+<article class="project-card project-card--featured" data-project-name="DietrichGebert/ponytail" data-project-url="https://github.com/DietrichGebert/ponytail" data-project-summary="让你的 AI 编程助手&quot;像全屋最懒的资深老开发一样思考&quot;——最好的代码，是你根本没写的那行。" data-project-stars="173,647" data-language="JavaScript">
   <div class="project-card-header">
     <div class="rank-badge">3</div>
     <div class="project-identity">
@@ -121,12 +117,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 DietrichGebert/ponytail" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">让你的 AI 编程助手&amp;quot;像全屋最懒的资深老开发一样思考&amp;quot;——最好的代码，是你根本没写的那行。</p>
+  <p class="project-summary">让你的 AI 编程助手&quot;像全屋最懒的资深老开发一样思考&quot;——最好的代码，是你根本没写的那行。</p>
   <button class="detail-toggle" type="button" aria-label="收起 DietrichGebert/ponytail 的项目解读" aria-expanded="true" aria-controls="project-dietrichgebert-ponytail">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-dietrichgebert-ponytail">
-    <p>这个项目的哲学堪称一绝：与其让 AI 疯狂输出几百行代码，不如让它学会&amp;quot;能不加就不加、能复用就复用、能删就删&amp;quot;。它解决的是 AI 编程时代的新痛点——AI 写代码太快了，快到代码库分分钟变成屎山。ponytail 给 agent 灌输&amp;quot;资深摸鱼老哥&amp;quot;的思维模式，追求最小改动、最少新增。17 万星说明什么？说明大家都受够了 AI 的&amp;quot;过度热情&amp;quot;。懒，是一种高级的工程美德。</p>
+    <p>这个项目的哲学堪称一绝：与其让 AI 疯狂输出几百行代码，不如让它学会&quot;能不加就不加、能复用就复用、能删就删&quot;。它解决的是 AI 编程时代的新痛点——AI 写代码太快了，快到代码库分分钟变成屎山。ponytail 给 agent 灌输&quot;资深摸鱼老哥&quot;的思维模式，追求最小改动、最少新增。17 万星说明什么？说明大家都受够了 AI 的&quot;过度热情&quot;。懒，是一种高级的工程美德。</p>
   </div>
 </article>
 <hr>
@@ -152,7 +148,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-cloudflare-security-audit-skill" hidden>
-    <p>安全审计这事儿，最怕的就是&amp;quot;报告写得天花乱坠，一验证全是误报&amp;quot;。这个 skill 的思路很 Cloudflare——分阶段审计，每个发现都能被独立验证，输出机器可读的结果，方便接进 CI/CD 流水线。对于想让 AI 帮忙做安全扫描、又怕被 AI 一本正经胡说八道的团队来说，这套&amp;quot;可验证&amp;quot;的设计就是定心丸。</p>
+    <p>安全审计这事儿，最怕的就是&quot;报告写得天花乱坠，一验证全是误报&quot;。这个 skill 的思路很 Cloudflare——分阶段审计，每个发现都能被独立验证，输出机器可读的结果，方便接进 CI/CD 流水线。对于想让 AI 帮忙做安全扫描、又怕被 AI 一本正经胡说八道的团队来说，这套&quot;可验证&quot;的设计就是定心丸。</p>
   </div>
 </article>
 <hr>
@@ -178,7 +174,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-graphify-labs-graphify" hidden>
-    <p>接手一个祖传项目时，你是不是也想问&amp;quot;这坨代码到底谁调谁&amp;quot;？graphify 就是干这个的：本地确定性 AST 解析，把代码、文档、数据库结构全串成一张图，每条边都有解释，而且——注意这个卖点——不用向量数据库。它作为 `/graphify` skill 接入 Claude Code、Cursor、Codex、Gemini CLI，让 AI 助手真的&amp;quot;看懂&amp;quot;你的项目结构，而不是靠猜。13 万星，说明&amp;quot;读懂屎山&amp;quot;是刚需。</p>
+    <p>接手一个祖传项目时，你是不是也想问&quot;这坨代码到底谁调谁&quot;？graphify 就是干这个的：本地确定性 AST 解析，把代码、文档、数据库结构全串成一张图，每条边都有解释，而且——注意这个卖点——不用向量数据库。它作为 `/graphify` skill 接入 Claude Code、Cursor、Codex、Gemini CLI，让 AI 助手真的&quot;看懂&quot;你的项目结构，而不是靠猜。13 万星，说明&quot;读懂屎山&quot;是刚需。</p>
   </div>
 </article>
 <hr>
@@ -204,7 +200,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-supabase-supabase" hidden>
-    <p>Firebase 好用但锁死、还贵？Supabase 就是那个&amp;quot;开源版 Firebase&amp;quot;——底层是正儿八经的 Postgres，认证、存储、实时订阅、边缘函数一应俱全，数据还攥在你自己手里。对于想快速起项目又不想被云厂商绑死的开发者，这是目前最省心的选择之一。11 万星不是白来的，社区活跃度肉眼可见。</p>
+    <p>Firebase 好用但锁死、还贵？Supabase 就是那个&quot;开源版 Firebase&quot;——底层是正儿八经的 Postgres，认证、存储、实时订阅、边缘函数一应俱全，数据还攥在你自己手里。对于想快速起项目又不想被云厂商绑死的开发者，这是目前最省心的选择之一。11 万星不是白来的，社区活跃度肉眼可见。</p>
   </div>
 </article>
 <hr>
@@ -230,7 +226,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-fastapi-fastapi" hidden>
-    <p>写 Python 后端还在纠结 Flask 还是 Django？FastAPI 用类型注解 + 自动生成 OpenAPI 文档，把&amp;quot;写接口&amp;quot;和&amp;quot;写文档&amp;quot;这两件苦差事合并成一件。异步性能好，Pydantic 校验香，10 万星的老牌实力派。如果你要快速搭一个 AI 服务的 API 层，它基本是默认答案。</p>
+    <p>写 Python 后端还在纠结 Flask 还是 Django？FastAPI 用类型注解 + 自动生成 OpenAPI 文档，把&quot;写接口&quot;和&quot;写文档&quot;这两件苦差事合并成一件。异步性能好，Pydantic 校验香，10 万星的老牌实力派。如果你要快速搭一个 AI 服务的 API 层，它基本是默认答案。</p>
   </div>
 </article>
 <hr>
@@ -256,7 +252,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-luongnv89-claude-howto" hidden>
-    <p>Claude Code 功能一堆，官方文档又长又干，很多人装了之后只会 `claude &amp;quot;帮我改个 bug&amp;quot;`。这个仓库把学习曲线掰弯了：图示 + 实例 + 复制即用的模板，从入门到进阶 agent 一条龙。4 万多星说明&amp;quot;看不懂官方文档&amp;quot;是普遍痛点，而&amp;quot;抄作业&amp;quot;永远是最快的成长方式。</p>
+    <p>Claude Code 功能一堆，官方文档又长又干，很多人装了之后只会 `claude &quot;帮我改个 bug&quot;`。这个仓库把学习曲线掰弯了：图示 + 实例 + 复制即用的模板，从入门到进阶 agent 一条龙。4 万多星说明&quot;看不懂官方文档&quot;是普遍痛点，而&quot;抄作业&quot;永远是最快的成长方式。</p>
   </div>
 </article>
 <hr>
@@ -282,7 +278,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-meloong-git-pcl" hidden>
-    <p>在满屏 AI 和大模型里，PCL 显得格外清流——它就是个 Minecraft 启动器，用 Visual Basic .NET 写的，功能齐全、界面友好，是国内玩家装模组、开整合包的常用工具。8 千多星在大项目面前不算多，但胜在&amp;quot;接地气&amp;quot;：不是每个热门项目都得改变世界，能让玩家顺利进游戏，也是一种功德。</p>
+    <p>在满屏 AI 和大模型里，PCL 显得格外清流——它就是个 Minecraft 启动器，用 Visual Basic .NET 写的，功能齐全、界面友好，是国内玩家装模组、开整合包的常用工具。8 千多星在大项目面前不算多，但胜在&quot;接地气&quot;：不是每个热门项目都得改变世界，能让玩家顺利进游戏，也是一种功德。</p>
   </div>
 </article>
 <hr>
@@ -322,7 +318,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
         </section>

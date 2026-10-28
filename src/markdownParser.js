@@ -162,7 +162,9 @@ function extractReportLead(html) {
   const titleMatch = html.match(/<h1>([\s\S]*?)<\/h1>/);
   const title = titleMatch ? titleMatch[1].trim() : '今日 GitHub Trending';
   let content = titleMatch ? html.replace(titleMatch[0], '') : html;
-  const openingMatch = content.match(/^\s*<p>([\s\S]*?)<\/p>/);
+  const quoteMatch = content.match(/^\s*<blockquote>\s*<p>([\s\S]*?)<\/p>\s*<\/blockquote>/);
+  const paragraphMatch = content.match(/^\s*<p>([\s\S]*?)<\/p>/);
+  const openingMatch = quoteMatch || paragraphMatch;
   const opening = openingMatch ? openingMatch[1].trim() : '';
 
   if (openingMatch) {
@@ -181,8 +183,8 @@ function generateProjectCard(projectData) {
   // 安全处理：确保所有字段都有值
   const repository = projectData.repository || {};
   const name = escapeHTML(projectData.name || '未知项目');
-  const summary = escapeHTML(projectData.summary || '暂无');
-  const details = escapeHTML(projectData.details || '暂无');
+  const summary = escapeHTML(decodeHTMLEntities(projectData.summary || '暂无'));
+  const details = escapeHTML(decodeHTMLEntities(projectData.details || '暂无'));
   const rawUrl = repository.url || projectData.url || '';
   const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
   const stars = escapeHTML(repository.stars || projectData.stars || '0');
@@ -240,6 +242,25 @@ function escapeHTML(str) {
     "'": '&#39;'
   };
   return str.replace(/[&<>"']/g, char => htmlEntities[char]);
+}
+
+function decodeHTMLEntities(str) {
+  const namedEntities = {
+    amp: '&',
+    lt: '<',
+    gt: '>',
+    quot: '"',
+    apos: "'",
+    '#39': "'"
+  };
+
+  return str.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|#39);/gi, function(entity, code) {
+    if (code[0] !== '#') return namedEntities[code.toLowerCase()] || entity;
+    const value = code[1].toLowerCase() === 'x'
+      ? Number.parseInt(code.slice(2), 16)
+      : Number.parseInt(code.slice(1), 10);
+    return Number.isFinite(value) ? String.fromCodePoint(value) : entity;
+  });
 }
 
 /**

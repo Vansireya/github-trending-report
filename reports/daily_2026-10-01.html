@@ -34,25 +34,21 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>2026年10月1日星期四</strong></div>
-        </div>
-        <h1>今日 GitHub 狠活：AI 智能体集体&quot;发疯&quot;，有人靠教 AI 摸鱼狂揽 14 万 Star</h1>
-        <p></p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><blockquote>
-<p>今天的榜单只有一个主题：AI Agent。从安全沙箱到摸鱼哲学，从语音克隆到一键生成短视频，GitHub 的老哥们正在用代码证明——<strong>人类负责躺平，AI 负责干活</strong>。下面进入正题，请系好安全带。</p>
-</blockquote>
-<hr>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月1日星期四</time>
+              <a class="today-link" href="../">← 返回今日</a>
+            </div>
+            <h1>今日 GitHub 狠活：AI 智能体集体&quot;发疯&quot;，有人靠教 AI 摸鱼狂揽 14 万 Star</h1>
+            <p>今天的榜单只有一个主题：AI Agent。从安全沙箱到摸鱼哲学，从语音克隆到一键生成短视频，GitHub 的老哥们正在用代码证明——<strong>人类负责躺平，AI 负责干活</strong>。下面进入正题，请系好安全带。</p>
+          </div>
+        </section>
+        <div class="content" id="projectFeed"><hr>
 
-<article class="project-card project-card--rank-1" data-project-name="NVIDIA/OpenShell" data-project-url="https://github.com/NVIDIA/OpenShell" data-project-summary="给&amp;quot;自主 AI 智能体&amp;quot;造的一个安全、私密的运行时沙箱，让它们别在你电脑里乱来。" data-project-stars="12,894" data-language="Rust">
+<article class="project-card project-card--rank-1" data-project-name="NVIDIA/OpenShell" data-project-url="https://github.com/NVIDIA/OpenShell" data-project-summary="给&quot;自主 AI 智能体&quot;造的一个安全、私密的运行时沙箱，让它们别在你电脑里乱来。" data-project-stars="12,894" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">1</div>
     <div class="project-identity">
@@ -69,12 +65,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/OpenShell" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给&amp;quot;自主 AI 智能体&amp;quot;造的一个安全、私密的运行时沙箱，让它们别在你电脑里乱来。</p>
+  <p class="project-summary">给&quot;自主 AI 智能体&quot;造的一个安全、私密的运行时沙箱，让它们别在你电脑里乱来。</p>
   <button class="detail-toggle" type="button" aria-label="收起 NVIDIA/OpenShell 的项目解读" aria-expanded="true" aria-controls="project-nvidia-openshell">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nvidia-openshell">
-    <p>英伟达出手了，而且用的是 Rust——这俩词放一起就透着一股&amp;quot;我认真了&amp;quot;的味道。OpenShell 解决的是一个很现实的问题：当你让 AI Agent 自己去执行命令、读写文件、调用工具时，怎么保证它不会顺手把你的 `~/.ssh` 目录打包上传？OpenShell 就是那层&amp;quot;防弹玻璃&amp;quot;，让智能体在受控环境里放飞自我，出了事也炸不到宿主系统。对于想跑自主 Agent 又怕被背刺的开发者，这就是刚需。</p>
+    <p>英伟达出手了，而且用的是 Rust——这俩词放一起就透着一股&quot;我认真了&quot;的味道。OpenShell 解决的是一个很现实的问题：当你让 AI Agent 自己去执行命令、读写文件、调用工具时，怎么保证它不会顺手把你的 `~/.ssh` 目录打包上传？OpenShell 就是那层&quot;防弹玻璃&quot;，让智能体在受控环境里放飞自我，出了事也炸不到宿主系统。对于想跑自主 Agent 又怕被背刺的开发者，这就是刚需。</p>
   </div>
 </article>
 <hr>
@@ -100,11 +96,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-debpalash-voicestudio">
-    <p>ElevenLabs 好用是好用，但按字符收费这事儿，做长视频的人懂的都懂——钱包在滴血。VoiceStudio 直接掀桌：开源、全本地、不要钱。语音克隆、语音设计、视频配音、听写、转录、有声书创作一条龙，646 种语言覆盖到你可能都没听说过的语种。数据不出本机，隐私拉满。唯一的要求是你得有块像样的显卡，毕竟&amp;quot;免费&amp;quot;的代价通常是电费。</p>
+    <p>ElevenLabs 好用是好用，但按字符收费这事儿，做长视频的人懂的都懂——钱包在滴血。VoiceStudio 直接掀桌：开源、全本地、不要钱。语音克隆、语音设计、视频配音、听写、转录、有声书创作一条龙，646 种语言覆盖到你可能都没听说过的语种。数据不出本机，隐私拉满。唯一的要求是你得有块像样的显卡，毕竟&quot;免费&quot;的代价通常是电费。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--featured" data-project-name="mvschwarz/openrig" data-project-url="https://github.com/mvschwarz/openrig" data-project-summary="把 Claude Code 和 Codex 塞进同一个&amp;quot;马具&amp;quot;里，让两个 AI 编程助手协同干活。" data-project-stars="3,089" data-language="TypeScript">
+<article class="project-card project-card--featured" data-project-name="mvschwarz/openrig" data-project-url="https://github.com/mvschwarz/openrig" data-project-summary="把 Claude Code 和 Codex 塞进同一个&quot;马具&quot;里，让两个 AI 编程助手协同干活。" data-project-stars="3,089" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">3</div>
     <div class="project-identity">
@@ -121,7 +117,7 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 mvschwarz/openrig" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">把 Claude Code 和 Codex 塞进同一个&amp;quot;马具&amp;quot;里，让两个 AI 编程助手协同干活。</p>
+  <p class="project-summary">把 Claude Code 和 Codex 塞进同一个&quot;马具&quot;里，让两个 AI 编程助手协同干活。</p>
   <button class="detail-toggle" type="button" aria-label="收起 mvschwarz/openrig 的项目解读" aria-expanded="true" aria-controls="project-mvschwarz-openrig">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
@@ -130,7 +126,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="给 AI 编程助手做&amp;quot;上下文瘦身&amp;quot;，工具输出砍掉 98%，还能跨 17 个平台记住会话。" data-project-stars="24,526" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="给 AI 编程助手做&quot;上下文瘦身&quot;，工具输出砍掉 98%，还能跨 17 个平台记住会话。" data-project-stars="24,526" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">4</div>
     <div class="project-identity">
@@ -147,16 +143,16 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 mksglu/context-mode" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给 AI 编程助手做&amp;quot;上下文瘦身&amp;quot;，工具输出砍掉 98%，还能跨 17 个平台记住会话。</p>
+  <p class="project-summary">给 AI 编程助手做&quot;上下文瘦身&quot;，工具输出砍掉 98%，还能跨 17 个平台记住会话。</p>
   <button class="detail-toggle" type="button" aria-label="展开 mksglu/context-mode 的项目解读" aria-expanded="false" aria-controls="project-mksglu-context-mode">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mksglu-context-mode" hidden>
-    <p>用过 AI 编程 Agent 的人都知道那个痛：聊到一半，上下文爆了，AI 开始失忆，前面说过的话全当放屁。context-mode 就是来解决这个&amp;quot;金鱼记忆&amp;quot;问题的。它把工具输出塞进沙箱（号称减少 98% 的 token 占用），持久化会话记忆，还通过 MCP + hooks 在 17 个平台上统一路由。翻译成人话：&lt;strong&gt;让你的 AI 助手从&amp;quot;七秒记忆&amp;quot;进化成&amp;quot;能记住昨天吵架内容&amp;quot;的正常人。&lt;/strong&gt;</p>
+    <p>用过 AI 编程 Agent 的人都知道那个痛：聊到一半，上下文爆了，AI 开始失忆，前面说过的话全当放屁。context-mode 就是来解决这个&quot;金鱼记忆&quot;问题的。它把工具输出塞进沙箱（号称减少 98% 的 token 占用），持久化会话记忆，还通过 MCP + hooks 在 17 个平台上统一路由。翻译成人话：&lt;strong&gt;让你的 AI 助手从&quot;七秒记忆&quot;进化成&quot;能记住昨天吵架内容&quot;的正常人。&lt;/strong&gt;</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="DietrichGebert/ponytail" data-project-url="https://github.com/DietrichGebert/ponytail" data-project-summary="让你的 AI Agent 像&amp;quot;全公司最懒的资深老油条&amp;quot;一样思考——最好的代码，是你压根没写的代码。" data-project-stars="149,291" data-language="JavaScript">
+<article class="project-card project-card--compact" data-project-name="DietrichGebert/ponytail" data-project-url="https://github.com/DietrichGebert/ponytail" data-project-summary="让你的 AI Agent 像&quot;全公司最懒的资深老油条&quot;一样思考——最好的代码，是你压根没写的代码。" data-project-stars="149,291" data-language="JavaScript">
   <div class="project-card-header">
     <div class="rank-badge">5</div>
     <div class="project-identity">
@@ -173,16 +169,16 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 DietrichGebert/ponytail" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">让你的 AI Agent 像&amp;quot;全公司最懒的资深老油条&amp;quot;一样思考——最好的代码，是你压根没写的代码。</p>
+  <p class="project-summary">让你的 AI Agent 像&quot;全公司最懒的资深老油条&quot;一样思考——最好的代码，是你压根没写的代码。</p>
   <button class="detail-toggle" type="button" aria-label="展开 DietrichGebert/ponytail 的项目解读" aria-expanded="false" aria-controls="project-dietrichgebert-ponytail">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-dietrichgebert-ponytail" hidden>
-    <p>14 万 Star，说明这个项目的哲学戳中了太多人。ponytail 的核心思想极其反直觉又极其正确：&lt;strong&gt;别让 AI 拼命堆代码，让它学会&amp;quot;不写&amp;quot;。&lt;/strong&gt; 资深工程师和新手的区别从来不是谁写得多，而是谁知道什么不该写。ponytail 把这种&amp;quot;懒惰智慧&amp;quot;注入 AI Agent，让它优先考虑复用、删除、绕过，而不是无脑生成 500 行没人看得懂的屎山。这可能是今天榜单里最有&amp;quot;人味&amp;quot;的项目。</p>
+    <p>14 万 Star，说明这个项目的哲学戳中了太多人。ponytail 的核心思想极其反直觉又极其正确：&lt;strong&gt;别让 AI 拼命堆代码，让它学会&quot;不写&quot;。&lt;/strong&gt; 资深工程师和新手的区别从来不是谁写得多，而是谁知道什么不该写。ponytail 把这种&quot;懒惰智慧&quot;注入 AI Agent，让它优先考虑复用、删除、绕过，而不是无脑生成 500 行没人看得懂的屎山。这可能是今天榜单里最有&quot;人味&quot;的项目。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="harry0703/MoneyPrinterTurbo" data-project-url="https://github.com/harry0703/MoneyPrinterTurbo" data-project-summary="输入一个主题或关键词，AI 自动帮你生成一条高清短视频，主打一个&amp;quot;印钞机&amp;quot;。" data-project-stars="127,618" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="harry0703/MoneyPrinterTurbo" data-project-url="https://github.com/harry0703/MoneyPrinterTurbo" data-project-summary="输入一个主题或关键词，AI 自动帮你生成一条高清短视频，主打一个&quot;印钞机&quot;。" data-project-stars="127,618" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">6</div>
     <div class="project-identity">
@@ -199,16 +195,16 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 harry0703/MoneyPrinterTurbo" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">输入一个主题或关键词，AI 自动帮你生成一条高清短视频，主打一个&amp;quot;印钞机&amp;quot;。</p>
+  <p class="project-summary">输入一个主题或关键词，AI 自动帮你生成一条高清短视频，主打一个&quot;印钞机&quot;。</p>
   <button class="detail-toggle" type="button" aria-label="展开 harry0703/MoneyPrinterTurbo 的项目解读" aria-expanded="false" aria-controls="project-harry0703-moneyprinterturbo">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-harry0703-moneyprinterturbo" hidden>
-    <p>名字起得相当直白——MoneyPrinter（印钞机），Turbo（涡轮增压）。这个项目在国内技术圈已经火过好几轮了，逻辑很简单：给个关键词，它自动写脚本、配音、找素材、剪辑、加字幕，一条龙产出短视频。对于做自媒体矩阵、批量铺内容的人来说，这就是生产力核弹。当然，&amp;quot;一键生成&amp;quot;和&amp;quot;一键爆款&amp;quot;之间还隔着一条银河，但至少它帮你把重复劳动干完了。</p>
+    <p>名字起得相当直白——MoneyPrinter（印钞机），Turbo（涡轮增压）。这个项目在国内技术圈已经火过好几轮了，逻辑很简单：给个关键词，它自动写脚本、配音、找素材、剪辑、加字幕，一条龙产出短视频。对于做自媒体矩阵、批量铺内容的人来说，这就是生产力核弹。当然，&quot;一键生成&quot;和&quot;一键爆款&quot;之间还隔着一条银河，但至少它帮你把重复劳动干完了。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="openclaw/openclaw" data-project-url="https://github.com/openclaw/openclaw" data-project-summary="一个&amp;quot;真能干活&amp;quot;的 AI，跨操作系统、跨平台，走的是&amp;quot;龙虾路线&amp;quot;🦞。" data-project-stars="391,015" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="openclaw/openclaw" data-project-url="https://github.com/openclaw/openclaw" data-project-summary="一个&quot;真能干活&quot;的 AI，跨操作系统、跨平台，走的是&quot;龙虾路线&quot;🦞。" data-project-stars="391,015" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">7</div>
     <div class="project-identity">
@@ -225,12 +221,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 openclaw/openclaw" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">一个&amp;quot;真能干活&amp;quot;的 AI，跨操作系统、跨平台，走的是&amp;quot;龙虾路线&amp;quot;🦞。</p>
+  <p class="project-summary">一个&quot;真能干活&quot;的 AI，跨操作系统、跨平台，走的是&quot;龙虾路线&quot;🦞。</p>
   <button class="detail-toggle" type="button" aria-label="展开 openclaw/openclaw 的项目解读" aria-expanded="false" aria-controls="project-openclaw-openclaw">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-openclaw-openclaw" hidden>
-    <p>39 万 Star。你没看错，&lt;strong&gt;39 万&lt;/strong&gt;。这个数字已经超越了&amp;quot;热门项目&amp;quot;的范畴，进入了&amp;quot;社会现象&amp;quot;级别。openclaw 的野心是做一个真正能执行任务的 AI——不是陪你聊天的，是帮你在任何系统、任何平台上把事情办了的。那个 🦞 emoji 和&amp;quot;the lobster way&amp;quot;是它的招牌梗，社区氛围相当魔性。至于它到底能干啥，建议直接去仓库看——毕竟 39 万人不会集体眼瞎。</p>
+    <p>39 万 Star。你没看错，&lt;strong&gt;39 万&lt;/strong&gt;。这个数字已经超越了&quot;热门项目&quot;的范畴，进入了&quot;社会现象&quot;级别。openclaw 的野心是做一个真正能执行任务的 AI——不是陪你聊天的，是帮你在任何系统、任何平台上把事情办了的。那个 🦞 emoji 和&quot;the lobster way&quot;是它的招牌梗，社区氛围相当魔性。至于它到底能干啥，建议直接去仓库看——毕竟 39 万人不会集体眼瞎。</p>
   </div>
 </article>
 <hr>
@@ -256,11 +252,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-composiohq-awesome-claude-skills" hidden>
-    <p>这是一个&amp;quot;awesome 列表&amp;quot;类项目，但能冲到 7.6 万 Star，说明 Claude Skills 这个生态确实火了。它收集了各种 Claude Skills、资源和工具，帮你自定义 Claude 的工作流。说白了就是：&lt;strong&gt;别人已经踩过的坑、调好的配置，你直接抄作业就行。&lt;/strong&gt; 对于正在用 Claude 做自动化、做 Agent 的开发者，这是个省时间的宝库。</p>
+    <p>这是一个&quot;awesome 列表&quot;类项目，但能冲到 7.6 万 Star，说明 Claude Skills 这个生态确实火了。它收集了各种 Claude Skills、资源和工具，帮你自定义 Claude 的工作流。说白了就是：&lt;strong&gt;别人已经踩过的坑、调好的配置，你直接抄作业就行。&lt;/strong&gt; 对于正在用 Claude 做自动化、做 Agent 的开发者，这是个省时间的宝库。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="给&amp;quot;真正的工程师&amp;quot;用的 Skills 合集，直接从作者本人的 .agents 目录里掏出来的。" data-project-stars="273,083" data-language="Shell">
+<article class="project-card project-card--compact" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="给&quot;真正的工程师&quot;用的 Skills 合集，直接从作者本人的 .agents 目录里掏出来的。" data-project-stars="273,083" data-language="Shell">
   <div class="project-card-header">
     <div class="rank-badge">9</div>
     <div class="project-identity">
@@ -277,12 +273,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 mattpocock/skills" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给&amp;quot;真正的工程师&amp;quot;用的 Skills 合集，直接从作者本人的 .agents 目录里掏出来的。</p>
+  <p class="project-summary">给&quot;真正的工程师&quot;用的 Skills 合集，直接从作者本人的 .agents 目录里掏出来的。</p>
   <button class="detail-toggle" type="button" aria-label="展开 mattpocock/skills 的项目解读" aria-expanded="false" aria-controls="project-mattpocock-skills">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mattpocock-skills" hidden>
-    <p>27 万 Star，Shell 语言写的。这个项目的卖点就俩字：&lt;strong&gt;真实&lt;/strong&gt;。作者 Matt Pocock（TypeScript 圈知名教育者）把自己日常在用的 Agent 技能目录直接开源了，没有包装、没有营销，就是&amp;quot;我平时这么用，你拿去&amp;quot;。对于想看看高手怎么配置 AI 工作流的人来说，这比任何教程都直接。当然，Shell 脚本意味着你得有点动手能力，别指望双击运行。</p>
+    <p>27 万 Star，Shell 语言写的。这个项目的卖点就俩字：&lt;strong&gt;真实&lt;/strong&gt;。作者 Matt Pocock（TypeScript 圈知名教育者）把自己日常在用的 Agent 技能目录直接开源了，没有包装、没有营销，就是&quot;我平时这么用，你拿去&quot;。对于想看看高手怎么配置 AI 工作流的人来说，这比任何教程都直接。当然，Shell 脚本意味着你得有点动手能力，别指望双击运行。</p>
   </div>
 </article>
 <hr></div>
@@ -321,7 +317,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
         </section>

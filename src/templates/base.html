@@ -34,19 +34,18 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>{{DATE_CN}}</strong></div>
-        </div>
-        <h1>{{REPORT_HEADLINE}}</h1>
-        <p>{{REPORT_OPENING}}</p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">{{DATE_CN}}</time>
+              {{TODAY_LINK}}
+            </div>
+            <h1>{{REPORT_HEADLINE}}</h1>
+            <p>{{REPORT_OPENING}}</p>
+          </div>
+        </section>
         <div class="content" id="projectFeed">{{CONTENT}}</div>
       </div>
 

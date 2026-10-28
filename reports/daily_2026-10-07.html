@@ -34,23 +34,19 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>2026年10月7日星期三</strong></div>
-        </div>
-        <h1>今日 GitHub 狠活：AI 代理开始抢设计师、测试员和逆向工程师的饭碗了</h1>
-        <p></p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><blockquote>
-<p>2026 年某月某日 · 技术日报</p>
-</blockquote>
-<p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。今天这份榜单的含金量有点高——高到让人怀疑是不是所有开发者都在偷偷给 AI 代理造工具，好让自己能早点躺平。从端到端测试到 CAD 建模，从逆向工程到&quot;专治 AI 啰嗦&quot;的 ADHD 插件，今天的关键词只有一个：<strong>让 Agent 干活，我摸鱼</strong>。</p>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月7日星期三</time>
+              <a class="today-link" href="../">← 返回今日</a>
+            </div>
+            <h1>今日 GitHub 狠活：AI 代理开始抢设计师、测试员和逆向工程师的饭碗了</h1>
+            <p>2026 年某月某日 · 技术日报</p>
+          </div>
+        </section>
+        <div class="content" id="projectFeed"><p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。今天这份榜单的含金量有点高——高到让人怀疑是不是所有开发者都在偷偷给 AI 代理造工具，好让自己能早点躺平。从端到端测试到 CAD 建模，从逆向工程到&quot;专治 AI 啰嗦&quot;的 ADHD 插件，今天的关键词只有一个：<strong>让 Agent 干活，我摸鱼</strong>。</p>
 <p>话不多说，开始今天的狠活盘点。</p>
 
 <article class="project-card project-card--rank-1" data-project-name="tester-army/e2e" data-project-url="https://github.com/tester-army/e2e" data-project-summary="下一代 Web 和移动端的端到端测试框架，让你的测试用例不再像考古现场。" data-project-stars="6,481" data-language="TypeScript">
@@ -75,10 +71,10 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-tester-army-e2e">
-    <p>端到端测试这件事，做过的人都知道有多痛——Selenium 慢得像在拨号上网，Cypress 偶尔抽风，Playwright 虽然好用但配置起来还是得写一堆样板代码。这个项目号称&amp;quot;下一代&amp;quot;，主打的就是让写 E2E 测试像写单元测试一样顺手。对于每天被 CI 流水线红叉折磨的 QA 和全栈工程师来说，这可能是本周最值得点 star 的项目。</p>
+    <p>端到端测试这件事，做过的人都知道有多痛——Selenium 慢得像在拨号上网，Cypress 偶尔抽风，Playwright 虽然好用但配置起来还是得写一堆样板代码。这个项目号称&quot;下一代&quot;，主打的就是让写 E2E 测试像写单元测试一样顺手。对于每天被 CI 流水线红叉折磨的 QA 和全栈工程师来说，这可能是本周最值得点 star 的项目。</p>
   </div>
 </article>
-<article class="project-card project-card--featured" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="一位资深工程师把自己 .agents 目录里的 AI 技能包开源了，号称&amp;quot;给真·工程师用的技能&amp;quot;。" data-project-stars="278,274" data-language="Shell">
+<article class="project-card project-card--featured" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="一位资深工程师把自己 .agents 目录里的 AI 技能包开源了，号称&quot;给真·工程师用的技能&quot;。" data-project-stars="278,274" data-language="Shell">
   <div class="project-card-header">
     <div class="rank-badge">2</div>
     <div class="project-identity">
@@ -95,12 +91,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 mattpocock/skills" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">一位资深工程师把自己 .agents 目录里的 AI 技能包开源了，号称&amp;quot;给真·工程师用的技能&amp;quot;。</p>
+  <p class="project-summary">一位资深工程师把自己 .agents 目录里的 AI 技能包开源了，号称&quot;给真·工程师用的技能&quot;。</p>
   <button class="detail-toggle" type="button" aria-label="收起 mattpocock/skills 的项目解读" aria-expanded="true" aria-controls="project-mattpocock-skills">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mattpocock-skills">
-    <p>Matt Pocock 是 TypeScript 圈的老熟人，这次他把自己日常用的 Agent 技能配置直接开源。所谓&amp;quot;Skills&amp;quot;，就是教 AI 代理怎么按你的规矩干活——怎么写代码、怎么 review、怎么不瞎猜。278K star 这个数字已经说明一切：大家苦&amp;quot;AI 代理乱来&amp;quot;久矣，与其自己从零调教，不如抄作业。</p>
+    <p>Matt Pocock 是 TypeScript 圈的老熟人，这次他把自己日常用的 Agent 技能配置直接开源。所谓&quot;Skills&quot;，就是教 AI 代理怎么按你的规矩干活——怎么写代码、怎么 review、怎么不瞎猜。278K star 这个数字已经说明一切：大家苦&quot;AI 代理乱来&quot;久矣，与其自己从零调教，不如抄作业。</p>
   </div>
 </article>
 <article class="project-card project-card--featured" data-project-name="earthtojake/text-to-cad" data-project-url="https://github.com/earthtojake/text-to-cad" data-project-summary="给你的 AI 代理装上 CAD 超能力，说句话就能生成三维模型。" data-project-stars="18,048" data-language="Python">
@@ -125,7 +121,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-earthtojake-text-to-cad">
-    <p>以前做 CAD 建模，你得在 SolidWorks 或 Fusion 360 里点几百下鼠标。现在这个项目让 Agent 直接理解你的自然语言描述，然后生成 CAD 文件。对硬件创业者、机械工程师、以及所有被&amp;quot;改个尺寸重新画一遍&amp;quot;折磨过的人来说，这简直是降维打击。当然，目前它生成的模型精度能不能直接上机床，还得你自己判断——别真拿它去造飞机。</p>
+    <p>以前做 CAD 建模，你得在 SolidWorks 或 Fusion 360 里点几百下鼠标。现在这个项目让 Agent 直接理解你的自然语言描述，然后生成 CAD 文件。对硬件创业者、机械工程师、以及所有被&quot;改个尺寸重新画一遍&quot;折磨过的人来说，这简直是降维打击。当然，目前它生成的模型精度能不能直接上机床，还得你自己判断——别真拿它去造飞机。</p>
   </div>
 </article>
 <article class="project-card project-card--compact" data-project-name="boykopovar/AnyPS5" data-project-url="https://github.com/boykopovar/AnyPS5" data-project-summary="自动把 PS5 游戏可执行文件移植到 Linux 和 Windows 的工具。" data-project-stars="6,784" data-language="C++">
@@ -175,10 +171,10 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pbakaus-impeccable" hidden>
-    <p>AI 生成 UI 最大的问题是什么？丑。不是那种&amp;quot;有个性&amp;quot;的丑，是那种&amp;quot;字体用了三种、间距全靠猜、配色像打翻调色盘&amp;quot;的丑。这个项目提供了一套设计规范，让 AI 在生成界面时有个&amp;quot;审美准绳&amp;quot;。前端开发者和产品经理应该会很喜欢——毕竟谁也不想再收到&amp;quot;这个按钮再大一点、再小一点、再大一点&amp;quot;的反馈了。</p>
+    <p>AI 生成 UI 最大的问题是什么？丑。不是那种&quot;有个性&quot;的丑，是那种&quot;字体用了三种、间距全靠猜、配色像打翻调色盘&quot;的丑。这个项目提供了一套设计规范，让 AI 在生成界面时有个&quot;审美准绳&quot;。前端开发者和产品经理应该会很喜欢——毕竟谁也不想再收到&quot;这个按钮再大一点、再小一点、再大一点&quot;的反馈了。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="thedotmack/claude-mem" data-project-url="https://github.com/thedotmack/claude-mem" data-project-summary="给 AI 代理装上&amp;quot;长期记忆&amp;quot;，跨会话记住它干过什么。" data-project-stars="97,238" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="thedotmack/claude-mem" data-project-url="https://github.com/thedotmack/claude-mem" data-project-summary="给 AI 代理装上&quot;长期记忆&quot;，跨会话记住它干过什么。" data-project-stars="97,238" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">6</div>
     <div class="project-identity">
@@ -195,12 +191,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 thedotmack/claude-mem" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给 AI 代理装上&amp;quot;长期记忆&amp;quot;，跨会话记住它干过什么。</p>
+  <p class="project-summary">给 AI 代理装上&quot;长期记忆&quot;，跨会话记住它干过什么。</p>
   <button class="detail-toggle" type="button" aria-label="展开 thedotmack/claude-mem 的项目解读" aria-expanded="false" aria-controls="project-thedotmack-claude-mem">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-thedotmack-claude-mem" hidden>
-    <p>用过 Claude Code 或类似工具的人都知道，每次新开一个会话，AI 就像失忆了一样，之前聊过的上下文全没了。这个项目就是来解决这个问题的——它捕获代理在会话中的操作，用 AI 压缩成记忆，下次会话时再注入相关上下文。支持 Claude Code、Codex、Gemini、Copilot 等一大堆代理。简单说，就是让你的 AI 助手从&amp;quot;金鱼记忆&amp;quot;进化成&amp;quot;大象记忆&amp;quot;。</p>
+    <p>用过 Claude Code 或类似工具的人都知道，每次新开一个会话，AI 就像失忆了一样，之前聊过的上下文全没了。这个项目就是来解决这个问题的——它捕获代理在会话中的操作，用 AI 压缩成记忆，下次会话时再注入相关上下文。支持 Claude Code、Codex、Gemini、Copilot 等一大堆代理。简单说，就是让你的 AI 助手从&quot;金鱼记忆&quot;进化成&quot;大象记忆&quot;。</p>
   </div>
 </article>
 <article class="project-card project-card--compact" data-project-name="ayghri/i-have-adhd" data-project-url="https://github.com/ayghri/i-have-adhd" data-project-summary="一个让 AI 代理别废话、直接给答案的技能插件。" data-project-stars="54,484" data-language="Python">
@@ -225,7 +221,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-ayghri-i-have-adhd" hidden>
-    <p>这个项目的名字起得绝了——&amp;quot;我有 ADHD&amp;quot;。它的作用是阻止你的编码代理把答案埋在长篇大论里。你有没有遇到过这种情况：问 AI 一个简单问题，它先给你写 500 字背景介绍，再写 300 字注意事项，最后才在角落里提一句&amp;quot;答案是 X&amp;quot;。这个插件就是治这个的——ADHD 友好输出，要的就是直给。54K star 说明被 AI 啰嗦折磨的人真的很多。</p>
+    <p>这个项目的名字起得绝了——&quot;我有 ADHD&quot;。它的作用是阻止你的编码代理把答案埋在长篇大论里。你有没有遇到过这种情况：问 AI 一个简单问题，它先给你写 500 字背景介绍，再写 300 字注意事项，最后才在角落里提一句&quot;答案是 X&quot;。这个插件就是治这个的——ADHD 友好输出，要的就是直给。54K star 说明被 AI 啰嗦折磨的人真的很多。</p>
   </div>
 </article>
 <article class="project-card project-card--compact" data-project-name="morluto/rea" data-project-url="https://github.com/morluto/rea" data-project-summary="用 AI 代理逆向工程任何东西，从应用行为到原生二进制。" data-project-stars="9,959" data-language="TypeScript">
@@ -314,7 +310,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
         </section>

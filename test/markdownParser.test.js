@@ -146,6 +146,14 @@ test('moves the report heading and opening out of the project feed', () => {
   assert.equal(lead.content, '<article>项目</article>');
 });
 
+test('moves a legacy blockquote opening out of the project feed', () => {
+  const lead = markdownParser.extractReportLead('<h1>当日标题</h1>\n<blockquote>\n<p>旧版导语</p>\n</blockquote>\n<article>项目</article>');
+
+  assert.equal(lead.title, '当日标题');
+  assert.equal(lead.opening, '旧版导语');
+  assert.equal(lead.content, '<article>项目</article>');
+});
+
 test('wraps the daily takeaway as a full-width summary panel', () => {
   const html = markdownParser.convertMarkdownToHTML('**今日总结**：保持判断。');
   assert.match(html, /class="summary-section"/);
@@ -163,4 +171,15 @@ test('escapes raw HTML and rejects unsafe Markdown links', () => {
   assert.doesNotMatch(html, /<script>/);
   assert.doesNotMatch(html, /href="javascript:/);
   assert.match(html, /href="#"/);
+});
+
+test('renders legacy encoded punctuation without exposing HTML', () => {
+  const html = markdownParser.generateProjectCard({
+    name: 'owner/repo',
+    summary: '让 AI 拥有&quot;记忆&quot;与 &lt;script&gt; 标签'
+  });
+
+  assert.match(html, /拥有&quot;记忆&quot;/);
+  assert.match(html, /&lt;script&gt;/);
+  assert.doesNotMatch(html, /&amp;amp;quot;|<script>/);
 });

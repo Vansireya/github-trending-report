@@ -34,19 +34,18 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>2026年10月25日星期日</strong></div>
-        </div>
-        <h1>今日 GitHub 狠活：AI 代理开始自己查安全漏洞了，Cloudflare 先下手为强</h1>
-        <p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。今天的关键词只有一个：<strong>AI Agent 全家桶</strong>。从安全审计到设计规范，从机器人鸭子到电子书宝库，GitHub 今天的榜单仿佛在说：人类，你歇着吧，剩下的交给我们。</p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月25日星期日</time>
+              <a class="today-link" href="../">← 返回今日</a>
+            </div>
+            <h1>今日 GitHub 狠活：AI 代理开始自己查安全漏洞了，Cloudflare 先下手为强</h1>
+            <p>各位打工人早上好，欢迎收看今天的 GitHub 热榜。今天的关键词只有一个：<strong>AI Agent 全家桶</strong>。从安全审计到设计规范，从机器人鸭子到电子书宝库，GitHub 今天的榜单仿佛在说：人类，你歇着吧，剩下的交给我们。</p>
+          </div>
+        </section>
         <div class="content" id="projectFeed"><hr>
 
 <article class="project-card project-card--rank-1" data-project-name="cloudflare/security-audit-skill" data-project-url="https://github.com/cloudflare/security-audit-skill" data-project-summary="给编码代理装上一套多阶段安全审计技能，查出来的漏洞还能机器可读、独立验证。" data-project-stars="44,740" data-language="JavaScript">
@@ -71,11 +70,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-cloudflare-security-audit-skill">
-    <p>以前让 AI 写代码，写完你还得自己提心吊胆地查安全漏洞，现在 Cloudflare 直接把这个活儿也交给了 AI——而且不是瞎查，是分阶段、可验证、结果能直接喂给流水线的那种。44k 星说明大家苦&amp;quot;AI 写代码一时爽，上线安全火葬场&amp;quot;久矣。这个项目解决的核心痛点就是：让 AI 不仅会写，还会自己审判自己写的代码。</p>
+    <p>以前让 AI 写代码，写完你还得自己提心吊胆地查安全漏洞，现在 Cloudflare 直接把这个活儿也交给了 AI——而且不是瞎查，是分阶段、可验证、结果能直接喂给流水线的那种。44k 星说明大家苦&quot;AI 写代码一时爽，上线安全火葬场&quot;久矣。这个项目解决的核心痛点就是：让 AI 不仅会写，还会自己审判自己写的代码。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--featured" data-project-name="NVIDIA/OpenShell" data-project-url="https://github.com/NVIDIA/OpenShell" data-project-summary="给自主 AI 代理准备的&amp;quot;安全私有运行沙箱&amp;quot;。" data-project-stars="19,519" data-language="Rust">
+<article class="project-card project-card--featured" data-project-name="NVIDIA/OpenShell" data-project-url="https://github.com/NVIDIA/OpenShell" data-project-summary="给自主 AI 代理准备的&quot;安全私有运行沙箱&quot;。" data-project-stars="19,519" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">2</div>
     <div class="project-identity">
@@ -92,12 +91,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/OpenShell" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给自主 AI 代理准备的&amp;quot;安全私有运行沙箱&amp;quot;。</p>
+  <p class="project-summary">给自主 AI 代理准备的&quot;安全私有运行沙箱&quot;。</p>
   <button class="detail-toggle" type="button" aria-label="收起 NVIDIA/OpenShell 的项目解读" aria-expanded="true" aria-controls="project-nvidia-openshell">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nvidia-openshell">
-    <p>AI 代理越来越能干，但你敢让它随便在你机器上跑命令吗？NVIDIA 说：不敢就对了，来用 OpenShell。这是一个用 Rust 写的运行时，专门给那些&amp;quot;自己会思考、自己会动手&amp;quot;的 AI 代理提供一个隔离的安全环境。翻译成人话：给代理套个笼子，让它在里面尽情折腾，外面世界安然无恙。19k 星，说明大家对&amp;quot;代理失控&amp;quot;这件事是真的怕。</p>
+    <p>AI 代理越来越能干，但你敢让它随便在你机器上跑命令吗？NVIDIA 说：不敢就对了，来用 OpenShell。这是一个用 Rust 写的运行时，专门给那些&quot;自己会思考、自己会动手&quot;的 AI 代理提供一个隔离的安全环境。翻译成人话：给代理套个笼子，让它在里面尽情折腾，外面世界安然无恙。19k 星，说明大家对&quot;代理失控&quot;这件事是真的怕。</p>
   </div>
 </article>
 <hr>
@@ -123,11 +122,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-aws-agent-toolkit-for-aws">
-    <p>AWS 终于坐不住了，官方下场给 AI 代理发工具包。痛点很明确：你想让 AI 帮你操作 AWS，但一堆 API、权限、配置能把它绕晕。这个工具包就是官方铺好的红毯，让代理能规规矩矩地在云上干活。3k 星不算多，但官方背书 + Python 生态，属于&amp;quot;现在不火以后必用&amp;quot;的类型。</p>
+    <p>AWS 终于坐不住了，官方下场给 AI 代理发工具包。痛点很明确：你想让 AI 帮你操作 AWS，但一堆 API、权限、配置能把它绕晕。这个工具包就是官方铺好的红毯，让代理能规规矩矩地在云上干活。3k 星不算多，但官方背书 + Python 生态，属于&quot;现在不火以后必用&quot;的类型。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="Nutlope/hallmark" data-project-url="https://github.com/Nutlope/hallmark" data-project-summary="专治 AI 生成设计&amp;quot;一眼假&amp;quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。" data-project-stars="32,232" data-language="CSS">
+<article class="project-card project-card--compact" data-project-name="Nutlope/hallmark" data-project-url="https://github.com/Nutlope/hallmark" data-project-summary="专治 AI 生成设计&quot;一眼假&quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。" data-project-stars="32,232" data-language="CSS">
   <div class="project-card-header">
     <div class="rank-badge">4</div>
     <div class="project-identity">
@@ -144,12 +143,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 Nutlope/hallmark" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">专治 AI 生成设计&amp;quot;一眼假&amp;quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。</p>
+  <p class="project-summary">专治 AI 生成设计&quot;一眼假&quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。</p>
   <button class="detail-toggle" type="button" aria-label="展开 Nutlope/hallmark 的项目解读" aria-expanded="false" aria-controls="project-nutlope-hallmark">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-nutlope-hallmark" hidden>
-    <p>AI 生成的设计有个通病——看着挺像那么回事，但总透着一股&amp;quot;我是 AI 我骄傲&amp;quot;的塑料感。Hallmark 就是来治这个的，一套设计技能，让你的 AI 助手产出不那么&amp;quot;AI slop&amp;quot;的东西。32k 星说明设计师和开发者对&amp;quot;AI 味&amp;quot;的容忍度已经到极限了。用 CSS 写设计规范，这很合理。</p>
+    <p>AI 生成的设计有个通病——看着挺像那么回事，但总透着一股&quot;我是 AI 我骄傲&quot;的塑料感。Hallmark 就是来治这个的，一套设计技能，让你的 AI 助手产出不那么&quot;AI slop&quot;的东西。32k 星说明设计师和开发者对&quot;AI 味&quot;的容忍度已经到极限了。用 CSS 写设计规范，这很合理。</p>
   </div>
 </article>
 <hr>
@@ -175,11 +174,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-luongnv89-claude-howto" hidden>
-    <p>Claude Code 火归火，但很多人打开之后一脸懵：这玩意儿到底怎么用？这个项目就是来救场的，从基础概念到高级代理，全程配图配例子，模板直接复制就能跑。44k 星，说明&amp;quot;官方文档看不懂&amp;quot;是全球通病，民间教程才是真刚需。</p>
+    <p>Claude Code 火归火，但很多人打开之后一脸懵：这玩意儿到底怎么用？这个项目就是来救场的，从基础概念到高级代理，全程配图配例子，模板直接复制就能跑。44k 星，说明&quot;官方文档看不懂&quot;是全球通病，民间教程才是真刚需。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="pbakaus/impeccable" data-project-url="https://github.com/pbakaus/impeccable" data-project-summary="一套设计语言，让你的 AI 工具在设计这件事上不再&amp;quot;力不从心&amp;quot;。" data-project-stars="86,487" data-language="Rust">
+<article class="project-card project-card--compact" data-project-name="pbakaus/impeccable" data-project-url="https://github.com/pbakaus/impeccable" data-project-summary="一套设计语言，让你的 AI 工具在设计这件事上不再&quot;力不从心&quot;。" data-project-stars="86,487" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">6</div>
     <div class="project-identity">
@@ -196,12 +195,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 pbakaus/impeccable" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">一套设计语言，让你的 AI 工具在设计这件事上不再&amp;quot;力不从心&amp;quot;。</p>
+  <p class="project-summary">一套设计语言，让你的 AI 工具在设计这件事上不再&quot;力不从心&quot;。</p>
   <button class="detail-toggle" type="button" aria-label="展开 pbakaus/impeccable 的项目解读" aria-expanded="false" aria-controls="project-pbakaus-impeccable">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pbakaus-impeccable" hidden>
-    <p>86k 星，今天榜单的星王。痛点很直接：你让 AI 帮你搞设计，它给你搞出一堆能看但不好看的东西。Impeccable 的思路是给 AI 一套设计语言规范，让它&amp;quot;有章可循&amp;quot;而不是自由发挥。用 Rust 写设计语言，多少有点硬核，但效果据说很 impeccable。星数摆在这，不试说不过去。</p>
+    <p>86k 星，今天榜单的星王。痛点很直接：你让 AI 帮你搞设计，它给你搞出一堆能看但不好看的东西。Impeccable 的思路是给 AI 一套设计语言规范，让它&quot;有章可循&quot;而不是自由发挥。用 Rust 写设计语言，多少有点硬核，但效果据说很 impeccable。星数摆在这，不试说不过去。</p>
   </div>
 </article>
 <hr>
@@ -227,7 +226,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-pollen-robotics-microduck" hidden>
-    <p>在一堆 AI 代理和安全审计中间，突然冒出一只双足小鸭子机器人，画风清奇但莫名治愈。Pollen Robotics 出品，Rust 驱动，11k 星说明技术圈的人再卷也需要一点可爱的东西续命。它解决什么痛点？大概是&amp;quot;看了一天 AI 代理，需要看只鸭子缓缓&amp;quot;这个痛点。</p>
+    <p>在一堆 AI 代理和安全审计中间，突然冒出一只双足小鸭子机器人，画风清奇但莫名治愈。Pollen Robotics 出品，Rust 驱动，11k 星说明技术圈的人再卷也需要一点可爱的东西续命。它解决什么痛点？大概是&quot;看了一天 AI 代理，需要看只鸭子缓缓&quot;这个痛点。</p>
   </div>
 </article>
 <hr>
@@ -253,7 +252,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-google-gemini-gemini-cli" hidden>
-    <p>108k 星，今天的绝对顶流。谷歌把 Gemini 做成了命令行工具，你敲命令它干活，不用切浏览器不用开网页。痛点就是&amp;quot;终端党不想离开终端&amp;quot;。TypeScript 写的，开源，谷歌亲儿子。星数已经说明一切，这里不需要我多嘴。</p>
+    <p>108k 星，今天的绝对顶流。谷歌把 Gemini 做成了命令行工具，你敲命令它干活，不用切浏览器不用开网页。痛点就是&quot;终端党不想离开终端&quot;。TypeScript 写的，开源，谷歌亲儿子。星数已经说明一切，这里不需要我多嘴。</p>
   </div>
 </article>
 <hr>
@@ -279,7 +278,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-jbiaojerry-ebook-treasure-chest" hidden>
-    <p>技术榜单里混进一个电子书资源库，22k 星说明大家的精神食粮需求和技术需求一样旺盛。经典文学、经管励志、职场创业、技术手册，应有尽有。痛点？当然是&amp;quot;想看书但不想每个 App 都充会员&amp;quot;。温馨提示：资源虽好，请注意版权，支持正版。</p>
+    <p>技术榜单里混进一个电子书资源库，22k 星说明大家的精神食粮需求和技术需求一样旺盛。经典文学、经管励志、职场创业、技术手册，应有尽有。痛点？当然是&quot;想看书但不想每个 App 都充会员&quot;。温馨提示：资源虽好，请注意版权，支持正版。</p>
   </div>
 </article>
 <hr><hr>
@@ -319,7 +318,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
         </section>

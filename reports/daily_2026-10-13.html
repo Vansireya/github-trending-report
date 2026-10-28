@@ -34,23 +34,19 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="hero-meta">
-          <span class="eyebrow hero-eyebrow">你的每日开源简报</span>
-          <div class="hero-date"><span>最新一期</span><strong>2026年10月13日星期二</strong></div>
-        </div>
-        <h1>今日 GitHub 狠活：有人用 4GB 显卡跑 2.8T 大模型，有人把间谍卫星搬进了浏览器</h1>
-        <p></p>
-      </div>
-    </section>
-
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><blockquote>
-<p>今天的 Trending 榜单突出一个&quot;离谱但合理&quot;——逆向工程、卫星侦察、显卡炼金术，还有让你白嫖 Claude 的骚操作。话不多说，开整。</p>
-</blockquote>
-<hr>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月13日星期二</time>
+              <a class="today-link" href="../">← 返回今日</a>
+            </div>
+            <h1>今日 GitHub 狠活：有人用 4GB 显卡跑 2.8T 大模型，有人把间谍卫星搬进了浏览器</h1>
+            <p>今天的 Trending 榜单突出一个&quot;离谱但合理&quot;——逆向工程、卫星侦察、显卡炼金术，还有让你白嫖 Claude 的骚操作。话不多说，开整。</p>
+          </div>
+        </section>
+        <div class="content" id="projectFeed"><hr>
 
 <article class="project-card project-card--rank-1" data-project-name="morluto/rea" data-project-url="https://github.com/morluto/rea" data-project-summary="用 AI Agent 逆向一切，从 App 行为一路扒到原生二进制。" data-project-stars="168,667" data-language="TypeScript">
   <div class="project-card-header">
@@ -74,7 +70,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-morluto-rea">
-    <p>这玩意儿就是逆向工程界的&amp;quot;瑞士军刀 + 外骨骼&amp;quot;。以前你想搞明白一个 App 到底在偷偷干啥、一个二进制里藏了什么逻辑，得靠 IDA、Ghidra 加一双熬夜熬红的眼睛。现在 rea 直接派 Agent 上场，从行为分析到二进制反编译一条龙服务。TypeScript 写的，Star 数已经飙到 16 万+，看来大家对自己手机里那些 App 的&amp;quot;小动作&amp;quot;都挺好奇的。</p>
+    <p>这玩意儿就是逆向工程界的&quot;瑞士军刀 + 外骨骼&quot;。以前你想搞明白一个 App 到底在偷偷干啥、一个二进制里藏了什么逻辑，得靠 IDA、Ghidra 加一双熬夜熬红的眼睛。现在 rea 直接派 Agent 上场，从行为分析到二进制反编译一条龙服务。TypeScript 写的，Star 数已经飙到 16 万+，看来大家对自己手机里那些 App 的&quot;小动作&quot;都挺好奇的。</p>
   </div>
 </article>
 <hr>
@@ -100,11 +96,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-bilawalsidhu-gods-eye-view">
-    <p>你以为是《使命召唤》里的卫星视角？不，这是真·开源空间情报平台。作者把真实的开源空间数据塞进了一个照片级 3D 地球里，让你在浏览器里体验当&amp;quot;上帝&amp;quot;的感觉。想看看某个港口最近船只在忙啥？某个基地的停车场停了多少车？打开浏览器就行。JavaScript 写的，54K Star，建议搭配一杯咖啡和一个&amp;quot;我只是好奇&amp;quot;的心态食用。</p>
+    <p>你以为是《使命召唤》里的卫星视角？不，这是真·开源空间情报平台。作者把真实的开源空间数据塞进了一个照片级 3D 地球里，让你在浏览器里体验当&quot;上帝&quot;的感觉。想看看某个港口最近船只在忙啥？某个基地的停车场停了多少车？打开浏览器就行。JavaScript 写的，54K Star，建议搭配一杯咖啡和一个&quot;我只是好奇&quot;的心态食用。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--featured" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="给 AI 编程助手做&amp;quot;上下文窗口瘦身&amp;quot;，工具输出直接砍掉 98%。" data-project-stars="27,466" data-language="TypeScript">
+<article class="project-card project-card--featured" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="给 AI 编程助手做&quot;上下文窗口瘦身&quot;，工具输出直接砍掉 98%。" data-project-stars="27,466" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">3</div>
     <div class="project-identity">
@@ -121,16 +117,16 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 mksglu/context-mode" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给 AI 编程助手做&amp;quot;上下文窗口瘦身&amp;quot;，工具输出直接砍掉 98%。</p>
+  <p class="project-summary">给 AI 编程助手做&quot;上下文窗口瘦身&quot;，工具输出直接砍掉 98%。</p>
   <button class="detail-toggle" type="button" aria-label="收起 mksglu/context-mode 的项目解读" aria-expanded="true" aria-controls="project-mksglu-context-mode">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-mksglu-context-mode">
-    <p>用 AI 写代码的人都知道那个痛：Agent 跑着跑着上下文就爆了，前面聊的全忘了，开始胡言乱语。context-mode 就是来解决这个的——它把工具输出沙箱化，体积压缩 98%，同时持久化会话记忆，还能通过 MCP + hooks 在 17 个平台上统一路由。简单说，就是给你的 AI 编程助手装了个&amp;quot;记忆宫殿 + 垃圾回收站&amp;quot;。TypeScript 实现，27K Star，AI 编程重度用户必备。</p>
+    <p>用 AI 写代码的人都知道那个痛：Agent 跑着跑着上下文就爆了，前面聊的全忘了，开始胡言乱语。context-mode 就是来解决这个的——它把工具输出沙箱化，体积压缩 98%，同时持久化会话记忆，还能通过 MCP + hooks 在 17 个平台上统一路由。简单说，就是给你的 AI 编程助手装了个&quot;记忆宫殿 + 垃圾回收站&quot;。TypeScript 实现，27K Star，AI 编程重度用户必备。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="storytold/artcraft" data-project-url="https://github.com/storytold/artcraft" data-project-summary="给艺术家、设计师和电影人用的&amp;quot;有意为之&amp;quot;的创作引擎。" data-project-stars="22,739" data-language="Rust">
+<article class="project-card project-card--compact" data-project-name="storytold/artcraft" data-project-url="https://github.com/storytold/artcraft" data-project-summary="给艺术家、设计师和电影人用的&quot;有意为之&quot;的创作引擎。" data-project-stars="22,739" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">4</div>
     <div class="project-identity">
@@ -147,12 +143,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 storytold/artcraft" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给艺术家、设计师和电影人用的&amp;quot;有意为之&amp;quot;的创作引擎。</p>
+  <p class="project-summary">给艺术家、设计师和电影人用的&quot;有意为之&quot;的创作引擎。</p>
   <button class="detail-toggle" type="button" aria-label="展开 storytold/artcraft 的项目解读" aria-expanded="false" aria-controls="project-storytold-artcraft">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-storytold-artcraft" hidden>
-    <p>市面上创作工具千千万，但大多数要么太通用（啥都能做=啥都不精），要么太封闭。ArtCraft 走的是&amp;quot;intentional crafting&amp;quot;路线——不是让你随便拖拖拽拽，而是提供一个有态度的创作环境。Rust 写的，性能不用担心，22K Star 说明创意工作者们确实在找这样的东西。具体多好用？你得自己试试，毕竟艺术这事儿，别人说好不算好。</p>
+    <p>市面上创作工具千千万，但大多数要么太通用（啥都能做=啥都不精），要么太封闭。ArtCraft 走的是&quot;intentional crafting&quot;路线——不是让你随便拖拖拽拽，而是提供一个有态度的创作环境。Rust 写的，性能不用担心，22K Star 说明创意工作者们确实在找这样的东西。具体多好用？你得自己试试，毕竟艺术这事儿，别人说好不算好。</p>
   </div>
 </article>
 <hr>
@@ -178,11 +174,11 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-open-webui-open-webui" hidden>
-    <p>如果你受够了 ChatGPT 的网页界面、想在自己服务器上跑一个既好看又能打的全能 AI 前端，open-webui 就是标准答案。它支持 Ollama 本地模型、OpenAI API、各种兼容接口，功能全得像个瑞士军刀，界面还比官方好看。15 万+ Star 说明一切——这已经是自托管 AI 界的&amp;quot;事实标准&amp;quot;了。Python 写的，部署简单，Docker 一拉就能跑。</p>
+    <p>如果你受够了 ChatGPT 的网页界面、想在自己服务器上跑一个既好看又能打的全能 AI 前端，open-webui 就是标准答案。它支持 Ollama 本地模型、OpenAI API、各种兼容接口，功能全得像个瑞士军刀，界面还比官方好看。15 万+ Star 说明一切——这已经是自托管 AI 界的&quot;事实标准&quot;了。Python 写的，部署简单，Docker 一拉就能跑。</p>
   </div>
 </article>
 <hr>
-<article class="project-card project-card--compact" data-project-name="cathrynlavery/diagram-design" data-project-url="https://github.com/cathrynlavery/diagram-design" data-project-summary="给 AI 编程工具用的&amp;quot;编辑级&amp;quot;图表设计系统，44 种图表类型，拒绝 Mermaid 丑图。" data-project-stars="52,938" data-language="HTML">
+<article class="project-card project-card--compact" data-project-name="cathrynlavery/diagram-design" data-project-url="https://github.com/cathrynlavery/diagram-design" data-project-summary="给 AI 编程工具用的&quot;编辑级&quot;图表设计系统，44 种图表类型，拒绝 Mermaid 丑图。" data-project-stars="52,938" data-language="HTML">
   <div class="project-card-header">
     <div class="rank-badge">6</div>
     <div class="project-identity">
@@ -199,12 +195,12 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 cathrynlavery/diagram-design" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给 AI 编程工具用的&amp;quot;编辑级&amp;quot;图表设计系统，44 种图表类型，拒绝 Mermaid 丑图。</p>
+  <p class="project-summary">给 AI 编程工具用的&quot;编辑级&quot;图表设计系统，44 种图表类型，拒绝 Mermaid 丑图。</p>
   <button class="detail-toggle" type="button" aria-label="展开 cathrynlavery/diagram-design 的项目解读" aria-expanded="false" aria-controls="project-cathrynlavery-diagram-design">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-cathrynlavery-diagram-design" hidden>
-    <p>受够了 Mermaid 生成的那些歪歪扭扭、阴影乱飞、配色辣眼的流程图？diagram-design 就是来拯救你的审美的。它专为 Claude Code、Codex、Copilot、Cursor 等 AI 编程工具设计，提供 44 种图表类型，输出自包含的 HTML + SVG，没有阴影、没有 Mermaid 那种&amp;quot;程序员审美&amp;quot;。HTML 写的，52K Star，说明天下苦 Mermaid 久矣。</p>
+    <p>受够了 Mermaid 生成的那些歪歪扭扭、阴影乱飞、配色辣眼的流程图？diagram-design 就是来拯救你的审美的。它专为 Claude Code、Codex、Copilot、Cursor 等 AI 编程工具设计，提供 44 种图表类型，输出自包含的 HTML + SVG，没有阴影、没有 Mermaid 那种&quot;程序员审美&quot;。HTML 写的，52K Star，说明天下苦 Mermaid 久矣。</p>
   </div>
 </article>
 <hr>
@@ -230,7 +226,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-lyogavin-airllm" hidden>
-    <p>这玩意儿属于&amp;quot;显卡炼金术&amp;quot;级别。正常情况下，跑 2.8T 参数的模型你得有个机房，但 airllm 说：不，4GB 显存就够了。它通过分层加载、智能卸载等技术，让大模型在消费级显卡上也能跑起来。Jupyter Notebook 写的，37K Star——毕竟谁不想在自己的破笔记本上跑个千亿参数模型装装逼呢？速度嘛，别问，问就是&amp;quot;能跑就行&amp;quot;。</p>
+    <p>这玩意儿属于&quot;显卡炼金术&quot;级别。正常情况下，跑 2.8T 参数的模型你得有个机房，但 airllm 说：不，4GB 显存就够了。它通过分层加载、智能卸载等技术，让大模型在消费级显卡上也能跑起来。Jupyter Notebook 写的，37K Star——毕竟谁不想在自己的破笔记本上跑个千亿参数模型装装逼呢？速度嘛，别问，问就是&quot;能跑就行&quot;。</p>
   </div>
 </article>
 <hr>
@@ -256,7 +252,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-microsoft-bitnet" hidden>
-    <p>当所有人都在卷 FP16、FP8 的时候，微软说：要不咱们试试 1-bit？BitNet 就是微软对&amp;quot;极致量化&amp;quot;的官方答案——把模型权重压到 1-bit，推理速度起飞，内存占用暴跌。C++ 写的，性能自然不用怀疑。40K Star 说明学术界和工业界都在盯着这个方向。虽然 1-bit 模型目前还不是主流，但谁知道呢，也许未来就是它的。</p>
+    <p>当所有人都在卷 FP16、FP8 的时候，微软说：要不咱们试试 1-bit？BitNet 就是微软对&quot;极致量化&quot;的官方答案——把模型权重压到 1-bit，推理速度起飞，内存占用暴跌。C++ 写的，性能自然不用怀疑。40K Star 说明学术界和工业界都在盯着这个方向。虽然 1-bit 模型目前还不是主流，但谁知道呢，也许未来就是它的。</p>
   </div>
 </article>
 <hr>
@@ -282,7 +278,7 @@
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-alishahryar1-free-claude-code" hidden>
-    <p>这个项目的名字已经说明了一切——free-claude-code。它让你从终端、App、IDE、手机甚至浏览器里免费使用 Claude Code、Codex、VSCode、Pi、OpenCode 等 10 来个 AI 编程工具，号称有 13 亿+ 免费 token 可用。支持多工具、多模型、语音，还&amp;quot;ToS friendly&amp;quot;。Python 写的，59K Star——看来大家对于&amp;quot;免费&amp;quot;这两个字的热情是永恒的。</p>
+    <p>这个项目的名字已经说明了一切——free-claude-code。它让你从终端、App、IDE、手机甚至浏览器里免费使用 Claude Code、Codex、VSCode、Pi、OpenCode 等 10 来个 AI 编程工具，号称有 13 亿+ 免费 token 可用。支持多工具、多模型、语音，还&quot;ToS friendly&quot;。Python 写的，59K Star——看来大家对于&quot;免费&quot;这两个字的热情是永恒的。</p>
   </div>
 </article>
 <hr>
@@ -330,7 +326,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
         </section>
