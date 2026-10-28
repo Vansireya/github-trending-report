@@ -43,6 +43,27 @@ test('converts the legacy list report format into a project card', () => {
   assert.doesNotMatch(html, /<ul>\s*<\/ul>/);
 });
 
+test('converts legacy report fields whose punctuation is inside bold text', () => {
+  const html = markdownParser.convertMarkdownToHTML(`
+### owner/repo
+
+**一句话概括：** 项目摘要
+
+**详细介绍：** 项目详情
+
+**项目网址：** https://github.com/owner/repo
+
+**Star 数量：** 123
+
+**推荐指数：** ★★★★★
+`);
+
+  assert.match(html, /class="project-card\b/);
+  assert.match(html, /项目摘要/);
+  assert.doesNotMatch(html, /<strong>一句话概括/);
+  assert.doesNotMatch(html, /<strong>详细介绍/);
+});
+
 test('rejects unsafe project links', () => {
   const html = markdownParser.generateProjectCard({
     name: 'owner/repo',

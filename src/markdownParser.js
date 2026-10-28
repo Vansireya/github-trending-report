@@ -62,7 +62,8 @@ function convertMarkdownToHTML(markdown, repositories = []) {
     const projectContent = match[2];
 
     // 解析列表中的各项信息
-    const fieldRegex = /<(p|li)><strong>([^<]+)<\/strong>[：:]\s*([\s\S]*?)<\/\1>/g;
+    // 兼容新格式 **字段**：内容，以及旧格式 **字段：** 内容。
+    const fieldRegex = /<(p|li)><strong>([^<：:]+)(?:[：:])?<\/strong>\s*(?:[：:]\s*)?([\s\S]*?)<\/\1>/g;
     let fieldMatch;
     const projectData = {
       name: projectName,

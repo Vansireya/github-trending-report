@@ -47,67 +47,236 @@
 
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><h3>ai-job-search</h3>
-<p><strong>一句话概括：</strong> 一个跑在你本机上的 AI 求职框架，帮你评估岗位、改简历、写求职信、准备面试，一条龙服务。</p>
-<p><strong>详细介绍：</strong> 找工作这件事，痛点从来不是“没岗位”，而是“岗位太多懒得筛、简历改到怀疑人生、求职信写得像 AI 生成”——好吧现在真的是 AI 生成。这个项目基于 Claude Code 构建，核心思路是：把求职流程拆成可自动化的环节，让 AI 帮你干脏活累活。评估 JD 匹配度、按岗位定制 CV、生成求职信、模拟面试，全在你自己的机器上跑，数据不出门。最骚的是它鼓励你 fork 走自己改——毕竟求职这事儿，千人千面，别人的模板救不了你。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer">https://github.com/MadsLorentzen/ai-job-search</a></p>
-<p><strong>Star 数量：</strong> 57,609</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，求职季刚需，星数说明一切）</p>
-<h3>opencode</h3>
-<p><strong>一句话概括：</strong> 开源版 coding agent，让 AI 帮你写代码，还不用被某家厂商绑死。</p>
-<p><strong>详细介绍：</strong> 榜单第二，Star 数直接飙到 21 万+，这体量已经不是“项目”了，是“现象”。痛点很明确：闭源 coding agent 好用归好用，但你的代码、你的上下文、你的工作流全在别人服务器上，心里总有点发毛。opencode 主打开源、可自托管，TypeScript 技术栈，想接哪个模型接哪个模型。对于既要 AI 提效、又要数据主权的团队来说，这就是那个“既要又要”的答案。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">https://github.com/anomalyco/opencode</a></p>
-<p><strong>Star 数量：</strong> 217,920</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，21 万星不是刷出来的）</p>
-<h3>ai-memory</h3>
-<p><strong>一句话概括：</strong> 给 coding agent 装一个“长期记忆”，顺便解决换厂商就失忆的尴尬。</p>
-<p><strong>详细介绍：</strong> 用 AI 写代码的人都懂那种痛：聊了半小时，agent 终于搞懂了你的项目结构，结果一关窗口，下次开新会话——它又失忆了，你又得从头解释一遍。更别提换个厂商的 agent，之前的上下文全白搭。这个 Rust 写的项目就是干这个的：给 agent CLI 提供长期记忆层，并且支持在不同 agent 厂商之间做 handoff。翻译成人话：让 AI 记住你，且不挑对象。Rust 的性能底子也让它在响应速度上不至于拖后腿。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener noreferrer">https://github.com/akitaonrails/ai-memory</a></p>
-<p><strong>Star 数量：</strong> 11,435</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐（4/5，痛点精准，但属于进阶玩家刚需）</p>
-<h3>ComfyUI</h3>
-<p><strong>一句话概括：</strong> 节点式扩散模型 GUI，本地跑图的最强 modular 引擎，没有之一。</p>
-<p><strong>详细介绍：</strong> 这玩意儿在 AI 绘画圈的地位，大概相当于“你不一定用过，但你一定见过别人用”。基于节点/图的工作流界面，把 diffusion 模型的每一步拆成可拖拽的模块，想怎么拼怎么拼。痛点？痛点就是那些“一键出图”的工具永远满足不了想精细控制的人——换采样器、调 CFG、接 ControlNet、串 LoRA，ComfyUI 全给你。号称“世界最快本地推理引擎”，13 万+ 星也证明了群众的眼睛是雪亮的。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer">https://github.com/Comfy-Org/ComfyUI</a></p>
-<p><strong>Star 数量：</strong> 139,843</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，AI 绘画工作流的天花板）</p>
-<h3>ruflo</h3>
-<p><strong>一句话概括：</strong> 老牌 agent harness，部署多智能体 swarm、编排自主工作流、搭对话式 AI 系统。</p>
-<p><strong>详细介绍：</strong> 名字带个 🌊，野心也像海一样大。号称“original agent harness”，功能列表长到像简历：自适应记忆、自学习智能、联邦、向量 RAG 集成，还原生集成 Claude Code / Codex / Hermes 等一堆。说白了，它想当的是“AI 代理的操作系统”——你有一堆 agent 要协同干活？交给我编排。痛点在于多 agent 系统的编排复杂度，普通开发者自己搭一套能累到脱发。7.7 万星说明这套“代理方阵”的思路确实戳中了不少人。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">https://github.com/ruvnet/ruflo</a></p>
-<p><strong>Star 数量：</strong> 77,271</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐（4/5，功能堆料猛，学习曲线也不低）</p>
-<h3>orca</h3>
-<p><strong>一句话概括：</strong> 管理一整支 coding agent 舰队的平台，用自己的订阅跑任意 agent，桌面/移动/远程通吃。</p>
-<p><strong>详细介绍：</strong> 现在谁还没几个 agent？Claude Code 一个、Grok Bot 一个、可能还有别的。问题来了：散落在各处，怎么统一调度？orca 的答案是——把它们编成舰队。你可以用自己的订阅跑任意 coding agent，桌面端、移动端、远程 runtime 都能接。痛点就是“agent 多了管不过来”，尤其对同时用多家 agent 的团队。9.8 万星，说明“舰队司令”这个角色，很多人都想当。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">https://github.com/stablyai/orca</a></p>
-<p><strong>Star 数量：</strong> 98,416</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，多 agent 时代的刚需调度台）</p>
-<h3>headroom</h3>
-<p><strong>一句话概括：</strong> 在内容喂给 LLM 之前先压缩，coding agent 省 20% token，JSON 省 60-95%，答案还不变。</p>
-<p><strong>详细介绍：</strong> 这个项目属于“闷声省钱型”。痛点极其现实：token 就是钱，tool 输出、日志、文件、RAG chunk 一股脑塞给 LLM，账单蹭蹭涨，其中一大半是废话。headroom 的思路是在内容到达 LLM 之前先压缩——coding agent 场景省 20% token，JSON 场景省 60-95%，关键是“same answers”，答案质量不打折。提供 library、proxy、MCP server 三种形态，接入方式灵活。7.6 万星，说明被账单教育过的人真不少。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer">https://github.com/headroomlabs-ai/headroom</a></p>
-<p><strong>Star 数量：</strong> 76,296</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐（5/5，省钱就是硬道理）</p>
-<h3>os-taxonomy</h3>
-<p><strong>一句话概括：</strong> 没有简介，但 6 千多星说明它肯定有点东西——看名字像操作系统/分类学相关的工具库。</p>
-<p><strong>详细介绍：</strong> 坦白讲，这个项目连 description 都没写，作为日报作者我也很为难。从仓库名 <code>os-taxonomy</code> 和 JavaScript 技术栈推测，大概是某种“操作系统分类体系”或“OS 元数据分类”相关的工具/数据集。6,199 星对于一个零简介项目来说相当反常，要么是某个社区在集体打卡，要么是它被某个大项目依赖。建议感兴趣的同学直接点进去看 README——毕竟连简介都懒得写的项目，要么是极简主义大佬，要么是还没想好怎么介绍自己。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener noreferrer">https://github.com/withmarbleapp/os-taxonomy</a></p>
-<p><strong>Star 数量：</strong> 6,199</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐（3/5，信息不足，谨慎入坑）</p>
-<h3>jasna</h3>
-<p><strong>一句话概括：</strong> 视频修复工具，把糊成马赛克的老视频往清晰了拉。</p>
-<p><strong>详细介绍：</strong> 在一堆 AI agent 项目里，jasna 显得格外朴素——它就是个视频修复工具。痛点很经典：老视频、低分辨率素材、压缩过度的片段，想修复又不想开 PR、不想学一堆滤镜参数。Python 实现，Star 数 2,959，在今天的榜单里属于“小而美”梯队。虽然热度比不上前面那些动辄几万星的巨无霸，但对于有视频修复需求的人来说，这种垂直工具往往比通用大模型更顺手。</p>
-<p><strong>项目网址：</strong> <a href="https://github.com/Kruk2/jasna" target="_blank" rel="noopener noreferrer">https://github.com/Kruk2/jasna</a></p>
-<p><strong>Star 数量：</strong> 2,959</p>
-<p><strong>推荐指数：</strong> ⭐⭐⭐（3/5，垂直场景好用，但受众有限）</p>
-<h3>CLI-Anything</h3>
-<p><strong>一句话概括：</strong> 港大出品，口号是“让所有软件都变成 agent-native”，通过 CLI-Hub 把命令行能力接</p></div>
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="ai-job-search" data-project-url="https://github.com/MadsLorentzen/ai-job-search" data-project-summary="一个跑在你本机上的 AI 求职框架，帮你评估岗位、改简历、写求职信、准备面试，一条龙服务。" data-project-stars="57,609" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer">ai-job-search</a>
+        <span class="star-pill" aria-label="57,609 stars">★ 57,609</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ai-job-search" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一个跑在你本机上的 AI 求职框架，帮你评估岗位、改简历、写求职信、准备面试，一条龙服务。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 ai-job-search 的项目解读" aria-expanded="true" aria-controls="project-ai-job-search">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ai-job-search">
+    <p>找工作这件事，痛点从来不是“没岗位”，而是“岗位太多懒得筛、简历改到怀疑人生、求职信写得像 AI 生成”——好吧现在真的是 AI 生成。这个项目基于 Claude Code 构建，核心思路是：把求职流程拆成可自动化的环节，让 AI 帮你干脏活累活。评估 JD 匹配度、按岗位定制 CV、生成求职信、模拟面试，全在你自己的机器上跑，数据不出门。最骚的是它鼓励你 fork 走自己改——毕竟求职这事儿，千人千面，别人的模板救不了你。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="opencode" data-project-url="https://github.com/anomalyco/opencode" data-project-summary="开源版 coding agent，让 AI 帮你写代码，还不用被某家厂商绑死。" data-project-stars="217,920" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">opencode</a>
+        <span class="star-pill" aria-label="217,920 stars">★ 217,920</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 opencode" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">开源版 coding agent，让 AI 帮你写代码，还不用被某家厂商绑死。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 opencode 的项目解读" aria-expanded="true" aria-controls="project-opencode">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-opencode">
+    <p>榜单第二，Star 数直接飙到 21 万+，这体量已经不是“项目”了，是“现象”。痛点很明确：闭源 coding agent 好用归好用，但你的代码、你的上下文、你的工作流全在别人服务器上，心里总有点发毛。opencode 主打开源、可自托管，TypeScript 技术栈，想接哪个模型接哪个模型。对于既要 AI 提效、又要数据主权的团队来说，这就是那个“既要又要”的答案。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="ai-memory" data-project-url="https://github.com/akitaonrails/ai-memory" data-project-summary="给 coding agent 装一个“长期记忆”，顺便解决换厂商就失忆的尴尬。" data-project-stars="11,435" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener noreferrer">ai-memory</a>
+        <span class="star-pill" aria-label="11,435 stars">★ 11,435</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ai-memory" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给 coding agent 装一个“长期记忆”，顺便解决换厂商就失忆的尴尬。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 ai-memory 的项目解读" aria-expanded="true" aria-controls="project-ai-memory">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ai-memory">
+    <p>用 AI 写代码的人都懂那种痛：聊了半小时，agent 终于搞懂了你的项目结构，结果一关窗口，下次开新会话——它又失忆了，你又得从头解释一遍。更别提换个厂商的 agent，之前的上下文全白搭。这个 Rust 写的项目就是干这个的：给 agent CLI 提供长期记忆层，并且支持在不同 agent 厂商之间做 handoff。翻译成人话：让 AI 记住你，且不挑对象。Rust 的性能底子也让它在响应速度上不至于拖后腿。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ComfyUI" data-project-url="https://github.com/Comfy-Org/ComfyUI" data-project-summary="节点式扩散模型 GUI，本地跑图的最强 modular 引擎，没有之一。" data-project-stars="139,843" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer">ComfyUI</a>
+        <span class="star-pill" aria-label="139,843 stars">★ 139,843</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ComfyUI" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">节点式扩散模型 GUI，本地跑图的最强 modular 引擎，没有之一。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ComfyUI 的项目解读" aria-expanded="false" aria-controls="project-comfyui">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-comfyui" hidden>
+    <p>这玩意儿在 AI 绘画圈的地位，大概相当于“你不一定用过，但你一定见过别人用”。基于节点/图的工作流界面，把 diffusion 模型的每一步拆成可拖拽的模块，想怎么拼怎么拼。痛点？痛点就是那些“一键出图”的工具永远满足不了想精细控制的人——换采样器、调 CFG、接 ControlNet、串 LoRA，ComfyUI 全给你。号称“世界最快本地推理引擎”，13 万+ 星也证明了群众的眼睛是雪亮的。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ruflo" data-project-url="https://github.com/ruvnet/ruflo" data-project-summary="老牌 agent harness，部署多智能体 swarm、编排自主工作流、搭对话式 AI 系统。" data-project-stars="77,271" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">ruflo</a>
+        <span class="star-pill" aria-label="77,271 stars">★ 77,271</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ruflo" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">老牌 agent harness，部署多智能体 swarm、编排自主工作流、搭对话式 AI 系统。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ruflo 的项目解读" aria-expanded="false" aria-controls="project-ruflo">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ruflo" hidden>
+    <p>名字带个 🌊，野心也像海一样大。号称“original agent harness”，功能列表长到像简历：自适应记忆、自学习智能、联邦、向量 RAG 集成，还原生集成 Claude Code / Codex / Hermes 等一堆。说白了，它想当的是“AI 代理的操作系统”——你有一堆 agent 要协同干活？交给我编排。痛点在于多 agent 系统的编排复杂度，普通开发者自己搭一套能累到脱发。7.7 万星说明这套“代理方阵”的思路确实戳中了不少人。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="orca" data-project-url="https://github.com/stablyai/orca" data-project-summary="管理一整支 coding agent 舰队的平台，用自己的订阅跑任意 agent，桌面/移动/远程通吃。" data-project-stars="98,416" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">orca</a>
+        <span class="star-pill" aria-label="98,416 stars">★ 98,416</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 orca" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">管理一整支 coding agent 舰队的平台，用自己的订阅跑任意 agent，桌面/移动/远程通吃。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 orca 的项目解读" aria-expanded="false" aria-controls="project-orca">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-orca" hidden>
+    <p>现在谁还没几个 agent？Claude Code 一个、Grok Bot 一个、可能还有别的。问题来了：散落在各处，怎么统一调度？orca 的答案是——把它们编成舰队。你可以用自己的订阅跑任意 coding agent，桌面端、移动端、远程 runtime 都能接。痛点就是“agent 多了管不过来”，尤其对同时用多家 agent 的团队。9.8 万星，说明“舰队司令”这个角色，很多人都想当。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="headroom" data-project-url="https://github.com/headroomlabs-ai/headroom" data-project-summary="在内容喂给 LLM 之前先压缩，coding agent 省 20% token，JSON 省 60-95%，答案还不变。" data-project-stars="76,296" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer">headroom</a>
+        <span class="star-pill" aria-label="76,296 stars">★ 76,296</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 headroom" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">在内容喂给 LLM 之前先压缩，coding agent 省 20% token，JSON 省 60-95%，答案还不变。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 headroom 的项目解读" aria-expanded="false" aria-controls="project-headroom">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-headroom" hidden>
+    <p>这个项目属于“闷声省钱型”。痛点极其现实：token 就是钱，tool 输出、日志、文件、RAG chunk 一股脑塞给 LLM，账单蹭蹭涨，其中一大半是废话。headroom 的思路是在内容到达 LLM 之前先压缩——coding agent 场景省 20% token，JSON 场景省 60-95%，关键是“same answers”，答案质量不打折。提供 library、proxy、MCP server 三种形态，接入方式灵活。7.6 万星，说明被账单教育过的人真不少。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="os-taxonomy" data-project-url="https://github.com/withmarbleapp/os-taxonomy" data-project-summary="没有简介，但 6 千多星说明它肯定有点东西——看名字像操作系统/分类学相关的工具库。" data-project-stars="6,199" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener noreferrer">os-taxonomy</a>
+        <span class="star-pill" aria-label="6,199 stars">★ 6,199</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 os-taxonomy" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">没有简介，但 6 千多星说明它肯定有点东西——看名字像操作系统/分类学相关的工具库。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 os-taxonomy 的项目解读" aria-expanded="false" aria-controls="project-os-taxonomy">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-os-taxonomy" hidden>
+    <p>坦白讲，这个项目连 description 都没写，作为日报作者我也很为难。从仓库名 `os-taxonomy` 和 JavaScript 技术栈推测，大概是某种“操作系统分类体系”或“OS 元数据分类”相关的工具/数据集。6,199 星对于一个零简介项目来说相当反常，要么是某个社区在集体打卡，要么是它被某个大项目依赖。建议感兴趣的同学直接点进去看 README——毕竟连简介都懒得写的项目，要么是极简主义大佬，要么是还没想好怎么介绍自己。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="jasna" data-project-url="https://github.com/Kruk2/jasna" data-project-summary="视频修复工具，把糊成马赛克的老视频往清晰了拉。" data-project-stars="2,959" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/Kruk2/jasna" target="_blank" rel="noopener noreferrer">jasna</a>
+        <span class="star-pill" aria-label="2,959 stars">★ 2,959</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 jasna" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">视频修复工具，把糊成马赛克的老视频往清晰了拉。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 jasna 的项目解读" aria-expanded="false" aria-controls="project-jasna">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-jasna" hidden>
+    <p>在一堆 AI agent 项目里，jasna 显得格外朴素——它就是个视频修复工具。痛点很经典：老视频、低分辨率素材、压缩过度的片段，想修复又不想开 PR、不想学一堆滤镜参数。Python 实现，Star 数 2,959，在今天的榜单里属于“小而美”梯队。虽然热度比不上前面那些动辄几万星的巨无霸，但对于有视频修复需求的人来说，这种垂直工具往往比通用大模型更顺手。</p>
+  </div>
+</article></div>
       </div>
 
       <aside class="rail">
         <section class="rail-panel ranking-panel">
-          <div class="panel-heading"><div><span class="eyebrow">持续出现</span><h2>最近反复出现</h2></div></div>
+          <div class="panel-heading"><h2>热度榜</h2></div>
           <div class="segmented-control" role="group" aria-label="排行榜周期">
             <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
             <button type="button" data-range="month" aria-pressed="false">30 天</button>
