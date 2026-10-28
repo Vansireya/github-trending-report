@@ -52,7 +52,7 @@
 
       <aside class="rail">
         <section class="rail-panel ranking-panel">
-          <div class="panel-heading"><div><span class="eyebrow">RECURRING</span><h2>最近反复出现</h2></div></div>
+          <div class="panel-heading"><div><span class="eyebrow">持续出现</span><h2>最近反复出现</h2></div></div>
           <div class="segmented-control" role="group" aria-label="排行榜周期">
             <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
             <button type="button" data-range="month" aria-pressed="false">30 天</button>
@@ -62,9 +62,16 @@
         </section>
 
         <section class="rail-panel history-panel">
-          <div class="panel-heading"><div><span class="eyebrow">ARCHIVE</span><h2>历史雷达</h2></div></div>
-          <ul class="history-list">{{HISTORY_DATES_HTML}}</ul>
-          {{DATE_SELECTOR_HTML}}
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一份旧信号。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+            {{DATE_SELECTOR_HTML}}
+          </details>
         </section>
         <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
       </aside>
@@ -79,7 +86,7 @@
   <div class="library-overlay" id="libraryOverlay" hidden>
     <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
       <div class="library-header">
-        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
         <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
       </div>
       <div class="library-tabs" role="tablist" aria-label="项目库分类">

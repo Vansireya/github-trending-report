@@ -16,9 +16,13 @@ const { marked, Renderer } = require('marked');
  * @returns {string} 转换后的 HTML 内容
  */
 function convertMarkdownToHTML(markdown, repositories = []) {
-  const repositoryMap = new Map(
-    repositories.map(repository => [String(repository.name || '').toLowerCase(), repository])
-  );
+  const repositoryMap = new Map();
+  repositories.forEach(function(repository) {
+    const name = String(repository.name || '').toLowerCase();
+    if (!name) return;
+    repositoryMap.set(name, repository);
+    repositoryMap.set(name.split('/').pop(), repository);
+  });
   const renderer = new Renderer();
   renderer.html = function(token) {
     return escapeHTML(token.text);
@@ -147,7 +151,7 @@ function convertMarkdownToHTML(markdown, repositories = []) {
 
   result = result.replace(
     /<p><strong>今日总结<\/strong>[：:]\s*([\s\S]*?)<\/p>/g,
-    '<div class="summary-section"><span class="eyebrow">DAILY TAKEAWAY</span><p>$1</p></div>'
+    '<div class="summary-section"><span class="eyebrow">今日结论</span><p>$1</p></div>'
   );
 
   return result;
@@ -211,13 +215,10 @@ function generateProjectCard(projectData) {
   </div>
   <p class="project-summary">${summary}</p>
   <button class="detail-toggle" type="button" aria-label="${isExpanded ? '收起' : '展开'} ${name} 的项目解读" aria-expanded="${isExpanded}" aria-controls="${cardId}">
-    <span aria-hidden="true">⌄</span>
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="${cardId}"${isExpanded ? '' : ' hidden'}>
-    <div class="detail-lead">
-      <span class="eyebrow">它解决什么</span>
-      <p>${details}</p>
-    </div>
+    <p>${details}</p>
   </div>
 </article>`;
 }

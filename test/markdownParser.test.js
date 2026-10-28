@@ -73,6 +73,7 @@ test('shows the authoritative scraped star count beside the project name', () =>
   assert.match(html, /project-card--featured/);
   assert.match(html, /class="[^"]*favorite-action/);
   assert.doesNotMatch(html, /later-action|repo-link|展开项目解读|收起项目解读/);
+  assert.match(html, /class="detail-toggle-label">它解决什么/);
   assert.match(html, /data-project-stars="9,999"/);
   assert.match(html, /id="project-owner-repo">/);
   assert.doesNotMatch(html, /本期增长|Fork|编辑评分/);
@@ -105,6 +106,17 @@ test('gives the first project a distinct editorial layout', () => {
   assert.match(html, /aria-expanded="true"/);
 });
 
+test('matches legacy short project names to scraped repository facts', () => {
+  const html = markdownParser.convertMarkdownToHTML(`
+### repo
+
+**一句话概括**：项目摘要
+`, [{ name: 'owner/repo', rank: 3, stars: '321' }]);
+
+  assert.match(html, /class="rank-badge">3<\/div>/);
+  assert.match(html, /project-card--featured/);
+});
+
 test('moves the report heading and opening out of the project feed', () => {
   const lead = markdownParser.extractReportLead('<h1>当日标题</h1>\n<p>当日导语</p>\n<article>项目</article>');
 
@@ -116,6 +128,7 @@ test('moves the report heading and opening out of the project feed', () => {
 test('wraps the daily takeaway as a full-width summary panel', () => {
   const html = markdownParser.convertMarkdownToHTML('**今日总结**：保持判断。');
   assert.match(html, /class="summary-section"/);
+  assert.match(html, /今日结论/);
   assert.match(html, /保持判断/);
 });
 

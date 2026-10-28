@@ -118,7 +118,7 @@
 
       <aside class="rail">
         <section class="rail-panel ranking-panel">
-          <div class="panel-heading"><div><span class="eyebrow">RECURRING</span><h2>最近反复出现</h2></div></div>
+          <div class="panel-heading"><div><span class="eyebrow">持续出现</span><h2>最近反复出现</h2></div></div>
           <div class="segmented-control" role="group" aria-label="排行榜周期">
             <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
             <button type="button" data-range="month" aria-pressed="false">30 天</button>
@@ -128,8 +128,14 @@
         </section>
 
         <section class="rail-panel history-panel">
-          <div class="panel-heading"><div><span class="eyebrow">ARCHIVE</span><h2>历史雷达</h2></div></div>
-          <ul class="history-list"><li><a href="daily_2026-10-27.html">2026年10月27日</a></li><li><a href="daily_2026-10-26.html">2026年10月26日</a></li><li><a href="daily_2026-10-25.html">2026年10月25日</a></li><li><a href="daily_2026-10-24.html">2026年10月24日</a></li><li><a href="daily_2026-10-23.html">2026年10月23日</a></li><li><a href="daily_2026-10-22.html">2026年10月22日</a></li><li><a href="daily_2026-10-21.html">2026年10月21日</a></li></ul>
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一份旧信号。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
 
     <div class="date-filter-container">
       <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
@@ -145,6 +151,7 @@
     </div>
     <div id="availableDatesData" style="display:none;">["2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29","2026-09-28"]</div>
 
+          </details>
         </section>
         <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
       </aside>
@@ -159,7 +166,7 @@
   <div class="library-overlay" id="libraryOverlay" hidden>
     <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
       <div class="library-header">
-        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
         <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
       </div>
       <div class="library-tabs" role="tablist" aria-label="项目库分类">

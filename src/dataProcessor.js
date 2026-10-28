@@ -179,7 +179,11 @@ function calculateAppearances(historyData) {
  */
 function loadProjectSummaries(markdownContent) {
   projectSummariesCache = {};
+  appendProjectSummaries(markdownContent);
+  return projectSummariesCache;
+}
 
+function appendProjectSummaries(markdownContent) {
   // 同时兼容段落格式和旧版无序列表格式
   const projectRegex = /^###\s+([^\n]+)\r?\n([\s\S]*?)(?=^###\s+|(?![\s\S]))/gm;
   let match;
@@ -202,6 +206,19 @@ function loadProjectSummaries(markdownContent) {
     }
   }
 
+}
+
+function loadHistoricalProjectSummaries() {
+  const reportsDir = config.directories.reports;
+  projectSummariesCache = {};
+  if (!fs.existsSync(reportsDir)) return projectSummariesCache;
+
+  const files = fs.readdirSync(reportsDir)
+    .filter(file => file.startsWith(config.filePatterns.markdownPrefix) && file.endsWith('.md'))
+    .sort();
+  for (const file of files) {
+    appendProjectSummaries(fs.readFileSync(path.join(reportsDir, file), 'utf8'));
+  }
   return projectSummariesCache;
 }
 
@@ -376,6 +393,7 @@ function simpleTranslate(text) {
 function generateRankingData() {
   // 加载翻译缓存
   loadTranslationCache();
+  loadHistoricalProjectSummaries();
 
   // 读取各时间范围的历史数据
   const weekData = readHistoryData(config.ranking.week);
@@ -433,7 +451,8 @@ function generateRankingData() {
  */
 function enrichRankingItem(item) {
   // 获取中文摘要（简短版本，用于列表显示）
-  const shortDesc = getChineseSummary(item.name, item.description);
+  const summary = getChineseSummary(item.name, item.description);
+  const shortDesc = /[\u3400-\u9fff]/.test(summary) ? summary : buildChineseFallback(item);
 
   // 获取详细描述（用于悬浮窗）
   const detailedDesc = getDetailedDescription(item);
@@ -443,6 +462,23 @@ function enrichRankingItem(item) {
     chineseDesc: shortDesc,      // 简短描述，用于列表
     detailedDesc: detailedDesc   // 详细描述，用于悬浮窗
   };
+}
+
+function buildChineseFallback(item) {
+  const description = String(item.description || '').toLowerCase();
+  const rules = [
+    [/skill|practice|engineer/, '面向开发者的工程技能与实践资源合集。'],
+    [/artist|designer|filmmaker|art|creative/, '面向艺术家、设计师和影视创作者的创作工具。'],
+    [/security|audit|safe/, '用于检查项目安全性与风险的开源工具。'],
+    [/agent|\bai\b|llm|model/, '围绕人工智能与智能体工作流构建的开源项目。'],
+    [/database|postgres|sql/, '用于数据库开发与数据管理的开源工具。'],
+    [/design|\bui\b|frontend/, '用于界面设计与前端开发的开源工具。'],
+    [/image|video|audio|voice/, '用于多媒体内容处理与创作的开源工具。'],
+    [/robot|hardware/, '面向机器人或硬件开发的开源项目。'],
+    [/code|developer|\bide\b/, '用于改善软件开发流程与效率的开源工具。']
+  ];
+  const match = rules.find(([pattern]) => pattern.test(description));
+  return match ? match[1] : '一个近期持续受到关注的开源项目。';
 }
 
 /**

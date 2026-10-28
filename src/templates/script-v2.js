@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeProjectCards();
   initializeAppearanceTags();
   initializeLibrary();
+  initializeRandomHistory();
   initializeRankingTabs();
   updateRanking(state.range);
 });
@@ -300,6 +301,46 @@ function getAvailableDates() {
   } catch (error) {
     return [];
   }
+}
+
+function initializeRandomHistory() {
+  const button = document.getElementById('randomHistoryButton');
+  const dateLabel = document.getElementById('randomHistoryDate');
+  if (!button || !dateLabel) return;
+
+  button.addEventListener('click', function() {
+    const currentDate = document.body.dataset.reportDate;
+    const lastDate = sessionStorage.getItem('github-radar-last-random-date');
+    let dates = getAvailableDates().filter(function(date) {
+      return date !== currentDate && date !== lastDate;
+    });
+    if (dates.length === 0) dates = getAvailableDates().filter(date => date !== currentDate);
+    if (dates.length === 0) return;
+
+    const targetDate = dates[Math.floor(Math.random() * dates.length)];
+    const navigate = function() {
+      sessionStorage.setItem('github-radar-last-random-date', targetDate);
+      const reportBasePath = document.body.dataset.reportBasePath || '';
+      window.location.href = `${reportBasePath}daily_${targetDate}.html`;
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      navigate();
+      return;
+    }
+
+    button.disabled = true;
+    button.classList.add('is-shuffling');
+    let ticks = 0;
+    const timer = window.setInterval(function() {
+      dateLabel.textContent = dates[Math.floor(Math.random() * dates.length)];
+      ticks += 1;
+      if (ticks < 6) return;
+      window.clearInterval(timer);
+      dateLabel.textContent = targetDate;
+      window.setTimeout(navigate, 180);
+    }, 65);
+  });
 }
 
 function updateMonthOptions() {
