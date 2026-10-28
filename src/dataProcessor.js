@@ -157,6 +157,20 @@ function calculateRanking(historyData) {
   });
 }
 
+function calculateAppearances(historyData) {
+  const appearances = {};
+  for (const { date, data } of historyData) {
+    if (!Array.isArray(data)) continue;
+    for (const repo of data) {
+      if (!repo || !repo.name) continue;
+      if (!appearances[repo.name]) appearances[repo.name] = [];
+      if (!appearances[repo.name].includes(date)) appearances[repo.name].push(date);
+    }
+  }
+  Object.values(appearances).forEach(function(dates) { dates.sort().reverse(); });
+  return appearances;
+}
+
 /**
  * 加载项目摘要
  * 从 Markdown 内容中提取项目的中文描述（一句话概括）
@@ -372,6 +386,7 @@ function generateRankingData() {
   const weekRanking = calculateRanking(weekData);
   const monthRanking = calculateRanking(monthData);
   const quarterRanking = calculateRanking(quarterData);
+  const appearances = calculateAppearances(quarterData);
 
   // 为排行榜添加中文描述和详细信息（用于悬浮窗）
   const weekRankingWithCN = weekRanking.map(item => enrichRankingItem(item));
@@ -385,7 +400,8 @@ function generateRankingData() {
   const rankingDataJSON = JSON.stringify({
     week: weekRankingWithCN,
     month: monthRankingWithCN,
-    quarter: quarterRankingWithCN
+    quarter: quarterRankingWithCN,
+    appearances
   });
 
   // 写入文件
@@ -404,7 +420,8 @@ function generateRankingData() {
   return {
     week: weekRankingWithCN,
     month: monthRankingWithCN,
-    quarter: quarterRankingWithCN
+    quarter: quarterRankingWithCN,
+    appearances
   };
 }
 

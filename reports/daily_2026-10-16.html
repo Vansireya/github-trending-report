@@ -10,12 +10,12 @@
       window.location.replace(new URL('../../', window.location.href));
     }
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月16日星期五</title>
   <script src="../data/ranking_data.js"></script>
   <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
-<body data-report-base-path="">
+<body data-report-base-path="" data-report-date="2026-10-16">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -26,6 +26,9 @@
     </a>
     <div class="header-actions">
       <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
       <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
   </header>
@@ -49,7 +52,7 @@
 </blockquote>
 <hr>
 
-<article class="project-card project-card--top" data-project-name="morluto/rea" data-language="TypeScript">
+<article class="project-card project-card--rank-1" data-project-name="morluto/rea" data-project-url="https://github.com/morluto/rea" data-project-summary="让 AI Agent 帮你逆向工程，从 App 行为一路扒到原生二进制。" data-project-stars="272,932" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
@@ -59,10 +62,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 morluto/rea" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 morluto/rea 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
+    </div>
   </div>
   <p class="project-summary">让 AI Agent 帮你逆向工程，从 App 行为一路扒到原生二进制。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-morluto-rea">
@@ -76,7 +83,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="anthropics/claude-plugins-official" data-language="Python">
+<article class="project-card project-card--featured" data-project-name="anthropics/claude-plugins-official" data-project-url="https://github.com/anthropics/claude-plugins-official" data-project-summary="Anthropic 官方亲自下场的 Claude Code 插件目录。" data-project-stars="39,202" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
@@ -86,10 +93,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 anthropics/claude-plugins-official">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 anthropics/claude-plugins-official" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 anthropics/claude-plugins-official 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 anthropics/claude-plugins-official">↗</a>
+    </div>
   </div>
   <p class="project-summary">Anthropic 官方亲自下场的 Claude Code 插件目录。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-anthropics-claude-plugins-official">
@@ -103,7 +114,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="K-Dense-AI/scientific-agent-skills" data-language="Python">
+<article class="project-card project-card--featured" data-project-name="K-Dense-AI/scientific-agent-skills" data-project-url="https://github.com/K-Dense-AI/scientific-agent-skills" data-project-summary="把任何 AI Agent 改造成“AI 科学家”，177 个现成技能包 + 100 多个科学数据库。" data-project-stars="50,573" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
@@ -113,10 +124,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 K-Dense-AI/scientific-agent-skills">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 K-Dense-AI/scientific-agent-skills" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 K-Dense-AI/scientific-agent-skills 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 K-Dense-AI/scientific-agent-skills">↗</a>
+    </div>
   </div>
   <p class="project-summary">把任何 AI Agent 改造成“AI 科学家”，177 个现成技能包 + 100 多个科学数据库。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-k-dense-ai-scientific-agent-skills">
@@ -130,7 +145,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="JuliusBrussee/caveman" data-language="Go">
+<article class="project-card project-card--compact" data-project-name="JuliusBrussee/caveman" data-project-url="https://github.com/JuliusBrussee/caveman" data-project-summary="让 AI 用“原始人语”说话，省下 65% 的 token。" data-project-stars="112,629" data-language="Go">
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
@@ -140,10 +155,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Go</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 JuliusBrussee/caveman">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 JuliusBrussee/caveman" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 JuliusBrussee/caveman 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 JuliusBrussee/caveman">↗</a>
+    </div>
   </div>
   <p class="project-summary">让 AI 用“原始人语”说话，省下 65% 的 token。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-juliusbrussee-caveman">
@@ -157,7 +176,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="debpalash/VoiceStudio" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="debpalash/VoiceStudio" data-project-url="https://github.com/debpalash/VoiceStudio" data-project-summary="完全本地的开源 ElevenLabs 替代品，语音克隆、配音、听写、有声书，646 种语言。" data-project-stars="69,260" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
@@ -167,10 +186,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 debpalash/VoiceStudio">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 debpalash/VoiceStudio" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 debpalash/VoiceStudio 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 debpalash/VoiceStudio">↗</a>
+    </div>
   </div>
   <p class="project-summary">完全本地的开源 ElevenLabs 替代品，语音克隆、配音、听写、有声书，646 种语言。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-debpalash-voicestudio">
@@ -184,7 +207,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="obra/superpowers" data-language="Shell">
+<article class="project-card project-card--compact" data-project-name="obra/superpowers" data-project-url="https://github.com/obra/superpowers" data-project-summary="一个“真的能用”的 Agent 技能框架和软件开发方法论。" data-project-stars="299,973" data-language="Shell">
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
@@ -194,10 +217,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Shell</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 obra/superpowers">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 obra/superpowers" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 obra/superpowers 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 obra/superpowers">↗</a>
+    </div>
   </div>
   <p class="project-summary">一个“真的能用”的 Agent 技能框架和软件开发方法论。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-obra-superpowers">
@@ -211,7 +238,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="ruvnet/ruflo" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="ruvnet/ruflo" data-project-url="https://github.com/ruvnet/ruflo" data-project-summary="原始 Agent 框架，部署多智能体蜂群，协调自主工作流，构建对话 AI 系统。" data-project-stars="75,178" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
@@ -221,10 +248,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruvnet/ruflo">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ruvnet/ruflo" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ruvnet/ruflo 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruvnet/ruflo">↗</a>
+    </div>
   </div>
   <p class="project-summary">原始 Agent 框架，部署多智能体蜂群，协调自主工作流，构建对话 AI 系统。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ruvnet-ruflo">
@@ -238,7 +269,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="mksglu/context-mode" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="给 AI 编程 Agent 做上下文窗口优化，工具输出沙箱化后减少 98%。" data-project-stars="29,829" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
@@ -248,10 +279,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mksglu/context-mode" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 mksglu/context-mode 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
+    </div>
   </div>
   <p class="project-summary">给 AI 编程 Agent 做上下文窗口优化，工具输出沙箱化后减少 98%。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mksglu-context-mode">
@@ -265,7 +300,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="NationalSecurityAgency/ghidra" data-language="Java">
+<article class="project-card project-card--compact" data-project-name="NationalSecurityAgency/ghidra" data-project-url="https://github.com/NationalSecurityAgency/ghidra" data-project-summary="NSA 出品的软件逆向工程框架。" data-project-stars="88,868" data-language="Java">
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
@@ -275,10 +310,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Java</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NationalSecurityAgency/ghidra">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 NationalSecurityAgency/ghidra" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 NationalSecurityAgency/ghidra 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NationalSecurityAgency/ghidra">↗</a>
+    </div>
   </div>
   <p class="project-summary">NSA 出品的软件逆向工程框架。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nationalsecurityagency-ghidra">
@@ -292,7 +331,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="affaan-m/ECC" data-language="JavaScript">
+<article class="project-card project-card--compact" data-project-name="affaan-m/ECC" data-project-url="https://github.com/affaan-m/ECC" data-project-summary="Agent 框架性能优化系统，技能、本能、记忆、安全、研究优先开发，通吃 Claude Code / Codex / Cursor。" data-project-stars="280,475" data-language="JavaScript">
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
@@ -302,10 +341,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>JavaScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 affaan-m/ECC">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 affaan-m/ECC" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 affaan-m/ECC 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 affaan-m/ECC">↗</a>
+    </div>
   </div>
   <p class="project-summary">Agent 框架性能优化系统，技能、本能、记忆、安全、研究优先开发，通吃 Claude Code / Codex / Cursor。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-affaan-m-ecc">
@@ -363,6 +406,21 @@
     <span>GitHub Radar · 自动生成的开源趋势观察</span>
     <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
   </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+        <button type="button" role="tab" data-library-tab="later" aria-selected="false">稍后看 <span id="laterTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
   <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ test('converts the current paragraph report format into a project card', () => {
 **今日总结**：总结仍应保留。
 `);
 
-  assert.match(html, /class="project-card"/);
+  assert.match(html, /class="project-card\b/);
   assert.match(html, /项目摘要/);
   assert.match(html, /rel="noopener noreferrer"/);
   assert.match(html, /总结仍应保留/);
@@ -39,7 +39,7 @@ test('converts the legacy list report format into a project card', () => {
 - **推荐指数**：★★★★☆
 `);
 
-  assert.match(html, /class="project-card"/);
+  assert.match(html, /class="project-card\b/);
   assert.doesNotMatch(html, /<ul>\s*<\/ul>/);
 });
 
@@ -70,9 +70,24 @@ test('shows the authoritative scraped star count beside the project name', () =>
   assert.match(html, /TypeScript/);
   assert.match(html, /class="star-pill"[^>]*>★ 9,999/);
   assert.match(html, /aria-expanded="true"/);
+  assert.match(html, /project-card--featured/);
+  assert.match(html, /class="[^"]*favorite-action/);
+  assert.match(html, /class="[^"]*later-action/);
+  assert.match(html, /data-project-stars="9,999"/);
   assert.match(html, /id="project-owner-repo">/);
   assert.doesNotMatch(html, /本期增长|Fork|编辑评分/);
   assert.doesNotMatch(html, /适合：|为什么上榜|使用提醒/);
+});
+
+test('gives the first project a distinct editorial layout', () => {
+  const html = markdownParser.generateProjectCard({
+    name: 'owner/repo',
+    summary: '摘要',
+    repository: { rank: 1, url: 'https://github.com/owner/repo', stars: '1,234' }
+  });
+
+  assert.match(html, /project-card--rank-1/);
+  assert.match(html, /aria-expanded="true"/);
 });
 
 test('moves the report heading and opening out of the project feed', () => {

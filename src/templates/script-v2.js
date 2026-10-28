@@ -1,10 +1,16 @@
 const state = {
-  range: 'week'
+  range: 'week',
+  libraryTab: 'favorites',
+  library: { favorites: {}, later: {} }
 };
+
+const LIBRARY_STORAGE_KEY = 'github-radar-library-v1';
 
 document.addEventListener('DOMContentLoaded', function() {
   initializeTheme();
   initializeProjectCards();
+  initializeAppearanceTags();
+  initializeLibrary();
   initializeRankingTabs();
   updateRanking(state.range);
 });
@@ -22,6 +28,202 @@ function initializeTheme() {
     localStorage.setItem('github-radar-theme', root.dataset.theme);
     themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
   });
+}
+
+function initializeAppearanceTags() {
+  const reportDate = document.body.dataset.reportDate;
+  const appearances = typeof rankingData === 'undefined' ? {} : (rankingData.appearances || {});
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    const projectDates = appearances[card.dataset.projectName];
+    if (!Array.isArray(projectDates) || !reportDate) return;
+    const dates = projectDates.filter(function(date) { return date <= reportDate; }).sort().reverse();
+    if (!dates.includes(reportDate)) return;
+
+    let label = '再次上榜';
+    if (dates.length === 1) {
+      label = '今日新上榜';
+    } else {
+      let streak = 1;
+      for (let index = 1; index < dates.length; index++) {
+        const later = Date.parse(`${dates[index - 1]}T00:00:00Z`);
+        const earlier = Date.parse(`${dates[index]}T00:00:00Z`);
+        if (Math.round((later - earlier) / 86400000) !== 1) break;
+        streak += 1;
+      }
+      if (streak > 1) label = `连续出现 ${streak} 天`;
+    }
+
+    const tag = card.querySelector('.appearance-tag');
+    if (tag) {
+      tag.textContent = label;
+      tag.hidden = false;
+    }
+  });
+}
+
+function initializeLibrary() {
+  state.library = readLibrary();
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    bindLibraryAction(card, 'favorites', '.favorite-action');
+    bindLibraryAction(card, 'later', '.later-action');
+  });
+
+  const overlay = document.getElementById('libraryOverlay');
+  const openButton = document.getElementById('libraryOpen');
+  const closeButton = document.getElementById('libraryClose');
+  if (!overlay || !openButton || !closeButton) return;
+
+  openButton.addEventListener('click', openLibrary);
+  closeButton.addEventListener('click', closeLibrary);
+  overlay.addEventListener('click', function(event) {
+    if (event.target === overlay) closeLibrary();
+  });
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && !overlay.hidden) closeLibrary();
+  });
+  document.querySelectorAll('[data-library-tab]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      state.libraryTab = button.dataset.libraryTab;
+      renderLibrary();
+    });
+  });
+  document.getElementById('libraryExport').addEventListener('click', exportLibrary);
+  refreshLibraryUI();
+}
+
+function readLibrary() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(LIBRARY_STORAGE_KEY));
+    return {
+      favorites: saved && saved.favorites && typeof saved.favorites === 'object' ? saved.favorites : {},
+      later: saved && saved.later && typeof saved.later === 'object' ? saved.later : {}
+    };
+  } catch (error) {
+    return { favorites: {}, later: {} };
+  }
+}
+
+function bindLibraryAction(card, collection, selector) {
+  const button = card.querySelector(selector);
+  if (!button) return;
+  button.addEventListener('click', function() {
+    const key = projectKey(card);
+    if (state.library[collection][key]) delete state.library[collection][key];
+    else state.library[collection][key] = projectRecord(card);
+    localStorage.setItem(LIBRARY_STORAGE_KEY, JSON.stringify(state.library));
+    refreshLibraryUI();
+  });
+}
+
+function projectKey(card) {
+  return card.dataset.projectUrl && card.dataset.projectUrl !== '#' ? card.dataset.projectUrl : card.dataset.projectName;
+}
+
+function projectRecord(card) {
+  return {
+    name: card.dataset.projectName || '未知项目',
+    url: card.dataset.projectUrl || '#',
+    summary: card.dataset.projectSummary || '',
+    stars: card.dataset.projectStars || '0',
+    language: card.dataset.language || 'Other',
+    date: document.body.dataset.reportDate || '',
+    savedAt: new Date().toISOString()
+  };
+}
+
+function refreshLibraryUI() {
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    const key = projectKey(card);
+    setActionState(card.querySelector('.favorite-action'), Boolean(state.library.favorites[key]));
+    setActionState(card.querySelector('.later-action'), Boolean(state.library.later[key]));
+  });
+  document.getElementById('libraryCount').textContent = Object.keys(state.library.favorites).length;
+  document.getElementById('favoriteTabCount').textContent = Object.keys(state.library.favorites).length;
+  document.getElementById('laterTabCount').textContent = Object.keys(state.library.later).length;
+  renderLibrary();
+}
+
+function setActionState(button, isActive) {
+  if (!button) return;
+  button.classList.toggle('active', isActive);
+  button.setAttribute('aria-pressed', String(isActive));
+}
+
+function openLibrary() {
+  document.getElementById('libraryOverlay').hidden = false;
+  document.body.classList.add('drawer-open');
+  renderLibrary();
+  document.getElementById('libraryClose').focus();
+}
+
+function closeLibrary() {
+  document.getElementById('libraryOverlay').hidden = true;
+  document.body.classList.remove('drawer-open');
+  document.getElementById('libraryOpen').focus();
+}
+
+function renderLibrary() {
+  const list = document.getElementById('libraryList');
+  if (!list) return;
+  document.querySelectorAll('[data-library-tab]').forEach(function(button) {
+    button.setAttribute('aria-selected', String(button.dataset.libraryTab === state.libraryTab));
+  });
+  list.replaceChildren();
+  const entries = Object.entries(state.library[state.libraryTab]).sort(function(a, b) {
+    return (b[1].savedAt || '').localeCompare(a[1].savedAt || '');
+  });
+  if (entries.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'library-empty';
+    const icon = document.createElement('span');
+    icon.textContent = '♡';
+    const title = document.createElement('strong');
+    title.textContent = '这里还没有项目';
+    const note = document.createElement('p');
+    note.textContent = '在日报卡片上点一下图标，就会收进来。';
+    empty.append(icon, title, note);
+    list.appendChild(empty);
+    return;
+  }
+  entries.forEach(function([key, item]) {
+    const article = document.createElement('article');
+    article.className = 'library-item';
+    const link = document.createElement('a');
+    link.href = /^https?:\/\//i.test(item.url || '') ? item.url : '#';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = item.name || '未知项目';
+    const summary = document.createElement('p');
+    summary.textContent = item.summary || '暂无摘要';
+    const meta = document.createElement('span');
+    meta.textContent = `${item.language || 'Other'} · ★ ${item.stars || '0'}${item.date ? ` · ${item.date}` : ''}`;
+    const remove = document.createElement('button');
+    remove.type = 'button';
+    remove.textContent = '移除';
+    remove.addEventListener('click', function() {
+      delete state.library[state.libraryTab][key];
+      localStorage.setItem(LIBRARY_STORAGE_KEY, JSON.stringify(state.library));
+      refreshLibraryUI();
+    });
+    article.append(link, summary, meta, remove);
+    list.appendChild(article);
+  });
+}
+
+function exportLibrary() {
+  const items = Object.values(state.library[state.libraryTab]);
+  if (items.length === 0) return;
+  const title = state.libraryTab === 'favorites' ? 'GitHub Radar 收藏' : 'GitHub Radar 稍后看';
+  const lines = [`# ${title}`, ''];
+  items.forEach(function(item) {
+    lines.push(`## [${item.name}](${item.url})`, '', item.summary || '', '', `- ${item.language || 'Other'} · ★ ${item.stars || '0'}${item.date ? ` · 收录于 ${item.date}` : ''}`, '');
+  });
+  const url = URL.createObjectURL(new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `github-radar-${state.libraryTab}.md`;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 function initializeProjectCards() {

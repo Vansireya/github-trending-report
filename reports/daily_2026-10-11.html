@@ -10,12 +10,12 @@
       window.location.replace(new URL('../../', window.location.href));
     }
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月11日星期日</title>
   <script src="../data/ranking_data.js"></script>
   <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
-<body data-report-base-path="">
+<body data-report-base-path="" data-report-date="2026-10-11">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -26,6 +26,9 @@
     </a>
     <div class="header-actions">
       <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
       <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
   </header>
@@ -49,7 +52,7 @@
 </blockquote>
 <hr>
 
-<article class="project-card project-card--top" data-project-name="morluto/rea" data-language="TypeScript">
+<article class="project-card project-card--rank-1" data-project-name="morluto/rea" data-project-url="https://github.com/morluto/rea" data-project-summary="让 AI Agent 帮你逆向任何东西，从 App 行为一路扒到原生二进制。" data-project-stars="75,452" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
@@ -59,10 +62,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 morluto/rea" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 morluto/rea 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 morluto/rea">↗</a>
+    </div>
   </div>
   <p class="project-summary">让 AI Agent 帮你逆向任何东西，从 App 行为一路扒到原生二进制。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-morluto-rea">
@@ -76,7 +83,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="boykopovar/AnyPS5" data-language="C++">
+<article class="project-card project-card--featured" data-project-name="boykopovar/AnyPS5" data-project-url="https://github.com/boykopovar/AnyPS5" data-project-summary="自动把 PS5 可执行文件移植到 Linux 和 Windows 的工具。" data-project-stars="27,152" data-language="C++">
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
@@ -86,10 +93,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>C++</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 boykopovar/AnyPS5">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 boykopovar/AnyPS5" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 boykopovar/AnyPS5 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 boykopovar/AnyPS5">↗</a>
+    </div>
   </div>
   <p class="project-summary">自动把 PS5 可执行文件移植到 Linux 和 Windows 的工具。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-boykopovar-anyps5">
@@ -103,7 +114,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="storytold/artcraft" data-language="Rust">
+<article class="project-card project-card--featured" data-project-name="storytold/artcraft" data-project-url="https://github.com/storytold/artcraft" data-project-summary="给艺术家、设计师和电影人用的&amp;quot;有意为之&amp;quot;的创作引擎。" data-project-stars="14,745" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
@@ -113,10 +124,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 storytold/artcraft">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 storytold/artcraft" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 storytold/artcraft 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 storytold/artcraft">↗</a>
+    </div>
   </div>
   <p class="project-summary">给艺术家、设计师和电影人用的&amp;quot;有意为之&amp;quot;的创作引擎。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-storytold-artcraft">
@@ -130,7 +145,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="cathrynlavery/diagram-design" data-language="HTML">
+<article class="project-card project-card--compact" data-project-name="cathrynlavery/diagram-design" data-project-url="https://github.com/cathrynlavery/diagram-design" data-project-summary="给 AI 编程助手用的编辑级图表设计系统，44 种图表类型，输出干净的 HTML + SVG。" data-project-stars="49,076" data-language="HTML">
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
@@ -140,10 +155,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>HTML</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cathrynlavery/diagram-design">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cathrynlavery/diagram-design" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 cathrynlavery/diagram-design 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cathrynlavery/diagram-design">↗</a>
+    </div>
   </div>
   <p class="project-summary">给 AI 编程助手用的编辑级图表设计系统，44 种图表类型，输出干净的 HTML + SVG。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-cathrynlavery-diagram-design">
@@ -157,7 +176,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="mksglu/context-mode" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="mksglu/context-mode" data-project-url="https://github.com/mksglu/context-mode" data-project-summary="AI 编程 Agent 的上下文窗口优化器，工具输出减少 98%，还能跨平台记忆。" data-project-stars="26,372" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
@@ -167,10 +186,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mksglu/context-mode" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 mksglu/context-mode 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mksglu/context-mode">↗</a>
+    </div>
   </div>
   <p class="project-summary">AI 编程 Agent 的上下文窗口优化器，工具输出减少 98%，还能跨平台记忆。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mksglu-context-mode">
@@ -184,7 +207,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="mattpocock/skills" data-language="Shell">
+<article class="project-card project-card--compact" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="来自真实工程师的 .agents 目录技能合集。" data-project-stars="284,661" data-language="Shell">
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
@@ -194,10 +217,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Shell</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mattpocock/skills">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mattpocock/skills" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 mattpocock/skills 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 mattpocock/skills">↗</a>
+    </div>
   </div>
   <p class="project-summary">来自真实工程师的 .agents 目录技能合集。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-mattpocock-skills">
@@ -211,7 +238,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="flutter/flutter" data-language="Dart">
+<article class="project-card project-card--compact" data-project-name="flutter/flutter" data-project-url="https://github.com/flutter/flutter" data-project-summary="Google 的跨平台 UI 框架，一套代码构建移动端和更多平台的应用。" data-project-stars="179,569" data-language="Dart">
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
@@ -221,10 +248,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Dart</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 flutter/flutter">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 flutter/flutter" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 flutter/flutter 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 flutter/flutter">↗</a>
+    </div>
   </div>
   <p class="project-summary">Google 的跨平台 UI 框架，一套代码构建移动端和更多平台的应用。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-flutter-flutter">
@@ -238,7 +269,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="tensorflow/tensorflow" data-language="C++">
+<article class="project-card project-card--compact" data-project-name="tensorflow/tensorflow" data-project-url="https://github.com/tensorflow/tensorflow" data-project-summary="Google 的开源机器学习框架，人人可用。" data-project-stars="200,755" data-language="C++">
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
@@ -248,10 +279,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>C++</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 tensorflow/tensorflow">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 tensorflow/tensorflow" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 tensorflow/tensorflow 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 tensorflow/tensorflow">↗</a>
+    </div>
   </div>
   <p class="project-summary">Google 的开源机器学习框架，人人可用。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-tensorflow-tensorflow">
@@ -265,7 +300,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="hugohe3/ppt-master" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="hugohe3/ppt-master" data-project-url="https://github.com/hugohe3/ppt-master" data-project-summary="AI 把文档或主题变成真正的原生 PowerPoint 演示文稿，带原生形状、转场、动画、图表和语音旁白。" data-project-stars="59,580" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
@@ -275,10 +310,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 hugohe3/ppt-master">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 hugohe3/ppt-master" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 hugohe3/ppt-master 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 hugohe3/ppt-master">↗</a>
+    </div>
   </div>
   <p class="project-summary">AI 把文档或主题变成真正的原生 PowerPoint 演示文稿，带原生形状、转场、动画、图表和语音旁白。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-hugohe3-ppt-master">
@@ -292,7 +331,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="pytorch/pytorch" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="pytorch/pytorch" data-project-url="https://github.com/pytorch/pytorch" data-project-summary="Python 里的张量和动态神经网络，GPU 加速拉满。" data-project-stars="104,167" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
@@ -302,10 +341,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pytorch/pytorch">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 pytorch/pytorch" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 pytorch/pytorch 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pytorch/pytorch">↗</a>
+    </div>
   </div>
   <p class="project-summary">Python 里的张量和动态神经网络，GPU 加速拉满。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pytorch-pytorch">
@@ -363,6 +406,21 @@
     <span>GitHub Radar · 自动生成的开源趋势观察</span>
     <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
   </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+        <button type="button" role="tab" data-library-tab="later" aria-selected="false">稍后看 <span id="laterTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
   <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>

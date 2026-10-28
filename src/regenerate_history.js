@@ -69,6 +69,7 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   let resultHTML = baseTemplate;
   resultHTML = resultHTML.replace('{{TITLE}}', `${config.page.titlePrefix} - ${dateCN}`);
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{REPORT_DATE}}', dateStr);
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);

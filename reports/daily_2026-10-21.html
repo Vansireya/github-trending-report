@@ -10,12 +10,12 @@
       window.location.replace(new URL('../../', window.location.href));
     }
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月21日星期三</title>
   <script src="../data/ranking_data.js"></script>
   <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
-<body data-report-base-path="">
+<body data-report-base-path="" data-report-date="2026-10-21">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -26,6 +26,9 @@
     </a>
     <div class="header-actions">
       <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
       <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
   </header>
@@ -46,7 +49,7 @@
       <div class="feed-column">
         <div class="content" id="projectFeed"><hr>
 
-<article class="project-card" data-project-name="ai-job-search" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="ai-job-search" data-project-url="https://github.com/MadsLorentzen/ai-job-search" data-project-summary="一个跑在你自己机器上的 AI 求职流水线，从筛岗位到写求职信一条龙。" data-project-stars="60,870" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -56,10 +59,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ai-job-search">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ai-job-search" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ai-job-search 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ai-job-search">↗</a>
+    </div>
   </div>
   <p class="project-summary">一个跑在你自己机器上的 AI 求职流水线，从筛岗位到写求职信一条龙。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ai-job-search">
@@ -73,7 +80,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="security-audit-skill" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="security-audit-skill" data-project-url="https://github.com/cloudflare/security-audit-skill" data-project-summary="Cloudflare 出品的编码智能体安全审计技能包，多阶段扫描、结论可机器验证。" data-project-stars="34,409" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -83,10 +90,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 security-audit-skill">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 security-audit-skill" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 security-audit-skill 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 security-audit-skill">↗</a>
+    </div>
   </div>
   <p class="project-summary">Cloudflare 出品的编码智能体安全审计技能包，多阶段扫描、结论可机器验证。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-security-audit-skill">
@@ -100,7 +111,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="orca" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="orca" data-project-url="https://github.com/stablyai/orca" data-project-summary="一个管理「智能体舰队」的工作台，桌面、移动、远程运行时通吃。" data-project-stars="99,893" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -110,10 +121,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 orca">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 orca" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 orca 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 orca">↗</a>
+    </div>
   </div>
   <p class="project-summary">一个管理「智能体舰队」的工作台，桌面、移动、远程运行时通吃。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-orca">
@@ -127,7 +142,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="ponytail" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="ponytail" data-project-url="https://github.com/DietrichGebert/ponytail" data-project-summary="让你的 AI 智能体像「全屋最懒的资深开发」一样思考——能不写的代码就不写。" data-project-stars="169,900" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -137,10 +152,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ponytail">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ponytail" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ponytail 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ponytail">↗</a>
+    </div>
   </div>
   <p class="project-summary">让你的 AI 智能体像「全屋最懒的资深开发」一样思考——能不写的代码就不写。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ponytail">
@@ -154,7 +173,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="ComfyUI" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="ComfyUI" data-project-url="https://github.com/Comfy-Org/ComfyUI" data-project-summary="最强大、最模块化的扩散模型图形界面，节点式操作，本地推理快得飞起。" data-project-stars="140,860" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -164,10 +183,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ComfyUI">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ComfyUI" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ComfyUI 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ComfyUI">↗</a>
+    </div>
   </div>
   <p class="project-summary">最强大、最模块化的扩散模型图形界面，节点式操作，本地推理快得飞起。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-comfyui">
@@ -181,7 +204,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="ruflo" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="ruflo" data-project-url="https://github.com/ruvnet/ruflo" data-project-summary="元老级 agent 编排框架，部署多智能体蜂群、协调自主工作流。" data-project-stars="77,900" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -191,10 +214,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruflo">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ruflo" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ruflo 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ruflo">↗</a>
+    </div>
   </div>
   <p class="project-summary">元老级 agent 编排框架，部署多智能体蜂群、协调自主工作流。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-ruflo">
@@ -208,7 +235,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="graphify" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="graphify" data-project-url="https://github.com/Graphify-Labs/graphify" data-project-summary="把任意代码库连同文档、SQL schema、配置、PDF 一起，变成可查询的知识图谱。" data-project-stars="130,370" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -218,10 +245,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 graphify">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 graphify" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 graphify 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 graphify">↗</a>
+    </div>
   </div>
   <p class="project-summary">把任意代码库连同文档、SQL schema、配置、PDF 一起，变成可查询的知识图谱。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-graphify">
@@ -235,7 +266,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="opencode" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="opencode" data-project-url="https://github.com/anomalyco/opencode" data-project-summary="开源的编码智能体——简介就这七个字，但星数说明了一切。" data-project-stars="219,033" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -245,10 +276,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 opencode">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 opencode" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 opencode 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 opencode">↗</a>
+    </div>
   </div>
   <p class="project-summary">开源的编码智能体——简介就这七个字，但星数说明了一切。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-opencode">
@@ -262,7 +297,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="agency-agents" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="agency-agents" data-project-url="https://github.com/msitarzewski/agency-agents" data-project-summary="一整套「AI 代理机构」任你差遣，从前端巫师到 Reddit 社区运营忍者应有尽有。" data-project-stars="162,431" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -272,10 +307,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 agency-agents">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 agency-agents" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 agency-agents 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 agency-agents">↗</a>
+    </div>
   </div>
   <p class="project-summary">一整套「AI 代理机构」任你差遣，从前端巫师到 Reddit 社区运营忍者应有尽有。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-agency-agents">
@@ -289,7 +328,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="headroom" data-language="Other">
+<article class="project-card project-card--compact" data-project-name="headroom" data-project-url="https://github.com/headroomlabs-ai/headroom" data-project-summary="在内容送进 LLM 之前先压缩——工具输出、日志、文件、RAG 块统统瘦身。" data-project-stars="76,804" data-language="Other">
   <div class="project-card-header">
     <div class="rank-badge">NEW</div>
     <div class="project-identity">
@@ -299,10 +338,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Other</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 headroom">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 headroom" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 headroom 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 headroom">↗</a>
+    </div>
   </div>
   <p class="project-summary">在内容送进 LLM 之前先压缩——工具输出、日志、文件、RAG 块统统瘦身。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-headroom">
@@ -359,6 +402,21 @@
     <span>GitHub Radar · 自动生成的开源趋势观察</span>
     <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
   </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+        <button type="button" role="tab" data-library-tab="later" aria-selected="false">稍后看 <span id="laterTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
   <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>

@@ -97,6 +97,7 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
 
   // 替换日期显示
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{REPORT_DATE}}', dateStr);
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
 

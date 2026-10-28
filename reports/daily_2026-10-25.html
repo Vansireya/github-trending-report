@@ -10,12 +10,12 @@
       window.location.replace(new URL('../../', window.location.href));
     }
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cff'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月25日星期日</title>
   <script src="../data/ranking_data.js"></script>
   <link rel="stylesheet" href="../src/templates/style-v2.css">
 </head>
-<body data-report-base-path="">
+<body data-report-base-path="" data-report-date="2026-10-25">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -26,6 +26,9 @@
     </a>
     <div class="header-actions">
       <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
       <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换主题">◐</button>
     </div>
   </header>
@@ -46,7 +49,7 @@
       <div class="feed-column">
         <div class="content" id="projectFeed"><hr>
 
-<article class="project-card project-card--top" data-project-name="cloudflare/security-audit-skill" data-language="JavaScript">
+<article class="project-card project-card--rank-1" data-project-name="cloudflare/security-audit-skill" data-project-url="https://github.com/cloudflare/security-audit-skill" data-project-summary="给编码代理装上一套多阶段安全审计技能，查出来的漏洞还能机器可读、独立验证。" data-project-stars="44,740" data-language="JavaScript">
   <div class="project-card-header">
     <div class="rank-badge">#1</div>
     <div class="project-identity">
@@ -56,10 +59,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>JavaScript</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cloudflare/security-audit-skill">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cloudflare/security-audit-skill" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 cloudflare/security-audit-skill 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 cloudflare/security-audit-skill">↗</a>
+    </div>
   </div>
   <p class="project-summary">给编码代理装上一套多阶段安全审计技能，查出来的漏洞还能机器可读、独立验证。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-cloudflare-security-audit-skill">
@@ -73,7 +80,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="NVIDIA/OpenShell" data-language="Rust">
+<article class="project-card project-card--featured" data-project-name="NVIDIA/OpenShell" data-project-url="https://github.com/NVIDIA/OpenShell" data-project-summary="给自主 AI 代理准备的&amp;quot;安全私有运行沙箱&amp;quot;。" data-project-stars="19,519" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">#2</div>
     <div class="project-identity">
@@ -83,10 +90,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NVIDIA/OpenShell">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/OpenShell" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 NVIDIA/OpenShell 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 NVIDIA/OpenShell">↗</a>
+    </div>
   </div>
   <p class="project-summary">给自主 AI 代理准备的&amp;quot;安全私有运行沙箱&amp;quot;。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-nvidia-openshell">
@@ -100,7 +111,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card project-card--top" data-project-name="aws/agent-toolkit-for-aws" data-language="Python">
+<article class="project-card project-card--featured" data-project-name="aws/agent-toolkit-for-aws" data-project-url="https://github.com/aws/agent-toolkit-for-aws" data-project-summary="AWS 官方出品的 MCP 服务器、技能和插件合集，帮 AI 代理在 AWS 上盖房子。" data-project-stars="3,155" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#3</div>
     <div class="project-identity">
@@ -110,10 +121,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-        <span class="signal-tag">今日焦点</span>
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 aws/agent-toolkit-for-aws">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 aws/agent-toolkit-for-aws" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 aws/agent-toolkit-for-aws 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 aws/agent-toolkit-for-aws">↗</a>
+    </div>
   </div>
   <p class="project-summary">AWS 官方出品的 MCP 服务器、技能和插件合集，帮 AI 代理在 AWS 上盖房子。</p>
   <button class="detail-toggle" type="button" aria-expanded="true" aria-controls="project-aws-agent-toolkit-for-aws">
@@ -127,7 +142,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="Nutlope/hallmark" data-language="CSS">
+<article class="project-card project-card--compact" data-project-name="Nutlope/hallmark" data-project-url="https://github.com/Nutlope/hallmark" data-project-summary="专治 AI 生成设计&amp;quot;一眼假&amp;quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。" data-project-stars="32,232" data-language="CSS">
   <div class="project-card-header">
     <div class="rank-badge">#4</div>
     <div class="project-identity">
@@ -137,10 +152,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>CSS</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 Nutlope/hallmark">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 Nutlope/hallmark" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 Nutlope/hallmark 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 Nutlope/hallmark">↗</a>
+    </div>
   </div>
   <p class="project-summary">专治 AI 生成设计&amp;quot;一眼假&amp;quot;的反 AI 味设计技能，适配 Claude Code、Cursor 和 Codex。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-nutlope-hallmark">
@@ -154,7 +173,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="luongnv89/claude-howto" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="luongnv89/claude-howto" data-project-url="https://github.com/luongnv89/claude-howto" data-project-summary="一本图文并茂、例子驱动、能直接复制粘贴的 Claude Code 使用指南。" data-project-stars="44,609" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#5</div>
     <div class="project-identity">
@@ -164,10 +183,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/luongnv89/claude-howto" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 luongnv89/claude-howto">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 luongnv89/claude-howto" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 luongnv89/claude-howto 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/luongnv89/claude-howto" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 luongnv89/claude-howto">↗</a>
+    </div>
   </div>
   <p class="project-summary">一本图文并茂、例子驱动、能直接复制粘贴的 Claude Code 使用指南。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-luongnv89-claude-howto">
@@ -181,7 +204,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="pbakaus/impeccable" data-language="Rust">
+<article class="project-card project-card--compact" data-project-name="pbakaus/impeccable" data-project-url="https://github.com/pbakaus/impeccable" data-project-summary="一套设计语言，让你的 AI 工具在设计这件事上不再&amp;quot;力不从心&amp;quot;。" data-project-stars="86,487" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">#6</div>
     <div class="project-identity">
@@ -191,10 +214,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pbakaus/impeccable">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 pbakaus/impeccable" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 pbakaus/impeccable 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pbakaus/impeccable">↗</a>
+    </div>
   </div>
   <p class="project-summary">一套设计语言，让你的 AI 工具在设计这件事上不再&amp;quot;力不从心&amp;quot;。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pbakaus-impeccable">
@@ -208,7 +235,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="pollen-robotics/microduck" data-language="Rust">
+<article class="project-card project-card--compact" data-project-name="pollen-robotics/microduck" data-project-url="https://github.com/pollen-robotics/microduck" data-project-summary="一只会走路的小鸭子机器人。🦆" data-project-stars="11,034" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">#7</div>
     <div class="project-identity">
@@ -218,10 +245,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pollen-robotics/microduck">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 pollen-robotics/microduck" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 pollen-robotics/microduck 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 pollen-robotics/microduck">↗</a>
+    </div>
   </div>
   <p class="project-summary">一只会走路的小鸭子机器人。🦆</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-pollen-robotics-microduck">
@@ -235,7 +266,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="google-gemini/gemini-cli" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="google-gemini/gemini-cli" data-project-url="https://github.com/google-gemini/gemini-cli" data-project-summary="把 Gemini 直接塞进你终端的开源 AI 代理。" data-project-stars="108,103" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#8</div>
     <div class="project-identity">
@@ -245,10 +276,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 google-gemini/gemini-cli">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 google-gemini/gemini-cli" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 google-gemini/gemini-cli 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 google-gemini/gemini-cli">↗</a>
+    </div>
   </div>
   <p class="project-summary">把 Gemini 直接塞进你终端的开源 AI 代理。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-google-gemini-gemini-cli">
@@ -262,7 +297,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="jbiaojerry/ebook-treasure-chest" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="jbiaojerry/ebook-treasure-chest" data-project-url="https://github.com/jbiaojerry/ebook-treasure-chest" data-project-summary="一个汇聚各类电子书下载链接的宝库，覆盖帆书、微信读书、京东读书、喜马拉雅等平台的大部分电子书。" data-project-stars="22,690" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">#9</div>
     <div class="project-identity">
@@ -272,10 +307,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/jbiaojerry/ebook-treasure-chest" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 jbiaojerry/ebook-treasure-chest">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 jbiaojerry/ebook-treasure-chest" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 jbiaojerry/ebook-treasure-chest 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/jbiaojerry/ebook-treasure-chest" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 jbiaojerry/ebook-treasure-chest">↗</a>
+    </div>
   </div>
   <p class="project-summary">一个汇聚各类电子书下载链接的宝库，覆盖帆书、微信读书、京东读书、喜马拉雅等平台的大部分电子书。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-jbiaojerry-ebook-treasure-chest">
@@ -289,7 +328,7 @@
   </div>
 </article>
 <hr>
-<article class="project-card" data-project-name="makecindy/cindy" data-language="TypeScript">
+<article class="project-card project-card--compact" data-project-name="makecindy/cindy" data-project-url="https://github.com/makecindy/cindy" data-project-summary="一个开箱即用的开源 AI Agent，想到就能做到。" data-project-stars="4,140" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">#10</div>
     <div class="project-identity">
@@ -299,10 +338,14 @@
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
-
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 makecindy/cindy">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 makecindy/cindy" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 makecindy/cindy 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 makecindy/cindy">↗</a>
+    </div>
   </div>
   <p class="project-summary">一个开箱即用的开源 AI Agent，想到就能做到。</p>
   <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="project-makecindy-cindy">
@@ -358,6 +401,21 @@
     <span>GitHub Radar · 自动生成的开源趋势观察</span>
     <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
   </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">MY RADAR</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+        <button type="button" role="tab" data-library-tab="later" aria-selected="false">稍后看 <span id="laterTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
   <script src="../src/templates/script-v2.js"></script>
 </body>
 </html>

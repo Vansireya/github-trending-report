@@ -180,11 +180,15 @@ function generateProjectCard(projectData) {
   const rank = Number(repository.rank) || 0;
   const language = escapeHTML(repository.language || 'Other');
   const cardId = `project-${String(projectData.name || 'unknown').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
-  const topClass = rank > 0 && rank <= 3 ? ' project-card--top' : '';
+  const layoutClass = rank === 1
+    ? ' project-card--rank-1'
+    : rank > 1 && rank <= 3
+      ? ' project-card--featured'
+      : ' project-card--compact';
   const isExpanded = rank > 0 && rank <= 3;
 
   return `
-<article class="project-card${topClass}" data-project-name="${name}" data-language="${language}">
+<article class="project-card${layoutClass}" data-project-name="${name}" data-project-url="${url}" data-project-summary="${summary}" data-project-stars="${stars}" data-language="${language}">
   <div class="project-card-header">
     <div class="rank-badge">${rank ? `#${rank}` : 'NEW'}</div>
     <div class="project-identity">
@@ -194,10 +198,14 @@ function generateProjectCard(projectData) {
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>${language}</span>
-        ${rank <= 3 && rank > 0 ? '<span class="signal-tag">今日焦点</span>' : ''}
+        <span class="appearance-tag" hidden></span>
       </div>
     </div>
-    <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ${name}" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action later-action" type="button" aria-label="将 ${name} 加入稍后看" aria-pressed="false" title="稍后看">⌑</button>
+      <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
+    </div>
   </div>
   <p class="project-summary">${summary}</p>
   <button class="detail-toggle" type="button" aria-expanded="${isExpanded}" aria-controls="${cardId}">
