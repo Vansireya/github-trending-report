@@ -1,13 +1,10 @@
 const state = {
-  search: '',
-  language: 'all',
   range: 'week'
 };
 
 document.addEventListener('DOMContentLoaded', function() {
   initializeTheme();
   initializeProjectCards();
-  initializeFilters();
   initializeRankingTabs();
   updateRanking(state.range);
 });
@@ -42,47 +39,6 @@ function initializeProjectCards() {
       details.hidden = isExpanded;
     });
   });
-}
-
-function initializeFilters() {
-  const searchInput = document.getElementById('projectSearch');
-  const languageFilter = document.getElementById('languageFilter');
-  const cards = Array.from(document.querySelectorAll('.project-card'));
-  const languages = [...new Set(cards.map(card => card.dataset.language).filter(Boolean))].sort();
-
-  languages.forEach(function(language) {
-    const option = document.createElement('option');
-    option.value = language;
-    option.textContent = language;
-    languageFilter.appendChild(option);
-  });
-
-  searchInput.addEventListener('input', function() {
-    state.search = searchInput.value.trim().toLowerCase();
-    applyProjectFilters();
-  });
-
-  languageFilter.addEventListener('change', function() {
-    state.language = languageFilter.value;
-    applyProjectFilters();
-  });
-
-  applyProjectFilters();
-}
-
-function applyProjectFilters() {
-  const cards = Array.from(document.querySelectorAll('.project-card'));
-  let visibleCount = 0;
-
-  cards.forEach(function(card) {
-    const matchesSearch = !state.search || card.textContent.toLowerCase().includes(state.search);
-    const matchesLanguage = state.language === 'all' || card.dataset.language === state.language;
-    const visible = matchesSearch && matchesLanguage;
-    card.classList.toggle('is-hidden', !visible);
-    if (visible) visibleCount++;
-  });
-
-  document.getElementById('resultCount').textContent = `${visibleCount} / ${cards.length}`;
 }
 
 function initializeRankingTabs() {

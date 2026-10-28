@@ -69,8 +69,18 @@ test('shows the authoritative scraped star count beside the project name', () =>
   assert.match(html, /#2/);
   assert.match(html, /TypeScript/);
   assert.match(html, /class="star-pill"[^>]*>★ 9,999/);
+  assert.match(html, /aria-expanded="true"/);
+  assert.match(html, /id="project-owner-repo">/);
   assert.doesNotMatch(html, /本期增长|Fork|编辑评分/);
-  assert.doesNotMatch(html, /为什么上榜|使用提醒/);
+  assert.doesNotMatch(html, /适合：|为什么上榜|使用提醒/);
+});
+
+test('moves the report heading and opening out of the project feed', () => {
+  const lead = markdownParser.extractReportLead('<h1>当日标题</h1>\n<p>当日导语</p>\n<article>项目</article>');
+
+  assert.equal(lead.title, '当日标题');
+  assert.equal(lead.opening, '当日导语');
+  assert.equal(lead.content, '<article>项目</article>');
 });
 
 test('wraps the daily takeaway as a full-width summary panel', () => {

@@ -69,8 +69,7 @@ async function generateDailyReport(openai, trendingData) {
   "projects": [{
     "name": "必须与输入仓库全名完全一致",
     "summary": "一句话说明项目是什么，不超过35字",
-    "problem": "它解决什么问题，不超过110字",
-    "audience": "简短说明更适合哪类开发者，不超过25字"
+    "problem": "它解决什么问题，不超过110字"
   }],
   "closing": "不超过80字的今日结论"
 }
@@ -147,8 +146,7 @@ function validateAndNormalizeReport(report, trendingData) {
     return {
       ...repo,
       summary: String(analysis.summary || repo.description || '暂无摘要'),
-      problem: String(analysis.problem || '仅凭榜单信息暂无法确认'),
-      audience: String(analysis.audience || '关注该领域的开发者')
+      problem: String(analysis.problem || '仅凭榜单信息暂无法确认')
     };
   });
 
@@ -172,8 +170,6 @@ function reportToMarkdown(report) {
 **一句话概括**：${project.summary}
 
 **详细介绍**：${project.problem}
-
-**适合人群**：${project.audience}
 
 **项目网址**：${project.url}
 

@@ -45,6 +45,7 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   const repositoryDataPath = path.join(config.directories.data, `trending_${dateStr}.json`);
   const repositories = dataProcessor.safeReadJSON(repositoryDataPath, []);
   const htmlContent = markdownParser.convertMarkdownToHTML(markdownContent, repositories);
+  const reportLead = markdownParser.extractReportLead(htmlContent);
 
   // 加载项目摘要
   dataProcessor.loadProjectSummaries(markdownContent);
@@ -68,6 +69,8 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   let resultHTML = baseTemplate;
   resultHTML = resultHTML.replace('{{TITLE}}', `${config.page.titlePrefix} - ${dateCN}`);
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
+  resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
   resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
   resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
   const languageCounts = new Map();
@@ -84,7 +87,7 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   resultHTML = resultHTML.replace('{{RANKING_SECTION_TITLE}}', config.sidebar.rankingTitle);
   resultHTML = resultHTML.replace('{{HISTORY_DATES_HTML}}', historyDatesHTML);
   resultHTML = resultHTML.replace('{{DATE_SELECTOR_HTML}}', dateSelectorHTML);
-  resultHTML = resultHTML.replace('{{CONTENT}}', htmlContent);
+  resultHTML = resultHTML.replace('{{CONTENT}}', reportLead.content);
 
   return resultHTML.replace(/[ \t]+$/gm, '');
 }

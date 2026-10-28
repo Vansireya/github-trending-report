@@ -31,14 +31,14 @@ test('keeps scraped facts authoritative and normalizes model fields', () => {
       url: 'https://example.com/fake',
       stars: '999,999',
       summary: '一句话',
-      problem: '解决问题',
-      audience: '开发者'
+      problem: '解决问题'
     }]
   }, repositories);
 
   assert.equal(report.projects[0].url, repositories[0].url);
   assert.equal(report.projects[0].stars, repositories[0].stars);
-  assert.equal(report.projects[0].audience, '开发者');
+  assert.equal(report.projects[0].problem, '解决问题');
+  assert.equal('audience' in report.projects[0], false);
   assert.equal('score' in report.projects[0], false);
   assert.equal('risks' in report.projects[0], false);
 });
@@ -52,12 +52,11 @@ test('fails when the model omits a trending repository', () => {
 
 test('renders normalized reports into backward-compatible Markdown', () => {
   const report = validateAndNormalizeReport({
-    projects: [{ name: 'owner/repo', summary: '摘要', audience: '自动化开发者' }]
+    projects: [{ name: 'owner/repo', summary: '摘要' }]
   }, repositories);
   const markdown = reportToMarkdown(report);
 
   assert.match(markdown, /### owner\/repo/);
-  assert.match(markdown, /\*\*适合人群\*\*/);
   assert.match(markdown, /\*\*Star 数量\*\*：1,234/);
-  assert.doesNotMatch(markdown, /走红原因|风险提示|推荐指数/);
+  assert.doesNotMatch(markdown, /适合人群|走红原因|风险提示|推荐指数/);
 });

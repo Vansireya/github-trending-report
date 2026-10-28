@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="每日 GitHub Trending 中文技术雷达，用三分钟发现值得关注的开源项目。">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
   <script>
     if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
       window.location.replace(new URL('../../', window.location.href));
@@ -34,8 +34,8 @@
     <section class="hero">
       <div class="hero-copy">
         <span class="eyebrow hero-eyebrow">DAILY DEVELOPER INTELLIGENCE</span>
-        <h1>把 GitHub 热度<br><span>变成可用的判断。</span></h1>
-        <p>每天用三分钟，看懂真正值得关注的开源项目。</p>
+        <h1>{{REPORT_HEADLINE}}</h1>
+        <p>{{REPORT_OPENING}}</p>
         <div class="hero-date"><span>最新一期</span><strong>{{DATE_CN}}</strong></div>
       </div>
       <div class="hero-stats" aria-label="今日概览">
@@ -47,11 +47,6 @@
 
     <section class="dashboard">
       <div class="feed-column">
-        <div class="toolbar" aria-label="项目筛选">
-          <label class="search-box" for="projectSearch"><span aria-hidden="true">⌕</span><input id="projectSearch" type="search" placeholder="搜索项目、语言或关键词" autocomplete="off"></label>
-          <select id="languageFilter" aria-label="按编程语言筛选"><option value="all">全部语言</option></select>
-          <span class="result-count" id="resultCount"></span>
-        </div>
         <div class="content" id="projectFeed">{{CONTENT}}</div>
       </div>
 

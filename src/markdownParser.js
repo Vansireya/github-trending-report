@@ -149,6 +149,20 @@ function convertMarkdownToHTML(markdown, repositories = []) {
   return result;
 }
 
+function extractReportLead(html) {
+  const titleMatch = html.match(/<h1>([\s\S]*?)<\/h1>/);
+  const title = titleMatch ? titleMatch[1].trim() : '今日 GitHub Trending';
+  let content = titleMatch ? html.replace(titleMatch[0], '') : html;
+  const openingMatch = content.match(/^\s*<p>([\s\S]*?)<\/p>/);
+  const opening = openingMatch ? openingMatch[1].trim() : '';
+
+  if (openingMatch) {
+    content = content.replace(openingMatch[0], '');
+  }
+
+  return { title, opening, content: content.trim() };
+}
+
 /**
  * 生成单个项目卡片的 HTML
  * @param {Object} projectData - 项目数据对象
@@ -163,11 +177,11 @@ function generateProjectCard(projectData) {
   const rawUrl = repository.url || projectData.url || '';
   const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
   const stars = escapeHTML(repository.stars || projectData.stars || '0');
-  const audience = escapeHTML(projectData.audience || '关注该领域的开发者');
   const rank = Number(repository.rank) || 0;
   const language = escapeHTML(repository.language || 'Other');
   const cardId = `project-${String(projectData.name || 'unknown').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
   const topClass = rank > 0 && rank <= 3 ? ' project-card--top' : '';
+  const isExpanded = rank > 0 && rank <= 3;
 
   return `
 <article class="project-card${topClass}" data-project-name="${name}" data-language="${language}">
@@ -186,15 +200,14 @@ function generateProjectCard(projectData) {
     <a class="repo-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开 ${name}">↗</a>
   </div>
   <p class="project-summary">${summary}</p>
-  <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="${cardId}">
-    <span>展开项目解读</span><span aria-hidden="true">⌄</span>
+  <button class="detail-toggle" type="button" aria-expanded="${isExpanded}" aria-controls="${cardId}">
+    <span>${isExpanded ? '收起项目解读' : '展开项目解读'}</span><span aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="${cardId}" hidden>
+  <div class="project-details" id="${cardId}"${isExpanded ? '' : ' hidden'}>
     <div class="detail-lead">
       <span class="eyebrow">它解决什么</span>
       <p>${details}</p>
     </div>
-    <p class="project-audience"><strong>适合：</strong>${audience}</p>
   </div>
 </article>`;
 }
@@ -244,6 +257,7 @@ function parseMarkdownFile(filePath) {
 
 module.exports = {
   convertMarkdownToHTML,
+  extractReportLead,
   generateProjectCard,
   escapeHTML,
   parseMarkdownFile

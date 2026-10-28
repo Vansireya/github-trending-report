@@ -54,6 +54,7 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
   if (!baseTemplate) {
     throw new Error('无法读取基础模板文件');
   }
+  const reportLead = markdownParser.extractReportLead(htmlContent);
 
   // ===== 2. 处理日期显示 =====
   const date = new Date(`${dateStr}T12:00:00`);
@@ -96,6 +97,8 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
 
   // 替换日期显示
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
+  resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
+  resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
   resultHTML = resultHTML.replace('{{PROJECT_COUNT}}', String(repositories.length));
   resultHTML = resultHTML.replace('{{LANGUAGE_COUNT}}', String(new Set(repositories.map(item => item.language).filter(Boolean)).size));
   resultHTML = resultHTML.replace('{{TOP_LANGUAGE}}', getTopLanguage(repositories));
@@ -123,7 +126,7 @@ function generateHTMLTemplate(htmlContent, dateStr, isIndex = false, repositorie
   resultHTML = resultHTML.replace('{{DATE_SELECTOR_HTML}}', dateSelectorHTML);
 
   // 替换主内容区域
-  resultHTML = resultHTML.replace('{{CONTENT}}', htmlContent);
+  resultHTML = resultHTML.replace('{{CONTENT}}', reportLead.content);
 
   return resultHTML.replace(/[ \t]+$/gm, '');
 }
