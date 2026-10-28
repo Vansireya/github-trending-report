@@ -75,7 +75,7 @@ function generateSingleHTML(markdownFilePath, dateStr) {
   resultHTML = resultHTML.replace('{{TITLE}}', `${config.page.titlePrefix} - ${dateCN}`);
   resultHTML = resultHTML.replace('{{DATE_CN}}', dateCN);
   resultHTML = resultHTML.replace('{{REPORT_DATE}}', dateStr);
-  resultHTML = resultHTML.replace('{{TODAY_LINK}}', '<a class="today-link" href="../">← 返回今日</a>');
+  resultHTML = resultHTML.replace('{{TODAY_LINK}}', '<a class="today-link" href="../index.html">← 返回今日</a>');
   resultHTML = resultHTML.replace('{{REPORT_HEADLINE}}', () => reportLead.title);
   resultHTML = resultHTML.replace('{{REPORT_OPENING}}', () => reportLead.opening);
   resultHTML = resultHTML.replace('{{RANKING_DATA_PATH}}', config.frontend.rankingDataPath);
