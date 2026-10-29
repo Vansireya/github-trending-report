@@ -65,7 +65,6 @@ async function generateDailyReport(openai, trendingData) {
 {
   "title": "直接写今天最明显的开源主题，不超过32字，不加栏目式前缀",
   "opening": "2至3句直接概括今天发生了什么，并点出最值得注意的1至2个项目，不写寒暄或串场",
-  "signals": ["最多3条‘今天发生了什么’，每条不超过45字"],
   "projects": [{
     "name": "必须与输入仓库全名完全一致",
     "summary": "一句话说明项目是什么，不超过35字",
@@ -155,7 +154,6 @@ function validateAndNormalizeReport(report, trendingData) {
   return {
     title: normalizeReportTitle(report.title || '开源项目趋势更新'),
     opening: normalizeReportOpening(report.opening || '今天值得关注的开源项目集中在以下方向。'),
-    signals: Array.isArray(report.signals) ? report.signals.slice(0, 3).map(String) : [],
     projects,
     closing: String(report.closing || '以上判断基于当前公开榜单信息。')
   };
@@ -178,10 +176,6 @@ function normalizeReportOpening(opening) {
 }
 
 function reportToMarkdown(report) {
-  const signalText = report.signals.length > 0
-    ? `\n\n## 今日信号\n\n${report.signals.map(signal => `- ${signal}`).join('\n')}`
-    : '';
-
   const projectText = report.projects.map(project => `
 ### ${project.name}
 
@@ -194,7 +188,7 @@ function reportToMarkdown(report) {
 **Star 数量**：${project.stars}
 `).join('\n');
 
-  return `# ${report.title}\n\n${report.opening}${signalText}\n\n${projectText}\n\n**今日总结**：${report.closing}\n`;
+  return `# ${report.title}\n\n${report.opening}\n\n${projectText}\n\n**今日总结**：${report.closing}\n`;
 }
 
 /**

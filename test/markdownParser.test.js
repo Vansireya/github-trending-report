@@ -177,6 +177,37 @@ test('wraps the daily takeaway as a full-width summary panel', () => {
   assert.match(html, /保持判断/);
 });
 
+test('removes the redundant daily signals section', () => {
+  const markdown = `# 今日标题
+
+今天的直接导语。
+
+## 今日信号
+
+- 重复信号一
+- 重复信号二
+
+### owner/repo
+
+**一句话概括**：项目摘要
+
+**详细介绍**：项目详情
+
+**项目网址**：https://github.com/owner/repo
+`;
+
+  const html = markdownParser.convertMarkdownToHTML(markdown, [{
+    rank: 1,
+    name: 'owner/repo',
+    url: 'https://github.com/owner/repo',
+    stars: '1,234',
+    language: 'TypeScript'
+  }]);
+
+  assert.doesNotMatch(html, /今日信号|重复信号/);
+  assert.match(html, /owner\/repo/);
+});
+
 test('escapes raw HTML and rejects unsafe Markdown links', () => {
   const html = markdownParser.convertMarkdownToHTML(`
 <script>alert('xss')</script>

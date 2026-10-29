@@ -37,6 +37,7 @@ function convertMarkdownToHTML(markdown, repositories = []) {
 
   // 首先使用 marked 将 Markdown 转换为基本 HTML
   let html = marked.parse(markdown, { renderer });
+  html = html.replace(/<h2>今日信号<\/h2>\s*<ul>[\s\S]*?<\/ul>\s*/i, '');
 
   // 提取项目信息并转换为卡片格式
   // 同时兼容 AI 生成的段落格式和旧版无序列表格式

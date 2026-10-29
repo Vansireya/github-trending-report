@@ -26,7 +26,6 @@ test('keeps scraped facts authoritative and normalizes model fields', () => {
   const report = validateAndNormalizeReport({
     title: '今日 GitHub 狠活：TypeScript 工具集中上榜',
     opening: '各位打工人早上好，欢迎收看今天的 GitHub 热榜。TypeScript 工具集中出现。话不多说，开整。',
-    signals: ['TypeScript 项目活跃'],
     projects: [{
       name: 'owner/repo',
       url: 'https://example.com/fake',
@@ -61,5 +60,6 @@ test('renders normalized reports into backward-compatible Markdown', () => {
 
   assert.match(markdown, /### owner\/repo/);
   assert.match(markdown, /\*\*Star 数量\*\*：1,234/);
+  assert.doesNotMatch(markdown, /今日信号/);
   assert.doesNotMatch(markdown, /适合人群|走红原因|风险提示|推荐指数/);
 });
