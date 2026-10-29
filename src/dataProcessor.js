@@ -157,6 +157,64 @@ function calculateRanking(historyData) {
   });
 }
 
+function calculateDiscoveries(historyData) {
+  const latestDate = historyData.reduce(function(result, item) {
+    return item.date > result ? item.date : result;
+  }, '');
+  const latestEntry = historyData.find(function(item) { return item.date === latestDate; });
+  const mainFeedNames = new Set(
+    Array.isArray(latestEntry && latestEntry.data)
+      ? latestEntry.data.filter(function(repo) { return Number(repo.rank) <= 9; }).map(function(repo) { return repo.name; })
+      : []
+  );
+  const candidates = new Map();
+
+  for (const { date, data } of historyData) {
+    if (!Array.isArray(data)) continue;
+    for (const repo of data) {
+      if (!repo || !repo.name || mainFeedNames.has(repo.name)) continue;
+      if (/^(?:no description|暂无描述)?$/i.test(String(repo.description || '').trim())) continue;
+
+      if (!candidates.has(repo.name)) {
+        candidates.set(repo.name, {
+          ...repo,
+          count: 0,
+          dates: [],
+          latestDate: date,
+          latestRank: Number(repo.rank) || 99
+        });
+      }
+
+      const candidate = candidates.get(repo.name);
+      if (!candidate.dates.includes(date)) {
+        candidate.count += 1;
+        candidate.dates.push(date);
+      }
+      if (date > candidate.latestDate) {
+        Object.assign(candidate, repo, {
+          latestDate: date,
+          latestRank: Number(repo.rank) || 99
+        });
+      }
+    }
+  }
+
+  return Array.from(candidates.values())
+    .sort(function(a, b) {
+      if (a.latestDate !== b.latestDate) return b.latestDate.localeCompare(a.latestDate);
+      if (a.count !== b.count) return a.count - b.count;
+      return a.latestRank - b.latestRank;
+    })
+    .slice(0, 12)
+    .map(function(item) {
+      const badge = item.latestDate === latestDate
+        ? '今日候选'
+        : item.count === 1 ? '刚刚出现' : '近几天冒头';
+      const { latestDate: itemDate, latestRank, ...discovery } = item;
+      return { ...discovery, badge };
+    });
+}
+
 function calculateAppearances(historyData) {
   const appearances = {};
   for (const { date, data } of historyData) {
@@ -404,6 +462,7 @@ function generateRankingData() {
   const weekRanking = calculateRanking(weekData);
   const monthRanking = calculateRanking(monthData);
   const quarterRanking = calculateRanking(quarterData);
+  const discoveries = calculateDiscoveries(weekData).map(item => enrichRankingItem(item));
   const appearances = calculateAppearances(quarterData);
 
   // 为排行榜添加中文描述和详细信息（用于悬浮窗）
@@ -419,6 +478,7 @@ function generateRankingData() {
     week: weekRankingWithCN,
     month: monthRankingWithCN,
     quarter: quarterRankingWithCN,
+    discoveries,
     appearances
   });
 
@@ -439,6 +499,7 @@ function generateRankingData() {
     week: weekRankingWithCN,
     month: monthRankingWithCN,
     quarter: quarterRankingWithCN,
+    discoveries,
     appearances
   };
 }
@@ -797,6 +858,7 @@ function safeReadJSON(filePath, defaultValue = null) {
 module.exports = {
   readHistoryData,
   calculateRanking,
+  calculateDiscoveries,
   loadProjectSummaries,
   getChineseSummary,
   generateRankingData,

@@ -178,6 +178,7 @@ button, select { cursor: pointer; }
 .segmented-control button { padding: 8px; color: var(--muted); background: transparent; border: 0; border-radius: 7px; font-size: 13px; }
 .segmented-control button.active { color: var(--text); background: var(--surface-solid); box-shadow: 0 3px 12px rgba(0, 0, 0, .14); }
 .ranking-list { margin: 0; padding: 0; list-style: none; counter-reset: ranking; }
+.ranking-intro { margin: 0 0 6px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 .ranking-list li { counter-increment: ranking; display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 9px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--border); }
 .ranking-list li:last-child { border: 0; }
 .ranking-list li::before { content: counter(ranking, decimal-leading-zero); padding-top: 2px; color: var(--muted); font-size: 10px; }

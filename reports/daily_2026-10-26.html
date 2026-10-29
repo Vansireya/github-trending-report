@@ -13,7 +13,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月26日星期一</title>
   <script src="../data/ranking_data.js"></script>
-  <link rel="stylesheet" href="../src/templates/style-v2.css?v=26496293">
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=7bceacd3">
 </head>
 <body data-report-base-path="" data-report-date="2026-10-26">
   <div class="page-glow page-glow--one"></div>
@@ -275,19 +275,9 @@
       </div>
 
       <aside class="rail">
-        <section class="rail-panel ranking-panel">
-          <div class="panel-heading"><h2>热度榜</h2></div>
-          <div class="segmented-control" role="group" aria-label="排行榜周期">
-            <button type="button" class="active" data-range="week" aria-pressed="true">7 天</button>
-            <button type="button" data-range="month" aria-pressed="false">30 天</button>
-            <button type="button" data-range="quarter" aria-pressed="false">季度</button>
-          </div>
-          <ol class="ranking-list" id="rankingList"><li>加载中…</li></ol>
-        </section>
-
         <section class="rail-panel history-panel">
           <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
-          <p class="history-intro">从保留的近 30 天简报里，随机抽一份旧信号。</p>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
           <button class="random-history-button" id="randomHistoryButton" type="button">
             <span class="random-history-icon" aria-hidden="true">↝</span>
             <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
@@ -310,6 +300,12 @@
     <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30","2026-09-29"]</div>
 
           </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
         </section>
         <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
       </aside>
@@ -334,6 +330,6 @@
       <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
     </aside>
   </div>
-  <script src="../src/templates/script-v2.js?v=fe94041e"></script>
+  <script src="../src/templates/script-v2.js?v=700dbbcc"></script>
 </body>
 </html>

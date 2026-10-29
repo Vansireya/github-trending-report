@@ -1,5 +1,4 @@
 const state = {
-  range: 'week',
   libraryTab: 'favorites',
   library: { favorites: {}, later: {} }
 };
@@ -12,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeAppearanceTags();
   initializeLibrary();
   initializeRandomHistory();
-  initializeRankingTabs();
-  updateRanking(state.range);
+  updateDiscoveries();
 });
 
 function initializeTheme() {
@@ -242,29 +240,21 @@ function initializeProjectCards() {
   });
 }
 
-function initializeRankingTabs() {
-  document.querySelectorAll('[data-range]').forEach(function(button) {
-    button.addEventListener('click', function() {
-      state.range = button.dataset.range;
-      document.querySelectorAll('[data-range]').forEach(function(item) {
-        const isActive = item === button;
-        item.classList.toggle('active', isActive);
-        item.setAttribute('aria-pressed', String(isActive));
-      });
-      updateRanking(state.range);
-    });
-  });
-}
-
-function updateRanking(timeRange) {
-  const rankingList = document.getElementById('rankingList');
-  const rankings = typeof rankingData === 'undefined' ? [] : (rankingData[timeRange] || []);
+function updateDiscoveries() {
+  const rankingList = document.getElementById('discoveryList');
+  if (!rankingList) return;
+  const visibleProjects = new Set(
+    Array.from(document.querySelectorAll('.project-card')).map(function(card) { return card.dataset.projectName; })
+  );
+  const rankings = typeof rankingData === 'undefined'
+    ? []
+    : (rankingData.discoveries || []).filter(function(item) { return !visibleProjects.has(item.name); }).slice(0, 4);
   rankingList.replaceChildren();
 
   if (rankings.length === 0) {
     const emptyItem = document.createElement('li');
     emptyItem.className = 'ranking-empty';
-    emptyItem.textContent = '暂无排行数据';
+    emptyItem.textContent = '今天暂时没有新发现';
     rankingList.appendChild(emptyItem);
     return;
   }
@@ -286,7 +276,7 @@ function updateRanking(timeRange) {
 
     const count = document.createElement('span');
     count.className = 'ranking-count';
-    count.textContent = `${item.count || 0} 次`;
+    count.textContent = item.badge || '值得一看';
     project.append(nameLink, description);
     listItem.append(project, count);
     rankingList.appendChild(listItem);

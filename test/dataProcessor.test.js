@@ -41,3 +41,28 @@ test('loadProjectSummaries supports paragraph and list report formats', () => {
   assert.equal(dataProcessor.getChineseSummary('owner/paragraph', ''), '段落摘要');
   assert.equal(dataProcessor.getChineseSummary('owner/list', ''), '列表摘要');
 });
+
+test('calculateDiscoveries favors recent projects outside the latest top nine', () => {
+  const discoveries = dataProcessor.calculateDiscoveries([
+    {
+      date: '2026-10-03',
+      data: [
+        { rank: 1, name: 'owner/main', description: 'Main project' },
+        { rank: 10, name: 'owner/near-miss', description: 'A useful developer tool' }
+      ]
+    },
+    {
+      date: '2026-10-02',
+      data: [
+        { rank: 1, name: 'owner/main', description: 'Main project' },
+        { rank: 2, name: 'owner/older', description: 'An interesting older project' },
+        { rank: 3, name: 'owner/empty', description: 'No description' }
+      ]
+    }
+  ]);
+
+  assert.deepEqual(discoveries.map(item => item.name), ['owner/near-miss', 'owner/older']);
+  assert.equal(discoveries[0].badge, '今日候选');
+  assert.equal(discoveries[1].badge, '刚刚出现');
+  assert.equal(discoveries.some(item => item.name === 'owner/main'), false);
+});
