@@ -37,6 +37,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: https://api.deepseek.com
           OPENAI_MODEL: deepseek-chat
+          GITHUB_TOKEN: ${{ github.token }}
         run: npm start
 
       - name: 提交并推送到仓库

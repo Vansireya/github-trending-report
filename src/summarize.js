@@ -59,27 +59,28 @@ function initializeOpenAIClient() {
  * @returns {Promise<string>} AI 生成的日报内容
  */
 async function generateDailyReport(openai, trendingData) {
-  const systemPrompt = `你是一名严谨、简洁、有判断力的中文开源技术编辑，正在为一位开发者制作私人每日简报。你的任务不是翻译榜单，而是直接告诉读者今天开源世界发生了什么。
+  const systemPrompt = `你是一名熟悉开源生态、有判断力也有表达欲的中文技术编辑，正在给一位开发者写私人每日简报。你不是在翻译榜单，也不是在写产品目录；你要像一个见多识广的朋友，直接讲清今天出现了什么、哪里有意思、为什么值得多看一眼。
 
 只输出合法 JSON，不要输出 Markdown、代码围栏或解释。必须严格遵守以下结构：
 {
   "title": "直接写今天最明显的开源主题，不超过32字，不加栏目式前缀",
-  "opening": "2至3句直接概括今天发生了什么，并点出最值得注意的1至2个项目，不写寒暄或串场",
+  "opening": "2至3句概括今天发生了什么，并点出最值得注意的1至2个项目；有明确判断和节奏，不写寒暄或串场",
   "projects": [{
     "name": "必须与输入仓库全名完全一致",
-    "summary": "一句话说明项目是什么，不超过35字",
-    "problem": "它解决什么问题，不超过110字"
+    "summary": "一句有画面感的中文说明：它是什么、最特别的点是什么，20至50字",
+    "problem": "用2至3句讲清具体使用场景、做法或局限，不超过150字"
   }],
   "closing": "不超过80字的今日个人判断"
 }
 
 事实约束：
-1. 只能使用输入中的仓库名称、简介、语言、Star 和排名，不得虚构作者背景、性能、功能或采用情况。
-2. 信息不足时明确写“仅凭榜单信息暂无法确认”。
+1. 只能使用输入中的仓库名称、简介、README 摘要、主题、语言、Star 和排名，不得虚构作者背景、性能、功能或采用情况。
+2. 优先从 README 摘要提取具体功能。确实信息不足时，summary 写“资料不足，先保留观察”，problem 留空；不要把缺失信息扩写成两段废话。
 3. 不寒暄，不写“大家好”“各位打工人”“欢迎收看”“话不多说”“开整”“上菜”等串场话术。
 4. 标题直接写主题本身，不以“今日”“GitHub 狠活”“GitHub 热榜”“GitHub 日报”等栏目名开头，并禁止使用“狠活”“炸裂”“颠覆”等营销词。
-5. 语气可以轻松，但避免段子堆砌、夸张营销和投资建议。
-6. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
+5. 句式要有变化，少用“用于……”“围绕……构建”“一个近期受到关注的……”这类产品目录腔。可以偶尔使用贴切的比喻或轻微幽默，但每个项目最多一次，不硬玩梗。
+6. 写出编辑判断：具体指出真正值得看的设计、意外之处或现实限制；不要只复述仓库简介。
+7. projects 必须覆盖输入中的所有项目，顺序与输入一致，不增不减。`;
 
   const userPrompt = `请分析以下 GitHub Trending 数据并生成结构化中文日报：
 
@@ -144,10 +145,15 @@ function validateAndNormalizeReport(report, trendingData) {
       throw new Error(`AI 日报缺少项目: ${repo.name}`);
     }
 
+    const sourceDescription = String(repo.description || '').trim();
+    const fallbackSummary = /^(?:no description|暂无描述)?$/i.test(sourceDescription)
+      ? '资料不足，先保留观察'
+      : sourceDescription;
+
     return {
       ...repo,
-      summary: String(analysis.summary || repo.description || '暂无摘要'),
-      problem: String(analysis.problem || '仅凭榜单信息暂无法确认')
+      summary: String(analysis.summary || fallbackSummary),
+      problem: String(analysis.problem || '')
     };
   });
 

@@ -52,6 +52,15 @@ test('fails when the model omits a trending repository', () => {
   );
 });
 
+test('keeps missing repository data compact instead of repeating uncertainty', () => {
+  const report = validateAndNormalizeReport({
+    projects: [{ name: 'owner/repo', summary: '', problem: '' }]
+  }, [{ ...repositories[0], description: 'No description', language: 'Unknown' }]);
+
+  assert.equal(report.projects[0].summary, '资料不足，先保留观察');
+  assert.equal(report.projects[0].problem, '');
+});
+
 test('renders normalized reports into backward-compatible Markdown', () => {
   const report = validateAndNormalizeReport({
     projects: [{ name: 'owner/repo', summary: '摘要' }]

@@ -1,11 +1,6 @@
 {
-  "title": "AI 编码代理的“技能”与“设计规范”集中上榜",
-  "opening": "今天榜单几乎被 AI 编码代理的配套层占据：从设计技能、代理框架到本地工作台，都在解决“让代理输出更可控”的问题。最值得注意的是 obra/superpowers 和 affaan-m/ECC，两者都以极高 Star 数出现在技能与代理优化方向。",
-  "signals": [
-    "设计类“反 AI 垃圾”技能集中出现，hallmark 与 impeccable 同榜",
-    "代理技能框架与性能优化系统占据榜单高位，Star 数显著",
-    "本地优先的代理工作台和开箱即用 Agent 同时上榜"
-  ],
+  "title": "AI 编码工具开始补设计课，也开始学会组队",
+  "opening": "今天值得看的不是又多了几个 Agent，而是围绕它们的“职业培训”突然成套出现了：有人教它们做不丑的页面，有人逼它们先想清楚再写代码，还有人给多代理协作配上独立工位。AI 编码的竞争，正在从“会不会写”移到“能不能稳定地把活做好”。",
   "projects": [
     {
       "rank": 1,
@@ -14,8 +9,10 @@
       "description": "No description",
       "stars": "9,678",
       "language": "Unknown",
-      "summary": "无描述，仅凭榜单信息暂无法确认具体内容。",
-      "problem": "信息不足，仅凭榜单信息暂无法确认其解决的问题。"
+      "topics": [],
+      "readmeExcerpt": "AI Design Skills A growing collection of design skills for AI coding tools — Claude Code, Cursor, Codex, Windsurf, and anything else that reads a markdown rules file. Each skill is a self-contained folder. Install the ones you need. Skills | Skill | What it does | | `landing-page-design` | Builds a landing page from scratch — intake questions, page structure, conversion copy, plus a full visual system (type, spacing, radius, motion) | More on the way. Upgrading an existing site instead of building new? That one lives in its own repo since it predates this collection. Install Pick a skill from the table above, then swap ` ` below for its folder name. Claude Code Then just ask, in plain language, for what that skill covers. Cursor Or paste the file into **Settings → Rules for AI**. Codex / Windsurf / other Copy the skill's `SKILL.md` into whatever your tool uses for project rules: | Tool | Path | | Codex | `AGENTS.md` | | Windsurf | `.windsurfrules` | | Cline | `.clinerules` | | Generic | paste into your system prompt | Claude.ai (no terminal) Download the skill's `SKILL.md` and upload it to a Project, or attach it to a chat and say *\"follow this.\"* Make it yours Every skill's design",
+      "summary": "把落地页设计规则装进 Claude Code、Cursor 和 Codex 的技能包。",
+      "problem": "目前的核心技能会先问需求，再处理页面结构、转化文案、字体、间距、圆角和动效。它还是一个刚起步的合集，但方向很实在：把设计师脑中的判断，整理成编码代理能执行的规则。"
     },
     {
       "rank": 2,
@@ -24,8 +21,10 @@
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "stars": "39,226",
       "language": "CSS",
-      "summary": "面向 Claude Code、Cursor 和 Codex 的反 AI 垃圾设计技能。",
-      "problem": "针对 AI 生成界面容易出现的模板化、低质设计，提供一套设计约束技能来提升输出质量。"
+      "topics": [],
+      "readmeExcerpt": "Hallmark **A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.** usehallmark.com &nbsp;·&nbsp; fifty themes &nbsp;·&nbsp; custom on request &nbsp;·&nbsp; redesign and audit by name Made by Together AI. Hallmark holds a hard floor and then gets out of the way. It deals three themes from a catalog of fifty materials, builds the page around what the visitor came to do, and lints the result in a real browser against the tells that read as machine-made: the eyebrow above every heading, tracked-capital labels, one coloured word in a headline, a page of empty frames or nothing but photographs, a hero that misses its screen, an email sign-up at the end of every page, a form that says thanks without sending anything. A fresh-context reviewer gets the last word. The gates come in tiers. The **Floor** never ships (contrast, focus, reduced motion, invented facts, a broken phone layout). **Reflex** gates are the defaults a model falls into; a build with a reason may overrule one on the record. **Finish** checks are craft detail that never blocks a ship. New in v2 - **Fifty themes.** Each is a material (paper, type, colour, surfaces, its own components a",
+      "summary": "不只教 AI 怎么设计，还让浏览器替它抓出页面里的“机器味”。",
+      "problem": "Hallmark 会从主题库里组合视觉方向，再检查对比度、焦点、动效，以及那些一眼就像 AI 模板的惯用套路，最后还安排独立上下文复审。它解决的不是“能不能生成页面”，而是“生成后敢不敢直接交付”。"
     },
     {
       "rank": 3,
@@ -34,8 +33,19 @@
       "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
       "stars": "2,566",
       "language": "TypeScript",
-      "summary": "本地优先的桌面工作区，用于持久化 AI 队友协作。",
-      "problem": "让 Codex、Claude、Grok 等代理在独立工作区、任务队列和文件共享中持续协作，减少重复配置。"
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "readmeExcerpt": "OpenBot OpenBot is a local-first desktop workspace for persistent AI teammates. It supports the local Codex App Server and Claude Code, plus Grok CLI, OpenCode, Gemini, Cursor CLI, and Cline CLI through ACP. It gives every agent its own workspace and conversation, and provides local queues, file transfers, an embedded browser, and agent-to-agent messaging in one desktop app. > [!WARNING] > OpenBot is a development preview. Agents currently run with `danger-full-access` and > `approvalPolicy: never`. They can read and modify files, run commands, use the network, and control > the embedded browser without per-action confirmations after the explicit first-launch consent. > Run only agents and tasks you trust, keep backups, and review Security before use. What works - Prompt-driven agent creation and editing on desktop and mobile, with editable instructions, avatar, and section review before saving. - Persistent agents backed by independent Codex, Claude, Grok, OpenCode, Gemini, Cursor, or Cline sessions and local workspaces. - Custom OpenAI-compatible endpoints and custom ACP agents, with detection of local model servers (Ollama, LM Studio) and installed agents. - Per-agent context mo",
+      "summary": "给多位 AI 代理分工位、排队列、传文件的本地桌面工作区。",
+      "problem": "Codex、Claude、Grok 等代理可以拥有各自的工作区和对话，同时共享任务、文件、浏览器与代理间消息。需要特别留意的是，它仍处于开发预览阶段，当前代理以高权限运行；能力很强，安全边界也必须自己看紧。"
     },
     {
       "rank": 4,
@@ -44,8 +54,19 @@
       "description": "An agentic skills framework & software development methodology that works.",
       "stars": "306,558",
       "language": "Shell",
-      "summary": "代理技能框架与软件开发方法论。",
-      "problem": "为代理驱动的开发提供可复用的技能框架和流程方法，使代理行为更系统化。"
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "readmeExcerpt": "Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. Table of Contents - How it works - Commercial Services - Getting Started - Claude Code - Antigravity - Codex App - Codex CLI - Cursor - Devin CLI - Factory Droid - Gemini CLI - GitHub Copilot CLI - Grok Build CLI - Kimi Code - OpenCode - Pi - Qwen Code - Hermes Agent - Muse - The Basic Workflow - When Something Goes Wrong - Community - What's Inside - Philosophy - Contributing - Updating - License - Visual companion telemetry How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aver",
+      "summary": "一套会先逼编码代理想清需求，再允许它动手写代码的开发方法论。",
+      "problem": "它用可组合的 skills 和启动指令约束代理流程，先澄清目标、形成规格，再进入实现。与其继续给模型堆提示词，它更像是在给 AI 工程师制定团队工作制度。"
     },
     {
       "rank": 5,
@@ -54,8 +75,16 @@
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "stars": "90,770",
       "language": "Rust",
-      "summary": "给编码代理的设计词汇表，用于打磨与审查。",
-      "problem": "通过 polish、bolder、critique、audit 等指令让代理在交付前发现并修正 AI 生成的设计问题。"
+      "topics": [
+        "agent-skills",
+        "ai",
+        "anti-slop",
+        "design",
+        "slop"
+      ],
+      "readmeExcerpt": "Impeccable The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships. From your project root: Reload your coding tool, then run `/impeccable init` in your agent (`$impeccable init` on Codex). Works with Claude Code, Cursor, Codex CLI, GitHub Copilot, Devin, Replit Agent, Gemini CLI, Grok Build, OpenCode, Google Antigravity, Kiro, Trae, Rovo Dev, Qoder, Mistral Vibe, Pi, Hermes Agent, DeepSeek Harness, and Veto. Full docs live at impeccable.style/docs. | Without Impeccable | With Impeccable | Same model (Fable 5.1), same brief: a fourteen-room family guesthouse on the Ligurian coast. Without Impeccable, it builds the tasteful default: cream page, thin serif, italic accent, pill buttons. With it, the page is built around one picture: the house at night, seen from the water. For a full project, see the Neo Mirai case study: a conference site taken from mockup to shipped page. Why Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up a",
+      "summary": "用 polish、bolder、critique 和 audit 给编码代理补一套设计词汇。",
+      "problem": "它不换模型，而是改变代理观察和评价界面的方式：需要更大胆时怎么说，交付前如何批评和审计，怎样识别模板化的 AI 设计。适合已经能生成页面，却总觉得成品“哪儿都对、就是没味道”的场景。"
     },
     {
       "rank": 6,
@@ -64,8 +93,19 @@
       "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "stars": "7,583",
       "language": "TypeScript",
-      "summary": "开源、开箱即用的 AI Agent。",
-      "problem": "降低 AI Agent 的使用门槛，提供无需复杂配置即可运行的开源代理方案。"
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios"
+      ],
+      "readmeExcerpt": "English · 简体中文 Download Cindy &nbsp;·&nbsp; Website &nbsp;·&nbsp; Build with us &nbsp;·&nbsp; Get help Cindy is an **open-source AI agent, ready out of the box and yours to shape**. Connect your computers and phone, bring the models and subscriptions you already use, and build a companion that knows how you like to work. All your devices. One Cindy. Your work computer, home desktop, laptop and phone belong together. - **Pick up the same work.** Open a session from another device, continue the conversation, and access its files without copying everything into a new chat. - **Share more than a screen.** Use model providers configured on another computer — including supported subscriptions, API providers and local models. - **Reach your whole desktop.** Built-in remote desktop on your phone lets you open apps, type and operate a connected computer when a chat isn't enough. Your computer becomes your server: **no server rental or self-hosting setup**. How connections and data work For remote access to your computers, keep them online, sign in with the same account and enable the relevant permissions. Model sharing requires allowing remote access to that provider; remote desktop also ne",
+      "summary": "把多台电脑和手机接成同一位 AI 助手的开源桌面 Agent。",
+      "problem": "你可以换设备继续同一个会话、访问原来的文件，甚至复用另一台电脑上的模型配置；手机端还带远程桌面。它想解决的不是“再造一个聊天框”，而是让 AI 助手真正跨设备跟着你的工作走。"
     },
     {
       "rank": 7,
@@ -74,8 +114,19 @@
       "description": "📨 The ultimate agentic social media scheduling tool 🤖",
       "stars": "39,490",
       "language": "TypeScript",
-      "summary": "代理式社交媒体排程工具。",
-      "problem": "将社交媒体内容排程与代理能力结合，减少手动规划和发布的工作量。"
+      "topics": [
+        "nextjs",
+        "open-source",
+        "open-source-social-media-scheduling-tool",
+        "oss",
+        "postiz-cloud",
+        "postiz-hosted",
+        "redis",
+        "scheduling-tool"
+      ],
+      "readmeExcerpt": "Postiz is a social media management platform for scheduling, automating, and analyzing your content. Use Postiz Cloud for a fully managed experience, or deploy the open-source edition on your own infrastructure. Explore the docs » Watch the YouTube Tutorials» Register · Join Our Discord (devs only) · Public API NodeJS SDK · N8N custom node · Make.com integration Schedule posts to: With your favorite AI agent: 🔌 See the leading Postiz features ✨ Features Our Sponsors | Sponsor | Logo | Description | | Hostinger | | Hostinger is on a mission to make online success possible for anyone – from developers to aspiring bloggers and business owners | | Virlo | | Virlo is the #1 social media trend spotting and all-in-one GTM tool for teams leveraging short-form video | | ChatbotX | | The ManyChat alternative that you can self-host, white-label, and resell to your clients. Bring your own OpenClaw, Hermes, or Claude agents! | | RapidProxy | | RapidProxy provides 90M+ residential IPs for social media, browser automation, and AI workflows, with smart rotation and stable sessions. From $0.55/GB; use RAPID10 for 10% off. Intro - Schedule all your social media posts (many AI features) - Measure yo",
+      "summary": "能自托管的社交媒体排程台，也给 AI Agent 留好了发布入口。",
+      "problem": "Postiz 把内容排程、自动发布和效果分析放在一起，既有托管版本，也能部署到自己的服务器。它还提供 API 和自动化集成，适合让 Agent 参与内容流水线，而不是每天手动复制、粘贴、点发布。"
     },
     {
       "rank": 8,
@@ -84,8 +135,19 @@
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "stars": "290,997",
       "language": "JavaScript",
-      "summary": "代理 harness 性能优化系统，含技能、记忆与安全。",
-      "problem": "面向 Claude Code、Codex、Cursor 等代理工具，提供技能、本能、记忆和安全层面的性能优化。"
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "readmeExcerpt": "Language: English | العربية | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español | Українська | Polski | বাংলা > [!WARNING] > **Official sources only.** Install ECC only from verified channels: the GitHub repository github.com/affaan-m/ECC, the npm packages `ecc-universal` and `ecc-agentshield`, the GitHub App, the plugin slug `ecc@ecc`, and the project website ecc.tools. Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. Install with Claude Code Use the guided setup or native plugin commands. Both install the same `ecc@ecc` plugin. Choose one and do not stack a full manual Claude install on top. ECC Pro + GitHub App Install free · Private repos from $19/seat/mo Sponsor ECC Fund the open-source project Community Discord · Q&amp;A · Show and Tell **OSS stays free.** This repo is MIT-licensed forever. ECC Pro is the hosted GitHub App for private repos. Sponsors and Pro subscribers fund the work. That's why a single maintainer ships weekly across 7 harnesses. Partners &amp; sponsors &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Past sponso",
+      "summary": "把技能、记忆、安全和“先研究再动手”的流程打包给编码代理。",
+      "problem": "ECC 面向 Claude Code、Codex、Cursor 等工具，试图把零散的 Agent 调优经验整理成一套可安装的工作系统。它的看点不在某条神奇提示词，而在于开始把代理性能当成一项需要持续管理的工程。"
     },
     {
       "rank": 9,
@@ -94,8 +156,19 @@
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "stars": "46,207",
       "language": "Python",
-      "summary": "终身个性化辅导系统。",
-      "problem": "提供持续跟踪学习者进度的个性化辅导体验，而非一次性问答。"
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems"
+      ],
+      "readmeExcerpt": "DeepTutor: Lifelong Personalized Tutoring &nbsp; &#32; &#32; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Features · Get Started · Explore · CLI · Ecosystem · Community > 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at `Roadmap`, and see our Contributing Guide for branching strategy, coding standards, and how to get started. 📦 Releases > **[2026.10.28]** v1.7.0 — Modular installation, a refreshed learning workspace, block notebooks with Dito, narrated video lessons, resumable embedding checkpoints, and more reliable tutoring. Past releases (more than 1 week ago) > **[2026.10.19]** v1.6.15 — Reviewed learning-path changes, grouped assessments, bounded tutoring memory, reliable chat recovery, sturdier parsing, retrieval comparisons, and native Gemini speech. > **[2026.10.8]** v1.6.14 — Original-source visual practice, recoverable indexing, unified video Reading, scientific research tools, managed plugins, a learning journal, and provider setup improvements. > **[2026.10.4]** v1.6.13 — Reading and listening improvements, question-bank practice, resilient document parsing, configurable speech, workspace-visible ",
+      "summary": "不满足于答完一道题，而是想长期维护学习路径、评估和辅导记忆。",
+      "problem": "DeepTutor 把学习工作区、分块笔记、讲解视频、评估和可恢复的知识索引放进同一套系统。它瞄准的是持续辅导，而不是“问一次、答一次”的临时学习助手。"
     },
     {
       "rank": 10,
@@ -104,9 +177,20 @@
       "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
       "stars": "4,168",
       "language": "TypeScript",
-      "summary": "JetBrains 推出的轻量实时 IDE，可围绕工作方式定制。",
-      "problem": "在轻量 IDE 中支持 vibe coding，并根据个人工作习惯调整界面与流程。"
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension"
+      ],
+      "readmeExcerpt": "ThinkRail ThinkRail is the agentic IDE that gets better every time you use it — learning your project through living specs today, and building its own capabilities tomorrow. We built a rich interface around the `pi` coding agent, isolated work into separate workspaces, and gave the agent durable project knowledge through living specs and reusable skills. Next, we're adding full extension support, so ThinkRail can create the tools it needs based on how you actually work. **Website:** thinkrail.ai · **Blog:** thinkrail.ai/blog · **Discord:** thinkrail.ai/discord ⭐ If you find ThinkRail useful, give it a star — it helps others discover it. *A `pi` session and the change it made, scoped to an isolated git-worktree workspace.* What you get - **Isolated workspaces.** Open any git repo as a project and cut workspaces from it as `git worktree`s, each with its own branch and working directory. Agents work in parallel without touching your checkout; merge the good branch, delete the rest. You can also attach existing worktrees or explicitly work in the project folder itself. Finished and dormant workspaces settle onto a per-project shelf on their own — when their pull request merges or close",
+      "summary": "用独立 worktree 隔开任务，再用 living specs 给 Agent 留项目记忆的 IDE。",
+      "problem": "ThinkRail 围绕 pi 编码代理做了一层完整界面，每项任务可以进入独立分支和工作目录，项目知识则沉淀成持续更新的规格与技能。它最有意思的地方，是把“边聊边写”往可追踪、可复用的工程流程推了一步。"
     }
   ],
-  "closing": "今天的热度集中在“代理技能与设计规范”这一层，说明竞争正从模型能力转向代理输出质量与工作流控制。仅凭榜单信息，实际效果仍需自行验证。"
+  "closing": "今天最值得记住的，不是某个 Agent 又多会了一招，而是大家开始认真给它们补流程、审美、记忆和边界。模型像员工，skills 与工作区正在变成真正决定产出的管理制度；OpenBot 这类高权限预览版也提醒我们，能力越强，护栏越不能省。"
 }

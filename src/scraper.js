@@ -7,6 +7,72 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
+const githubHeaders = {
+  'User-Agent': 'github-trending-report',
+  'Accept': 'application/vnd.github+json',
+  'X-GitHub-Api-Version': '2022-11-28'
+};
+if (process.env.GITHUB_TOKEN) {
+  githubHeaders.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+}
+
+function extractReadmeExcerpt(content) {
+  return String(content || '')
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^\s*#+\s*/gm, '')
+    .replace(/^\s*[-|: ]{3,}\s*$/gm, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 1200);
+}
+
+async function enrichRepository(repo) {
+  try {
+    const metadataResponse = await axios.get(`https://api.github.com/repos/${repo.name}`, {
+      headers: githubHeaders
+    });
+    const metadata = metadataResponse.data || {};
+    const defaultBranch = metadata.default_branch || 'main';
+    let readmeExcerpt = '';
+
+    try {
+      const readmeResponse = await axios.get(
+        `https://raw.githubusercontent.com/${repo.name}/${encodeURIComponent(defaultBranch)}/README.md`,
+        { responseType: 'text', timeout: 10000 }
+      );
+      readmeExcerpt = extractReadmeExcerpt(readmeResponse.data);
+    } catch (error) {
+      console.warn(`未能读取 ${repo.name} 的 README:`, error.message);
+    }
+
+    return {
+      ...repo,
+      description: /^(?:no description)?$/i.test(String(repo.description || '').trim())
+        ? metadata.description || repo.description
+        : repo.description,
+      language: /^(?:unknown)?$/i.test(String(repo.language || '').trim())
+        ? metadata.language || repo.language
+        : repo.language,
+      topics: Array.isArray(metadata.topics) ? metadata.topics.slice(0, 8) : [],
+      readmeExcerpt
+    };
+  } catch (error) {
+    console.warn(`未能补全 ${repo.name} 的仓库资料:`, error.message);
+    return repo;
+  }
+}
+
+async function enrichRepositories(repositories) {
+  const enriched = [];
+  for (const repo of repositories) {
+    enriched.push(await enrichRepository(repo));
+  }
+  return enriched;
+}
+
 /**
  * 获取 GitHub Trending 项目数据
  * @returns {Promise<Array>} 包含前 10 个 Trending 项目信息的数组
@@ -89,7 +155,8 @@ async function fetchTrending() {
     }
     
     console.log(`成功提取 ${repositories.length} 个仓库信息`);
-    return repositories;
+    console.log('正在补全仓库资料与 README 摘要...');
+    return enrichRepositories(repositories);
   } catch (error) {
     console.error('获取 Trending 数据时发生错误:', error.message);
     throw error;
@@ -150,4 +217,10 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { fetchTrending, saveDataToFile };
+module.exports = {
+  fetchTrending,
+  saveDataToFile,
+  extractReadmeExcerpt,
+  enrichRepository,
+  enrichRepositories
+};

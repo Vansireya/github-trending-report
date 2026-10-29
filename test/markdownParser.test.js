@@ -80,6 +80,8 @@ test('shows the authoritative scraped star count beside the project name', () =>
 
 **一句话概括**：项目摘要
 
+**详细介绍**：项目详情
+
 **项目网址**：https://github.com/owner/repo
 
 **Star 数量**：123
@@ -101,6 +103,18 @@ test('shows the authoritative scraped star count beside the project name', () =>
   assert.doesNotMatch(html, /适合：|为什么上榜|使用提醒/);
 });
 
+test('hides unknown language and empty project details', () => {
+  const html = markdownParser.generateProjectCard({
+    name: 'owner/repo',
+    summary: '资料不足，先保留观察',
+    details: '信息不足，仅凭榜单信息暂无法确认。',
+    repository: { rank: 1, url: 'https://github.com/owner/repo', stars: '1,234', language: 'Unknown' }
+  });
+
+  assert.doesNotMatch(html, /Unknown|detail-toggle|project-details/);
+  assert.match(html, /资料不足，先保留观察/);
+});
+
 test('keeps the daily feed to a balanced top nine', () => {
   const html = markdownParser.convertMarkdownToHTML(`
 ### owner/repo
@@ -120,6 +134,7 @@ test('gives the first project a distinct editorial layout', () => {
   const html = markdownParser.generateProjectCard({
     name: 'owner/repo',
     summary: '摘要',
+    details: '项目详情',
     repository: { rank: 1, url: 'https://github.com/owner/repo', stars: '1,234' }
   });
 

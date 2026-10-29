@@ -200,7 +200,9 @@ function generateProjectCard(projectData) {
   const url = /^https?:\/\//i.test(rawUrl) ? escapeHTML(rawUrl) : '#';
   const stars = escapeHTML(repository.stars || projectData.stars || '0');
   const rank = Number(repository.rank) || 0;
-  const language = escapeHTML(repository.language || 'Other');
+  const rawLanguage = String(repository.language || '').trim();
+  const language = /^(?:unknown|other)?$/i.test(rawLanguage) ? '' : escapeHTML(rawLanguage);
+  const hasDetails = Boolean(projectData.details) && !/^(?:暂无|信息不足|仅凭榜单信息)/.test(decodeHTMLEntities(projectData.details));
   const cardId = `project-${String(projectData.name || 'unknown').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
   const layoutClass = rank === 1
     ? ' project-card--rank-1'
@@ -219,7 +221,7 @@ function generateProjectCard(projectData) {
         <span class="star-pill" aria-label="${stars} stars">★ ${stars}</span>
       </div>
       <div class="project-tags">
-        <span class="language-tag"><i></i>${language}</span>
+        ${language ? `<span class="language-tag"><i></i>${language}</span>` : ''}
         <span class="appearance-tag" hidden></span>
       </div>
     </div>
@@ -228,12 +230,12 @@ function generateProjectCard(projectData) {
     </div>
   </div>
   <p class="project-summary">${summary}</p>
-  <button class="detail-toggle" type="button" aria-label="${isExpanded ? '收起' : '展开'} ${name} 的项目解读" aria-expanded="${isExpanded}" aria-controls="${cardId}">
+  ${hasDetails ? `<button class="detail-toggle" type="button" aria-label="${isExpanded ? '收起' : '展开'} ${name} 的项目解读" aria-expanded="${isExpanded}" aria-controls="${cardId}">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="${cardId}"${isExpanded ? '' : ' hidden'}>
     <p>${details}</p>
-  </div>
+  </div>` : ''}
 </article>`;
 }
 
