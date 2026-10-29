@@ -17,15 +17,49 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeTheme() {
   const root = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('github-radar-theme');
-  const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  root.dataset.theme = savedTheme || preferredTheme;
-  themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+  const themeMenu = document.getElementById('themeMenu');
+  const themeOptions = Array.from(document.querySelectorAll('[data-theme-choice]'));
+  if (!themeToggle || !themeMenu || themeOptions.length === 0) return;
+
+  const applyTheme = function(theme) {
+    root.dataset.theme = theme;
+    localStorage.setItem('github-radar-theme', theme);
+    themeOptions.forEach(function(option) {
+      option.setAttribute('aria-checked', String(option.dataset.themeChoice === theme));
+    });
+  };
+
+  const closeThemeMenu = function() {
+    themeMenu.hidden = true;
+    themeToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  applyTheme(root.dataset.theme || 'cherry');
 
   themeToggle.addEventListener('click', function() {
-    root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('github-radar-theme', root.dataset.theme);
-    themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+    const willOpen = themeMenu.hidden;
+    themeMenu.hidden = !willOpen;
+    themeToggle.setAttribute('aria-expanded', String(willOpen));
+    if (willOpen) themeOptions.find(option => option.getAttribute('aria-checked') === 'true')?.focus();
+  });
+
+  themeOptions.forEach(function(option) {
+    option.addEventListener('click', function() {
+      applyTheme(option.dataset.themeChoice);
+      closeThemeMenu();
+      themeToggle.focus();
+    });
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.theme-picker')) closeThemeMenu();
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && !themeMenu.hidden) {
+      closeThemeMenu();
+      themeToggle.focus();
+    }
   });
 }
 
