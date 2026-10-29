@@ -1,0 +1,162 @@
+[
+  {
+    "rank": 1,
+    "name": "JetBrains/thinkrail",
+    "url": "https://github.com/JetBrains/thinkrail",
+    "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+    "stars": "5,240",
+    "language": "TypeScript",
+    "topics": [
+      "agent",
+      "agent-skills",
+      "agentic-ai",
+      "agentic-workflow",
+      "ai-coding",
+      "ai-tools",
+      "pi-agent",
+      "pi-agent-extension"
+    ],
+    "readmeExcerpt": "ThinkRail ThinkRail is the agentic IDE that gets better every time you use it — learning your project through living specs today, and building its own capabilities tomorrow. We built a rich interface around the `pi` coding agent, isolated work into separate workspaces, and gave the agent durable project knowledge through living specs and reusable skills. Next, we're adding full extension support, so ThinkRail can create the tools it needs based on how you actually work. **Website:** thinkrail.ai · **Blog:** thinkrail.ai/blog · **Discord:** thinkrail.ai/discord ⭐ If you find ThinkRail useful, give it a star — it helps others discover it. *A `pi` session and the change it made, scoped to an isolated git-worktree workspace.* What you get - **Isolated workspaces.** Open any git repo as a project and cut workspaces from it as `git worktree`s, each with its own branch and working directory. Agents work in parallel without touching your checkout; merge the good branch, delete the rest. You can also attach existing worktrees or explicitly work in the project folder itself. Finished and dormant workspaces settle onto a per-project shelf on their own — when their pull request merges or close"
+  },
+  {
+    "rank": 2,
+    "name": "elayadesign/ai-design-skills",
+    "url": "https://github.com/elayadesign/ai-design-skills",
+    "description": "No description",
+    "stars": "11,301",
+    "language": "Unknown",
+    "topics": [],
+    "readmeExcerpt": "AI Design Skills A growing collection of design skills for AI coding tools — Claude Code, Cursor, Codex, Windsurf, and anything else that reads a markdown rules file. Each skill is a self-contained folder. Install the ones you need. Skills | Skill | What it does | | `landing-page-design` | Builds a landing page from scratch — intake questions, page structure, conversion copy, plus a full visual system (type, spacing, radius, motion) | More on the way. Upgrading an existing site instead of building new? That one lives in its own repo since it predates this collection. Install Pick a skill from the table above, then swap ` ` below for its folder name. Claude Code Then just ask, in plain language, for what that skill covers. Cursor Or paste the file into **Settings → Rules for AI**. Codex / Windsurf / other Copy the skill's `SKILL.md` into whatever your tool uses for project rules: | Tool | Path | | Codex | `AGENTS.md` | | Windsurf | `.windsurfrules` | | Cline | `.clinerules` | | Generic | paste into your system prompt | Claude.ai (no terminal) Download the skill's `SKILL.md` and upload it to a Project, or attach it to a chat and say *\"follow this.\"* Make it yours Every skill's design"
+  },
+  {
+    "rank": 3,
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": "307,559",
+    "language": "Shell",
+    "topics": [
+      "ai",
+      "brainstorming",
+      "coding",
+      "obra",
+      "sdlc",
+      "skills",
+      "subagent-driven-development",
+      "superpowers"
+    ],
+    "readmeExcerpt": "Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. Table of Contents - How it works - Commercial Services - Getting Started - Claude Code - Antigravity - Codex App - Codex CLI - Cursor - Devin CLI - Factory Droid - Gemini CLI - GitHub Copilot CLI - Grok Build CLI - Kimi Code - OpenCode - Pi - Qwen Code - Hermes Agent - Muse - The Basic Workflow - When Something Goes Wrong - Community - What's Inside - Philosophy - Contributing - Updating - License - Visual companion telemetry How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aver"
+  },
+  {
+    "rank": 4,
+    "name": "HKUDS/DeepTutor",
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+    "stars": "48,301",
+    "language": "Python",
+    "topics": [
+      "ai-agents",
+      "ai-tutor",
+      "clawbot",
+      "cli-tool",
+      "deepresearch",
+      "interactive-learning",
+      "learning",
+      "multi-agent-systems"
+    ],
+    "readmeExcerpt": "DeepTutor: Lifelong Personalized Tutoring &nbsp; &#32; &#32; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Features · Get Started · Explore · CLI · Ecosystem · Community > 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at `Roadmap`, and see our Contributing Guide for branching strategy, coding standards, and how to get started. 📦 Releases > **[2026.10.28]** v1.7.0 — Modular installation, a refreshed learning workspace, block notebooks with Dito, narrated video lessons, resumable embedding checkpoints, and more reliable tutoring. Past releases (more than 1 week ago) > **[2026.10.19]** v1.6.15 — Reviewed learning-path changes, grouped assessments, bounded tutoring memory, reliable chat recovery, sturdier parsing, retrieval comparisons, and native Gemini speech. > **[2026.10.8]** v1.6.14 — Original-source visual practice, recoverable indexing, unified video Reading, scientific research tools, managed plugins, a learning journal, and provider setup improvements. > **[2026.10.4]** v1.6.13 — Reading and listening improvements, question-bank practice, resilient document parsing, configurable speech, workspace-visible "
+  },
+  {
+    "rank": 5,
+    "name": "macro-inc/macro",
+    "url": "https://github.com/macro-inc/macro",
+    "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+    "stars": "5,491",
+    "language": "Rust",
+    "topics": [
+      "agent",
+      "ai",
+      "ai-agents",
+      "all-in-one",
+      "crm",
+      "crm-system",
+      "email",
+      "linear"
+    ],
+    "readmeExcerpt": "Sign up · Docs · Book demo · Website · Feature requests · Contribute · Hiring Macro is the all-in-one workspace for you and your team. It unifies email + messages + docs + tasks + agents + CRM into a single fast interface with shared team-level memory. Everything in your workspace is @linked and searchable so your team (and your agents) never have to switch tools. Why Macro We built Macro because we wanted a single operating system for our startup. There are many good software products, and we used them all — Slack, Linear, Notion, HubSpot, and Superhuman — but they don't work together as one system. As we scaled our last venture to ~20 people things started to break: every team got their own tools and the company was held together by MCP and Zapier. The company was not computable. It was chaotic. Macro is a complete redesign of work software from the ground up as a single system. Designed by us in NYC and Toronto, dogfooded by our team of ~15 for two years. Built in SolidJS and Rust for speed and reliability. We're focused on building something that any small company or team at a larger company can use as their \"operating system\". Features Macro is composed of 'blocks' designed to"
+  },
+  {
+    "rank": 6,
+    "name": "Nutlope/hallmark",
+    "url": "https://github.com/Nutlope/hallmark",
+    "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "stars": "40,902",
+    "language": "CSS",
+    "topics": [],
+    "readmeExcerpt": "Hallmark **A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.** usehallmark.com &nbsp;·&nbsp; fifty themes &nbsp;·&nbsp; custom on request &nbsp;·&nbsp; redesign and audit by name Made by Together AI. Hallmark holds a hard floor and then gets out of the way. It deals three themes from a catalog of fifty materials, builds the page around what the visitor came to do, and lints the result in a real browser against the tells that read as machine-made: the eyebrow above every heading, tracked-capital labels, one coloured word in a headline, a page of empty frames or nothing but photographs, a hero that misses its screen, an email sign-up at the end of every page, a form that says thanks without sending anything. A fresh-context reviewer gets the last word. The gates come in tiers. The **Floor** never ships (contrast, focus, reduced motion, invented facts, a broken phone layout). **Reflex** gates are the defaults a model falls into; a build with a reason may overrule one on the record. **Finish** checks are craft detail that never blocks a ship. New in v2 - **Fifty themes.** Each is a material (paper, type, colour, surfaces, its own components a"
+  },
+  {
+    "rank": 7,
+    "name": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+    "stars": "93,100",
+    "language": "Rust",
+    "topics": [
+      "agent-skills",
+      "ai",
+      "anti-slop",
+      "design",
+      "slop"
+    ],
+    "readmeExcerpt": "Impeccable The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships. From your project root: Reload your coding tool, then run `/impeccable init` in your agent (`$impeccable init` on Codex). Works with Claude Code, Cursor, Codex CLI, GitHub Copilot, Devin, Replit Agent, Gemini CLI, Grok Build, OpenCode, Google Antigravity, Kiro, Trae, Rovo Dev, Qoder, Mistral Vibe, Pi, Hermes Agent, DeepSeek Harness, and Veto. Full docs live at impeccable.style/docs. | Without Impeccable | With Impeccable | Same model (Fable 5.1), same brief: a fourteen-room family guesthouse on the Ligurian coast. Without Impeccable, it builds the tasteful default: cream page, thin serif, italic accent, pill buttons. With it, the page is built around one picture: the house at night, seen from the water. For a full project, see the Neo Mirai case study: a conference site taken from mockup to shipped page. Why Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up a"
+  },
+  {
+    "rank": 8,
+    "name": "makecindy/cindy",
+    "url": "https://github.com/makecindy/cindy",
+    "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+    "stars": "8,207",
+    "language": "TypeScript",
+    "topics": [
+      "agent",
+      "ai-agent",
+      "ai-assistant",
+      "android",
+      "claude-code",
+      "codex",
+      "electron",
+      "ios"
+    ],
+    "readmeExcerpt": "English · 简体中文 Download Cindy &nbsp;·&nbsp; Website &nbsp;·&nbsp; Build with us &nbsp;·&nbsp; Get help Cindy is an **open-source AI agent, ready out of the box and yours to shape**. Connect your computers and phone, bring the models and subscriptions you already use, and build a companion that knows how you like to work. All your devices. One Cindy. Your work computer, home desktop, laptop and phone belong together. - **Pick up the same work.** Open a session from another device, continue the conversation, and access its files without copying everything into a new chat. - **Share more than a screen.** Use model providers configured on another computer — including supported subscriptions, API providers and local models. - **Reach your whole desktop.** Built-in remote desktop on your phone lets you open apps, type and operate a connected computer when a chat isn't enough. Your computer becomes your server: **no server rental or self-hosting setup**. How connections and data work For remote access to your computers, keep them online, sign in with the same account and enable the relevant permissions. Model sharing requires allowing remote access to that provider; remote desktop also ne"
+  },
+  {
+    "rank": 9,
+    "name": "nightly-labs/openbot",
+    "url": "https://github.com/nightly-labs/openbot",
+    "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+    "stars": "3,360",
+    "language": "TypeScript",
+    "topics": [
+      "ai-agents",
+      "bun",
+      "codex",
+      "electron",
+      "local-first",
+      "macos",
+      "solidjs",
+      "typescript"
+    ],
+    "readmeExcerpt": "OpenBot OpenBot is a local-first desktop workspace for persistent AI teammates. It supports the local Codex App Server and Claude Code, plus Grok CLI, OpenCode, Gemini, Cursor CLI, and Cline CLI through ACP. It gives every agent its own workspace and conversation, and provides local queues, file transfers, an embedded browser, and agent-to-agent messaging in one desktop app. > [!WARNING] > OpenBot is a development preview. Agents currently run with `danger-full-access` and > `approvalPolicy: never`. They can read and modify files, run commands, use the network, and control > the embedded browser without per-action confirmations after the explicit first-launch consent. > Run only agents and tasks you trust, keep backups, and review Security before use. What works - Prompt-driven agent creation and editing on desktop and mobile, with editable instructions, avatar, and section review before saving. - Persistent agents backed by independent Codex, Claude, Grok, OpenCode, Gemini, Cursor, or Cline sessions and local workspaces. - Custom OpenAI-compatible endpoints and custom ACP agents, with detection of local model servers (Ollama, LM Studio) and installed agents. - Per-agent context mo"
+  },
+  {
+    "rank": 10,
+    "name": "togg53192-cmd/jailbreaks",
+    "url": "https://github.com/togg53192-cmd/jailbreaks",
+    "description": "LIST OF ALL MY JAILBREAKS",
+    "stars": "7,342",
+    "language": "Unknown",
+    "topics": [],
+    "readmeExcerpt": "Jailbreaks **A curated collection of system prompts, persona locks, workspace policies, and agent operating specifications for frontier, open-weight, and free stealth models.** About A working collection of **32 prompts targeting 26+ models**, including complete system prompts, persona definitions, workspace policies, `AGENTS.md` files, configuration blocks, and Ollama Modelfiles. Every file is intended to be complete and paste-ready. No summaries. No partial excerpts. The collection covers: - Free stealth models available through OpenCode Zen - Open-weight families including GLM, DeepSeek, Kimi, Qwen, Gemma, and GPT-OSS - Closed frontier models including Claude, Gemini, Grok, and Mistral - Coding-agent and workspace instruction formats - Ollama Modelfiles and harness-specific configuration **New here?** Start with the collection or jump directly to how to use. > [!WARNING] > **Research and educational purposes only.** > > This repository documents how instruction hierarchies, persona framing, prompt conflicts, and policy overrides can affect model behavior. These techniques are also useful to researchers and developers studying how to make AI systems more resistant to prompt injec"
+  }
+]

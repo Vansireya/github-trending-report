@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年10月29日星期四</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-10-29">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年10月29日星期四</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>给编码代理补上设计感与工作流</h1>
+        <p>今天榜单几乎被“怎么让编码代理更好用”占满：JetBrains 亲自下场做代理式 IDE，而 obra/superpowers 用一套可组合技能把开发流程拆成可执行的步骤。真正有意思的分歧在于，有人想重做编辑器，有人只想给代理塞一本设计规范。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="JetBrains/thinkrail" data-project-url="https://github.com/JetBrains/thinkrail" data-project-summary="JetBrains 做的代理式 IDE，把每个任务切成独立 git worktree 工作区，让代理并行干活不碰你的主检出。" data-project-stars="5,240" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer">JetBrains/thinkrail</a>
+        <span class="star-pill" aria-label="5,240 stars">★ 5,240</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 JetBrains/thinkrail" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">JetBrains 做的代理式 IDE，把每个任务切成独立 git worktree 工作区，让代理并行干活不碰你的主检出。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 JetBrains/thinkrail 的项目解读" aria-expanded="true" aria-controls="project-jetbrains-thinkrail">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-jetbrains-thinkrail">
+    <p>打开任意 git 仓库即可切出带独立分支的工作区，代理在隔离环境里改代码，好的合并、差的删掉；完成的 workspace 会自动归到项目架子上。目前扩展能力还在路上，README 说下一步才让 IDE 按你的习惯自造工具。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="elayadesign/ai-design-skills" data-project-url="https://github.com/elayadesign/ai-design-skills" data-project-summary="给编码工具用的设计技能包，每个技能一个自包含文件夹，按需安装，不搞全家桶。" data-project-stars="11,301" data-language="">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/elayadesign/ai-design-skills" target="_blank" rel="noopener noreferrer">elayadesign/ai-design-skills</a>
+        <span class="star-pill" aria-label="11,301 stars">★ 11,301</span>
+      </div>
+      <div class="project-tags">
+
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 elayadesign/ai-design-skills" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给编码工具用的设计技能包，每个技能一个自包含文件夹，按需安装，不搞全家桶。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 elayadesign/ai-design-skills 的项目解读" aria-expanded="true" aria-controls="project-elayadesign-ai-design-skills">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-elayadesign-ai-design-skills">
+    <p>目前主打 landing-page-design：从提问、页面结构、转化文案到字体间距圆角动效一整套视觉系统。安装方式很土但通用——把 SKILL.md 塞进 Claude Code、Cursor、Codex 等工具读规则文件的位置。技能数量还少，胜在结构清楚。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="obra/superpowers" data-project-url="https://github.com/obra/superpowers" data-project-summary="把软件开发方法论拆成可组合技能，逼代理先问清你要什么，再分块给你看规格，最后才写代码。" data-project-stars="307,559" data-language="Shell">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+        <span class="star-pill" aria-label="307,559 stars">★ 307,559</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 obra/superpowers" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把软件开发方法论拆成可组合技能，逼代理先问清你要什么，再分块给你看规格，最后才写代码。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 obra/superpowers 的项目解读" aria-expanded="true" aria-controls="project-obra-superpowers">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-obra-superpowers">
+    <p>它不急着让代理动手，而是先逼出一份规格、分短块让你签字，再生成连“没品味没判断力的初级工程师”都能执行的实施计划。覆盖 Claude Code、Codex、Cursor 等一长串工具，但本质是流程约束，代理是否老实遵守仍取决于模型。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="HKUDS/DeepTutor" data-project-url="https://github.com/HKUDS/DeepTutor" data-project-summary="港大数据智能实验室的终身个性化辅导系统，多代理协作，带 CLI 和可插拔的学习工作区。" data-project-stars="48,301" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener noreferrer">HKUDS/DeepTutor</a>
+        <span class="star-pill" aria-label="48,301 stars">★ 48,301</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 HKUDS/DeepTutor" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">港大数据智能实验室的终身个性化辅导系统，多代理协作，带 CLI 和可插拔的学习工作区。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 HKUDS/DeepTutor 的项目解读" aria-expanded="false" aria-controls="project-hkuds-deeptutor">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-hkuds-deeptutor" hidden>
+    <p>从 README 看迭代很密：模块化安装、块状笔记本、带旁白的视频课、可恢复的嵌入检查点。它面向的是长期学习路径而非单次问答，但功能面铺得很宽，实际辅导质量需要自己跑一轮才知道。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="macro-inc/macro" data-project-url="https://github.com/macro-inc/macro" data-project-summary="把邮件、聊天、文档、任务、代理、通话和 CRM 塞进一个界面，靠 @ 链接和共享 AI 记忆串起来。" data-project-stars="5,491" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/macro-inc/macro" target="_blank" rel="noopener noreferrer">macro-inc/macro</a>
+        <span class="star-pill" aria-label="5,491 stars">★ 5,491</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 macro-inc/macro" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把邮件、聊天、文档、任务、代理、通话和 CRM 塞进一个界面，靠 @ 链接和共享 AI 记忆串起来。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 macro-inc/macro 的项目解读" aria-expanded="false" aria-controls="project-macro-inc-macro">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-macro-inc-macro" hidden>
+    <p>团队约 15 人自用两年，用 SolidJS 和 Rust 重写，目标是让小公司不再靠 MCP 和 Zapier 把 Slack、Linear、Notion 粘在一起。野心很大，代价是你要把整个工作流搬进一个新产品，迁移成本不低。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="Nutlope/hallmark" data-project-url="https://github.com/Nutlope/hallmark" data-project-summary="反 AI 味的设计技能，从五十套主题里抽三套，再用真实浏览器 lint 那些一眼机器生成的痕迹。" data-project-stars="40,902" data-language="CSS">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">Nutlope/hallmark</a>
+        <span class="star-pill" aria-label="40,902 stars">★ 40,902</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>CSS</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 Nutlope/hallmark" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">反 AI 味的设计技能，从五十套主题里抽三套，再用真实浏览器 lint 那些一眼机器生成的痕迹。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 Nutlope/hallmark 的项目解读" aria-expanded="false" aria-controls="project-nutlope-hallmark">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nutlope-hallmark" hidden>
+    <p>它盯的是具体病症：每个标题上方的眉题、字距拉开的全大写标签、标题里一个彩色词、结尾必放的邮件订阅框。分 Floor、Reflex、Finish 三档门禁，Floor 直接不许发布。适合不想再看到紫蓝渐变的人，但主题库和规则仍在扩充。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="pbakaus/impeccable" data-project-url="https://github.com/pbakaus/impeccable" data-project-summary="给编码代理的设计词汇表：用 polish、bolder 调方向，用 critique、audit 做审查，赶在发布前拦住 AI 味。" data-project-stars="93,100" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">pbakaus/impeccable</a>
+        <span class="star-pill" aria-label="93,100 stars">★ 93,100</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 pbakaus/impeccable" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给编码代理的设计词汇表：用 polish、bolder 调方向，用 critique、audit 做审查，赶在发布前拦住 AI 味。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 pbakaus/impeccable 的项目解读" aria-expanded="false" aria-controls="project-pbakaus-impeccable">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-pbakaus-impeccable" hidden>
+    <p>同一个模型同一份需求，没有它会交出奶油色页面加细衬线加胶囊按钮的安全牌，有了它会围绕一张夜景照片重建页面。支持的工具列表长到夸张，但效果依赖代理是否认真执行这些指令词。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="makecindy/cindy" data-project-url="https://github.com/makecindy/cindy" data-project-summary="开箱即用的开源 AI 代理，把电脑和手机连成一台，会话、文件、模型订阅都能跨设备接着用。" data-project-stars="8,207" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">makecindy/cindy</a>
+        <span class="star-pill" aria-label="8,207 stars">★ 8,207</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 makecindy/cindy" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">开箱即用的开源 AI 代理，把电脑和手机连成一台，会话、文件、模型订阅都能跨设备接着用。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 makecindy/cindy 的项目解读" aria-expanded="false" aria-controls="project-makecindy-cindy">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-makecindy-cindy" hidden>
+    <p>手机端内置远程桌面，聊天不够时直接操作连着的电脑；模型共享让你用另一台机器上配好的订阅或本地模型。它把“你的电脑就是服务器”当卖点，省掉自托管，但前提是设备常在线且权限开对。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="nightly-labs/openbot" data-project-url="https://github.com/nightly-labs/openbot" data-project-summary="本地优先的桌面工作台，给每个 AI 队友独立工作区、任务队列、文件共享和嵌入式浏览器。" data-project-stars="3,360" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/nightly-labs/openbot" target="_blank" rel="noopener noreferrer">nightly-labs/openbot</a>
+        <span class="star-pill" aria-label="3,360 stars">★ 3,360</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 nightly-labs/openbot" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">本地优先的桌面工作台，给每个 AI 队友独立工作区、任务队列、文件共享和嵌入式浏览器。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 nightly-labs/openbot 的项目解读" aria-expanded="false" aria-controls="project-nightly-labs-openbot">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nightly-labs-openbot" hidden>
+    <p>支持 Codex、Claude Code、Grok CLI 等一串代理，还能互相发消息协作。但 README 自己挂了警告：开发预览版，代理以 danger-full-access 和从不审批的策略运行，能读写文件、跑命令、控制浏览器。适合信任的任务，不适合生产环境。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最值得看的是设计技能这条线：hallmark 和 impeccable 都在用具体规则对抗模型的审美默认值，比再做一个代理框架更务实。至于重做 IDE 和重做工作台，先看它们能不能让人少切几次窗口。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07","2026-10-06","2026-10-05","2026-10-04","2026-10-03","2026-10-02","2026-10-01","2026-09-30"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>
