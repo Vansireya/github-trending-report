@@ -11,8 +11,8 @@
     }
     try {
       const savedTheme = localStorage.getItem('github-radar-theme');
-      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme;
-      const availableThemes = ['cherry', 'blue', 'amber', 'night'];
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
       document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
         ? migratedTheme
         : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
@@ -23,7 +23,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
   <title>GitHub 简报 - 2026年10月1日星期四</title>
   <script src="../data/ranking_data.js"></script>
-  <link rel="stylesheet" href="../src/templates/style-v2.css?v=02326432">
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=30b31aac">
 </head>
 <body data-report-base-path="" data-report-date="2026-10-01">
   <div class="page-glow page-glow--one"></div>
@@ -47,7 +47,7 @@
           <span class="theme-menu-title">选择主题</span>
           <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
           <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
-          <button type="button" role="menuitemradio" data-theme-choice="amber" aria-checked="false"><span class="theme-swatch theme-swatch--amber"></span><span><strong>琥珀旧报</strong><small>温暖纸感</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
           <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
         </div>
       </div>

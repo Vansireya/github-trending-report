@@ -56,22 +56,22 @@
   --shadow: 0 24px 70px rgba(43, 69, 112, 0.12);
 }
 
-:root[data-theme="amber"] {
+:root[data-theme="green"] {
   color-scheme: light;
-  --bg: #fbf6ec;
-  --surface: rgba(255, 253, 248, 0.94);
-  --surface-solid: #fffdf8;
-  --surface-2: #f5ead7;
-  --text: #392a1c;
-  --muted: #927b64;
-  --muted-strong: #65503d;
-  --border: rgba(104, 72, 38, 0.12);
-  --border-strong: rgba(104, 72, 38, 0.23);
-  --accent: #c7772f;
-  --accent-2: #a95e20;
-  --accent-soft: rgba(199, 119, 47, 0.11);
-  --danger-soft: rgba(199, 119, 47, 0.08);
-  --shadow: 0 24px 70px rgba(91, 58, 26, 0.13);
+  --bg: #f3f7f2;
+  --surface: rgba(251, 253, 249, 0.94);
+  --surface-solid: #fbfdf9;
+  --surface-2: #e5efe8;
+  --text: #183026;
+  --muted: #718279;
+  --muted-strong: #4f665a;
+  --border: rgba(43, 91, 66, 0.12);
+  --border-strong: rgba(43, 91, 66, 0.23);
+  --accent: #3f8a67;
+  --accent-2: #2d6f50;
+  --accent-soft: rgba(63, 138, 103, 0.11);
+  --danger-soft: rgba(63, 138, 103, 0.08);
+  --shadow: 0 24px 70px rgba(39, 78, 58, 0.13);
 }
 
 * { box-sizing: border-box; }
@@ -151,7 +151,7 @@ button, select { cursor: pointer; }
 .theme-toggle-dots i { width: 7px; height: 7px; border-radius: 50%; }
 .theme-toggle-dots i:nth-child(1) { background: #d94a78; }
 .theme-toggle-dots i:nth-child(2) { background: #4776c9; }
-.theme-toggle-dots i:nth-child(3) { background: #c7772f; }
+.theme-toggle-dots i:nth-child(3) { background: #3f8a67; }
 .theme-toggle-dots i:nth-child(4) { background: #6f4059; }
 .theme-menu {
   position: absolute;
@@ -177,7 +177,7 @@ button, select { cursor: pointer; }
 .theme-swatch { width: 32px; height: 32px; border: 1px solid rgba(30, 20, 25, .1); border-radius: 9px; }
 .theme-swatch--cherry { background: linear-gradient(135deg, #fff7f8 48%, #d94372 49%); }
 .theme-swatch--blue { background: linear-gradient(135deg, #f4f7fc 48%, #4776c9 49%); }
-.theme-swatch--amber { background: linear-gradient(135deg, #fbf6ec 48%, #c7772f 49%); }
+.theme-swatch--green { background: linear-gradient(135deg, #f3f7f2 48%, #3f8a67 49%); }
 .theme-swatch--night { background: linear-gradient(135deg, #171117 48%, #f06a9b 49%); }
 
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 28px 64px; }
