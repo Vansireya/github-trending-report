@@ -153,11 +153,33 @@ function convertMarkdownToHTML(markdown, repositories = []) {
   );
 
   result = result.replace(
-    /<p><strong>今日总结<\/strong>[：:]\s*([\s\S]*?)<\/p>/g,
-    '<div class="summary-section"><span class="eyebrow">今日结论</span><p>$1</p></div>'
+    /<blockquote>\s*<p><strong>今日总结[：:]?<\/strong>\s*(?:[：:]\s*)?([\s\S]*?)<\/p>\s*<\/blockquote>/gi,
+    function(match, summary) {
+      return buildSummarySection(summary);
+    }
+  );
+
+  result = result.replace(
+    /<p><strong>今日总结[：:]?<\/strong>\s*(?:[：:]\s*)?([\s\S]*?)<\/p>/gi,
+    function(match, summary) {
+      return buildSummarySection(summary);
+    }
+  );
+
+  result = result.replace(
+    /<h2>今日总结<\/h2>\s*(?:<p>([\s\S]*?)<\/p>)?/gi,
+    function(match, summary) {
+      return buildSummarySection(summary);
+    }
   );
 
   return result;
+}
+
+function buildSummarySection(summary) {
+  const content = String(summary || '').trim();
+  if (!content) return '';
+  return `<div class="summary-section"><span class="eyebrow">今日结论</span><p>${content}</p></div>`;
 }
 
 function extractReportLead(html) {

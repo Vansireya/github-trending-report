@@ -192,6 +192,26 @@ test('wraps the daily takeaway as a full-width summary panel', () => {
   assert.match(html, /保持判断/);
 });
 
+test('normalizes legacy daily summary formats into the same panel', () => {
+  const samples = [
+    '> **今日总结：** 引号格式。',
+    '**今日总结：** 粗体内冒号格式。',
+    '## 今日总结\n\n标题格式。'
+  ];
+
+  samples.forEach(function(markdown) {
+    const html = markdownParser.convertMarkdownToHTML(markdown);
+    assert.match(html, /class="summary-section"/);
+    assert.match(html, /今日结论/);
+    assert.doesNotMatch(html, /<h2>今日总结<\/h2>|<blockquote>/);
+  });
+});
+
+test('removes an empty legacy daily summary heading', () => {
+  const html = markdownParser.convertMarkdownToHTML('**今日总结**');
+  assert.doesNotMatch(html, /今日总结|summary-section/);
+});
+
 test('removes the redundant daily signals section', () => {
   const markdown = `# 今日标题
 
