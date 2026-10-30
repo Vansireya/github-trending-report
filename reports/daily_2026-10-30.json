@@ -1,0 +1,195 @@
+{
+  "title": "给编码代理立规矩：技能、记忆与设计约束",
+  "opening": "今天榜单几乎被同一件事占满：怎么让编码代理按人的意图工作，而不是一上来就写代码。obra/superpowers 用一套可组合技能把开发流程塞进代理，thedotmack/claude-mem 则试图让代理跨会话记住上下文，两者分别从流程和记忆两端补课。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "stars": "50,466",
+      "language": "Python",
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems"
+      ],
+      "readmeExcerpt": "DeepTutor: Lifelong Personalized Tutoring &nbsp; &#32; &#32; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Features · Get Started · Explore · CLI · Ecosystem · Community > 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at `Roadmap`, and see our Contributing Guide for branching strategy, coding standards, and how to get started. 📦 Releases > **[2026.10.28]** v1.7.0 — Modular installation, a refreshed learning workspace, block notebooks with Dito, narrated video lessons, resumable embedding checkpoints, and more reliable tutoring. Past releases (more than 1 week ago) > **[2026.10.19]** v1.6.15 — Reviewed learning-path changes, grouped assessments, bounded tutoring memory, reliable chat recovery, sturdier parsing, retrieval comparisons, and native Gemini speech. > **[2026.10.8]** v1.6.14 — Original-source visual practice, recoverable indexing, unified video Reading, scientific research tools, managed plugins, a learning journal, and provider setup improvements. > **[2026.10.4]** v1.6.13 — Reading and listening improvements, question-bank practice, resilient document parsing, configurable speech, workspace-visible ",
+      "summary": "港大团队做的终身个性化辅导代理，带 CLI、多代理系统和交互式学习工作区。",
+      "problem": "从 README 看，它把学习路径、评估、视频课程和检索对比都做进了同一套工作区，更新节奏很密。但功能面铺得很宽，实际辅导质量是否跟得上模块数量，仅凭简介无法判断。"
+    },
+    {
+      "rank": 2,
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars": "308,707",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "readmeExcerpt": "Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. Table of Contents - How it works - Commercial Services - Getting Started - Claude Code - Antigravity - Codex App - Codex CLI - Cursor - Devin CLI - Factory Droid - Gemini CLI - GitHub Copilot CLI - Grok Build CLI - Kimi Code - OpenCode - Pi - Qwen Code - Hermes Agent - Muse - The Basic Workflow - When Something Goes Wrong - Community - What's Inside - Philosophy - Contributing - Updating - License - Visual companion telemetry How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aver",
+      "summary": "给编码代理装上一套完整开发方法论：先问清目标，再拆规格、写计划，最后才动手。",
+      "problem": "它不直接写代码，而是用可组合技能约束代理的行为顺序，覆盖 Claude Code、Codex、Cursor 等一长串工具。真正有意思的是把“先想清楚再写”做成了代理必须遵守的流程，而不是靠人自觉。"
+    },
+    {
+      "rank": 3,
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "stars": "95,657",
+      "language": "Rust",
+      "topics": [
+        "agent-skills",
+        "ai",
+        "anti-slop",
+        "design",
+        "slop"
+      ],
+      "readmeExcerpt": "Impeccable The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships. From your project root: Reload your coding tool, then run `/impeccable init` in your agent (`$impeccable init` on Codex). Works with Claude Code, Cursor, Codex CLI, GitHub Copilot, Devin, Replit Agent, Gemini CLI, Grok Build, OpenCode, Google Antigravity, Kiro, Trae, Rovo Dev, Qoder, Mistral Vibe, Pi, Hermes Agent, DeepSeek Harness, and Veto. Full docs live at impeccable.style/docs. | Without Impeccable | With Impeccable | Same model (Fable 5.1), same brief: a fourteen-room family guesthouse on the Ligurian coast. Without Impeccable, it builds the tasteful default: cream page, thin serif, italic accent, pill buttons. With it, the page is built around one picture: the house at night, seen from the water. For a full project, see the Neo Mirai case study: a conference site taken from mockup to shipped page. Why Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up a",
+      "summary": "给编码代理一套设计词汇：polish、bolder、critique、audit，专门拦截 AI 味的界面。",
+      "problem": "README 举的例子很具体：同样的模型和需求，没有它就会产出奶油色页面、细衬线、胶囊按钮这类默认审美。它把设计评审变成代理可调用的命令，但效果依赖代理是否真的执行这些技能。"
+    },
+    {
+      "rank": 4,
+      "name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "stars": "6,101",
+      "language": "TypeScript",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension"
+      ],
+      "readmeExcerpt": "ThinkRail ThinkRail is the agentic IDE that gets better every time you use it — learning your project through living specs today, and building its own capabilities tomorrow. We built a rich interface around the `pi` coding agent, isolated work into separate workspaces, and gave the agent durable project knowledge through living specs and reusable skills. Next, we're adding full extension support, so ThinkRail can create the tools it needs based on how you actually work. **Website:** thinkrail.ai · **Blog:** thinkrail.ai/blog · **Discord:** thinkrail.ai/discord ⭐ If you find ThinkRail useful, give it a star — it helps others discover it. *A `pi` session and the change it made, scoped to an isolated git-worktree workspace.* What you get - **Isolated workspaces.** Open any git repo as a project and cut workspaces from it as `git worktree`s, each with its own branch and working directory. Agents work in parallel without touching your checkout; merge the good branch, delete the rest. You can also attach existing worktrees or explicitly work in the project folder itself. Finished and dormant workspaces settle onto a per-project shelf on their own — when their pull request merges or close",
+      "summary": "JetBrains 出的轻量代理 IDE，围绕 pi 编码代理做隔离工作区和活规格。",
+      "problem": "每个工作区是独立的 git worktree，代理可以并行干活、互不碰主检出，合并好的分支、删掉其余。思路务实，但扩展系统还在“下一步”阶段，现在更像一个围绕 pi 的精致外壳。"
+    },
+    {
+      "rank": 5,
+      "name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "stars": "7,595",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "expo",
+        "grok"
+      ],
+      "readmeExcerpt": "OpenMausBot **The open-source Grok Bot alternative: your own team of AI bots, in a chat app.** **openmausbot.com** &nbsp;·&nbsp; Download &nbsp;·&nbsp; Open source Grok Bot alternative, compared OpenMausBot is an open-source Grok Bot alternative: an independent project inspired by **Grok Bot**, and the open-source alternative to **Meta Muse**, **OpenAI dots** and **Cue by Manus** — bring-your-own-agent, local-first, on the models you already have. Also known as **MausBot**; formerly **OpenGrokBot**. Not affiliated with xAI, Meta, OpenAI or Manus. Every bot in the sidebar is a real agent — Claude or Codex running locally under the hood — with its own personality, its own model, its own cloud computer, and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters. &nbsp; &nbsp; &nbsp; latest release &nbsp;·&nbsp; macOS: Apple silicon & Intel · signed & notarized .dmg &nbsp;·&nbsp; Windows: x64 installer &nbsp;·&nbsp; Ubuntu 24.04 x64: .deb or AppImage beta &nbsp;·&nbsp; all releases Powered by boat.dev > ⚠️ **No affiliation with any cryptocurrency.** OpenMausBot has no token. Any coin using the OpenMausBot, Maus, or SupaMaus name is not created, endors",
+      "summary": "开源版 Grok Bot 替代品：聊天应用里每个联系人都是一个带虚拟机的真实代理。",
+      "problem": "每个 bot 背后是本地跑的 Claude 或 Codex，有自己的性格、模型、云电脑和连接应用，像联系人一样对话、旁观、审批。本地优先、自带代理是卖点，但“云电脑”和本地执行的边界需要自己厘清。"
+    },
+    {
+      "rank": 6,
+      "name": "nightly-labs/openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "stars": "3,959",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "readmeExcerpt": "OpenBot OpenBot is a local-first desktop workspace for persistent AI teammates. It supports the local Codex App Server and Claude Code, plus Grok CLI, OpenCode, Gemini, Cursor CLI, and Cline CLI through ACP. It gives every agent its own workspace and conversation, and provides local queues, file transfers, an embedded browser, and agent-to-agent messaging in one desktop app. > [!WARNING] > OpenBot is a development preview. Agents currently run with `danger-full-access` and > `approvalPolicy: never`. They can read and modify files, run commands, use the network, and control > the embedded browser without per-action confirmations after the explicit first-launch consent. > Run only agents and tasks you trust, keep backups, and review Security before use. What works - Prompt-driven agent creation and editing on desktop and mobile, with editable instructions, avatar, and section review before saving. - Persistent agents backed by independent Codex, Claude, Grok, OpenCode, Gemini, Cursor, or Cline sessions and local workspaces. - Custom OpenAI-compatible endpoints and custom ACP agents, with detection of local model servers (Ollama, LM Studio) and installed agents. - Per-agent context mo",
+      "summary": "本地优先的桌面工作区，给每个 AI 队友独立空间、任务队列和浏览器。",
+      "problem": "支持 Codex、Claude、Grok、OpenCode 等多套代理，带代理间消息和嵌入式浏览器。README 自己警告：代理以完全访问权限运行、不逐动作确认，只适合跑你信任的任务，这是开发预览阶段的真实代价。"
+    },
+    {
+      "rank": 7,
+      "name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "description": "No description",
+      "stars": "12,330",
+      "language": "Unknown",
+      "topics": [],
+      "readmeExcerpt": "AI Design Skills A growing collection of design skills for AI coding tools — Claude Code, Cursor, Codex, Windsurf, and anything else that reads a markdown rules file. Each skill is a self-contained folder. Install the ones you need. Skills | Skill | What it does | | `landing-page-design` | Builds a landing page from scratch — intake questions, page structure, conversion copy, plus a full visual system (type, spacing, radius, motion) | More on the way. Upgrading an existing site instead of building new? That one lives in its own repo since it predates this collection. Install Pick a skill from the table above, then swap ` ` below for its folder name. Claude Code Then just ask, in plain language, for what that skill covers. Cursor Or paste the file into **Settings → Rules for AI**. Codex / Windsurf / other Copy the skill's `SKILL.md` into whatever your tool uses for project rules: | Tool | Path | | Codex | `AGENTS.md` | | Windsurf | `.windsurfrules` | | Cline | `.clinerules` | | Generic | paste into your system prompt | Claude.ai (no terminal) Download the skill's `SKILL.md` and upload it to a Project, or attach it to a chat and say *\"follow this.\"* Make it yours Every skill's design",
+      "summary": "面向 AI 编码工具的设计技能合集，每个技能一个自包含文件夹，按需安装。",
+      "problem": "目前主打落地页设计：从需求提问、页面结构、转化文案到字体间距圆角动效一整套视觉系统。形式是 markdown 规则文件，Claude Code、Cursor、Codex 都能读，但技能数量还少，覆盖面有限。"
+    },
+    {
+      "rank": 8,
+      "name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "stars": "104,948",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence",
+        "chromadb",
+        "claude",
+        "claude-agent-sdk"
+      ],
+      "readmeExcerpt": "&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 🇨🇳 中文 • 🇹🇼 繁體中文 • 🇯🇵 日本語 • 🇵🇹 Português • 🇧🇷 Português • 🇰🇷 한국어 • 🇪🇸 Español • 🇩🇪 Deutsch • 🇫🇷 Français • 🇮🇱 עברית • 🇸🇦 العربية • 🇷🇺 Русский • 🇵🇱 Polski • 🇨🇿 Čeština • 🇳🇱 Nederlands • 🇹🇷 Türkçe • 🇺🇦 Українська • 🇻🇳 Tiếng Việt • 🇵🇭 Tagalog • 🇮🇩 Indonesia • 🇹🇭 ไทย • 🇮🇳 हिन्दी • 🇧🇩 বাংলা • 🇵🇰 اردو • 🇷🇴 Română • 🇸🇪 Svenska • 🇮🇹 Italiano • 🇬🇷 Ελληνικά • 🇭🇺 Magyar • 🇫🇮 Suomi • 🇩🇰 Dansk • 🇳🇴 Norsk Persistent memory compression system built for Claude Code . Quick Start • How It Works • Search Tools • Documentation • Configuration • Troubleshooting • License Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect. Quick Start Install claude-mem for Grok Bot: Grok Bot has no host hooks, so we watch the chat log files. Default is CMEM Pro, the hosted memory. Local observer is opt-in: `--provider host`. Installing this plugin does not install Cursor. **Awarene",
+      "summary": "给编码代理做跨会话记忆：自动捕获操作、压缩成摘要，下次会话再注入。",
+      "problem": "解决的是代理关掉就失忆的老问题，支持 Claude Code、Codex、Gemini 等一长串工具。默认走托管记忆服务，本地观察者需要显式开启，隐私敏感的场景要留意这个默认值。"
+    },
+    {
+      "rank": 9,
+      "name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "stars": "8,240",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "readmeExcerpt": "OpenBot **The AI assistant your company can actually own.** Same shape as ChatGPT, Claude or Grok, with one difference that matters: it runs on your infrastructure and you can change anything about it. Any agent stack, through AG-UI. Each coworker gets a real browser with its own logins, its own files, and only the tools you grant. Every action decided before it happens and recorded after. **Talk to an engineer** · **Have us build it with you** · **copilotkit.ai/openbot** · **Quick start** · **Docs** https://github.com/user-attachments/assets/535ef7ee-1631-4a69-b839-564c56cf90b4 Bring any AG-UI agent, written on a framework or by hand, and it arrives as a coworker with a channel of its own. Watch it work on its own screen, take the wheel when it reaches something it should not do alone, then hand it back. It answers with components rather than only prose, and the whole thing runs on your own machine. > **A template, not a product.** OpenBot is meant to be cloned and made your own. There is no hosted version to sign up for, and nothing here is published as a package to depend on: every workspace in this repository is private. You take the repository, replace the example tenant packa",
+      "summary": "CopilotKit 的开源 AI 同事模板：每个同事一台电脑，动作先决策后记录。",
+      "problem": "通过 AG-UI 接入任意代理栈，每个同事有独立浏览器、登录态、文件和授权工具，回答用组件而非纯文本。定位是模板而非产品，没有托管版，需要克隆下来改成自己的租户包。"
+    },
+    {
+      "rank": 10,
+      "name": "togg53192-cmd/jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "stars": "9,295",
+      "language": "Unknown",
+      "topics": [],
+      "readmeExcerpt": "Jailbreaks **A curated collection of system prompts, persona locks, workspace policies, and agent operating specifications for frontier, open-weight, and free stealth models.** About A working collection of **32 prompts targeting 26+ models**, including complete system prompts, persona definitions, workspace policies, `AGENTS.md` files, configuration blocks, and Ollama Modelfiles. Every file is intended to be complete and paste-ready. No summaries. No partial excerpts. The collection covers: - Free stealth models available through OpenCode Zen - Open-weight families including GLM, DeepSeek, Kimi, Qwen, Gemma, and GPT-OSS - Closed frontier models including Claude, Gemini, Grok, and Mistral - Coding-agent and workspace instruction formats - Ollama Modelfiles and harness-specific configuration **New here?** Start with the collection or jump directly to how to use. > [!WARNING] > **Research and educational purposes only.** > > This repository documents how instruction hierarchies, persona framing, prompt conflicts, and policy overrides can affect model behavior. These techniques are also useful to researchers and developers studying how to make AI systems more resistant to prompt injec",
+      "summary": "32 条面向 26+ 模型的系统提示与人格锁定集合，自称完整可粘贴。",
+      "problem": "覆盖闭源前沿模型、开源权重家族和编码代理工作区格式，README 声明仅用于研究指令层级和策略覆盖如何影响模型行为。这类仓库的实用性和风险都高，使用前需要清楚自己在测什么。"
+    }
+  ],
+  "closing": "今天最值得看的是 superpowers 和 impeccable 代表的转向：不再比谁生成得快，而是比谁能让代理先想清楚、按规矩来。记忆和隔离工作区是配套基础设施，缺了它们，流程约束很难落地。"
+}
