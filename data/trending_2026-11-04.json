@@ -1,0 +1,162 @@
+[
+  {
+    "rank": 1,
+    "name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+    "stars": "112,097",
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-memory",
+      "anthropic",
+      "artificial-intelligence",
+      "chromadb",
+      "claude",
+      "claude-agent-sdk"
+    ],
+    "readmeExcerpt": "&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 🇨🇳 中文 • 🇹🇼 繁體中文 • 🇯🇵 日本語 • 🇵🇹 Português • 🇧🇷 Português • 🇰🇷 한국어 • 🇪🇸 Español • 🇩🇪 Deutsch • 🇫🇷 Français • 🇮🇱 עברית • 🇸🇦 العربية • 🇷🇺 Русский • 🇵🇱 Polski • 🇨🇿 Čeština • 🇳🇱 Nederlands • 🇹🇷 Türkçe • 🇺🇦 Українська • 🇻🇳 Tiếng Việt • 🇵🇭 Tagalog • 🇮🇩 Indonesia • 🇹🇭 ไทย • 🇮🇳 हिन्दी • 🇧🇩 বাংলা • 🇵🇰 اردو • 🇷🇴 Română • 🇸🇪 Svenska • 🇮🇹 Italiano • 🇬🇷 Ελληνικά • 🇭🇺 Magyar • 🇫🇮 Suomi • 🇩🇰 Dansk • 🇳🇴 Norsk Persistent memory compression system built for Claude Code . Quick Start • How It Works • Search Tools • Documentation • Configuration • Troubleshooting • License Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect. Quick Start Install claude-mem for Grok Bot: Grok Bot has no host hooks, so we watch the chat log files. Default is CMEM Pro, the hosted memory. Local observer is opt-in: `--provider host`. Installing this plugin does not install Cursor. **Awarene"
+  },
+  {
+    "rank": 2,
+    "name": "vercel-labs/agent-desktop",
+    "url": "https://github.com/vercel-labs/agent-desktop",
+    "description": "Computer use CLI for AI agents",
+    "stars": "13,167",
+    "language": "Rust",
+    "topics": [
+      "accessibility",
+      "accessibility-api",
+      "ai-agents",
+      "automation",
+      "cli",
+      "computer-use",
+      "computer-use-agent",
+      "computer-use-agents"
+    ],
+    "readmeExcerpt": "agent-desktop Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree. agent-desktop gives an AI agent computer use without screenshots or pixel matching. It reads the accessibility tree of a desktop app and returns it as JSON, with a ref for every element the agent can act on. The agent clicks or types on a ref, reads the UI again to check the result, and repeats. The loop lives in your agent; agent-desktop has no model inside. It ships as a CLI and a C library. Snapshots, clipboard reads, screenshots, command output, and debug artifacts can contain private desktop content. Keep them out of public logs and uploads. Install Bun, Yarn and pnpm can install the same package. It includes native binaries and platform helpers for x64 and ARM64. For direct execution without a JavaScript launcher, download the matching native archive from GitHub Releases and keep its helper beside the executable. On macOS and Linux, Homebrew also works: `brew install agent-desktop`. There is no official Scoop package yet. The repository no longer maintains a custom Homebrew tap or Scoop bucket. Release archives and building from source are cov"
+  },
+  {
+    "rank": 3,
+    "name": "max-sixty/worktrunk",
+    "url": "https://github.com/max-sixty/worktrunk",
+    "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+    "stars": "10,596",
+    "language": "Rust",
+    "topics": [
+      "agents",
+      "claude-code",
+      "codex",
+      "developer-tools",
+      "git",
+      "worktrees"
+    ],
+    "readmeExcerpt": "&nbsp;&nbsp;Worktrunk > **November 2026**: Worktrunk was released at the start of the year, and has quickly become the most popular git worktree manager. It's built with love (there's no slop!). Please let me know any frictions at all; I'm intensely focused on continuing to make Worktrunk excellent, and the biggest help is folks posting problems they perceive. Worktrunk is a CLI for git worktree management, designed for running AI agents in parallel. Worktrunk's three core commands make worktrees as easy as branches. Plus, Worktrunk has a bunch of quality-of-life features to simplify working with many parallel changes, including hooks to automate local workflows & copy-on-write build caches. A quick demo: > ### 📚 Full documentation at worktrunk.dev 📚 Context: git worktrees AI agents like Claude Code and Codex can handle longer tasks without supervision, such that it's possible to manage 5-10+ in parallel. Git's native worktree feature gives each agent its own working directory, so they don't step on each other's changes. But the git worktree UX is clunky. Even a task as small as starting a new worktree requires typing the branch name three times: `git worktree add -b feat ../repo"
+  },
+  {
+    "rank": 4,
+    "name": "JustVugg/colibri",
+    "url": "https://github.com/JustVugg/colibri",
+    "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
+    "stars": "47,342",
+    "language": "C",
+    "topics": [],
+    "readmeExcerpt": "Website · Discord · English · 简体中文 · 繁體中文 · Italiano · 日本語 · Bahasa Indonesia · Português (Brasil) **Tiny engine, immense model.** colibri runs very large open models on the machine you already have. A mixture-of-experts model of hundreds of billions of parameters uses only a small part of itself for each token, so colibri keeps that part in RAM and reads the rest, the experts, from the disk when the model asks for them. Pure C, one file per model family, no GPU required. Thirteen engines run today. Ten are for language models: **GLM-5.2/5.3** (which also runs **Mistral-Large-4**), **GLM-5.3-Flash**, **Inkling**, **Kimi K3**, **DeepSeek V4 Flash**, **DeepSeek V4.1 Flash**, **MiMo-V2.6 Flash** (and Pro), **Qwen3.8-Flash-Next**, **Qwen3.6** (which also runs Qwen3-Coder, the dense Qwen3.8-27B, **Flint**, **Muse Spark Open** and **LFM3-VL**) and **OLMoE**. One draws pictures: **Qwen-Image-2.1**. Two answer decisions: **Laya** and **GLiNER2.5-Decide**, with a third decision model, **Clef**, on the Qwen3.6 engine. The language models also run from the GGUF files already published, read as they are (GGUF), on the CPU, on any GPU through Vulkan and on NVIDIA cards through CUDA. Which one f"
+  },
+  {
+    "rank": 5,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "311,660",
+    "language": "Shell",
+    "topics": [],
+    "readmeExcerpt": "Skills For Real Engineers My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: Sign Up To The Newsletter Installation (30-second setup) A plugin updates itself. skills.sh copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. 1. Get the skills Claude Code Updates itself by default. Codex Updates itself at startup. GitHub Copilot (CLI and VS Code) Then, once, add to `~/.copilot/settings.json`: In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. Gemini CLI (manual updates) Re-run"
+  },
+  {
+    "rank": 6,
+    "name": "p-e-w/heretic",
+    "url": "https://github.com/p-e-w/heretic",
+    "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+    "stars": "38,914",
+    "language": "Python",
+    "topics": [
+      "abliteration",
+      "anti-censorship",
+      "anticensorship",
+      "censorship",
+      "censorship-resistance",
+      "llm",
+      "transformer"
+    ],
+    "readmeExcerpt": "Heretic Training-free language model modification **Remove censorship**, suppress slop, reduce sycophancy, and more. All in an afternoon, on your gaming PC. &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Modify any LLM that you can run on your hardware[^1] [^1]: Heretic supports on-the-fly 4-bit model quantization with bitsandbytes, which can reduce the amount of VRAM required to process a model to the same amount that is used to run a typical quantized version of it, at a slight accuracy cost. Set the `quantization` option to `bnb_4bit` to enable this. Heretic is a unique tool that lets you do what only corporations with access to massive computing power usually do: *Modify,* rather than merely run, language models. It does not perform expensive training; rather, it uses a collection of mathematical techniques to steer behavior based on contrasting example prompts and matching scorers. Heretic can, depending on the configuration: * **Suppress refusals/remove censorship** (this is the default action) * Reduce slop (`config.noslop.toml`) * Reduce humor (`config.nohumor.toml`) * Reduce sycophancy (`config.nosyco.toml`) * Alter emotional"
+  },
+  {
+    "rank": 7,
+    "name": "spotify/portal-ai-plugins",
+    "url": "https://github.com/spotify/portal-ai-plugins",
+    "description": "No description",
+    "stars": "3,082",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "Spotify Portal AI Plugins Bring Spotify Portal into Claude Code, Codex, Cursor, and pi. This plugin provides focused workflows for the Portal CLI: set up authentication, search your software catalog, build service briefings, run diagnostics, and invoke Portal actions. Highlights - Set up the Portal CLI for your current coding-agent environment. - Run read-only diagnostics to verify plugin, CLI, authentication, and action readiness. - Search the software catalog and technical documentation using natural language queries. - Generate concise service briefings with available ownership, health, incident, and documentation details. - Discover and safely invoke Portal actions with built-in help, dry-run, and confirmation safeguards. - Create, run, check, and troubleshoot Fleetshift shifts, open PRs from completed runs, and stop a run on request. The marketplace also ships **shunt** (Claude Code only for now): a plugin that routes I/O-heavy agent work — bulk file reads and boilerplate generation — to AiKA modes running cheaper worker models, via the Portal CLI actions registry. See `plugins/shunt/README.md`. Installation Claude Code Start a new session and run: Codex Open `/plugins`, insta"
+  },
+  {
+    "rank": 8,
+    "name": "floci-io/floci",
+    "url": "https://github.com/floci-io/floci",
+    "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+    "stars": "28,943",
+    "language": "Java",
+    "topics": [
+      "aws",
+      "aws-emulation",
+      "devops",
+      "docker",
+      "ec2",
+      "ecs",
+      "localstack",
+      "s3"
+    ],
+    "readmeExcerpt": "Any Cloud. Locally. Light, fluffy, and always free No account. No auth token. No feature gates. Just docker compose up . Quick Start · Features · Services · SDKs · Testcontainers · Migration · Docs What is Floci? Floci is a free, open-source local AWS emulator for development, testing, and CI. It gives you AWS-shaped services on your machine without requiring a cloud account, an auth token, or paid feature gates. Point your AWS SDK, CLI, Terraform, CDK, OpenTofu, or test suite at `http://localhost:4566` and keep your existing workflows. Already using LocalStack? Floci is a drop-in replacement: swap the image and keep going. See Migrating from LocalStack. Floci is the AWS member of the Floci emulator family, named after floccus, the cloud formation that looks like popcorn. | Emulator | Cloud | Port | | **floci** | **AWS** | **4566** | | floci-az | Azure | 4577 | | floci-gcp | GCP | 4588 | | floci-oci | OCI | 4599 | Quick Start The fastest way to run Floci is with the official CLI No Docker? Each release also ships a standalone `floci-aws` binary for Linux, macOS and Windows; see Native binary. Export the AWS environment variables: Use your existing AWS tools normally: Watch it run T"
+  },
+  {
+    "rank": 9,
+    "name": "Usagi-org/ai-goofish-monitor",
+    "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+    "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+    "stars": "16,668",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-assistant",
+      "ai-tools",
+      "automation",
+      "gemini",
+      "goofish",
+      "open-source",
+      "openai"
+    ],
+    "readmeExcerpt": "闲鱼智能监控系统 [中文] ｜ English 基于 Playwright 和 AI 的闲鱼多任务实时监控，提供完整的 Web 管理界面。 核心特性 - **Web 可视化管理**: 任务管理、账号管理、AI 标准编辑、运行日志、结果浏览 - **AI 驱动**: 自然语言创建任务，多模态模型深度分析商品 - **多任务并发**: 独立配置关键词、价格、筛选条件和 AI Prompt - **高级筛选**: 包邮、新发布时间范围、省/市/区三级区域筛选 - **即时通知**: 支持 ntfy.sh、企业微信、Bark、Telegram、Webhook等多渠道 - **定时调度**: 支持 Cron 配置周期性任务 - **账号与代理轮换**: 多账号管理、任务绑定账号、代理池轮换与失败重试 - **Docker 部署**: 一键容器化部署 截图 🐳 Docker 部署（推荐） 如果镜像无法访问或下载速度慢，可尝试使用加速： - 默认 Web UI 地址：`http://127.0.0.1:8000` - Docker 镜像已内置 Chromium，无需宿主机额外安装浏览器。 - 官方镜像地址：`ghcr.io/usagi-org/ai-goofish:latest` - 更新镜像：`docker compose pull && docker compose up -d` - 如果你修改了 `.env` 中的 `SERVER_PORT`，请同步更新 `docker-compose.yaml` 里的端口映射。 - `docker-compose.yaml` 默认会把 SQLite 主库挂载到 `./data:/app/data`，数据库文件默认为 `data/app.sqlite3` - 目前默认持久化这些目录： - `data/` SQLite 主存储（任务、结果、价格历史） - `state/` 登录状态 cookie 文件 - `prompts/` 任务提示词 - `logs/` 运行日志 - `images/` 商品图片与任务临时图片目录 - `config.json`、`jsonl/`、`price_history/` 首次升级到 SQLite 时用于兼容导入的旧数据源 数据存储与迁移 - 当前在线主存储为 SQLite，默认路径 `data/app.sqlite3` - 可通过环境变量 `APP_DATABASE_FILE` 自定义数据库路径；Docker 默认设置为 `/app/data/app.sqlite3` - 应用启动时会自动建库建表，并尝试从旧的 `config.json`、`jsonl/`、`price_history/` 导入一次历史数据 - `state/`、`prompts/`、`logs/`、`images/` 仍然是文件系统"
+  },
+  {
+    "rank": 10,
+    "name": "anomalyco/hex",
+    "url": "https://github.com/anomalyco/hex",
+    "description": "Local voice dictation for mac, windows and linux",
+    "stars": "4,688",
+    "language": "Rust",
+    "topics": [
+      "dictation",
+      "linux",
+      "local-first",
+      "macos",
+      "rust",
+      "speech-recognition",
+      "speech-to-text",
+      "voice-control"
+    ],
+    "readmeExcerpt": "Hex Hex is local voice dictation for Mac, Windows and Linux. Hold a key, speak, and it pastes. How it works - hold the shortcut, speak, then let go - Hex transcribes on your device and pastes into whatever app you're in - the first run downloads a speech model; after that nothing leaves your machine - experimental features live in Labs, at the bottom of the sidebar Downloads Stable is the current release. Dev is the newest build of `dev` and updates itself from the dev channel. | Platform | Stable | Dev | | macOS (Apple silicon) | DMG | DMG | | Windows x64 | Installer | Installer | | Windows ARM64 | Installer | Installer | | Linux x86_64 | Executable | Executable | | Linux x86_64 (Debian, Ubuntu) | .deb | .deb | | Linux x86_64 (Fedora, openSUSE) | .rpm | .rpm | | Linux ARM64 | Executable | Executable | | Linux ARM64 (Debian, Ubuntu) | .deb | .deb | | Linux ARM64 (Fedora, openSUSE) | .rpm | .rpm | Or install with: - Homebrew: `brew install --cask anomalyco/tap/hex` - AUR: `yay -S hex-bin` - install script (Linux): `curl -fsSL https://anoma.ly/hex/install-linux.sh | sh` - Nix: `nix profile add github:anomalyco/hex` More docs are in `docs/`. Contributing We don't take pull requests. O"
+  }
+]
