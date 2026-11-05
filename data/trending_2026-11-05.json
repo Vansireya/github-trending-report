@@ -1,0 +1,162 @@
+[
+  {
+    "rank": 1,
+    "name": "NVIDIA/auto-ontology",
+    "url": "https://github.com/NVIDIA/auto-ontology",
+    "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+    "stars": "5,503",
+    "language": "Python",
+    "topics": [],
+    "readmeExcerpt": "Auto Ontology Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto Ontology is an open library that builds that layer from enterprise metadata, reconciles definitions across systems, and exposes it to any agent harness through MCP, CLI, and API. It complements the semantic models customers already own. It enables developers to: - Discover: generate enterprise ontologies from metadata; connect existing ontologies and semantic models; build AI-ready knowledge graphs. - Ground: give agents trusted business meaning for metrics, entities, and relationships; reconcile inconsistent definitions across systems. - Validate: check generated queries against certified definitions and lineage; return provenance with every answer. - Expose: serve context to any agent harness through MCP, CLI, and API. Learn: fold certified corrections and usage back into the ontology, so shared context improves with every question. Benchmark"
+  },
+  {
+    "rank": 2,
+    "name": "max-sixty/worktrunk",
+    "url": "https://github.com/max-sixty/worktrunk",
+    "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+    "stars": "11,141",
+    "language": "Rust",
+    "topics": [
+      "agents",
+      "claude-code",
+      "codex",
+      "developer-tools",
+      "git",
+      "worktrees"
+    ],
+    "readmeExcerpt": "&nbsp;&nbsp;Worktrunk > **November 2026**: Worktrunk was released at the start of the year, and has quickly become the most popular git worktree manager. It's built with love (there's no slop!). Please let me know any frictions at all; I'm intensely focused on continuing to make Worktrunk excellent, and the biggest help is folks posting problems they perceive. Worktrunk is a CLI for git worktree management, designed for running AI agents in parallel. Worktrunk's three core commands make worktrees as easy as branches. Plus, Worktrunk has a bunch of quality-of-life features to simplify working with many parallel changes, including hooks to automate local workflows & copy-on-write build caches. A quick demo: > ### 📚 Full documentation at worktrunk.dev 📚 Context: git worktrees AI agents like Claude Code and Codex can handle longer tasks without supervision, such that it's possible to manage 5-10+ in parallel. Git's native worktree feature gives each agent its own working directory, so they don't step on each other's changes. But the git worktree UX is clunky. Even a task as small as starting a new worktree requires typing the branch name three times: `git worktree add -b feat ../repo"
+  },
+  {
+    "rank": 3,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "313,594",
+    "language": "Shell",
+    "topics": [],
+    "readmeExcerpt": "Skills For Real Engineers My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: Sign Up To The Newsletter Installation (30-second setup) A plugin updates itself. skills.sh copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. 1. Get the skills Claude Code Updates itself by default. Codex Updates itself at startup. GitHub Copilot (CLI and VS Code) Then, once, add to `~/.copilot/settings.json`: In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. Gemini CLI (manual updates) Re-run"
+  },
+  {
+    "rank": 4,
+    "name": "floci-io/floci",
+    "url": "https://github.com/floci-io/floci",
+    "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+    "stars": "29,753",
+    "language": "Java",
+    "topics": [
+      "aws",
+      "aws-emulation",
+      "devops",
+      "docker",
+      "ec2",
+      "ecs",
+      "localstack",
+      "s3"
+    ],
+    "readmeExcerpt": "Any Cloud. Locally. Light, fluffy, and always free No account. No auth token. No feature gates. Just docker compose up . Quick Start · Features · Services · SDKs · Testcontainers · Migration · Docs What is Floci? Floci is a free, open-source local AWS emulator for development, testing, and CI. It gives you AWS-shaped services on your machine without requiring a cloud account, an auth token, or paid feature gates. Point your AWS SDK, CLI, Terraform, CDK, OpenTofu, or test suite at `http://localhost:4566` and keep your existing workflows. Already using LocalStack? Floci is a drop-in replacement: swap the image and keep going. See Migrating from LocalStack. Floci is the AWS member of the Floci emulator family, named after floccus, the cloud formation that looks like popcorn. | Emulator | Cloud | Port | | **floci** | **AWS** | **4566** | | floci-az | Azure | 4577 | | floci-gcp | GCP | 4588 | | floci-oci | OCI | 4599 | Quick Start The fastest way to run Floci is with the official CLI No Docker? Each release also ships a standalone `floci-aws` binary for Linux, macOS and Windows; see Native binary. Export the AWS environment variables: Use your existing AWS tools normally: Watch it run T"
+  },
+  {
+    "rank": 5,
+    "name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+    "stars": "113,010",
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-memory",
+      "anthropic",
+      "artificial-intelligence",
+      "chromadb",
+      "claude",
+      "claude-agent-sdk"
+    ],
+    "readmeExcerpt": "&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 🇨🇳 中文 • 🇹🇼 繁體中文 • 🇯🇵 日本語 • 🇵🇹 Português • 🇧🇷 Português • 🇰🇷 한국어 • 🇪🇸 Español • 🇩🇪 Deutsch • 🇫🇷 Français • 🇮🇱 עברית • 🇸🇦 العربية • 🇷🇺 Русский • 🇵🇱 Polski • 🇨🇿 Čeština • 🇳🇱 Nederlands • 🇹🇷 Türkçe • 🇺🇦 Українська • 🇻🇳 Tiếng Việt • 🇵🇭 Tagalog • 🇮🇩 Indonesia • 🇹🇭 ไทย • 🇮🇳 हिन्दी • 🇧🇩 বাংলা • 🇵🇰 اردو • 🇷🇴 Română • 🇸🇪 Svenska • 🇮🇹 Italiano • 🇬🇷 Ελληνικά • 🇭🇺 Magyar • 🇫🇮 Suomi • 🇩🇰 Dansk • 🇳🇴 Norsk Persistent memory compression system built for Claude Code . Quick Start • How It Works • Search Tools • Documentation • Configuration • Troubleshooting • License Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect. Quick Start Install claude-mem for Grok Bot: Grok Bot has no host hooks, so we watch the chat log files. Default is CMEM Pro, the hosted memory. Local observer is opt-in: `--provider host`. Installing this plugin does not install Cursor. **Awarene"
+  },
+  {
+    "rank": 6,
+    "name": "vercel-labs/agent-desktop",
+    "url": "https://github.com/vercel-labs/agent-desktop",
+    "description": "Computer use CLI for AI agents",
+    "stars": "15,497",
+    "language": "Rust",
+    "topics": [
+      "accessibility",
+      "accessibility-api",
+      "ai-agents",
+      "automation",
+      "cli",
+      "computer-use",
+      "computer-use-agent",
+      "computer-use-agents"
+    ],
+    "readmeExcerpt": "agent-desktop Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree. agent-desktop gives an AI agent computer use without screenshots or pixel matching. It reads the accessibility tree of a desktop app and returns it as JSON, with a ref for every element the agent can act on. The agent clicks or types on a ref, reads the UI again to check the result, and repeats. The loop lives in your agent; agent-desktop has no model inside. It ships as a CLI and a C library. Snapshots, clipboard reads, screenshots, command output, and debug artifacts can contain private desktop content. Keep them out of public logs and uploads. Install Bun, Yarn and pnpm can install the same package. It includes native binaries and platform helpers for x64 and ARM64. For direct execution without a JavaScript launcher, download the matching native archive from GitHub Releases and keep its helper beside the executable. On macOS and Linux, Homebrew also works: `brew install agent-desktop`. There is no official Scoop package yet. The repository no longer maintains a custom Homebrew tap or Scoop bucket. Release archives and building from source are cov"
+  },
+  {
+    "rank": 7,
+    "name": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "💫 Toolkit to help you get started with SDD or any other process!",
+    "stars": "147,422",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "copilot",
+      "development",
+      "engineering",
+      "prd",
+      "spec",
+      "spec-driven"
+    ],
+    "readmeExcerpt": "🌱 Spec Kit Build with a spec, fix a bug, or assess an idea — with your coding agent. English · 简体中文 · 日本語 · 한국어 Spec Kit is an open source toolkit that gives AI coding agents structured processes, reusable templates, and documented outcomes. Start with a ready-made process, customize it, or bring your own. Choose your process | What you need | Process | Outcome | | Build a feature or application | Spec-Driven Development | A specification carried through planning, implementation, and convergence | | Diagnose and repair broken behavior | Bug fixing | An assessed cause, scoped fix, and recorded verification | | Decide whether an idea deserves investment | Idea assessment | An evidence-backed go, clarify, or stop decision | | Adopt or create a different process | Your own process | A process adapted or assembled from reusable primitives | These are independent entry points, not mandatory phases. SDD ships in core; bug fixing and assessment are bundled extensions you install when needed, and the primitives below let you adopt or create other processes. Capabilities Spec Kit combines ready-to-use processes with composable mechanisms: | Capability | Spec Kit mechanism | | Connect to or "
+  },
+  {
+    "rank": 8,
+    "name": "The-PR-Agent/pr-agent",
+    "url": "https://github.com/The-PR-Agent/pr-agent",
+    "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+    "stars": "14,865",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "anthropic",
+      "code-review",
+      "coding-assistant",
+      "devtools",
+      "ollama",
+      "openai",
+      "pull-request"
+    ],
+    "readmeExcerpt": "The Original Open-Source PR Reviewer This repository contains the open-source PR Agent Project. It is not the Qodo offering for open-source projects. PR-Agent is an open-source, AI-powered code review agent and a community-maintained legacy project of Qodo. It is distinct from Qodo's primary AI code review offering, which provides a feature-rich, context-aware experience. Qodo offers a free version for open-source projects and integrates seamlessly with GitHub, GitLab, Bitbucket, and Azure DevOps for high-quality automated reviews. Sponsors PR-Agent is a community-maintained open-source project, with its ongoing development supported by our sponsors. If you'd like to support the project, consider becoming a sponsor. 🥇 Gold Sponsor Free version of Qodo for open-source projects Table of Contents - Getting Started - Why Use PR-Agent? - Features - See It in Action - How It Works - Data Privacy - Contributing Getting Started > [!NOTE] > **Docker Hub namespace migration.** Releases `0.34.2` and later are published under `pragent/pr-agent`. Older releases (up to and including `v0.31`) remain available at the legacy `codiumai/pr-agent` namespace as a frozen archive — no new images are pus"
+  },
+  {
+    "rank": 9,
+    "name": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+    "stars": "139,184",
+    "language": "Python",
+    "topics": [
+      "ai-video-generator",
+      "content-creation",
+      "ffmpeg",
+      "instagram-reels",
+      "llm",
+      "python",
+      "short-video",
+      "subtitles"
+    ],
+    "readmeExcerpt": "MoneyPrinterTurbo 💸 一站式 AI 短视频生成工具 只需提供视频 主题 或 关键词 ，即可自动生成视频脚本、匹配素材、生成字幕和背景音乐，并合成高清短视频。 简体中文 | English | 日本語 | 版本发布 | 问题反馈 界面预览 🖥️ WebUI API 特别感谢 ❤️ 感谢 Kimi 赞助本项目！Kimi K3.1 Pro 是 Moonshot AI 迄今能力最强的 3T 级开放权重模型，拥有原生视觉能力与 100 万 Token 上下文，在知识工作、推理和长周期任务中展现前沿性能。在 MoneyPrinterTurbo 中，K3.1 Pro 能直接驱动视频创作，不仅撰写视频文案，还会提炼素材搜索关键词、决定成片画面；对内容理解越准确，匹配到的素材就越贴题。 **MoneyPrinterTurbo 用户专属优惠：新用户通过专属链接注册，首次成功充值可获充值金额 10% 的 API 额度。活动截至 2026 年 12 月 31 日。前往 Kimi 开放平台（中文站｜Global）体验 API。** 火山引擎 感谢字节火山引擎赞助本项目！火山方舟 Agent/Coding Plan 国模套餐 首购 9.9 ，支持 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、Doubao 等，注册免费领 2500w Token ，统一 API，适配编码与智能体开发。 立即前往 感谢 APIMart 赞助了本项目！APIMart 是专注 AI 图片/视频生成的低价 API 平台， GPT-Image-2 低至 &#36;0.006/张，1 美元可出图 160+ 张 。 图片、视频一套异步 API 通吃，换模型不改代码 ；提交任务拿 ID，通过轮询或回调获取结果，支持万张级批量生成。按量付费、无月费，通过 此注册链接 注册即可开用。 秘塔科技 MiniMax H3 视频生成 API｜秘塔科技 秘塔科技提供高性价比的 MiniMax H3 视频生成服务： 768P 仅 0.09 元/秒，2K 仅 0.15 元/秒 。支持原生 2K、音画同步，API 兼容 OpenAI 协议 ，同时支持 ComfyUI ，无需自行部署 GPU。 🎁 通过 MoneyPrinterTurbo专属链接注册 ，即可领取赠送额度及专属优惠。 Infistar.cc 无限星河 感谢 Infistar.cc 无限星河 赞助本项目！Infistar.cc 提供高性价比的大模型 API 服务：大模型低至 官方 0.1 折 ，AI 生图低至 ¥0.06/张 。 一个 API Key，覆盖文案、图片与视频创作 ，支持 GPT、Claude、Gemini、DeepSeek、通义千问、可灵等主流模型，无需分组。 全模型支持验真 ，价格透明，正规备案，人民币实时计费， 支持"
+  },
+  {
+    "rank": 10,
+    "name": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack",
+    "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+    "stars": "139,436",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "gstack gstack turns Claude Code (and other coding agents) into a virtual engineering team: a CEO who rethinks the product, an eng manager who locks architecture, a designer who catches AI slop, a reviewer who finds production bugs, a QA lead who opens a real browser, a security officer who runs OWASP + STRIDE audits, and a release engineer who ships the PR. All slash commands, all Markdown, all free, MIT license. I'm Garry Tan, President & CEO of Y Combinator. This is the open source software factory I use every day, and I'm sharing it because these tools should be available to everyone. The story, the productivity numbers and how I run ten sprints at once are in Why gstack. Fork it. Improve it. Make it yours. And if you want to hate on free open source software — you're welcome to, but I'd rather you just try it first. **Who this is for:** - **Founders and CEOs** — especially technical ones who still want to ship - **First-time Claude Code users** — structured roles instead of a blank prompt - **Tech leads and staff engineers** — rigorous review, QA, and release automation on every PR Quick start 1. Install gstack (two pastes, about 30 seconds of setup; see below). 2. Run `/office"
+  }
+]

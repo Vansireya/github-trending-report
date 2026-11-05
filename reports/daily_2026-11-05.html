@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月5日星期四</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-05">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月5日星期四</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>给 AI Agent 补上记忆、规范与桌面手脚</h1>
+        <p>今天榜单几乎被 Agent 工程化工具包场：从 NVIDIA 用本体层给 Agent 提供可信业务语义，到 claude-mem 把跨会话记忆压缩复用，再到 agent-desktop 让 Agent 直接读桌面无障碍树。最值得先看的是 auto-ontology 和 worktrunk——前者试图解决 Agent 回答“数字对不对”的根问题，后者把并行 Agent 的 Git worktree 操作压成三条命令。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="NVIDIA/auto-ontology" data-project-url="https://github.com/NVIDIA/auto-ontology" data-project-summary="从企业元数据自动生成本体，给 Agent 一套可查询、可溯源的数据语义层。" data-project-stars="5,503" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/NVIDIA/auto-ontology" target="_blank" rel="noopener noreferrer">NVIDIA/auto-ontology</a>
+        <span class="star-pill" aria-label="5,503 stars">★ 5,503</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/auto-ontology" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">从企业元数据自动生成本体，给 Agent 一套可查询、可溯源的数据语义层。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 NVIDIA/auto-ontology 的项目解读" aria-expanded="true" aria-controls="project-nvidia-auto-ontology">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nvidia-auto-ontology">
+    <p>Agent 能查库不代表查得对，指标定义在各系统间不一致时，快而错的答案毫无价值。它把元数据整理成本体，通过 MCP、CLI、API 暴露给任意 Agent 框架，并用认证定义校验生成查询、附带血缘。局限在于效果高度依赖企业元数据本身的质量。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="max-sixty/worktrunk" data-project-url="https://github.com/max-sixty/worktrunk" data-project-summary="把 Git worktree 管得像分支一样顺手的 Rust CLI，专为并行跑多个 AI Agent 设计。" data-project-stars="11,141" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/max-sixty/worktrunk" target="_blank" rel="noopener noreferrer">max-sixty/worktrunk</a>
+        <span class="star-pill" aria-label="11,141 stars">★ 11,141</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 max-sixty/worktrunk" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把 Git worktree 管得像分支一样顺手的 Rust CLI，专为并行跑多个 AI Agent 设计。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 max-sixty/worktrunk 的项目解读" aria-expanded="true" aria-controls="project-max-sixty-worktrunk">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-max-sixty-worktrunk">
+    <p>Claude Code、Codex 这类 Agent 能长时间无人值守，同时跑五到十个很常见，但原生 git worktree 连新建都要把分支名敲三遍。Worktrunk 用三条核心命令封装增删切换，还带 hooks 和写时复制构建缓存，减少并行工作目录的重复开销。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="mattpocock/skills" data-project-url="https://github.com/mattpocock/skills" data-project-summary="作者日常工程用的 Agent 技能集，刻意做小、可改、可组合，不接管你的流程。" data-project-stars="313,594" data-language="Shell">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a>
+        <span class="star-pill" aria-label="313,594 stars">★ 313,594</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mattpocock/skills" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">作者日常工程用的 Agent 技能集，刻意做小、可改、可组合，不接管你的流程。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 mattpocock/skills 的项目解读" aria-expanded="true" aria-controls="project-mattpocock-skills">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-mattpocock-skills">
+    <p>GSD、BMAD、Spec-Kit 这类方法试图包办过程，代价是开发者失去控制、流程本身出 bug 也难排查。这些技能反其道而行，按 Claude Code、Codex、Copilot、Gemini CLI 分别提供安装方式，强调适配任意模型、随手改造成自己的。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="floci-io/floci" data-project-url="https://github.com/floci-io/floci" data-project-summary="免费本地 AWS 模拟器，docker compose up 后把 SDK 指向 localhost:4566 就能跑。" data-project-stars="29,753" data-language="Java">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/floci-io/floci" target="_blank" rel="noopener noreferrer">floci-io/floci</a>
+        <span class="star-pill" aria-label="29,753 stars">★ 29,753</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Java</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 floci-io/floci" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">免费本地 AWS 模拟器，docker compose up 后把 SDK 指向 localhost:4566 就能跑。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 floci-io/floci 的项目解读" aria-expanded="false" aria-controls="project-floci-io-floci">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-floci-io-floci" hidden>
+    <p>本地开发和 CI 里模拟 AWS 常被账号、token 和付费功能门卡住。Floci 不要账号不要认证，兼容现有 AWS SDK、CLI、Terraform、CDK 和 Testcontainers，并声称可作为 LocalStack 的 drop-in 替代，换镜像即可迁移。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="thedotmack/claude-mem" data-project-url="https://github.com/thedotmack/claude-mem" data-project-summary="给编码 Agent 做跨会话记忆：自动捕获工具调用观察，压缩成语义摘要再注入后续会话。" data-project-stars="113,010" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener noreferrer">thedotmack/claude-mem</a>
+        <span class="star-pill" aria-label="113,010 stars">★ 113,010</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 thedotmack/claude-mem" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给编码 Agent 做跨会话记忆：自动捕获工具调用观察，压缩成语义摘要再注入后续会话。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 thedotmack/claude-mem 的项目解读" aria-expanded="false" aria-controls="project-thedotmack-claude-mem">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-thedotmack-claude-mem" hidden>
+    <p>会话一断，Agent 对项目的上下文就归零。claude-mem 在后台记录工具使用观察并生成摘要，下次会话按相关性回注，支持 Claude Code、Codex、Gemini、Copilot 等多种宿主。默认走托管记忆服务，本地观察者需显式开启。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="vercel-labs/agent-desktop" data-project-url="https://github.com/vercel-labs/agent-desktop" data-project-summary="不靠截图和像素匹配，直接读 macOS、Windows、Linux 桌面应用的无障碍树来操作界面。" data-project-stars="15,497" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener noreferrer">vercel-labs/agent-desktop</a>
+        <span class="star-pill" aria-label="15,497 stars">★ 15,497</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 vercel-labs/agent-desktop" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">不靠截图和像素匹配，直接读 macOS、Windows、Linux 桌面应用的无障碍树来操作界面。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 vercel-labs/agent-desktop 的项目解读" aria-expanded="false" aria-controls="project-vercel-labs-agent-desktop">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-vercel-labs-agent-desktop" hidden>
+    <p>截图式 computer use 又慢又脆。agent-desktop 把无障碍树转成带 ref 的 JSON，Agent 对 ref 点击或输入，再读一次 UI 验证结果；循环逻辑留在 Agent 侧，工具本身不含模型。快照、剪贴板和截图可能含隐私内容，日志与上传需自行隔离。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="github/spec-kit" data-project-url="https://github.com/github/spec-kit" data-project-summary="GitHub 出的规范驱动开发工具箱，给编码 Agent 提供可复用流程、模板和可验证产出。" data-project-stars="147,422" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreferrer">github/spec-kit</a>
+        <span class="star-pill" aria-label="147,422 stars">★ 147,422</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 github/spec-kit" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">GitHub 出的规范驱动开发工具箱，给编码 Agent 提供可复用流程、模板和可验证产出。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 github/spec-kit 的项目解读" aria-expanded="false" aria-controls="project-github-spec-kit">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-github-spec-kit" hidden>
+    <p>直接让 Agent 写代码容易跑偏。Spec Kit 把建功能、修 bug、评估想法拆成独立入口，规范贯穿规划、实现与收敛；流程由可组合的原语拼装，也可自带流程。适合想要结构化但不想被单一方法论绑死的团队。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="The-PR-Agent/pr-agent" data-project-url="https://github.com/The-PR-Agent/pr-agent" data-project-summary="最早的開源 AI PR 审查 Agent，现为 Qodo 社区维护的 legacy 项目，明确区别于其商业版。" data-project-stars="14,865" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/The-PR-Agent/pr-agent" target="_blank" rel="noopener noreferrer">The-PR-Agent/pr-agent</a>
+        <span class="star-pill" aria-label="14,865 stars">★ 14,865</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 The-PR-Agent/pr-agent" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">最早的開源 AI PR 审查 Agent，现为 Qodo 社区维护的 legacy 项目，明确区别于其商业版。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 The-PR-Agent/pr-agent 的项目解读" aria-expanded="false" aria-controls="project-the-pr-agent-pr-agent">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-the-pr-agent-pr-agent" hidden>
+    <p>仓库自己划清界限：这不是 Qodo 面向开源项目的免费层，而是社区维护的旧线。它接入 GitHub、GitLab、Bitbucket、Azure DevOps 做自动审查，支持 OpenAI、Anthropic、Ollama 等模型；Docker 镜像已迁到 pragent/pr-agent 命名空间，老版本冻结在旧地址。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="harry0703/MoneyPrinterTurbo" data-project-url="https://github.com/harry0703/MoneyPrinterTurbo" data-project-summary="给一个主题或关键词，自动写脚本、配素材、加字幕和背景音乐，合成高清短视频。" data-project-stars="139,184" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener noreferrer">harry0703/MoneyPrinterTurbo</a>
+        <span class="star-pill" aria-label="139,184 stars">★ 139,184</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 harry0703/MoneyPrinterTurbo" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给一个主题或关键词，自动写脚本、配素材、加字幕和背景音乐，合成高清短视频。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 harry0703/MoneyPrinterTurbo 的项目解读" aria-expanded="false" aria-controls="project-harry0703-moneyprinterturbo">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-harry0703-moneyprinterturbo" hidden>
+    <p>短视频批量生产的关键在素材匹配是否贴题。它用大模型同时写文案、提炼搜索关键词并决定画面，提供 WebUI 和 API 两种用法，底层依赖 ffmpeg 合成。README 里赞助商和 API 优惠信息密集，实际成片质量仍取决于所选模型与素材源。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天这批项目共同承认一件事：Agent 的能力瓶颈不在模型，而在上下文是否可信、工作目录是否隔离、操作界面是否可验证。先补基础设施，再谈自动化。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09","2026-10-08","2026-10-07"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>
