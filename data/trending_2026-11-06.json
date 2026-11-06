@@ -1,0 +1,144 @@
+[
+  {
+    "rank": 1,
+    "name": "NVIDIA/auto-ontology",
+    "url": "https://github.com/NVIDIA/auto-ontology",
+    "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+    "stars": "7,665",
+    "language": "Python",
+    "topics": [],
+    "readmeExcerpt": "Auto Ontology Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto Ontology is an open library that builds that layer from enterprise metadata, reconciles definitions across systems, and exposes it to any agent harness through MCP, CLI, and API. It complements the semantic models customers already own. It enables developers to: - Discover: generate enterprise ontologies from metadata; connect existing ontologies and semantic models; build AI-ready knowledge graphs. - Ground: give agents trusted business meaning for metrics, entities, and relationships; reconcile inconsistent definitions across systems. - Validate: check generated queries against certified definitions and lineage; return provenance with every answer. - Expose: serve context to any agent harness through MCP, CLI, and API. Learn: fold certified corrections and usage back into the ontology, so shared context improves with every question. Benchmark"
+  },
+  {
+    "rank": 2,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars": "315,535",
+    "language": "Shell",
+    "topics": [],
+    "readmeExcerpt": "Skills For Real Engineers My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: Sign Up To The Newsletter Installation (30-second setup) A plugin updates itself. skills.sh copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. 1. Get the skills Claude Code Updates itself by default. Codex Updates itself at startup. GitHub Copilot (CLI and VS Code) Then, once, add to `~/.copilot/settings.json`: In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. Gemini CLI (manual updates) Re-run"
+  },
+  {
+    "rank": 3,
+    "name": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack",
+    "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+    "stars": "140,060",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "gstack gstack turns Claude Code (and other coding agents) into a virtual engineering team: a CEO who rethinks the product, an eng manager who locks architecture, a designer who catches AI slop, a reviewer who finds production bugs, a QA lead who opens a real browser, a security officer who runs OWASP + STRIDE audits, and a release engineer who ships the PR. All slash commands, all Markdown, all free, MIT license. I'm Garry Tan, President & CEO of Y Combinator. This is the open source software factory I use every day, and I'm sharing it because these tools should be available to everyone. The story, the productivity numbers and how I run ten sprints at once are in Why gstack. Fork it. Improve it. Make it yours. And if you want to hate on free open source software — you're welcome to, but I'd rather you just try it first. **Who this is for:** - **Founders and CEOs** — especially technical ones who still want to ship - **First-time Claude Code users** — structured roles instead of a blank prompt - **Tech leads and staff engineers** — rigorous review, QA, and release automation on every PR Quick start 1. Install gstack (two pastes, about 30 seconds of setup; see below). 2. Run `/office"
+  },
+  {
+    "rank": 4,
+    "name": "Usagi-org/ai-goofish-monitor",
+    "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+    "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+    "stars": "17,786",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-assistant",
+      "ai-tools",
+      "automation",
+      "gemini",
+      "goofish",
+      "open-source",
+      "openai"
+    ],
+    "readmeExcerpt": "闲鱼智能监控系统 [中文] ｜ English 基于 Playwright 和 AI 的闲鱼多任务实时监控，提供完整的 Web 管理界面。 核心特性 - **Web 可视化管理**: 任务管理、账号管理、AI 标准编辑、运行日志、结果浏览 - **AI 驱动**: 自然语言创建任务，多模态模型深度分析商品 - **多任务并发**: 独立配置关键词、价格、筛选条件和 AI Prompt - **高级筛选**: 包邮、新发布时间范围、省/市/区三级区域筛选 - **即时通知**: 支持 ntfy.sh、企业微信、Bark、Telegram、Webhook等多渠道 - **定时调度**: 支持 Cron 配置周期性任务 - **账号与代理轮换**: 多账号管理、任务绑定账号、代理池轮换与失败重试 - **Docker 部署**: 一键容器化部署 截图 🐳 Docker 部署（推荐） 如果镜像无法访问或下载速度慢，可尝试使用加速： - 默认 Web UI 地址：`http://127.0.0.1:8000` - Docker 镜像已内置 Chromium，无需宿主机额外安装浏览器。 - 官方镜像地址：`ghcr.io/usagi-org/ai-goofish:latest` - 更新镜像：`docker compose pull && docker compose up -d` - 如果你修改了 `.env` 中的 `SERVER_PORT`，请同步更新 `docker-compose.yaml` 里的端口映射。 - `docker-compose.yaml` 默认会把 SQLite 主库挂载到 `./data:/app/data`，数据库文件默认为 `data/app.sqlite3` - 目前默认持久化这些目录： - `data/` SQLite 主存储（任务、结果、价格历史） - `state/` 登录状态 cookie 文件 - `prompts/` 任务提示词 - `logs/` 运行日志 - `images/` 商品图片与任务临时图片目录 - `config.json`、`jsonl/`、`price_history/` 首次升级到 SQLite 时用于兼容导入的旧数据源 数据存储与迁移 - 当前在线主存储为 SQLite，默认路径 `data/app.sqlite3` - 可通过环境变量 `APP_DATABASE_FILE` 自定义数据库路径；Docker 默认设置为 `/app/data/app.sqlite3` - 应用启动时会自动建库建表，并尝试从旧的 `config.json`、`jsonl/`、`price_history/` 导入一次历史数据 - `state/`、`prompts/`、`logs/`、`images/` 仍然是文件系统"
+  },
+  {
+    "rank": 5,
+    "name": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+    "stars": "98,196",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-scraping",
+      "automation",
+      "crawler",
+      "crawling",
+      "crawling-python",
+      "data",
+      "data-extraction"
+    ],
+    "readmeExcerpt": "Effortless Web Scraping for the Modern Web Selection methods &middot; Fetchers &middot; Spiders &middot; Proxy Rotation &middot; CLI &middot; MCP Scrapling is a Python Web Scraping framework that brings fast HTTP requests, stealth browsers, powerful parsing, and concurrent crawling into one library. Scrape static pages, render JavaScript, interact with websites, and extract data from the API calls behind them. Build crawlers with reusable sessions, proxy rotation, automatic retries, pause/resume, and built-in data exports. Use it from Python, the terminal, or your AI agent through its MCP server and Agent Skill. From extracting a few fields to collecting a whole website as clean Markdown, Scrapling covers the full scraping workflow. What you can do with Scrapling - **Fetch & interact**: Fast HTTP requests, stealth browsers, JavaScript rendering, Cloudflare Turnstile/Interstitial handling, persistent sessions, and background API capture. - **Parse & extract**: CSS, XPath, text and regex search, adaptive element tracking, similar-element matching, and clean Markdown output. - **Crawl & export**: Concurrent spiders, proxy rotation, retries, AutoThrottle, pause/resume, streaming, ready"
+  },
+  {
+    "rank": 6,
+    "name": "vercel-labs/agent-desktop",
+    "url": "https://github.com/vercel-labs/agent-desktop",
+    "description": "Computer use CLI for AI agents",
+    "stars": "17,150",
+    "language": "Rust",
+    "topics": [
+      "accessibility",
+      "accessibility-api",
+      "ai-agents",
+      "automation",
+      "cli",
+      "computer-use",
+      "computer-use-agent",
+      "computer-use-agents"
+    ],
+    "readmeExcerpt": "agent-desktop Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree. agent-desktop gives an AI agent computer use without screenshots or pixel matching. It reads the accessibility tree of a desktop app and returns it as JSON, with a ref for every element the agent can act on. The agent clicks or types on a ref, reads the UI again to check the result, and repeats. The loop lives in your agent; agent-desktop has no model inside. It ships as a CLI and a C library. Snapshots, clipboard reads, screenshots, command output, and debug artifacts can contain private desktop content. Keep them out of public logs and uploads. Install Bun, Yarn and pnpm can install the same package. It includes native binaries and platform helpers for x64 and ARM64. For direct execution without a JavaScript launcher, download the matching native archive from GitHub Releases and keep its helper beside the executable. On macOS and Linux, Homebrew also works: `brew install agent-desktop`. There is no official Scoop package yet. The repository no longer maintains a custom Homebrew tap or Scoop bucket. Release archives and building from source are cov"
+  },
+  {
+    "rank": 7,
+    "name": "max-sixty/worktrunk",
+    "url": "https://github.com/max-sixty/worktrunk",
+    "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+    "stars": "11,593",
+    "language": "Rust",
+    "topics": [
+      "agents",
+      "claude-code",
+      "codex",
+      "developer-tools",
+      "git",
+      "worktrees"
+    ],
+    "readmeExcerpt": "&nbsp;&nbsp;Worktrunk > **November 2026**: Worktrunk was released at the start of the year, and has quickly become the most popular git worktree manager. It's built with love (there's no slop!). Please let me know any frictions at all; I'm intensely focused on continuing to make Worktrunk excellent, and the biggest help is folks posting problems they perceive. Worktrunk is a CLI for git worktree management, designed for running AI agents in parallel. Worktrunk's three core commands make worktrees as easy as branches. Plus, Worktrunk has a bunch of quality-of-life features to simplify working with many parallel changes, including hooks to automate local workflows & copy-on-write build caches. A quick demo: > ### 📚 Full documentation at worktrunk.dev 📚 Context: git worktrees AI agents like Claude Code and Codex can handle longer tasks without supervision, such that it's possible to manage 5-10+ in parallel. Git's native worktree feature gives each agent its own working directory, so they don't step on each other's changes. But the git worktree UX is clunky. Even a task as small as starting a new worktree requires typing the branch name three times: `git worktree add -b feat ../repo"
+  },
+  {
+    "rank": 8,
+    "name": "lz4/lz4",
+    "url": "https://github.com/lz4/lz4",
+    "description": "Extremely Fast Compression algorithm",
+    "stars": "12,427",
+    "language": "C",
+    "topics": [
+      "c",
+      "compression",
+      "lz4"
+    ],
+    "readmeExcerpt": "LZ4 - Extremely fast compression ================================ LZ4 is a lossless compression algorithm, providing compression speed > 500 MB/s per core, scalable with multi-core CPUs. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems. Compression speed can be tuned dynamically, by selecting an \"acceleration\" factor which trades compression ratio for faster speed. On the other end, a high compression derivative, LZ4_HC, is also provided, trading CPU time for improved compression ratio. All versions feature the same decompression speed. LZ4 is also compatible with dictionary compression, both at API and CLI (`-D`) levels. It can ingest any input file as dictionary, though only the final 64 KB are used. This capability can be combined with the Zstandard Dictionary Builder, in order to drastically improve compression performance on small files. The LZ4 library is provided as open-source software using the BSD 2-Clause license. The `lz4` command line utility is provided under the GPL-2.0-or-later license. Benchmarks The benchmark uses [lzbench] v2.4.1, from @inikep compiled with GCC v13.3.0 on Linux "
+  },
+  {
+    "rank": 9,
+    "name": "google/skills",
+    "url": "https://github.com/google/skills",
+    "description": "Agent Skills for Google products and technologies",
+    "stars": "22,457",
+    "language": "Python",
+    "topics": [
+      "google",
+      "googlecloud",
+      "skills"
+    ],
+    "readmeExcerpt": "Agent Skills This repository contains Agent Skills for Google products and technologies, including Google Cloud. Installation When prompted, select specific skills or all skills, the target agents to configure, and the installation scope (project or global). If `npx` is not available in your environment, install Node.js, which includes `npm` and `npx`. Updating Skills To update previously installed skills to the latest versions, run the following command. This command gives you an option to also remove obsolete skills. Available Skills - **Getting started with Google Cloud** - **Authenticating and Authorizing to Google Cloud (IAM)** - **Google Cloud Recipe: Foundation Builder** - **Onboarding to Google Cloud** - **Multi-product solution skills** - **Google Cloud solution-architecture workflow** - **Agent Gateway multi-agent security** - **Agentic analytics across cloud providers and data types** - **Borderless open data lakehouse agentic AI system** - **Build and deploy AI agents on Google Cloud** - **Data science workflow with AI agents solution** - **Dynamic Hybrid Search using AlloyDB** - **Google Skill Finder** - **Live bidirectional multimodal streaming agentic AI solution** -"
+  },
+  {
+    "rank": 10,
+    "name": "vercel-labs/agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser automation CLI for AI agents",
+    "stars": "46,018",
+    "language": "Rust",
+    "topics": [],
+    "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h"
+  }
+]
