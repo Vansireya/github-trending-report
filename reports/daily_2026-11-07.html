@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月7日星期六</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-07">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月7日星期六</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>老牌项目回潮与AI上下文层</h1>
+        <p>今天榜单被经典项目占据：Zed 以高性能多人编辑器冲到第一，Rails、React、Angular 等老面孔集体回归。最值得留意的是 NVIDIA 的 auto-ontology，它试图给 LLM 代理补上企业数据的语义上下文层，思路务实。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="zed-industries/zed" data-project-url="https://github.com/zed-industries/zed" data-project-summary="Atom 和 Tree-sitter 作者打造的高性能多人代码编辑器，用 Rust 写成，主打协作与速度。" data-project-stars="93,737" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/zed-industries/zed" target="_blank" rel="noopener noreferrer">zed-industries/zed</a>
+        <span class="star-pill" aria-label="93,737 stars">★ 93,737</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 zed-industries/zed" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Atom 和 Tree-sitter 作者打造的高性能多人代码编辑器，用 Rust 写成，主打协作与速度。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 zed-industries/zed 的项目解读" aria-expanded="true" aria-controls="project-zed-industries-zed">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-zed-industries-zed">
+    <p>Zed 将编辑器性能与实时多人协作结合，适合团队远程结对编程。目前仅支持 macOS、Linux 和 Windows 桌面端，Web 版仍在讨论中，且采用 GPL 许可，商业集成需留意。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="NVIDIA/auto-ontology" data-project-url="https://github.com/NVIDIA/auto-ontology" data-project-summary="从企业元数据自动构建本体和知识图谱，为 AI 代理提供可验证的语义上下文层。" data-project-stars="9,209" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/NVIDIA/auto-ontology" target="_blank" rel="noopener noreferrer">NVIDIA/auto-ontology</a>
+        <span class="star-pill" aria-label="9,209 stars">★ 9,209</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/auto-ontology" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">从企业元数据自动构建本体和知识图谱，为 AI 代理提供可验证的语义上下文层。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 NVIDIA/auto-ontology 的项目解读" aria-expanded="true" aria-controls="project-nvidia-auto-ontology">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nvidia-auto-ontology">
+    <p>代理查询数据库时常因定义不一致而给出错误答案。Auto Ontology 通过 MCP、CLI 和 API 暴露经过校验的指标定义与血缘，让查询可解释。但依赖企业已有元数据质量，落地门槛不低。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="rails/rails" data-project-url="https://github.com/rails/rails" data-project-summary="Ruby 全栈 Web 框架，以 MVC 模式和约定优于配置著称，数据库-backed 模型开箱即用。" data-project-stars="59,043" data-language="Ruby">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/rails/rails" target="_blank" rel="noopener noreferrer">rails/rails</a>
+        <span class="star-pill" aria-label="59,043 stars">★ 59,043</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Ruby</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 rails/rails" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Ruby 全栈 Web 框架，以 MVC 模式和约定优于配置著称，数据库-backed 模型开箱即用。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 rails/rails 的项目解读" aria-expanded="true" aria-controls="project-rails-rails">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-rails-rails">
+    <p>Rails 适合快速构建 CRUD 应用，Active Record 将数据库行映射为对象并封装业务逻辑。但默认约定较多，大型项目中灵活调整需要深入理解框架内部。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="mpv-player/mpv" data-project-url="https://github.com/mpv-player/mpv" data-project-summary="命令行媒体播放器，支持广泛格式与编解码器，用 C 写成，注重自由软件理念。" data-project-stars="37,908" data-language="C">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mpv-player/mpv" target="_blank" rel="noopener noreferrer">mpv-player/mpv</a>
+        <span class="star-pill" aria-label="37,908 stars">★ 37,908</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>C</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mpv-player/mpv" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">命令行媒体播放器，支持广泛格式与编解码器，用 C 写成，注重自由软件理念。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 mpv-player/mpv 的项目解读" aria-expanded="false" aria-controls="project-mpv-player-mpv">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-mpv-player-mpv" hidden>
+    <p>mpv 适合追求轻量、可脚本化播放的用户，通过配置文件与用户脚本扩展功能。但硬件解码默认关闭，低功耗 GPU 上可能卡顿，需要手动启用 --hwdec 或 fast 配置。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="rust-lang/rust" data-project-url="https://github.com/rust-lang/rust" data-project-summary="Rust 语言的主仓库，包含编译器、标准库和文档，强调性能、可靠性与生产力。" data-project-stars="121,493" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/rust-lang/rust" target="_blank" rel="noopener noreferrer">rust-lang/rust</a>
+        <span class="star-pill" aria-label="121,493 stars">★ 121,493</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 rust-lang/rust" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Rust 语言的主仓库，包含编译器、标准库和文档，强调性能、可靠性与生产力。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 rust-lang/rust 的项目解读" aria-expanded="false" aria-controls="project-rust-lang-rust">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-rust-lang-rust" hidden>
+    <p>Rust 通过所有权模型在编译期消除内存与线程安全错误，适合系统编程和嵌入式。但学习曲线陡峭，编译时间较长，对初学者不够友好。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="react/react" data-project-url="https://github.com/react/react" data-project-summary="用于构建 Web 和原生用户界面的 JavaScript 库，以声明式和组件化著称。" data-project-stars="252,283" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/react/react" target="_blank" rel="noopener noreferrer">react/react</a>
+        <span class="star-pill" aria-label="252,283 stars">★ 252,283</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 react/react" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">用于构建 Web 和原生用户界面的 JavaScript 库，以声明式和组件化著称。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 react/react 的项目解读" aria-expanded="false" aria-controls="project-react-react">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-react-react" hidden>
+    <p>React 让 UI 随状态自动更新，组件逻辑用 JavaScript 编写而非模板。它只关注视图层，路由、状态管理等需搭配其他库，项目架构需自行决策。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="angular/angular" data-project-url="https://github.com/angular/angular" data-project-summary="基于 TypeScript 的 Web 开发平台，提供从模板到依赖注入的完整工具链。" data-project-stars="101,399" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/angular/angular" target="_blank" rel="noopener noreferrer">angular/angular</a>
+        <span class="star-pill" aria-label="101,399 stars">★ 101,399</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 angular/angular" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">基于 TypeScript 的 Web 开发平台，提供从模板到依赖注入的完整工具链。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 angular/angular 的项目解读" aria-expanded="false" aria-controls="project-angular-angular">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-angular-angular" hidden>
+    <p>Angular 适合构建大型企业级应用，内置路由、表单、HTTP 等模块。但框架体量大、概念多，小型项目可能显得笨重，升级周期也需规划。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="symfony/symfony" data-project-url="https://github.com/symfony/symfony" data-project-summary="PHP 框架与可复用组件集合，遵循语义化版本并发布 LTS 版本。" data-project-stars="31,454" data-language="PHP">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/symfony/symfony" target="_blank" rel="noopener noreferrer">symfony/symfony</a>
+        <span class="star-pill" aria-label="31,454 stars">★ 31,454</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>PHP</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 symfony/symfony" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">PHP 框架与可复用组件集合，遵循语义化版本并发布 LTS 版本。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 symfony/symfony 的项目解读" aria-expanded="false" aria-controls="project-symfony-symfony">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-symfony-symfony" hidden>
+    <p>Symfony 组件可独立使用，也可组成全栈框架，适合需要长期维护的 PHP 项目。但学习曲线较陡，配置灵活也意味着决策成本高。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="prometheus/prometheus" data-project-url="https://github.com/prometheus/prometheus" data-project-summary="云原生监控系统与时序数据库，以多维数据模型和 PromQL 查询语言为核心。" data-project-stars="67,216" data-language="Go">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/prometheus/prometheus" target="_blank" rel="noopener noreferrer">prometheus/prometheus</a>
+        <span class="star-pill" aria-label="67,216 stars">★ 67,216</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Go</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 prometheus/prometheus" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">云原生监控系统与时序数据库，以多维数据模型和 PromQL 查询语言为核心。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 prometheus/prometheus 的项目解读" aria-expanded="false" aria-controls="project-prometheus-prometheus">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-prometheus-prometheus" hidden>
+    <p>Prometheus 采用拉模型采集指标，单节点自治，适合动态云环境。但长期存储需额外方案，高基数指标可能带来性能压力。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天榜单像一次老友聚会，但 NVIDIA 的 auto-ontology 提醒我们：AI 代理要可靠，缺的不是更多模型，而是可验证的上下文层。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13","2026-10-12","2026-10-11","2026-10-10","2026-10-09"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>

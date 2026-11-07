@@ -1,0 +1,187 @@
+{
+  "title": "老牌项目回潮与AI上下文层",
+  "opening": "今天榜单被经典项目占据：Zed 以高性能多人编辑器冲到第一，Rails、React、Angular 等老面孔集体回归。最值得留意的是 NVIDIA 的 auto-ontology，它试图给 LLM 代理补上企业数据的语义上下文层，思路务实。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "zed-industries/zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "stars": "93,737",
+      "language": "Rust",
+      "topics": [
+        "gpui",
+        "rust-lang",
+        "text-editor",
+        "zed"
+      ],
+      "readmeExcerpt": "Zed Welcome to Zed, a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. Installation On macOS, Linux, and Windows you can download Zed directly or install Zed via your local package manager (macOS/Linux/Windows). Other platforms are not yet available: - Web (tracking discussion) Developing Zed - Building Zed for macOS - Building Zed for Linux - Building Zed for Windows Contributing See CONTRIBUTING.md for ways you can contribute to Zed. Also... we're hiring! Check out our jobs page for open roles. Licensing Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked. License information for third party dependencies must be correctly provided for CI to pass. We use `cargo-about` to automatically comply with open source licenses. If CI is failing, check the following: - Is it showing a `no license specified` error for a crate you've created? If so, add `publish = false` under `[package]` in your crate's Cargo.toml. - Is the error `failed to satisfy license requirements` for a dependency? If so, first determine what license the project has and whether this system is sufficient to comply with this license's re",
+      "summary": "Atom 和 Tree-sitter 作者打造的高性能多人代码编辑器，用 Rust 写成，主打协作与速度。",
+      "problem": "Zed 将编辑器性能与实时多人协作结合，适合团队远程结对编程。目前仅支持 macOS、Linux 和 Windows 桌面端，Web 版仍在讨论中，且采用 GPL 许可，商业集成需留意。"
+    },
+    {
+      "rank": 2,
+      "name": "NVIDIA/auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "stars": "9,209",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "Auto Ontology Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto Ontology is an open library that builds that layer from enterprise metadata, reconciles definitions across systems, and exposes it to any agent harness through MCP, CLI, and API. It complements the semantic models customers already own. It enables developers to: - Discover: generate enterprise ontologies from metadata; connect existing ontologies and semantic models; build AI-ready knowledge graphs. - Ground: give agents trusted business meaning for metrics, entities, and relationships; reconcile inconsistent definitions across systems. - Validate: check generated queries against certified definitions and lineage; return provenance with every answer. - Expose: serve context to any agent harness through MCP, CLI, and API. Learn: fold certified corrections and usage back into the ontology, so shared context improves with every question. Benchmark",
+      "summary": "从企业元数据自动构建本体和知识图谱，为 AI 代理提供可验证的语义上下文层。",
+      "problem": "代理查询数据库时常因定义不一致而给出错误答案。Auto Ontology 通过 MCP、CLI 和 API 暴露经过校验的指标定义与血缘，让查询可解释。但依赖企业已有元数据质量，落地门槛不低。"
+    },
+    {
+      "rank": 3,
+      "name": "rails/rails",
+      "url": "https://github.com/rails/rails",
+      "description": "Ruby on Rails",
+      "stars": "59,043",
+      "language": "Ruby",
+      "topics": [
+        "activejob",
+        "activerecord",
+        "framework",
+        "html",
+        "mvc",
+        "rails",
+        "ruby"
+      ],
+      "readmeExcerpt": "Welcome to Rails What's Rails? Rails is a web application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern. Understanding the MVC pattern is key to understanding Rails. MVC divides your application into three layers: Model, View, and Controller, each with a specific responsibility. Model layer The _**Model layer**_ represents the domain model (such as Account, Product, Person, Post, etc.) and encapsulates the business logic specific to your application. In Rails, database-backed model classes are derived from `ActiveRecord::Base`. Active Record allows you to present the data from database rows as objects and embellish these data objects with business logic methods. Although most Rails models are backed by a database, models can also be ordinary Ruby classes, or Ruby classes that implement a set of interfaces as provided by the Active Model module. View layer The _**View layer**_ is composed of \"templates\" that are responsible for providing appropriate representations of your application's resources. Templates can come in a variety of formats, but most view templates are HTML with embedded Ruby ",
+      "summary": "Ruby 全栈 Web 框架，以 MVC 模式和约定优于配置著称，数据库-backed 模型开箱即用。",
+      "problem": "Rails 适合快速构建 CRUD 应用，Active Record 将数据库行映射为对象并封装业务逻辑。但默认约定较多，大型项目中灵活调整需要深入理解框架内部。"
+    },
+    {
+      "rank": 4,
+      "name": "mpv-player/mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "description": "🎥 Command line media player",
+      "stars": "37,908",
+      "language": "C",
+      "topics": [
+        "audio",
+        "c",
+        "ffmpeg",
+        "mplayer",
+        "mpv",
+        "multimedia",
+        "video"
+      ],
+      "readmeExcerpt": "mpv * External links * Overview * System requirements * Downloads * Changelog * Compilation * Release cycle * Bug reports * Contributing * License * Contact External links * Wiki * User Scripts * [FAQ][FAQ] * Manual Overview **mpv** is a free (as in freedom) media player for the command line. It supports a wide variety of media file formats, audio and video codecs, and subtitle types. There is a [FAQ][FAQ]. Releases can be found on the [release list][releases]. System requirements - A not too ancient Linux (usually, only the latest releases of distributions are actively supported), Windows 10 1607 or later, or macOS 10.15 or later. - A somewhat capable CPU. Hardware decoding might help if the CPU is too slow to decode video in realtime, but must be explicitly enabled with the `--hwdec` option. - A not too crappy GPU. mpv's focus is not on power-efficient playback on embedded or integrated GPUs (for example, hardware decoding is not even enabled by default). Low power GPUs may cause issues like tearing, stutter, etc. On such GPUs, it's recommended to use `--profile=fast` for smooth playback. The main video output uses shaders for video rendering and scaling, rather than GPU fixed fu",
+      "summary": "命令行媒体播放器，支持广泛格式与编解码器，用 C 写成，注重自由软件理念。",
+      "problem": "mpv 适合追求轻量、可脚本化播放的用户，通过配置文件与用户脚本扩展功能。但硬件解码默认关闭，低功耗 GPU 上可能卡顿，需要手动启用 --hwdec 或 fast 配置。"
+    },
+    {
+      "rank": 5,
+      "name": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "stars": "121,493",
+      "language": "Rust",
+      "topics": [
+        "compiler",
+        "language",
+        "rust"
+      ],
+      "readmeExcerpt": "[Website][Rust] | [Getting started] | [Learn] | [Documentation] | [Contributing] This is the main source code repository for [Rust]. It contains the compiler, standard library, and documentation. [Rust]: https://www.rust-lang.org/ [Getting Started]: https://www.rust-lang.org/learn/get-started [Learn]: https://www.rust-lang.org/learn [Documentation]: https://www.rust-lang.org/learn#learn-use [Contributing]: CONTRIBUTING.md Why Rust? - **Performance:** Fast and memory-efficient, suitable for critical services, embedded devices, and easily integrated with other languages. - **Reliability:** Our rich type system and ownership model ensure memory and thread safety, reducing bugs at compile-time. - **Productivity:** Comprehensive documentation, a compiler committed to providing great diagnostics, and advanced tooling including package manager and build tool ([Cargo]), auto-formatter ([rustfmt]), linter ([Clippy]) and editor support ([rust-analyzer]). [Cargo]: https://github.com/rust-lang/cargo [rustfmt]: https://github.com/rust-lang/rustfmt [Clippy]: https://github.com/rust-lang/rust-clippy [rust-analyzer]: https://github.com/rust-lang/rust-analyzer Quick Start Read [\"Installation\"] from",
+      "summary": "Rust 语言的主仓库，包含编译器、标准库和文档，强调性能、可靠性与生产力。",
+      "problem": "Rust 通过所有权模型在编译期消除内存与线程安全错误，适合系统编程和嵌入式。但学习曲线陡峭，编译时间较长，对初学者不够友好。"
+    },
+    {
+      "rank": 6,
+      "name": "react/react",
+      "url": "https://github.com/react/react",
+      "description": "The library for web and native user interfaces.",
+      "stars": "252,283",
+      "language": "JavaScript",
+      "topics": [
+        "declarative",
+        "frontend",
+        "javascript",
+        "library",
+        "react",
+        "ui"
+      ],
+      "readmeExcerpt": "React &middot; React is a JavaScript library for building user interfaces. * **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug. * **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM. * **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using React Native. Learn how to use React in your project. Installation React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**: * Use Quick Start to get a taste of React. * Add React to an Existing Project to use as little or a",
+      "summary": "用于构建 Web 和原生用户界面的 JavaScript 库，以声明式和组件化著称。",
+      "problem": "React 让 UI 随状态自动更新，组件逻辑用 JavaScript 编写而非模板。它只关注视图层，路由、状态管理等需搭配其他库，项目架构需自行决策。"
+    },
+    {
+      "rank": 7,
+      "name": "angular/angular",
+      "url": "https://github.com/angular/angular",
+      "description": "Deliver web apps with confidence 🚀",
+      "stars": "101,399",
+      "language": "TypeScript",
+      "topics": [
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
+      ],
+      "readmeExcerpt": "Angular - The modern web developer's platform Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. angular.dev Contributing Guidelines · Submit an Issue · Blog Documentation Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website. - [Getting Started][quickstart] - [Architecture][architecture] - [Components and Templates][componentstemplates] - [Forms][forms] - [API][api] Advanced - [Angular Elements][angularelements] - [Server Side Rendering][ssr] - [Schematics][schematics] - [Lazy Loading][lazyloading] - [Animations][animations] Local Development To contribute to the Angular Docs, check out the Angular.dev README Development Setup Prerequisites - Install [Node.js] which includes [Node Package Manager][npm] Setting Up a Project Install the Angular CLI globally: Create a workspace: Run the application: Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions. Quickstart [Get started in 5 minutes][quickstart]. Ecosystem - [Angular Command Line (CLI)][cli] - [Angular Material][angularmaterial] Changelog [Learn about the lat",
+      "summary": "基于 TypeScript 的 Web 开发平台，提供从模板到依赖注入的完整工具链。",
+      "problem": "Angular 适合构建大型企业级应用，内置路由、表单、HTTP 等模块。但框架体量大、概念多，小型项目可能显得笨重，升级周期也需规划。"
+    },
+    {
+      "rank": 8,
+      "name": "symfony/symfony",
+      "url": "https://github.com/symfony/symfony",
+      "description": "The Symfony PHP framework",
+      "stars": "31,454",
+      "language": "PHP",
+      "topics": [
+        "bundle",
+        "framework",
+        "hacktoberfest",
+        "php",
+        "php-framework",
+        "symfony",
+        "symfony-bundle"
+      ],
+      "readmeExcerpt": "[Symfony][1] is a **PHP framework** for web and console applications and a set of reusable **PHP components**. Symfony is used by thousands of web applications and most of the [popular PHP projects][2]. Installation * [Install Symfony][4] with Composer (see [requirements details][3]). * Symfony follows the [semantic versioning][5] strictly, publishes \"Long Term Support\" (LTS) versions and has a [release process][6] that is predictable and business-friendly. Sponsor Symfony 8.2 is looking for [backers][27]. Help Symfony by [sponsoring][31] its development! Documentation * Read the [Getting Started guide][7] if you are new to Symfony. * Try the [Symfony Demo application][23] to learn Symfony in practice. * Discover Symfony ecosystem in detail with [Symfony The Fast Track][26]. * Master Symfony with the [Guides and Tutorials][8], the [Components docs][9] and the [Best Practices][10] reference. Community * [Join the Symfony Community][11] and meet other members at the [Symfony events][12]. * [Get Symfony support][13] on GitHub Discussions, Slack, etc. * Follow us on [GitHub][14], [Twitter][15] and [Facebook][16]. * Read our [Code of Conduct][24] and meet the [CARE Team][25]. Contributi",
+      "summary": "PHP 框架与可复用组件集合，遵循语义化版本并发布 LTS 版本。",
+      "problem": "Symfony 组件可独立使用，也可组成全栈框架，适合需要长期维护的 PHP 项目。但学习曲线较陡，配置灵活也意味着决策成本高。"
+    },
+    {
+      "rank": 9,
+      "name": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "stars": "67,216",
+      "language": "Go",
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "readmeExcerpt": "Prometheus Visit prometheus.io for the full documentation, examples and guides. [ ][quay] [ ][hub] Prometheus, a Cloud Native Computing Foundation project, is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed. The features that distinguish Prometheus from other metrics and monitoring systems are: * A **multi-dimensional** data model (time series defined by metric name and set of key/value dimensions) * PromQL, a **powerful and flexible query language** to leverage this dimensionality * No dependency on distributed storage; **single server nodes are autonomous** * An HTTP **pull model** for time series collection * **Pushing time series** is supported via an intermediary gateway for batch jobs * Targets are discovered via **service discovery** or **static configuration** * Multiple modes of **graphing and dashboarding support** * Support for hierarchical and horizontal **federation** Architecture overview Install There are various ways to install Prometheus. Precompiled binaries Precompiled binaries for released versio",
+      "summary": "云原生监控系统与时序数据库，以多维数据模型和 PromQL 查询语言为核心。",
+      "problem": "Prometheus 采用拉模型采集指标，单节点自治，适合动态云环境。但长期存储需额外方案，高基数指标可能带来性能压力。"
+    },
+    {
+      "rank": 10,
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": "22,895",
+      "language": "Python",
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "readmeExcerpt": "Agent Skills This repository contains Agent Skills for Google products and technologies, including Google Cloud. Installation When prompted, select specific skills or all skills, the target agents to configure, and the installation scope (project or global). If `npx` is not available in your environment, install Node.js, which includes `npm` and `npx`. Updating Skills To update previously installed skills to the latest versions, run the following command. This command gives you an option to also remove obsolete skills. Available Skills - **Getting started with Google Cloud** - **Authenticating and Authorizing to Google Cloud (IAM)** - **Google Cloud Recipe: Foundation Builder** - **Onboarding to Google Cloud** - **Multi-product solution skills** - **Google Cloud solution-architecture workflow** - **Agent Gateway multi-agent security** - **Agentic analytics across cloud providers and data types** - **Borderless open data lakehouse agentic AI system** - **Build and deploy AI agents on Google Cloud** - **Data science workflow with AI agents solution** - **Dynamic Hybrid Search using AlloyDB** - **Google Skill Finder** - **Live bidirectional multimodal streaming agentic AI solution** -",
+      "summary": "面向 Google 产品与技术的 Agent Skills 集合，涵盖云认证、架构与 AI 代理部署。",
+      "problem": "该仓库提供可安装的技能模块，帮助代理完成 Google Cloud 上的具体任务。但技能列表较宽泛，实际效果取决于代理框架与具体场景的匹配度。"
+    }
+  ],
+  "closing": "今天榜单像一次老友聚会，但 NVIDIA 的 auto-ontology 提醒我们：AI 代理要可靠，缺的不是更多模型，而是可验证的上下文层。"
+}
