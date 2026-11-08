@@ -1,0 +1,168 @@
+{
+  "title": "Agent Skills 生态成形，浏览器与安全审计先行",
+  "opening": "今天榜单被“Agent Skills”刷屏：Anthropic、Google、Cloudflare 和 Matt Pocock 同时把技能包摆上台面，说明让 Agent 按固定流程干活正在从演示走向工程化。最值得看的是 vercel-labs/agent-browser 用 Rust CLI 把浏览器拆成可快照、可点击的原子命令，以及 Cloudflare 把漏洞挖掘流程拆成六阶段审计技能。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "stars": "46,923",
+      "language": "Rust",
+      "topics": [],
+      "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h",
+      "summary": "给 AI Agent 用的浏览器 CLI，把页面读成带 @e1 引用的紧凑文本，再逐条执行点击。",
+      "problem": "Agent 通过 snapshot 拿到元素引用，执行动作后重新快照确认结果，浏览器在命令间保持打开。局限是引用只对快照时刻有效，DOM 一变就得重拍，点击失败会直接报错而不是假装成功。"
+    },
+    {
+      "rank": 2,
+      "name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "stars": "65,897",
+      "language": "JavaScript",
+      "topics": [],
+      "readmeExcerpt": "security-audit A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in Build your own vulnerability harness. The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. What it does The skill runs a structured audit in six phases: 1. **Reconnaissance** -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in `architecture.md` and `coverage-ledger.json`. 2. **Coverage-led hunting** -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. **Candidate validation** -- give every unique candidate to a fresh verifier that tries to disprove it. 4. **Structured output** -- write `confirmed`, `needs_validation`, and `rejected` records to `findings.json` and validate them against `report-schema.json`. 5. **Independent record verification** -- fresh agents verify ",
+      "summary": "把编码 Agent 变成安全审计员，六阶段流程从侦察、覆盖式猎查到独立验证，产出机器可读的 findings.json。",
+      "problem": "每个候选漏洞交给全新验证 Agent 尝试证伪，再用独立 Agent 复核记录，最后按 schema 输出 confirmed、needs_validation 和 rejected。适合单仓库起步，但多阶段隔离 Agent 的编排成本不低。"
+    },
+    {
+      "rank": 3,
+      "name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "stars": "23,471",
+      "language": "Python",
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "readmeExcerpt": "Agent Skills This repository contains Agent Skills for Google products and technologies, including Google Cloud. Installation When prompted, select specific skills or all skills, the target agents to configure, and the installation scope (project or global). If `npx` is not available in your environment, install Node.js, which includes `npm` and `npx`. Updating Skills To update previously installed skills to the latest versions, run the following command. This command gives you an option to also remove obsolete skills. Available Skills - **Getting started with Google Cloud** - **Authenticating and Authorizing to Google Cloud (IAM)** - **Google Cloud Recipe: Foundation Builder** - **Onboarding to Google Cloud** - **Multi-product solution skills** - **Google Cloud solution-architecture workflow** - **Agent Gateway multi-agent security** - **Agentic analytics across cloud providers and data types** - **Borderless open data lakehouse agentic AI system** - **Build and deploy AI agents on Google Cloud** - **Data science workflow with AI agents solution** - **Dynamic Hybrid Search using AlloyDB** - **Google Skill Finder** - **Live bidirectional multimodal streaming agentic AI solution** -",
+      "summary": "Google 官方 Agent Skills 合集，覆盖 Cloud 入门、IAM 认证、解决方案架构和多智能体安全。",
+      "problem": "通过 npx 选择技能和目标 Agent 安装，支持项目级或全局范围，也能更新和清理旧技能。目前更像技能目录，具体每个技能的执行深度需要逐个翻看。"
+    },
+    {
+      "rank": 4,
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "stars": "317,829",
+      "language": "Shell",
+      "topics": [],
+      "readmeExcerpt": "Skills For Real Engineers My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: Sign Up To The Newsletter Installation (30-second setup) A plugin updates itself. skills.sh copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. 1. Get the skills Claude Code Updates itself by default. Codex Updates itself at startup. GitHub Copilot (CLI and VS Code) Then, once, add to `~/.copilot/settings.json`: In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. Gemini CLI (manual updates) Re-run",
+      "summary": "Matt Pocock 从自己 .agents 目录掏出来的日常工程技能，主打小而可组合，不替你做主。",
+      "problem": "明确反对 GSD、BMAD、Spec-Kit 那种接管流程的做法，技能可以手动改、随意拆。安装方式按 Agent 分插件和复制文件两种，选错会装两遍。"
+    },
+    {
+      "rank": 5,
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "stars": "188,878",
+      "language": "Python",
+      "topics": [
+        "agent-skills"
+      ],
+      "readmeExcerpt": "> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see agentskills.io. Skills Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks. For more information, check out: - What are skills? - Using skills in Claude - How to create custom skills - Equipping agents for the real world with Agent Skills About This Repository This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.). Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to un",
+      "summary": "Anthropic 官方技能示例库，每个技能一个文件夹加 SKILL.md，从艺术音乐到测试 Web 应用都有。",
+      "problem": "技能是动态加载的指令、脚本和资源包，教 Claude 按固定方式完成专项任务。仓库定位是示范和灵感来源，不是开箱即用的生产工具集。"
+    },
+    {
+      "rank": 6,
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "stars": "14,658",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles ",
+      "summary": "Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和 CLI 打包，人和 AI 共用一套工具。",
+      "problem": "基于 React 19+ 和 StyleX，导入预构建 CSS 即可用，不需要额外构建插件。开放内部结构，组件可组合，也能 swizzle 把源码 eject 出来自己改。目前是 Beta。"
+    },
+    {
+      "rank": 7,
+      "name": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "stars": "67,472",
+      "language": "Go",
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "readmeExcerpt": "Prometheus Visit prometheus.io for the full documentation, examples and guides. [ ][quay] [ ][hub] Prometheus, a Cloud Native Computing Foundation project, is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed. The features that distinguish Prometheus from other metrics and monitoring systems are: * A **multi-dimensional** data model (time series defined by metric name and set of key/value dimensions) * PromQL, a **powerful and flexible query language** to leverage this dimensionality * No dependency on distributed storage; **single server nodes are autonomous** * An HTTP **pull model** for time series collection * **Pushing time series** is supported via an intermediary gateway for batch jobs * Targets are discovered via **service discovery** or **static configuration** * Multiple modes of **graphing and dashboarding support** * Support for hierarchical and horizontal **federation** Architecture overview Install There are various ways to install Prometheus. Precompiled binaries Precompiled binaries for released versio",
+      "summary": "老牌监控系统与时间序列数据库，多维数据模型加 PromQL，单节点自治不依赖分布式存储。",
+      "problem": "通过 HTTP 拉取指标，批量任务可走网关推送，服务发现或静态配置找目标。适合需要灵活查询和告警的场景，但长期存储和高可用要额外组件补。"
+    },
+    {
+      "rank": 8,
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "stars": "100,781",
+      "language": "Python",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux"
+      ],
+      "readmeExcerpt": "",
+      "summary": "资料不足，先保留观察。",
+      "problem": ""
+    },
+    {
+      "rank": 9,
+      "name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "stars": "17,155",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "expo",
+        "grok"
+      ],
+      "readmeExcerpt": "OpenMausBot **The open-source Grok Bot alternative: your own team of AI bots, in a chat app.** **openmausbot.com** &nbsp;·&nbsp; Download &nbsp;·&nbsp; Open source Grok Bot alternative, compared OpenMausBot is an open-source Grok Bot alternative: an independent project inspired by **Grok Bot**, and the open-source alternative to **Meta Muse**, **OpenAI dots** and **Cue by Manus** — bring-your-own-agent, local-first, on the models you already have. Also known as **MausBot**; formerly **OpenGrokBot**. Not affiliated with xAI, Meta, OpenAI or Manus. Every bot in the sidebar is a real agent — Claude or Codex running locally under the hood — with its own personality, its own model, its own cloud computer, and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters. &nbsp; &nbsp; &nbsp; latest release &nbsp;·&nbsp; macOS: Apple silicon & Intel · signed & notarized .dmg &nbsp;·&nbsp; Windows: x64 installer &nbsp;·&nbsp; Ubuntu 24.04 x64: .deb or AppImage beta &nbsp;·&nbsp; all releases Powered by boat.dev > ⚠️ **No affiliation with any cryptocurrency.** OpenMausBot has no token. Any coin using the OpenMausBot, Maus, or SupaMaus name is not created, endors",
+      "summary": "开源的 Grok Bot 替代品，聊天应用里每个联系人都是一个本地跑 Claude 或 Codex 的真 Agent。",
+      "problem": "每个 bot 有自己的性格、模型、云电脑和已连接应用，可以像联系人一样对话、看它干活、审批关键操作。本地优先、自带 Agent，但明确与 xAI、Meta、OpenAI 无关联。"
+    },
+    {
+      "rank": 10,
+      "name": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "stars": "51,006",
+      "language": "Rust",
+      "topics": [
+        "linter",
+        "pep8",
+        "python",
+        "python3",
+        "ruff",
+        "rust",
+        "rustpython",
+        "static-analysis"
+      ],
+      "readmeExcerpt": "Ruff **Docs** | **Playground** An extremely fast Python linter and code formatter, written in Rust. Linting the CPython codebase from scratch. - ⚡️ 10-100x faster than existing linters (like Flake8) and formatters (like Black) - 🐍 Installable via `pip` - 🛠️ `pyproject.toml` support - 🤝 Python 3.15 compatibility - ⚖️ Drop-in parity with Flake8, isort, and Black - 📦 Built-in caching, to avoid re-analyzing unchanged files - 🔧 Fix support, for automatic error correction (e.g., automatically remove unused imports) - 📏 Over 900 built-in rules, with native re-implementations of popular Flake8 plugins, like flake8-bugbear - ⌨️ First-party editor integrations for VS Code and more - 🌎 Monorepo-friendly, with hierarchical and cascading configuration Ruff aims to be orders of magnitude faster than alternative tools while integrating more functionality behind a single, common interface. Ruff can be used to replace Flake8 (plus dozens of plugins), Black, isort, pydocstyle, pyupgrade, autoflake, and more, all while executing tens or hundreds of times faster than any individual tool. Ruff is actively developed and used in major open-source projects like: - Apache Airflow - Apache Superset -",
+      "summary": "Rust 写的 Python linter 和格式化器，比 Flake8 和 Black 快 10 到 100 倍，内置 900+ 规则。",
+      "problem": "一个工具替代 Flake8 加几十个插件、Black、isort 等，支持 pyproject.toml、自动修复和编辑器集成。适合想统一工具链又不想牺牲速度的 Python 项目。"
+    }
+  ],
+  "closing": "Agent Skills 今天扎堆出现，但真正值得跟的是那些把流程拆成可验证步骤的项目——浏览器快照和六阶段审计都比“技能目录”更有工程含量。"
+}
