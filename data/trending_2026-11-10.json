@@ -1,0 +1,143 @@
+[
+  {
+    "rank": 1,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "191,301",
+    "language": "Python",
+    "topics": [
+      "agent-skills"
+    ],
+    "readmeExcerpt": "> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see agentskills.io. Skills Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks. For more information, check out: - What are skills? - Using skills in Claude - How to create custom skills - Equipping agents for the real world with Agent Skills About This Repository This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.). Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to un"
+  },
+  {
+    "rank": 2,
+    "name": "meta/astryx",
+    "url": "https://github.com/meta/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "stars": "20,684",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles "
+  },
+  {
+    "rank": 3,
+    "name": "sherlock-project/sherlock",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "description": "Hunt down social media accounts by username across social networks",
+    "stars": "107,582",
+    "language": "Python",
+    "topics": [
+      "cli",
+      "cti",
+      "cybersecurity",
+      "forensics",
+      "hacktoberfest",
+      "information-gathering",
+      "infosec",
+      "linux"
+    ],
+    "readmeExcerpt": ""
+  },
+  {
+    "rank": 4,
+    "name": "google-deepmind/mujoco",
+    "url": "https://github.com/google-deepmind/mujoco",
+    "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+    "stars": "17,021",
+    "language": "C++",
+    "topics": [
+      "mujoco",
+      "physics",
+      "robotics"
+    ],
+    "readmeExcerpt": "**MuJoCo** stands for **Mu**lti-**Jo**int dynamics with **Co**ntact. It is a general purpose physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, machine learning, and other areas which demand fast and accurate simulation of articulated structures interacting with their environment. This repository is maintained by Google DeepMind. MuJoCo has a C API and is intended for researchers and developers. The runtime simulation module is tuned to maximize performance and operates on low-level data structures that are preallocated by the built-in XML compiler. The library includes interactive visualization in native desktop windows and web browsers. MuJoCo further exposes a large number of utility functions for computing physics-related quantities. We also provide [Python bindings] and a plug-in for the [Unity] game engine. Documentation MuJoCo's documentation can be found at [mujoco.readthedocs.io]. Upcoming features due for the next release can be found in the [changelog] in the \"latest\" branch. Getting Started 1. **Try MuJoCo in your browser.** Visit mujoco.org to explore MuJoCo on desktop or mobile with nothing to install, or"
+  },
+  {
+    "rank": 5,
+    "name": "anthropics/claude-quickstarts",
+    "url": "https://github.com/anthropics/claude-quickstarts",
+    "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+    "stars": "20,131",
+    "language": "Python",
+    "topics": [],
+    "readmeExcerpt": "Claude Quickstarts Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API. Each quickstart provides a foundation that you can easily build upon and customize for your specific needs. Getting Started To use these quickstarts, you'll need an Claude API key. If you don't have one yet, you can sign up for free at console.anthropic.com. Available Quickstarts Customer Support Agent A customer support agent powered by Claude. This project demonstrates how to leverage Claude's natural language understanding and generation capabilities to create an AI-assisted customer support system with access to a knowledge base. Go to Customer Support Agent Quickstart Financial Data Analyst A financial data analyst powered by Claude. This project demonstrates how to leverage Claude's capabilities with interactive data visualization to analyze financial data via chat. Go to Financial Data Analyst Quickstart Computer Use Demo An environment and tools that Claude can use to control a desktop computer. This project demonstrates how to leverage the computer use capabilities of Claude, including support for the latest `com"
+  },
+  {
+    "rank": 6,
+    "name": "garrytan/gbrain",
+    "url": "https://github.com/garrytan/gbrain",
+    "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+    "stars": "32,274",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "**Give the agent you already use a memory you control.** GBrain stores explicit facts with their sources, supports corrections and withdrawal, and makes the same memory available across your agents. Start with keyless memory and keyword retrieval; add semantic search, synthesis, and background enrichment when you need them. GBrain is MIT-licensed and free to self-host; gbrain.io is optional paid hosting. > [!TIP] > **Need hosted? First time running an agent?** Try **gbrain.io**, hosted GBrain, for the easiest experience: one brain for you and your team, connected to ChatGPT, Claude and Cursor, with nothing to install or keep online. Stuck? Email support@gbrain.io and a person will set it up with you, free. **Keep skills beside knowledge.** New local brains include memory skills in their content root. Agents can join an authorized catalog; only approved editors can publish. Managed coding-agent installs add an owned native router; restart and real-use verification are separate steps. Staged migration preserves sharing choices and personal edits. See shared brain skills. Choose your setup 1. **Add GBrain to my existing agent — recommended.** Keep your agent's identity and save memory"
+  },
+  {
+    "rank": 7,
+    "name": "vercel-labs/agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser automation CLI for AI agents",
+    "stars": "48,663",
+    "language": "Rust",
+    "topics": [],
+    "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h"
+  },
+  {
+    "rank": 8,
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": "103,618",
+    "language": "Rust",
+    "topics": [
+      "claude",
+      "claude-code",
+      "esp32",
+      "firmware",
+      "home-assistant",
+      "home-automation",
+      "iot",
+      "mcp"
+    ],
+    "readmeExcerpt": "π RuView Start here Hardware Models AI toolkit Smart home Cognitum Seed **See through walls with WiFi** ## **Turn ordinary WiFi into a spatial intelligence / sensing system.** Detect people, measure breathing and heart rate, track movement, and monitor rooms — through walls, in the dark, with no cameras or wearables. Just physics. Works natively with the four major smart-home ecosystems: **Home Assistant** via the HA-DISCO MQTT publisher, **Apple Home & HomePod** as a discoverable HAP-1.1 bridge, **Google Home** + **Amazon Alexa** via the same HA bridge or a Matter endpoint. Siri, Google Assistant, and Alexa can voice presence and vitals by room with zero custom skills. > Drop into any **Home Assistant** install with one `--mqtt` flag. Or pair into **Apple Home / Google Home / Alexa / SmartThings** as a Matter Bridge. Ships 21 entities per node (11 raw signals + 10 inferred semantic states: someone-sleeping, possible-distress, room-active, elderly-inactivity-anomaly, meeting-in-progress, bathroom-occupied, fall-risk-elevated, bed-exit, no-movement, multi-room-transition) plus 3 starter HA Blueprints. See `docs/integrations/home-assistant.md` · ADR-115. π RuView is a WiFi sensing pl"
+  },
+  {
+    "rank": 9,
+    "name": "ZhuLinsen/daily_stock_analysis",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+    "stars": "69,147",
+    "language": "Python",
+    "topics": [
+      "a-stock",
+      "ai-agent",
+      "aigc",
+      "llm",
+      "quant",
+      "quantitative-finance",
+      "quantitative-trading"
+    ],
+    "readmeExcerpt": "📈 股票智能分析系统 &nbsp; > 🤖 基于 AI 大模型的 A股/港股/美股/日股/韩股/台股自选股智能分析系统，每日自动分析并推送「决策仪表盘」到企业微信/飞书/Telegram/Discord/Slack/邮箱 **产品预览** · **功能特性** · **快速开始** · **推送效果** · **文档中心** · **完整指南** 简体中文 | English | 繁體中文 💖 赞助商 (Sponsors) 感谢 Modelflare 赞助本项目！由美国 Havenbyte LLC 运营，满血稳定不掺水，低成本接入 GPT、Claude、Gemini、Grok 及 40+ 图片/视频模型。指定 OpenAI 分组提供 65% / 75% / 85% 每日缓存命中率保障 ；单笔充值 US$20 解锁 GPT 0.015x ， US$50 解锁 Claude 0.03x 。 专属链接注册 🖥️ 产品预览 ✨ 功能特性 | 能力 | 覆盖内容 | | AI 决策报告 | 核心结论、评分、趋势、买卖点位、风险警报、催化因素、操作检查清单 | | 多市场数据聚合 | 覆盖 A股、港股、美股、日股、韩股、台股和 ETF，支持行情、K 线、技术指标、新闻、公告、基本面与报告辅助数据；不同市场的数据源和能力边界见 市场支持边界 | | Web / 桌面工作台 | 手动分析、任务进度、历史报告、完整 Markdown、回测、持仓、配置管理、浅色 / 深色主题 | | Agent 策略问股 | 多轮追问，支持均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种内置策略，覆盖 Web/Bot/API | | 智能导入与补全 | 图片、CSV/Excel、剪贴板导入；股票代码/名称/拼音/别名补全 | | 自动化与推送 | GitHub Actions、Docker、本地定时任务、FastAPI 服务和企业微信/飞书/Telegram/Discord/Slack/邮件推送 | > 功能细节、字段契约、基本面 P0 超时语义、交易纪律、数据源优先级、Web/API 行为请看 完整配置与部署指南。 技术栈与数据来源 | 类型 | 支持 | | AI 模型 | Modelflare、AIHubMix、Gemini、OpenAI 兼容、DeepSeek、通义千问、Claude、Ollama 本地模型等 | | 行情数据 | AkShare、Tushare、Pytdx、Baostock、YFinance、Longbridge | | 新闻搜索 | Anspire、SerpAPI、Tavily、Bocha、Brave、MiniMax、SearXNG | | 社交舆情 | Stock Sentiment API（Reddit / X / Polymarket，仅美股"
+  },
+  {
+    "rank": 10,
+    "name": "homeassistant-ai/ha-mcp",
+    "url": "https://github.com/homeassistant-ai/ha-mcp",
+    "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+    "stars": "6,129",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "claude",
+      "hacs",
+      "home-assistant",
+      "home-automation",
+      "llm",
+      "mcp",
+      "model-context-protocol"
+    ],
+    "readmeExcerpt": "> **Breaking change (v7.3.0):** `ha_config_set_yaml` has been moved to beta. HA-MCP — Manage Home Assistant with AI Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 🚀 Get Started The recommended way to run ha-mcp is the **HA-MCP integration**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect. **Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):** **Quick start:** > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step. 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see compatibility details). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**. On **Home Assistant 2026.11 or newer**, open **"
+  }
+]
