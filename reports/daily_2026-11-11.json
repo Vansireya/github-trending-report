@@ -1,0 +1,158 @@
+{
+  "title": "Agent Skills 生态与 Rust 全栈框架同台",
+  "opening": "今天榜单被 Agent Skills 占据：Anthropic 官方技能库和 addyosmani 的工程化技能包同时上榜，说明“教 AI 按流程干活”正从提示词变成可分发资产。另一个值得看的是 tokio-rs/topcoat，Rust 全栈框架开始补“开箱即用”这一课。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "stars": "23,290",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles ",
+      "summary": "Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还宣称对 AI 助手友好。",
+      "problem": "它基于 React 19+ 和 StyleX，导入预构建 CSS 即可用，不需要额外构建插件。真正特别的是“开放内部”：组件可逐层组合，swizzle 能把源码弹出到项目里自己改。目前处于 Beta，且 StyleX 生态本身仍在早期，迁移前得掂量。"
+    },
+    {
+      "rank": 2,
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "stars": "192,483",
+      "language": "Python",
+      "topics": [
+        "agent-skills"
+      ],
+      "readmeExcerpt": "> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see agentskills.io. Skills Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks. For more information, check out: - What are skills? - Using skills in Claude - How to create custom skills - Equipping agents for the real world with Agent Skills About This Repository This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.). Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to un",
+      "summary": "Anthropic 官方放出的 Claude 技能示例库，每个技能一个文件夹加 SKILL.md，从写文档到测试 Web 应用都有。",
+      "problem": "技能本质是“指令+脚本+资源”的动态加载包，让 Claude 按固定流程完成专项任务。这个仓库的价值在于示范技能该怎么组织，而不是直接拿来当产品用；想定制自己的技能，得先理解 SKILL.md 的元数据约定。"
+    },
+    {
+      "rank": 3,
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "stars": "115,276",
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "readmeExcerpt": "Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`",
+      "summary": "把高级工程师的工作流拆成 9 个斜杠命令，从写规格、拆任务到测试、审查、上线，让 AI 编码代理按节奏走。",
+      "problem": "每个命令对应开发生命周期的一个阶段，比如 /spec 强调先写规格再写代码，/test 把测试当证明。它面向 Claude Code、Cursor、Codex 等代理，安装为插件命令；但技能本身不保证代理会严格执行，质量仍取决于模型和项目约束。"
+    },
+    {
+      "rank": 4,
+      "name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "stars": "20,568",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "Claude Quickstarts Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API. Each quickstart provides a foundation that you can easily build upon and customize for your specific needs. Getting Started To use these quickstarts, you'll need an Claude API key. If you don't have one yet, you can sign up for free at console.anthropic.com. Available Quickstarts Customer Support Agent A customer support agent powered by Claude. This project demonstrates how to leverage Claude's natural language understanding and generation capabilities to create an AI-assisted customer support system with access to a knowledge base. Go to Customer Support Agent Quickstart Financial Data Analyst A financial data analyst powered by Claude. This project demonstrates how to leverage Claude's capabilities with interactive data visualization to analyze financial data via chat. Go to Financial Data Analyst Quickstart Computer Use Demo An environment and tools that Claude can use to control a desktop computer. This project demonstrates how to leverage the computer use capabilities of Claude, including support for the latest `com",
+      "summary": "Claude API 的起步项目合集，客服代理、财务数据分析、电脑操作演示各给一个可跑的基础。",
+      "problem": "每个 quickstart 都围绕一个具体场景展示 Claude 的能力边界，比如客服代理接知识库、财务分析做交互图表。适合拿来改造成自己的原型，但代码是演示级，离生产部署还有距离。"
+    },
+    {
+      "rank": 5,
+      "name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "stars": "17,437",
+      "language": "C++",
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "readmeExcerpt": "**MuJoCo** stands for **Mu**lti-**Jo**int dynamics with **Co**ntact. It is a general purpose physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, machine learning, and other areas which demand fast and accurate simulation of articulated structures interacting with their environment. This repository is maintained by Google DeepMind. MuJoCo has a C API and is intended for researchers and developers. The runtime simulation module is tuned to maximize performance and operates on low-level data structures that are preallocated by the built-in XML compiler. The library includes interactive visualization in native desktop windows and web browsers. MuJoCo further exposes a large number of utility functions for computing physics-related quantities. We also provide [Python bindings] and a plug-in for the [Unity] game engine. Documentation MuJoCo's documentation can be found at [mujoco.readthedocs.io]. Upcoming features due for the next release can be found in the [changelog] in the \"latest\" branch. Getting Started 1. **Try MuJoCo in your browser.** Visit mujoco.org to explore MuJoCo on desktop or mobile with nothing to install, or",
+      "summary": "DeepMind 维护的通用物理引擎，专攻关节结构与接触模拟，机器人、生物力学和动画研究的老牌基础设施。",
+      "problem": "C API 加预分配数据结构追求运行时性能，自带桌面和浏览器可视化，还有 Python 绑定和 Unity 插件。它面向需要快速且准确模拟的研究者，不是游戏引擎，上手门槛在物理建模而非渲染。"
+    },
+    {
+      "rank": 6,
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "stars": "12,130",
+      "language": "Ruby",
+      "topics": [],
+      "readmeExcerpt": "Deutsch | Español | Français | 日本語 | 한국어 | Português | Русский | 中文 Sure: The personal finance app for everyone Get involved: Discord • Website • Issues > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. > Learn more in their final release doc. Backstory The Maybe Finance (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! Hosting Sure Sure is a fully working pers",
+      "summary": "Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，带着近百万美元开发投入的遗产继续跑。",
+      "problem": "原团队 2023 年停止开发后开源，社区接手维护。它适合想自己掌控财务数据、又愿意折腾 Ruby 部署的人；但作为分叉项目，功能迭代和托管服务的可持续性仍需观察。"
+    },
+    {
+      "rank": 7,
+      "name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "stars": "6,763",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "readmeExcerpt": "> **Breaking change (v7.3.0):** `ha_config_set_yaml` has been moved to beta. HA-MCP — Manage Home Assistant with AI Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 🚀 Get Started The recommended way to run ha-mcp is the **HA-MCP integration**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect. **Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):** **Quick start:** > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step. 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see compatibility details). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**. On **Home Assistant 2026.11 or newer**, open **",
+      "summary": "把 Home Assistant 接进 Claude、ChatGPT 等助手的 MCP 集成，装进 HACS 就能用自然语言配自动化。",
+      "problem": "推荐方式是通过 HACS 安装集成，服务器在进程内运行，覆盖 HA OS、Supervised、Container 和 Core 全安装类型。注意 v7.3.0 起 ha_config_set_yaml 被移到 beta，且需要 HA 2026.8.0 以上，老版本升级前得看兼容说明。"
+    },
+    {
+      "rank": 8,
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "stars": "49,347",
+      "language": "Rust",
+      "topics": [],
+      "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h",
+      "summary": "Rust 写的浏览器自动化 CLI，把页面读成带 @e1 引用的紧凑文本，让 AI 代理一条命令一步地操作网页。",
+      "problem": "代理先 snapshot 拿元素引用，再对引用执行动作，然后重新读页面确认结果，浏览器在命令之间保持打开。它适合 shell 驱动的代理流程，但页面一变引用就失效，必须重新快照，步骤多时调用次数会涨。"
+    },
+    {
+      "rank": 9,
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "stars": "109,213",
+      "language": "Python",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux"
+      ],
+      "readmeExcerpt": "",
+      "summary": "资料不足，先保留观察",
+      "problem": ""
+    },
+    {
+      "rank": 10,
+      "name": "tokio-rs/topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "description": "A batteries-included framework for building web apps",
+      "stars": "6,903",
+      "language": "Rust",
+      "topics": [],
+      "readmeExcerpt": "The full full-stack framework for Rust [![Crates.io][crates-badge]][crates-url] [![Docs.rs][docs-badge]][docs-url] [![MIT licensed][mit-badge]][mit-url] [![Build Status][actions-badge]][actions-url] [![Discord chat][discord-badge]][discord-url] [crates-badge]: https://img.shields.io/crates/v/topcoat.svg?style=flat-square [crates-url]: https://crates.io/crates/topcoat [docs-badge]: https://img.shields.io/docsrs/topcoat?style=flat-square [docs-url]: https://docs.rs/topcoat/latest/topcoat [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square [mit-url]: https://github.com/tokio-rs/topcoat/blob/main/LICENSE [actions-badge]: https://img.shields.io/github/actions/workflow/status/tokio-rs/topcoat/ci.yml?branch=main&style=flat-square [actions-url]: https://github.com/tokio-rs/topcoat/actions?query=workflow%3ACI+branch%3Amain [discord-badge]: https://img.shields.io/discord/500028886025895936.svg?logo=discord&style=flat-square [discord-url]: https://discord.gg/tokio Topcoat is a modular, batteries-included Rust framework for building full-stack apps. It prioritizes simplicity and productivity. See Learn Topcoat to get started, or the Roadmap for what's coming next. ",
+      "summary": "Tokio 团队出的 Rust 全栈 Web 框架，主打“电池 included”，把简单和生产力放在性能之前。",
+      "problem": "它定位模块化全栈应用框架，想补上 Rust Web 开发里零散拼装的那一环。目前信息集中在框架宣言和路线图，具体组件成熟度、与 Axum 等现有方案的分工，还得等文档和示例铺开再看。"
+    }
+  ],
+  "closing": "Agent Skills 从提示词技巧变成可版本化的工程资产，这是今天最实的信号；Rust 全栈框架多一个选择总是好事，但先看它能不能把“开箱即用”兑现。"
+}

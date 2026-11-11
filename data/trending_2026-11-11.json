@@ -1,0 +1,133 @@
+[
+  {
+    "rank": 1,
+    "name": "meta/astryx",
+    "url": "https://github.com/meta/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "stars": "23,290",
+    "language": "TypeScript",
+    "topics": [],
+    "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles "
+  },
+  {
+    "rank": 2,
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": "192,483",
+    "language": "Python",
+    "topics": [
+      "agent-skills"
+    ],
+    "readmeExcerpt": "> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see agentskills.io. Skills Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks. For more information, check out: - What are skills? - Using skills in Claude - How to create custom skills - Equipping agents for the real world with Agent Skills About This Repository This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.). Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to un"
+  },
+  {
+    "rank": 3,
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars": "115,276",
+    "language": "JavaScript",
+    "topics": [
+      "agent-skills",
+      "antigravity",
+      "claude-code",
+      "codex",
+      "cursor",
+      "skills"
+    ],
+    "readmeExcerpt": "Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`"
+  },
+  {
+    "rank": 4,
+    "name": "anthropics/claude-quickstarts",
+    "url": "https://github.com/anthropics/claude-quickstarts",
+    "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+    "stars": "20,568",
+    "language": "Python",
+    "topics": [],
+    "readmeExcerpt": "Claude Quickstarts Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API. Each quickstart provides a foundation that you can easily build upon and customize for your specific needs. Getting Started To use these quickstarts, you'll need an Claude API key. If you don't have one yet, you can sign up for free at console.anthropic.com. Available Quickstarts Customer Support Agent A customer support agent powered by Claude. This project demonstrates how to leverage Claude's natural language understanding and generation capabilities to create an AI-assisted customer support system with access to a knowledge base. Go to Customer Support Agent Quickstart Financial Data Analyst A financial data analyst powered by Claude. This project demonstrates how to leverage Claude's capabilities with interactive data visualization to analyze financial data via chat. Go to Financial Data Analyst Quickstart Computer Use Demo An environment and tools that Claude can use to control a desktop computer. This project demonstrates how to leverage the computer use capabilities of Claude, including support for the latest `com"
+  },
+  {
+    "rank": 5,
+    "name": "google-deepmind/mujoco",
+    "url": "https://github.com/google-deepmind/mujoco",
+    "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+    "stars": "17,437",
+    "language": "C++",
+    "topics": [
+      "mujoco",
+      "physics",
+      "robotics"
+    ],
+    "readmeExcerpt": "**MuJoCo** stands for **Mu**lti-**Jo**int dynamics with **Co**ntact. It is a general purpose physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, machine learning, and other areas which demand fast and accurate simulation of articulated structures interacting with their environment. This repository is maintained by Google DeepMind. MuJoCo has a C API and is intended for researchers and developers. The runtime simulation module is tuned to maximize performance and operates on low-level data structures that are preallocated by the built-in XML compiler. The library includes interactive visualization in native desktop windows and web browsers. MuJoCo further exposes a large number of utility functions for computing physics-related quantities. We also provide [Python bindings] and a plug-in for the [Unity] game engine. Documentation MuJoCo's documentation can be found at [mujoco.readthedocs.io]. Upcoming features due for the next release can be found in the [changelog] in the \"latest\" branch. Getting Started 1. **Try MuJoCo in your browser.** Visit mujoco.org to explore MuJoCo on desktop or mobile with nothing to install, or"
+  },
+  {
+    "rank": 6,
+    "name": "we-promise/sure",
+    "url": "https://github.com/we-promise/sure",
+    "description": "The personal finance app for everyone (by everyone)",
+    "stars": "12,130",
+    "language": "Ruby",
+    "topics": [],
+    "readmeExcerpt": "Deutsch | Español | Français | 日本語 | 한국어 | Português | Русский | 中文 Sure: The personal finance app for everyone Get involved: Discord • Website • Issues > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. > Learn more in their final release doc. Backstory The Maybe Finance (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! Hosting Sure Sure is a fully working pers"
+  },
+  {
+    "rank": 7,
+    "name": "homeassistant-ai/ha-mcp",
+    "url": "https://github.com/homeassistant-ai/ha-mcp",
+    "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+    "stars": "6,763",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "claude",
+      "hacs",
+      "home-assistant",
+      "home-automation",
+      "llm",
+      "mcp",
+      "model-context-protocol"
+    ],
+    "readmeExcerpt": "> **Breaking change (v7.3.0):** `ha_config_set_yaml` has been moved to beta. HA-MCP — Manage Home Assistant with AI Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 🚀 Get Started The recommended way to run ha-mcp is the **HA-MCP integration**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect. **Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):** **Quick start:** > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step. 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see compatibility details). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**. On **Home Assistant 2026.11 or newer**, open **"
+  },
+  {
+    "rank": 8,
+    "name": "vercel-labs/agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser automation CLI for AI agents",
+    "stars": "49,347",
+    "language": "Rust",
+    "topics": [],
+    "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h"
+  },
+  {
+    "rank": 9,
+    "name": "sherlock-project/sherlock",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "description": "Hunt down social media accounts by username across social networks",
+    "stars": "109,213",
+    "language": "Python",
+    "topics": [
+      "cli",
+      "cti",
+      "cybersecurity",
+      "forensics",
+      "hacktoberfest",
+      "information-gathering",
+      "infosec",
+      "linux"
+    ],
+    "readmeExcerpt": ""
+  },
+  {
+    "rank": 10,
+    "name": "tokio-rs/topcoat",
+    "url": "https://github.com/tokio-rs/topcoat",
+    "description": "A batteries-included framework for building web apps",
+    "stars": "6,903",
+    "language": "Rust",
+    "topics": [],
+    "readmeExcerpt": "The full full-stack framework for Rust [![Crates.io][crates-badge]][crates-url] [![Docs.rs][docs-badge]][docs-url] [![MIT licensed][mit-badge]][mit-url] [![Build Status][actions-badge]][actions-url] [![Discord chat][discord-badge]][discord-url] [crates-badge]: https://img.shields.io/crates/v/topcoat.svg?style=flat-square [crates-url]: https://crates.io/crates/topcoat [docs-badge]: https://img.shields.io/docsrs/topcoat?style=flat-square [docs-url]: https://docs.rs/topcoat/latest/topcoat [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square [mit-url]: https://github.com/tokio-rs/topcoat/blob/main/LICENSE [actions-badge]: https://img.shields.io/github/actions/workflow/status/tokio-rs/topcoat/ci.yml?branch=main&style=flat-square [actions-url]: https://github.com/tokio-rs/topcoat/actions?query=workflow%3ACI+branch%3Amain [discord-badge]: https://img.shields.io/discord/500028886025895936.svg?logo=discord&style=flat-square [discord-url]: https://discord.gg/tokio Topcoat is a modular, batteries-included Rust framework for building full-stack apps. It prioritizes simplicity and productivity. See Learn Topcoat to get started, or the Roadmap for what's coming next. "
+  }
+]
