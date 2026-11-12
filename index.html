@@ -21,11 +21,11 @@
     }
   </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
-  <title>GitHub 简报 - 2026年11月11日星期三</title>
+  <title>GitHub 简报 - 2026年11月12日星期四</title>
   <script src="data/ranking_data.js"></script>
   <link rel="stylesheet" href="src/templates/style-v2.css?v=bcdb31d3">
 </head>
-<body data-report-base-path="reports/" data-report-date="2026-11-11">
+<body data-report-base-path="reports/" data-report-date="2026-11-12">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -58,23 +58,23 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="hero-meta">
-          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月11日星期三</time>
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月12日星期四</time>
 
         </div>
-        <h1>Agent Skills 生态与 Rust 全栈框架同台</h1>
-        <p>今天榜单被 Agent Skills 占据：Anthropic 官方技能库和 addyosmani 的工程化技能包同时上榜，说明“教 AI 按流程干活”正从提示词变成可分发资产。另一个值得看的是 tokio-rs/topcoat，Rust 全栈框架开始补“开箱即用”这一课。</p>
+        <h1>Agent 技能与工具链集中涌现</h1>
+        <p>今天榜单几乎被 AI 编码代理的配套工程占满，从设计系统、代码审计到浏览器操作，都在回答同一个问题：怎么让代理干活更靠谱。最值得先看的是 shadcn/improve 和 addyosmani/agent-skills，前者把“想清楚”和“动手写”拆给不同模型，后者把资深工程师的工作流固化成斜杠命令。</p>
       </div>
     </section>
 
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="meta/astryx" data-project-url="https://github.com/meta/astryx" data-project-summary="Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还宣称对 AI 助手友好。" data-project-stars="23,290" data-language="TypeScript">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="meta/astryx" data-project-url="https://github.com/meta/astryx" data-project-summary="Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还特意声明对 AI 助手友好。" data-project-stars="25,372" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">1</div>
     <div class="project-identity">
       <div class="project-title-line">
         <a class="project-name" href="https://github.com/meta/astryx" target="_blank" rel="noopener noreferrer">meta/astryx</a>
-        <span class="star-pill" aria-label="23,290 stars">★ 23,290</span>
+        <span class="star-pill" aria-label="25,372 stars">★ 25,372</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
@@ -85,21 +85,21 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 meta/astryx" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还宣称对 AI 助手友好。</p>
+  <p class="project-summary">Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还特意声明对 AI 助手友好。</p>
   <button class="detail-toggle" type="button" aria-label="收起 meta/astryx 的项目解读" aria-expanded="true" aria-controls="project-meta-astryx">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-meta-astryx">
-    <p>它基于 React 19+ 和 StyleX，导入预构建 CSS 即可用，不需要额外构建插件。真正特别的是“开放内部”：组件可逐层组合，swizzle 能把源码弹出到项目里自己改。目前处于 Beta，且 StyleX 生态本身仍在早期，迁移前得掂量。</p>
+    <p>它基于 React 19+ 和 StyleX，导入预构建 CSS 就能用，不需要额外构建插件。比较特别的是“开放内部”：组件可逐层组合，swizzle 能把源码弹出到项目里自己改。目前处于 Beta，且与 StyleX 绑定较深，换技术栈前得想清楚。</p>
   </div>
 </article>
-<article class="project-card project-card--featured" data-project-name="anthropics/skills" data-project-url="https://github.com/anthropics/skills" data-project-summary="Anthropic 官方放出的 Claude 技能示例库，每个技能一个文件夹加 SKILL.md，从写文档到测试 Web 应用都有。" data-project-stars="192,483" data-language="Python">
+<article class="project-card project-card--featured" data-project-name="ZhuLinsen/daily_stock_analysis" data-project-url="https://github.com/ZhuLinsen/daily_stock_analysis" data-project-summary="给自选股做每日 AI 体检，覆盖 A 股、港股、美股等六个市场，结论直接推到企业微信或 Telegram。" data-project-stars="70,535" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">2</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer">anthropics/skills</a>
-        <span class="star-pill" aria-label="192,483 stars">★ 192,483</span>
+        <a class="project-name" href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank" rel="noopener noreferrer">ZhuLinsen/daily_stock_analysis</a>
+        <span class="star-pill" aria-label="70,535 stars">★ 70,535</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
@@ -107,24 +107,74 @@
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 anthropics/skills" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ZhuLinsen/daily_stock_analysis" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">Anthropic 官方放出的 Claude 技能示例库，每个技能一个文件夹加 SKILL.md，从写文档到测试 Web 应用都有。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 anthropics/skills 的项目解读" aria-expanded="true" aria-controls="project-anthropics-skills">
+  <p class="project-summary">给自选股做每日 AI 体检，覆盖 A 股、港股、美股等六个市场，结论直接推到企业微信或 Telegram。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 ZhuLinsen/daily_stock_analysis 的项目解读" aria-expanded="true" aria-controls="project-zhulinsen-daily-stock-analysis">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-anthropics-skills">
-    <p>技能本质是“指令+脚本+资源”的动态加载包，让 Claude 按固定流程完成专项任务。这个仓库的价值在于示范技能该怎么组织，而不是直接拿来当产品用；想定制自己的技能，得先理解 SKILL.md 的元数据约定。</p>
+  <div class="project-details" id="project-zhulinsen-daily-stock-analysis">
+    <p>它把行情、新闻、技术指标和基本面数据聚合起来，让 LLM 生成带评分、买卖点位和风险警报的决策仪表盘，还能用 GitHub Actions 零成本定时跑。但数据源依赖 AkShare、Tushare 等第三方接口，不同市场的能力边界并不一致，报告质量也受模型和提示词影响。</p>
   </div>
 </article>
-<article class="project-card project-card--featured" data-project-name="addyosmani/agent-skills" data-project-url="https://github.com/addyosmani/agent-skills" data-project-summary="把高级工程师的工作流拆成 9 个斜杠命令，从写规格、拆任务到测试、审查、上线，让 AI 编码代理按节奏走。" data-project-stars="115,276" data-language="JavaScript">
+<article class="project-card project-card--featured" data-project-name="GoogleChrome/modern-web-guidance-src" data-project-url="https://github.com/GoogleChrome/modern-web-guidance-src" data-project-summary="Chrome、Edge、Firefox 和 MDN 一起维护的“现代 Web 技能包”，专门纠正编码代理爱写老式 JavaScript 的毛病。" data-project-stars="1,938" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">3</div>
     <div class="project-identity">
       <div class="project-title-line">
+        <a class="project-name" href="https://github.com/GoogleChrome/modern-web-guidance-src" target="_blank" rel="noopener noreferrer">GoogleChrome/modern-web-guidance-src</a>
+        <span class="star-pill" aria-label="1,938 stars">★ 1,938</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 GoogleChrome/modern-web-guidance-src" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Chrome、Edge、Firefox 和 MDN 一起维护的“现代 Web 技能包”，专门纠正编码代理爱写老式 JavaScript 的毛病。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 GoogleChrome/modern-web-guidance-src 的项目解读" aria-expanded="true" aria-controls="project-googlechrome-modern-web-guidance-src">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-googlechrome-modern-web-guidance-src">
+    <p>它把 Web 平台最佳实践和浏览器兼容数据嵌入代理，让代理优先用原生方案而不是堆砌旧模式。仓库本身是源码和评测仪表盘，不是直接可用的产品；想用需要按文档安装技能，效果也取决于代理是否遵循。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="shadcn/improve" data-project-url="https://github.com/shadcn/improve" data-project-summary="让最贵的模型只做审计和写计划，把执行交给便宜模型，计划本身就是交付物。" data-project-stars="11,086" data-language="">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/shadcn/improve" target="_blank" rel="noopener noreferrer">shadcn/improve</a>
+        <span class="star-pill" aria-label="11,086 stars">★ 11,086</span>
+      </div>
+      <div class="project-tags">
+
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 shadcn/improve" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">让最贵的模型只做审计和写计划，把执行交给便宜模型，计划本身就是交付物。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 shadcn/improve 的项目解读" aria-expanded="false" aria-controls="project-shadcn-improve">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-shadcn-improve" hidden>
+    <p>在仓库里跑 /improve，它会扫描代码、给出发现列表，你挑几条让它写成 plans/ 下的 Markdown 计划，再派便宜模型在隔离 worktree 里执行并对照计划审查 diff。思路很清醒：智能用在判断上，体力活外包。限制是计划质量完全取决于审计模型，且合并仍需人工把关。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="addyosmani/agent-skills" data-project-url="https://github.com/addyosmani/agent-skills" data-project-summary="把资深工程师的九步工作流做成斜杠命令，从写规格到上线，每一步都卡住质量门。" data-project-stars="116,087" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
         <a class="project-name" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a>
-        <span class="star-pill" aria-label="115,276 stars">★ 115,276</span>
+        <span class="star-pill" aria-label="116,087 stars">★ 116,087</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>JavaScript</span>
@@ -135,121 +185,21 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 addyosmani/agent-skills" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">把高级工程师的工作流拆成 9 个斜杠命令，从写规格、拆任务到测试、审查、上线，让 AI 编码代理按节奏走。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 addyosmani/agent-skills 的项目解读" aria-expanded="true" aria-controls="project-addyosmani-agent-skills">
+  <p class="project-summary">把资深工程师的九步工作流做成斜杠命令，从写规格到上线，每一步都卡住质量门。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 addyosmani/agent-skills 的项目解读" aria-expanded="false" aria-controls="project-addyosmani-agent-skills">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-addyosmani-agent-skills">
-    <p>每个命令对应开发生命周期的一个阶段，比如 /spec 强调先写规格再写代码，/test 把测试当证明。它面向 Claude Code、Cursor、Codex 等代理，安装为插件命令；但技能本身不保证代理会严格执行，质量仍取决于模型和项目约束。</p>
+  <div class="project-details" id="project-addyosmani-agent-skills" hidden>
+    <p>命令覆盖 /spec、/plan、/build、/test、/review、/ship 等环节，每个命令自动激活对应技能，强调“先规格后代码”“小步原子任务”。它面向 Claude Code、Codex、Cursor 等支持 Agent Skills 的代理，安装后能减少手动串联步骤，但前提是团队认可这套流程，否则只是多了一层命令包装。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="anthropics/claude-quickstarts" data-project-url="https://github.com/anthropics/claude-quickstarts" data-project-summary="Claude API 的起步项目合集，客服代理、财务数据分析、电脑操作演示各给一个可跑的基础。" data-project-stars="20,568" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">4</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/anthropics/claude-quickstarts" target="_blank" rel="noopener noreferrer">anthropics/claude-quickstarts</a>
-        <span class="star-pill" aria-label="20,568 stars">★ 20,568</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 anthropics/claude-quickstarts" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Claude API 的起步项目合集，客服代理、财务数据分析、电脑操作演示各给一个可跑的基础。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 anthropics/claude-quickstarts 的项目解读" aria-expanded="false" aria-controls="project-anthropics-claude-quickstarts">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-anthropics-claude-quickstarts" hidden>
-    <p>每个 quickstart 都围绕一个具体场景展示 Claude 的能力边界，比如客服代理接知识库、财务分析做交互图表。适合拿来改造成自己的原型，但代码是演示级，离生产部署还有距离。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="google-deepmind/mujoco" data-project-url="https://github.com/google-deepmind/mujoco" data-project-summary="DeepMind 维护的通用物理引擎，专攻关节结构与接触模拟，机器人、生物力学和动画研究的老牌基础设施。" data-project-stars="17,437" data-language="C++">
-  <div class="project-card-header">
-    <div class="rank-badge">5</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/google-deepmind/mujoco" target="_blank" rel="noopener noreferrer">google-deepmind/mujoco</a>
-        <span class="star-pill" aria-label="17,437 stars">★ 17,437</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>C++</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 google-deepmind/mujoco" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">DeepMind 维护的通用物理引擎，专攻关节结构与接触模拟，机器人、生物力学和动画研究的老牌基础设施。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 google-deepmind/mujoco 的项目解读" aria-expanded="false" aria-controls="project-google-deepmind-mujoco">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-google-deepmind-mujoco" hidden>
-    <p>C API 加预分配数据结构追求运行时性能，自带桌面和浏览器可视化，还有 Python 绑定和 Unity 插件。它面向需要快速且准确模拟的研究者，不是游戏引擎，上手门槛在物理建模而非渲染。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="we-promise/sure" data-project-url="https://github.com/we-promise/sure" data-project-summary="Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，带着近百万美元开发投入的遗产继续跑。" data-project-stars="12,130" data-language="Ruby">
+<article class="project-card project-card--compact" data-project-name="vercel-labs/agent-browser" data-project-url="https://github.com/vercel-labs/agent-browser" data-project-summary="用 Rust 写的浏览器 CLI，把页面压成带 @e1 引用的可访问性树文本，让代理一条命令一步地操作网页。" data-project-stars="50,003" data-language="Rust">
   <div class="project-card-header">
     <div class="rank-badge">6</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/we-promise/sure" target="_blank" rel="noopener noreferrer">we-promise/sure</a>
-        <span class="star-pill" aria-label="12,130 stars">★ 12,130</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Ruby</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 we-promise/sure" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，带着近百万美元开发投入的遗产继续跑。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 we-promise/sure 的项目解读" aria-expanded="false" aria-controls="project-we-promise-sure">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-we-promise-sure" hidden>
-    <p>原团队 2023 年停止开发后开源，社区接手维护。它适合想自己掌控财务数据、又愿意折腾 Ruby 部署的人；但作为分叉项目，功能迭代和托管服务的可持续性仍需观察。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="homeassistant-ai/ha-mcp" data-project-url="https://github.com/homeassistant-ai/ha-mcp" data-project-summary="把 Home Assistant 接进 Claude、ChatGPT 等助手的 MCP 集成，装进 HACS 就能用自然语言配自动化。" data-project-stars="6,763" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">7</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/homeassistant-ai/ha-mcp" target="_blank" rel="noopener noreferrer">homeassistant-ai/ha-mcp</a>
-        <span class="star-pill" aria-label="6,763 stars">★ 6,763</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 homeassistant-ai/ha-mcp" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">把 Home Assistant 接进 Claude、ChatGPT 等助手的 MCP 集成，装进 HACS 就能用自然语言配自动化。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 homeassistant-ai/ha-mcp 的项目解读" aria-expanded="false" aria-controls="project-homeassistant-ai-ha-mcp">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-homeassistant-ai-ha-mcp" hidden>
-    <p>推荐方式是通过 HACS 安装集成，服务器在进程内运行，覆盖 HA OS、Supervised、Container 和 Core 全安装类型。注意 v7.3.0 起 ha_config_set_yaml 被移到 beta，且需要 HA 2026.8.0 以上，老版本升级前得看兼容说明。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="vercel-labs/agent-browser" data-project-url="https://github.com/vercel-labs/agent-browser" data-project-summary="Rust 写的浏览器自动化 CLI，把页面读成带 @e1 引用的紧凑文本，让 AI 代理一条命令一步地操作网页。" data-project-stars="49,347" data-language="Rust">
-  <div class="project-card-header">
-    <div class="rank-badge">8</div>
-    <div class="project-identity">
-      <div class="project-title-line">
         <a class="project-name" href="https://github.com/vercel-labs/agent-browser" target="_blank" rel="noopener noreferrer">vercel-labs/agent-browser</a>
-        <span class="star-pill" aria-label="49,347 stars">★ 49,347</span>
+        <span class="star-pill" aria-label="50,003 stars">★ 50,003</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Rust</span>
@@ -260,21 +210,46 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 vercel-labs/agent-browser" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">Rust 写的浏览器自动化 CLI，把页面读成带 @e1 引用的紧凑文本，让 AI 代理一条命令一步地操作网页。</p>
+  <p class="project-summary">用 Rust 写的浏览器 CLI，把页面压成带 @e1 引用的可访问性树文本，让代理一条命令一步地操作网页。</p>
   <button class="detail-toggle" type="button" aria-label="展开 vercel-labs/agent-browser 的项目解读" aria-expanded="false" aria-controls="project-vercel-labs-agent-browser">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-vercel-labs-agent-browser" hidden>
-    <p>代理先 snapshot 拿元素引用，再对引用执行动作，然后重新读页面确认结果，浏览器在命令之间保持打开。它适合 shell 驱动的代理流程，但页面一变引用就失效，必须重新快照，步骤多时调用次数会涨。</p>
+    <p>代理先 snapshot 拿到元素引用，再点击或输入，然后重新 snapshot 确认结果，浏览器在命令之间保持打开。它支持 CSS、文本、XPath 和语义定位，点击失败会报错而不是假装成功。适合需要精细控制的自动化场景，但每一步都要往返 shell，复杂流程的编排成本不低。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="sherlock-project/sherlock" data-project-url="https://github.com/sherlock-project/sherlock" data-project-summary="资料不足，先保留观察" data-project-stars="109,213" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="we-promise/sure" data-project-url="https://github.com/we-promise/sure" data-project-summary="被放弃的 Maybe Finance 由社区接手，继续做可自托管的个人财务应用。" data-project-stars="13,122" data-language="Ruby">
   <div class="project-card-header">
-    <div class="rank-badge">9</div>
+    <div class="rank-badge">7</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener noreferrer">sherlock-project/sherlock</a>
-        <span class="star-pill" aria-label="109,213 stars">★ 109,213</span>
+        <a class="project-name" href="https://github.com/we-promise/sure" target="_blank" rel="noopener noreferrer">we-promise/sure</a>
+        <span class="star-pill" aria-label="13,122 stars">★ 13,122</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Ruby</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 we-promise/sure" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">被放弃的 Maybe Finance 由社区接手，继续做可自托管的个人财务应用。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 we-promise/sure 的项目解读" aria-expanded="false" aria-controls="project-we-promise-sure">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-we-promise-sure" hidden>
+    <p>原团队烧了近百万美元后于 2023 年停摆并开源，这个 fork 想保住代码库并探索托管服务。它提供完整的个人财务功能，但作为社区维护项目，数据源和长期维护节奏是现实变量，适合愿意自己部署和折腾的用户。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="homeassistant-ai/ha-mcp" data-project-url="https://github.com/homeassistant-ai/ha-mcp" data-project-summary="把 Home Assistant 接进 Claude、ChatGPT 等助手，用自然语言配置和自动化智能家居。" data-project-stars="7,481" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/homeassistant-ai/ha-mcp" target="_blank" rel="noopener noreferrer">homeassistant-ai/ha-mcp</a>
+        <span class="star-pill" aria-label="7,481 stars">★ 7,481</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
@@ -282,12 +257,42 @@
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 sherlock-project/sherlock" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 homeassistant-ai/ha-mcp" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">资料不足，先保留观察</p>
-
-</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>Agent Skills 从提示词技巧变成可版本化的工程资产，这是今天最实的信号；Rust 全栈框架多一个选择总是好事，但先看它能不能把“开箱即用”兑现。</p></div></div>
+  <p class="project-summary">把 Home Assistant 接进 Claude、ChatGPT 等助手，用自然语言配置和自动化智能家居。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 homeassistant-ai/ha-mcp 的项目解读" aria-expanded="false" aria-controls="project-homeassistant-ai-ha-mcp">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-homeassistant-ai-ha-mcp" hidden>
+    <p>推荐通过 HACS 安装集成，服务器在 Home Assistant 进程内运行，覆盖 OS、Supervised、Container 和 Core 全安装类型。设置需要管理员令牌并选择客户端连接方式。注意 v7.3.0 把 ha_config_set_yaml 移到了 beta，升级前得确认兼容性。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="openai/codex-security" data-project-url="https://github.com/openai/codex-security" data-project-summary="OpenAI 出的安全扫描 CLI 和 TypeScript SDK，找漏洞、验证、打补丁一条龙，还能接进 CI。" data-project-stars="11,882" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">openai/codex-security</a>
+        <span class="star-pill" aria-label="11,882 stars">★ 11,882</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 openai/codex-security" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">OpenAI 出的安全扫描 CLI 和 TypeScript SDK，找漏洞、验证、打补丁一条龙，还能接进 CI。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 openai/codex-security 的项目解读" aria-expanded="false" aria-controls="project-openai-codex-security">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-openai-codex-security" hidden>
+    <p>它支持扫描仓库、指定路径或 Git 变更，深度扫描会重复标准扫描并去重结果，还能验证候选发现、生成补丁、起草 SECURITY.md 和威胁模型。发现可以导出 SARIF/JSON/CSV 或同步到 Linear、Jira、GitHub。功能面很宽，但实际效果取决于规则和模型判断，适合作为安全流程的辅助而非唯一防线。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最清晰的信号是：代理能力在往“流程化”和“可审查”走，而不是单纯堆模型。设计系统和安全扫描也在主动适配代理，值得留意的是这些工具都强调人类保留最终判断权。</p></div></div>
       </div>
 
       <aside class="rail">
@@ -313,7 +318,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14","2026-10-13"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14"]</div>
 
           </details>
         </section>

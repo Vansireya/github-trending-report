@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月12日星期四</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-12">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月12日星期四</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>Agent 技能与工具链集中涌现</h1>
+        <p>今天榜单几乎被 AI 编码代理的配套工程占满，从设计系统、代码审计到浏览器操作，都在回答同一个问题：怎么让代理干活更靠谱。最值得先看的是 shadcn/improve 和 addyosmani/agent-skills，前者把“想清楚”和“动手写”拆给不同模型，后者把资深工程师的工作流固化成斜杠命令。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="meta/astryx" data-project-url="https://github.com/meta/astryx" data-project-summary="Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还特意声明对 AI 助手友好。" data-project-stars="25,372" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/meta/astryx" target="_blank" rel="noopener noreferrer">meta/astryx</a>
+        <span class="star-pill" aria-label="25,372 stars">★ 25,372</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 meta/astryx" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还特意声明对 AI 助手友好。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 meta/astryx 的项目解读" aria-expanded="true" aria-controls="project-meta-astryx">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-meta-astryx">
+    <p>它基于 React 19+ 和 StyleX，导入预构建 CSS 就能用，不需要额外构建插件。比较特别的是“开放内部”：组件可逐层组合，swizzle 能把源码弹出到项目里自己改。目前处于 Beta，且与 StyleX 绑定较深，换技术栈前得想清楚。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="ZhuLinsen/daily_stock_analysis" data-project-url="https://github.com/ZhuLinsen/daily_stock_analysis" data-project-summary="给自选股做每日 AI 体检，覆盖 A 股、港股、美股等六个市场，结论直接推到企业微信或 Telegram。" data-project-stars="70,535" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank" rel="noopener noreferrer">ZhuLinsen/daily_stock_analysis</a>
+        <span class="star-pill" aria-label="70,535 stars">★ 70,535</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ZhuLinsen/daily_stock_analysis" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给自选股做每日 AI 体检，覆盖 A 股、港股、美股等六个市场，结论直接推到企业微信或 Telegram。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 ZhuLinsen/daily_stock_analysis 的项目解读" aria-expanded="true" aria-controls="project-zhulinsen-daily-stock-analysis">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-zhulinsen-daily-stock-analysis">
+    <p>它把行情、新闻、技术指标和基本面数据聚合起来，让 LLM 生成带评分、买卖点位和风险警报的决策仪表盘，还能用 GitHub Actions 零成本定时跑。但数据源依赖 AkShare、Tushare 等第三方接口，不同市场的能力边界并不一致，报告质量也受模型和提示词影响。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="GoogleChrome/modern-web-guidance-src" data-project-url="https://github.com/GoogleChrome/modern-web-guidance-src" data-project-summary="Chrome、Edge、Firefox 和 MDN 一起维护的“现代 Web 技能包”，专门纠正编码代理爱写老式 JavaScript 的毛病。" data-project-stars="1,938" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/GoogleChrome/modern-web-guidance-src" target="_blank" rel="noopener noreferrer">GoogleChrome/modern-web-guidance-src</a>
+        <span class="star-pill" aria-label="1,938 stars">★ 1,938</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 GoogleChrome/modern-web-guidance-src" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Chrome、Edge、Firefox 和 MDN 一起维护的“现代 Web 技能包”，专门纠正编码代理爱写老式 JavaScript 的毛病。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 GoogleChrome/modern-web-guidance-src 的项目解读" aria-expanded="true" aria-controls="project-googlechrome-modern-web-guidance-src">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-googlechrome-modern-web-guidance-src">
+    <p>它把 Web 平台最佳实践和浏览器兼容数据嵌入代理，让代理优先用原生方案而不是堆砌旧模式。仓库本身是源码和评测仪表盘，不是直接可用的产品；想用需要按文档安装技能，效果也取决于代理是否遵循。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="shadcn/improve" data-project-url="https://github.com/shadcn/improve" data-project-summary="让最贵的模型只做审计和写计划，把执行交给便宜模型，计划本身就是交付物。" data-project-stars="11,086" data-language="">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/shadcn/improve" target="_blank" rel="noopener noreferrer">shadcn/improve</a>
+        <span class="star-pill" aria-label="11,086 stars">★ 11,086</span>
+      </div>
+      <div class="project-tags">
+
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 shadcn/improve" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">让最贵的模型只做审计和写计划，把执行交给便宜模型，计划本身就是交付物。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 shadcn/improve 的项目解读" aria-expanded="false" aria-controls="project-shadcn-improve">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-shadcn-improve" hidden>
+    <p>在仓库里跑 /improve，它会扫描代码、给出发现列表，你挑几条让它写成 plans/ 下的 Markdown 计划，再派便宜模型在隔离 worktree 里执行并对照计划审查 diff。思路很清醒：智能用在判断上，体力活外包。限制是计划质量完全取决于审计模型，且合并仍需人工把关。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="addyosmani/agent-skills" data-project-url="https://github.com/addyosmani/agent-skills" data-project-summary="把资深工程师的九步工作流做成斜杠命令，从写规格到上线，每一步都卡住质量门。" data-project-stars="116,087" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a>
+        <span class="star-pill" aria-label="116,087 stars">★ 116,087</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 addyosmani/agent-skills" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把资深工程师的九步工作流做成斜杠命令，从写规格到上线，每一步都卡住质量门。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 addyosmani/agent-skills 的项目解读" aria-expanded="false" aria-controls="project-addyosmani-agent-skills">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-addyosmani-agent-skills" hidden>
+    <p>命令覆盖 /spec、/plan、/build、/test、/review、/ship 等环节，每个命令自动激活对应技能，强调“先规格后代码”“小步原子任务”。它面向 Claude Code、Codex、Cursor 等支持 Agent Skills 的代理，安装后能减少手动串联步骤，但前提是团队认可这套流程，否则只是多了一层命令包装。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="vercel-labs/agent-browser" data-project-url="https://github.com/vercel-labs/agent-browser" data-project-summary="用 Rust 写的浏览器 CLI，把页面压成带 @e1 引用的可访问性树文本，让代理一条命令一步地操作网页。" data-project-stars="50,003" data-language="Rust">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/vercel-labs/agent-browser" target="_blank" rel="noopener noreferrer">vercel-labs/agent-browser</a>
+        <span class="star-pill" aria-label="50,003 stars">★ 50,003</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Rust</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 vercel-labs/agent-browser" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">用 Rust 写的浏览器 CLI，把页面压成带 @e1 引用的可访问性树文本，让代理一条命令一步地操作网页。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 vercel-labs/agent-browser 的项目解读" aria-expanded="false" aria-controls="project-vercel-labs-agent-browser">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-vercel-labs-agent-browser" hidden>
+    <p>代理先 snapshot 拿到元素引用，再点击或输入，然后重新 snapshot 确认结果，浏览器在命令之间保持打开。它支持 CSS、文本、XPath 和语义定位，点击失败会报错而不是假装成功。适合需要精细控制的自动化场景，但每一步都要往返 shell，复杂流程的编排成本不低。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="we-promise/sure" data-project-url="https://github.com/we-promise/sure" data-project-summary="被放弃的 Maybe Finance 由社区接手，继续做可自托管的个人财务应用。" data-project-stars="13,122" data-language="Ruby">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/we-promise/sure" target="_blank" rel="noopener noreferrer">we-promise/sure</a>
+        <span class="star-pill" aria-label="13,122 stars">★ 13,122</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Ruby</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 we-promise/sure" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">被放弃的 Maybe Finance 由社区接手，继续做可自托管的个人财务应用。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 we-promise/sure 的项目解读" aria-expanded="false" aria-controls="project-we-promise-sure">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-we-promise-sure" hidden>
+    <p>原团队烧了近百万美元后于 2023 年停摆并开源，这个 fork 想保住代码库并探索托管服务。它提供完整的个人财务功能，但作为社区维护项目，数据源和长期维护节奏是现实变量，适合愿意自己部署和折腾的用户。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="homeassistant-ai/ha-mcp" data-project-url="https://github.com/homeassistant-ai/ha-mcp" data-project-summary="把 Home Assistant 接进 Claude、ChatGPT 等助手，用自然语言配置和自动化智能家居。" data-project-stars="7,481" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/homeassistant-ai/ha-mcp" target="_blank" rel="noopener noreferrer">homeassistant-ai/ha-mcp</a>
+        <span class="star-pill" aria-label="7,481 stars">★ 7,481</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 homeassistant-ai/ha-mcp" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把 Home Assistant 接进 Claude、ChatGPT 等助手，用自然语言配置和自动化智能家居。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 homeassistant-ai/ha-mcp 的项目解读" aria-expanded="false" aria-controls="project-homeassistant-ai-ha-mcp">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-homeassistant-ai-ha-mcp" hidden>
+    <p>推荐通过 HACS 安装集成，服务器在 Home Assistant 进程内运行，覆盖 OS、Supervised、Container 和 Core 全安装类型。设置需要管理员令牌并选择客户端连接方式。注意 v7.3.0 把 ha_config_set_yaml 移到了 beta，升级前得确认兼容性。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="openai/codex-security" data-project-url="https://github.com/openai/codex-security" data-project-summary="OpenAI 出的安全扫描 CLI 和 TypeScript SDK，找漏洞、验证、打补丁一条龙，还能接进 CI。" data-project-stars="11,882" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">openai/codex-security</a>
+        <span class="star-pill" aria-label="11,882 stars">★ 11,882</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 openai/codex-security" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">OpenAI 出的安全扫描 CLI 和 TypeScript SDK，找漏洞、验证、打补丁一条龙，还能接进 CI。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 openai/codex-security 的项目解读" aria-expanded="false" aria-controls="project-openai-codex-security">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-openai-codex-security" hidden>
+    <p>它支持扫描仓库、指定路径或 Git 变更，深度扫描会重复标准扫描并去重结果，还能验证候选发现、生成补丁、起草 SECURITY.md 和威胁模型。发现可以导出 SARIF/JSON/CSV 或同步到 Linear、Jira、GitHub。功能面很宽，但实际效果取决于规则和模型判断，适合作为安全流程的辅助而非唯一防线。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最清晰的信号是：代理能力在往“流程化”和“可审查”走，而不是单纯堆模型。设计系统和安全扫描也在主动适配代理，值得留意的是这些工具都强调人类保留最终判断权。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16","2026-10-14"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>

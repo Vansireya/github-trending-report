@@ -1,0 +1,169 @@
+{
+  "title": "Agent 技能与工具链集中涌现",
+  "opening": "今天榜单几乎被 AI 编码代理的配套工程占满，从设计系统、代码审计到浏览器操作，都在回答同一个问题：怎么让代理干活更靠谱。最值得先看的是 shadcn/improve 和 addyosmani/agent-skills，前者把“想清楚”和“动手写”拆给不同模型，后者把资深工程师的工作流固化成斜杠命令。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "stars": "25,372",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles ",
+      "summary": "Meta 内部用了八年的设计系统开源，150+ 组件、品牌主题和暗色模式打包成一套，还特意声明对 AI 助手友好。",
+      "problem": "它基于 React 19+ 和 StyleX，导入预构建 CSS 就能用，不需要额外构建插件。比较特别的是“开放内部”：组件可逐层组合，swizzle 能把源码弹出到项目里自己改。目前处于 Beta，且与 StyleX 绑定较深，换技术栈前得想清楚。"
+    },
+    {
+      "rank": 2,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "stars": "70,535",
+      "language": "Python",
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "llm",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading"
+      ],
+      "readmeExcerpt": "📈 股票智能分析系统 &nbsp; > 🤖 基于 AI 大模型的 A股/港股/美股/日股/韩股/台股自选股智能分析系统，每日自动分析并推送「决策仪表盘」到企业微信/飞书/Telegram/Discord/Slack/邮箱 **产品预览** · **功能特性** · **快速开始** · **推送效果** · **文档中心** · **完整指南** 简体中文 | English | 繁體中文 💖 赞助商 (Sponsors) 感谢 Modelflare 赞助本项目！由美国 Havenbyte LLC 运营，满血稳定不掺水，低成本接入 GPT、Claude、Gemini、Grok 及 40+ 图片/视频模型。指定 OpenAI 分组提供 65% / 75% / 85% 每日缓存命中率保障 ；单笔充值 US$20 解锁 GPT 0.015x ， US$50 解锁 Claude 0.03x 。 专属链接注册 🖥️ 产品预览 ✨ 功能特性 | 能力 | 覆盖内容 | | AI 决策报告 | 核心结论、评分、趋势、买卖点位、风险警报、催化因素、操作检查清单 | | 多市场数据聚合 | 覆盖 A股、港股、美股、日股、韩股、台股和 ETF，支持行情、K 线、技术指标、新闻、公告、基本面与报告辅助数据；不同市场的数据源和能力边界见 市场支持边界 | | Web / 桌面工作台 | 手动分析、任务进度、历史报告、完整 Markdown、回测、持仓、配置管理、浅色 / 深色主题 | | Agent 策略问股 | 多轮追问，支持均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种内置策略，覆盖 Web/Bot/API | | 智能导入与补全 | 图片、CSV/Excel、剪贴板导入；股票代码/名称/拼音/别名补全 | | 自动化与推送 | GitHub Actions、Docker、本地定时任务、FastAPI 服务和企业微信/飞书/Telegram/Discord/Slack/邮件推送 | > 功能细节、字段契约、基本面 P0 超时语义、交易纪律、数据源优先级、Web/API 行为请看 完整配置与部署指南。 技术栈与数据来源 | 类型 | 支持 | | AI 模型 | Modelflare、AIHubMix、Gemini、OpenAI 兼容、DeepSeek、通义千问、Claude、Ollama 本地模型等 | | 行情数据 | AkShare、Tushare、Pytdx、Baostock、YFinance、Longbridge | | 新闻搜索 | SerpAPI、Anspire、Tavily、Bocha、Brave、MiniMax、SearXNG | | 社交舆情 | Stock Sentiment API（Reddit / X / Polymarket，仅美股",
+      "summary": "给自选股做每日 AI 体检，覆盖 A 股、港股、美股等六个市场，结论直接推到企业微信或 Telegram。",
+      "problem": "它把行情、新闻、技术指标和基本面数据聚合起来，让 LLM 生成带评分、买卖点位和风险警报的决策仪表盘，还能用 GitHub Actions 零成本定时跑。但数据源依赖 AkShare、Tushare 等第三方接口，不同市场的能力边界并不一致，报告质量也受模型和提示词影响。"
+    },
+    {
+      "rank": 3,
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "No description",
+      "stars": "1,938",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Modern Web Guidance (Source) This repo is the source repository for GoogleChrome/modern-web-guidance and includes the code and documentation for authoring, calibrating, and evaluating its contents. **Modern Web Guidance** is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See CONTRIBUTING.md and GOVERNANCE.md for how we work on the project and orientation of the codebase. *Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community.* Documentation · Eval Dashboard · Source Code · Report an Issue Quickstart This command runs an interactive wizard to install Modern Web Guidance. See Alternative Installation Methods below. Try it out (without installing) Why? Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solut",
+      "summary": "Chrome、Edge、Firefox 和 MDN 一起维护的“现代 Web 技能包”，专门纠正编码代理爱写老式 JavaScript 的毛病。",
+      "problem": "它把 Web 平台最佳实践和浏览器兼容数据嵌入代理，让代理优先用原生方案而不是堆砌旧模式。仓库本身是源码和评测仪表盘，不是直接可用的产品；想用需要按文档安装技能，效果也取决于代理是否遵循。"
+    },
+    {
+      "rank": 4,
+      "name": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve",
+      "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+      "stars": "11,086",
+      "language": "Unknown",
+      "topics": [],
+      "readmeExcerpt": "improve An agent skill that audits any codebase and writes implementation plans for other agents to execute. The idea: use your most capable model for the part where intelligence compounds — understanding the codebase, judging what's worth doing, writing the spec — and hand execution to cheaper models. The skill never implements anything itself. The plan is the product. Install Works in any agent that supports Agent Skills format. The plans it writes are plain markdown, so any agent (or human) can pick them up. Usage How to use A typical first run, start to finish: 1. Open your agent in the repo and run `/improve` (or `/improve quick` to keep it cheap). 2. It maps the repo, audits it, and comes back with a findings table. Reply with the ones you want planned — \"plan 1, 3 and 5\". 3. Plans land in `plans/` — one file each, plus an index with the recommended order. Read them; they're meant to be reviewed. 4. Hand a plan to any agent (\"implement plans/001-*.md\"), or let the skill run it: `/improve execute 001`. It dispatches a cheaper model in an isolated worktree, reviews the diff against the plan, and reports back with a verdict. Merging stays up to you. 5. Next session, run `/improv",
+      "summary": "让最贵的模型只做审计和写计划，把执行交给便宜模型，计划本身就是交付物。",
+      "problem": "在仓库里跑 /improve，它会扫描代码、给出发现列表，你挑几条让它写成 plans/ 下的 Markdown 计划，再派便宜模型在隔离 worktree 里执行并对照计划审查 diff。思路很清醒：智能用在判断上，体力活外包。限制是计划质量完全取决于审计模型，且合并仍需人工把关。"
+    },
+    {
+      "rank": 5,
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "stars": "116,087",
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "readmeExcerpt": "Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`",
+      "summary": "把资深工程师的九步工作流做成斜杠命令，从写规格到上线，每一步都卡住质量门。",
+      "problem": "命令覆盖 /spec、/plan、/build、/test、/review、/ship 等环节，每个命令自动激活对应技能，强调“先规格后代码”“小步原子任务”。它面向 Claude Code、Codex、Cursor 等支持 Agent Skills 的代理，安装后能减少手动串联步骤，但前提是团队认可这套流程，否则只是多了一层命令包装。"
+    },
+    {
+      "rank": 6,
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "stars": "50,003",
+      "language": "Rust",
+      "topics": [],
+      "readmeExcerpt": "agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. Install - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in Installation. Quick start The snapshot for `example.com`: - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See Selectors. - A click fails, instead of reporting success, when the target is h",
+      "summary": "用 Rust 写的浏览器 CLI，把页面压成带 @e1 引用的可访问性树文本，让代理一条命令一步地操作网页。",
+      "problem": "代理先 snapshot 拿到元素引用，再点击或输入，然后重新 snapshot 确认结果，浏览器在命令之间保持打开。它支持 CSS、文本、XPath 和语义定位，点击失败会报错而不是假装成功。适合需要精细控制的自动化场景，但每一步都要往返 shell，复杂流程的编排成本不低。"
+    },
+    {
+      "rank": 7,
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "stars": "13,122",
+      "language": "Ruby",
+      "topics": [],
+      "readmeExcerpt": "Deutsch | Español | Français | 日本語 | 한국어 | Português | Русский | 中文 Sure: The personal finance app for everyone Get involved: Discord • Website • Issues > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. > Learn more in their final release doc. Backstory The Maybe Finance (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! Hosting Sure Sure is a fully working pers",
+      "summary": "被放弃的 Maybe Finance 由社区接手，继续做可自托管的个人财务应用。",
+      "problem": "原团队烧了近百万美元后于 2023 年停摆并开源，这个 fork 想保住代码库并探索托管服务。它提供完整的个人财务功能，但作为社区维护项目，数据源和长期维护节奏是现实变量，适合愿意自己部署和折腾的用户。"
+    },
+    {
+      "rank": 8,
+      "name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "stars": "7,481",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "readmeExcerpt": "> **Breaking change (v7.3.0):** `ha_config_set_yaml` has been moved to beta. HA-MCP — Manage Home Assistant with AI Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 🚀 Get Started The recommended way to run ha-mcp is the **HA-MCP integration**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect. **Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):** **Quick start:** > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step. 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see compatibility details). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**. On **Home Assistant 2026.11 or newer**, open **",
+      "summary": "把 Home Assistant 接进 Claude、ChatGPT 等助手，用自然语言配置和自动化智能家居。",
+      "problem": "推荐通过 HACS 安装集成，服务器在 Home Assistant 进程内运行，覆盖 OS、Supervised、Container 和 Core 全安装类型。设置需要管理员令牌并选择客户端连接方式。注意 v7.3.0 把 ha_config_set_yaml 移到了 beta，升级前得确认兼容性。"
+    },
+    {
+      "rank": 9,
+      "name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "stars": "11,882",
+      "language": "TypeScript",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops"
+      ],
+      "readmeExcerpt": "Codex Security Codex Security helps you find, investigate, and fix vulnerabilities in your code. Use its security workflows in Codex, or automate them with the `@openai/codex-security` CLI and TypeScript SDK. - **In Codex:** choose a security workflow. - **In a terminal:** install the CLI and scan your repository. - **In automation:** use the TypeScript SDK or GitHub Action. Features - Scan repositories, selected paths, or Git changes. Deep scans repeat Standard scans and return their deduplicated findings. - Validate candidate findings, generate patches, and verify existing fixes. - Draft `SECURITY.md` policies and save threat models for later review. - Browse saved scans and findings, identify duplicates, assess severity against your own rubric, and suggest owners from source and Git history. - Preview third-party scanner findings, save them locally, or publish supported reports to Codex Security Cloud. Scanner import guides. - Track findings in Linear, Jira, or GitHub, publish completed scans, or export SARIF, JSON, and CSV. Integration workflows. - Automate scans across repositories or project components, including in CI and containers. Use in Codex Open your repository in a Co",
+      "summary": "OpenAI 出的安全扫描 CLI 和 TypeScript SDK，找漏洞、验证、打补丁一条龙，还能接进 CI。",
+      "problem": "它支持扫描仓库、指定路径或 Git 变更，深度扫描会重复标准扫描并去重结果，还能验证候选发现、生成补丁、起草 SECURITY.md 和威胁模型。发现可以导出 SARIF/JSON/CSV 或同步到 Linear、Jira、GitHub。功能面很宽，但实际效果取决于规则和模型判断，适合作为安全流程的辅助而非唯一防线。"
+    },
+    {
+      "rank": 10,
+      "name": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java",
+      "description": "All Algorithms implemented in Java",
+      "stars": "67,106",
+      "language": "Java",
+      "topics": [
+        "algorithm",
+        "algorithm-challenges",
+        "algorithms",
+        "algorithms-datastructures",
+        "data-structures",
+        "hacktoberfest",
+        "java",
+        "search"
+      ],
+      "readmeExcerpt": "The Algorithms - Java You can run and edit the algorithms, or contribute to them using Gitpod.io (a free online development environment) with a single click. All algorithms are implemented in Java (for educational purposes) These implementations are intended for learning purposes. As such, they may be less efficient than the Java standard library. Contribution Guidelines Please read our Contribution Guidelines before you contribute to this project. Algorithms Our directory contains the full list of algorithms implemented in Java.",
+      "summary": "老牌算法教学仓库的 Java 版，所有实现以学习为目的，不追求生产级效率。",
+      "problem": "它覆盖数据结构与各类算法，适合刷题和教学参考，README 明确说实现可能比 Java 标准库低效。贡献门槛低，有 Hacktoberfest 标签，但正因如此代码质量参差，拿来直接用前最好自己过一遍。"
+    }
+  ],
+  "closing": "今天最清晰的信号是：代理能力在往“流程化”和“可审查”走，而不是单纯堆模型。设计系统和安全扫描也在主动适配代理，值得留意的是这些工具都强调人类保留最终判断权。"
+}
