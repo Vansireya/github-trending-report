@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月13日星期五</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-13">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月13日星期五</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>AI 编码代理开始补课：规范、安全与技能包</h1>
+        <p>今天榜单被 AI 编码代理的配套工程占据：Google Chrome 联合多家浏览器团队推出 Modern Web Guidance，试图把代理从旧代码习惯里拽出来；OpenAI 的 codex-security 则把漏洞扫描、验证和修复串成一条工作流。两个项目指向同一个问题——代理写代码很快，但需要有人教它写对的代码。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="GoogleChrome/modern-web-guidance-src" data-project-url="https://github.com/GoogleChrome/modern-web-guidance-src" data-project-summary="把现代 Web 平台的最佳实践和兼容性数据打包成代理技能，让编码助手少写旧式 JavaScript。" data-project-stars="3,381" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/GoogleChrome/modern-web-guidance-src" target="_blank" rel="noopener noreferrer">GoogleChrome/modern-web-guidance-src</a>
+        <span class="star-pill" aria-label="3,381 stars">★ 3,381</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 GoogleChrome/modern-web-guidance-src" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把现代 Web 平台的最佳实践和兼容性数据打包成代理技能，让编码助手少写旧式 JavaScript。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 GoogleChrome/modern-web-guidance-src 的项目解读" aria-expanded="true" aria-controls="project-googlechrome-modern-web-guidance-src">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-googlechrome-modern-web-guidance-src">
+    <p>LLM 训练数据里堆满遗留代码，代理容易默认生成臃肿的旧方案。这个项目由 Chrome、Edge、Firefox 和 MDN 团队共同维护，提供安装向导和评估面板，但当前只是源仓库，实际效果取决于代理是否接入这些技能。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="openai/codex-security" data-project-url="https://github.com/openai/codex-security" data-project-summary="OpenAI 的安全 CLI 和 TypeScript SDK，能扫描仓库、验证漏洞、生成补丁并跟踪修复。" data-project-stars="12,576" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">openai/codex-security</a>
+        <span class="star-pill" aria-label="12,576 stars">★ 12,576</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 openai/codex-security" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">OpenAI 的安全 CLI 和 TypeScript SDK，能扫描仓库、验证漏洞、生成补丁并跟踪修复。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 openai/codex-security 的项目解读" aria-expanded="true" aria-controls="project-openai-codex-security">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-openai-codex-security">
+    <p>适合在终端或 CI 里跑安全扫描，也支持导入第三方扫描器结果、导出 SARIF/JSON/CSV。深度扫描会重复标准扫描并去重，但漏洞验证和补丁质量仍依赖模型判断，不能替代人工审计。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="nvm-sh/nvm" data-project-url="https://github.com/nvm-sh/nvm" data-project-summary="老牌 Node 版本管理器，用 POSIX bash 脚本切换多个 Node.js 版本，近十万星。" data-project-stars="96,042" data-language="Shell">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener noreferrer">nvm-sh/nvm</a>
+        <span class="star-pill" aria-label="96,042 stars">★ 96,042</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 nvm-sh/nvm" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">老牌 Node 版本管理器，用 POSIX bash 脚本切换多个 Node.js 版本，近十万星。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 nvm-sh/nvm 的项目解读" aria-expanded="true" aria-controls="project-nvm-sh-nvm">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nvm-sh-nvm">
+    <p>在需要频繁切换 Node 版本的项目里几乎是标配，支持 .nvmrc 自动切换、LTS 别名和离线安装。局限是只覆盖 POSIX shell，Windows 原生环境得另找方案。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="pookjw/HermesEnabler" data-project-url="https://github.com/pookjw/HermesEnabler" data-project-summary="让任意 Apple Watch 用上爱马仕表盘，通过侧载 IPA 实现，仅支持 watchOS 27.0 到 27.3 beta 1。" data-project-stars="1,605" data-language="Objective-C">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/pookjw/HermesEnabler" target="_blank" rel="noopener noreferrer">pookjw/HermesEnabler</a>
+        <span class="star-pill" aria-label="1,605 stars">★ 1,605</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Objective-C</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 pookjw/HermesEnabler" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">让任意 Apple Watch 用上爱马仕表盘，通过侧载 IPA 实现，仅支持 watchOS 27.0 到 27.3 beta 1。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 pookjw/HermesEnabler 的项目解读" aria-expanded="false" aria-controls="project-pookjw-hermesenabler">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-pookjw-hermesenabler" hidden>
+    <p>需要配对的 iPhone、开发者模式和对证书的信任，Sideloadly 0.72 还有签名时丢掉手表应用的已知问题。版本窗口极窄，升级 watchOS 就可能失效，属于尝鲜型工具。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="we-promise/sure" data-project-url="https://github.com/we-promise/sure" data-project-summary="Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，Ruby 编写。" data-project-stars="14,074" data-language="Ruby">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/we-promise/sure" target="_blank" rel="noopener noreferrer">we-promise/sure</a>
+        <span class="star-pill" aria-label="14,074 stars">★ 14,074</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Ruby</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 we-promise/sure" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，Ruby 编写。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 we-promise/sure 的项目解读" aria-expanded="false" aria-controls="project-we-promise-sure">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-we-promise-sure" hidden>
+    <p>原团队烧掉近百万美元后开源，社区接手维护。适合想自己掌控财务数据的人，但自托管意味着数据库、备份和升级都得自己管，不是开箱即用的 SaaS。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="QwenLM/qwen-code" data-project-url="https://github.com/QwenLM/qwen-code" data-project-summary="Qwen 推出的开源终端编码代理，带 Auto-Memory、SubAgents 和 MCP，支持多协议切换。" data-project-stars="29,918" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">QwenLM/qwen-code</a>
+        <span class="star-pill" aria-label="29,918 stars">★ 29,918</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 QwenLM/qwen-code" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Qwen 推出的开源终端编码代理，带 Auto-Memory、SubAgents 和 MCP，支持多协议切换。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 QwenLM/qwen-code 的项目解读" aria-expanded="false" aria-controls="project-qwenlm-qwen-code">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-qwenlm-qwen-code" hidden>
+    <p>可以在终端、IDE、桌面和聊天工具里跑，模型和框架都开源，能接 OpenAI、Anthropic、Gemini 或本地 Ollama。1.0 Preview 刚把 Qoder 的代理能力并进来，迭代快也意味着接口可能不稳。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ashhart/TensorFold" data-project-url="https://github.com/ashhart/TensorFold" data-project-summary="用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。" data-project-stars="1,992" data-language="Zig">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ashhart/TensorFold" target="_blank" rel="noopener noreferrer">ashhart/TensorFold</a>
+        <span class="star-pill" aria-label="1,992 stars">★ 1,992</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Zig</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ashhart/TensorFold" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ashhart/TensorFold 的项目解读" aria-expanded="false" aria-controls="project-ashhart-tensorfold">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ashhart-tensorfold" hidden>
+    <p>卖点是不用装 Python 或 MLX，一个二进制读 checkpoint、分词并推理。但项目还很早期，贡献流程里甚至要求先用 Agent Traffic Control 认领任务，生态和文档都待成熟。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="nodejs/node" data-project-url="https://github.com/nodejs/node" data-project-summary="Node.js 官方运行时仓库，跨平台 JavaScript 环境，十二万星的老面孔。" data-project-stars="123,627" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/nodejs/node" target="_blank" rel="noopener noreferrer">nodejs/node</a>
+        <span class="star-pill" aria-label="123,627 stars">★ 123,627</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 nodejs/node" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Node.js 官方运行时仓库，跨平台 JavaScript 环境，十二万星的老面孔。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 nodejs/node 的项目解读" aria-expanded="false" aria-controls="project-nodejs-node">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nodejs-node" hidden>
+    <p>榜单常客，本身不需要多介绍。值得留意的是它采用开放治理和语义化版本，Alpha 线每年十月开新分支，生产环境应盯 LTS 而非 Current。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="addyosmani/agent-skills" data-project-url="https://github.com/addyosmani/agent-skills" data-project-summary="把资深工程师的工作流和质量门禁打包成代理技能，配 9 个斜杠命令覆盖开发全周期。" data-project-stars="116,783" data-language="JavaScript">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a>
+        <span class="star-pill" aria-label="116,783 stars">★ 116,783</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 addyosmani/agent-skills" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把资深工程师的工作流和质量门禁打包成代理技能，配 9 个斜杠命令覆盖开发全周期。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 addyosmani/agent-skills 的项目解读" aria-expanded="false" aria-controls="project-addyosmani-agent-skills">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-addyosmani-agent-skills" hidden>
+    <p>从 /spec 到 /ship，每个命令激活对应技能，让代理按“先规格后代码”“小步构建”的节奏走。适合 Claude Code、Cursor 等工具，但技能本身是提示词工程，效果取决于代理是否老实执行。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最值得看的是代理工程的基础设施化：浏览器厂商和 OpenAI 都在给代理立规矩、补安全课。工具越自动，越需要有人把质量门禁写进流程里。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>

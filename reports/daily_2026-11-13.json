@@ -1,0 +1,176 @@
+{
+  "title": "AI 编码代理开始补课：规范、安全与技能包",
+  "opening": "今天榜单被 AI 编码代理的配套工程占据：Google Chrome 联合多家浏览器团队推出 Modern Web Guidance，试图把代理从旧代码习惯里拽出来；OpenAI 的 codex-security 则把漏洞扫描、验证和修复串成一条工作流。两个项目指向同一个问题——代理写代码很快，但需要有人教它写对的代码。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "stars": "3,381",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Modern Web Guidance (Source) This repo is the source repository for GoogleChrome/modern-web-guidance and includes the code and documentation for authoring, calibrating, and evaluating its contents. **Modern Web Guidance** is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See CONTRIBUTING.md and GOVERNANCE.md for how we work on the project and orientation of the codebase. *Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community.* Documentation · Eval Dashboard · Source Code · Report an Issue Quickstart This command runs an interactive wizard to install Modern Web Guidance. See Alternative Installation Methods below. Try it out (without installing) Why? Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solut",
+      "summary": "把现代 Web 平台的最佳实践和兼容性数据打包成代理技能，让编码助手少写旧式 JavaScript。",
+      "problem": "LLM 训练数据里堆满遗留代码，代理容易默认生成臃肿的旧方案。这个项目由 Chrome、Edge、Firefox 和 MDN 团队共同维护，提供安装向导和评估面板，但当前只是源仓库，实际效果取决于代理是否接入这些技能。"
+    },
+    {
+      "rank": 2,
+      "name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "stars": "12,576",
+      "language": "TypeScript",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops"
+      ],
+      "readmeExcerpt": "Codex Security Codex Security helps you find, investigate, and fix vulnerabilities in your code. Use its security workflows in Codex, or automate them with the `@openai/codex-security` CLI and TypeScript SDK. - **In Codex:** choose a security workflow. - **In a terminal:** install the CLI and scan your repository. - **In automation:** use the TypeScript SDK or GitHub Action. Features - Scan repositories, selected paths, or Git changes. Deep scans repeat Standard scans and return their deduplicated findings. - Validate candidate findings, generate patches, and verify existing fixes. - Draft `SECURITY.md` policies and save threat models for later review. - Browse saved scans and findings, identify duplicates, assess severity against your own rubric, and suggest owners from source and Git history. - Preview third-party scanner findings, save them locally, or publish supported reports to Codex Security Cloud. Scanner import guides. - Track findings in Linear, Jira, or GitHub, publish completed scans, or export SARIF, JSON, and CSV. Integration workflows. - Automate scans across repositories or project components, including in CI and containers. Use in Codex Open your repository in a Co",
+      "summary": "OpenAI 的安全 CLI 和 TypeScript SDK，能扫描仓库、验证漏洞、生成补丁并跟踪修复。",
+      "problem": "适合在终端或 CI 里跑安全扫描，也支持导入第三方扫描器结果、导出 SARIF/JSON/CSV。深度扫描会重复标准扫描并去重，但漏洞验证和补丁质量仍依赖模型判断，不能替代人工审计。"
+    },
+    {
+      "rank": 3,
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "stars": "96,042",
+      "language": "Shell",
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc"
+      ],
+      "readmeExcerpt": "Node Version Manager [ ][3] [ ][4] Table of Contents - Intro - About - Installing and Updating - Install & Update Script - Additional Notes - Installing in Docker - Installing in Docker for CICD-Jobs - Troubleshooting on Linux - Troubleshooting on macOS - Ansible - Verify Installation - Important Notes - Git Install - Manual Install - Manual Upgrade - Usage - Long-term Support - Version Categories - Migrating Global Packages While Installing - Migrating Global Packages Between Installed Versions - Offline Install - Default Global Packages From File While Installing - io.js - System Version of Node - Listing Versions - Setting Custom Colors - Persisting custom colors - Suppressing colorized output - Restoring PATH - Set default node version - Use a mirror of node binaries - Pass Authorization header to mirror - Platforms without official binaries - .nvmrc - Deeper Shell Integration - Calling `nvm use` automatically in a directory with a `.nvmrc` file - bash - zsh - fish - Running Tests - Environment variables - Bash Completion - Usage - Compatibility Issues - Installing nvm on Alpine Linux - Alpine Linux 3.13+ - Alpine Linux 3.5 - 3.12 - Uninstalling / Removal - Manual Uninstall - D",
+      "summary": "老牌 Node 版本管理器，用 POSIX bash 脚本切换多个 Node.js 版本，近十万星。",
+      "problem": "在需要频繁切换 Node 版本的项目里几乎是标配，支持 .nvmrc 自动切换、LTS 别名和离线安装。局限是只覆盖 POSIX shell，Windows 原生环境得另找方案。"
+    },
+    {
+      "rank": 4,
+      "name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "stars": "1,605",
+      "language": "Objective-C",
+      "topics": [],
+      "readmeExcerpt": "HermesEnabler 2 English · Tiếng Việt · 한국어 · 简体中文 · 繁體中文 · 日本語 · Español · Français · Deutsch · Português > Supported only on watchOS 27.0 through 27.3 beta 1. Installation macOS On macOS you can install the prebuilt IPA with Sideloadly or build the app directly with Xcode. Either way, the iPhone must be paired with the target Apple Watch, and the Watch must run a supported watchOS version. Install the IPA > **Known issue with Sideloadly 0.72:** Issue #43 reports that this version may remove the embedded Watch app while signing. If the iPhone app installs but HermesEnabler2 is missing from the Watch, use Xcode instead. This report is specific to version 0.72; compatibility with other versions has not been confirmed. 1. Download the IPA from Releases. 2. Install Sideloadly on your Mac, connect your iPhone with a cable, and select it in Sideloadly. 3. Drag the IPA into Sideloadly and enter your Apple ID. Turn off **Use automatic bundle ID**, set a fixed Bundle Identifier, and start signing. 4. On the iPhone, open **Settings → General → VPN & Device Management** and trust your developer certificate. 5. On the iPhone, open **Settings → Privacy & Security → Developer Mode**, turn it on,",
+      "summary": "让任意 Apple Watch 用上爱马仕表盘，通过侧载 IPA 实现，仅支持 watchOS 27.0 到 27.3 beta 1。",
+      "problem": "需要配对的 iPhone、开发者模式和对证书的信任，Sideloadly 0.72 还有签名时丢掉手表应用的已知问题。版本窗口极窄，升级 watchOS 就可能失效，属于尝鲜型工具。"
+    },
+    {
+      "rank": 5,
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "stars": "14,074",
+      "language": "Ruby",
+      "topics": [],
+      "readmeExcerpt": "Deutsch | Español | Français | 日本語 | 한국어 | Português | Русский | 中文 Sure: The personal finance app for everyone Get involved: Discord • Website • Issues > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. > Learn more in their final release doc. Backstory The Maybe Finance (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! Hosting Sure Sure is a fully working pers",
+      "summary": "Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，Ruby 编写。",
+      "problem": "原团队烧掉近百万美元后开源，社区接手维护。适合想自己掌控财务数据的人，但自托管意味着数据库、备份和升级都得自己管，不是开箱即用的 SaaS。"
+    },
+    {
+      "rank": 6,
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "stars": "29,918",
+      "language": "TypeScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm"
+      ],
+      "readmeExcerpt": "**The open-source AI coding agent for your terminal, editor, desktop, browser, and chat.** 中文 | Deutsch | français | 日本語 | Русский | Português (Brasil) | 한국어 | **Qwen Code 1.0 Preview** | | Qwen Code 1.0 Preview brings together the agent harness capabilities of Qoder and Qwen Code in an open-source release. Try Qwen Code 1.0 Preview · Documentation · 中文文档. | Why Qwen Code? - **Agentic out of the box** — Auto-Memory, Auto-Skills, SubAgents, Agent Teams, and MCP. Dynamic workflows, zero setup. - **Open-source, inside and out** — The framework and the Qwen models are open-source. They evolve together. No vendor lock-in. - **Multi-protocol** — Supports OpenAI, Anthropic, Gemini, and Qwen APIs. Any third-party provider or local model (Ollama / vLLM). Switch at runtime. - **Beyond the terminal** — IDE plugins, Desktop app, Web UI, SDKs, and chat integrations (Telegram / DingTalk / WeChat / Feishu). > [!TIP] > Qwen Code is actively iterating on itself — using its own agent and models to file issues, submit PRs, review code, and run tests. Powered by the community, driven by AI. Installation Looking for **Qwen Code 1.0 Preview**? Get started here. The instructions below are for the main ve",
+      "summary": "Qwen 推出的开源终端编码代理，带 Auto-Memory、SubAgents 和 MCP，支持多协议切换。",
+      "problem": "可以在终端、IDE、桌面和聊天工具里跑，模型和框架都开源，能接 OpenAI、Anthropic、Gemini 或本地 Ollama。1.0 Preview 刚把 Qoder 的代理能力并进来，迭代快也意味着接口可能不稳。"
+    },
+    {
+      "rank": 7,
+      "name": "ashhart/TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "stars": "1,992",
+      "language": "Zig",
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "readmeExcerpt": "TensorFold TensorFold serves language models from a Zig binary on Apple Silicon and NVIDIA GPUs. The engine reads checkpoints, tokenizes requests and runs Metal or CUDA kernels directly. Serving needs no Python or MLX installation. Building with a coding agent? Have it load the contributor skill before it writes any code. Contributing with agents Please use Agent Traffic Control before editing TensorFold so contributors and agents can avoid duplicate work and conflicting changes. Check the live agent radar before choosing an issue and follow CONTRIBUTING.md and the ATC contributor instructions. Install or upgrade ATC to 0.9.4 or later, then run from an updated TensorFold clone: Replace `ISSUE` with the issue number and claim only after a complete check says the work is free. TensorFold enables automatic public check-ins: a successful new claim starts an anonymous session on the radar and returns its `session` number. Keep that number instead of starting a duplicate session. For work already yours, start a session with `atc start ISSUE --json`. Add `--github-name` to `claim` or `start` only if you want your verified GitHub name shown; `--local` keeps a new session on your machine. T",
+      "summary": "用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。",
+      "problem": "卖点是不用装 Python 或 MLX，一个二进制读 checkpoint、分词并推理。但项目还很早期，贡献流程里甚至要求先用 Agent Traffic Control 认领任务，生态和文档都待成熟。"
+    },
+    {
+      "rank": 8,
+      "name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "stars": "123,627",
+      "language": "JavaScript",
+      "topics": [
+        "javascript",
+        "js",
+        "linux",
+        "macos",
+        "mit",
+        "node",
+        "nodejs",
+        "runtime"
+      ],
+      "readmeExcerpt": "Node.js Node.js is an open-source, cross-platform JavaScript runtime environment. For information on using Node.js, see the [Node.js website][]. The Node.js project uses an open governance model. The [OpenJS Foundation][] provides support for the project. Contributors are expected to act in a collaborative manner to move the project forward. We encourage the constructive exchange of contrary opinions and compromise. The TSC reserves the right to limit or block contributors who repeatedly act in ways that discourage, exhaust, or otherwise negatively affect other participants. **This project has a [Code of Conduct][].** Table of contents * Support * Release types * Download * Current and LTS releases * Nightly releases * API documentation * Verifying binaries * Building Node.js * Security * Contributing to Node.js * Current project team members * TSC (Technical Steering Committee) * Collaborators * Triagers * Release keys * License Support Looking for help? Check out the instructions for getting support. Release types Node.js follows semantic versioning. * **Alpha**: Under active development where semver-major changes are allowed. Each October, a new release line (for example, Node.j",
+      "summary": "Node.js 官方运行时仓库，跨平台 JavaScript 环境，十二万星的老面孔。",
+      "problem": "榜单常客，本身不需要多介绍。值得留意的是它采用开放治理和语义化版本，Alpha 线每年十月开新分支，生产环境应盯 LTS 而非 Current。"
+    },
+    {
+      "rank": 9,
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "stars": "116,783",
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "readmeExcerpt": "Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`",
+      "summary": "把资深工程师的工作流和质量门禁打包成代理技能，配 9 个斜杠命令覆盖开发全周期。",
+      "problem": "从 /spec 到 /ship，每个命令激活对应技能，让代理按“先规格后代码”“小步构建”的节奏走。适合 Claude Code、Cursor 等工具，但技能本身是提示词工程，效果取决于代理是否老实执行。"
+    },
+    {
+      "rank": 10,
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "stars": "26,764",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Astryx An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them. **Currently in Beta** · Built on React 19+ and StyleX **Docs** · **Storybook** · **Sandbox** · **Contributing** · **Discord** Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles ",
+      "summary": "Meta 内部用了八年的设计系统开源，150+ 无障碍组件，基于 React 19 和 StyleX，主打代理可用。",
+      "problem": "组件内部开放、支持 swizzle 弹出源码，不绑定样式库。目前 Beta，文档和 Storybook 齐全，但“agent ready”更多是设计取向，实际代理生成质量还得看接入方式。"
+    }
+  ],
+  "closing": "今天最值得看的是代理工程的基础设施化：浏览器厂商和 OpenAI 都在给代理立规矩、补安全课。工具越自动，越需要有人把质量门禁写进流程里。"
+}
