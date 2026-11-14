@@ -1,0 +1,169 @@
+{
+  "title": "AI 代码审查与代理协作工具集中出现",
+  "opening": "今天榜单几乎被 AI 辅助开发工具占满，从阿里内部打磨两年的代码审查 CLI 到 OpenAI 的安全扫描工具，都在把大模型塞进工程流程。最值得看的是 alibaba/open-code-review：它用确定性管道加 LLM Agent 做行级评论，token 消耗只有通用代理的九分之一，说明工程化约束比模型本身更关键。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "stars": "50,768",
+      "language": "Go",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "readmeExcerpt": "OpenCodeReview English | 简体中文 | 日本語 | 한국어 | Русский What is Open Code Review? Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, `ocr scan` reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the official website for more details. Benchmark > Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the token",
+      "summary": "阿里内部跑了两年的 AI 代码审查 CLI，用确定性管道加 LLM Agent 做行级评论，token 消耗只有通用代理的九分之一。",
+      "problem": "它读取 Git diff，让 Agent 能读完整文件、搜索代码库、参考其他变更文件来生成深度评论，而不是只看 diff 表面。内置多语言规则集覆盖 NPE、线程安全、XSS、SQL 注入，还能用 ocr scan 审查整个文件。限制是必须配置模型端点，效果依赖所选 LLM。"
+    },
+    {
+      "rank": 2,
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "stars": "5,002",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Modern Web Guidance (Source) This repo is the source repository for GoogleChrome/modern-web-guidance and includes the code and documentation for authoring, calibrating, and evaluating its contents. **Modern Web Guidance** is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See CONTRIBUTING.md and GOVERNANCE.md for how we work on the project and orientation of the codebase. *Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community.* Documentation · Eval Dashboard · Source Code · Report an Issue Quickstart This command runs an interactive wizard to install Modern Web Guidance. See Alternative Installation Methods below. Try it out (without installing) Why? Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solut",
+      "summary": "Chrome、Edge、Firefox 和 MDN 团队共同维护的编码代理技能包，把现代 Web 平台最佳实践和兼容性数据直接喂给代理。",
+      "problem": "编码代理常因训练数据里大量遗留代码而默认生成旧模式，这个项目用技能包把代理往原生、高性能的现代 Web 方案上引。仓库本身是内容编写、校准和评估的源码库，不是直接安装的成品，需要按文档走安装向导。"
+    },
+    {
+      "rank": 3,
+      "name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "stars": "13,214",
+      "language": "TypeScript",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops"
+      ],
+      "readmeExcerpt": "Codex Security Codex Security helps you find, investigate, and fix vulnerabilities in your code. Use its security workflows in Codex, or automate them with the `@openai/codex-security` CLI and TypeScript SDK. - **In Codex:** choose a security workflow. - **In a terminal:** install the CLI and scan your repository. - **In automation:** use the TypeScript SDK or GitHub Action. Features - Scan repositories, selected paths, or Git changes. Deep scans repeat Standard scans and return their deduplicated findings. - Validate candidate findings, generate patches, and verify existing fixes. - Draft `SECURITY.md` policies and save threat models for later review. - Browse saved scans and findings, identify duplicates, assess severity against your own rubric, and suggest owners from source and Git history. - Preview third-party scanner findings, save them locally, or publish supported reports to Codex Security Cloud. Scanner import guides. - Track findings in Linear, Jira, or GitHub, publish completed scans, or export SARIF, JSON, and CSV. Integration workflows. - Automate scans across repositories or project components, including in CI and containers. Use in Codex Open your repository in a Co",
+      "summary": "OpenAI 的安全扫描 CLI 和 TypeScript SDK，能找漏洞、验证候选发现、生成补丁并验证修复。",
+      "problem": "支持扫描仓库、指定路径或 Git 变更，深度扫描会重复标准扫描并去重结果。还能起草 SECURITY.md、保存威胁模型、按自定义标准评估严重性、从 Git 历史推荐负责人，并把发现同步到 Linear、Jira 或 GitHub。适合 DevSecOps 流程，但依赖 Codex 生态。"
+    },
+    {
+      "rank": 4,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "stars": "71,770",
+      "language": "Python",
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "llm",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading"
+      ],
+      "readmeExcerpt": "📈 股票智能分析系统 &nbsp; > 🤖 基于 AI 大模型的 A股/港股/美股/日股/韩股/台股自选股智能分析系统，每日自动分析并推送「决策仪表盘」到企业微信/飞书/Telegram/Discord/Slack/邮箱 **产品预览** · **功能特性** · **快速开始** · **推送效果** · **文档中心** · **完整指南** 简体中文 | English | 繁體中文 💖 赞助商 (Sponsors) 感谢 Modelflare 赞助本项目！由美国 Havenbyte LLC 运营，满血稳定不掺水，低成本接入 GPT、Claude、Gemini、Grok 及 40+ 图片/视频模型。指定 OpenAI 分组提供 65% / 75% / 85% 每日缓存命中率保障 ；单笔充值 US$20 解锁 GPT 0.015x ， US$50 解锁 Claude 0.03x 。 专属链接注册 🖥️ 产品预览 点击动图查看完整演示 ✨ 功能特性 | 能力 | 覆盖内容 | | AI 决策报告 | 核心结论、评分、趋势、买卖点位、风险警报、催化因素、操作检查清单 | | 多市场数据聚合 | 覆盖 A股、港股、美股、日股、韩股、台股和 ETF，支持行情、K 线、技术指标、新闻、公告、基本面与报告辅助数据；不同市场的数据源和能力边界见 市场支持边界 | | Web / 桌面工作台 | 手动分析、任务进度、历史报告、完整 Markdown、回测、持仓、配置管理、浅色 / 深色主题 | | Agent 策略问股 | 多轮追问，支持均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种内置策略，覆盖 Web/Bot/API | | 智能导入与补全 | 图片、CSV/Excel、剪贴板导入；股票代码/名称/拼音/别名补全 | | 自动化与推送 | GitHub Actions、Docker、本地定时任务、FastAPI 服务和企业微信/飞书/Telegram/Discord/Slack/邮件推送 | > 功能细节、字段契约、基本面 P0 超时语义、交易纪律、数据源优先级、Web/API 行为请看 完整配置与部署指南。 技术栈与数据来源 | 类型 | 支持 | | AI 模型 | Modelflare、AIHubMix、Gemini、OpenAI 兼容、DeepSeek、通义千问、Claude、Ollama 本地模型等 | | 行情数据 | TickPlus（推荐）、AkShare、Tushare、Pytdx、Baostock、YFinance、Longbridge | | 新闻搜索 | SerpAPI、Anspire、Tavily、Bocha、Brave、MiniMax、SearXNG | | 社交舆情 | Stock Sentiment API（Red",
+      "summary": "LLM 驱动的多市场股票分析系统，每日自动生成决策仪表盘并推送到企业微信、飞书、Telegram 等渠道。",
+      "problem": "覆盖 A 股、港股、美股、日股、韩股、台股和 ETF，聚合行情、K 线、技术指标、新闻、公告和基本面数据。支持 15 种内置策略的多轮追问，以及图片、CSV、Excel 导入。数据源和 AI 模型都可配置，但不同市场的数据源能力边界需要看文档确认。"
+    },
+    {
+      "rank": 5,
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "stars": "14,835",
+      "language": "Ruby",
+      "topics": [],
+      "readmeExcerpt": "Deutsch | Español | Français | 日本語 | 한국어 | Português | Русский | 中文 Sure: The personal finance app for everyone Get involved: Discord • Website • Issues > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. > Learn more in their final release doc. Backstory The Maybe Finance (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! Hosting Sure Sure is a fully working pers",
+      "summary": "Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，继承了原项目近百万美元开发投入的代码库。",
+      "problem": "原团队 2021 到 2022 年做了完整功能的个人财务和财富管理应用，商业失败后开源，社区接手维护。适合想自己托管财务数据、不信任 SaaS 的用户。但作为分叉项目，长期维护节奏和功能演进方向需要观察。"
+    },
+    {
+      "rank": 6,
+      "name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "stars": "10,525",
+      "language": "TypeScript",
+      "topics": [
+        "agents",
+        "claude-code",
+        "code-review",
+        "codex",
+        "obsidian",
+        "opencode",
+        "pi-mono",
+        "plan-mode"
+      ],
+      "readmeExcerpt": "Everything you need to annotate and stay in the loop with your agents Inbox Surface • Artifacts • Code Review Annotate plans, specs, markdown, HTML, and other interactive artifacts. Review diffs and PRs. Send feedback to your agent. &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Plannotator Inbox · Official site · Code Review · Visual HTML Skills · Herdr Annotate · (Legacy) Plan Mode Plannotator **⭐️ NEW:** Plannotator Inbox is the missing review layer between you and multi-agent work. It surfaces decisions, prototypes, variations, plans, and everything you need to stay in the loop. Works with all coding agents and personal assistants. Plannotator is a local, browser-based review surface for AI coding agents: Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Kiro, Droid, Amp, DeepSeek Harness, and Pi. Plannotator Inbox also works with personal assistants (Grok Bot, Muse, Hermes, OpenClaw). **It plugs directly into your agent** through plugins, hooks and commands. When the agent proposes a decision, plan, html, or finishes working, the app opens in your browser and you mark it up, comment, and send feedback directly to th",
+      "summary": "本地浏览器里的 AI 编码代理审查界面，把计划、规格、HTML 等产物标注后一键把反馈发回代理。",
+      "problem": "通过插件、钩子和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI 等代理，代理提出决策或完成工作时自动在浏览器打开，用户标注评论后直接回传。适合多代理并行工作时保持人在回路，但需要代理侧支持相应的钩子机制。"
+    },
+    {
+      "rank": 7,
+      "name": "louislam/uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "description": "A fancy self-hosted monitoring tool",
+      "stars": "93,921",
+      "language": "JavaScript",
+      "topics": [
+        "docker",
+        "monitor",
+        "monitoring",
+        "responsive",
+        "self-hosted",
+        "selfhosted",
+        "single-page-app",
+        "socket-io"
+      ],
+      "readmeExcerpt": "Uptime Kuma Uptime Kuma is an easy-to-use self-hosted monitoring tool. 🥔 Live Demo Try it! Demo Server (Location: Frankfurt - Germany): It is a temporary live demo, all data will be deleted after 10 minutes. Sponsored by Uptime Kuma Sponsors. > [!WARNING] > Be careful - the top result in Google, uptimekuma.co, is not our official website, we don't control the website. I recommend following the installation guide in this GitHub repo. ⭐ Features - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / HTTP(s) Json Query / Websocket / Ping / DNS Record / Push / Steam Game Server / Docker Containers - Fancy, Reactive, Fast UI/UX - Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and 90+ notification services, click here for the full list - 20-second intervals - Multi Languages - Multiple status pages - Map status pages to specific domains - Ping chart - Certificate info - Proxy support - 2FA support 🔧 How to Install 🐳 Docker Compose Uptime Kuma is now running on all network interfaces (e.g. http://localhost:3001 or http://your-ip:3001). > [!WARNING] > File Systems like **NFS** (Network File System) are **NOT** supported. Please map to a local directory or",
+      "summary": "老牌自托管监控工具，界面花哨反应快，支持 HTTP、TCP、Ping、DNS、Docker 容器等十几种监控类型和 90 多个通知渠道。",
+      "problem": "20 秒间隔、多语言、多状态页、证书信息、代理和 2FA 都齐了，Docker Compose 一条命令就能跑。注意官方明确不支持 NFS 文件系统，必须映射到本地目录，另外 Google 搜索结果里的 uptimekuma.co 不是官方站。"
+    },
+    {
+      "rank": 8,
+      "name": "block/buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "stars": "37,331",
+      "language": "Rust",
+      "topics": [],
+      "readmeExcerpt": "Buzz 🐝 A workspace where humans and agents build together, on a relay you own. Vision · Sovereign · Forge · Agents · Architecture · Releasing · Apache 2.0 People and agents building together in the same room. What is this, really? Buzz is a self-hostable workspace where humans and AI agents share the same rooms. A Buzz **community** is the workspace a user reaches by URL. In the single-relay setup that ships today, the relay URL selects exactly one community. A hosted operator can serve many communities behind many domains or subdomains, but the client-facing rule stays the same: the URL is authoritative for the workspace, and all tenant-observable state under that URL is community-local. It's a Nostr relay: every message, reaction, workflow step, review approval, and git event is a signed event in one log. Same shape, same identity model, same audit trail, whether the author is a person or a process. In practice it feels like a team workspace. Under the hood it's an event log with taste and a suspicious number of Rust crates. Yes, it's another AI-adjacent developer tool. We're sorry. The difference is what agents can actually *do* once they're inside: open repos, send patches, re",
+      "summary": "Block 出的自托管协作空间，人和 AI 代理共享同一批房间，底层是 Nostr 中继，每条消息和操作都是签名事件。",
+      "problem": "代理进入房间后能开仓库、发补丁、参与评审，所有状态对人和进程用同一套身份模型和审计轨迹。当前单中继部署下一个 URL 对应一个社区，适合想要数据主权、又想让代理深度参与开发流程的团队。Rust 实现，生态还在早期。"
+    },
+    {
+      "rank": 9,
+      "name": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "stars": "4,254",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "Claude Trading Skills Claude Trading Skills started as a personal project to use AI to improve my own trading process. Claude Trading Skills is a Claude Skills-based trading workflow toolkit for time-constrained individual investors. It is designed for investors who use long-term investing, ETFs, and dividend stocks as their core, while using disciplined swing trading as a satellite strategy when market conditions are favorable. The goal is not to outsource buy/sell decisions to AI. The goal is to structure market review, risk management, trade planning, journaling, and continuous improvement. It is open source because the workflows, checklists, and review habits behind better trading decisions can improve through shared practice. This is not a signal service or a promise of profitability. It is a toolkit for traders who want to build a better decision process. The project follows a **first for self, open for others** stance: it is built first as a practical workflow the author uses, then shared openly for others who face similar constraints. 📖 **Documentation site:** **Project vision:** `PROJECT_VISION.md` 日本語版READMEは`README.ja.md`をご覧ください。 Disclaimer This repository is for educat",
+      "summary": "给个人投资者用的 Claude Code 技能包，把市场复盘、风险管理、交易计划和日志变成结构化工作流。",
+      "problem": "定位不是让 AI 替你做买卖决策，而是用清单和流程约束交易纪律，核心是长期投资和 ETF，波段交易作为卫星策略。作者明确说这不是信号服务，也不承诺盈利，适合想改善决策过程而非找代码抄作业的人。"
+    },
+    {
+      "rank": 10,
+      "name": "tailscale/tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "stars": "9,528",
+      "language": "Go",
+      "topics": [],
+      "readmeExcerpt": "\"Tailscale without Tailscale, by Tailscale\" Tailcat Tailcat is a remix of Tailscale open source pieces to act like netcat, but over Tailscale's data plane, without Tailscale's control plane. Tailscale's data plane (`magicsock`, internally) gives you point-to-point WireGuard®-encrypted tunnels between two machines with DERP as the NAT-hole-punching communication side channel and the ultimate relay-of-last-resort if NAT traversal fails. Instead of using the Tailscale control plane, all `tailcat` connection metadata is exchanged out of band, however you want. The `tailcat` CLI (in `cmd/tailcat`) is built on the `tailcat` Go library (importable as `github.com/tailscale/tailcat`). Whether you use `tailcat` as a CLI tool or library, one side runs a `tailcat` server (listener) and gets back a short tailcat address. The other side passes that tailcat address to `tailcat`'s client side to connect. All traffic between the two is encrypted end-to-end with WireGuard. The initial connection bootstraps through a DERP server (see below), and then magicsock performs NAT traversal to upgrade to a direct peer-to-peer UDP connection when possible (usually!). You don't need a Tailscale account, root/a",
+      "summary": "Tailscale 官方用自家开源组件做的 netcat 替代品，走 Tailscale 数据平面但不碰控制平面，不需要账号。",
+      "problem": "一端跑监听拿到短地址，另一端用该地址连接，元数据通过任意带外方式交换。流量端到端 WireGuard 加密，先经 DERP 引导再尝试 NAT 打洞升级为直连 UDP。适合临时点对点传数据又不想注册 Tailscale 的场景，但需要自己解决地址交换。"
+    }
+  ],
+  "closing": "今天最值得琢磨的是阿里和 OpenAI 不约而同把重点放在工程约束而非模型能力上，代码审查和安全扫描正在从通用代理手里抢回精度和成本。自托管协作和监控工具则提醒，数据主权仍是长期需求。"
+}
