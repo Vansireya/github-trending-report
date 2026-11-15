@@ -1,0 +1,191 @@
+{
+  "title": "给编码代理补上评审、浏览器与协议层",
+  "opening": "今天榜单几乎被“怎么让编码代理更好用”占满：Plannotator 把代理产出的计划、HTML 和 diff 变成可批注的评审面，Chrome DevTools MCP 则让代理直接操作真实浏览器。前者补的是人机来回，后者补的是代理的眼睛和手。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "stars": "11,254",
+      "language": "TypeScript",
+      "topics": [
+        "agents",
+        "claude-code",
+        "code-review",
+        "codex",
+        "obsidian",
+        "opencode",
+        "pi-mono",
+        "plan-mode"
+      ],
+      "readmeExcerpt": "Everything you need to annotate and stay in the loop with your agents Inbox Surface • Artifacts • Code Review Annotate plans, specs, markdown, HTML, and other interactive artifacts. Review diffs and PRs. Send feedback to your agent. &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Plannotator Inbox · Official site · Code Review · Visual HTML Skills · Herdr Annotate · (Legacy) Plan Mode Plannotator **⭐️ NEW:** Plannotator Inbox is the missing review layer between you and multi-agent work. It surfaces decisions, prototypes, variations, plans, and everything you need to stay in the loop. Works with all coding agents and personal assistants. Plannotator is a local, browser-based review surface for AI coding agents: Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Kiro, Droid, Amp, DeepSeek Harness, and Pi. Plannotator Inbox also works with personal assistants (Grok Bot, Muse, Hermes, OpenClaw). **It plugs directly into your agent** through plugins, hooks and commands. When the agent proposes a decision, plan, html, or finishes working, the app opens in your browser and you mark it up, comment, and send feedback directly to th",
+      "summary": "本地浏览器里的代理评审台，把计划、HTML 产物和代码 diff 摊开批注，一键把反馈送回代理。",
+      "problem": "代理提出方案或改完代码后，人往往只能在终端里读文本、再手打反馈。它通过插件和钩子把产物拉到浏览器里标记、评论，适合多代理并行时集中处理决策和 PR 评审；局限是依赖各代理的接入方式，且浏览器端暴露内容需注意隐私。"
+    },
+    {
+      "rank": 2,
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "stars": "6,198",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Modern Web Guidance (Source) This repo is the source repository for GoogleChrome/modern-web-guidance and includes the code and documentation for authoring, calibrating, and evaluating its contents. **Modern Web Guidance** is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See CONTRIBUTING.md and GOVERNANCE.md for how we work on the project and orientation of the codebase. *Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community.* Documentation · Eval Dashboard · Source Code · Report an Issue Quickstart This command runs an interactive wizard to install Modern Web Guidance. See Alternative Installation Methods below. Try it out (without installing) Why? Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solut",
+      "summary": "把现代 Web 平台最佳实践和兼容数据做成代理技能，专门纠正模型爱写旧模式的老毛病。",
+      "problem": "编码代理的训练数据里堆满旧代码，容易为原生已支持的能力生成臃肿 JS。这套技能由 Chrome、Edge、Firefox 和 MDN 团队共同维护，直接嵌入代理工作流；目前是源仓库，重点在内容编写与评估，不是开箱即用的产品。"
+    },
+    {
+      "rank": 3,
+      "name": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "stars": "4,919",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "Claude Trading Skills Claude Trading Skills started as a personal project to use AI to improve my own trading process. Claude Trading Skills is a Claude Skills-based trading workflow toolkit for time-constrained individual investors. It is designed for investors who use long-term investing, ETFs, and dividend stocks as their core, while using disciplined swing trading as a satellite strategy when market conditions are favorable. The goal is not to outsource buy/sell decisions to AI. The goal is to structure market review, risk management, trade planning, journaling, and continuous improvement. It is open source because the workflows, checklists, and review habits behind better trading decisions can improve through shared practice. This is not a signal service or a promise of profitability. It is a toolkit for traders who want to build a better decision process. The project follows a **first for self, open for others** stance: it is built first as a practical workflow the author uses, then shared openly for others who face similar constraints. 📖 **Documentation site:** **Project vision:** `PROJECT_VISION.md` 日本語版READMEは`README.ja.md`をご覧ください。 Disclaimer This repository is for educat",
+      "summary": "面向个人投资者的 Claude 交易工作流技能包，管市场复盘、风险管理和交易日志，不替你做买卖决定。",
+      "problem": "作者明确说目标不是让 AI 下单，而是把复盘、计划、记录这些容易偷懒的环节结构化。适合以 ETF 和股息股为主、偶尔波段的人；但它是流程工具，不提供信号，也不承诺收益，README 自带免责声明。"
+    },
+    {
+      "rank": 4,
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "stars": "56,385",
+      "language": "TypeScript",
+      "topics": [
+        "browser",
+        "chrome",
+        "chrome-devtools",
+        "debugging",
+        "devtools",
+        "mcp",
+        "mcp-server",
+        "puppeteer"
+      ],
+      "readmeExcerpt": "Chrome DevTools for agents Chrome DevTools for agents (`chrome-devtools-mcp`) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot) control and inspect a live Chrome browser. It is available as a Model-Context-Protocol (MCP) server and as a [CLI][cli]. Both give your AI coding assistant access to the full power of Chrome DevTools for reliable automation, in-depth debugging, and performance analysis. [Tool reference][tool-reference] | [CLI][cli] | [Skills][skills] | [Changelog][changelog] | [Contributing][contributing] | [Troubleshooting][troubleshooting] | [Design Principles][design-principles] Key features - **Get performance insights**: Uses Chrome DevTools to record traces and extract actionable performance insights. - **Advanced browser debugging**: Analyze network requests, take screenshots and check browser console messages (with source-mapped stack traces). - **Reliable automation**. Uses puppeteer to automate actions in Chrome and automatically wait for action results. Disclaimers `chrome-devtools-mcp` exposes content of the browser instance to the MCP clients allowing them to inspect, debug, and modify any data in the browser or DevTools. Avoid sharing se",
+      "summary": "把 Chrome DevTools 包成 MCP 服务器和 CLI，让编码代理能录制性能 trace、查网络请求和控制实时浏览器。",
+      "problem": "代理调试前端时常靠猜，这个项目让它直接读控制台、截图、分析网络并做可靠自动化。功能很实在，但 README 也提醒：它会把浏览器实例内容暴露给 MCP 客户端，共享敏感数据的环境要谨慎。"
+    },
+    {
+      "rank": 5,
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "stars": "51,510",
+      "language": "Go",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "readmeExcerpt": "OpenCodeReview English | 简体中文 | 日本語 | 한국어 | Русский What is Open Code Review? Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, `ocr scan` reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the official website for more details. Benchmark > Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the token",
+      "summary": "阿里内部打磨两年的 AI 代码评审 CLI，确定性流水线加 LLM Agent，输出行级评论。",
+      "problem": "它不只读 diff，还能让代理翻全文、搜代码库、看其他改动文件来补上下文，适合仓库级评审和审计陌生代码。内置多语言规则集覆盖 NPE、线程安全、XSS 等；基准称同模型下比通用代理精度更高、token 消耗约九分之一，但需自配模型端点。"
+    },
+    {
+      "rank": 6,
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "stars": "30,396",
+      "language": "TypeScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm"
+      ],
+      "readmeExcerpt": "**The open-source AI coding agent for your terminal, editor, desktop, browser, and chat.** 中文 | Deutsch | français | 日本語 | Русский | Português (Brasil) | 한국어 | **Qwen Code 1.0 Preview** | | Qwen Code 1.0 Preview brings together the agent harness capabilities of Qoder and Qwen Code in an open-source release. Try Qwen Code 1.0 Preview · Documentation · 中文文档. | Why Qwen Code? - **Agentic out of the box** — Auto-Memory, Skills, SubAgents, and MCP work from the first session. Agent Teams, Agent Arena, and Dynamic Workflows are built in too — experimental or opt-in, as noted in Capabilities. - **Open-source, inside and out** — The framework and the Qwen models are open-source. They evolve together. No vendor lock-in. - **Multi-protocol** — Supports OpenAI, Anthropic, Gemini, and Qwen APIs. Any third-party provider or local model (Ollama / vLLM). Switch at runtime. - **Beyond the terminal** — IDE plugins, Desktop app, Web UI, SDKs, and chat integrations (Telegram / DingTalk / WeChat / WeCom / Feishu and more). > [!TIP] > Qwen Code is actively iterating on itself — using its own agent and models to file issues, submit PRs, review code, and run tests. Powered by the community, driven by AI.",
+      "summary": "Qwen 系的终端编码代理，1.0 预览把 Qoder 的 agent harness 并了进来，还延伸到 IDE、桌面和聊天工具。",
+      "problem": "卖点是开箱即用的 Agentic 能力：Auto-Memory、Skills、SubAgents、MCP 首会话就能用，并支持 OpenAI、Anthropic、Gemini 和本地模型运行时切换。项目自称正用自身代理提 issue、跑测试，这种自举值得观察，但也意味着迭代节奏可能很猛。"
+    },
+    {
+      "rank": 7,
+      "name": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "stars": "25,006",
+      "language": "TypeScript",
+      "topics": [
+        "board",
+        "collaboration",
+        "doc",
+        "docx",
+        "excel",
+        "offce365",
+        "office",
+        "pdf"
+      ],
+      "readmeExcerpt": "Build your own AI office with Univer Office SDK. Start with open-source Sheets and Docs, then connect your own application or agent. 🚀 Quick start · 📚 Documentation · ⚖️ Feature comparison · 🌐 Website · 🎮 Showcase · 🔧 API Reference · 📝 Blog English · Français · Deutsch · Español · 简体中文 · 繁體中文 · 日本語 · 한국어 Table of contents - 💡 What is Univer? - Open-source capabilities - 🚀 Build on the open-source foundation - Quick start: an open-source spreadsheet editor - Connect your application to editable content - 🏗️ Explore the open-source architecture - Give custom features clear boundaries - Compose cross-feature edits and undo/redo - Connect applications and agents through Facade APIs and events - 🧩 Extend your application with Univer Office SDK - Scope and licensing - 🌐 Application patterns and ecosystem - Univer Workspace: an Office SDK reference application - CLI, agent integrations, and developer skills - 📚 Documentation and contributing - Runtime compatibility - 💬 Community - 🔒 Security - ❤️ Sponsors - 📄 License 💡 What is Univer? **Univer** is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation, collaboration",
+      "summary": "开源 Office SDK，从表格和文档编辑起步，想把计算、协作和文件处理嵌进你自己的产品与代理。",
+      "problem": "适合需要在应用里内置类 Excel/Word 编辑能力、又不想被 Office 365 绑死的团队。它提供 Facade API 和事件机制连接应用与代理，架构上强调功能边界和跨功能撤销重做；但完整 Office SDK 能力涉及许可范围，采用前要看清授权。"
+    },
+    {
+      "rank": 8,
+      "name": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "stars": "17,421",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui-protocol",
+        "agent-frontend",
+        "agent-ui",
+        "agentic-workflow",
+        "ai-agents"
+      ],
+      "readmeExcerpt": "AG-UI: The Agent-User Interaction Protocol AG-UI is an open, lightweight, event-based protocol that standardizes how AI agents connect to user-facing applications. Built for simplicity and flexibility, it enables seamless integration between AI agents, real time user context, and user interfaces. Join our Discord → &nbsp;&nbsp;&nbsp; Read the Docs → &nbsp;&nbsp;&nbsp; Go to the AG-UI Dojo → &nbsp;&nbsp;&nbsp; Follow us → 🚀 Getting Started Create a new AG-UI application in seconds: Useful Links: - The AG-UI Dojo - Build AG-UI-powered applications(Quickstart) - Build new AG-UI framework integrations (Quickstart) - Book a call to discuss an AG-UI integration with a new framework - Join the Discord Community What is AG-UI? AG-UI is an open, lightweight, event-based protocol for agent-human interaction, designed for simplicity & flexibility: - During agent executions, agent backends **emit events _compatible_ with one of AG-UI's ~16 standard event types** - Agent backends can **accept one of a few simple AG-UI compatible inputs** as arguments **AG-UI includes a flexible middleware layer** that ensures compatibility across diverse environments: - Works with **any event transport** (SSE,",
+      "summary": "一个轻量的事件式协议，标准化 AI 代理如何把执行过程流向前端应用并接收用户输入。",
+      "problem": "代理后端按约 16 种标准事件类型发消息，前端用少量兼容输入回传，中间件负责适配 SSE 等不同传输。它解决的是代理与 UI 之间各写各的胶水代码问题；协议本身不绑定框架，价值取决于有多少集成方跟进。"
+    },
+    {
+      "rank": 9,
+      "name": "ashhart/TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "stars": "2,183",
+      "language": "Zig",
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "readmeExcerpt": "TensorFold TensorFold serves language models from a Zig binary on Apple Silicon and NVIDIA GPUs. The engine reads checkpoints, tokenizes requests and runs Metal or CUDA kernels directly. Serving needs no Python or MLX installation. Building with a coding agent? Have it load the contributor skill before it writes any code. Contributing with agents Please use Agent Traffic Control before editing TensorFold so contributors and agents can avoid duplicate work and conflicting changes. Check the live agent radar before choosing an issue and follow CONTRIBUTING.md and the ATC contributor instructions. Install or upgrade ATC to 0.9.4 or later, then run from an updated TensorFold clone: Replace `ISSUE` with the issue number and claim only after a complete check says the work is free. TensorFold enables automatic public check-ins: a successful new claim starts an anonymous session on the radar and returns its `session` number. Keep that number instead of starting a duplicate session. For work already yours, start a session with `atc start ISSUE --json`. Add `--github-name` to `claim` or `start` only if you want your verified GitHub name shown; `--local` keeps a new session on your machine. T",
+      "summary": "用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。",
+      "problem": "它读 checkpoint、分词、跑内核一条龙，服务时不需要 Python 或 MLX 环境，对想减少运行时依赖的人有吸引力。项目还引入 Agent Traffic Control 来协调代理贡献者避免重复劳动，这种协作方式本身比引擎更少见；成熟度仍需观察。"
+    },
+    {
+      "rank": 10,
+      "name": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "stars": "120,129",
+      "language": "Go",
+      "topics": [
+        "ai",
+        "anthropic",
+        "caveman",
+        "claude",
+        "claude-code",
+        "llm",
+        "meme",
+        "prompt-engineering"
+      ],
+      "readmeExcerpt": "New: Caveman Code. Free. **The most efficient coding agent.** Same model, same work, smaller bill. 21% cheaper than Codex Terminal-Bench 4, per solved task 14% cheaper than Claude Code Terminal-Bench 4, 97 vs 83 solved 76% cheaper than Claude Code full workday, 4 connected apps Same model on both sides: GPT-6.1 Sol against Codex, Opus 5.5 against Claude Code. Our own runs, November 2026, at list prices. How we measured Every coding agent in one window. Free on the subscriptions and keys you already have. **Download Caveman Code for Mac · Read the launch post** why many token when few do trick **Caveman make your AI agent say less and read less. Code stay exact. Brain still big.** 33.2% fewer input tokens, whole sessions 54 Claude Code runs , 18 of 18 answers right 54% cheaper with Auto, same score 85 coding tasks vs Opus 5.5 at xhigh, interim 397 → 76 tokens for one test run Blocks vs | tail -20 1.4 to 2.4× cheaper with caveman-style output Adobe Research , eight models Cited by **Adobe Research** · A/B tested by **JetBrains** · Remade for Elasticsearch on **Elasticsearch Labs** **#1** on Hacker News · **#1** on GitHub Trending · *\"No way this actually works.\"* ThePrimeagen **Insta",
+      "summary": "让编码代理“像穴居人说话”的提示技能加代理，号称靠少读少写砍掉大量 token。",
+      "problem": "思路是压缩代理的输入输出表达，同时保持代码精确，README 列了与 Claude Code、Codex 的对比数据，并称被 Adobe Research 引用、JetBrains 做过 A/B。争议点也明显：省 token 的代价是表达退化，复杂任务里是否稳定，需要自己拿任务验证。"
+    }
+  ],
+  "closing": "今天最值得看的是代理工具开始分层：有人做评审面，有人做浏览器接口，有人做交互协议。省 token 的噱头很响，但真正决定代理好不好用的，还是这些中间层是否扎实。"
+}

@@ -21,11 +21,11 @@
     }
   </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
-  <title>GitHub 简报 - 2026年11月14日星期六</title>
+  <title>GitHub 简报 - 2026年11月15日星期日</title>
   <script src="data/ranking_data.js"></script>
   <link rel="stylesheet" href="src/templates/style-v2.css?v=bcdb31d3">
 </head>
-<body data-report-base-path="reports/" data-report-date="2026-11-14">
+<body data-report-base-path="reports/" data-report-date="2026-11-15">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -58,148 +58,23 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="hero-meta">
-          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月14日星期六</time>
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月15日星期日</time>
 
         </div>
-        <h1>AI 代码审查与代理协作工具集中出现</h1>
-        <p>今天榜单几乎被 AI 辅助开发工具占满，从阿里内部打磨两年的代码审查 CLI 到 OpenAI 的安全扫描工具，都在把大模型塞进工程流程。最值得看的是 alibaba/open-code-review：它用确定性管道加 LLM Agent 做行级评论，token 消耗只有通用代理的九分之一，说明工程化约束比模型本身更关键。</p>
+        <h1>给编码代理补上评审、浏览器与协议层</h1>
+        <p>今天榜单几乎被“怎么让编码代理更好用”占满：Plannotator 把代理产出的计划、HTML 和 diff 变成可批注的评审面，Chrome DevTools MCP 则让代理直接操作真实浏览器。前者补的是人机来回，后者补的是代理的眼睛和手。</p>
       </div>
     </section>
 
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="alibaba/open-code-review" data-project-url="https://github.com/alibaba/open-code-review" data-project-summary="阿里内部跑了两年的 AI 代码审查 CLI，用确定性管道加 LLM Agent 做行级评论，token 消耗只有通用代理的九分之一。" data-project-stars="50,768" data-language="Go">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="backnotprop/plannotator" data-project-url="https://github.com/backnotprop/plannotator" data-project-summary="本地浏览器里的代理评审台，把计划、HTML 产物和代码 diff 摊开批注，一键把反馈送回代理。" data-project-stars="11,254" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">1</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener noreferrer">alibaba/open-code-review</a>
-        <span class="star-pill" aria-label="50,768 stars">★ 50,768</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Go</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 alibaba/open-code-review" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">阿里内部跑了两年的 AI 代码审查 CLI，用确定性管道加 LLM Agent 做行级评论，token 消耗只有通用代理的九分之一。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 alibaba/open-code-review 的项目解读" aria-expanded="true" aria-controls="project-alibaba-open-code-review">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-alibaba-open-code-review">
-    <p>它读取 Git diff，让 Agent 能读完整文件、搜索代码库、参考其他变更文件来生成深度评论，而不是只看 diff 表面。内置多语言规则集覆盖 NPE、线程安全、XSS、SQL 注入，还能用 ocr scan 审查整个文件。限制是必须配置模型端点，效果依赖所选 LLM。</p>
-  </div>
-</article>
-<article class="project-card project-card--featured" data-project-name="GoogleChrome/modern-web-guidance-src" data-project-url="https://github.com/GoogleChrome/modern-web-guidance-src" data-project-summary="Chrome、Edge、Firefox 和 MDN 团队共同维护的编码代理技能包，把现代 Web 平台最佳实践和兼容性数据直接喂给代理。" data-project-stars="5,002" data-language="TypeScript">
-  <div class="project-card-header">
-    <div class="rank-badge">2</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/GoogleChrome/modern-web-guidance-src" target="_blank" rel="noopener noreferrer">GoogleChrome/modern-web-guidance-src</a>
-        <span class="star-pill" aria-label="5,002 stars">★ 5,002</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>TypeScript</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 GoogleChrome/modern-web-guidance-src" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Chrome、Edge、Firefox 和 MDN 团队共同维护的编码代理技能包，把现代 Web 平台最佳实践和兼容性数据直接喂给代理。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 GoogleChrome/modern-web-guidance-src 的项目解读" aria-expanded="true" aria-controls="project-googlechrome-modern-web-guidance-src">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-googlechrome-modern-web-guidance-src">
-    <p>编码代理常因训练数据里大量遗留代码而默认生成旧模式，这个项目用技能包把代理往原生、高性能的现代 Web 方案上引。仓库本身是内容编写、校准和评估的源码库，不是直接安装的成品，需要按文档走安装向导。</p>
-  </div>
-</article>
-<article class="project-card project-card--featured" data-project-name="openai/codex-security" data-project-url="https://github.com/openai/codex-security" data-project-summary="OpenAI 的安全扫描 CLI 和 TypeScript SDK，能找漏洞、验证候选发现、生成补丁并验证修复。" data-project-stars="13,214" data-language="TypeScript">
-  <div class="project-card-header">
-    <div class="rank-badge">3</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">openai/codex-security</a>
-        <span class="star-pill" aria-label="13,214 stars">★ 13,214</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>TypeScript</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 openai/codex-security" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">OpenAI 的安全扫描 CLI 和 TypeScript SDK，能找漏洞、验证候选发现、生成补丁并验证修复。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 openai/codex-security 的项目解读" aria-expanded="true" aria-controls="project-openai-codex-security">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-openai-codex-security">
-    <p>支持扫描仓库、指定路径或 Git 变更，深度扫描会重复标准扫描并去重结果。还能起草 SECURITY.md、保存威胁模型、按自定义标准评估严重性、从 Git 历史推荐负责人，并把发现同步到 Linear、Jira 或 GitHub。适合 DevSecOps 流程，但依赖 Codex 生态。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="ZhuLinsen/daily_stock_analysis" data-project-url="https://github.com/ZhuLinsen/daily_stock_analysis" data-project-summary="LLM 驱动的多市场股票分析系统，每日自动生成决策仪表盘并推送到企业微信、飞书、Telegram 等渠道。" data-project-stars="71,770" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">4</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank" rel="noopener noreferrer">ZhuLinsen/daily_stock_analysis</a>
-        <span class="star-pill" aria-label="71,770 stars">★ 71,770</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 ZhuLinsen/daily_stock_analysis" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">LLM 驱动的多市场股票分析系统，每日自动生成决策仪表盘并推送到企业微信、飞书、Telegram 等渠道。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 ZhuLinsen/daily_stock_analysis 的项目解读" aria-expanded="false" aria-controls="project-zhulinsen-daily-stock-analysis">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-zhulinsen-daily-stock-analysis" hidden>
-    <p>覆盖 A 股、港股、美股、日股、韩股、台股和 ETF，聚合行情、K 线、技术指标、新闻、公告和基本面数据。支持 15 种内置策略的多轮追问，以及图片、CSV、Excel 导入。数据源和 AI 模型都可配置，但不同市场的数据源能力边界需要看文档确认。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="we-promise/sure" data-project-url="https://github.com/we-promise/sure" data-project-summary="Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，继承了原项目近百万美元开发投入的代码库。" data-project-stars="14,835" data-language="Ruby">
-  <div class="project-card-header">
-    <div class="rank-badge">5</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/we-promise/sure" target="_blank" rel="noopener noreferrer">we-promise/sure</a>
-        <span class="star-pill" aria-label="14,835 stars">★ 14,835</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Ruby</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 we-promise/sure" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Maybe Finance 被放弃后的社区分叉，一个可自托管的个人财务应用，继承了原项目近百万美元开发投入的代码库。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 we-promise/sure 的项目解读" aria-expanded="false" aria-controls="project-we-promise-sure">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-we-promise-sure" hidden>
-    <p>原团队 2021 到 2022 年做了完整功能的个人财务和财富管理应用，商业失败后开源，社区接手维护。适合想自己托管财务数据、不信任 SaaS 的用户。但作为分叉项目，长期维护节奏和功能演进方向需要观察。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="backnotprop/plannotator" data-project-url="https://github.com/backnotprop/plannotator" data-project-summary="本地浏览器里的 AI 编码代理审查界面，把计划、规格、HTML 等产物标注后一键把反馈发回代理。" data-project-stars="10,525" data-language="TypeScript">
-  <div class="project-card-header">
-    <div class="rank-badge">6</div>
-    <div class="project-identity">
-      <div class="project-title-line">
         <a class="project-name" href="https://github.com/backnotprop/plannotator" target="_blank" rel="noopener noreferrer">backnotprop/plannotator</a>
-        <span class="star-pill" aria-label="10,525 stars">★ 10,525</span>
+        <span class="star-pill" aria-label="11,254 stars">★ 11,254</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
@@ -210,71 +85,46 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 backnotprop/plannotator" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">本地浏览器里的 AI 编码代理审查界面，把计划、规格、HTML 等产物标注后一键把反馈发回代理。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 backnotprop/plannotator 的项目解读" aria-expanded="false" aria-controls="project-backnotprop-plannotator">
+  <p class="project-summary">本地浏览器里的代理评审台，把计划、HTML 产物和代码 diff 摊开批注，一键把反馈送回代理。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 backnotprop/plannotator 的项目解读" aria-expanded="true" aria-controls="project-backnotprop-plannotator">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-backnotprop-plannotator" hidden>
-    <p>通过插件、钩子和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI 等代理，代理提出决策或完成工作时自动在浏览器打开，用户标注评论后直接回传。适合多代理并行工作时保持人在回路，但需要代理侧支持相应的钩子机制。</p>
+  <div class="project-details" id="project-backnotprop-plannotator">
+    <p>代理提出方案或改完代码后，人往往只能在终端里读文本、再手打反馈。它通过插件和钩子把产物拉到浏览器里标记、评论，适合多代理并行时集中处理决策和 PR 评审；局限是依赖各代理的接入方式，且浏览器端暴露内容需注意隐私。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="louislam/uptime-kuma" data-project-url="https://github.com/louislam/uptime-kuma" data-project-summary="老牌自托管监控工具，界面花哨反应快，支持 HTTP、TCP、Ping、DNS、Docker 容器等十几种监控类型和 90 多个通知渠道。" data-project-stars="93,921" data-language="JavaScript">
+<article class="project-card project-card--featured" data-project-name="GoogleChrome/modern-web-guidance-src" data-project-url="https://github.com/GoogleChrome/modern-web-guidance-src" data-project-summary="把现代 Web 平台最佳实践和兼容数据做成代理技能，专门纠正模型爱写旧模式的老毛病。" data-project-stars="6,198" data-language="TypeScript">
   <div class="project-card-header">
-    <div class="rank-badge">7</div>
+    <div class="rank-badge">2</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener noreferrer">louislam/uptime-kuma</a>
-        <span class="star-pill" aria-label="93,921 stars">★ 93,921</span>
+        <a class="project-name" href="https://github.com/GoogleChrome/modern-web-guidance-src" target="_blank" rel="noopener noreferrer">GoogleChrome/modern-web-guidance-src</a>
+        <span class="star-pill" aria-label="6,198 stars">★ 6,198</span>
       </div>
       <div class="project-tags">
-        <span class="language-tag"><i></i>JavaScript</span>
+        <span class="language-tag"><i></i>TypeScript</span>
         <span class="appearance-tag" hidden></span>
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 louislam/uptime-kuma" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 GoogleChrome/modern-web-guidance-src" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">老牌自托管监控工具，界面花哨反应快，支持 HTTP、TCP、Ping、DNS、Docker 容器等十几种监控类型和 90 多个通知渠道。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 louislam/uptime-kuma 的项目解读" aria-expanded="false" aria-controls="project-louislam-uptime-kuma">
+  <p class="project-summary">把现代 Web 平台最佳实践和兼容数据做成代理技能，专门纠正模型爱写旧模式的老毛病。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 GoogleChrome/modern-web-guidance-src 的项目解读" aria-expanded="true" aria-controls="project-googlechrome-modern-web-guidance-src">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-louislam-uptime-kuma" hidden>
-    <p>20 秒间隔、多语言、多状态页、证书信息、代理和 2FA 都齐了，Docker Compose 一条命令就能跑。注意官方明确不支持 NFS 文件系统，必须映射到本地目录，另外 Google 搜索结果里的 uptimekuma.co 不是官方站。</p>
+  <div class="project-details" id="project-googlechrome-modern-web-guidance-src">
+    <p>编码代理的训练数据里堆满旧代码，容易为原生已支持的能力生成臃肿 JS。这套技能由 Chrome、Edge、Firefox 和 MDN 团队共同维护，直接嵌入代理工作流；目前是源仓库，重点在内容编写与评估，不是开箱即用的产品。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="block/buzz" data-project-url="https://github.com/block/buzz" data-project-summary="Block 出的自托管协作空间，人和 AI 代理共享同一批房间，底层是 Nostr 中继，每条消息和操作都是签名事件。" data-project-stars="37,331" data-language="Rust">
+<article class="project-card project-card--featured" data-project-name="tradermonty/claude-trading-skills" data-project-url="https://github.com/tradermonty/claude-trading-skills" data-project-summary="面向个人投资者的 Claude 交易工作流技能包，管市场复盘、风险管理和交易日志，不替你做买卖决定。" data-project-stars="4,919" data-language="Python">
   <div class="project-card-header">
-    <div class="rank-badge">8</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/block/buzz" target="_blank" rel="noopener noreferrer">block/buzz</a>
-        <span class="star-pill" aria-label="37,331 stars">★ 37,331</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Rust</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 block/buzz" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Block 出的自托管协作空间，人和 AI 代理共享同一批房间，底层是 Nostr 中继，每条消息和操作都是签名事件。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 block/buzz 的项目解读" aria-expanded="false" aria-controls="project-block-buzz">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-block-buzz" hidden>
-    <p>代理进入房间后能开仓库、发补丁、参与评审，所有状态对人和进程用同一套身份模型和审计轨迹。当前单中继部署下一个 URL 对应一个社区，适合想要数据主权、又想让代理深度参与开发流程的团队。Rust 实现，生态还在早期。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="tradermonty/claude-trading-skills" data-project-url="https://github.com/tradermonty/claude-trading-skills" data-project-summary="给个人投资者用的 Claude Code 技能包，把市场复盘、风险管理、交易计划和日志变成结构化工作流。" data-project-stars="4,254" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">9</div>
+    <div class="rank-badge">3</div>
     <div class="project-identity">
       <div class="project-title-line">
         <a class="project-name" href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener noreferrer">tradermonty/claude-trading-skills</a>
-        <span class="star-pill" aria-label="4,254 stars">★ 4,254</span>
+        <span class="star-pill" aria-label="4,919 stars">★ 4,919</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
@@ -285,14 +135,164 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 tradermonty/claude-trading-skills" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给个人投资者用的 Claude Code 技能包，把市场复盘、风险管理、交易计划和日志变成结构化工作流。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 tradermonty/claude-trading-skills 的项目解读" aria-expanded="false" aria-controls="project-tradermonty-claude-trading-skills">
+  <p class="project-summary">面向个人投资者的 Claude 交易工作流技能包，管市场复盘、风险管理和交易日志，不替你做买卖决定。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 tradermonty/claude-trading-skills 的项目解读" aria-expanded="true" aria-controls="project-tradermonty-claude-trading-skills">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-tradermonty-claude-trading-skills" hidden>
-    <p>定位不是让 AI 替你做买卖决策，而是用清单和流程约束交易纪律，核心是长期投资和 ETF，波段交易作为卫星策略。作者明确说这不是信号服务，也不承诺盈利，适合想改善决策过程而非找代码抄作业的人。</p>
+  <div class="project-details" id="project-tradermonty-claude-trading-skills">
+    <p>作者明确说目标不是让 AI 下单，而是把复盘、计划、记录这些容易偷懒的环节结构化。适合以 ETF 和股息股为主、偶尔波段的人；但它是流程工具，不提供信号，也不承诺收益，README 自带免责声明。</p>
   </div>
-</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最值得琢磨的是阿里和 OpenAI 不约而同把重点放在工程约束而非模型能力上，代码审查和安全扫描正在从通用代理手里抢回精度和成本。自托管协作和监控工具则提醒，数据主权仍是长期需求。</p></div></div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ChromeDevTools/chrome-devtools-mcp" data-project-url="https://github.com/ChromeDevTools/chrome-devtools-mcp" data-project-summary="把 Chrome DevTools 包成 MCP 服务器和 CLI，让编码代理能录制性能 trace、查网络请求和控制实时浏览器。" data-project-stars="56,385" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener noreferrer">ChromeDevTools/chrome-devtools-mcp</a>
+        <span class="star-pill" aria-label="56,385 stars">★ 56,385</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ChromeDevTools/chrome-devtools-mcp" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把 Chrome DevTools 包成 MCP 服务器和 CLI，让编码代理能录制性能 trace、查网络请求和控制实时浏览器。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ChromeDevTools/chrome-devtools-mcp 的项目解读" aria-expanded="false" aria-controls="project-chromedevtools-chrome-devtools-mcp">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-chromedevtools-chrome-devtools-mcp" hidden>
+    <p>代理调试前端时常靠猜，这个项目让它直接读控制台、截图、分析网络并做可靠自动化。功能很实在，但 README 也提醒：它会把浏览器实例内容暴露给 MCP 客户端，共享敏感数据的环境要谨慎。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="alibaba/open-code-review" data-project-url="https://github.com/alibaba/open-code-review" data-project-summary="阿里内部打磨两年的 AI 代码评审 CLI，确定性流水线加 LLM Agent，输出行级评论。" data-project-stars="51,510" data-language="Go">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener noreferrer">alibaba/open-code-review</a>
+        <span class="star-pill" aria-label="51,510 stars">★ 51,510</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Go</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 alibaba/open-code-review" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">阿里内部打磨两年的 AI 代码评审 CLI，确定性流水线加 LLM Agent，输出行级评论。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 alibaba/open-code-review 的项目解读" aria-expanded="false" aria-controls="project-alibaba-open-code-review">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-alibaba-open-code-review" hidden>
+    <p>它不只读 diff，还能让代理翻全文、搜代码库、看其他改动文件来补上下文，适合仓库级评审和审计陌生代码。内置多语言规则集覆盖 NPE、线程安全、XSS 等；基准称同模型下比通用代理精度更高、token 消耗约九分之一，但需自配模型端点。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="QwenLM/qwen-code" data-project-url="https://github.com/QwenLM/qwen-code" data-project-summary="Qwen 系的终端编码代理，1.0 预览把 Qoder 的 agent harness 并了进来，还延伸到 IDE、桌面和聊天工具。" data-project-stars="30,396" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">QwenLM/qwen-code</a>
+        <span class="star-pill" aria-label="30,396 stars">★ 30,396</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 QwenLM/qwen-code" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Qwen 系的终端编码代理，1.0 预览把 Qoder 的 agent harness 并了进来，还延伸到 IDE、桌面和聊天工具。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 QwenLM/qwen-code 的项目解读" aria-expanded="false" aria-controls="project-qwenlm-qwen-code">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-qwenlm-qwen-code" hidden>
+    <p>卖点是开箱即用的 Agentic 能力：Auto-Memory、Skills、SubAgents、MCP 首会话就能用，并支持 OpenAI、Anthropic、Gemini 和本地模型运行时切换。项目自称正用自身代理提 issue、跑测试，这种自举值得观察，但也意味着迭代节奏可能很猛。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="dream-num/univer" data-project-url="https://github.com/dream-num/univer" data-project-summary="开源 Office SDK，从表格和文档编辑起步，想把计算、协作和文件处理嵌进你自己的产品与代理。" data-project-stars="25,006" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/dream-num/univer" target="_blank" rel="noopener noreferrer">dream-num/univer</a>
+        <span class="star-pill" aria-label="25,006 stars">★ 25,006</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 dream-num/univer" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">开源 Office SDK，从表格和文档编辑起步，想把计算、协作和文件处理嵌进你自己的产品与代理。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 dream-num/univer 的项目解读" aria-expanded="false" aria-controls="project-dream-num-univer">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-dream-num-univer" hidden>
+    <p>适合需要在应用里内置类 Excel/Word 编辑能力、又不想被 Office 365 绑死的团队。它提供 Facade API 和事件机制连接应用与代理，架构上强调功能边界和跨功能撤销重做；但完整 Office SDK 能力涉及许可范围，采用前要看清授权。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ag-ui-protocol/ag-ui" data-project-url="https://github.com/ag-ui-protocol/ag-ui" data-project-summary="一个轻量的事件式协议，标准化 AI 代理如何把执行过程流向前端应用并接收用户输入。" data-project-stars="17,421" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ag-ui-protocol/ag-ui" target="_blank" rel="noopener noreferrer">ag-ui-protocol/ag-ui</a>
+        <span class="star-pill" aria-label="17,421 stars">★ 17,421</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ag-ui-protocol/ag-ui" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一个轻量的事件式协议，标准化 AI 代理如何把执行过程流向前端应用并接收用户输入。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ag-ui-protocol/ag-ui 的项目解读" aria-expanded="false" aria-controls="project-ag-ui-protocol-ag-ui">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ag-ui-protocol-ag-ui" hidden>
+    <p>代理后端按约 16 种标准事件类型发消息，前端用少量兼容输入回传，中间件负责适配 SSE 等不同传输。它解决的是代理与 UI 之间各写各的胶水代码问题；协议本身不绑定框架，价值取决于有多少集成方跟进。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="ashhart/TensorFold" data-project-url="https://github.com/ashhart/TensorFold" data-project-summary="用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。" data-project-stars="2,183" data-language="Zig">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/ashhart/TensorFold" target="_blank" rel="noopener noreferrer">ashhart/TensorFold</a>
+        <span class="star-pill" aria-label="2,183 stars">★ 2,183</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Zig</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 ashhart/TensorFold" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">用 Zig 写的 LLM 推理引擎，直接在 Apple Silicon 和 NVIDIA GPU 上跑 Metal 或 CUDA 内核。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 ashhart/TensorFold 的项目解读" aria-expanded="false" aria-controls="project-ashhart-tensorfold">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-ashhart-tensorfold" hidden>
+    <p>它读 checkpoint、分词、跑内核一条龙，服务时不需要 Python 或 MLX 环境，对想减少运行时依赖的人有吸引力。项目还引入 Agent Traffic Control 来协调代理贡献者避免重复劳动，这种协作方式本身比引擎更少见；成熟度仍需观察。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天最值得看的是代理工具开始分层：有人做评审面，有人做浏览器接口，有人做交互协议。省 token 的噱头很响，但真正决定代理好不好用的，还是这些中间层是否扎实。</p></div></div>
       </div>
 
       <aside class="rail">
@@ -318,7 +318,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17","2026-10-16"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-11-15","2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20","2026-10-19","2026-10-18","2026-10-17"]</div>
 
           </details>
         </section>
