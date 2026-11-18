@@ -1,0 +1,194 @@
+{
+  "title": "Agent 技能包与工作流工具集中出现",
+  "opening": "今天榜单几乎被 Agent 技能包和配套工具占满，从安全测试、选题调研到代码审查、工作流编排，都在把 Claude Code 这类编码代理往更具体的专业场景里推。最值得看的是 Claude-BugHunter 和 last30days-skill：前者把漏洞挖掘方法论拆成 82 个技能，后者用 Reddit、X、Polymarket 的投票和真金白银给话题排序。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "stars": "9,708",
+      "language": "Python",
+      "topics": [
+        "ai-security",
+        "anthropic",
+        "application-security",
+        "bug-bounty",
+        "bugbounty",
+        "bugcrowd",
+        "claude",
+        "claude-code"
+      ],
+      "readmeExcerpt": "claude-bughunter > A self-contained Claude skill bundle for bug hunting and external red-team work · **83 skills** · 15 slash commands · **681 disclosed-report patterns** (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by **Sachin Sharma** — Bug Hunting & GenAI Security Research. SPONSORED BY &nbsp;&nbsp;&nbsp;&nbsp; What is this? `claude-bughunter` is a drop-in skill bundle for the Claude Code skills system. Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. Four layers stack: - **Think** — `bb-methodology` + `redteam-mindset`: the 5-phase non-linear workflow, critical-thinking framework, and red-team operator discipline. - **Hunt webapps** — 58 `hunt-*` skills curated from ",
+      "summary": "给 Claude Code 装上一整套漏洞挖掘技能包，82 个技能、15 个斜杠命令，覆盖 24 类漏洞。",
+      "problem": "它把五阶段方法论、红队思维和 681 条已披露报告模式打包成可安装的技能，让代理在授权测试中按固定套路推进。局限在于效果高度依赖模型本身和测试范围，README 也强调只在授权场景使用。"
+    },
+    {
+      "rank": 2,
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "stars": "69,296",
+      "language": "Python",
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews"
+      ],
+      "readmeExcerpt": "/last30days English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md, which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts:** (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, score",
+      "summary": "一个按点赞、投票和真金白银排序的 AI 调研技能，横跨 Reddit、X、YouTube、HN 和 Polymarket。",
+      "problem": "适合快速摸清某个话题最近 30 天的真实热度，而不是靠编辑推荐。零配置就能跑 Reddit、HN 和 Polymarket，但 X、YouTube 等源需要走一次安装向导，且排序逻辑天然偏向有互动数据的平台。"
+    },
+    {
+      "rank": 3,
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "stars": "53,888",
+      "language": "Go",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "readmeExcerpt": "OpenCodeReview English | 简体中文 | 日本語 | 한국어 | Русский What is Open Code Review? Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, `ocr scan` reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the official website for more details. Benchmark > Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the token",
+      "summary": "阿里内部打磨两年的 AI 代码审查 CLI，用确定性管线加 LLM Agent 做行级评论。",
+      "problem": "它不只读 diff，还能让代理翻全文、搜代码库、看其他改动文件来补上下文，内置 NPE、线程安全、XSS、SQL 注入等多语言规则。README 称同模型下精度和 F1 高于通用代理，token 消耗约为九分之一，但需要自配模型端点。"
+    },
+    {
+      "rank": 4,
+      "name": "Tencent/LoopForge",
+      "url": "https://github.com/Tencent/LoopForge",
+      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "stars": "3,431",
+      "language": "Go",
+      "topics": [
+        "agent-orchestration",
+        "agentic-workflow",
+        "ai-agents",
+        "ai-coding",
+        "claude-code",
+        "code-review",
+        "codebuddy",
+        "codex"
+      ],
+      "readmeExcerpt": "English · 简体中文 Two ways to work · Quick start · SOPs · Features · Local · FAQ · Docs https://github.com/user-attachments/assets/8af401d9-1aae-427c-b4bc-455c12d17beb 80-second product tour (1080p, with sound). **LoopForge** is a self-hosted workspace where your team ships software with coding agents. Describe what you need to **Main Bot** in chat: it opens a Docker sandbox, checks out your repositories, delegates to project roles, and opens the PR. When a way of working proves itself, save it as an **SOP** (a standard workflow of agents, scripts and human gates) so the next requirement is delivered the same way, with review and approval built in. Coding-agent CLIs do the work: CodeBuddy, Codex, Claude Code, OpenCode, Cursor CLI, Antigravity, Kimi Code, Pi, DeepSeek Harness and ZCode. LoopForge adds the roles, sandboxes, checkpoints and history around them, all on your own infrastructure under the MIT license. Two ways to work | | **Chat with Main Bot** | **Run an SOP** | | Best for | Exploring, quick fixes, iterating with the agent | Repeatable delivery with fixed stages and sign-off | | How it runs | Main Bot opens a conversation workspace (a Docker sandbox with your repos) on dema",
+      "summary": "腾讯开源的编码代理交付工作台，把 CodeBuddy、Codex、Claude Code 塞进带人工审批的 SOP 里。",
+      "problem": "你在聊天里描述需求，Main Bot 开 Docker 沙箱、拉仓库、派角色、开 PR；跑顺的流程可以固化成带人工闸门的标准作业程序。适合团队重复交付，但前提是接受自托管和 Docker 沙箱这套基础设施。"
+    },
+    {
+      "rank": 5,
+      "name": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "stars": "29,208",
+      "language": "TypeScript",
+      "topics": [
+        "board",
+        "collaboration",
+        "doc",
+        "docx",
+        "excel",
+        "offce365",
+        "office",
+        "pdf"
+      ],
+      "readmeExcerpt": "Build your own AI office with Univer Office SDK. Start with open-source Sheets and Docs, then connect your own application or agent. 🚀 Quick start · 💼 Workspace · 📚 Documentation · ⚖️ Feature comparison · 🌐 Website · 🎮 Showcase · 🔧 API Reference · 📝 Blog English · Français · Deutsch · Español · 简体中文 · 繁體中文 · 日本語 · 한국어 Table of contents - 💡 What is Univer? - Open-source capabilities - 🚀 Build on the open-source foundation - Quick start: an open-source spreadsheet editor - Connect your application to editable content - 🏗️ Explore the open-source architecture - Give custom features clear boundaries - Compose cross-feature edits and undo/redo - Connect applications and agents through Facade APIs and events - 🧩 Extend your application with Univer Office SDK - Scope and licensing - 🌐 Application patterns and ecosystem - Univer Workspace: an Office SDK reference application - CLI, agent integrations, and developer skills - 📚 Documentation and contributing - Runtime compatibility - 💬 Community - 🔒 Security - ❤️ Sponsors - 📄 License 💡 What is Univer? **Univer** is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation",
+      "summary": "把表格、文档、协作和文件处理做成可嵌入的 Office SDK，人和 AI 代理都能操作。",
+      "problem": "它从开源 Sheets 和 Docs 起步，通过 Facade API 和事件把编辑能力接进你自己的产品，也留给代理调用。想自建 AI 办公界面的人可以看，但完整 Office 能力涉及商业授权范围，需要先分清开源核心和 SDK 的边界。"
+    },
+    {
+      "rank": 6,
+      "name": "getarcaneapp/arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "description": "Modern Docker Management, Designed for Everyone",
+      "stars": "9,431",
+      "language": "Go",
+      "topics": [
+        "compose",
+        "container-management",
+        "containers",
+        "docker",
+        "docker-compose",
+        "docker-management",
+        "go",
+        "self-hosted"
+      ],
+      "readmeExcerpt": "> [!NOTE] > The `main` branch is the v3 version of Arcane See the `release/2.x.x` branch for the last 2.x release. > [!IMPORTANT] > Feature requests have moved to Discussions. Open new requests and upvote existing ones there; issues are only used for Bug reports now to help maintain priority on those issues. Modern Docker Management, Designed for Everyone. Documentation For setup instructions, configuration details, and development guides, visit the **official documentation site**. Sponsors This project is supported by the following amazing people: Security & Transparency View the Software Bill of Materials (SBOM) for Arcane at **getarcane.app/sbom**. Translating Help translate Arcane on Crowdin: https://crowdin.com/project/arcane-docker-management Thank you for checking out Arcane! Your feedback and contributions are always welcome.",
+      "summary": "一个面向所有人的现代 Docker 管理界面，Go 编写，主打自托管。",
+      "problem": "README 信息偏少，主要指向文档站和 SBOM，能确认的是它围绕 Compose 和容器管理做自托管面板。当前 main 分支已是 v3，功能请求迁到了 Discussions，适合想替代 Portainer 类工具的人先看文档再决定。"
+    },
+    {
+      "rank": 7,
+      "name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "stars": "10,181",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Stitch Design Skills A collection of agent skills and plugins for Google Stitch, following the Agent Skills open standard. Compatible with coding agents such as Codex, Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode (manual install). Quick Start 1. Install Plugins (Recommended) The fastest way to set up the full Stitch plugin suite globally. Codex Add the Stitch Skills marketplace, then install the plugins you need. Via CLI (recommended) > [!TIP] > The `--sparse` flags are optional — they limit the checkout to only the > listed paths for a faster clone. Omit them to pull the entire repository. Via the Codex UI Navigate to **Settings → Plugin Marketplaces → Add** and fill in: | Field | Value | | **Source** | `https://github.com/google-labs-code/stitch-skills` | | **Git ref** | `main` | | **Sparse paths** | *(optional)* `.agents/plugins`, `plugins/stitch-design`, `plugins/stitch-build`, `plugins/stitch-utilities` | Once the marketplace is registered, install any combination of: - **`stitch-design`** — design-focused skills - **`stitch-build`** — build and component skills - **`stitch-utilities`** — utility and helper skills Claude Code & Cursor OpenCode OpenCode does **not",
+      "summary": "Google Stitch 的代理技能库，按 Agent Skills 开放标准打包成设计、构建、工具三类插件。",
+      "problem": "它通过 Stitch MCP 服务器工作，可装进 Codex、Gemini CLI、Claude Code、Cursor 等代理，用插件市场或稀疏检出快速接入。适合把 UI 设计意图直接交给编码代理执行，但目前围绕 Stitch 生态，脱离该服务价值有限。"
+    },
+    {
+      "rank": 8,
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "stars": "16,963",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Cursor plugins Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest. Plugins | `name` | Plugin | Author | Category | `description` (from marketplace) | | `teaching` | Teaching | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | `continual-learning` | Continual Learning | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | `cursor-team-kit` | Cursor Team Kit | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification. | | `thermos` | Thermos | Cursor | Developer Tools | Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows. | | `create-plugin` | Create Plugin | Cursor | Developer Tools | Scaffold and validate new agent plugins. | | `ralph-loop` | Ralph Loop | Cursor | Developer Tools | Iterative self-referential AI loops using the Ralph Wiggum",
+      "summary": "Cursor 官方插件规范与首批官方插件，每个插件一个目录、一份 manifest。",
+      "problem": "仓库里能看到教学、持续学习、团队工具包、深度分支审查等插件，其中 Thermos 主打安全与正确性审计加并行子代理。它更像插件市场的样板间，价值在于示范插件怎么组织，而不是提供开箱即用的完整方案。"
+    },
+    {
+      "rank": 9,
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars": "319,488",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "readmeExcerpt": "Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. Table of Contents - How it works - Commercial Services - Getting Started - Claude Code - Antigravity - Codex App - Codex CLI - Cursor - Devin CLI - Factory Droid - Gemini CLI - GitHub Copilot CLI - Grok Build CLI - Kimi Code - OpenCode - Pi - Qwen Code - Hermes Agent - Muse - The Basic Workflow - When Something Goes Wrong - Community - What's Inside - Philosophy - Contributing - Updating - License - Visual companion telemetry How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aver",
+      "summary": "一套给编码代理用的完整软件开发方法论，由可组合技能和初始指令构成。",
+      "problem": "它不让代理一上来就写代码，而是先逼出规格、分块确认设计、再生成连“没品味的初级工程师”都能执行的计划。覆盖 Claude Code、Codex、Cursor、Gemini CLI 等一长串宿主，适合想给代理立规矩的团队，但方法论本身需要人愿意跟着走。"
+    },
+    {
+      "rank": 10,
+      "name": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "stars": "20,116",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui-protocol",
+        "agent-frontend",
+        "agent-ui",
+        "agentic-workflow",
+        "ai-agents"
+      ],
+      "readmeExcerpt": "The open protocol that connects any agent to any app. **Docs** · **Examples** · **Spec** · **Discord** **AG-UI is an open, lightweight, event-based protocol that standardizes how AI agents connect to user-facing applications.** Agents don't fit the request/response model. They stream tokens, call tools mid-response, update shared state, pause for a human, and spawn subagents, and every framework does it differently. AG-UI replaces that custom wiring with one bi-directional event stream: the agent emits typed events, and any client can render them, no matter which framework built the agent. The same agent can power a web app, a mobile app, a terminal, or Slack. > [!IMPORTANT] > **AG-UI 1.0 is here.** The protocol now has a stable, frozen specification backed by a JSON Schema, and the TypeScript, Python, and .NET SDKs are generated from it. 1.0 is backwards compatible in both directions: 0.x agents work with 1.0 clients and vice versa. What changed → · Migration guide → Quick start **Start a new app.** The CLI scaffolds a frontend (CopilotKit on Next.js, or a terminal client) wired to the agent framework you pick: Then follow the printed next steps. The generated templates call OpenA",
+      "summary": "一个开放的事件协议，把任意代理接到任意前端应用，1.0 规范已冻结。",
+      "problem": "代理不是请求响应模型：它流式吐 token、中途调工具、更新共享状态、等人确认、再派子代理。AG-UI 用一条双向事件流替掉各家自定义接线，TypeScript、Python、.NET SDK 从 JSON Schema 生成，0.x 与 1.0 双向兼容。"
+    }
+  ],
+  "closing": "今天的信号很集中：大家不再满足于让代理“能聊”，而是给它装技能、定流程、加审批、接前端。真正稀缺的不是又一个技能包，而是像 AG-UI 这样让代理和界面说同一种话的底层约定。"
+}

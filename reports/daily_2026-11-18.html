@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月18日星期三</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-18">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月18日星期三</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>Agent 技能包与工作流工具集中出现</h1>
+        <p>今天榜单几乎被 Agent 技能包和配套工具占满，从安全测试、选题调研到代码审查、工作流编排，都在把 Claude Code 这类编码代理往更具体的专业场景里推。最值得看的是 Claude-BugHunter 和 last30days-skill：前者把漏洞挖掘方法论拆成 82 个技能，后者用 Reddit、X、Polymarket 的投票和真金白银给话题排序。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="elementalsouls/Claude-BugHunter" data-project-url="https://github.com/elementalsouls/Claude-BugHunter" data-project-summary="给 Claude Code 装上一整套漏洞挖掘技能包，82 个技能、15 个斜杠命令，覆盖 24 类漏洞。" data-project-stars="9,708" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener noreferrer">elementalsouls/Claude-BugHunter</a>
+        <span class="star-pill" aria-label="9,708 stars">★ 9,708</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 elementalsouls/Claude-BugHunter" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给 Claude Code 装上一整套漏洞挖掘技能包，82 个技能、15 个斜杠命令，覆盖 24 类漏洞。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 elementalsouls/Claude-BugHunter 的项目解读" aria-expanded="true" aria-controls="project-elementalsouls-claude-bughunter">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-elementalsouls-claude-bughunter">
+    <p>它把五阶段方法论、红队思维和 681 条已披露报告模式打包成可安装的技能，让代理在授权测试中按固定套路推进。局限在于效果高度依赖模型本身和测试范围，README 也强调只在授权场景使用。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="mvanhorn/last30days-skill" data-project-url="https://github.com/mvanhorn/last30days-skill" data-project-summary="一个按点赞、投票和真金白银排序的 AI 调研技能，横跨 Reddit、X、YouTube、HN 和 Polymarket。" data-project-stars="69,296" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener noreferrer">mvanhorn/last30days-skill</a>
+        <span class="star-pill" aria-label="69,296 stars">★ 69,296</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 mvanhorn/last30days-skill" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一个按点赞、投票和真金白银排序的 AI 调研技能，横跨 Reddit、X、YouTube、HN 和 Polymarket。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 mvanhorn/last30days-skill 的项目解读" aria-expanded="true" aria-controls="project-mvanhorn-last30days-skill">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-mvanhorn-last30days-skill">
+    <p>适合快速摸清某个话题最近 30 天的真实热度，而不是靠编辑推荐。零配置就能跑 Reddit、HN 和 Polymarket，但 X、YouTube 等源需要走一次安装向导，且排序逻辑天然偏向有互动数据的平台。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="alibaba/open-code-review" data-project-url="https://github.com/alibaba/open-code-review" data-project-summary="阿里内部打磨两年的 AI 代码审查 CLI，用确定性管线加 LLM Agent 做行级评论。" data-project-stars="53,888" data-language="Go">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener noreferrer">alibaba/open-code-review</a>
+        <span class="star-pill" aria-label="53,888 stars">★ 53,888</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Go</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 alibaba/open-code-review" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">阿里内部打磨两年的 AI 代码审查 CLI，用确定性管线加 LLM Agent 做行级评论。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 alibaba/open-code-review 的项目解读" aria-expanded="true" aria-controls="project-alibaba-open-code-review">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-alibaba-open-code-review">
+    <p>它不只读 diff，还能让代理翻全文、搜代码库、看其他改动文件来补上下文，内置 NPE、线程安全、XSS、SQL 注入等多语言规则。README 称同模型下精度和 F1 高于通用代理，token 消耗约为九分之一，但需要自配模型端点。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="Tencent/LoopForge" data-project-url="https://github.com/Tencent/LoopForge" data-project-summary="腾讯开源的编码代理交付工作台，把 CodeBuddy、Codex、Claude Code 塞进带人工审批的 SOP 里。" data-project-stars="3,431" data-language="Go">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/Tencent/LoopForge" target="_blank" rel="noopener noreferrer">Tencent/LoopForge</a>
+        <span class="star-pill" aria-label="3,431 stars">★ 3,431</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Go</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 Tencent/LoopForge" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">腾讯开源的编码代理交付工作台，把 CodeBuddy、Codex、Claude Code 塞进带人工审批的 SOP 里。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 Tencent/LoopForge 的项目解读" aria-expanded="false" aria-controls="project-tencent-loopforge">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-tencent-loopforge" hidden>
+    <p>你在聊天里描述需求，Main Bot 开 Docker 沙箱、拉仓库、派角色、开 PR；跑顺的流程可以固化成带人工闸门的标准作业程序。适合团队重复交付，但前提是接受自托管和 Docker 沙箱这套基础设施。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="dream-num/univer" data-project-url="https://github.com/dream-num/univer" data-project-summary="把表格、文档、协作和文件处理做成可嵌入的 Office SDK，人和 AI 代理都能操作。" data-project-stars="29,208" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/dream-num/univer" target="_blank" rel="noopener noreferrer">dream-num/univer</a>
+        <span class="star-pill" aria-label="29,208 stars">★ 29,208</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 dream-num/univer" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把表格、文档、协作和文件处理做成可嵌入的 Office SDK，人和 AI 代理都能操作。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 dream-num/univer 的项目解读" aria-expanded="false" aria-controls="project-dream-num-univer">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-dream-num-univer" hidden>
+    <p>它从开源 Sheets 和 Docs 起步，通过 Facade API 和事件把编辑能力接进你自己的产品，也留给代理调用。想自建 AI 办公界面的人可以看，但完整 Office 能力涉及商业授权范围，需要先分清开源核心和 SDK 的边界。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="getarcaneapp/arcane" data-project-url="https://github.com/getarcaneapp/arcane" data-project-summary="一个面向所有人的现代 Docker 管理界面，Go 编写，主打自托管。" data-project-stars="9,431" data-language="Go">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/getarcaneapp/arcane" target="_blank" rel="noopener noreferrer">getarcaneapp/arcane</a>
+        <span class="star-pill" aria-label="9,431 stars">★ 9,431</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Go</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 getarcaneapp/arcane" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一个面向所有人的现代 Docker 管理界面，Go 编写，主打自托管。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 getarcaneapp/arcane 的项目解读" aria-expanded="false" aria-controls="project-getarcaneapp-arcane">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-getarcaneapp-arcane" hidden>
+    <p>README 信息偏少，主要指向文档站和 SBOM，能确认的是它围绕 Compose 和容器管理做自托管面板。当前 main 分支已是 v3，功能请求迁到了 Discussions，适合想替代 Portainer 类工具的人先看文档再决定。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="google-labs-code/stitch-skills" data-project-url="https://github.com/google-labs-code/stitch-skills" data-project-summary="Google Stitch 的代理技能库，按 Agent Skills 开放标准打包成设计、构建、工具三类插件。" data-project-stars="10,181" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/google-labs-code/stitch-skills" target="_blank" rel="noopener noreferrer">google-labs-code/stitch-skills</a>
+        <span class="star-pill" aria-label="10,181 stars">★ 10,181</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 google-labs-code/stitch-skills" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Google Stitch 的代理技能库，按 Agent Skills 开放标准打包成设计、构建、工具三类插件。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 google-labs-code/stitch-skills 的项目解读" aria-expanded="false" aria-controls="project-google-labs-code-stitch-skills">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-google-labs-code-stitch-skills" hidden>
+    <p>它通过 Stitch MCP 服务器工作，可装进 Codex、Gemini CLI、Claude Code、Cursor 等代理，用插件市场或稀疏检出快速接入。适合把 UI 设计意图直接交给编码代理执行，但目前围绕 Stitch 生态，脱离该服务价值有限。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="cursor/plugins" data-project-url="https://github.com/cursor/plugins" data-project-summary="Cursor 官方插件规范与首批官方插件，每个插件一个目录、一份 manifest。" data-project-stars="16,963" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cursor/plugins" target="_blank" rel="noopener noreferrer">cursor/plugins</a>
+        <span class="star-pill" aria-label="16,963 stars">★ 16,963</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cursor/plugins" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Cursor 官方插件规范与首批官方插件，每个插件一个目录、一份 manifest。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 cursor/plugins 的项目解读" aria-expanded="false" aria-controls="project-cursor-plugins">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-cursor-plugins" hidden>
+    <p>仓库里能看到教学、持续学习、团队工具包、深度分支审查等插件，其中 Thermos 主打安全与正确性审计加并行子代理。它更像插件市场的样板间，价值在于示范插件怎么组织，而不是提供开箱即用的完整方案。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="obra/superpowers" data-project-url="https://github.com/obra/superpowers" data-project-summary="一套给编码代理用的完整软件开发方法论，由可组合技能和初始指令构成。" data-project-stars="319,488" data-language="Shell">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+        <span class="star-pill" aria-label="319,488 stars">★ 319,488</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 obra/superpowers" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一套给编码代理用的完整软件开发方法论，由可组合技能和初始指令构成。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 obra/superpowers 的项目解读" aria-expanded="false" aria-controls="project-obra-superpowers">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-obra-superpowers" hidden>
+    <p>它不让代理一上来就写代码，而是先逼出规格、分块确认设计、再生成连“没品味的初级工程师”都能执行的计划。覆盖 Claude Code、Codex、Cursor、Gemini CLI 等一长串宿主，适合想给代理立规矩的团队，但方法论本身需要人愿意跟着走。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天的信号很集中：大家不再满足于让代理“能聊”，而是给它装技能、定流程、加审批、接前端。真正稀缺的不是又一个技能包，而是像 AG-UI 这样让代理和界面说同一种话的底层约定。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-17","2026-11-16","2026-11-15","2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21","2026-10-20"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>
