@@ -1,0 +1,175 @@
+{
+  "title": "Agent 技能生态正在成型",
+  "opening": "今天榜单上最显眼的是 Agent 技能与插件的基础设施化：Cursor 发布官方插件规范，NVIDIA 推出技能评估框架，Google 则把 Stitch 的设计能力拆成技能包。另一个值得注意的信号是 HKUDS/CLI-Anything 已冲到近 6 万星，试图用 CLI 把任意软件改造成 Agent 可调用的接口。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "stars": "17,302",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Cursor plugins Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest. Plugins | `name` | Plugin | Author | Category | `description` (from marketplace) | | `teaching` | Teaching | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | `continual-learning` | Continual Learning | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | `cursor-team-kit` | Cursor Team Kit | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification. | | `thermos` | Thermos | Cursor | Developer Tools | Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows. | | `create-plugin` | Create Plugin | Cursor | Developer Tools | Scaffold and validate new agent plugins. | | `ralph-loop` | Ralph Loop | Cursor | Developer Tools | Iterative self-referential AI loops using the Ralph Wiggum",
+      "summary": "Cursor 官方插件规范与示例合集，每个插件独立目录并带 manifest，相当于给 Agent 扩展能力定了个标准抽屉。",
+      "problem": "仓库里既有教学、持续学习这类通用技能，也有 Thermos 这种做深度安全审计和并行子代理的复杂插件。它更像规范样板而非开箱即用的市场，想直接拿来干活还得自己挑和配。"
+    },
+    {
+      "rank": 2,
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "stars": "59,943",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "&nbsp; CLI-Anything: Making ALL Software Agent-Native &#32; &#32; Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software **🌐 CLI-Hub**: `pip install cli-anything-hub` then `cli-hub install ` — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. **🎬 See Demos**: Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. **🙋 [Become a Contributor, or Request a CLI]**: Join us! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request! **One Command Line**: Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc.&nbsp;&nbsp;**中文文档** | **日本語ドキュメント** | **Deutsch** 📰 News > Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. - **2026-05-30** 🧭 **Hermes skill** proposed (#320), adding a CLI-Anything",
+      "summary": "给任意软件套一层 CLI，让 AI Agent 能像人一样敲命令操作 CAD、3D 场景、字幕等工具。",
+      "problem": "思路是把软件能力封装成 Agent 可调用的命令行接口，再通过 CLI-Hub 分发社区构建的 CLI。覆盖面听起来很广，但实际效果取决于每个 CLI 封装的质量，目前更像一个正在快速铺开的生态倡议。"
+    },
+    {
+      "rank": 3,
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "stars": "70,205",
+      "language": "Python",
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews"
+      ],
+      "readmeExcerpt": "/last30days English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md, which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts:** (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, score",
+      "summary": "一个 Agent 技能，并行搜索 Reddit、X、YouTube、HN、Polymarket 等平台，用点赞和真金白银的赔率而非编辑偏好来排序信息。",
+      "problem": "适合快速摸清某个话题最近 30 天的舆论和资金信号。零配置就能跑 Reddit、HN、Polymarket 和 GitHub，但 X、YouTube、TikTok 等需要跑一次设置向导解锁，且摘要质量依赖各平台数据的可获取性。"
+    },
+    {
+      "rank": 4,
+      "name": "getarcaneapp/arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "description": "Modern Docker Management, Designed for Everyone",
+      "stars": "9,902",
+      "language": "Go",
+      "topics": [
+        "compose",
+        "container-management",
+        "containers",
+        "docker",
+        "docker-compose",
+        "docker-management",
+        "go",
+        "self-hosted"
+      ],
+      "readmeExcerpt": "> [!NOTE] > The `main` branch is the v3 version of Arcane See the `release/2.x.x` branch for the last 2.x release. > [!IMPORTANT] > Feature requests have moved to Discussions. Open new requests and upvote existing ones there; issues are only used for Bug reports now to help maintain priority on those issues. Modern Docker Management, Designed for Everyone. Documentation For setup instructions, configuration details, and development guides, visit the **official documentation site**. Sponsors This project is supported by the following amazing people: Security & Transparency View the Software Bill of Materials (SBOM) for Arcane at **getarcane.app/sbom**. Translating Help translate Arcane on Crowdin: https://crowdin.com/project/arcane-docker-management Thank you for checking out Arcane! Your feedback and contributions are always welcome.",
+      "summary": "用 Go 写的现代 Docker 管理面板，面向自托管场景，把容器和 Compose 的日常操作收进一个界面。",
+      "problem": "README 本身信息偏少，主要指向官方文档和 SBOM。从 topics 看它覆盖 compose、容器管理和自托管，适合不想纯靠命令行管 Docker 的人，但具体功能深度需要翻文档才能判断。"
+    },
+    {
+      "rank": 5,
+      "name": "NVIDIA/SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, security scanning, harness compatibility checks, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior. Ships reusable CI templates that bring every check to any repository.",
+      "stars": "3,832",
+      "language": "Python",
+      "topics": [
+        "agent-evaluation",
+        "agent-plugins",
+        "agent-security",
+        "agent-skills",
+        "agentic-ai",
+        "benchmark",
+        "ci-templates",
+        "claude-code"
+      ],
+      "readmeExcerpt": "Evaluate and improve AI agent skills and plugins: quality, security, overlap, compatibility, and real impact across agents > 📺 **Livestream:** Ask the Experts: Evaluating Agent Skills SkillEvaluator checks AI agent skills and plugins, and measures a skill's effect on task results: start with quality checks, then compare runs with and without a skill. Catch skill issues before merge. Connect your repository to SkillEvaluator with a CI template for automated quality and security gates, without building or maintaining evaluation code. Agent skills are folders of instructions and supporting files defined by the Agent Skills specification. SkillEvaluator is part of the NVIDIA Verified Skills pipeline. Get started Install the CLI in a Python 3.12–3.14 environment: Or use uv For uv setup or direct GitHub source installation, see Installation. Then check skills from your terminal, CI, or agent: Run checks backed by **500+ static rules and detection patterns**, without an LLM key. Complete scanner setup for full coverage: Run all three tiers After all-tier setup with NVIDIA Build, remove `--tiers 1` to add deduplication and live agent evaluation to measure skill lift: Check every skill cha",
+      "summary": "给 Agent 技能做质检的多层框架：静态规则、安全扫描、语义重叠检测，再到真实 Agent 运行对比，一条龙卡在合并前。",
+      "problem": "第一层靠 500 多条静态规则和检测模式，不需要 LLM key 就能跑；后两层才引入去重和实时 Agent 评估来量化技能带来的提升。它提供可复用的 CI 模板，适合想把技能质量门禁自动化的团队，但完整评估需要接 NVIDIA Build。"
+    },
+    {
+      "rank": 6,
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "stars": "96,176",
+      "language": "Shell",
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc"
+      ],
+      "readmeExcerpt": "Node Version Manager [ ][3] [ ][4] Table of Contents - Intro - About - Installing and Updating - Install & Update Script - Additional Notes - Installing in Docker - Installing in Docker for CICD-Jobs - Troubleshooting on Linux - Troubleshooting on macOS - Ansible - Verify Installation - Important Notes - Git Install - Manual Install - Manual Upgrade - Usage - Long-term Support - Version Categories - Migrating Global Packages While Installing - Migrating Global Packages Between Installed Versions - Offline Install - Default Global Packages From File While Installing - io.js - System Version of Node - Listing Versions - Setting Custom Colors - Persisting custom colors - Suppressing colorized output - Restoring PATH - Set default node version - Use a mirror of node binaries - Pass Authorization header to mirror - Platforms without official binaries - .nvmrc - Deeper Shell Integration - Calling `nvm use` automatically in a directory with a `.nvmrc` file - bash - zsh - fish - Running Tests - Environment variables - Bash Completion - Usage - Compatibility Issues - Installing nvm on Alpine Linux - Alpine Linux 3.13+ - Alpine Linux 3.5 - 3.12 - Uninstalling / Removal - Manual Uninstall - D",
+      "summary": "老牌 Node 版本管理器，POSIX 兼容的 bash 脚本，靠 .nvmrc 和 shell 集成在多个 Node 版本间切换。",
+      "problem": "近 10 万星说明它仍是 Node 多版本场景的默认答案。功能列表很长，从 Docker 安装到离线安装、镜像加速都覆盖，但本质仍是 shell 脚本方案，Windows 原生支持不在其范围内。"
+    },
+    {
+      "rank": 7,
+      "name": "astral-sh/uv",
+      "url": "https://github.com/astral-sh/uv",
+      "description": "An extremely fast Python package and project manager, written in Rust.",
+      "stars": "92,284",
+      "language": "Rust",
+      "topics": [
+        "packaging",
+        "python",
+        "resolver",
+        "uv"
+      ],
+      "readmeExcerpt": "uv An extremely fast Python package and project manager, written in Rust. Installing Trio 's dependencies with a warm cache. Highlights - A single tool to replace `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv`, and more. - 10-100x faster than `pip`. - Provides comprehensive project management, with a universal lockfile. - Runs scripts, with support for inline dependency metadata. - Installs and manages Python versions. - Runs and installs tools published as Python packages. - Includes a pip-compatible interface for a performance boost with a familiar CLI. - Supports Cargo-style workspaces for scalable projects. - Disk-space efficient, with a global cache for dependency deduplication. - Installable without Rust or Python via `curl` or `pip`. - Supports macOS, Linux, and Windows. uv is backed by Astral, the creators of Ruff and ty. Installation Install uv with our standalone installers: Or, from PyPI: If installed via the standalone installer, uv can update itself to the latest version: See the installation documentation for details and alternative installation methods. Documentation uv's documentation is available at docs.astral.sh/uv. Additionally, the command",
+      "summary": "Rust 写的 Python 包和项目管理器，号称一个工具替代 pip、pip-tools、pipx、poetry、pyenv 等一串。",
+      "problem": "亮点是 10 到 100 倍于 pip 的速度、通用锁文件、内联依赖脚本和 Cargo 风格 workspace。它已经不只是包安装器，而是在收拢整个 Python 项目工作流，对现有工具链的替代意图非常明显。"
+    },
+    {
+      "rank": 8,
+      "name": "google-research/paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "stars": "4,475",
+      "language": "Python",
+      "topics": [
+        "ai-research-assistant",
+        "multi-agent-systems"
+      ],
+      "readmeExcerpt": "🎻 PaperOrchestra: A Multi-Agent Framework for Automated AI Research Paper Writing Yiwen Song 1 , Yale Song 1 , Tomas Pfister 1 , and Jinsung Yoon 1 1 Google Cloud AI Research PaperOrchestra is a multi-agent framework for automated AI research paper writing. It flexibly transforms unconstrained pre-writing materials (ideas and experimental logs) into submission-ready LaTeX manuscripts, including comprehensive literature synthesis and generated visuals, such as plots and conceptual diagrams. Acting like an orchestrated team of specialized agents, it handles outline generation, literature review, section writing, content refinement, and plotting to close the gap between raw research materials and submission ready papers. Key Features - **Multi-Agent Pipeline**: Orchestrates specialized agents (Outline, Literature Review, Section Writing, Content Refinement, Plotting) for end-to-end paper generation. - **Comprehensive Literature Synthesis**: Automatically searches, prioritizes, and integrates relevant literature into the manuscript. - **Visuals Generation**: Generates plots and supports the inclusion of conceptual diagrams. - **LaTeX Automation**: Produces submission-ready LaTeX manus",
+      "summary": "Google Research 的多 Agent 论文写作框架，把想法和实验日志变成带文献综述和图表的 LaTeX 投稿稿。",
+      "problem": "流水线拆成大纲、文献综述、章节写作、内容精炼和绘图几个专职 Agent，覆盖从原始材料到成稿的完整链路。适合探索自动化写作的边界，但“投稿就绪”和实际学术质量之间还有很长的路。"
+    },
+    {
+      "rank": 9,
+      "name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "stars": "10,474",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Stitch Design Skills A collection of agent skills and plugins for Google Stitch, following the Agent Skills open standard. Compatible with coding agents such as Codex, Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode (manual install). Quick Start 1. Install Plugins (Recommended) The fastest way to set up the full Stitch plugin suite globally. Codex Add the Stitch Skills marketplace, then install the plugins you need. Via CLI (recommended) > [!TIP] > The `--sparse` flags are optional — they limit the checkout to only the > listed paths for a faster clone. Omit them to pull the entire repository. Via the Codex UI Navigate to **Settings → Plugin Marketplaces → Add** and fill in: | Field | Value | | **Source** | `https://github.com/google-labs-code/stitch-skills` | | **Git ref** | `main` | | **Sparse paths** | *(optional)* `.agents/plugins`, `plugins/stitch-design`, `plugins/stitch-build`, `plugins/stitch-utilities` | Once the marketplace is registered, install any combination of: - **`stitch-design`** — design-focused skills - **`stitch-build`** — build and component skills - **`stitch-utilities`** — utility and helper skills Claude Code & Cursor OpenCode OpenCode does **not",
+      "summary": "Google Stitch 的 Agent 技能库，按开放标准拆成设计、构建、工具三组插件，可装进 Codex、Claude Code、Cursor 等。",
+      "problem": "安装方式以插件市场为主，Codex 支持 CLI 和 UI 两种路径，Claude Code 和 Cursor 也有对应说明，但 OpenCode 需要手动安装。它把设计工具能力模块化，方便按需组合，不过目前更像配套生态而非独立产品。"
+    },
+    {
+      "rank": 10,
+      "name": "sveltejs/svelte",
+      "url": "https://github.com/sveltejs/svelte",
+      "description": "web development for the rest of us",
+      "stars": "89,666",
+      "language": "JavaScript",
+      "topics": [
+        "compiler",
+        "template",
+        "ui"
+      ],
+      "readmeExcerpt": "What is Svelte? Svelte is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM. Learn more at the Svelte website, or stop by the Discord chatroom. Supporting Svelte Svelte is an MIT-licensed open source project with its ongoing development made possible entirely by fantastic volunteers. If you'd like to support their efforts, please consider: - Becoming a backer on Open Collective. Funds donated via Open Collective will be used for compensating expenses related to Svelte's development such as hosting costs. If sufficient donations are received, funds may also be used to support Svelte's development more directly. Roadmap You may view our roadmap if you'd like to see what we're currently working on. Contributing Please see the Contributing Guide and the `svelte` package for information on contributing to Svelte. Is svelte.dev down? Probably not, but it's possible. If you can't seem to access any `.dev` sites, check out this SuperUser question and answer. License MIT",
+      "summary": "把声明式组件编译成高效 JavaScript 的 UI 框架，靠编译期优化直接外科手术式更新 DOM。",
+      "problem": "近 9 万星的老牌项目，README 保持极简，核心卖点仍是编译时消除运行时开销。在 Agent 技能刷屏的今天，它提醒人前端框架的竞争早已进入稳定期，拼的是生态和长期维护。"
+    }
+  ],
+  "closing": "今天榜单的主线不是某个爆款应用，而是 Agent 技能从“能跑”走向“可评估、可分发、可组合”的基础设施层。值得留意的是，评估和规范类项目开始与技能本身同台竞争注意力。"
+}
