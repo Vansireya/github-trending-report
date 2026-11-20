@@ -21,11 +21,11 @@
     }
   </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
-  <title>GitHub 简报 - 2026年11月19日星期四</title>
+  <title>GitHub 简报 - 2026年11月20日星期五</title>
   <script src="data/ranking_data.js"></script>
   <link rel="stylesheet" href="src/templates/style-v2.css?v=bcdb31d3">
 </head>
-<body data-report-base-path="reports/" data-report-date="2026-11-19">
+<body data-report-base-path="reports/" data-report-date="2026-11-20">
   <div class="page-glow page-glow--one"></div>
   <div class="page-glow page-glow--two"></div>
 
@@ -58,48 +58,73 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="hero-meta">
-          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月19日星期四</time>
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月20日星期五</time>
 
         </div>
-        <h1>Agent 技能生态正在成型</h1>
-        <p>今天榜单上最显眼的是 Agent 技能与插件的基础设施化：Cursor 发布官方插件规范，NVIDIA 推出技能评估框架，Google 则把 Stitch 的设计能力拆成技能包。另一个值得注意的信号是 HKUDS/CLI-Anything 已冲到近 6 万星，试图用 CLI 把任意软件改造成 Agent 可调用的接口。</p>
+        <h1>AI 代理技能包占据热榜，从漏洞挖掘到图表设计</h1>
+        <p>今天的热榜几乎被 AI 代理技能包和工具链占满，从漏洞挖掘、开发方法论到图表生成，都在把 Claude Code 等代理变成更专业的执行者。最值得看的是 Claude-BugHunter 和 superpowers：前者把 681 份公开漏洞报告整理成可调用的技能，后者试图给编码代理一套完整的软件开发流程。</p>
       </div>
     </section>
 
     <section class="dashboard">
       <div class="feed-column">
-        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="cursor/plugins" data-project-url="https://github.com/cursor/plugins" data-project-summary="Cursor 官方插件规范与示例合集，每个插件独立目录并带 manifest，相当于给 Agent 扩展能力定了个标准抽屉。" data-project-stars="17,302" data-language="TypeScript">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="elementalsouls/Claude-BugHunter" data-project-url="https://github.com/elementalsouls/Claude-BugHunter" data-project-summary="一个给 Claude Code 用的漏洞挖掘技能包，包含 83 个技能、15 个斜杠命令和 681 份公开漏洞报告模式。" data-project-stars="12,823" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">1</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/cursor/plugins" target="_blank" rel="noopener noreferrer">cursor/plugins</a>
-        <span class="star-pill" aria-label="17,302 stars">★ 17,302</span>
+        <a class="project-name" href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener noreferrer">elementalsouls/Claude-BugHunter</a>
+        <span class="star-pill" aria-label="12,823 stars">★ 12,823</span>
       </div>
       <div class="project-tags">
-        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="language-tag"><i></i>Python</span>
         <span class="appearance-tag" hidden></span>
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 cursor/plugins" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 elementalsouls/Claude-BugHunter" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">Cursor 官方插件规范与示例合集，每个插件独立目录并带 manifest，相当于给 Agent 扩展能力定了个标准抽屉。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 cursor/plugins 的项目解读" aria-expanded="true" aria-controls="project-cursor-plugins">
+  <p class="project-summary">一个给 Claude Code 用的漏洞挖掘技能包，包含 83 个技能、15 个斜杠命令和 681 份公开漏洞报告模式。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 elementalsouls/Claude-BugHunter 的项目解读" aria-expanded="true" aria-controls="project-elementalsouls-claude-bughunter">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-cursor-plugins">
-    <p>仓库里既有教学、持续学习这类通用技能，也有 Thermos 这种做深度安全审计和并行子代理的复杂插件。它更像规范样板而非开箱即用的市场，想直接拿来干活还得自己挑和配。</p>
+  <div class="project-details" id="project-elementalsouls-claude-bughunter">
+    <p>它把漏洞挖掘拆成方法论、Web 应用狩猎、企业身份和基础设施攻击矩阵等层次，并集成 Burp MCP。适合授权红队和靶场练习，但实际效果取决于使用者对范围边界的把控。</p>
   </div>
 </article>
-<article class="project-card project-card--featured" data-project-name="HKUDS/CLI-Anything" data-project-url="https://github.com/HKUDS/CLI-Anything" data-project-summary="给任意软件套一层 CLI，让 AI Agent 能像人一样敲命令操作 CAD、3D 场景、字幕等工具。" data-project-stars="59,943" data-language="Python">
+<article class="project-card project-card--featured" data-project-name="obra/superpowers" data-project-url="https://github.com/obra/superpowers" data-project-summary="一套面向编码代理的软件开发方法论，用可组合技能让代理先问清需求再动手写代码。" data-project-stars="322,231" data-language="Shell">
   <div class="project-card-header">
     <div class="rank-badge">2</div>
     <div class="project-identity">
       <div class="project-title-line">
+        <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+        <span class="star-pill" aria-label="322,231 stars">★ 322,231</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 obra/superpowers" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一套面向编码代理的软件开发方法论，用可组合技能让代理先问清需求再动手写代码。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 obra/superpowers 的项目解读" aria-expanded="true" aria-controls="project-obra-superpowers">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-obra-superpowers">
+    <p>它强调从对话中提炼规格、分块确认设计、再生成实施计划，而不是直接跳进编码。支持 Claude Code、Codex、Cursor 等多种宿主，但流程本身需要使用者愿意接受这种前置约束。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="HKUDS/CLI-Anything" data-project-url="https://github.com/HKUDS/CLI-Anything" data-project-summary="试图让所有软件都变成代理可调用的命令行工具，通过 CLI-Hub 安装和管理社区构建的 CLI。" data-project-stars="60,715" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
         <a class="project-name" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener noreferrer">HKUDS/CLI-Anything</a>
-        <span class="star-pill" aria-label="59,943 stars">★ 59,943</span>
+        <span class="star-pill" aria-label="60,715 stars">★ 60,715</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>Python</span>
@@ -110,171 +135,46 @@
       <button class="card-action favorite-action" type="button" aria-label="收藏 HKUDS/CLI-Anything" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">给任意软件套一层 CLI，让 AI Agent 能像人一样敲命令操作 CAD、3D 场景、字幕等工具。</p>
+  <p class="project-summary">试图让所有软件都变成代理可调用的命令行工具，通过 CLI-Hub 安装和管理社区构建的 CLI。</p>
   <button class="detail-toggle" type="button" aria-label="收起 HKUDS/CLI-Anything 的项目解读" aria-expanded="true" aria-controls="project-hkuds-cli-anything">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
   <div class="project-details" id="project-hkuds-cli-anything">
-    <p>思路是把软件能力封装成 Agent 可调用的命令行接口，再通过 CLI-Hub 分发社区构建的 CLI。覆盖面听起来很广，但实际效果取决于每个 CLI 封装的质量，目前更像一个正在快速铺开的生态倡议。</p>
+    <p>项目提供 pip 安装的 hub，让代理通过生成的 CLI 操作 CAD、3D 场景、图表等软件。目前依赖社区贡献的 CLI 覆盖度，实际可用范围取决于已有哪些软件被适配。</p>
   </div>
 </article>
-<article class="project-card project-card--featured" data-project-name="mvanhorn/last30days-skill" data-project-url="https://github.com/mvanhorn/last30days-skill" data-project-summary="一个 Agent 技能，并行搜索 Reddit、X、YouTube、HN、Polymarket 等平台，用点赞和真金白银的赔率而非编辑偏好来排序信息。" data-project-stars="70,205" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">3</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener noreferrer">mvanhorn/last30days-skill</a>
-        <span class="star-pill" aria-label="70,205 stars">★ 70,205</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 mvanhorn/last30days-skill" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">一个 Agent 技能，并行搜索 Reddit、X、YouTube、HN、Polymarket 等平台，用点赞和真金白银的赔率而非编辑偏好来排序信息。</p>
-  <button class="detail-toggle" type="button" aria-label="收起 mvanhorn/last30days-skill 的项目解读" aria-expanded="true" aria-controls="project-mvanhorn-last30days-skill">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-mvanhorn-last30days-skill">
-    <p>适合快速摸清某个话题最近 30 天的舆论和资金信号。零配置就能跑 Reddit、HN、Polymarket 和 GitHub，但 X、YouTube、TikTok 等需要跑一次设置向导解锁，且摘要质量依赖各平台数据的可获取性。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="getarcaneapp/arcane" data-project-url="https://github.com/getarcaneapp/arcane" data-project-summary="用 Go 写的现代 Docker 管理面板，面向自托管场景，把容器和 Compose 的日常操作收进一个界面。" data-project-stars="9,902" data-language="Go">
+<article class="project-card project-card--compact" data-project-name="jingyaogong/minimind" data-project-url="https://github.com/jingyaogong/minimind" data-project-summary="从零训练 64M 超小语言模型的完整开源项目，覆盖预训练、SFT、LoRA、RLHF 等全流程。" data-project-stars="67,092" data-language="Python">
   <div class="project-card-header">
     <div class="rank-badge">4</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/getarcaneapp/arcane" target="_blank" rel="noopener noreferrer">getarcaneapp/arcane</a>
-        <span class="star-pill" aria-label="9,902 stars">★ 9,902</span>
+        <a class="project-name" href="https://github.com/jingyaogong/minimind" target="_blank" rel="noopener noreferrer">jingyaogong/minimind</a>
+        <span class="star-pill" aria-label="67,092 stars">★ 67,092</span>
       </div>
       <div class="project-tags">
-        <span class="language-tag"><i></i>Go</span>
+        <span class="language-tag"><i></i>Python</span>
         <span class="appearance-tag" hidden></span>
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 getarcaneapp/arcane" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 jingyaogong/minimind" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">用 Go 写的现代 Docker 管理面板，面向自托管场景，把容器和 Compose 的日常操作收进一个界面。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 getarcaneapp/arcane 的项目解读" aria-expanded="false" aria-controls="project-getarcaneapp-arcane">
+  <p class="project-summary">从零训练 64M 超小语言模型的完整开源项目，覆盖预训练、SFT、LoRA、RLHF 等全流程。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 jingyaogong/minimind 的项目解读" aria-expanded="false" aria-controls="project-jingyaogong-minimind">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-getarcaneapp-arcane" hidden>
-    <p>README 本身信息偏少，主要指向官方文档和 SBOM。从 topics 看它覆盖 compose、容器管理和自托管，适合不想纯靠命令行管 Docker 的人，但具体功能深度需要翻文档才能判断。</p>
+  <div class="project-details" id="project-jingyaogong-minimind" hidden>
+    <p>核心算法用原生 PyTorch 实现，不依赖高层抽象，适合想理解 LLM 内部机制的人。README 明确“2 小时”指单张 3090 跑完 SFT 一个 epoch，“3 块钱”是相应 GPU 租用成本。</p>
   </div>
 </article>
-<article class="project-card project-card--compact" data-project-name="NVIDIA/SkillEvaluator" data-project-url="https://github.com/NVIDIA/SkillEvaluator" data-project-summary="给 Agent 技能做质检的多层框架：静态规则、安全扫描、语义重叠检测，再到真实 Agent 运行对比，一条龙卡在合并前。" data-project-stars="3,832" data-language="Python">
+<article class="project-card project-card--compact" data-project-name="cursor/plugins" data-project-url="https://github.com/cursor/plugins" data-project-summary="Cursor 官方插件仓库，包含插件规范和多个面向开发工具的官方插件。" data-project-stars="17,615" data-language="TypeScript">
   <div class="project-card-header">
     <div class="rank-badge">5</div>
     <div class="project-identity">
       <div class="project-title-line">
-        <a class="project-name" href="https://github.com/NVIDIA/SkillEvaluator" target="_blank" rel="noopener noreferrer">NVIDIA/SkillEvaluator</a>
-        <span class="star-pill" aria-label="3,832 stars">★ 3,832</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 NVIDIA/SkillEvaluator" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">给 Agent 技能做质检的多层框架：静态规则、安全扫描、语义重叠检测，再到真实 Agent 运行对比，一条龙卡在合并前。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 NVIDIA/SkillEvaluator 的项目解读" aria-expanded="false" aria-controls="project-nvidia-skillevaluator">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-nvidia-skillevaluator" hidden>
-    <p>第一层靠 500 多条静态规则和检测模式，不需要 LLM key 就能跑；后两层才引入去重和实时 Agent 评估来量化技能带来的提升。它提供可复用的 CI 模板，适合想把技能质量门禁自动化的团队，但完整评估需要接 NVIDIA Build。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="nvm-sh/nvm" data-project-url="https://github.com/nvm-sh/nvm" data-project-summary="老牌 Node 版本管理器，POSIX 兼容的 bash 脚本，靠 .nvmrc 和 shell 集成在多个 Node 版本间切换。" data-project-stars="96,176" data-language="Shell">
-  <div class="project-card-header">
-    <div class="rank-badge">6</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener noreferrer">nvm-sh/nvm</a>
-        <span class="star-pill" aria-label="96,176 stars">★ 96,176</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Shell</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 nvm-sh/nvm" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">老牌 Node 版本管理器，POSIX 兼容的 bash 脚本，靠 .nvmrc 和 shell 集成在多个 Node 版本间切换。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 nvm-sh/nvm 的项目解读" aria-expanded="false" aria-controls="project-nvm-sh-nvm">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-nvm-sh-nvm" hidden>
-    <p>近 10 万星说明它仍是 Node 多版本场景的默认答案。功能列表很长，从 Docker 安装到离线安装、镜像加速都覆盖，但本质仍是 shell 脚本方案，Windows 原生支持不在其范围内。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="astral-sh/uv" data-project-url="https://github.com/astral-sh/uv" data-project-summary="Rust 写的 Python 包和项目管理器，号称一个工具替代 pip、pip-tools、pipx、poetry、pyenv 等一串。" data-project-stars="92,284" data-language="Rust">
-  <div class="project-card-header">
-    <div class="rank-badge">7</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/astral-sh/uv" target="_blank" rel="noopener noreferrer">astral-sh/uv</a>
-        <span class="star-pill" aria-label="92,284 stars">★ 92,284</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Rust</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 astral-sh/uv" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Rust 写的 Python 包和项目管理器，号称一个工具替代 pip、pip-tools、pipx、poetry、pyenv 等一串。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 astral-sh/uv 的项目解读" aria-expanded="false" aria-controls="project-astral-sh-uv">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-astral-sh-uv" hidden>
-    <p>亮点是 10 到 100 倍于 pip 的速度、通用锁文件、内联依赖脚本和 Cargo 风格 workspace。它已经不只是包安装器，而是在收拢整个 Python 项目工作流，对现有工具链的替代意图非常明显。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="google-research/paper-orchestra" data-project-url="https://github.com/google-research/paper-orchestra" data-project-summary="Google Research 的多 Agent 论文写作框架，把想法和实验日志变成带文献综述和图表的 LaTeX 投稿稿。" data-project-stars="4,475" data-language="Python">
-  <div class="project-card-header">
-    <div class="rank-badge">8</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/google-research/paper-orchestra" target="_blank" rel="noopener noreferrer">google-research/paper-orchestra</a>
-        <span class="star-pill" aria-label="4,475 stars">★ 4,475</span>
-      </div>
-      <div class="project-tags">
-        <span class="language-tag"><i></i>Python</span>
-        <span class="appearance-tag" hidden></span>
-      </div>
-    </div>
-    <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 google-research/paper-orchestra" aria-pressed="false" title="收藏">♡</button>
-    </div>
-  </div>
-  <p class="project-summary">Google Research 的多 Agent 论文写作框架，把想法和实验日志变成带文献综述和图表的 LaTeX 投稿稿。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 google-research/paper-orchestra 的项目解读" aria-expanded="false" aria-controls="project-google-research-paper-orchestra">
-    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
-  </button>
-  <div class="project-details" id="project-google-research-paper-orchestra" hidden>
-    <p>流水线拆成大纲、文献综述、章节写作、内容精炼和绘图几个专职 Agent，覆盖从原始材料到成稿的完整链路。适合探索自动化写作的边界，但“投稿就绪”和实际学术质量之间还有很长的路。</p>
-  </div>
-</article>
-<article class="project-card project-card--compact" data-project-name="google-labs-code/stitch-skills" data-project-url="https://github.com/google-labs-code/stitch-skills" data-project-summary="Google Stitch 的 Agent 技能库，按开放标准拆成设计、构建、工具三组插件，可装进 Codex、Claude Code、Cursor 等。" data-project-stars="10,474" data-language="TypeScript">
-  <div class="project-card-header">
-    <div class="rank-badge">9</div>
-    <div class="project-identity">
-      <div class="project-title-line">
-        <a class="project-name" href="https://github.com/google-labs-code/stitch-skills" target="_blank" rel="noopener noreferrer">google-labs-code/stitch-skills</a>
-        <span class="star-pill" aria-label="10,474 stars">★ 10,474</span>
+        <a class="project-name" href="https://github.com/cursor/plugins" target="_blank" rel="noopener noreferrer">cursor/plugins</a>
+        <span class="star-pill" aria-label="17,615 stars">★ 17,615</span>
       </div>
       <div class="project-tags">
         <span class="language-tag"><i></i>TypeScript</span>
@@ -282,17 +182,117 @@
       </div>
     </div>
     <div class="project-actions">
-      <button class="card-action favorite-action" type="button" aria-label="收藏 google-labs-code/stitch-skills" aria-pressed="false" title="收藏">♡</button>
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cursor/plugins" aria-pressed="false" title="收藏">♡</button>
     </div>
   </div>
-  <p class="project-summary">Google Stitch 的 Agent 技能库，按开放标准拆成设计、构建、工具三组插件，可装进 Codex、Claude Code、Cursor 等。</p>
-  <button class="detail-toggle" type="button" aria-label="展开 google-labs-code/stitch-skills 的项目解读" aria-expanded="false" aria-controls="project-google-labs-code-stitch-skills">
+  <p class="project-summary">Cursor 官方插件仓库，包含插件规范和多个面向开发工具的官方插件。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 cursor/plugins 的项目解读" aria-expanded="false" aria-controls="project-cursor-plugins">
     <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
   </button>
-  <div class="project-details" id="project-google-labs-code-stitch-skills" hidden>
-    <p>安装方式以插件市场为主，Codex 支持 CLI 和 UI 两种路径，Claude Code 和 Cursor 也有对应说明，但 OpenCode 需要手动安装。它把设计工具能力模块化，方便按需组合，不过目前更像配套生态而非独立产品。</p>
+  <div class="project-details" id="project-cursor-plugins" hidden>
+    <p>每个插件是独立目录，带自己的 manifest，覆盖教学、持续学习、团队工具包、分支审查等场景。适合想给 Cursor 扩展代理工作流的团队参考插件结构。</p>
   </div>
-</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天榜单的主线不是某个爆款应用，而是 Agent 技能从“能跑”走向“可评估、可分发、可组合”的基础设施层。值得留意的是，评估和规范类项目开始与技能本身同台竞争注意力。</p></div></div>
+</article>
+<article class="project-card project-card--compact" data-project-name="firecrawl/firecrawl" data-project-url="https://github.com/firecrawl/firecrawl" data-project-summary="把网站转成干净 Markdown 的知识基础设施，支持本地运行、云端服务和自托管三种方式。" data-project-stars="204,445" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener noreferrer">firecrawl/firecrawl</a>
+        <span class="star-pill" aria-label="204,445 stars">★ 204,445</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 firecrawl/firecrawl" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把网站转成干净 Markdown 的知识基础设施，支持本地运行、云端服务和自托管三种方式。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 firecrawl/firecrawl 的项目解读" aria-expanded="false" aria-controls="project-firecrawl-firecrawl">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-firecrawl-firecrawl" hidden>
+    <p>本地版是单个二进制，无需数据库或队列，可作为 MCP 服务器接入代理；云端版额外提供搜索和 550+ 数据提供方。自托管则需要部署完整 API、队列和数据库。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="nginx/nginx" data-project-url="https://github.com/nginx/nginx" data-project-summary="NGINX 官方开源仓库，Web 服务器、负载均衡、反向代理和内容缓存的经典实现。" data-project-stars="32,388" data-language="C">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/nginx/nginx" target="_blank" rel="noopener noreferrer">nginx/nginx</a>
+        <span class="star-pill" aria-label="32,388 stars">★ 32,388</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>C</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 nginx/nginx" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">NGINX 官方开源仓库，Web 服务器、负载均衡、反向代理和内容缓存的经典实现。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 nginx/nginx 的项目解读" aria-expanded="false" aria-controls="project-nginx-nginx">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nginx-nginx" hidden>
+    <p>README 面向新手提供结构化介绍，涵盖模块、配置、运行时和从源码构建。对于需要稳定反向代理和负载均衡的场景，它仍是默认选项之一。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="openvinotoolkit/openvino" data-project-url="https://github.com/openvinotoolkit/openvino" data-project-summary="英特尔主导的 AI 推理优化与部署工具包，支持从边缘到云端的多种硬件。" data-project-stars="11,602" data-language="C++">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/openvinotoolkit/openvino" target="_blank" rel="noopener noreferrer">openvinotoolkit/openvino</a>
+        <span class="star-pill" aria-label="11,602 stars">★ 11,602</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>C++</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 openvinotoolkit/openvino" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">英特尔主导的 AI 推理优化与部署工具包，支持从边缘到云端的多种硬件。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 openvinotoolkit/openvino 的项目解读" aria-expanded="false" aria-controls="project-openvinotoolkit-openvino">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-openvinotoolkit-openvino" hidden>
+    <p>可转换和部署 PyTorch、TensorFlow、ONNX 等框架训练的模型，并针对 CPU、GPU 和 NPU 优化。适合需要在英特尔硬件上压缩推理资源占用的部署场景。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="cathrynlavery/diagram-design" data-project-url="https://github.com/cathrynlavery/diagram-design" data-project-summary="一个代理技能，用自包含的 HTML + SVG 文件画编辑级图表，支持 51 种图表类型。" data-project-stars="68,781" data-language="HTML">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">cathrynlavery/diagram-design</a>
+        <span class="star-pill" aria-label="68,781 stars">★ 68,781</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>HTML</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cathrynlavery/diagram-design" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一个代理技能，用自包含的 HTML + SVG 文件画编辑级图表，支持 51 种图表类型。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 cathrynlavery/diagram-design 的项目解读" aria-expanded="false" aria-controls="project-cathrynlavery-diagram-design">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-cathrynlavery-diagram-design" hidden>
+    <p>用户用自然语言描述需求，代理选择图表类型并生成单个 HTML 文件，可双击打开。明确反对 Mermaid 的默认样式，适合需要品牌一致性和精细排版的图表输出。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天的热榜说明代理技能包正在从“能聊天”走向“能干活”，但多数项目仍依赖特定宿主和社区覆盖度，选型时先看它约束了什么、又放开了什么。</p></div></div>
       </div>
 
       <aside class="rail">
@@ -318,7 +318,7 @@
       </select>
       <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
     </div>
-    <div id="availableDatesData" style="display:none;">["2026-11-19","2026-11-18","2026-11-17","2026-11-16","2026-11-15","2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22","2026-10-21"]</div>
+    <div id="availableDatesData" style="display:none;">["2026-11-20","2026-11-19","2026-11-18","2026-11-17","2026-11-16","2026-11-15","2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24","2026-10-23","2026-10-22"]</div>
 
           </details>
         </section>
