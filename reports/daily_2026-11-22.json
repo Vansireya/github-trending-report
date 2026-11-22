@@ -1,0 +1,193 @@
+{
+  "title": "Agent 技能包与工具链集中涌现",
+  "opening": "今天榜单几乎被 Agent 技能包和配套工具占据，从漏洞挖掘到软件开发方法论，再到把任意软件包装成 CLI。最值得看的是 Claude-BugHunter 把 681 份公开漏洞报告拆成可审计的技能模式，以及 superpowers 试图给编码 Agent 立一套完整开发流程。",
+  "projects": [
+    {
+      "rank": 1,
+      "name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "stars": "16,279",
+      "language": "Python",
+      "topics": [
+        "ai-security",
+        "anthropic",
+        "application-security",
+        "bug-bounty",
+        "bugbounty",
+        "bugcrowd",
+        "claude",
+        "claude-code"
+      ],
+      "readmeExcerpt": "claude-bughunter > A self-contained Claude skill bundle for bug hunting and external red-team work · **83 skills** · 15 slash commands · **681 disclosed-report patterns** (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by **Sachin Sharma** — Bug Hunting & GenAI Security Research. SPONSORED BY &nbsp;&nbsp;&nbsp;&nbsp; What is this? `claude-bughunter` is a drop-in skill bundle for the Claude Code skills system. Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. Four layers stack: - **Think** — `bb-methodology` + `redteam-mindset`: the 5-phase non-linear workflow, critical-thinking framework, and red-team operator discipline. - **Hunt webapps** — 58 `hunt-*` skills curated from ",
+      "summary": "把 681 份公开漏洞报告拆成 83 个技能和 15 个斜杠命令，让 Claude Code 按红队思路干活。",
+      "problem": "覆盖 24 类漏洞和身份、基础设施攻击矩阵，还带 Burp MCP 集成和项目文件夹脚手架。亮点是 433 条模式单独标注来源、可审计，但本质仍是辅助授权测试，不能替代人工判断。"
+    },
+    {
+      "rank": 2,
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars": "323,827",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "readmeExcerpt": "Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. Table of Contents - How it works - Commercial Services - Getting Started - Claude Code - Antigravity - Codex App - Codex CLI - Cursor - Devin CLI - Factory Droid - Gemini CLI - GitHub Copilot CLI - Grok Build CLI - Kimi Code - OpenCode - Pi - Qwen Code - Hermes Agent - Muse - The Basic Workflow - When Something Goes Wrong - Community - What's Inside - Philosophy - Contributing - Updating - License - Visual companion telemetry How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aver",
+      "summary": "一套给编码 Agent 的完整开发方法论：先逼你讲清需求，再拆成可读的设计和实现计划。",
+      "problem": "它不急着写代码，而是让 Agent 先追问目标、分段确认规格，再产出连“没品味的初级工程师”都能执行的计划。支持 Claude Code、Codex、Cursor 等一长串宿主，但流程偏重，适合正经项目而非随手改两行。"
+    },
+    {
+      "rank": 3,
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "stars": "62,166",
+      "language": "Python",
+      "topics": [],
+      "readmeExcerpt": "&nbsp; CLI-Anything: Making ALL Software Agent-Native &#32; &#32; Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software **🌐 CLI-Hub**: `pip install cli-anything-hub` then `cli-hub install ` — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. **🎬 See Demos**: Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. **🙋 [Become a Contributor, or Request a CLI]**: Join us! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request! **One Command Line**: Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc.&nbsp;&nbsp;**中文文档** | **日本語ドキュメント** | **Deutsch** 📰 News > Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. - **2026-05-30** 🧭 **Hermes skill** proposed (#320), adding a CLI-Anything",
+      "summary": "给任意软件套一层 CLI，让 Agent 能像人一样点按钮、拉菜单、出 CAD 图和 3D 场景。",
+      "problem": "思路是“今天的软件服务人，明天的用户是 Agent”，通过生成 CLI harness 把图形界面操作转成命令行。配套 CLI-Hub 可浏览安装社区产物，但生成质量取决于具体软件，复杂 GUI 的覆盖度仍是现实瓶颈。"
+    },
+    {
+      "rank": 4,
+      "name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "stars": "68,221",
+      "language": "Python",
+      "topics": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "readmeExcerpt": "\"大道至简\" 中文 | English * 此开源项目旨在完全从 0 开始，仅用 3 块钱成本与 2 小时训练时间，即可训练出规模约为 64M 的超小语言模型 MiniMind。 * MiniMind 系列极其轻量，主线最小版本体积约为 GPT-3 的 $\\frac{1}{2700}$，力求让普通个人 GPU 也能快速完成训练与复现。 * 项目同时开源了大模型的极简结构与完整训练链路，覆盖 MoE、数据清洗、预训练（Pretrain）、监督微调（SFT）、LoRA、RLHF（DPO）、RLAIF（PPO / GRPO / CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏等全过程代码。 * MiniMind 同时拓展了视觉模态模型 MiniMind-V、多模态 Omni 模型 MiniMind-O、扩散语言模型（MiniMind-dLM）、线性模型（MiniMind-Linear），详见 Discussion。 * 项目所有核心算法代码均从 0 使用 PyTorch 原生实现，不依赖第三方库提供的高层抽象接口。 * 这不仅是一个大语言模型全阶段开源复现项目，也是一套面向 LLM 入门与实践的教程。 * 希望此项目能为更多人提供一个可复现、可理解、可扩展的起点，一起感受创造的乐趣，并推动更广泛 AI 社区的进步。 > 注：本项目基于 Apache 2.0 协议开源，完全免费。“2 小时” 指 SFT 阶段在单张 NVIDIA 3090 上跑完 `1 epoch` 的实测耗时，“3 块钱” 指对应时段的 GPU 租用成本。 🔗 在线体验 | 🔗 视频介绍 📌 项目介绍 大语言模型（Large Language Model, LLM）的出现，引发了全球范围内对 AI 的空前关注。无论是 ChatGPT、DeepSeek 还是 Qwen，都以惊艳的效果让人真切感受到这场技术浪潮的冲击力。然而，动辄数百亿参数的模型规模，使得它们对个人设备而言不仅难以训练，甚至连部署都显得遥不可及。打开大模型的“黑盒子”，真正去理解其内部运作机制，本应是一件令人心潮澎湃的事。遗憾的是，绝大多数探索最终都止步于使用 LoRA 等技术对现有大模型做少量微调，学习一些新指令或特定任务。这更像是在教牛顿如何使用 21 世纪的智能手机——虽然有趣，却偏离了理解物理本质的初衷。 与此同时，第三方的大模型框架与工具库，如 `transformers` / `trl` / `peft` 等，往往只暴露出高度抽象的接口。只需短短十几行代码，就可以完成“加载模型 + 加载数据集 + 推理 + 强化学习”的全流程训练。这种高效封装固然便利，却也在一定程度上把开发者与底层实现隔离开来，削弱了深入理解 LLM 核心代码的机会。我认为 “用乐高自己拼出一架飞机，远比坐在头等舱里飞行更",
+      "summary": "3 块钱、2 小时，从零训出一个 64M 的小语言模型，代码全用 PyTorch 原生手写。",
+      "problem": "覆盖预训练、SFT、LoRA、DPO、PPO/GRPO 到 Agentic RL 的完整链路，还延伸出视觉和多模态版本。卖点是“不依赖 transformers/trl 高层封装”，适合想拆黑盒的人；但 64M 的规模注定只能学流程，别指望效果。"
+    },
+    {
+      "rank": 5,
+      "name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "stars": "18,146",
+      "language": "TypeScript",
+      "topics": [],
+      "readmeExcerpt": "Cursor plugins Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest. Plugins | `name` | Plugin | Author | Category | `description` (from marketplace) | | `teaching` | Teaching | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | `continual-learning` | Continual Learning | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | `cursor-team-kit` | Cursor Team Kit | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification. | | `thermos` | Thermos | Cursor | Developer Tools | Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows. | | `create-plugin` | Create Plugin | Cursor | Developer Tools | Scaffold and validate new agent plugins. | | `ralph-loop` | Ralph Loop | Cursor | Developer Tools | Iterative self-referential AI loops using the Ralph Wiggum",
+      "summary": "Cursor 官方插件规范加一批现成插件，把教学、代码审查、分支审计都做成可安装技能。",
+      "problem": "每个插件是根目录下独立文件夹，带自己的 manifest。Thermos 做深度安全与正确性审计，continual-learning 用高信号要点增量更新 AGENTS.md。价值在于给出插件目录结构参考，但生态尚早，插件质量参差。"
+    },
+    {
+      "rank": 6,
+      "name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "stars": "206,340",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown"
+      ],
+      "readmeExcerpt": "**🔥 Firecrawl** **Knowledge infrastructure to make your agents smarter. 🔥** You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. - **Firecrawl Local.** Run Firecrawl on your own machine as one binary that turns websites into clean markdown, plugs into your AI agent as an MCP server and serves the Firecrawl API on localhost. - **Firecrawl Cloud.** Use the hosted service at firecrawl.dev for everything Local does at scale with nothing to run, plus search and the 550+ data providers in Firecrawl Alexandria for far more knowledge than scraping alone. - **Self-hosting.** Deploy the full Firecrawl server from `apps/api` with its own queues, workers and databases on your own infrastructure. _Pst. Hey, you, join our stargazers :)_ Firecrawl Local Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means `xcode-select --install` and on Debian or Ubuntu means `build-essential`. If you don't have",
+      "summary": "把网页变成干净 Markdown 喂给 Agent，本地一个二进制就能跑，还能接 550+ 数据源。",
+      "problem": "三种用法：本地单二进制带 MCP 服务、云端托管、完整自托管。本地版不需要数据库和队列，装起来要 Rust 和 C 编译器。真正差异在 Alexandria 数据源和搜索，但那是云端能力，自托管拿不到。"
+    },
+    {
+      "rank": 7,
+      "name": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx",
+      "description": "The official NGINX Open Source repository.",
+      "stars": "32,760",
+      "language": "C",
+      "topics": [
+        "content-cache",
+        "http",
+        "http2",
+        "http3",
+        "https",
+        "load-balancer",
+        "mail-proxy-server",
+        "nginx"
+      ],
+      "readmeExcerpt": "NGINX (pronounced \"engine x\" or \"en-jin-eks\") is the world's most popular Web Server, high performance Load Balancer, Reverse Proxy, API Gateway and Content Cache. NGINX is free and open source software, distributed under the terms of a simplified 2-clause BSD-like license. Enterprise distributions, commercial support and training are available from F5, Inc. > [!IMPORTANT] > The goal of this README is to provide a basic, structured introduction to NGINX for novice users. Please refer to the full NGINX documentation for detailed information on installing, building, configuring, debugging, and more. These documentation pages also contain a more detailed Beginners Guide, How-Tos, Development guide, and a complete module and directive reference. Table of contents - How it works - Modules - Configurations - Runtime - Downloading and installing - Stable and Mainline binaries - Linux binary installation process - FreeBSD installation process - Windows executables - Dynamic modules - Getting started with NGINX - Installing SSL certificates and enabling TLS encryption - Load Balancing - Rate limiting - Content caching - Building from source - Installing dependencies - Cloning the NGINX GitH",
+      "summary": "官方 NGINX 开源仓库，Web 服务器、负载均衡、反向代理、API 网关和内容缓存的老牌全能选手。",
+      "problem": "README 面向新手，讲清模块、配置、运行时和从源码构建的流程。它不需要多介绍，出现在榜单上更像基础设施的日常存在感；真正要留意的是稳定版与主线版的分支策略。"
+    },
+    {
+      "rank": 8,
+      "name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "stars": "11,961",
+      "language": "C++",
+      "topics": [
+        "ai",
+        "computer-vision",
+        "deep-learning",
+        "deploy-ai",
+        "diffusion-models",
+        "generative-ai",
+        "good-first-issue",
+        "inference"
+      ],
+      "readmeExcerpt": "Open-source software toolkit for optimizing and deploying deep learning models. Documentation • Blog • Key Features • Tutorials • Integrations • Benchmarks • Generative AI - **Inference Optimization**: Boost deep learning performance in computer vision, automatic speech recognition, generative AI, natural language processing with large and small language models, and many other common tasks. - **Flexible Model Support**: Use models trained with popular frameworks such as PyTorch, TensorFlow, ONNX, Keras, PaddlePaddle, and JAX/Flax. Directly integrate models built with transformers and diffusers from the Hugging Face Hub using Optimum Intel. Convert and deploy models without original frameworks. - **Broad Platform Compatibility**: Reduce resource demands and efficiently deploy on a range of platforms from edge to cloud. OpenVINO™ supports inference on CPU (x86, ARM), GPU (Intel integrated & discrete GPU) and AI accelerators (Intel NPU). - **Community and Ecosystem**: Join an active community contributing to the enhancement of deep learning performance across various domains. Check out the OpenVINO Cheat Sheet and Key Features for a quick reference. Installation Get your preferred dis",
+      "summary": "Intel 的推理优化与部署工具包，把 PyTorch、ONNX、JAX 等模型压到 CPU、GPU 和 NPU 上跑。",
+      "problem": "支持从边缘到云的广泛平台，能直接接 Hugging Face 的 transformers 和 diffusers 模型。定位清晰：不是训练框架，而是部署端的转换与加速层；非 Intel 硬件用户收益有限。"
+    },
+    {
+      "rank": 9,
+      "name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "stars": "69,871",
+      "language": "HTML",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "readmeExcerpt": "**An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand. 51 diagram types. No shadows. No Mermaid slop.** **Website · Gallery · Changelog** Install · What it makes · Quickstart · Match your brand · Import · Export · Contributing npx skills add cathrynlavery/diagram-design Ask your agent in plain words: - *\"Make me an architecture diagram of my app: frontend, backend, database, Redis cache.\"* - *\"I need a quadrant showing Q2 projects by impact vs effort.\"* - *\"Give me a sequence of a bearer call with token refresh on 401.\"* - *\"Onboard diagram-design to https://yoursite.com\"* (pulls your palette and fonts so every diagram after this one matches your site) The agent picks the type, states its plan, and writes one `.html` file you can open by double-clicking. Install Works with any host that reads Agent Skills, including Cursor, Claude Code, Codex, Qoder, GitHub Copilot, Gemini CLI, Cline, Windsurf and Amp: In Claude Code, the plugin marketplace gets you updates and the slash commands: Official builds come only from this repository. LittleMight, Cathryn Lavery's company, publishes the plugin directory listings; a listing under any other name is an uno",
+      "summary": "让 Agent 画 editorial 风格图表，输出单个自包含 HTML+SVG 文件，明确拒绝 Mermaid 味。",
+      "problem": "51 种图表类型，支持从你的网站抓取配色和字体，让每张图都贴合品牌。用自然语言描述即可，Agent 选类型、说计划、写文件。限制是风格取向强，不适合要严格数据保真的正式报表。"
+    },
+    {
+      "rank": 10,
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "stars": "72,107",
+      "language": "Python",
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews"
+      ],
+      "readmeExcerpt": "/last30days English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md, which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts:** (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, score",
+      "summary": "让 Agent 并行搜 Reddit、X、YouTube、HN 和 Polymarket，按点赞和真金白银排序再综合。",
+      "problem": "零配置即可用 Reddit、HN、Polymarket 和 GitHub，跑一次向导再解锁 X、YouTube、TikTok 等。核心卖点是“用注意力和钱包投票，而非编辑推荐”，但跨平台信号加权方式不透明，结论需自行交叉验证。"
+    }
+  ],
+  "closing": "今天的主线不是模型本身，而是给 Agent 配工具箱和操作手册。技能包越堆越多，真正稀缺的是可审计的来源和克制的流程设计。"
+}

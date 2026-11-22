@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="每日 GitHub Trending 中文技术雷达。">
+  <script>
+    if (/\/src\/templates\/base\.html$/.test(window.location.pathname)) {
+      window.location.replace(new URL('../../', window.location.href));
+    }
+    try {
+      const savedTheme = localStorage.getItem('github-radar-theme');
+      const migratedTheme = savedTheme === 'light' ? 'cherry' : savedTheme === 'dark' ? 'night' : savedTheme === 'amber' ? 'green' : savedTheme;
+      const availableThemes = ['cherry', 'blue', 'green', 'night'];
+      document.documentElement.dataset.theme = availableThemes.includes(migratedTheme)
+        ? migratedTheme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'cherry';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'cherry';
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d94a78'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700' fill='white'%3EGR%3C/text%3E%3C/svg%3E">
+  <title>GitHub 简报 - 2026年11月22日星期日</title>
+  <script src="../data/ranking_data.js"></script>
+  <link rel="stylesheet" href="../src/templates/style-v2.css?v=bcdb31d3">
+</head>
+<body data-report-base-path="" data-report-date="2026-11-22">
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="GitHub Radar 首页">
+      <span class="brand-mark">GR</span>
+      <span><strong>GitHub Radar</strong><small>YOUR OPEN SOURCE BRIEF</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="live-indicator"><i></i>每日更新</span>
+      <button class="library-button" id="libraryOpen" type="button" aria-label="打开我的收藏" aria-haspopup="dialog" aria-controls="libraryDrawer">
+        <span aria-hidden="true">♡</span><span>我的收藏</span><strong id="libraryCount">0</strong>
+      </button>
+      <div class="theme-picker">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="选择页面主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" title="选择主题">
+          <span class="theme-toggle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="页面主题" hidden>
+          <span class="theme-menu-title">选择主题</span>
+          <button type="button" role="menuitemradio" data-theme-choice="cherry" aria-checked="false"><span class="theme-swatch theme-swatch--cherry"></span><span><strong>樱桃奶霜</strong><small>柔和粉色</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="blue" aria-checked="false"><span class="theme-swatch theme-swatch--blue"></span><span><strong>雾蓝纸刊</strong><small>清爽理性</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="green" aria-checked="false"><span class="theme-swatch theme-swatch--green"></span><span><strong>苔绿纸页</strong><small>清新自然</small></span><i aria-hidden="true">✓</i></button>
+          <button type="button" role="menuitemradio" data-theme-choice="night" aria-checked="false"><span class="theme-swatch theme-swatch--night"></span><span><strong>夜樱</strong><small>深色阅读</small></span><i aria-hidden="true">✓</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-meta">
+          <time class="hero-date" datetime="{{REPORT_DATE}}">2026年11月22日星期日</time>
+          <a class="today-link" href="../index.html">← 返回今日</a>
+        </div>
+        <h1>Agent 技能包与工具链集中涌现</h1>
+        <p>今天榜单几乎被 Agent 技能包和配套工具占据，从漏洞挖掘到软件开发方法论，再到把任意软件包装成 CLI。最值得看的是 Claude-BugHunter 把 681 份公开漏洞报告拆成可审计的技能模式，以及 superpowers 试图给编码 Agent 立一套完整开发流程。</p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="feed-column">
+        <div class="content" id="projectFeed"><article class="project-card project-card--rank-1" data-project-name="elementalsouls/Claude-BugHunter" data-project-url="https://github.com/elementalsouls/Claude-BugHunter" data-project-summary="把 681 份公开漏洞报告拆成 83 个技能和 15 个斜杠命令，让 Claude Code 按红队思路干活。" data-project-stars="16,279" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">1</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener noreferrer">elementalsouls/Claude-BugHunter</a>
+        <span class="star-pill" aria-label="16,279 stars">★ 16,279</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 elementalsouls/Claude-BugHunter" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把 681 份公开漏洞报告拆成 83 个技能和 15 个斜杠命令，让 Claude Code 按红队思路干活。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 elementalsouls/Claude-BugHunter 的项目解读" aria-expanded="true" aria-controls="project-elementalsouls-claude-bughunter">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-elementalsouls-claude-bughunter">
+    <p>覆盖 24 类漏洞和身份、基础设施攻击矩阵，还带 Burp MCP 集成和项目文件夹脚手架。亮点是 433 条模式单独标注来源、可审计，但本质仍是辅助授权测试，不能替代人工判断。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="obra/superpowers" data-project-url="https://github.com/obra/superpowers" data-project-summary="一套给编码 Agent 的完整开发方法论：先逼你讲清需求，再拆成可读的设计和实现计划。" data-project-stars="323,827" data-language="Shell">
+  <div class="project-card-header">
+    <div class="rank-badge">2</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>
+        <span class="star-pill" aria-label="323,827 stars">★ 323,827</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Shell</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 obra/superpowers" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">一套给编码 Agent 的完整开发方法论：先逼你讲清需求，再拆成可读的设计和实现计划。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 obra/superpowers 的项目解读" aria-expanded="true" aria-controls="project-obra-superpowers">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-obra-superpowers">
+    <p>它不急着写代码，而是让 Agent 先追问目标、分段确认规格，再产出连“没品味的初级工程师”都能执行的计划。支持 Claude Code、Codex、Cursor 等一长串宿主，但流程偏重，适合正经项目而非随手改两行。</p>
+  </div>
+</article>
+<article class="project-card project-card--featured" data-project-name="HKUDS/CLI-Anything" data-project-url="https://github.com/HKUDS/CLI-Anything" data-project-summary="给任意软件套一层 CLI，让 Agent 能像人一样点按钮、拉菜单、出 CAD 图和 3D 场景。" data-project-stars="62,166" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">3</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener noreferrer">HKUDS/CLI-Anything</a>
+        <span class="star-pill" aria-label="62,166 stars">★ 62,166</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 HKUDS/CLI-Anything" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">给任意软件套一层 CLI，让 Agent 能像人一样点按钮、拉菜单、出 CAD 图和 3D 场景。</p>
+  <button class="detail-toggle" type="button" aria-label="收起 HKUDS/CLI-Anything 的项目解读" aria-expanded="true" aria-controls="project-hkuds-cli-anything">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-hkuds-cli-anything">
+    <p>思路是“今天的软件服务人，明天的用户是 Agent”，通过生成 CLI harness 把图形界面操作转成命令行。配套 CLI-Hub 可浏览安装社区产物，但生成质量取决于具体软件，复杂 GUI 的覆盖度仍是现实瓶颈。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="jingyaogong/minimind" data-project-url="https://github.com/jingyaogong/minimind" data-project-summary="3 块钱、2 小时，从零训出一个 64M 的小语言模型，代码全用 PyTorch 原生手写。" data-project-stars="68,221" data-language="Python">
+  <div class="project-card-header">
+    <div class="rank-badge">4</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/jingyaogong/minimind" target="_blank" rel="noopener noreferrer">jingyaogong/minimind</a>
+        <span class="star-pill" aria-label="68,221 stars">★ 68,221</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>Python</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 jingyaogong/minimind" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">3 块钱、2 小时，从零训出一个 64M 的小语言模型，代码全用 PyTorch 原生手写。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 jingyaogong/minimind 的项目解读" aria-expanded="false" aria-controls="project-jingyaogong-minimind">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-jingyaogong-minimind" hidden>
+    <p>覆盖预训练、SFT、LoRA、DPO、PPO/GRPO 到 Agentic RL 的完整链路，还延伸出视觉和多模态版本。卖点是“不依赖 transformers/trl 高层封装”，适合想拆黑盒的人；但 64M 的规模注定只能学流程，别指望效果。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="cursor/plugins" data-project-url="https://github.com/cursor/plugins" data-project-summary="Cursor 官方插件规范加一批现成插件，把教学、代码审查、分支审计都做成可安装技能。" data-project-stars="18,146" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">5</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cursor/plugins" target="_blank" rel="noopener noreferrer">cursor/plugins</a>
+        <span class="star-pill" aria-label="18,146 stars">★ 18,146</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cursor/plugins" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Cursor 官方插件规范加一批现成插件，把教学、代码审查、分支审计都做成可安装技能。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 cursor/plugins 的项目解读" aria-expanded="false" aria-controls="project-cursor-plugins">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-cursor-plugins" hidden>
+    <p>每个插件是根目录下独立文件夹，带自己的 manifest。Thermos 做深度安全与正确性审计，continual-learning 用高信号要点增量更新 AGENTS.md。价值在于给出插件目录结构参考，但生态尚早，插件质量参差。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="firecrawl/firecrawl" data-project-url="https://github.com/firecrawl/firecrawl" data-project-summary="把网页变成干净 Markdown 喂给 Agent，本地一个二进制就能跑，还能接 550+ 数据源。" data-project-stars="206,340" data-language="TypeScript">
+  <div class="project-card-header">
+    <div class="rank-badge">6</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener noreferrer">firecrawl/firecrawl</a>
+        <span class="star-pill" aria-label="206,340 stars">★ 206,340</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>TypeScript</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 firecrawl/firecrawl" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">把网页变成干净 Markdown 喂给 Agent，本地一个二进制就能跑，还能接 550+ 数据源。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 firecrawl/firecrawl 的项目解读" aria-expanded="false" aria-controls="project-firecrawl-firecrawl">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-firecrawl-firecrawl" hidden>
+    <p>三种用法：本地单二进制带 MCP 服务、云端托管、完整自托管。本地版不需要数据库和队列，装起来要 Rust 和 C 编译器。真正差异在 Alexandria 数据源和搜索，但那是云端能力，自托管拿不到。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="nginx/nginx" data-project-url="https://github.com/nginx/nginx" data-project-summary="官方 NGINX 开源仓库，Web 服务器、负载均衡、反向代理、API 网关和内容缓存的老牌全能选手。" data-project-stars="32,760" data-language="C">
+  <div class="project-card-header">
+    <div class="rank-badge">7</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/nginx/nginx" target="_blank" rel="noopener noreferrer">nginx/nginx</a>
+        <span class="star-pill" aria-label="32,760 stars">★ 32,760</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>C</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 nginx/nginx" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">官方 NGINX 开源仓库，Web 服务器、负载均衡、反向代理、API 网关和内容缓存的老牌全能选手。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 nginx/nginx 的项目解读" aria-expanded="false" aria-controls="project-nginx-nginx">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-nginx-nginx" hidden>
+    <p>README 面向新手，讲清模块、配置、运行时和从源码构建的流程。它不需要多介绍，出现在榜单上更像基础设施的日常存在感；真正要留意的是稳定版与主线版的分支策略。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="openvinotoolkit/openvino" data-project-url="https://github.com/openvinotoolkit/openvino" data-project-summary="Intel 的推理优化与部署工具包，把 PyTorch、ONNX、JAX 等模型压到 CPU、GPU 和 NPU 上跑。" data-project-stars="11,961" data-language="C++">
+  <div class="project-card-header">
+    <div class="rank-badge">8</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/openvinotoolkit/openvino" target="_blank" rel="noopener noreferrer">openvinotoolkit/openvino</a>
+        <span class="star-pill" aria-label="11,961 stars">★ 11,961</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>C++</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 openvinotoolkit/openvino" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">Intel 的推理优化与部署工具包，把 PyTorch、ONNX、JAX 等模型压到 CPU、GPU 和 NPU 上跑。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 openvinotoolkit/openvino 的项目解读" aria-expanded="false" aria-controls="project-openvinotoolkit-openvino">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-openvinotoolkit-openvino" hidden>
+    <p>支持从边缘到云的广泛平台，能直接接 Hugging Face 的 transformers 和 diffusers 模型。定位清晰：不是训练框架，而是部署端的转换与加速层；非 Intel 硬件用户收益有限。</p>
+  </div>
+</article>
+<article class="project-card project-card--compact" data-project-name="cathrynlavery/diagram-design" data-project-url="https://github.com/cathrynlavery/diagram-design" data-project-summary="让 Agent 画 editorial 风格图表，输出单个自包含 HTML+SVG 文件，明确拒绝 Mermaid 味。" data-project-stars="69,871" data-language="HTML">
+  <div class="project-card-header">
+    <div class="rank-badge">9</div>
+    <div class="project-identity">
+      <div class="project-title-line">
+        <a class="project-name" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">cathrynlavery/diagram-design</a>
+        <span class="star-pill" aria-label="69,871 stars">★ 69,871</span>
+      </div>
+      <div class="project-tags">
+        <span class="language-tag"><i></i>HTML</span>
+        <span class="appearance-tag" hidden></span>
+      </div>
+    </div>
+    <div class="project-actions">
+      <button class="card-action favorite-action" type="button" aria-label="收藏 cathrynlavery/diagram-design" aria-pressed="false" title="收藏">♡</button>
+    </div>
+  </div>
+  <p class="project-summary">让 Agent 画 editorial 风格图表，输出单个自包含 HTML+SVG 文件，明确拒绝 Mermaid 味。</p>
+  <button class="detail-toggle" type="button" aria-label="展开 cathrynlavery/diagram-design 的项目解读" aria-expanded="false" aria-controls="project-cathrynlavery-diagram-design">
+    <span class="detail-toggle-label">它解决什么</span><span class="detail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="project-details" id="project-cathrynlavery-diagram-design" hidden>
+    <p>51 种图表类型，支持从你的网站抓取配色和字体，让每张图都贴合品牌。用自然语言描述即可，Agent 选类型、说计划、写文件。限制是风格取向强，不适合要严格数据保真的正式报表。</p>
+  </div>
+</article><div class="summary-section"><span class="eyebrow">今日结论</span><p>今天的主线不是模型本身，而是给 Agent 配工具箱和操作手册。技能包越堆越多，真正稀缺的是可审计的来源和克制的流程设计。</p></div></div>
+      </div>
+
+      <aside class="rail">
+        <section class="rail-panel history-panel">
+          <div class="panel-heading"><div><span class="eyebrow">随机回顾</span><h2>随便翻一天</h2></div></div>
+          <p class="history-intro">从保留的近 30 天简报里，随机抽一天看看。</p>
+          <button class="random-history-button" id="randomHistoryButton" type="button">
+            <span class="random-history-icon" aria-hidden="true">↝</span>
+            <span><strong>随机抽取一份简报</strong><small id="randomHistoryDate">今天会翻到哪一天？</small></span>
+          </button>
+          <details class="date-picker-details">
+            <summary>按日期查找</summary>
+
+    <div class="date-filter-container">
+      <select id="yearSelect" class="date-select" onchange="updateMonthOptions()">
+        <option value="">年</option><option value="2026">2026</option>
+      </select>
+      <select id="monthSelect" class="date-select" onchange="updateDayOptions()">
+        <option value="">月</option>
+      </select>
+      <select id="daySelect" class="date-select">
+        <option value="">日</option>
+      </select>
+      <button class="view-history-btn" onclick="goToHistoryReport()">✓</button>
+    </div>
+    <div id="availableDatesData" style="display:none;">["2026-11-21","2026-11-20","2026-11-19","2026-11-18","2026-11-17","2026-11-16","2026-11-15","2026-11-14","2026-11-13","2026-11-12","2026-11-11","2026-11-10","2026-11-09","2026-11-08","2026-11-07","2026-11-06","2026-11-05","2026-11-04","2026-11-03","2026-11-02","2026-11-01","2026-10-31","2026-10-30","2026-10-29","2026-10-28","2026-10-27","2026-10-26","2026-10-25","2026-10-24"]</div>
+
+          </details>
+        </section>
+
+        <section class="rail-panel ranking-panel">
+          <div class="panel-heading"><div><span class="eyebrow">近期发现</span><h2>新锐榜</h2></div></div>
+          <p class="ranking-intro">主榜之外，最近刚冒头的有趣项目。</p>
+          <ol class="ranking-list" id="discoveryList"><li>加载中…</li></ol>
+        </section>
+        <p class="rail-note">榜单是发现信号，不代表质量或安全背书。使用项目前请阅读仓库文档。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>GitHub Radar · 自动生成的开源趋势观察</span>
+    <a href="https://github.com/Vansireya/github-trending-report" target="_blank" rel="noopener noreferrer">查看源码 ↗</a>
+  </footer>
+
+  <div class="library-overlay" id="libraryOverlay" hidden>
+    <aside class="library-drawer" id="libraryDrawer" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+      <div class="library-header">
+        <div><span class="eyebrow">我的收藏</span><h2 id="libraryTitle">我的项目库</h2></div>
+        <button class="icon-button" id="libraryClose" type="button" aria-label="关闭项目库">×</button>
+      </div>
+      <div class="library-tabs" role="tablist" aria-label="项目库分类">
+        <button type="button" role="tab" data-library-tab="favorites" aria-selected="true">收藏 <span id="favoriteTabCount">0</span></button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+      <button class="library-export" id="libraryExport" type="button">导出当前列表为 Markdown</button>
+    </aside>
+  </div>
+  <script src="../src/templates/script-v2.js?v=da6234fe"></script>
+</body>
+</html>
